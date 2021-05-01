@@ -1,4 +1,2 @@
 # learnAIfromscratch.github.io
-The AI tripos
-
-
+The AI tripos.

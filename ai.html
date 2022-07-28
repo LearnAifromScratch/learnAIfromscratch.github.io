@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2022-03-07 Mon 19:34 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machine Learning From Scratch</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="jbh">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  body {
+  max-width: 40rem;
+  padding: 1rem;
+  margin: auto;
+  }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {background-color: #fafad2} </style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<header>
+<h1 class="title">Machine Learning From Scratch</h1>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#Intro">Intro</a>
+<ul>
+<li><a href="#Applied">Applied</a></li>
+<li><a href="#Choose%20your%20own%20theory%2Falgorithm%20course">Choose your own theory/algorithm course</a></li>
+<li><a href="#Theoretic%20foundations%20of%20modern%20ML">Theoretic foundations of modern ML</a></li>
+</ul>
+</li>
+<li><a href="#Begin">Begin</a>
+<ul>
+<li><a href="#Get%20a%20math%20crash%20course%20reference">Get a math crash course reference</a></li>
+<li><a href="#Install%20Software">Install Software</a></li>
+</ul>
+</li>
+<li><a href="#Applied%20ML%20lecture%201">Applied ML lecture 1</a>
+<ul>
+<li><a href="#Theory%201">Theory 1</a></li>
+<li><a href="#CS4780%201">CS4780 1</a></li>
+<li><a href="#Theory%202">Theory 2</a></li>
+</ul>
+</li>
+<li><a href="#Math%20review">Math review</a>
+<ul>
+<li><a href="#Sets%20%26%20functions">Sets &amp; functions</a></li>
+<li><a href="#Linear%20algebra">Linear algebra</a>
+<ul>
+<li><a href="#Ultimate%20linear%20algebra%20crash%20course">Ultimate linear algebra crash course</a></li>
+</ul>
+</li>
+<li><a href="#Basics%20of%20Linear%20ALgebra">Basics of Linear ALgebra</a></li>
+</ul>
+</li>
+<li><a href="#Applied%20ML%20lecture%202">Applied ML lecture 2</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-Intro" class="outline-2">
+<h2 id="Intro">Intro</h2>
+<div class="outline-text-2" id="text-Intro">
+<p>
+This is the 2.0 version of this workshop after I audited many ML courses and filtered for the best resources. All the prereqs of probability, linear algebra/vector calculus will be covered as we go. Any books can be found on <a href="http://libgen.is/">library genesis</a>.
+</p>
+</div>
+
+<div id="outline-container-Applied" class="outline-3">
+<h3 id="Applied">Applied</h3>
+<div class="outline-text-3" id="text-Applied">
+<p>
+We will do a short-ish course taught by a core-developer of the scikit-learn library, he will also teach us how to <a href="https://www.youtube.com/playlist?list=PLM-1QqX7UksT6tREbR-n9Mhup0OoRBU34">contribute</a>. The slides are annotated with commentary if you press P while viewing (or click the speech bubble icon). This will also cover Keras, AutoML libraries. 
+</p>
+
+<ul class="org-ul">
+<li>COMS-W4995 <a href="https://www.cs.columbia.edu/~amueller/comsw4995s20/schedule/">Applied Machine Learning</a> Columbia
+<ul class="org-ul">
+<li><b>Course assumes you are taking a theory course in parallel</b></li>
+<li>Can be done entirely in google colab (free) on a tablet/phone if you have to</li>
+<li>21 lectures on <a href="https://www.youtube.com/playlist?list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM">YouTube</a></li>
+<li>Homework on <a href="https://github.com/amueller/COMS4995-s20/tree/master/homework">GitHub</a></li>
+<li>Books recommended:
+<ul class="org-ul">
+<li><a href="http://appliedpredictivemodeling.com/">Applied Predictive Modeling</a> [APM]</li>
+<li><a href="https://amueller.github.io/#book">Intro to Machine Learning w/Python</a> [IMLP]</li>
+<li><a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Choose%20your%20own%20theory%2Falgorithm%20course" class="outline-3">
+<h3 id="Choose%20your%20own%20theory%2Falgorithm%20course">Choose your own theory/algorithm course</h3>
+<div class="outline-text-3" id="text-Choose%20your%20own%20theory%2Falgorithm%20course">
+<p>
+I audited most of these courses, mix and match your own curriculum to go with COMS-W4995. If one topic doesn't make sense try reading/watching it in another source.    
+</p>
+
+<p>
+<b>CS4780</b>   
+This is the best of all the intro theory/algorithm style ML courses as the prof will actually explain the math notation and motivation behind the theory. A small picture on a board in chaulk of a hyperplane vector will be much easier to understand than an entire hour of somebody talking about it in a zoom lecture with static slides filled with notation. It doesn't matter if the lectures are from 2018 because it's almost the <a href="https://www.cs.cornell.edu/courses/cs4780/2021fa/#Schedule">same</a> as the 2021 version, and all these topics come back into fashion again such as the recent <a href="https://www.youtube.com/watch?v=ahRPdiCop3E">paper</a> <i>Every Model Learned by Gradient Descent Is Approximately a Kernel Machine</i>.   
+</p>
+
+<ul class="org-ul">
+<li>CS4780 <a href="https://www.cs.cornell.edu/courses/cs4780/2018fa/">Machine Learning for Intelligent Systems</a> Cornell 
+<ul class="org-ul">
+<li>37 lectures on <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">YouTube</a> w/<a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/index.html">notes</a></li>
+<li>Homework w/solutions on <a href="https://www.dropbox.com/s/tbxnjzk5w67u0sp/Homeworks.zip?dl=0">dropbox</a></li>
+<li>Books recommended:
+<ul class="org-ul">
+<li><a href="https://probml.github.io/pml-book/book1.html">Probabilistic Machine Learning</a> [PML]
+<ul class="org-ul">
+<li>2021 draft includes Jupyter <a href="https://github.com/probml/pyprobml/tree/master/book1">notebooks</a> for each chapter</li>
+</ul></li>
+<li><a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The Elements of Statistical Learning</a> [ESL]</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+<b>Bio/Chem Machine Learning</b> Maybe you want an entirely different perspective, the exact same algorithms and theory we are doing can also be learned in the <a href="https://youtu.be/QyFrYUCXbgI">life sciences</a> in fact that lecture is probably one of the best introductions I've seen to ML/Neural Nets. You could use that course instead of the ones here to learn these algorithms/theory. AlphaFold2 did not totally solve <a href="https://youtu.be/1YHsSFWn5OA">protein folding</a> and you can get this data <a href="https://github.com/LPDI-EPFL/masif">yourself</a>. There's countless other uses for ML like <a href="https://youtu.be/AHVJv5RNqKs">drug design</a> or reverse engineering <a href="https://youtu.be/Jj9BbKhZSYM">eyesight</a>.  
+</p>
+
+<p>
+<b>CS480</b>
+This course focuses on neural network models as they are the most hyped right now though see the above paper on neural network kernel machine approximation, some of the NN models have mind boggling amounts of parameters requiring large scale distributed machine learning. CS4780 will also cover much of the material here like AdaBoost, Perceptron, SVM etc so if they don't make sense, watch them again in CS4780.     
+</p>
+
+<ul class="org-ul">
+<li>CS480 <a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480/lecture.html">Introduction to Machine Learning</a> Waterloo
+<ul class="org-ul">
+<li>All the lectures .mp4 on the same site (noticed Privacy lecture missing)</li>
+<li>Homework is open using public datasets to use with Pytorch</li>
+<li>Covers causality models, adversarial models, the most recent neural network models</li>
+<li>Books recommended:
+<ul class="org-ul">
+<li><a href="https://en.d2l.ai/">Dive into Deep Learning</a></li>
+<li><a href="https://mml-book.github.io/">Mathematics for Machine Learning</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+<b>10-701</b>
+General graduate intro for students who aren't PhD track in machine learning and want to use it for other fields. Taught by a systems bio <a href="http://www.cs.cmu.edu/~zivbj/">researcher</a> in <a href="https://algorithmsinnature.org/">algorithms used by nature</a> and Prof Xing the now president of <a href="https://mbzuai.ac.ae/">MBZUAI</a> (yes, you can get into MBZUAI). The lectures are worth watching as they will talk about what works now and what doesn't anymore, why there is a ton of classifiers, however it's a grad course so math sophistication is assumed. Very good lectures on computational learning theory and probabilistic graph models. 
+</p>
+
+<ul class="org-ul">
+<li>10-701 <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro to Machine Learning</a> CMU 
+<ul class="org-ul">
+<li>Lectures on <a href="https://www.youtube.com/playlist?list=PLsWN0V-b507g7dbQTUvFkKZEqdHR5Fh4P">YouTube</a></li>
+<li>Homework is <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/">avail</a> also <a href="https://github.com/jiaqigeng/CMU-10701-Machine-Learning">2021 hw solutions</a></li>
+</ul></li>
+</ul>
+
+<p>
+<b>10-301/601</b>
+Undergrad/MSc version of 10-701, errors in the slides and you have to watch the lectures as he handwrites all the algorithms on a tablet. If you don't understand a topic watch it again here for more clarity like the PAC/learning theory lectures.     
+</p>
+
+<ul class="org-ul">
+<li>10-301 <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> CMU
+<ul class="org-ul">
+<li>Lectures on <a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">YouTube</a></li>
+<li>Hw is all open</li>
+<li>Can also be done entirely in google colab</li>
+<li>Recitations w/<a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">solutions</a> on the 2021 schedule</li>
+<li>Books recommended:
+<ul class="org-ul">
+<li><a href="http://ciml.info/">A Course in Machine Learning</a> [CIML]</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>
+<b>CS-433</b>
+Being taught right now (Dec 2021) is EPFL's machine learning course. Has more learning theory than most other intro courses which is good, I didn't try any assignments but the labs come with full solutions. 
+</p>
+
+<ul class="org-ul">
+<li>CS-433 <a href="https://www.epfl.ch/labs/mlo/machine-learning-cs-433/">Machine Learning</a> EPFL
+<ul class="org-ul">
+<li>Lectures on <a href="https://www.youtube.com/playlist?list=PL4O4bXkI-fAd4nB7YYR5F8WitmPxjPeAa">YouTube</a></li>
+<li>A lot of labs on <a href="https://github.com/epfml/ML_course/tree/master/labs">GitHub</a> w/solutions</li>
+<li>Projects are <a href="https://www.aicrowd.com/challenges/epfl-machine-learning-higgs">competitions</a> I don't think you can audit without school login (I didn't try)</li>
+</ul></li>
+</ul>
+
+<p>
+<b>18.337J</b>
+Try a research exploration into the crazy world of <a href="https://www.stochasticlifestyle.com/the-essential-tools-of-scientific-machine-learning-scientific-ml/">scientific ML</a> such as physics-informed neural networks where you can drop in partial differential equations which are the math models describing the rules of any system with spatial as well as time dependence such as diffusion (heat transfer, population dynamics), finance, biology systems, sound waves, fluid dynamics, electrodynamics, conservation laws, relativity and who knows how many more. These PDEs act as prior information which encode the physical laws of that system then 'data efficient' noisy samples can be learned from instead of requiring millions+ of carefully prepared samples like in typical supervised learning. This course also covers <a href="https://www.cs.cornell.edu/courses/cs4787/2021sp/">large scale machine learning</a> library optimization but for high performance computing labs. 
+</p>
+
+<ul class="org-ul">
+<li>18.337J <a href="https://github.com/mitmath/18337">Scientific Machine Learning</a> MIT
+<ul class="org-ul">
+<li>Lectures on <a href="https://www.youtube.com/playlist?list=PLCAl7tjCwWyGjdzOOnlbGnVNZk0kB8VSa">YouTube</a></li>
+<li>Homework available on GitHub</li>
+</ul></li>
+</ul>
+
+<p>
+<b>Many More</b>
+MIT now offers it's 2020 Machine Learning <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-036-introduction-to-machine-learning-fall-2020/">course</a> on open library with class recorded blackboard lectures, even the classic Andrew Ng machine learning course on Coursera is still worth doing none of the fundamentals have changed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Theoretic%20foundations%20of%20modern%20ML" class="outline-3">
+<h3 id="Theoretic%20foundations%20of%20modern%20ML">Theoretic foundations of modern ML</h3>
+<div class="outline-text-3" id="text-Theoretic%20foundations%20of%20modern%20ML">
+<p>
+My choice is to understand the core theory so in this workshop in parallel with COMS-W4995 I will go through the first 20 chapters of the (free) <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">book</a> <i>Understanding Machine Learning: From Theory to Algorithms</i> w/<a href="https://www.youtube.com/playlist?list=PLPW2keNyw-usgvmR7FTQ3ZRjfLs5jT4BO">lectures</a>. It's still taught by the author at <a href="https://student.cs.uwaterloo.ca/~cs485/">Waterloo</a> in 2021 and CMU's PhD track intro course <a href="http://www.cs.cmu.edu/~nihars/teaching/10715-Fa21/index.html">10-715</a>, and 10-701 covers some of it's chapters like Rademacher complexities in it's learning theory lectures. There's a <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/MLbookSol.pdf">solutions manual</a> for the few exercises in the book which will be an exercise in itself to try and understand.
+</p>
+
+<p>
+Every chapter in the book has a corresponding lecture in the above courses so I'll probably end up doing most of CS4780 and some of 10-701 too but if you understand the book, you don't need the other courses.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Begin" class="outline-2">
+<h2 id="Begin">Begin</h2>
+<div class="outline-text-2" id="text-Begin">
+</div>
+<div id="outline-container-Get%20a%20math%20crash%20course%20reference" class="outline-3">
+<h3 id="Get%20a%20math%20crash%20course%20reference">Get a math crash course reference</h3>
+<div class="outline-text-3" id="text-Get%20a%20math%20crash%20course%20reference">
+<p>
+Obtain the <a href="http://libgen.is/book/index.php?md5=B228D58AB79295A264DBE0BFE4C9D06E">book</a> <i>All the Math You Missed: But Need to Know for Graduate School</i> [ATMYM] and the <a href="http://libgen.is/book/index.php?md5=61EF813C0341A8D443912B0777CC59FD">book</a> <i>Mathematical Modeling and Applied Calculus</i> [MMAC] to use as reference to look up topics as we come across them. 10-601 has a <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/slides/10601-math-resources.pdf">math resources</a> pdf with links to other pdfs for more reference.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Install%20Software" class="outline-3">
+<h3 id="Install%20Software">Install Software</h3>
+<div class="outline-text-3" id="text-Install%20Software">
+<p>
+For COMS-4995 either install conda <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">locally</a> or use google colab (free). See <a href="https://docs.google.com/document/d/1RSGvlBG8dDfs62_0jJEHnQFN-Au6yFbp8M6QTNs3EIY/edit">this</a> brief tutorial for setting up google drive or how to <a href="https://www.kaggle.com/general/156610">directly</a> import kaggle datasets to colab. You can do all the intro ML courses entirely on a phone or tablet using colab if you had to.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Applied%20ML%20lecture%201" class="outline-2">
+<h2 id="Applied%20ML%20lecture%201">Applied ML lecture 1</h2>
+<div class="outline-text-2" id="text-Applied%20ML%20lecture%201">
+<p>
+The coreqs for this course is the <a href="https://github.com/jakevdp/PythonDataScienceHandbook">Python Data Science Handbook</a> which you can quickly audit going through the <a href="https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks">notebooks</a> on GitHub or just read the NumPy and Pandas <a href="https://numpy.org/doc/stable/user/basics.html">documentation</a> as those libraries comes up, if you did the <a href="./software.html">software</a> workshop this will be trivial. 
+</p>
+
+<p>
+<a href="https://youtu.be/rbvpiPJuK64">Watch</a> or <a href="https://amueller.github.io/COMS4995-s20/slides/aml-01-introduction/#p1">read</a> the slides with notes though what he says in lecture is often different as the notes are from a previous semester and act as an outline. @50m he notes how ML is different that statistics as they're drawing up a hypothesis to ask a question about the data whereas we are making predictions on unseen data with models filled with assumptions. This course doesn't cover <a href="https://www.cs.cornell.edu/courses/cs4787/2021sp/">large scale machine learning</a> tooling as the prof will use AWS as his personal computer loading up an instance with 512GB ram to work on a large data subset instead of messing around with the massive complexity of distributed ML frameworks. 
+</p>
+
+
+<p>
+<b>Reading: IMLP Ch 1, APM Ch 1-2</b> Both books can be found on libgen, reading APM 1.3 <i>Terminology</i> is helpful for understanding 'class' or 'predictors'. Chapter 2 (and the first lecture) introduces a linear and quadratic (power) model. These are both covered in <a href="#Get%20a%20math%20crash%20course%20reference">MMAC</a> in the first chapter. The first is a linear function f(x) = mx + b (well, technically affine function) who's parameters are m the slope (rise/run) and b the vertical y-intercept. Now you know what 'parameters' means in the context of modeling, in this case it is the 2 things that define what a linear line is. The second is a quadratic f(x) = ax^2 + bx + c which is really a power function model y = Cx^k where C and k are nonzero constants: f(x) = Cx^2 + Cx^1 + c. The parameters C and k define what it means to be a power function. Note setting parameter k to k - 1 in f(x) = ax^2 + bx + c gives you a linear function f(x) = ax + (b + c) or mx + b so a linear function is a special case of a quadratic function which itself is just a power function model for our purposes of machine learning. 
+</p>
+
+<p>
+Let's read his book, IMLP. In the lecture he also said <i>What question(s) am I trying to answer? Do I think the data collected can answer that question?</i> as being fundamental. We are taught the fundamental NumPy data structure the NumPy array and the comma denotes a second dimension in np.array([1,2,3],[4,5,6]). In a matrix/vector it's dimensions is it's length. There's a mention here about efficient sparse matrices handling with SciPy which is explained <a href="https://machinelearningmastery.com/sparse-matrices-for-machine-learning/">here</a> basically they come up all the time and multiplying matrices together is an inefficient problem unless of course they are sparse then you can speed this up with SciPy built-ins. We will learn what a matrix is in the linear algebra crash course we do. The matplotlib section is the subject of the entire next lecture. 
+</p>
+
+<p>
+The first application (page 20) is very similar to the petal length k-nearest neighbors example in Kevin Murphy's book, which we'll also read in CS4780. Terminology is clearly defined here. You don't have to read this whole chapter, you can use <i>Building your first model</i> chapter as a guideline for the first assignment, anyway that's what I normally would do read it as I worked on something else.     
+</p>
+</div>
+
+<div id="outline-container-Theory%201" class="outline-3">
+<h3 id="Theory%201">Theory 1</h3>
+<div class="outline-text-3" id="text-Theory%201">
+<p>
+Watching <a href="https://youtu.be/b5NlRg8SjZg">ML Theory</a> lecture 1. Skip to 8m, so far this is a pretty excellent intro, finally somebody supplied me with a concrete definition of inductive reasoning. @56:30 computational complexity plays a major role in ML ie: runtimes of these training/prediction algorithms. The only prereqs are some basic <a href="./algorithms.html#CS Theory Toolkit lecture 2">asymptotics</a> for algorithm analysis, and familiarity with linear algebra/basic stats like what is a distribution, he claims he will teach us the rest of the math in the lectures. Important to note: the training data is 'randomly generated' meaning knowing one sample can't help us to find out what another sample is if we knew the distribution, and we don't care at all about the probability distribution (which we haven't even covered yet here) from where the random data comes from because as you'll see in CS4780 lecture it's impossible to know.  
+</p>
+
+<p>
+We get a very intuitive mathematical model of machine learning which was largely statistics free anyone could follow. The introduction of the <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">book</a> [UML] covers what we just saw in the lecture ie: bait shyness. Of course there is already a problem with his papaya learning example, in Thailand they will thinly shave a green unripe papaya to make it into a salad that is quite tasty but our example learning function would label that as not tasty.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-CS4780%201" class="outline-3">
+<h3 id="CS4780%201">CS4780 1</h3>
+<div class="outline-text-3" id="text-CS4780%201">
+<p>
+Watching <a href="https://youtu.be/MrLPzBxG95I">Supervised Learning Setup</a> which covers what we just learned with some more explanation, you can of course watch any of the other courses you want. @36:10 'curly X cartesian product curly Y' means every possible ordered pair combination of x from set X and y from set Y in a tuple for example if A = {1, 2} and Y = {3} then A x Y = {(1, 3), (2, 3)} so all his features x matched with a label y for each training sample. A feature vector is defined @44:50. End of lecture we did the bag of words vector representation as the first assignment in the <a href="./software.html">CS19</a> workshop.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Theory%202" class="outline-3">
+<h3 id="Theory%202">Theory 2</h3>
+<div class="outline-text-3" id="text-Theory%202">
+<p>
+If you forgot sets/function notation read <a href="https://www.math.ucla.edu/~tao/resource/general/115a.3.02f/sets.pdf">this</a>.   
+</p>
+
+<p>
+\[L_{D,f}(h) = D[{x: h(x) \neq f(x)}]\]
+</p>
+
+<p>
+He changes this later, Empirical Risk Minimization notation here at the beginning of the lecture means a loss function L, over the set D and a function f. It consumes a function h as input then outputs a new distribution where h(x) labels do not match f(x) labels. D is the 'set of all papayas in the world' essentially it means the distribution where we source papayas that we don't know anything about. Function f is a hypothetical perfect labeller, basically your brain looking at a feature set and knowing how to label each input. D[{x: h(x) $&ne; f(x)}] is the new distribution created of misses. He redefines this function later in the lecture.  
+</p>
+
+<p>
+\[L_{S}(h) = \frac{|{i: h(x_{i}) \neq y_{i}}|}{|S|}\]
+</p>
+
+<p>
+The Empirical Loss notation \(L_{S}(h)\) is another loss function over the set S of samples, consumes a function h for input, and returns a ratio of the size of the set of mismatches over the size of all the samples S.      
+</p>
+
+<p>
+@17:20 the reason why the error is 0, is because h(x) predictor function is a simple if-statement that checks if x is already in the set S of samples and returns y label, N otherwise. Of course there is no loss because we have 'overfitted' our model, meaning it will work only for input data exactly the same as our training/sample data. Using his empirical loss function over the set S, there will be no errors where h(x) new input doesn't equal y label in set S, as the unknown inputs we labelled N don't exist in the set S and this function will only return the set of mislabelled inputs, not one's who don't have a label at all.
+</p>
+
+<p>
+\[ERM_{H}(s \in S) \in {ArgMin(L_{S}(h \in H))}\]
+</p>
+
+<p>
+New Empirical Risk Minimization: pick predictor h() from your set of all predictors H with the lowest empirical loss. 
+</p>
+
+<p>
+Theorem: Let X be any set, Y the label set {0,1} and let H be a finite set of predictor functions h() from set X to Y. Assume training samples in set S is generated by some probability distribution D over the set X and labelled by some h() in H. Also assume the elements of S are picked i.i.d independent and identically distributed, so randomly choosing one sample can't help you learn another. Then \(ERM_{H}\) is guaranteed to come up with an h() that has small true loss given sufficiently large samples S.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Math%20review" class="outline-2">
+<h2 id="Math%20review">Math review</h2>
+<div class="outline-text-2" id="text-Math%20review">
+</div>
+<div id="outline-container-Sets%20%26%20functions" class="outline-3">
+<h3 id="Sets%20%26%20functions">Sets &amp; functions</h3>
+<div class="outline-text-3" id="text-Sets%20%26%20functions">
+<p>
+Watch <a href="https://youtu.be/59WX2V7Vjgg">Review of sets and functions</a>. It is the best visual explanation I can find with the exact amount of information we need for these courses. You can skip parts of the lecture where the class works out exercises. For example @18:49 - 27:20 is an exercise. A set is a data structure in math, that's all. 
+</p>
+
+<p>
+For future reference the MMAC book covers single and <a href="./calculus.html#Day 3 Multivariable functions">multivariable</a> functions in the first two chapters that anybody can understand, and Terence Tao's <a href="http://libgen.is/book/index.php?md5=850AF3CC9B1C5DCB7DCF1FE82691A69B">Analysis I</a> chapter 3 <i>Set Theory</i> will teach you anything you want to know about the definition of functions, their images/inverses and the operations of set data structures though you don't have to do it all now wait until we come across it in lectures. There's a lot of similarity to programming in Tao's book Example 3.4.2 for images of sets, that is exactly what map() in programming is: consume a data structure and apply a function to each one of it's elements, returning a new data structure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Linear%20algebra" class="outline-3">
+<h3 id="Linear%20algebra">Linear algebra</h3>
+<div class="outline-text-3" id="text-Linear%20algebra">
+<p>
+Recall polynomials from highschool, they are a specification of a function. Polynomials are a way to understand the properties that function has such as for which x is p(x) = 0, what is the maximum or minimum values of p(x), what is it's graph if we use polynomials to specify it?. Knowing these things tells you all you want to know about a function f(x) by specifying it with p(x) and taking it's statistics. 
+</p>
+
+<p>
+Linear algebra is primarily concerned with transformations which is any operation that transforms an input to an output. Linear means however you change the input causes the same changes in the output like doubling the input causes the output to be doubled. So we have this space, which is kind of like a transformation test bench to manipulate and find the statistics of objects in them much like polynomials but we have many more operations available in this space than regular algebra like transpose, a linear algebra operation that takes a column and turns it into a row or a row into a column. A matrix like polynomials can specify a function, you input a vector and it outputs a vector. This means a matrix can be abstracted to more than just a table of numbers and you can use linear algebra wherever there is a vector space and that includes all kinds of different mathematics, it's almost like the underlying theory of it all and for us the most critical subject in machine/deep learning so we'll have to put in work understanding it, but remember all we're doing is algebra with a few more features and everything is linear. 
+</p>
+
+<p>
+We need to know:
+</p>
+
+<ul class="org-ul">
+<li>Gilbert Strang's <a href="http://libgen.is/book/index.php?md5=A556CCA72B3B8F9D8186E3685FFC8877">book</a> <i>Linear Algebra &amp; Learning from Data</i> it completely covers the steps needed to understand the SVD, gradient descent, neural nets and thus deep learning, stats, probability, and optimization as they apply to machine learning are covered too. There is a whole course for it on MIT's OCW free <a href="https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/video-lectures/">here</a>.</li>
+<li>Matrix calculus which Alan Edelman can <a href="https://youtu.be/oGZK3yGF-6k">teach</a> us and isn't really covered in any curriculums</li>
+</ul>
+</div>
+
+<div id="outline-container-Ultimate%20linear%20algebra%20crash%20course" class="outline-4">
+<h4 id="Ultimate%20linear%20algebra%20crash%20course">Ultimate linear algebra crash course</h4>
+<div class="outline-text-4" id="text-Ultimate%20linear%20algebra%20crash%20course">
+<p>
+If you already took linear algebra, you can get a refresher crash course of <a href="https://www.cs.cmu.edu/~zkolter/course/linalg/course_notes.html">notes</a> and short <a href="http://www.cs.cmu.edu/~zkolter/course/linalg/introduction.html">lectures</a> (disable https or 'blocked content' to see the YouTube embeddings) by CMU prof Zico Kolter designed for machine learning/data science students.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Basics%20of%20Linear%20ALgebra" class="outline-3">
+<h3 id="Basics%20of%20Linear%20ALgebra">Basics of Linear ALgebra</h3>
+<div class="outline-text-3" id="text-Basics%20of%20Linear%20ALgebra">
+<p>
+Obtain Terence Tao's free <a href="https://terrytao.files.wordpress.com/2016/12/linear-algebra-notes.pdf">notes</a> on linear algebra. Do a casual read of the first few pages where he precisely defines transformations (any operation that transforms an input to an output), what linear means, what algebra is, how you are really just doing algebra except with additional operations like span, transpose, trace etc.
+</p>
+
+<p>
+<b>Scalars</b> defined on page 6, any quantity which can be described by a single number. He notes how abstract this can get like complex numbers, volume, time, density. As long as your scalars obey the rules of algebra where x + y = y + x and a(b + c) = ab + ac then you can use it as a scalar. Ask yourself questions to better understand his definition: can n^2 be a scalar where n is some natural number? n^2 is a function which outputs a single number, sure. Test to see if it passes his scalar rules of algebra test.
+</p>
+
+<p>
+<b>Vectors</b> defined on page 7 and axioms on page 8, a vector space is any class of objects which can be added together, or multiplied with scalars. The vector (1, 2, 3) can't be added to (5, 6) because addition is elementwise, you need equal length vectors to do addition. We already saw a vector in the first theory lecture, where papayas were described using an x and y 2D plane where the coordinates represented (color, hardness). If you wanted to add on additional features such as (color, mushy, price, organic) that's what Tao means by a vector in R^4 or R^n the more things you need to describe an object in that vector space, the bigger it's dimension. Page 10 an n-tuple is a math data structure, brackets with elements seperated by commas where the order matters. Tao notes R^1 the field of all real number scalars is itself a vector space inside a line. R^0 is a vector space inside a point. There's many examples here how so long as the space satisfies the axioms to be a vector space, then you can have vectors in it and do linear algebra. Notice sqrt(x) is not a vector in the polynomial vector space because if x is negative it's not defined in R, so you break out of the space (into the complex numbers), it's not closed under addition or scalar multiplication. A polynomial can't have a negative exponent either since no polynomial can contain division by a variable. He shows that even a matrix is a vector, the point being a very complicated object can be a vector and then be manipulated in a vector space.  
+</p>
+
+<p>
+<b>Vector subspace</b> defined on page 18, if you take a vector space and extract a part of it like a subset, it's only a subspace if addition and scalar multiplication is closed within that subset and doesn't escape to another vector space. The interesting trick here is proving vector space axioms III (additive identity) and IV (additive inverse) exist within an arbitrary subspace by simply multiplying any vector by 0 or -1 creating a zero vector and an inverse vector.  Many examples of what a subspace can be follows, like if you zero out the z in (x, y, z) a 3 dimensional vector or R^3 vector, then you have created an R^2 vector subspace since addition and scaling cannot escape the subspace. Tao remarks that these subspaces tend to be lines or flat planes through the origin in R^2 and R^3.
+</p>
+
+<p>
+That's good enough for now, we'll skip to the definition of matrices when it comes up.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Applied%20ML%20lecture%202" class="outline-2">
+<h2 id="Applied%20ML%20lecture%202">Applied ML lecture 2</h2>
+<div class="outline-text-2" id="text-Applied%20ML%20lecture%202">
+<p>
+Watching <a href="https://youtu.be/OW3oco7nlV4">Visualization &amp; Matplotlib</a> lecture. Easy but incredibly awesome lecture on the kinds of colors you should choose for visualizations so they don't look terribad.
+</p>
+
+<p>
+TODO
+</p>
+
+
+<hr>
+<p>
+<a href="./index.html">Home</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

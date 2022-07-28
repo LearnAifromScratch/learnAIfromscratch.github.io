@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2022-07-22 Fri 00:47 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choose Your Own Math Adventure</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="jbh">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  body {
+  max-width: 40rem;
+  padding: 1rem;
+  margin: auto;
+  }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {background-color: #fafad2} img {width: 100%; height: auto;}  figure {text-align: center;} </style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<header>
+<h1 class="title">Choose Your Own Math Adventure</h1>
+</header>
+<figure id="org78944d7">
+  <a href="https://demozoo.org/sceners/83264/">
+    <img src="./u.GIF" alt="u.GIF">
+    </a>
+</figure>
+<nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#Option%201%3A%20The%20Math%20You%20Need">Option 1: The Math You Need</a>
+<ul>
+<li><a href="#Start%20option%201%20here">Start option 1 here</a></li>
+</ul>
+</li>
+<li><a href="#Option%202%3A%20Create%20a%20Terminator">Option 2: Create a Terminator</a>
+<ul>
+<li><a href="#Start%20option%202%20here">Start option 2 here</a></li>
+</ul>
+</li>
+<li><a href="#Option%203%20SciML%20Performance%20Engineering">Option 3 SciML Performance Engineering</a>
+<ul>
+<li><a href="#Start%20option%203%20here">Start option 3 here</a></li>
+</ul>
+</li>
+<li><a href="#Option%204%3A%20Computational%20Geometry">Option 4: Computational Geometry</a>
+<ul>
+<li><a href="#Start%20option%204%20here">Start option 4 here</a>
+<ul>
+<li><a href="#Geometry%20%26%20Isaac%20Newton">Geometry &amp; Isaac Newton</a></li>
+<li><a href="#Geometric%20probability">Geometric probability</a></li>
+<li><a href="#Origins%20of%20geometry">Origins of geometry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%28%E6%95%B0%E5%AD%A6%20%29">(数学 )</a></li>
+<li><a href="#Functions">Functions</a>
+<ul>
+<li><a href="#What%20are%20functions">What are functions</a></li>
+<li><a href="#Polynomials">Polynomials</a></li>
+<li><a href="#Matrices">Matrices</a></li>
+<li><a href="#Random%20variables">Random variables</a></li>
+</ul>
+</li>
+<li><a href="#Mathematical%20reasoning">Mathematical reasoning</a>
+<ul>
+<li><a href="#Classical%20logic">Classical logic</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<hr>
+
+<p>
+<i>Do 1% effort for 100 days</i> - Prof <a href="https://youtu.be/YFUIPg8P2sY?t=278">Ryan O'Donnell</a>
+</p>
+
+<div id="outline-container-Option%201%3A%20The%20Math%20You%20Need" class="outline-2">
+<h2 id="Option%201%3A%20The%20Math%20You%20Need">Option 1: The Math You Need</h2>
+<div class="outline-text-2" id="text-Option%201%3A%20The%20Math%20You%20Need">
+<p>
+A good enough crash course.
+</p>
+
+<ul class="org-ul">
+<li>Algebra skills
+<ul class="org-ul">
+<li>Manipulating inequalities</li>
+</ul></li>
+<li>Trig bootcamp</li>
+<li>Vector bootcamp
+<ul class="org-ul">
+<li>Matrix Calculus seminar</li>
+<li>The SVD ('factoring' a matrix)</li>
+</ul></li>
+<li>How to write a proof and know it's correct
+<ul class="org-ul">
+<li>Using an interactive proof assistant</li>
+<li>Learning natural deduction</li>
+</ul></li>
+<li>How to solve problems
+<ul class="org-ul">
+<li>A few Poh-Shen Loh's seminars on strategies</li>
+</ul></li>
+<li>Integration to do asymptotic analysis</li>
+</ul>
+</div>
+
+
+<div id="outline-container-Start%20option%201%20here" class="outline-3">
+<h3 id="Start%20option%201%20here">Start option 1 here</h3>
+<div class="outline-text-3" id="text-Start%20option%201%20here">
+<p>
+Enter <a href="./themathyouneed.html">the math you need</a> workshop
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Option%202%3A%20Create%20a%20Terminator" class="outline-2">
+<h2 id="Option%202%3A%20Create%20a%20Terminator">Option 2: Create a Terminator</h2>
+<div class="outline-text-2" id="text-Option%202%3A%20Create%20a%20Terminator">
+<p>
+You can do this with a phone.
+</p>
+
+<ul class="org-ul">
+<li><a href="http://underactuated.csail.mit.edu/index.html">Underactuated Robotics</a> MIT
+<ul class="org-ul">
+<li>Algorithms for walking, running, swimming, flying and manipulation</li>
+<li>Recorded <a href="https://www.youtube.com/channel/UChfUOAhz7ynELF-s_1LPpWg/playlists">lectures</a> on YouTube</li>
+<li>Assignments all done online w/Python using deepnote</li>
+<li>Useful to program/analyze any system with continuous variables in a feedback loop</li>
+</ul></li>
+</ul>
+
+<p>
+Underactuated means you don't maintain full control authority at all times you exploit natural dynamics.     
+</p>
+</div>
+
+<div id="outline-container-Start%20option%202%20here" class="outline-3">
+<h3 id="Start%20option%202%20here">Start option 2 here</h3>
+<div class="outline-text-3" id="text-Start%20option%202%20here">
+<p>
+TODO
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Option%203%20SciML%20Performance%20Engineering" class="outline-2">
+<h2 id="Option%203%20SciML%20Performance%20Engineering">Option 3 SciML Performance Engineering</h2>
+<div class="outline-text-2" id="text-Option%203%20SciML%20Performance%20Engineering">
+<p>
+A research project into continuous dynamics, numerical linear algebra, linear approximation, probabilistic programming, uncertainty modeling, and neural networks.     
+</p>
+
+<ul class="org-ul">
+<li><a href="https://mitmath.github.io/18337/">18.337J Parallel Computing and SciML</a> MIT
+<ul class="org-ul">
+<li>Has recorded lectures on YouTube</li>
+<li>Performance engineering of large-scale scientific modeling</li>
+<li>Uses the Julia language, easy to pick up if you've programmed before</li>
+<li>Applications in finance, medicine, NASA, any model of a system where data evolves over time</li>
+</ul></li>
+</ul>
+
+<p>
+This concerns high-performance parallel computing where scientists run insanely complex models such as <a href="https://news.mit.edu/2022/early-universe-model-0324">cosmological simulations</a> that are accelerated by physics-informed neural networks. This course teaches us how to optimize it all and as a side-effect how to optimize any high level code. We also learn all the dev tooling like VSCode, Git, making packages, code profilers, compiler type inference, a lot of topics.
+</p>
+</div>
+
+<div id="outline-container-Start%20option%203%20here" class="outline-3">
+<h3 id="Start%20option%203%20here">Start option 3 here</h3>
+<div class="outline-text-3" id="text-Start%20option%203%20here">
+<p>
+Enter the <a href="./sciml.html">SciML</a> workshop.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Option%204%3A%20Computational%20Geometry" class="outline-2">
+<h2 id="Option%204%3A%20Computational%20Geometry">Option 4: Computational Geometry</h2>
+<div class="outline-text-2" id="text-Option%204%3A%20Computational%20Geometry">
+<p>
+Geometry is a tool for doing math, like a framework you can manipulate visually. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://jeffe.cs.illinois.edu/teaching/compgeom/index.html">CS498 Computational Geometry</a> UIUC
+<ul class="org-ul">
+<li>Has recorded <a href="https://mediaspace.illinois.edu/media/t/1_ai5zh5fy">lectures</a></li>
+<li>Follows the <a href="http://www.cs.uu.nl/geobook/">book</a> <i>Computational Geometry: Algorithms and Applications</i>
+<ul class="org-ul">
+<li>Each chapter introduces a problem, transforms it into a geometric problem then solves it</li>
+<li>We also do the <a href="https://bookstore.ams.org/mcl-26">book</a> <i>Mathematics via Problems: Geometry</i> to teach ourselves all the geometry we missed growing up in N. America where it's no longer taught.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+A data structure and algorithm design course with the same traditional topics such as dynamic programming, linear programming, graphs and trees except you can design it all visually and prove it with geometry. The data is usually manipulated as sets of numbers you interpret as points on a 3D surface. 
+</p>
+</div>
+
+
+<div id="outline-container-Start%20option%204%20here" class="outline-3">
+<h3 id="Start%20option%204%20here">Start option 4 here</h3>
+<div class="outline-text-3" id="text-Start%20option%204%20here">
+<p>
+TODO 
+</p>
+
+
+<figure id="orgba72c66">
+<img src="./geometry.jpg" alt="geometry.jpg">   
+
+<figcaption><span class="figure-number">Figure 1: </span>Geometry of mathematical finance <a href="https://wwwen.uni.lu/index.php/research/fstm/dmath/research_areas/probability_theory_and_its_applications_mathematical_finance">uni.lu</a></figcaption>
+</figure>
+</div>
+
+<div id="outline-container-Geometry%20%26%20Isaac%20Newton" class="outline-4">
+<h4 id="Geometry%20%26%20Isaac%20Newton">Geometry &amp; Isaac Newton</h4>
+<div class="outline-text-4" id="text-Geometry%20%26%20Isaac%20Newton">
+<p>
+For geometry-themed entertainment try reading <a href="http://libgen.is/book/index.php?md5=B290F008ACE9DE45827692ED7A4CB944">Isaac Newton on Mathematical Certainty and Method</a> by Niccolo Guicciardini as you go through the geometry problems here, as Newton claimed geometric synthesis helped him make mathematical discoveries when writing <i>Principia</i> by performing geometric synthesis on the cause to prove the effects he observed through analysis.
+</p>
+
+<p>
+Isaac Newton entered Trinity College in 1661 as a <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03996/1">sub-sizar</a> meaning subsidized tuition in exchange for being an unpaid servant on campus. Cambridge then was just a diploma mill there were seldom any lectures and fellows (graduate students) took jobs as P/T tutors to supplement their income. Undergrad degrees consisted of one of these tutors giving you a list of books to read. According to his Trinity College notebook which Cambridge still has, this was a large reading list of Greek and Roman classics in Latin: Aristotle's <i>Organon</i> and <i>Metaphysics</i>, Porphyry's <i>Isagoge</i>, Plato and manuscripts of commentary on Aristotle usually written by other fellows to sell to undergrads. This was because of the <a href="https://en.wikipedia.org/wiki/Recovery_of_Aristotle">recovery of Aristotle</a> in the middle ages which shaped logic courses for the next few centuries. Newton didn't read much of Aristotle or any of the books assigned to him, but he later claimed he read enough to have learned how to properly categorize a problem, how to think logically, and later when he wrote the <i>Principia</i> how to use a cause to prove the effect. His algebra lectures that later became the book <i>Arithmetica Universalis</i> described different 'species' ie: Aristotelian categories of math objects that can be combined together, essentially he was describing types. 
+</p>
+
+<p>
+According to Newton's notebooks and the writings of his close friend DeMoivre, here is how Newton learned mathematics. Wandering the town fair in 1663 he comes across a book on astrology, and out of curiosity buys a copy as Newton was always into alchemy and other occult topics. It features trigonometry he doesn't understand so he goes to the mathematics department of Cambridge to find books on trig only to discover everyone there is deeply immersed in the work of Descartes. They give him Euclid and Oughtred's <a href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-oughtreds-clavis-mathematicae">Clavis</a>. He retries Euclid's <i>Elements</i> after having given up reading it before, and sees the proof of the Pythagorean theorem which makes him want to read the rest of the text. Newton's college notebooks show he was influenced by books II (geometrical algebra), V (proportions), VII (number theory) and X (irrationals) and that Euclid taught him how to write a proof while Aristotle's system of logic he studied gave him the rigorous thought to be able to follow the proofs.
+</p>
+
+<p>
+Since his Cambridge degree is essentially a joke, with the school so lax that nobody cares what you're doing, he abandons the official curriculum for the rest of his undergrad to hang around the math department. He pursues Kepler and Oughtred's book, writing he understands it except for the quadratic and cubic equations however his takeaway in his notes is that algebra can be used for exploration, which he starts doing by writing out hundreds of examples. He gets a B.A. in 1665 despite never finishing any of the official curriculum and is offered to be elected as a minor fellow pursuing a master's degree but the school is closed because of the plague in the summer of 1665.
+</p>
+
+
+<figure id="orgba794c6">
+<img src="./geometrie.jpg" alt="geometrie.jpg">   
+
+<figcaption><span class="figure-number">Figure 2: </span>Cartesian Geometry by Van Schooten <a href="https://www.manhattanrarebooks.com/pages/books/2043/rene-descartes/geometria?soldItem=true">rarebooks</a></figcaption>
+</figure>
+
+<p>
+He goes home to his family farm and takes with him a 1659 two volume Latin translation of Descartes <a href="https://en.wikipedia.org/wiki/La_G%C3%A9om%C3%A9trie">La Geometrie</a> by van Schooten with appendices and commentary by other Cartesian research mathematicians. Newton later writes in his school notebook how a proof by Hudde to estimate the slope with a tangent in the appendix taught him how to transform one type of problem into another to study it in a different way. This book was considered a very hard text and the state of the art of 17th century analysis which uses almost the same notation we use today. He read 10 pages or so, couldn't understand the text, and reread from the beginning. Went a little further then stopped again going back to the beginning. He repeats this algorithm for all summer and autumn until he finally finishes the whole text. He misunderstands a technique of Descartes to his own benefit where he thinks Descartes is hinting the reader can figure out any properties of a curve and while trying to do so as an exercise develops his own sophisticated analysis well beyond the book or any other book of that time. During this period is when he started working 18 hours a day, 7 days a week. He didn't stop this work ethic until he died, even after becoming wealthy and living in London.
+</p>
+
+<p>
+In the winter of 1665 he reads <i>Arithmetica Infinitorum</i> by Wallis which is the arithmetic of infintesimals and Viete's <i>Opera Mathematica</i> another large book. In less than a full year Newton managed to bring himself up to date with the entire achievement of mid 17th century mathematics by himself. He discovers the generalized binomial theorem and infinite series analysis which he claimed to have invented to find short cuts to calculations. He returns briefly in 1666 to Cambridge before it's shut down by the plague again, his notes revealing he finished his differential and integral calculus during these few months back at school.  
+</p>
+
+<p>
+Describing his activities during the second plague year: "I am ashamed to tell to how many places I carried these computations, having no other business at the time, for then I took really too much delight in these inventions". There is notes he kept of calculating a logarithm to it's 52nd decimal point. He returns to Cambridge in 1667 where he is obsessed with uncovering the ancient analysis used in classical geometry. Pappus' book 7 contains a commentary about a lost group of tools and propositions that Euclid, Apollonius, Eratosthenes and other geometers of the day used that Pappus referred to as the 'treasury of analysis'. These lost Porisms (corollaries) are speculated by Newton to be <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03963/1">projective geometry</a>.
+</p>
+
+<p>
+Newton in his Lucasian chair lectures said that the ancients would never bother to introduce the algebra of curves with geometry because you lose the simplicity of working within geometry as its whole point was to escape the tediousness of calculations by simply drawing lines and circles. He also claims books like Pappus's <i>Collectio</i> deliberately hid the analysis, as it was considered an inelegant tool, and that ancient synthesis where they deduced a consequence from a given premise (a corollary) using visual means was a superior method as the analysis could not be reversed in steps like geometric synthesis could. He went further and claimed if you wanted to discover seemingly unrelated corollaries you had to use synthesis, describing the analysis of his day as a 'tedious pile of probabilities used by bunglers'.
+</p>
+
+<p>
+In <i>Arithmetica Universalis</i> which is an unauthorized book released by his successor at Cambridge who discovered Newton's Lucasian lectures in the library and published them as is, Newton writes how Descartes' attempts to include into standard plane geometry various curves like parabolas more than just a waste of time, they are 'ruining the simplicity of geometry'. In figure 108 he shows how he would solve this problem, by reinterpreting an ellipse, arguing the Cartesian methods fail to understand the point of doing everything with just a ruler and compass. 
+</p>
+
+<p>
+He later wrote in a manuscript on geometry that mechanics of motion was what generated all geometry, and that the ancients had understood this as well conceiving geometrical objects as generated by moving along a straight edge, circles via the movement of a compass, or translation like in Proposition 4 of Book 1 of Euclid's <i>Elements</i> where one triangle form is moved to compare to another. He then demonstrated that rotation of rulers were in fact transformation of the plane something that wasn't formally developed by other mathematicians for another 200 years. Here is how Newton used his <a href="https://youtu.be/paenRVq0vnc">rotating ruler</a> to create a power series. 
+</p>
+
+<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/qFo7xZFdBdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<p>
+Newton invented the concept of modern limits using epsilons (very small quantities) when writing the <i>Principia</i> during the geometric synthesis stage of his infinitesimal analysis. He decided limits demonstrated as geometric vanishing augments to be 'more in harmony with the geometry of the ancients in that there should be no need to introduce infinitely small figures into geometry'. Since infinitesimal analysis was merely a heuristic tool to him, he downgraded infinitesimals (which had no established theory or proofs anyway) to prefer his new limit proof method he derived from geometry synthesis, and is very similar to what everyone <a href="https://www.sciencedirect.com/science/article/pii/S0315086000923012">today</a> is using in modern calculus courses.
+</p>
+
+<blockquote>
+<p>
+"Comparing today the texts of Newton with the comments of his successors, it is striking how Newton’s original presentation is more modern, more understandable and richer in ideas than the translation due to commentators of his geometrical ideas into the formal language of the calculus of Leibnitz" -<a href="https://en.wikipedia.org/wiki/Vladimir_Arnold">Vladimir Arnold</a> 1990
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-Geometric%20probability" class="outline-4">
+<h4 id="Geometric%20probability">Geometric probability</h4>
+<div class="outline-text-4" id="text-Geometric%20probability">
+<p>
+There's a <a href="http://www.cut-the-knot.org/">book</a> <i>Cut The Knot</i> that has a chapter on solving probabilities in a continuous sample space by recognizing the problem or solution can be represented using geometry.
+</p>
+
+<p>
+What is the probability that three randomly drawn real numbers in the interval between 0 and 1 have a sum less than 1? The solution recognizes that the three numbers can be points in 3D space, and form a pyramid. Dropping a volume 1 cube over the interval provides the distribution needed where by definition it must sum to 1. Now take the volume of the pyramid, that's the answer. Easy and intuitive.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Origins%20of%20geometry" class="outline-4">
+<h4 id="Origins%20of%20geometry">Origins of geometry</h4>
+<div class="outline-text-4" id="text-Origins%20of%20geometry">
+<p>
+Some entertainment
+</p>
+<ul class="org-ul">
+<li><a href="https://youtu.be/yFMcNXC-dW0">A brief history of geometry I</a>
+<ul class="org-ul">
+<li>Mesolithic times to 1400 A.D.</li>
+</ul></li>
+<li><a href="https://youtu.be/AAiM8ymBCQk">A brief history of geometry II</a> 
+<ul class="org-ul">
+<li>European/Cartesian geometry</li>
+</ul></li>
+<li><a href="https://youtu.be/mKlxkpbze54">A brief history of geometry III</a>
+<ul class="org-ul">
+<li>19th century Complex/Non-Euclidean geometry</li>
+</ul></li>
+<li><a href="https://youtu.be/hlyTRZcJ8vo">A brief history of geometry IV</a>
+<ul class="org-ul">
+<li>Higher dimensional geometry</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-%28%E6%95%B0%E5%AD%A6%20%29" class="outline-2">
+<h2 id="%28%E6%95%B0%E5%AD%A6%20%29">(数学 )</h2>
+</div>
+<div id="outline-container-Functions" class="outline-2">
+<h2 id="Functions">Functions</h2>
+<div class="outline-text-2" id="text-Functions">
+<p>
+Most of the math you've learned was solely some kind of test bench for analyzing a function.
+</p>
+</div>
+
+<div id="outline-container-What%20are%20functions" class="outline-3">
+<h3 id="What%20are%20functions">What are functions</h3>
+<div class="outline-text-3" id="text-What%20are%20functions">
+<p>
+An ancient concept of a function is written on a papyrus from 1850 BC describing the rule for finding the area of a rectangle using the product of two adjacent sides. Today we would say the area of a rectangle is a function of it's two adjacent sides or more generally when you multiply numbers together the final product is a function of its factors. We had special cases like these for centuries until Fermat, Descartes and other 1600s mathematicians decided to generalize them and give a clear description of what is common to all functions. Newton had <a href="https://www.originalsources.com/Document.aspx?DocID=KD4D8VTC327L3PA">his own term</a> for functions which he described as an expression of one term which is dependent on one variable. So they are an abstract notion of a mapping between relationships/dependencies.
+</p>
+
+<p>
+Similar to <a href="https://cs.wheaton.edu/~tvandrun/dmfp/">functional programming</a>, math functions can take functions as input and return new functions, that's exactly what derivatives in calculus do. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Polynomials" class="outline-3">
+<h3 id="Polynomials">Polynomials</h3>
+<div class="outline-text-3" id="text-Polynomials">
+<p>
+Their general form where a<sub>n</sub> are negative or positive coefficients 
+</p>
+
+<p>
+\[f(x) = a_{n}x^n + a_{n-1}x^{n-1} + ... + a_{1}x + a_0\]
+</p>
+
+<p>
+A polynomial is a specification of a function. You can also specify a polynomial by writing down a list of coefficients a<sub>n</sub> .. a<sub>0</sub> and the point in doing this is to approximate some function and get all its statistics: which x is f(x) = 0? What value of x does do we get the max/min of f(x)? What is the shape of its graph y = f(x)? 
+</p>
+
+<p>
+You may also notice a polynomial can be a function that generates integers as an integer can be defined as Int = (Nat - Nat). If you divide two polynomial functions the result is a function that generates rational numbers as per the definition Rat = (Int / Int).  
+</p>
+</div>
+</div>
+
+<div id="outline-container-Matrices" class="outline-3">
+<h3 id="Matrices">Matrices</h3>
+<div class="outline-text-3" id="text-Matrices">
+<p>
+A matrix is a linear mapping so also encodes or specifies a function where f(x) = Ax and A is a matrix, x is a vector. A matrix multiplied by a vector is like giving it an input, and it returns a vector (output). 
+</p>
+
+<p>
+When you encode a function as a matrix you also get it's statistics:
+</p>
+
+<ul class="org-ul">
+<li>Nullspace is the zeros of the function</li>
+<li>Column space is the range of the function</li>
+<li>A permutation of a bunch of integers is a function, so a permutation matrix encodes it
+<ul class="org-ul">
+<li>The transpose is like undo operation to previous state</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Random%20variables" class="outline-3">
+<h3 id="Random%20variables">Random variables</h3>
+<div class="outline-text-3" id="text-Random%20variables">
+<p>
+These are a mapping between an event space and a measurable space or stated more simply these are filter/fold functions that return a real number representing a probability. Consider <a href="https://en.wikipedia.org/wiki/Dice">dice</a> a single six-sided die being rolled has a distribution (the sample space of all the events that can happen) of {1, 2, 3, 4, 5, 6} where each side of the die has a 1/6 probabiilty of occuring when rolled. If you were to ask what's the probability of the event that I roll a 3 or less this question is modeled as a random variable meaning a function that filters the distribution to {1, 2, 3} and folds their probability values 1/6 + 1/6 + 1/6 to return a total probability of 3/6 or 1/2 or 50% probability.
+</p>
+
+<p>
+Why they're called random <i>variables</i> and not probability functions I think comes from 1800s mathematicians describing a distribution subset of the relevant events in question A<sub>0</sub> to A<sub>i</sub> with mappings to real number values x<sub>0</sub> to x<sub>i</sub> where a new variable X assumes all the summed values X = x<sub>0</sub> + &#x2026; + x<sub>i</sub> representing the total probability p but there's been some notion of this mapping since the 1600s so your guess is as good as mine. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Mathematical%20reasoning" class="outline-2">
+<h2 id="Mathematical%20reasoning">Mathematical reasoning</h2>
+<div class="outline-text-2" id="text-Mathematical%20reasoning">
+<p>
+Math is a <a href="https://youtu.be/WKeITf83wBo">long chain of deductions</a>. 
+</p>
+
+
+<figure id="orgc596944">
+<img src="./proofs.png" alt="proofs.png">
+
+<figcaption><span class="figure-number">Figure 3: </span>What is a proof from <a href="http://www.cs.cmu.edu/~arielpro/15251f15/schedule.html">15-251</a></figcaption>
+</figure>
+
+<p>
+The model for basically all mathematical reasoning:
+</p>
+
+<ul class="org-ul">
+<li>AND \(\land\) (conjunction)</li>
+<li>OR \(\lor\) (disjunction)</li>
+<li>NOT \(\neg\)</li>
+<li>Implies A \(\implies\) B
+<ul class="org-ul">
+<li>only false when A is true and B is false</li>
+</ul></li>
+<li>Iff (if and only if) A \(\iff\) B</li>
+</ul>
+
+<p>
+These connectives can of course be used to define each other:
+</p>
+<ul class="org-ul">
+<li>A \(\implies\) B is \(\neg\) A \(\lor\) B
+<ul class="org-ul">
+<li>implication is only true when either A is false OR B is true</li>
+</ul></li>
+<li>Iff is (A \(\implies\) B) \(\land\) (B \(\implies\) A)</li>
+</ul>
+
+<p>
+If you take the math you need <a href="./themathyouneed.html">option</a> we'll use Lean proof assistant to prove all these connectives.
+</p>
+</div>
+
+<div id="outline-container-Classical%20logic" class="outline-3">
+<h3 id="Classical%20logic">Classical logic</h3>
+<div class="outline-text-3" id="text-Classical%20logic">
+<p>
+We could also do what every student of math in history did before us which was to get a classical introduction to categories, logic, causality, and rhetoric. You can decide which ancient civilization's authors are worth reading but be aware of translation quality as some are unreadable without extensive attached commentary.
+</p>
+
+<div style ="text-align: center;"><iframe width="560" height="315"src="https://www.youtube.com/embed/E6FdfJOj7CY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<p>
+The Aristoteles Latinus project probably has the best <a href="https://stories.kuleuven.be/en/stories/aristoteles-latinus-jigsaw-puzzling-for-experts">translations</a> they collect all ancient manuscripts like the Boethius translations and then compare them to others, presenting the original Latin, and sometimes ancient Greek with the English translation beside it containing the best estimate of modern language, and a full codex in the index so you can <a href="https://www.cambridge.org/highereducation/books/learn-latin-from-the-romans/C745F49A9DAB318C5DC3BED3731C2D19#overview">read the Latin yourself</a>. It is definitely worth your time to learn Latin, note the professor in the above video has precision in English despite Dutch being her first language. Think of it as a model of languages to help you better learn English.  
+</p>
+
+<p>
+The same project also translates the ancient Syrian and Islamic empire manuscripts, these civilizations had direct access to many of the original Greek texts and the original Syriac or Arabic is included beside the translation with a codex in the index. Some of these you can find on <a href="http://libgen.is/book/index.php?md5=A54F3F106902565FF464864A208B5662">library genesis</a> otherwise a real library is your only hope, as they are extremely expensive books and exist behind an academic paywall where you need a school login to access the database. 
+</p>
+
+<p>
+Some edutainment on the history of logic from Aristotle to the present state:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://youtu.be/UcjKKcvv7Rw">Aristotle and deduction</a> - Brief history of logic MF 251
+<ul class="org-ul">
+<li>Origins of modern logic</li>
+</ul></li>
+<li><a href="https://youtu.be/-8IVhNrwNdg">Stoics and other thinkers</a> - Brief history of logic MF 252
+<ul class="org-ul">
+<li>Implication, disjunction and conjunction is discussed here</li>
+</ul></li>
+<li><a href="https://youtu.be/q-o3qB2i80U">Islamic/Medieval logic</a> - Brief history of logic MF 253
+<ul class="org-ul">
+<li>Modal logic origins</li>
+</ul></li>
+<li><a href="https://youtu.be/70PzhlfAUi4">Leibniz to Boole</a> - Brief history of logic MF 254
+<ul class="org-ul">
+<li>From deduction to induction</li>
+<li>Notation for relations</li>
+<li>Boole's book <i>Analysis of Logic</i></li>
+<li>De Morgan's laws</li>
+</ul></li>
+</ul>
+
+
+<hr>
+<p>
+<a href="./index.html">Home</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

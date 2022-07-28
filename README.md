@@ -1,2 +1,2 @@
 # learnAIfromscratch.github.io
-https://learnaifromscratch.github.io/
+The AI tripos

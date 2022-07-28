@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2022-07-23 Sat 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Math You Need</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="jbh">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  body {
+  max-width: 40rem;
+  padding: 1rem;
+  margin: auto;
+  }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {background-color: #fafad2} img {width: 100%; height: auto;}  figure {text-align: center;} </style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<header>
+<h1 class="title">The Math You Need</h1>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#Intro">Intro</a></li>
+<li><a href="#Basics">Basics</a>
+<ul>
+<li><a href="#Arithmetic%20with%20natural%20numbers">Arithmetic with natural numbers</a>
+<ul>
+<li><a href="#Prove%20the%20laws%20of%20multiplication">Prove the laws of multiplication</a></li>
+</ul>
+</li>
+<li><a href="#Laws%20of%20Subtraction">Laws of Subtraction</a></li>
+<li><a href="#The%20Hindu-Arabic%20number%20system">The Hindu-Arabic number system</a></li>
+<li><a href="#Arithmetic%20with%20Hindu-Arabic%20notation">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#Laws%20of%20Division">Laws of Division</a></li>
+<li><a href="#Fractions">Fractions</a></li>
+<li><a href="#Arithmetic%20with%20fractions">Arithmetic with fractions</a></li>
+</ul>
+</li>
+<li><a href="#Derivatives">Derivatives</a>
+<ul>
+<li><a href="#GeoGebra%20examples">GeoGebra examples</a></li>
+<li><a href="#Derivative%20example%201">Derivative example 1</a></li>
+<li><a href="#Derivative%20example%202">Derivative example 2</a></li>
+<li><a href="#Interpreting%20the%20derivative">Interpreting the derivative</a></li>
+</ul>
+</li>
+<li><a href="#Limits">Limits</a></li>
+<li><a href="#Integration">Integration</a></li>
+<li><a href="#Proofs%20in%20Lean">Proofs in Lean</a>
+<ul>
+<li><a href="#Proof%20assistants%20in%20education">Proof assistants in education</a></li>
+<li><a href="#1.1%20Mathematical%20Proof">1.1 Mathematical Proof</a></li>
+<li><a href="#1.2%20Symbolic%20Logic">1.2 Symbolic Logic</a>
+<ul>
+<li><a href="#Descartes%20on%20why%20you%20should%20learn%20math">Descartes on why you should learn math</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<hr>
+
+<div id="outline-container-Intro" class="outline-2">
+<h2 id="Intro">Intro</h2>
+<div class="outline-text-2" id="text-Intro">
+<p>
+Here we learn algebra sophistication, problem solving strategies, matrix calculus, integration for asymptotic analysis and the Lean proof assistant combined with a nice logic method called natural deduction so we can verify our own proofs are correct. 
+</p>
+
+<p>
+Since we need an actual useful integration technique for applications we will learn the modern version of the Newton integral instead of the Riemann integral with the added benefit of the Newton integral being a good foundation to proceed to other integration methods if you want. Undergrads take multiple semesters of the Riemann integral in the introductory calculus sequence then again in a real analysis course but graduate instruction promptly abandons that theory completely for the Lebesgue integral. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Basics" class="outline-2">
+<h2 id="Basics">Basics</h2>
+<div class="outline-text-2" id="text-Basics">
+</div>
+<div id="outline-container-Arithmetic%20with%20natural%20numbers" class="outline-3">
+<h3 id="Arithmetic%20with%20natural%20numbers">Arithmetic with natural numbers</h3>
+<div class="outline-text-3" id="text-Arithmetic%20with%20natural%20numbers">
+<ul class="org-ul">
+<li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
+</ul>
+
+<p>
+The successor function s(n) = n + 1 for natural numbers:
+</p>
+<ul class="org-ul">
+<li>s(0) = 1</li>
+<li>s(s(0)) = 2</li>
+<li>s(s(s(0))) = 3</li>
+</ul>
+</div>
+
+<div id="outline-container-Prove%20the%20laws%20of%20multiplication" class="outline-4">
+<h4 id="Prove%20the%20laws%20of%20multiplication">Prove the laws of multiplication</h4>
+<div class="outline-text-4" id="text-Prove%20the%20laws%20of%20multiplication">
+<p>
+We'll do this in the Lean proof assistant too. 
+</p>
+
+<p>
+<b>Prove n * 1 = n</b>
+</p>
+
+<p>
+The definition of multiplication: mn is n + n repeated m times so n1 is 1 + 1 repeated n times so 1<sub>1</sub> + 1<sub>2</sub> + &#x2026; + 1<sub>n</sub> = n
+</p>
+
+<p>
+We will need this result for the other proofs.
+</p>
+
+<p>
+<b>Prove the distributive law: (k + n)m = km + nm</b>
+</p>
+
+<p>
+km is m + m repeated k times or m<sub>1</sub> + &#x2026; + m<sub>k</sub> and (k + n)m means m + m repeated (k + n) times. Distributing m in (k + n)m we get: ((m<sub>1</sub> + m +&#x2026;m<sub>k</sub>) + (m<sub>1</sub> + m +&#x2026;m<sub>n</sub>)) and now the left side matches the right side since km + nm is the same when expanded. 
+</p>
+
+<p>
+<b>Prove the associative law: (kn)m = k(nm)</b>
+</p>
+
+<p>
+(kn)m is m + m repeated kn times and kn is n + n repeated k times:
+</p>
+
+<p>
+(n<sub>1</sub> + &#x2026; + n<sub>k</sub>)m or (mn<sub>1</sub> + &#x2026; + mn<sub>k</sub>) using distributive law. 
+</p>
+
+<p>
+Right hand side: k(nm) is nm + nm repeated k times (nm<sub>1</sub> + &#x2026; + nm<sub>k</sub>) and factor out m, both sides of the equation are the same.  
+</p>
+
+<p>
+<b>Prove the commutative law: nm = mn</b>
+</p>
+
+<p>
+First let's prove n1 = 1n or 1n = n. We proved n1 = n already, so we can use substitution to replace n in 1n.
+</p>
+
+<p>
+1n is 1(1<sub>1</sub> + .. + 1<sub>n</sub>) and using the distributive law this is (1<sub>1</sub> + .. + 1<sub>n</sub>) or n. So now we have n1 = 1n.
+</p>
+
+<p>
+Looking at the right side: mn is (n<sub>1</sub> + &#x2026; + n<sub>m</sub>)
+</p>
+
+<p>
+Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is m, so we have nm = nm.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Laws%20of%20Subtraction" class="outline-3">
+<h3 id="Laws%20of%20Subtraction">Laws of Subtraction</h3>
+<div class="outline-text-3" id="text-Laws%20of%20Subtraction">
+<ul class="org-ul">
+<li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-The%20Hindu-Arabic%20number%20system" class="outline-3">
+<h3 id="The%20Hindu-Arabic%20number%20system">The Hindu-Arabic number system</h3>
+<div class="outline-text-3" id="text-The%20Hindu-Arabic%20number%20system">
+<ul class="org-ul">
+<li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
+</ul>
+
+<p>
+A simplified Roman numeral system is introduced to abstract our previous notation of strings so we can manipulate bigger numbers. 
+</p>
+<ul class="org-ul">
+<li>Uses powers of 10 
+<ul class="org-ul">
+<li>327 = 3 x 10<sup>2</sup> + 2 x 10<sup>1</sup> + 7 x 10<sup>0</sup></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-Arithmetic%20with%20Hindu-Arabic%20notation" class="outline-3">
+<h3 id="Arithmetic%20with%20Hindu-Arabic%20notation">Arithmetic with Hindu-Arabic notation</h3>
+<div class="outline-text-3" id="text-Arithmetic%20with%20Hindu-Arabic%20notation">
+<ul class="org-ul">
+<li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
+</ul>
+
+<p>
+A new way of hand multiplication is shown, taking advantage of the fact the notation is using the distributive law.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-Laws%20of%20Division" class="outline-3">
+<h3 id="Laws%20of%20Division">Laws of Division</h3>
+<div class="outline-text-3" id="text-Laws%20of%20Division">
+<ul class="org-ul">
+<li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
+</ul>
+
+<p>
+Laws you may have forgot: 
+</p>
+
+<p>
+\(\dfrac{k/m}{n} = \dfrac{k}{mn}\)                        
+</p>
+
+
+<p>
+\(\dfrac{k}{m/n} = \dfrac{kn}{m}\)       
+</p>
+</div>
+</div>
+
+<div id="outline-container-Fractions" class="outline-3">
+<h3 id="Fractions">Fractions</h3>
+<div class="outline-text-3" id="text-Fractions">
+<ul class="org-ul">
+<li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-Arithmetic%20with%20fractions" class="outline-3">
+<h3 id="Arithmetic%20with%20fractions">Arithmetic with fractions</h3>
+<div class="outline-text-3" id="text-Arithmetic%20with%20fractions">
+<ul class="org-ul">
+<li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
+</ul>
+
+<p>
+The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> used in the proof represents another similar variable. This is our first experience with a proof strategy: multiply both sides of something <a href="https://en.wikipedia.org/wiki/Linearity">linear</a> by a scalar.   
+</p>
+
+<hr>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Derivatives" class="outline-2">
+<h2 id="Derivatives">Derivatives</h2>
+<div class="outline-text-2" id="text-Derivatives">
+<p>
+A derivative of a function is another function you derive from the original function. Calculus is really only about derivatives as integration is an antiderivative procedure meaning you can get back to the original function (sometimes a set of functions) from it's derivative by integration hence it's name to integrate.    
+</p>
+</div>
+
+<div id="outline-container-GeoGebra%20examples" class="outline-3">
+<h3 id="GeoGebra%20examples">GeoGebra examples</h3>
+<div class="outline-text-3" id="text-GeoGebra%20examples">
+<p>
+Try moving the sliders around in this GeoGebra <a href="https://www.geogebra.org/m/TzhXQqvu">example</a>. The slope can be interpreted as the sensitivity of a function, if the slope is very large for small x inputs then y is sensitive to changes in x. You find the slope of a function by taking the ratio of the distance between two points. This is \(\Delta\) 'delta' the change between two points: 
+</p>
+
+<p>
+\(\begin{equation*}
+m = \dfrac{\Delta y}{\Delta x} = \dfrac{y_{2}-y_{1}}{x_{2}-x_{1}}\text{.}
+\end{equation*}\)
+</p>
+
+<p>
+In this <a href="https://www.geogebra.org/m/YvaFWUzY">example</a> move the points <i>a</i> and <i>a+h</i> along the x-axis, <i>a</i> represents some fixed input and <i>h</i> is a tiny displacement added to f(a) for example if this function is f(x) then f(2) is <i>a</i> the specific input, and f(2 + 0.1) is what <i>a+h</i> represents. \(\Delta x\) = h and \(\Delta y = f(a + h) - f(a)\) because the outputs of f(x) are plotted y. The 2 points (a, f(a)) and (a+h, f(a+h)) give us a secant (Latin for cut) a line that intersects at 2 points. The slope of the secant is the average rate of change:
+</p>
+
+<p>
+\(\begin{equation*}
+m_{sec} = \dfrac{\Delta y}{\Delta x}= \dfrac{f(a + h)-f(a)}{h}\end{equation*}\)
+</p>
+
+<p>
+In the same <a href="https://www.geogebra.org/m/YvaFWUzY">example</a>, the tangent (Latin for touch) seems to only touch our function at one point but we need two points to find it's slope. We can approximate the slope of the tangent by imagining some process where the <i>a</i> and <i>a+h</i> or \(\Delta x\) interval shrinks until their difference approaches zero but doesn't reach zero. We then take the limit of this process and if the limit exists then we have an approximation of the tangent slope which represents the instantaneous rate of change at point <i>a</i> or the derivative of <i>a</i>.
+</p>
+
+<p>
+The most intuitive explanation I've seen of instantaneous rate of change is given in the MIT OpenCourseWare series <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/course-introduction/">Calculus Revisited</a> where in the course introduction video he explains how differential calculus is the study of the ratio of zero/zero so a limiting process is introduced using the example of two observers who approach each other but never touch so the distance between them is never actually zero it's an infinite process where you can always cram in smaller intervals such as 1/million or 1/billion to get closer approximations. The observers are so close the car speeding past them can be considered standing still as it's a snapshot in time of the instantaneous speed, or as he points out a ratio over (almost) 0. 
+</p>
+
+<p>
+\(\begin{equation*}
+m_{tan} = \lim_{h \to 0}\dfrac{f(a + h)-f(a)}{h}\end{equation*}\)
+</p>
+
+<p>
+<a href="https://www.geogebra.org/m/BDYnGhbt">Here</a> we see if you take the tangent of all points of the black function, it is specifying another function in grey. We want to work at the higher-order functions level and have the function that gives a derivative at a specific point instead consume entire functions as input and return new functions that are the derivative. We accomplish this by adjusting the notation to show entire functions are being input:   
+</p>
+
+<p>
+\(\begin{equation*}
+f'(x) = \lim_{h \to 0} \dfrac{f(x + h)-f(x)}{h}\end{equation*}\)
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-Derivative%20example%201" class="outline-3">
+<h3 id="Derivative%20example%201">Derivative example 1</h3>
+<div class="outline-text-3" id="text-Derivative%20example%201">
+<p>
+Let's walk through inputting f(x) = x<sup>2</sup> into the derivative function:
+</p>
+
+<p>
+\(f'(x) = \lim_{h \to 0} \dfrac{f(x + h)-f(x)}{h}\)
+</p>
+
+<p>
+x<sup>2</sup> is (input)<sup>2</sup> our derivative function is f(input + input) - f(input): 
+</p>
+
+<p>
+\(= \lim_{h \to 0}\dfrac{(x + h)^2 - x^2}{h}\)
+</p>
+
+<p>
+Expand using <a href="https://youtu.be/h0Woqc_5qUE">binomial theorem</a>
+</p>
+
+<p>
+\(= \lim_{h \to 0}\dfrac{x^2 + 2xh + h^2 - x^2}{h}\)
+</p>
+
+<p>
+Since h is 'approaching zero' h<sup>2</sup> is an even smaller value we can ignore so either treat it like an asymptotic or substitute h<sup>2</sup> for 0:
+</p>
+
+<p>
+\(= \lim_{h \to 0}\dfrac{2xh + \epsilon^{O(1)}}{h}\) or \(\dfrac{2xh + 0}{h}\) 
+</p>
+
+<p>
+\(f'(x) = 2x\)
+</p>
+
+<p>
+If you go back and do it again with f(x) = 2x you would get the second derivative f''(x) = 2, a function that returns a constant. These three functions are all related as we'll see shortly in <i>Interpreting the derivative</i>.
+</p>
+
+<p>
+\(= \lim_{h \to 0}\dfrac{2(x + h) - 2x}{h}\)
+</p>
+
+<p>
+Factor out the 2
+</p>
+
+<p>
+\(= \lim_{h \to 0}2 \cdot \dfrac{x + h - x}{h}\)
+</p>
+
+<p>
+\(= \lim_{h \to 0}2 \cdot 1\)
+</p>
+
+<p>
+\(f''(x) = 2\)
+</p>
+
+<p>
+Try it with x<sup>n</sup> the output is nx<sup>n-1</sup> which is the general formula for taking the derivative of any polynomial/power function where (x + h)<sup>n</sup> expands to x<sup>n</sup> + nhx<sup>n-1</sup> + h<sup>O(1)</sup> and all those h powers you discard. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Derivative%20example%202" class="outline-3">
+<h3 id="Derivative%20example%202">Derivative example 2</h3>
+<div class="outline-text-3" id="text-Derivative%20example%202">
+<p>
+Let's try finding the derivative of f(x) = 1/x 
+</p>
+
+<p>
+\(\lim_{h \to 0} \dfrac{\dfrac{1}{(x + h)} - \dfrac{1}{x}}{h}\)
+</p>
+
+<p>
+Factor out 1/h and do the subtraction in the numerator:
+</p>
+
+<p>
+\(\lim_{h \to 0} \dfrac{1}{h} \cdot \dfrac{\dfrac{x - (x + h)}{x(x + h)}}{1}\) 
+</p>
+
+<p>
+This was in the laws of division video \(\dfrac{k/m}{n}\) = \(\dfrac{k}{mn}\):
+</p>
+
+<p>
+\(\lim_{h \to 0} \dfrac{1}{h} \cdot \dfrac{x - (x + h)}{x(x + h)}\)
+</p>
+
+<p>
+Distribute negative sign and simplify some more:
+</p>
+
+<p>
+\(\lim_{h \to 0} \dfrac{1}{h} \cdot \dfrac{-h}{x(x + h)}\)
+</p>
+
+<p>
+Distribute back in 1/h to cancel h:
+</p>
+
+<p>
+\(\lim_{h \to 0} \dfrac{-1}{x(x + h)}\)
+</p>
+
+<p>
+Take the limit h -&gt; 0 substituting h = 0 
+</p>
+
+<p>
+f'(x) = -1/x<sup>2</sup>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-Interpreting%20the%20derivative" class="outline-3">
+<h3 id="Interpreting%20the%20derivative">Interpreting the derivative</h3>
+<div class="outline-text-3" id="text-Interpreting%20the%20derivative">
+<p>
+Watch some of <a href="https://youtu.be/zfHEkt-1sqo">this</a> to see how it all fits together, at the end of the video he explains the derivative of the position function gives you the velocity function who's derivative in turn gives you the acceleration function. To go back to the position function from it's derivative, you integrate and adjust with some constants that were sliced off by the derivative function.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Limits" class="outline-2">
+<h2 id="Limits">Limits</h2>
+<div class="outline-text-2" id="text-Limits">
+<p>
+The best presentation I've found is lecture 4 of MIT's <i>Calculus Revisited</i> <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/lecture-4-derivatives-and-limits/">here</a> @17:28 (though the entire lecture is good). These lectures were made for self-study in 1970 so he explains all the definitions in plain language. In this lecture he examples the epsilon/delta definition of a limit and demonstrates some inequality manipulations. 
+</p>
+
+<p>
+The next lecture <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/lecture-4-derivatives-and-limits/">here</a> goes through the limit laws and is worth watching, this guy was great at explaining why everything fits together and demonstrating the proofs at the same time. The integration text we do later will cover continuity thoroughly and we'll practice inequalities. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Integration" class="outline-2">
+<h2 id="Integration">Integration</h2>
+<div class="outline-text-2" id="text-Integration">
+<p>
+There is an abundance of integration theories. We're only going to practice with the modernized/generalized Newton integration method later in this workshop which is similar to the Mean Value Theorem. In a regular calculus course you learn some corollaries after the MVT where you can easily piece back together the original function from the derivative or in other words the antiderivative or integration.   
+</p>
+
+<ul class="org-ul">
+<li>This <a href="https://youtu.be/vo-ItaB28f8">video</a> from 06:45 - 28:00</li>
+</ul>
+
+<p>
+The best summary I've found that explains the idea of integration, using x<sup>n</sup> power function examples where he shows how it works starting at n = 0 and increasing the powers of n. We already know what dx is it's \(\Delta x\) or <i>a+h</i> from the derivative examples we saw meaning a very small change in x and here that change represents the base of a rectangle so 2dx is 2 times \(\Delta x\) and this is a sum over an interval adding up all the 2dx rectangle areas.
+</p>
+
+<p>
+Notice if you take the derivative of \(\dfrac{x^3}{3}\) you get x<sup>2</sup>, so it is an antiderivative of x<sup>2</sup> and since the derivative of any constant is zero there is an infinite amount of antiderivatives for x<sup>2</sup> such as: \(\dfrac{x^3}{3}+c\) where c is 1, 2, 3..
+</p>
+
+
+<ul class="org-ul">
+<li>Second <a href="https://youtu.be/Js2mwsHc4p4">video</a> surveys and explains different theories of integration:</li>
+</ul>
+
+<p>
+@1:55 in the video he explains the Riemann integral which is in every calculus book. The idea here is the number of partitions of \(\Delta x\) become smaller and smaller growing to infinity until just like the derivative there is almost 0 distance between them, and we take the limit of this process. He then examples numerous integration theories like the Lesbesgue integral. The rest of this video if you choose to watch it explains the basic properties of integration: linearity, additivity, translation/scale invariance and normalization. He finishes with a proof of the generalized integration formula for x<sup>n</sup> functions \(\dfrac{x^{n+1}}{n+1}\) or the antiderivative of x<sup>n</sup>    
+</p>
+
+<p>
+From the books <a href="https://openlibra.com/en/book/theory-of-the-integral">Theory of the Integral</a> and <a href="https://openlibra.com/en/book/the-calculus-integral">The Calculus Integral</a>:
+</p>
+<blockquote>
+<p>
+"The Riemann integral is considered to be a completely inadequate theory of integration and yet is the theory that is taught to most undergraduate mathematics students."
+</p>
+
+<p>
+"The reader has, no doubt, studied the Riemann integral in elementary classes and been apprised of the fact that that integral is entirely inadequate for modern applications."
+</p>
+</blockquote>
+
+<p>
+The Calculus Integral book we'll do in it's entirety since we have to do at least one calculus book, it's 150 pages of material and the rest solutions to the problems. Why bother learning calculus? Because the concepts of theoretical CS, economics, physics, and every other science is expressed using the language of calculus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-Proofs%20in%20Lean" class="outline-2">
+<h2 id="Proofs%20in%20Lean">Proofs in Lean</h2>
+<div class="outline-text-2" id="text-Proofs%20in%20Lean">
+<p>
+Let's do some 21 century mathematics using an interactive proof assistant. 
+</p>
+
+<ul class="org-ul">
+<li><a href="http://avigad.github.io/logic_and_proof/">Logic and Proofs</a>
+<ul class="org-ul">
+<li>Carnagie Mellon University professor's course using the Lean proof assistant.</li>
+<li>Teaches some proof theory/natural deduction in order to verify your own proofs.</li>
+<li>Can run the book code in your browser clicking 'try this' button</li>
+</ul></li>
+</ul>
+</div>
+
+
+<div id="outline-container-Proof%20assistants%20in%20education" class="outline-3">
+<h3 id="Proof%20assistants%20in%20education">Proof assistants in education</h3>
+<div class="outline-text-3" id="text-Proof%20assistants%20in%20education">
+<ul class="org-ul">
+<li><a href="https://youtu.be/rBii0Hws1ug?t=3296">Formal Assistants and Math Education</a> (YouTube)
+<ul class="org-ul">
+<li>Start watching @55:00 we're doing the <a href="https://www.andrew.cmu.edu/user/avigad/">same material</a> he's talking about</li>
+<li>@2:04:23 Heather MacBeth talks about trying to use Lean for teaching Real Analysis</li>
+</ul></li>
+</ul>
+
+<p>
+The video is from the Fields institute <a href="http://www.fields.utoronto.ca/activities/21-22/meforum-Mar">MathEd Forum</a> <i>AI and Automated Reasoning in Undergrad Mathematics Education</i>. It's still early in the interactive proof assistant game so if you watched some of those talks you'll see there can be problems with the various tacticts like rewrite that modify goals and the weird non-linear way that idiomatic Lean users have come up with to formalize proofs. The calc environment for Lean was poorly designed too so we'll have to get around that. They add proof assistants are good for experimenting with a proof to see if you added something you didn't need, or if you can prove it another way because you get instant feedback.
+</p>
+
+<p>
+Another talk if you're interested: Welcome to <a href="https://youtu.be/zp6WleEjHUg">the dawn of formalized mathematics</a>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-1.1%20Mathematical%20Proof" class="outline-3">
+<h3 id="1.1%20Mathematical%20Proof">1.1 Mathematical Proof</h3>
+<div class="outline-text-3" id="text-1.1%20Mathematical%20Proof">
+<p>
+Reading the <a href="http://avigad.github.io/logic_and_proof/introduction.html">introduction</a>.
+</p>
+
+<p>
+The very first proof, try to rewrite it in steps for yourself if you forgot basic algebra that's how I remembered in the beginning, google the laws of exponents, square roots: 
+</p>
+
+<p>
+\(\sqrt{2} = \frac{a}{b}\)
+</p>
+
+<p>
+\(\frac{b}{1} \cdot \sqrt{2} = \frac{a}{b} \cdot \frac{b}{1}\)
+</p>
+
+<p>
+\(\sqrt{2} \cdot b = a\) 
+</p>
+
+<p>
+\(a^2 = 2 \cdot b^2\) because (ab)<sup>2</sup> is a<sup>2</sup>b<sup>2</sup> and sqrt(2)<sup>2</sup> is 2.
+</p>
+
+<p>
+At this point a<sup>2</sup> is clearly even, so using a new variable to not confuse with a or b, substitute a = 2c the common form for representing an even variable. If you want to see this explained again watch <a href="https://youtu.be/REeaT2mWj6Y">this</a>.
+</p>
+
+<p>
+The next proof of the product of primes isn't explained until chapter 17 using the principle of complete induction. This will be extensively covered later as you write your own induction proofs and the book returns here. The variables in the proof p and q represent prime numbers, and are in generalized form so are indexed. Try some special cases to understand the general form:
+</p>
+
+<p>
+m = 10 or 5<sub>1</sub> * 2<sub>2</sub> so p<sub>u</sub> is 2<sub>2</sub>
+</p>
+
+<p>
+k = 100 or 5<sub>1</sub> * 2<sub>2</sub> * 5<sub>3</sub> * 2<sub>4</sub> so q<sub>v</sub> is 2<sub>4</sub>
+</p>
+
+<p>
+General forms like this are expertly explained in the first chapter of the original <i>A Course in Pure Mathematics</i> by Hardy if you're interested, but you have to find a version that hasn't been tampered with. Here is an <a href="http://libgen.is/book/index.php?md5=A7F4687F763A25379298E6D929459F59">exact reproduction</a> by Nabu Press where if you compare it to the Cambridge reprints, is not nearly as 'wordy' they added too much noise to the reprints to make them like modern texts which completely removed the impressive precise writing of the original.
+</p>
+</div>
+</div>
+
+<div id="outline-container-1.2%20Symbolic%20Logic" class="outline-3">
+<h3 id="1.2%20Symbolic%20Logic">1.2 Symbolic Logic</h3>
+<div class="outline-text-3" id="text-1.2%20Symbolic%20Logic">
+<p>
+Natural deduction is introduced here, which I'll go through more thoroughly after this chapter but it's optional you don't have to know this style of constructive logic but I find it essential to validate proofs since like you, I don't have somebody who can review my work and tell me my logic is flawed. Natural deducation is a way to model your proofs so at least your conclusions are sound.   
+</p>
+</div>
+
+<div id="outline-container-Descartes%20on%20why%20you%20should%20learn%20math" class="outline-4">
+<h4 id="Descartes%20on%20why%20you%20should%20learn%20math">Descartes on why you should learn math</h4>
+<div class="outline-text-4" id="text-Descartes%20on%20why%20you%20should%20learn%20math">
+<p>
+Leibniz's 'calculus of thought' or precise rules of mental reasoning can also be found in a different form in the preface of Descartes <i>Discours de la Methode</i>. Every modern copy extracts the preface of the book, treating it as the actual book removing his geometry, optics and metereology work which we will shortly see are mandatory for understanding Descartes method. The preface is 6 parts hastily slapped together by Descartes because he was pressed for time where only Part Six, One and Two are the most interesting the rest seem totally random like a long discussion on blood circulation and metaphysics. The best translation is by <a href="https://www.mod-langs.ox.ac.uk/people/ian-maclean">Ian Maclean</a> for Oxford's World Classics and can be found on library genesis where every translation from 1600s French colloqialisms has an accompanying commentary at the back of the book. The famous quote in this book 'I think, therefore I am' was written as a refutation to Aristotle and his syllogisms as an example that is logically faulty but somehow this quote circulates without pointing out it's context. 
+</p>
+
+<p>
+However not included in that book is the chapters on geometry, and all the correspondence Descartes wrote after he was 'attacked in pamphlets being circulated'. Descartes hated reading long books, and hated school. This is why he routinely writes don't worry reader, the following isn't too long in many of his chapters hoping to convince the reader to actually read it. His opinion was the best method of mental reasoning was in the geometry texts of Archimedes, Pappus, Apollonius 'and others', because they produced self-evident arguments 'not quite easily known' that don't exactly follow a straight line of deduction. He explains Archimedes comparison of the sphere to a polyhedron in order to learn more about the sphere 'directs the light of nature in such a way that we pay particular attention' and that even if the reader denied the results, they could be pointed to similar results from previous proofs to show it must be true. In other words what he means by this is discoveries made this way aren't always direct consequences of previous deductions where the geometer follows A to B, but independent discoveries <i>done with analysis</i> that once found can always be proven in the framework of geometry by pointing back to some previous proofs as a source of truth. He preferred this kind of demonstratable proof that couldn't be refuted compared to philosophy which considered every possible sides of an argument and produced no truth.  
+</p>
+
+<p>
+He then laments that almost nobody reads those texts, because they are lengthy and require special attentiveness so are only known by a handful of people. He also laments that discoveries aren't made in formal geometry they're made in analysis (Pappus' projective geometry) so the reader doesn't get to see how the discovery was made only the final results, which do not proceed from A to B, and this is why he wrote his appendix on cartesian geometry the whole point was to create a new analysis that could be easily learned and demonstrate this way of thinking of 'discovering the truth'. He was especially thrilled how short it was. The others on optics and metereology were again simply used as examples how you would go about using his method to make discoveries, and connect directly to the preface about his method yet these are all omitted today.
+</p>
+
+<p>
+This is why Isaac Newton attacked Descartes and spent the rest of life trying to refute his philosophy on only learning analysis, because he claimed the analysis wasn't important at all, and that anybody could have figured it out independently just screwing around in their spare time like he did, and that's why the ancients had largely hidden it preferring to show to final proofs in other words no results in math could exist without synthesis meaning demonstrate a proof. Maybe he's right considering the analysis he used of infinitesimals during that time was unproven hacks he did for self-entertainment while on plague lockdown but when it came time to write the Principia he had to prove the analysis, which nobody else could, so performed synthesis showing a limit can exist in the framework of geometry.  
+</p>
+
+<p>
+Much like Descartes I too don't like watching long lectures, reading long books, so have tried to create this workshop to be as brief as possible highlighting things I've found interesting where we aren't doing the entire <i>Proof and Logic</i> book, and we aren't doing the measure theory section of <i>The Calculus Integral</i> we're just getting enough math so that we learn this style of thinking and can self-direct our own research according to interest. 
+</p>
+
+
+<p>
+TODO
+</p>
+
+<hr>
+<p>
+<a href="./math.html">Go Back</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

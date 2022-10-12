@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-10-11 Tue 19:46 -->
+<!-- 2022-10-11 Tue 19:48 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Let's Do The Art of Computer Programming</title>
@@ -219,13 +219,314 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
 <header>
 <h1 class="title">Let's Do The Art of Computer Programming</h1>
-</header><p>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#The%20Book%28s%29">The Book(s)</a>
+<ul>
+<li><a href="#The%20Bill%20Gates%20quote">The Bill Gates quote</a></li>
+<li><a href="#MMIX%20and%20MIX">MMIX and MIX</a></li>
+<li><a href="#Optimizing%20compilers%20are%20dead">Optimizing compilers are dead</a></li>
+</ul>
+</li>
+<li><a href="#Microcorruption%20CTF">Microcorruption CTF</a>
+<ul>
+<li><a href="#New%20Orleans">New Orleans</a></li>
+<li><a href="#Sydney">Sydney</a></li>
+<li><a href="#Hanoi">Hanoi</a></li>
+<li><a href="#Cusco">Cusco</a></li>
+<li><a href="#Reykjavik">Reykjavik</a></li>
+<li><a href="#Whitehorse">Whitehorse</a></li>
+<li><a href="#Montevideo">Montevideo</a></li>
+</ul>
+</li>
+<li><a href="#1.1%20Algorithms">1.1 Algorithms</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-The%20Book%28s%29" class="outline-2">
+<h2 id="The%20Book%28s%29">The Book(s)</h2>
+<div class="outline-text-2" id="text-The%20Book%28s%29">
+<p>
+See the official <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site, I'm going to start with <i>Volume 1: Fundamental Algorithms</i>. These aren't really reference or algorithms texts, you can decide after you read it yourself how to classify them. 
 </p>
+
+<p>
+The physical book itself is a representation of the work that has gone into it's writing with high quality typography, perfect paper and a binding where no matter what page you flip to the book stays flat. If you were to ever invest money into a physical book this would be one of those books.
+</p>
+
+<p>
+I will do these daily if I can, because I have all of them piled high on a desk and every night I've been obsessively flipping through them so if possible I want to help others read them, the information here is so dense there are no other books like them anywhere a single page can take a week to finish but we'll see how we do. If I were to explain these it would be you learn decades of CS research all at the same time in the kind of detail you will never find elsewhere.  
+</p>
+</div>
+
+<div id="outline-container-The%20Bill%20Gates%20quote" class="outline-3">
+<h3 id="The%20Bill%20Gates%20quote">The Bill Gates quote</h3>
+<div class="outline-text-3" id="text-The%20Bill%20Gates%20quote">
+<p>
+Everybody talks about the famous old quote in the back of volume 1 by Gates: 'you should definitely send me a resume if you can read the whole thing'. I found a more recent quote from 2005:
+</p>
+
+<blockquote>
+<p>
+"BILL GATES: ..say somebody came for an interview and they said ”Hey, I read the ’Art of Computer Programming’, that’s all I ever read, I did all the problems, I would hire them right then.
+</p>
+
+<p>
+MARIA KLAWE: You’d hire them right then?
+</p>
+
+<p>
+BILL GATES: Yeah, that’s right.
+</p>
+
+<p>
+MARIA KLAWE: So would I.
+</p>
+
+<p>
+BILL GATES: Even if they didn’t do the double-star problems, I mean, just the fact that they’d read the whole book, you know, those are the kinds of things you need to know to be a good programmer. Actually, there’s some of that you don’t even need to know, but the kind of algorithmic thinking that’s promoted there."
+(2005 <a href="http://webhome.cs.uvic.ca/~ruskey/Publications/KnuthClass/KnuthClassRevised.pdf">interview</a> with then Princeton Dean of Science).
+</p>
+</blockquote>
+
+<p>
+I'm not sure what the double-star problems are, maybe the earlier editions had this notation, also the <i>whole book</i> is 5+ books so far, since vol 4 is split into parts, he probably is only talking about the first volume. Of course I wouldn't read TAOCP for a job but as Knuth puts it 'all the best programmers can move effortlessly through levels of abstraction'. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-MMIX%20and%20MIX" class="outline-3">
+<h3 id="MMIX%20and%20MIX">MMIX and MIX</h3>
+<div class="outline-text-3" id="text-MMIX%20and%20MIX">
+<p>
+You can if you want use the <i>MMIX Supplement</i> by Ruckert to replace most of the MIX/MIXAL content with MMIX/MMIXAL in volumes 1-3. MMIX isn't a single machine, you can customize the hardware however you want using Knuth's free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, bus speeds, anything. He documented that program with the book <i>MMIXware: A RISC Computer for the Third Millennium</i> and all the code is written in literate programming style so you can read the programs like you would any other book. RISC-V is taught in MIT's 6.004 course on <a href="https://www.youtube.com/playlist?list=PLOVc_J85b9DT9ZfKZmlRGIDVk6UXT_4yR">YouTube</a> to better understand a RISC architecture if you want. 
+</p>
+
+<p>
+To start I'm just going to use the original MIX, we can switch to MMIX anytime but the concepts are the same. You can do the entire book on pieces of paper, or if you want try the <a href="https://www.gnu.org/software/mdk/">GNU MDK</a> or <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">other software</a> to run MIXware meaning compile .mixal files to .mix and run them either with mixvm, gmixvm GUI, or a scheme interpreter.  
+</p>
+
+<p>
+MMIX you can use the mixmasters <a href="http://mmix.cs.hm.edu/getstarted.html">version</a> or the 2017 sealed in time Knuth <a href="https://www-cs-faculty.stanford.edu/~knuth/programs/mmix.tar.gz">version</a> you compile from <a href="https://www-cs-faculty.stanford.edu/~knuth/cweb.html">c-web sources</a> that are extensively documented.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Optimizing%20compilers%20are%20dead" class="outline-3">
+<h3 id="Optimizing%20compilers%20are%20dead">Optimizing compilers are dead</h3>
+<div class="outline-text-3" id="text-Optimizing%20compilers%20are%20dead">
+<p>
+Another reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. Djb notes in this talk CloudFlare hand rolled his <a href="https://nacl.cr.yp.to/">ChaCha/Poly</a> using assembly to avoid wasting resources. Knuth also mentions Hoare suggesting that future compilers should have interactive transformations the programmer can use to specify optimizations themselves.
+</p>
+
+<p>
+If you're interested in this watch some of <a href="https://www.cs.cornell.edu/courses/cs6120/2020fa/self-guided/">these</a> Cornell vids on universal compilers for next generation hardware as you go through TAOCP which after all was originally 'a little book about compilers' that became 5+ volumes. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Microcorruption%20CTF" class="outline-2">
+<h2 id="Microcorruption%20CTF">Microcorruption CTF</h2>
+<div class="outline-text-2" id="text-Microcorruption%20CTF">
+<p>
+The preface says we should familiar enough with programming that we've written and tested a few programs, which means assembly/machine language programs. We can learn that doing microcorruption.com CTF and having a visual interface to step through all the code in the debugger to see what it does, see how registers are manipulated etc.
+</p>
+
+<p>
+Starting the tutorial on <a href="https://microcorruption.com/">microcorruption</a>. At 18/74 in the tutorial all values are in base 16 or hexadecimal. There's many online tutorials to <a href="https://www.rapidtables.com/convert/number/hex-to-decimal.html">convert</a> or look at a binary to hex table and memorize A (10) and F (15) then the rest are easy. 0x(hex) examples: 0x2 is 2 or 2<sup>1</sup>, 0x20 is 32 or 2<sup>5</sup>, 0x200 is 512 or 2<sup>9</sup>. If you forgot how binary works <a href="https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/v/the-binary-number-system">watch this</a>. 
+</p>
+
+<p>
+At 35/74 in the tutorial this is how you read the memory dump:
+</p>
+
+<pre class="example" id="org331f568">
+      0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
+4390: 52 45 02 00 9c 43 64 00 82 44 50 44 74 65 73 74
+</pre>
+
+<p>
+4390 points to 52, 439c points to 74, if you look in the register state box sp (stack pointer) points to 439a or 50. These are 1 byte each in size or 8 bits. At 44/74 in the tutorial if you move back -0x8 or 8 bytes, count back 8 times or each row of 4 hex values has 2 bytes, so move back 4 rows. If you see 0x2(r15) that means whatever the memory r15 points to, skip 2 bytes. You'll pick it up as we step through the code, and we will step through a lot of code. 
+</p>
+
+<p>
+There's a <a href="https://microcorruption.com/public/manual.pdf">manual</a> for the fake lock we are breaking too. 
+</p>
+</div>
+
+<div id="outline-container-New%20Orleans" class="outline-3">
+<h3 id="New%20Orleans">New Orleans</h3>
+<div class="outline-text-3" id="text-New%20Orleans">
+<p>
+The comparison instruction wants a 7 char password, the 'create password' sub-routine generates a 7 char password, try it just entering the 7 hex numbers in one password string, success.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Sydney" class="outline-3">
+<h3 id="Sydney">Sydney</h3>
+<div class="outline-text-3" id="text-Sydney">
+<p>
+Set breakpoint at most interesting function which looks like check password. Enter 'test' as text for password, then c to zip to the breakpoint. Pressing s and stepping, r15 is pointing to 439c where we see 7465 7374 or 'test'. Notice the instructions however:
+</p>
+
+<pre class="example" id="org489e970">
+448a:  bf90 2b5d 0000   cmp 0x5d2b, 0x0(r15)
+4492:  bf90 7021 0200   cmp #0x2170, 0x2(r15)
+449a:  bf90 3256 0400   cmp #0x5632, 0x4(r15)
+44a4:  bf90 5467 0600   cmp #0x6754, 0x6(r15)
+</pre>
+
+<p>
+It's comparing each byte in the memory that r15 points to some constant hex values by offsetting 2 bytes each time. They are in little endian format, #0x5d2b is represented as 2b5d in the instruction, #0x2170 is 7021 etc., so take all the comparison instructions and enter the password as little endian format and success, operatives inside again.
+</p>
+
+<p>
+Note the actual code/instruction the machine uses is bf902b5d0000 or bf9070210200 if you read the 'LockIT Pro' <a href="https://microcorruption.com/public/manual.pdf">manual</a> the opcode is cmp (compare) source, destination which is for our visual benefit only in the debugger and for writing assembly so even with machine code there is some syntax abstraction. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Hanoi" class="outline-3">
+<h3 id="Hanoi">Hanoi</h3>
+<div class="outline-text-3" id="text-Hanoi">
+<p>
+Passwords must be between 8-16 chars so I entered a gigantic password and while stepping through the execution noticed it overflowed to the second memory location 2410. Ctrl-f the instructions for 2410 and there's a comparison there so I overflowed the hex password to 17 digits with that comparison at 2410. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Cusco" class="outline-3">
+<h3 id="Cusco">Cusco</h3>
+<div class="outline-text-3" id="text-Cusco">
+<p>
+Entered another gigantic password, noticed it overflowed to where the program counter (the next instruction) is so overflowed it to change the pc to 'unlock door' instruction in little endian format.
+</p>
+</div>
+</div>
+
+<div id="outline-container-Reykjavik" class="outline-3">
+<h3 id="Reykjavik">Reykjavik</h3>
+<div class="outline-text-3" id="text-Reykjavik">
+<p>
+We can't see all the disassembly and have to step watching 'Current Instruction' box. Enter a single character password as a test and step until you see a cmp for the address in r4 offset by -0x24 or 36. Move back that amount in memory and you're at the password you just entered, so enter (little endian) whatever the cmp constant is. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Whitehorse" class="outline-3">
+<h3 id="Whitehorse">Whitehorse</h3>
+<div class="outline-text-3" id="text-Whitehorse">
+<p>
+They took away the function to unlock the door, we have to read the <a href="https://microcorruption.com/public/manual.pdf">manual</a> about how the HSM 2 model works. In 3.1 <i>This enables the CPU to trigger software interrupt 0x7F to directly trigger the door lock to unlock</i> so we want to bamboozle this code to somehow run 0x7F. As usual start with a gigantic password and see where it is stored. Mine begins at memory location 347c. Looking at the conditional unlock door function I want to push 0x7f the unlock command instead of 0x7e the password comparison command, and then call that interrupt after.
+</p>
+
+<p>
+If you overflow your password you'll see in the 'current instruction' box it will run whatever we put there, so try the instructions 30127f00b0123245 which in line 445c we see pushes the door unlock code to the stack and calls an interrupt to pop the stack which will signal to open the door. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Montevideo" class="outline-3">
+<h3 id="Montevideo">Montevideo</h3>
+<div class="outline-text-3" id="text-Montevideo">
+<p>
+Two new functions strcpy and memset. Memset appears to clear the password storage memory and strcpy removes all null bytes 00 out of our password entry so if we want to use 0x7f or 7f00 we have to steal some code to add/subtract or AND off some bits to avoid strcpy deleting our payload. I used 32 junk filler + 0244 + payload as a hex password after many trial and error getting the overflow to lineup after strcpy killed my 0044 address.
+</p>
+
+<p>
+You can play with instructions <a href="https://microcorruption.com/assembler">here</a> and use any hex calculator. I added some arbitrary value to 0x7f, moved it to a register, pushed it to the stack and called that interrupt again. Success.
+</p>
+
+<p>
+TODO we'll finish the rest and investigate haxxing as we finish TAOCP, but you're good now you know how assembly works 
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-1.1%20Algorithms" class="outline-2">
+<h2 id="1.1%20Algorithms">1.1 Algorithms</h2>
+<div class="outline-text-2" id="text-1.1%20Algorithms">
+<p>
+Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. Page 7 he describes T<sub>n</sub> the running time of just the E1 step in the 1.1E algorith writing that if you were to do this for gigantic inputs eventually you'd discover you could find the value of any n with (constant * ln(n)) or in big-O notation O(ln(n)) where ln() is the natural logarithm function meaning it's the exponent x in e<sup>x</sup> = y we will shortly learn in the math chapters. We use e<sup>x</sup> and ln() because they are much simpler to model with than 2<sup>x</sup> and log(x) since e<sup>x</sup> it's derivative is itself and other nice properties. 
+</p>
+
+<p>
+The 'quadruple' definition of what an algorithm is will make sense when you try it yourself by hand. First we have f, which defines the computational steps:
+</p>
+<ul class="org-ul">
+<li>f(n) = n (return the result and terminate, we aren't calling another function)</li>
+<li>f(m,n) maps to f(m,n,0,1), the zero being just a placeholder to enter to the next step.</li>
+<li>Step 1: f(m,n,r,1) maps to f(m,n, remainder of m divided by n, 2)</li>
+<li>Step 2: f(m,n,r,2) maps to f(n) if the remainder is zero, or f(m,n,r,3) otherwise.</li>
+<li>Step 3: f(m,n,p,3) maps to f(n, p, p, 1) swapping m with n, and setting the remainder p to n. The variable p is introduced here to make it explicit that p does not equal zero, as r can be equal to zero so different notation is used but it's just remainder with a new variable.</li>
+</ul>
+
+<p>
+Let's try it using Knuth's example of m = 119 and n = 544 since the preface told us to try all these algorithms by hand.
+</p>
+
+<pre class="example" id="orgee317fc">
+f(119, 544)  -&gt; f(119, 544, 0 ,1)
+f(119, 544, 0, 1) -&gt; f(119, 544, 119, 2) :divide m by n
+f(119, 544, 119, 2) -&gt; r is not 0 -&gt; f(119, 544, 119, 3)
+f(119, 544, 119, 3) -&gt; f(544, 119, 119, 1) :set m &lt;- n &lt;- r
+f(544, 119, 119, 1) -&gt; f(544, 119, 68, 2) :r = 68
+f(544, 119, 68, 2) -&gt; r is not 0 -&gt; f(544, 119, 68, 3)
+f(544, 119, 68, 3) -&gt; f(119, 68, 68, 1)
+f(119, 68, 68, 1) -&gt; f(119, 68, 51, 2) :r = 51
+f(119, 68, 51, 2) -&gt; r is not 0 -&gt; f(119, 68, 51, 3)
+f(119, 68, 51, 3) -&gt; f(68, 51, 51, 1)
+f(68, 51, 51, 1) -&gt; f(68, 51, 17, 2) :r = 17
+f(68, 51, 17, 2) -&gt; r is not 0 -&gt; f(68, 51, 17, 3)
+f(68, 51, 17, 3) -&gt; f(51, 17, 17, 1)
+f(51, 17, 17, 1) -&gt; f(51, 17, 0, 2)
+f(51, 17, 0, 2) -&gt; r = 0 -&gt; f(17) 
+f(17) -&gt; 17
+</pre>
+
+<p>
+The last Markov algorithm example is pattern matching on strings. Alpha \(\alpha\) can be the empty string too so what's happening here is we are replacing characters out of strings every loop according to a set of matching rules exampled <a href="https://en.wikipedia.org/wiki/Markov_algorithm#Example">here</a>. A is a set of finite alphabet characters, and A* is all the possible strings you could make using ordered sequences of characters from A. Next he defines (sigma, j) where sigma is some string in A* and j is a number less than N which is out final state. So input = (string, 0) and output = (string, num) or a termination state.
+</p>
+
+<p>
+From <a href="https://en.wikipedia.org/wiki/Markov_algorithm#Execution_2">this example</a> we have 3 rules, and if the string doesn't match any rule patterns we terminate the algorithm. The set 'I' is the input so f("101", 0). Omega would be the output f("|||||", 8). Both of these are contained in Q and every other intermediary state like f("0|01", 1). There's an exercise for this and I still don't really understand a<sub>i</sub> but we'll figure it out. TODO
+</p>
+</div>
+</div>
 </div>
 </body>
 </html>

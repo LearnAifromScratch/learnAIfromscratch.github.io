@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-10-11 Tue 19:48 -->
+<!-- 2022-10-11 Tue 20:29 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Let's Do The Art of Computer Programming</title>
@@ -298,7 +298,7 @@ Everybody talks about the famous old quote in the back of volume 1 by Gates: 'yo
 
 <blockquote>
 <p>
-"BILL GATES: ..say somebody came for an interview and they said ”Hey, I read the ’Art of Computer Programming’, that’s all I ever read, I did all the problems, I would hire them right then.
+BILL GATES: ..say somebody came for an interview and they said "Hey, I read the Art of Computer Programming, that’s all I ever read, I did all the problems", I would hire them right then.
 </p>
 
 <p>
@@ -371,7 +371,7 @@ Starting the tutorial on <a href="https://microcorruption.com/">microcorruption<
 At 35/74 in the tutorial this is how you read the memory dump:
 </p>
 
-<pre class="example" id="org331f568">
+<pre class="example" id="orgd4a9927">
       0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
 4390: 52 45 02 00 9c 43 64 00 82 44 50 44 74 65 73 74
 </pre>
@@ -401,7 +401,7 @@ The comparison instruction wants a 7 char password, the 'create password' sub-ro
 Set breakpoint at most interesting function which looks like check password. Enter 'test' as text for password, then c to zip to the breakpoint. Pressing s and stepping, r15 is pointing to 439c where we see 7465 7374 or 'test'. Notice the instructions however:
 </p>
 
-<pre class="example" id="org489e970">
+<pre class="example" id="org650324d">
 448a:  bf90 2b5d 0000   cmp 0x5d2b, 0x0(r15)
 4492:  bf90 7021 0200   cmp #0x2170, 0x2(r15)
 449a:  bf90 3256 0400   cmp #0x5632, 0x4(r15)
@@ -481,7 +481,7 @@ TODO we'll finish the rest and investigate haxxing as we finish TAOCP, but you'r
 <h2 id="1.1%20Algorithms">1.1 Algorithms</h2>
 <div class="outline-text-2" id="text-1.1%20Algorithms">
 <p>
-Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. Page 7 he describes T<sub>n</sub> the running time of just the E1 step in the 1.1E algorith writing that if you were to do this for gigantic inputs eventually you'd discover you could find the value of any n with (constant * ln(n)) or in big-O notation O(ln(n)) where ln() is the natural logarithm function meaning it's the exponent x in e<sup>x</sup> = y we will shortly learn in the math chapters. We use e<sup>x</sup> and ln() because they are much simpler to model with than 2<sup>x</sup> and log(x) since e<sup>x</sup> it's derivative is itself and other nice properties. 
+Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. Page 7 he describes T<sub>n</sub> the running time of just the E1 step in the 1.1E algorith writing that if you were to do this for gigantic inputs eventually you'd discover you could find the value of any n with (constant * ln(n)) or in big-O notation O(ln(n)) where ln() is the natural logarithm function meaning it's the exponent x in e<sup>x</sup> = y we will shortly learn in the math chapters. We use e<sup>x</sup> and ln() sometimes in calc texts as log(x), because they are much simpler to model with than 2<sup>x</sup> since e<sup>x</sup> it's derivative is itself and other nice properties. 
 </p>
 
 <p>
@@ -499,7 +499,7 @@ The 'quadruple' definition of what an algorithm is will make sense when you try 
 Let's try it using Knuth's example of m = 119 and n = 544 since the preface told us to try all these algorithms by hand.
 </p>
 
-<pre class="example" id="orgee317fc">
+<pre class="example" id="org6d7a9af">
 f(119, 544)  -&gt; f(119, 544, 0 ,1)
 f(119, 544, 0, 1) -&gt; f(119, 544, 119, 2) :divide m by n
 f(119, 544, 119, 2) -&gt; r is not 0 -&gt; f(119, 544, 119, 3)
@@ -519,7 +519,7 @@ f(17) -&gt; 17
 </pre>
 
 <p>
-The last Markov algorithm example is pattern matching on strings. Alpha \(\alpha\) can be the empty string too so what's happening here is we are replacing characters out of strings every loop according to a set of matching rules exampled <a href="https://en.wikipedia.org/wiki/Markov_algorithm#Example">here</a>. A is a set of finite alphabet characters, and A* is all the possible strings you could make using ordered sequences of characters from A. Next he defines (sigma, j) where sigma is some string in A* and j is a number less than N which is out final state. So input = (string, 0) and output = (string, num) or a termination state.
+The last Markov algorithm example is pattern matching on strings. Alpha \(\alpha\) can be the empty string too so what's happening here is we are replacing characters out of strings every loop according to a set of matching rules exampled <a href="https://en.wikipedia.org/wiki/Markov_algorithm#Example">here</a>. A is a set of finite alphabet characters, and A* is all the possible strings you could make using ordered sequences of characters from A. Next he defines (sigma, j) where sigma is some string in A* and j is a number less than N which is the final state. So input = (string, 0) and output = (string, num) or a termination state.
 </p>
 
 <p>

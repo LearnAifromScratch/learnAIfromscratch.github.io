@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-07-23 Sat 13:41 -->
+<!-- 2022-11-07 Mon 21:40 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Math You Need</title>
@@ -250,7 +250,12 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#Intro">Intro</a></li>
+<li><a href="#Intro">Intro</a>
+<ul>
+<li><a href="#Why%20you%20don%27t%20understand%20math%20and%20every%20college%20has%20to%20reteach%20it">Why you don't understand math and every college has to reteach it</a></li>
+<li><a href="#How%20this%20works">How this works</a></li>
+</ul>
+</li>
 <li><a href="#Basics">Basics</a>
 <ul>
 <li><a href="#Arithmetic%20with%20natural%20numbers">Arithmetic with natural numbers</a>
@@ -266,16 +271,6 @@
 <li><a href="#Arithmetic%20with%20fractions">Arithmetic with fractions</a></li>
 </ul>
 </li>
-<li><a href="#Derivatives">Derivatives</a>
-<ul>
-<li><a href="#GeoGebra%20examples">GeoGebra examples</a></li>
-<li><a href="#Derivative%20example%201">Derivative example 1</a></li>
-<li><a href="#Derivative%20example%202">Derivative example 2</a></li>
-<li><a href="#Interpreting%20the%20derivative">Interpreting the derivative</a></li>
-</ul>
-</li>
-<li><a href="#Limits">Limits</a></li>
-<li><a href="#Integration">Integration</a></li>
 <li><a href="#Proofs%20in%20Lean">Proofs in Lean</a>
 <ul>
 <li><a href="#Proof%20assistants%20in%20education">Proof assistants in education</a></li>
@@ -285,8 +280,21 @@
 <li><a href="#Descartes%20on%20why%20you%20should%20learn%20math">Descartes on why you should learn math</a></li>
 </ul>
 </li>
+<li><a href="#Explanation">Explanation</a></li>
+<li><a href="#1.3%20-%201.6%20Chapters">1.3 - 1.6 Chapters</a></li>
+<li><a href="#2.x%20Propositional%20Logic">2.x Propositional Logic</a></li>
+<li><a href="#3.x%20Natural%20Deduction%20TODO">3.x Natural Deduction TODO</a></li>
 </ul>
 </li>
+<li><a href="#Calculus">Calculus</a>
+<ul>
+<li><a href="#Other%20books">Other books</a></li>
+<li><a href="#1.1%20What%20is%20the%20calculus%20about%3F">1.1 What is the calculus about?</a></li>
+<li><a href="#1.2x%20What%20is%20an%20interval%3F%20TODO">1.2x What is an interval? TODO</a></li>
+</ul>
+</li>
+<li><a href="#Linear%20Algebra">Linear Algebra</a></li>
+<li><a href="#Olympiad%20Algebra">Olympiad Algebra</a></li>
 </ul>
 </div>
 </nav>
@@ -296,12 +304,50 @@
 <h2 id="Intro">Intro</h2>
 <div class="outline-text-2" id="text-Intro">
 <p>
-Here we learn algebra sophistication, problem solving strategies, matrix calculus, integration for asymptotic analysis and the Lean proof assistant combined with a nice logic method called natural deduction so we can verify our own proofs are correct. 
+This is a modern math workshop meaning I pruned all the legacy junk still taught in undergrad:
+</p>
+
+<ul class="org-ul">
+<li>The Riemann integral you discover on your first day of grad instruction is a totally inadequate theory and has been replaced over a century ago and no mathematician since has used it. They then tell you there is no such thing as 'proper' or 'improper' integrals and you don't need to 'set up the integral' like you had to do in undergrad Physics and other courses. Sorry no refunds.</li>
+<li>Calculus courses/books contain filler like the method of partial fractions which is a tedious algebraic exercise and not actually part of the theory. Most of the exercises also have nothing to do with understanding the theory and are just trig function drills or cherry picked problems you will never encounter.</li>
+<li>You will never use echelon forms, free and pivot varibles, explicitly compute inverse matrices, and probably never work with matrices that are tables of numbers. Matrices become much more abstract concepts such as linear operators on functions so Ax = b (matrix * vector = vector) becomes (linear operator)*(lambda function) = f(vector input).</li>
+</ul>
+
+<p>
+I included programming whenever possible such as learning the Lean proof assistant so you get instant feedback if your proof is at least logically consistent. We can't do all the proofs in Lean (maybe you could with Bishop's <i>Constructive Analysis</i>) but learning proofs is done through imitation, you see what others have done and mimic them first then you can write your own.
+</p>
+</div>
+
+<div id="outline-container-Why%20you%20don%27t%20understand%20math%20and%20every%20college%20has%20to%20reteach%20it" class="outline-3">
+<h3 id="Why%20you%20don%27t%20understand%20math%20and%20every%20college%20has%20to%20reteach%20it">Why you don't understand math and every college has to reteach it</h3>
+<div class="outline-text-3" id="text-Why%20you%20don%27t%20understand%20math%20and%20every%20college%20has%20to%20reteach%20it">
+<p>
+High schools no longer teach Euclid's <i>Elements</i>. Professors I've followed such as Robert Harper's type theory seminars, many MIT professors, Don Knuth, and the author of the calculus text we'll do have mentioned in print or lectures I've watched that in highschool they were required to memorize countless Euclid proofs and this helped them in their first years of university. There was no <i>intro to proofs</i> because it was never needed you did this in high school. If you're like me your 21st century highschool taught you absolutely nothing about math. We replaced the Euclid curriculum that was taught for two thousand years with a worthless curriculum that needs to be completely redone once you enter any college.
 </p>
 
 <p>
-Since we need an actual useful integration technique for applications we will learn the modern version of the Newton integral instead of the Riemann integral with the added benefit of the Newton integral being a good foundation to proceed to other integration methods if you want. Undergrads take multiple semesters of the Riemann integral in the introductory calculus sequence then again in a real analysis course but graduate instruction promptly abandons that theory completely for the Lebesgue integral. 
+You also have to retake English and there's a reason for that too, they stopped teaching Latin 50 years ago (though some places are now <a href="https://archive.ph/IGZQo">bringing it back</a>). 60% of modern English comes from Latin. It's a framework that teaches you English like all the noun cases and tenses and increases your vocabulary. You speak differently than everyone else in public, and can formulate a precise argument in prose or speech. Learning Latin is like doing those Euclid propositions to understand logic and proofs but for the English language.   
 </p>
+
+<p>
+Did I mention no refunds? A peasant in the 16th century had a better school curriculum than we do today and the first two years of undergrad were taught to 15 year old kids in the <a href="http://classicalrealanalysis.blogspot.com/2013/01/unprepared-for-college.html">Soviet Union</a>. I created this to fill in the blanks of my own pathetic education and I hope it also helps you if you are also a graduate of the trash North American public school system.
+</p>
+
+<blockquote>
+<p>
+Its way too many years back for me to remember how I managed (to learn to write proofs), but I suspect it was because we studied Euclid in high school and had to produce hundreds of proofs in that style. - <a href="http://classicalrealanalysis.blogspot.com/2008/02/having-hard-time-with-proofs.html">Brian S Thomson</a>
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-How%20this%20works" class="outline-3">
+<h3 id="How%20this%20works">How this works</h3>
+<div class="outline-text-3" id="text-How%20this%20works">
+<p>
+I do the material too and investigate anything that seems like assumed knowledge but if you get it, you don't ever need these notes. Take everything at the same time. One day do calculus, one day write proofs in Lean, one day do some linear algebra, try some of the olympiad algebra book. The linear algebra we do is like reverse engineering none of the problems are mindless calculating it's figure out what's going on. 
+</p>
+</div>
 </div>
 </div>
 
@@ -330,7 +376,7 @@ The successor function s(n) = n + 1 for natural numbers:
 <h4 id="Prove%20the%20laws%20of%20multiplication">Prove the laws of multiplication</h4>
 <div class="outline-text-4" id="text-Prove%20the%20laws%20of%20multiplication">
 <p>
-We'll do this in the Lean proof assistant too. 
+We'll do this in the Lean proof assistant too. The first time I watched these videos years ago I struggled to produce satisfying proofs then revisited them after reading the algebra olympiad book we'll do below and seeing the same technique used for something else so these are all my own proofs but heavily based on the abstraction that the number n is a sum of indexed 1's from 1 to n. 
 </p>
 
 <p>
@@ -475,257 +521,7 @@ Laws you may have forgot:
 <p>
 The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> used in the proof represents another similar variable. This is our first experience with a proof strategy: multiply both sides of something <a href="https://en.wikipedia.org/wiki/Linearity">linear</a> by a scalar.   
 </p>
-
-<hr>
 </div>
-</div>
-</div>
-
-<div id="outline-container-Derivatives" class="outline-2">
-<h2 id="Derivatives">Derivatives</h2>
-<div class="outline-text-2" id="text-Derivatives">
-<p>
-A derivative of a function is another function you derive from the original function. Calculus is really only about derivatives as integration is an antiderivative procedure meaning you can get back to the original function (sometimes a set of functions) from it's derivative by integration hence it's name to integrate.    
-</p>
-</div>
-
-<div id="outline-container-GeoGebra%20examples" class="outline-3">
-<h3 id="GeoGebra%20examples">GeoGebra examples</h3>
-<div class="outline-text-3" id="text-GeoGebra%20examples">
-<p>
-Try moving the sliders around in this GeoGebra <a href="https://www.geogebra.org/m/TzhXQqvu">example</a>. The slope can be interpreted as the sensitivity of a function, if the slope is very large for small x inputs then y is sensitive to changes in x. You find the slope of a function by taking the ratio of the distance between two points. This is \(\Delta\) 'delta' the change between two points: 
-</p>
-
-<p>
-\(\begin{equation*}
-m = \dfrac{\Delta y}{\Delta x} = \dfrac{y_{2}-y_{1}}{x_{2}-x_{1}}\text{.}
-\end{equation*}\)
-</p>
-
-<p>
-In this <a href="https://www.geogebra.org/m/YvaFWUzY">example</a> move the points <i>a</i> and <i>a+h</i> along the x-axis, <i>a</i> represents some fixed input and <i>h</i> is a tiny displacement added to f(a) for example if this function is f(x) then f(2) is <i>a</i> the specific input, and f(2 + 0.1) is what <i>a+h</i> represents. \(\Delta x\) = h and \(\Delta y = f(a + h) - f(a)\) because the outputs of f(x) are plotted y. The 2 points (a, f(a)) and (a+h, f(a+h)) give us a secant (Latin for cut) a line that intersects at 2 points. The slope of the secant is the average rate of change:
-</p>
-
-<p>
-\(\begin{equation*}
-m_{sec} = \dfrac{\Delta y}{\Delta x}= \dfrac{f(a + h)-f(a)}{h}\end{equation*}\)
-</p>
-
-<p>
-In the same <a href="https://www.geogebra.org/m/YvaFWUzY">example</a>, the tangent (Latin for touch) seems to only touch our function at one point but we need two points to find it's slope. We can approximate the slope of the tangent by imagining some process where the <i>a</i> and <i>a+h</i> or \(\Delta x\) interval shrinks until their difference approaches zero but doesn't reach zero. We then take the limit of this process and if the limit exists then we have an approximation of the tangent slope which represents the instantaneous rate of change at point <i>a</i> or the derivative of <i>a</i>.
-</p>
-
-<p>
-The most intuitive explanation I've seen of instantaneous rate of change is given in the MIT OpenCourseWare series <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/course-introduction/">Calculus Revisited</a> where in the course introduction video he explains how differential calculus is the study of the ratio of zero/zero so a limiting process is introduced using the example of two observers who approach each other but never touch so the distance between them is never actually zero it's an infinite process where you can always cram in smaller intervals such as 1/million or 1/billion to get closer approximations. The observers are so close the car speeding past them can be considered standing still as it's a snapshot in time of the instantaneous speed, or as he points out a ratio over (almost) 0. 
-</p>
-
-<p>
-\(\begin{equation*}
-m_{tan} = \lim_{h \to 0}\dfrac{f(a + h)-f(a)}{h}\end{equation*}\)
-</p>
-
-<p>
-<a href="https://www.geogebra.org/m/BDYnGhbt">Here</a> we see if you take the tangent of all points of the black function, it is specifying another function in grey. We want to work at the higher-order functions level and have the function that gives a derivative at a specific point instead consume entire functions as input and return new functions that are the derivative. We accomplish this by adjusting the notation to show entire functions are being input:   
-</p>
-
-<p>
-\(\begin{equation*}
-f'(x) = \lim_{h \to 0} \dfrac{f(x + h)-f(x)}{h}\end{equation*}\)
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-Derivative%20example%201" class="outline-3">
-<h3 id="Derivative%20example%201">Derivative example 1</h3>
-<div class="outline-text-3" id="text-Derivative%20example%201">
-<p>
-Let's walk through inputting f(x) = x<sup>2</sup> into the derivative function:
-</p>
-
-<p>
-\(f'(x) = \lim_{h \to 0} \dfrac{f(x + h)-f(x)}{h}\)
-</p>
-
-<p>
-x<sup>2</sup> is (input)<sup>2</sup> our derivative function is f(input + input) - f(input): 
-</p>
-
-<p>
-\(= \lim_{h \to 0}\dfrac{(x + h)^2 - x^2}{h}\)
-</p>
-
-<p>
-Expand using <a href="https://youtu.be/h0Woqc_5qUE">binomial theorem</a>
-</p>
-
-<p>
-\(= \lim_{h \to 0}\dfrac{x^2 + 2xh + h^2 - x^2}{h}\)
-</p>
-
-<p>
-Since h is 'approaching zero' h<sup>2</sup> is an even smaller value we can ignore so either treat it like an asymptotic or substitute h<sup>2</sup> for 0:
-</p>
-
-<p>
-\(= \lim_{h \to 0}\dfrac{2xh + \epsilon^{O(1)}}{h}\) or \(\dfrac{2xh + 0}{h}\) 
-</p>
-
-<p>
-\(f'(x) = 2x\)
-</p>
-
-<p>
-If you go back and do it again with f(x) = 2x you would get the second derivative f''(x) = 2, a function that returns a constant. These three functions are all related as we'll see shortly in <i>Interpreting the derivative</i>.
-</p>
-
-<p>
-\(= \lim_{h \to 0}\dfrac{2(x + h) - 2x}{h}\)
-</p>
-
-<p>
-Factor out the 2
-</p>
-
-<p>
-\(= \lim_{h \to 0}2 \cdot \dfrac{x + h - x}{h}\)
-</p>
-
-<p>
-\(= \lim_{h \to 0}2 \cdot 1\)
-</p>
-
-<p>
-\(f''(x) = 2\)
-</p>
-
-<p>
-Try it with x<sup>n</sup> the output is nx<sup>n-1</sup> which is the general formula for taking the derivative of any polynomial/power function where (x + h)<sup>n</sup> expands to x<sup>n</sup> + nhx<sup>n-1</sup> + h<sup>O(1)</sup> and all those h powers you discard. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Derivative%20example%202" class="outline-3">
-<h3 id="Derivative%20example%202">Derivative example 2</h3>
-<div class="outline-text-3" id="text-Derivative%20example%202">
-<p>
-Let's try finding the derivative of f(x) = 1/x 
-</p>
-
-<p>
-\(\lim_{h \to 0} \dfrac{\dfrac{1}{(x + h)} - \dfrac{1}{x}}{h}\)
-</p>
-
-<p>
-Factor out 1/h and do the subtraction in the numerator:
-</p>
-
-<p>
-\(\lim_{h \to 0} \dfrac{1}{h} \cdot \dfrac{\dfrac{x - (x + h)}{x(x + h)}}{1}\) 
-</p>
-
-<p>
-This was in the laws of division video \(\dfrac{k/m}{n}\) = \(\dfrac{k}{mn}\):
-</p>
-
-<p>
-\(\lim_{h \to 0} \dfrac{1}{h} \cdot \dfrac{x - (x + h)}{x(x + h)}\)
-</p>
-
-<p>
-Distribute negative sign and simplify some more:
-</p>
-
-<p>
-\(\lim_{h \to 0} \dfrac{1}{h} \cdot \dfrac{-h}{x(x + h)}\)
-</p>
-
-<p>
-Distribute back in 1/h to cancel h:
-</p>
-
-<p>
-\(\lim_{h \to 0} \dfrac{-1}{x(x + h)}\)
-</p>
-
-<p>
-Take the limit h -&gt; 0 substituting h = 0 
-</p>
-
-<p>
-f'(x) = -1/x<sup>2</sup>
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-Interpreting%20the%20derivative" class="outline-3">
-<h3 id="Interpreting%20the%20derivative">Interpreting the derivative</h3>
-<div class="outline-text-3" id="text-Interpreting%20the%20derivative">
-<p>
-Watch some of <a href="https://youtu.be/zfHEkt-1sqo">this</a> to see how it all fits together, at the end of the video he explains the derivative of the position function gives you the velocity function who's derivative in turn gives you the acceleration function. To go back to the position function from it's derivative, you integrate and adjust with some constants that were sliced off by the derivative function.
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Limits" class="outline-2">
-<h2 id="Limits">Limits</h2>
-<div class="outline-text-2" id="text-Limits">
-<p>
-The best presentation I've found is lecture 4 of MIT's <i>Calculus Revisited</i> <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/lecture-4-derivatives-and-limits/">here</a> @17:28 (though the entire lecture is good). These lectures were made for self-study in 1970 so he explains all the definitions in plain language. In this lecture he examples the epsilon/delta definition of a limit and demonstrates some inequality manipulations. 
-</p>
-
-<p>
-The next lecture <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/lecture-4-derivatives-and-limits/">here</a> goes through the limit laws and is worth watching, this guy was great at explaining why everything fits together and demonstrating the proofs at the same time. The integration text we do later will cover continuity thoroughly and we'll practice inequalities. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-Integration" class="outline-2">
-<h2 id="Integration">Integration</h2>
-<div class="outline-text-2" id="text-Integration">
-<p>
-There is an abundance of integration theories. We're only going to practice with the modernized/generalized Newton integration method later in this workshop which is similar to the Mean Value Theorem. In a regular calculus course you learn some corollaries after the MVT where you can easily piece back together the original function from the derivative or in other words the antiderivative or integration.   
-</p>
-
-<ul class="org-ul">
-<li>This <a href="https://youtu.be/vo-ItaB28f8">video</a> from 06:45 - 28:00</li>
-</ul>
-
-<p>
-The best summary I've found that explains the idea of integration, using x<sup>n</sup> power function examples where he shows how it works starting at n = 0 and increasing the powers of n. We already know what dx is it's \(\Delta x\) or <i>a+h</i> from the derivative examples we saw meaning a very small change in x and here that change represents the base of a rectangle so 2dx is 2 times \(\Delta x\) and this is a sum over an interval adding up all the 2dx rectangle areas.
-</p>
-
-<p>
-Notice if you take the derivative of \(\dfrac{x^3}{3}\) you get x<sup>2</sup>, so it is an antiderivative of x<sup>2</sup> and since the derivative of any constant is zero there is an infinite amount of antiderivatives for x<sup>2</sup> such as: \(\dfrac{x^3}{3}+c\) where c is 1, 2, 3..
-</p>
-
-
-<ul class="org-ul">
-<li>Second <a href="https://youtu.be/Js2mwsHc4p4">video</a> surveys and explains different theories of integration:</li>
-</ul>
-
-<p>
-@1:55 in the video he explains the Riemann integral which is in every calculus book. The idea here is the number of partitions of \(\Delta x\) become smaller and smaller growing to infinity until just like the derivative there is almost 0 distance between them, and we take the limit of this process. He then examples numerous integration theories like the Lesbesgue integral. The rest of this video if you choose to watch it explains the basic properties of integration: linearity, additivity, translation/scale invariance and normalization. He finishes with a proof of the generalized integration formula for x<sup>n</sup> functions \(\dfrac{x^{n+1}}{n+1}\) or the antiderivative of x<sup>n</sup>    
-</p>
-
-<p>
-From the books <a href="https://openlibra.com/en/book/theory-of-the-integral">Theory of the Integral</a> and <a href="https://openlibra.com/en/book/the-calculus-integral">The Calculus Integral</a>:
-</p>
-<blockquote>
-<p>
-"The Riemann integral is considered to be a completely inadequate theory of integration and yet is the theory that is taught to most undergraduate mathematics students."
-</p>
-
-<p>
-"The reader has, no doubt, studied the Riemann integral in elementary classes and been apprised of the fact that that integral is entirely inadequate for modern applications."
-</p>
-</blockquote>
-
-<p>
-The Calculus Integral book we'll do in it's entirety since we have to do at least one calculus book, it's 150 pages of material and the rest solutions to the problems. Why bother learning calculus? Because the concepts of theoretical CS, economics, physics, and every other science is expressed using the language of calculus.  
-</p>
 </div>
 </div>
 
@@ -821,7 +617,7 @@ General forms like this are expertly explained in the first chapter of the origi
 <h3 id="1.2%20Symbolic%20Logic">1.2 Symbolic Logic</h3>
 <div class="outline-text-3" id="text-1.2%20Symbolic%20Logic">
 <p>
-Natural deduction is introduced here, which I'll go through more thoroughly after this chapter but it's optional you don't have to know this style of constructive logic but I find it essential to validate proofs since like you, I don't have somebody who can review my work and tell me my logic is flawed. Natural deducation is a way to model your proofs so at least your conclusions are sound.   
+Prior Analytics is worth reading, as is <a href="http://classics.mit.edu/Browse/browse-Aristotle.html">all of Aristotle</a> if you ever get a chance. He basically got it right from the beginning then unfortunately our philosophy just went downhill from there. The judgement at the end of this chapter isn't really explained 'if A and if B then A and B' so we will figure it out below.     
 </p>
 </div>
 
@@ -847,18 +643,199 @@ This is why Isaac Newton attacked Descartes and spent the rest of life trying to
 <p>
 Much like Descartes I too don't like watching long lectures, reading long books, so have tried to create this workshop to be as brief as possible highlighting things I've found interesting where we aren't doing the entire <i>Proof and Logic</i> book, and we aren't doing the measure theory section of <i>The Calculus Integral</i> we're just getting enough math so that we learn this style of thinking and can self-direct our own research according to interest. 
 </p>
+</div>
+</div>
+</div>
 
+<div id="outline-container-Explanation" class="outline-3">
+<h3 id="Explanation">Explanation</h3>
+<div class="outline-text-3" id="text-Explanation">
+<p>
+Without reading further I know of no better explanation of what's going on than the <a href="https://github.com/michaelt/martin-lof">papers</a> of Per Martin-Lof, reading specifically the paper <i>On the Meanings of the Logical Constants and the Justifications of the Logical Laws</i>. It's 25 pages, a set of three lectures he gave that were transcribed.
+</p>
+
+<p>
+<b>1st lecture</b>
+</p>
+
+
+<p>
+Reading the <a href="https://raw.githubusercontent.com/michaelt/martin-lof/master/pdfs/Meanings-of-the-Logical-Constants-1983.pdf">lectures</a> (25 page pdf). On page 3 that turnstile notation is precisely defined on page 8 in the second lecture. 
+</p>
+
+<p>
+Second time reading this paper I forgot how good it really is, on page 4 he is defining proposition as semantics, meaning a proposition is a complete expression, and from programming we know an expression is something we can 'passively recognize as the same in it's manifold (many) occurrences and actively reproduce in many copies'. Propositions are further defined later in the lectures on page 9. 
+</p>
+
+<p>
+Page 5, he begins to define judgements as the act of knowing, if you have ever watched Robert Harper <a href="https://youtu.be/9SnefrwBIDc">lectures on type theory</a> he uses this terminology of assertions being true meaning you have a proof of it or in other words a piece of knowlege, an object which is the proof of A and B. If a proof is an object, then you have a notion of an algebraic structure such as equating two proofs as equal, for example conjunction in algebra is A \(\le\) B or 'a &amp; b', so if you have an algebraic structure you have a model of computation and if you have a model of computation then you have a program and proofs are programs. Page 5 also defines what logic is: the theory of demonstrative knowledge, studying these pieces of knowledge and how they are interrelated. The ancient Greek definition being comprehend (seize or grasp) and know (see). You either know (affirm) or you don't (deny). A is true or is false. You have a piece of knowledge which is an object that constructs how A is true. You have a proof that A is true. 
+</p>
+
+<p>
+<b>2nd lecture</b>
+</p>
+
+<p>
+Aristotle's term white is defined <a href="https://plato.stanford.edu/entries/aristotle-metaphysics/supp1.html">here</a> and means a trope (properties). 
+</p>
+
+<p>
+Page 9 the turnstile binary relation notation \(\vdash\) from Frege: the vertical judgement (the knowledge force on the object, or the way the subject relates to the object) and the horizontal (content) affirmation. Together turnstile means: 'I know |' and 'is true -' and turnstile is usually called the assertion sign. <i>P \(\vdash A\) Q</i> is read: From P, I know that Q, or Q is derivable from P, or Q is provable from P.
+</p>
+
+<p>
+Page 8 and 9 there are deconstructed examples of why the judgement stroke in Frege's notation is unnecessary, using an example of A is a proposition and A is true but if you return to page 7 all it means is if you say 'A is true' there is no need to say 'I know A is true' because it is implicit, because A is true is a judgement which means you have the knowledge that A is true. 
+</p>
+
+<p>
+Page 9 and 10 we get into the meaning of what a proof really is. Initially he shows proof is an act not an object, but eventually equates proof with knowledge, and a judgement is knowledge, and a piece of knowledge is an object. Page 11 we start to see the various judgement forms that will come up in the CMU course on logic and math except fully explained. Propositions are brought up again and verifying they are true.
+</p>
+
+<p>
+<b>3rd lecture</b>
+</p>
+
+<p>
+We learn why you can assume things are true/proven, because of the same reasons why 'I know' in 'I know A is true' is unneccessary because if A is true, by definition of judgements so far and evident judgements, you already know it's true, like in Frege's assertion notation it is there even if not made explicit. 
+</p>
+
+<p>
+On page 17 the upside down T or up tack means always false or impossible. A logical consequence can have all true antecedents with the consequence still false and you can probably think up a dozen examples in your head of trying to deduce things that are true but the consequence is false, but there is no possible proof where A being true infers it is always false, unless A is of course false. The more you read of this paper the more everything starts to make sense.
+</p>
+
+<p>
+Further on page 17 we get the rules of inference starting with implication, and, or, negation. Read these as you read chapter 2 in the <i>Logic &amp; Proof</i> book and they will make sense. This style of chains of reasoning where the premise(s) are descending is called natural deduction. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-1.3%20-%201.6%20Chapters" class="outline-3">
+<h3 id="1.3%20-%201.6%20Chapters">1.3 - 1.6 Chapters</h3>
+<div class="outline-text-3" id="text-1.3%20-%201.6%20Chapters">
+<p>
+Back to the CMU <a href="http://avigad.github.io/logic_and_proof/">book</a> <i>Logic and Proof</i>. This is just an introduction showing and not explaining any code except from reading Martin-Lof's paper we can understand a lot of it now without needing an explanation. The idea is there are libraries of already proven formulas we can use until there are enough of these that proof assistants will not be so tedious to use.
+</p>
+</div>
+</div>
+
+<div id="outline-container-2.x%20Propositional%20Logic" class="outline-3">
+<h3 id="2.x%20Propositional%20Logic">2.x Propositional Logic</h3>
+<div class="outline-text-3" id="text-2.x%20Propositional%20Logic">
+<p>
+Starts with a deduction thought exercise that is used to define the logical connectives later in this chapter. Everything else we already read in Martin-Lof's paper except we finally get a definition of what an introduction and elimination rule is, though we saw both used in practice. All these definitions start on page 17 of Martin-Lof's paper if interested in going back to read or re-read it.
+</p>
+
+<p>
+2.3.6 <i>Proof by Contradiction</i> has a good demonstration of introduction and elimination. Natural deduction is nicely exampled here too starting with not A leading to an impossible state, so A is true and not A is eliminated from the premise.
+</p>
+
+<p>
+2.5 exercise we have 5 and 2 to tell us the witness was female, so the daughter or mother. 1 states the accessory is male, so the father or son. 4 tells us the son if accessory is older than the victim, which leaves the daughter as the youngest member. 3 then states the victim must be the father if son accessory, but 4 contradicts this, so the father must be the accessory and the son the victim. Now go down the list of facts with father as accessory, daughter as witness/youngest, and son as a victim to see if they are T/F.
+</p>
+
+<p>
+3 is A and (B or C) so can't have B or A and can't have C and B, if you distribute the 'and' you get A and B or A and C.      
+</p>
+</div>
+</div>
+
+<div id="outline-container-3.x%20Natural%20Deduction%20TODO" class="outline-3">
+<h3 id="3.x%20Natural%20Deduction%20TODO">3.x Natural Deduction TODO</h3>
+<div class="outline-text-3" id="text-3.x%20Natural%20Deduction%20TODO">
+<p>
+TODO   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Calculus" class="outline-2">
+<h2 id="Calculus">Calculus</h2>
+<div class="outline-text-2" id="text-Calculus">
+<p>
+We're going to do the free book <a href="https://openlibra.com/en/book/the-calculus-integral">The Calculus Integral</a> because: <i>in the end the student should be adequately prepared for a graduate level course in Lebesgue integration</i> and that's the integral people actually use since 1904. The author(s) have many more free <a href="http://classicalrealanalysis.info/com/The-Calculus-Integral.php">analysis</a> tests if interested.
+</p>
+
+<p>
+This is a totally different and optimized for time versus work calculus course. We are learning Isaac Newton's integral, which is equivalent to the Henstock-Kurzweil integral, which you will soon see is the same as the Lebesgue integral once we change our assumptions. What we are doing on it's face seems hard but trust me it's much easier than slogging through 18.01 or 18.02 on Open CourseWare or reading Spivak with his often too easy exercises mixed in with impossible exercises or Apostol's seemingly endless drilling of trig identities.    
+</p>
+
+<p>
+The Riemann integral was a minor observation about bounded functions (doesn't even work on all bounded derivatives) he wrote in a 1854 paper about trig series and is really a Cauchy sum, so Riemann sums are Cauchy sums. He clearly did not put much effort into this and went on to do totally different things he's now famous for and of course if he did put in effort he would've figured out a complete theory of integration but this was not what he wanted to spend his time on so Riemann integrals are napkin calculations over lunch of a brillant mathematician who couldn't be bothered. Somehow today this throwaway observation has survived and is the very confusing and inferior integration theory taught to all high school and undergrad students of calculus and analysis. You won't have to suffer this fate though because you're reading this right now.
+</p>
+</div>
+
+<div id="outline-container-Other%20books" class="outline-3">
+<h3 id="Other%20books">Other books</h3>
+<div class="outline-text-3" id="text-Other%20books">
+<p>
+You can get to the Lebesgue integral with the <a href="https://www.davidbressoud.org/aratra">book</a> <i>A Radical Approach to Real Analysis</i> by Bressoud which teaches analysis in order of it being discovered so you know the original ideas behind everything and how they were refined into theorems. Advanced topics normally crammed into analysis intro texts requiring special insight are not taught until the sequel <a href="https://www.cambridge.org/us/catalogue/catalogue.asp?isbn=9780521711838">book</a> <i>A Radical Approach to Lebesgue's Theory of Integration</i> because they were discovered later so these theorems aren't injected artificially like they are everywhere else with no explanation. Unfortunately it assumes you've already taken calculus so you'll have to do some of <i>The Calculus Integral</i> anyway but I'll inject some of it here too in order to understand limits and exponential functions etc. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-1.1%20What%20is%20the%20calculus%20about%3F" class="outline-3">
+<h3 id="1.1%20What%20is%20the%20calculus%20about%3F">1.1 What is the calculus about?</h3>
+<div class="outline-text-3" id="text-1.1%20What%20is%20the%20calculus%20about%3F">
+<p>
+The first thing you probably noticed from the table of contents, is there is no chapter on 'the fundamental theorem of the calculus' unlike every other undergrad calculus and analysis text.
+</p>
+
+<p>
+This chapter we discover there is only a single topic in calculus: the derivative. The integral is how you reverse derivatives back to their original function. We'll see later than Riemann sums are similar but really, it's this undo procedure or antiderivative that you should consider what the integral is. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-1.2x%20What%20is%20an%20interval%3F%20TODO" class="outline-3">
+<h3 id="1.2x%20What%20is%20an%20interval%3F%20TODO">1.2x What is an interval? TODO</h3>
+<div class="outline-text-3" id="text-1.2x%20What%20is%20an%20interval%3F%20TODO">
+<p>
+If you've never seen sets watch <a href="https://youtu.be/59WX2V7Vjgg">this</a> but if you did CS19 you know what they are.    
+</p>
+
+<p>
+A set we already know it's an unordered collection, a data structure. The notation x \(\in\) G means an arbitrary element x inside the set G. The open set definition means no matter what element you choose in that set you can find an interval that contains it. The epsilon/delta notation, epsilon represents a tiny displacement on the y-axis, delta represents a tiny displacement on the x-axis or regular number line. The interval created from a tiny displacement around x will always be in G is what that notation is saying. The subset notation (thing) \(\subset G\) means thing is contained within G. We'll learn this again and again throughout the book. 
+</p>
+
+<p>
+The definition of a closed set if it's complement is open, imagine the interval [3,4] it's compliment is the rest of the real line without the [3,4] interval. You now have a real line with a bound, and any interval with a bound is open as you can't actually reach 3 to 4 the end points of (-infinity, 3) and (4, infinity+) but it is possible to sandwich in approximations to 3 and 4 using tiny displacements that approach them, the definition of an open set.
+</p>
 
 <p>
 TODO
 </p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-Linear%20Algebra" class="outline-2">
+<h2 id="Linear%20Algebra">Linear Algebra</h2>
+<div class="outline-text-2" id="text-Linear%20Algebra">
+<p>
+TODO we will do the modern version of 18.06 as we have access to their github/psets mostly done in programming language. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-Olympiad%20Algebra" class="outline-2">
+<h2 id="Olympiad%20Algebra">Olympiad Algebra</h2>
+<div class="outline-text-2" id="text-Olympiad%20Algebra">
+<p>
+TODO the Russian olympiad book <a href="https://bookstore.ams.org/mcl-25/">Mathematics Via Problems: Part 1: Algebra</a> which you can get on library genesis. Working through this book helps with all the other subjects in ways you won't know until you do it. 
+</p>
+
+
+
+
+
+
 
 <hr>
 <p>
 <a href="./math.html">Go Back</a>
 </p>
-</div>
-</div>
 </div>
 </div>
 </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-11-07 Mon 21:40 -->
+<!-- 2022-11-07 Mon 23:16 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Math You Need</title>
@@ -293,8 +293,8 @@
 <li><a href="#1.2x%20What%20is%20an%20interval%3F%20TODO">1.2x What is an interval? TODO</a></li>
 </ul>
 </li>
-<li><a href="#Linear%20Algebra">Linear Algebra</a></li>
-<li><a href="#Olympiad%20Algebra">Olympiad Algebra</a></li>
+<li><a href="#Linear%20Algebra%20TODO">Linear Algebra TODO</a></li>
+<li><a href="#Olympiad%20Algebra%20TODO">Olympiad Algebra TODO</a></li>
 </ul>
 </div>
 </nav>
@@ -376,7 +376,7 @@ The successor function s(n) = n + 1 for natural numbers:
 <h4 id="Prove%20the%20laws%20of%20multiplication">Prove the laws of multiplication</h4>
 <div class="outline-text-4" id="text-Prove%20the%20laws%20of%20multiplication">
 <p>
-We'll do this in the Lean proof assistant too. The first time I watched these videos years ago I struggled to produce satisfying proofs then revisited them after reading the algebra olympiad book we'll do below and seeing the same technique used for something else so these are all my own proofs but heavily based on the abstraction that the number n is a sum of indexed 1's from 1 to n. 
+We'll do this in the Lean proof assistant too. 
 </p>
 
 <p>
@@ -639,10 +639,6 @@ He then laments that almost nobody reads those texts, because they are lengthy a
 <p>
 This is why Isaac Newton attacked Descartes and spent the rest of life trying to refute his philosophy on only learning analysis, because he claimed the analysis wasn't important at all, and that anybody could have figured it out independently just screwing around in their spare time like he did, and that's why the ancients had largely hidden it preferring to show to final proofs in other words no results in math could exist without synthesis meaning demonstrate a proof. Maybe he's right considering the analysis he used of infinitesimals during that time was unproven hacks he did for self-entertainment while on plague lockdown but when it came time to write the Principia he had to prove the analysis, which nobody else could, so performed synthesis showing a limit can exist in the framework of geometry.  
 </p>
-
-<p>
-Much like Descartes I too don't like watching long lectures, reading long books, so have tried to create this workshop to be as brief as possible highlighting things I've found interesting where we aren't doing the entire <i>Proof and Logic</i> book, and we aren't doing the measure theory section of <i>The Calculus Integral</i> we're just getting enough math so that we learn this style of thinking and can self-direct our own research according to interest. 
-</p>
 </div>
 </div>
 </div>
@@ -651,7 +647,7 @@ Much like Descartes I too don't like watching long lectures, reading long books,
 <h3 id="Explanation">Explanation</h3>
 <div class="outline-text-3" id="text-Explanation">
 <p>
-Without reading further I know of no better explanation of what's going on than the <a href="https://github.com/michaelt/martin-lof">papers</a> of Per Martin-Lof, reading specifically the paper <i>On the Meanings of the Logical Constants and the Justifications of the Logical Laws</i>. It's 25 pages, a set of three lectures he gave that were transcribed.
+Without reading further I know of no better explanation of what's going on than the <a href="https://github.com/michaelt/martin-lof">papers</a> of Per Martin-Lof, reading specifically the paper <i>On the Meanings of the Logical Constants and the Justifications of the Logical Laws</i>. It's 25 pages, a set of three lectures he gave that were transcribed. Skim through them leisurely. 
 </p>
 
 <p>
@@ -680,15 +676,15 @@ Aristotle's term white is defined <a href="https://plato.stanford.edu/entries/ar
 </p>
 
 <p>
-Page 9 the turnstile binary relation notation \(\vdash\) from Frege: the vertical judgement (the knowledge force on the object, or the way the subject relates to the object) and the horizontal (content) affirmation. Together turnstile means: 'I know |' and 'is true -' and turnstile is usually called the assertion sign. <i>P \(\vdash A\) Q</i> is read: From P, I know that Q, or Q is derivable from P, or Q is provable from P.
+Page 9 the turnstile binary relation notation \(\vdash\) from Frege: the vertical judgement (the knowledge force on the object, or the way the subject relates to the object) and the horizontal (content) affirmation. Together turnstile means: 'I know |' and 'is true -' and turnstile is usually called the assertion sign. <i>P \(\vdash\) Q</i> is read: From P, I know that Q is true, or Q is derivable from P, or Q is provable from P.
 </p>
 
 <p>
-Page 8 and 9 there are deconstructed examples of why the judgement stroke in Frege's notation is unnecessary, using an example of A is a proposition and A is true but if you return to page 7 all it means is if you say 'A is true' there is no need to say 'I know A is true' because it is implicit, because A is true is a judgement which means you have the knowledge that A is true. 
+Page 8 and 9 there are deconstructed examples of why the judgement stroke in Frege's notation is unnecessary, if you return to page 7 all it means is if you say 'A is true' there is no need to also say 'I know A is true' because it is implicit. A is true is a judgement and a judgement means you have the knowledge to judge something true. 
 </p>
 
 <p>
-Page 9 and 10 we get into the meaning of what a proof really is. Initially he shows proof is an act not an object, but eventually equates proof with knowledge, and a judgement is knowledge, and a piece of knowledge is an object. Page 11 we start to see the various judgement forms that will come up in the CMU course on logic and math except fully explained. Propositions are brought up again and verifying they are true.
+Page 9 and 10 we get into the meaning of what a proof really is. Initially he shows proof is an act not an object, but eventually equates proof with knowledge, and a judgement is a piece of knowledge so is an object. Page 11 we start to see the various judgement forms that will come up in the CMU course on logic and math except fully explained. Propositions are brought up again and verifying they are true.
 </p>
 
 <p>
@@ -696,11 +692,11 @@ Page 9 and 10 we get into the meaning of what a proof really is. Initially he sh
 </p>
 
 <p>
-We learn why you can assume things are true/proven, because of the same reasons why 'I know' in 'I know A is true' is unneccessary because if A is true, by definition of judgements so far and evident judgements, you already know it's true, like in Frege's assertion notation it is there even if not made explicit. 
+We learn why you can assume things are true/proven, because of the same reasons why 'I know' in 'I know A is true' is unneccessary because if A is true, by definition of evident judgements, you already know it's true like in Frege's assertion notation it is there even if not made explicit. 
 </p>
 
 <p>
-On page 17 the upside down T or up tack means always false or impossible. A logical consequence can have all true antecedents with the consequence still false and you can probably think up a dozen examples in your head of trying to deduce things that are true but the consequence is false, but there is no possible proof where A being true infers it is always false, unless A is of course false. The more you read of this paper the more everything starts to make sense.
+On page 17 the upside down T or up tack means always false or impossible. A logical consequence can have all true antecedents with the consequence still false and you can probably think up a dozen examples in your head of trying to deduce things that are true but the consequence is false. There is no possible proof where A being true infers it is always false, unless A is of course false. The more you read of this paper the more everything starts to make sense.
 </p>
 
 <p>
@@ -714,7 +710,7 @@ Further on page 17 we get the rules of inference starting with implication, and,
 <h3 id="1.3%20-%201.6%20Chapters">1.3 - 1.6 Chapters</h3>
 <div class="outline-text-3" id="text-1.3%20-%201.6%20Chapters">
 <p>
-Back to the CMU <a href="http://avigad.github.io/logic_and_proof/">book</a> <i>Logic and Proof</i>. This is just an introduction showing and not explaining any code except from reading Martin-Lof's paper we can understand a lot of it now without needing an explanation. The idea is there are libraries of already proven formulas we can use until there are enough of these that proof assistants will not be so tedious to use.
+Back to the CMU <a href="http://avigad.github.io/logic_and_proof/">book</a> <i>Logic and Proof</i>. This is just an introduction showing and not explaining any code except from reading Martin-Lof's paper we can understand a lot of it now without needing an explanation. The idea is there are libraries of already proven formulas we can use until there are enough of these that proof assistants will be easier in the future as you'll just be using these existing libraries for the majority of future proofs and not have to formalize everything from scratch each time. 
 </p>
 </div>
 </div>
@@ -723,7 +719,7 @@ Back to the CMU <a href="http://avigad.github.io/logic_and_proof/">book</a> <i>L
 <h3 id="2.x%20Propositional%20Logic">2.x Propositional Logic</h3>
 <div class="outline-text-3" id="text-2.x%20Propositional%20Logic">
 <p>
-Starts with a deduction thought exercise that is used to define the logical connectives later in this chapter. Everything else we already read in Martin-Lof's paper except we finally get a definition of what an introduction and elimination rule is, though we saw both used in practice. All these definitions start on page 17 of Martin-Lof's paper if interested in going back to read or re-read it.
+Starts with a deduction thought exercise that is used to define the logical connectives later in this chapter. Everything else we already read in Martin-Lof's paper except we finally get a definition of what an introduction and elimination rule is, though we saw both used in practice. All these definitions start on page 17 of Martin-Lof's paper if interested.
 </p>
 
 <p>
@@ -758,7 +754,7 @@ We're going to do the free book <a href="https://openlibra.com/en/book/the-calcu
 </p>
 
 <p>
-This is a totally different and optimized for time versus work calculus course. We are learning Isaac Newton's integral, which is equivalent to the Henstock-Kurzweil integral, which you will soon see is the same as the Lebesgue integral once we change our assumptions. What we are doing on it's face seems hard but trust me it's much easier than slogging through 18.01 or 18.02 on Open CourseWare or reading Spivak with his often too easy exercises mixed in with impossible exercises or Apostol's seemingly endless drilling of trig identities.    
+We are learning Isaac Newton's integral, which is equivalent to the Henstock-Kurzweil integral, which you will soon see is the same as the Lebesgue integral once we change our assumptions. It's an 'advanced' book in that we will have to work to understand it but the concepts are not advanced. It's much easier than slogging through 18.01 or 18.02 on Open CourseWare which requires watching a month of lectures or reading Spivak with his often too easy exercises mixed in with impossible exercises or Apostol's seemingly endless drilling of trig identities.    
 </p>
 
 <p>
@@ -810,20 +806,20 @@ TODO
 </div>
 </div>
 
-<div id="outline-container-Linear%20Algebra" class="outline-2">
-<h2 id="Linear%20Algebra">Linear Algebra</h2>
-<div class="outline-text-2" id="text-Linear%20Algebra">
+<div id="outline-container-Linear%20Algebra%20TODO" class="outline-2">
+<h2 id="Linear%20Algebra%20TODO">Linear Algebra TODO</h2>
+<div class="outline-text-2" id="text-Linear%20Algebra%20TODO">
 <p>
-TODO we will do the modern version of 18.06 as we have access to their github/psets mostly done in programming language. 
+TODO we will do the modern version of 18.06 as we have access to their github/psets and the matrix calculus lecture.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-Olympiad%20Algebra" class="outline-2">
-<h2 id="Olympiad%20Algebra">Olympiad Algebra</h2>
-<div class="outline-text-2" id="text-Olympiad%20Algebra">
+<div id="outline-container-Olympiad%20Algebra%20TODO" class="outline-2">
+<h2 id="Olympiad%20Algebra%20TODO">Olympiad Algebra TODO</h2>
+<div class="outline-text-2" id="text-Olympiad%20Algebra%20TODO">
 <p>
-TODO the Russian olympiad book <a href="https://bookstore.ams.org/mcl-25/">Mathematics Via Problems: Part 1: Algebra</a> which you can get on library genesis. Working through this book helps with all the other subjects in ways you won't know until you do it. 
+TODO the Russian olympiad problems book <a href="https://bookstore.ams.org/mcl-25/">Mathematics Via Problems: Algebra</a> which you can get on library genesis. You pick whatever subject you think you are lacking in and do it, doesn't have to be a linear start to finish though I'll do it that way. 
 </p>
 
 

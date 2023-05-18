@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-11-08 Tue 01:23 -->
+<!-- 2023-05-18 Thu 00:55 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Choose Your Own Math Adventure</title>
+<title>21st Century Mathematics From Scratch</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -28,11 +28,6 @@
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
-  body {
-  max-width: 40rem;
-  padding: 1rem;
-  margin: auto;
-  }
   pre {
     border: 1px solid #ccc;
     box-shadow: 3px 3px 3px #eee;
@@ -43,7 +38,7 @@
   }
   pre.src {
     position: relative;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -55,7 +50,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
+  pre.src:hover:before { display: inline;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -196,28 +191,52 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<style> body {background-color: #fafad2} img {width: 100%; height: auto;}  figure {text-align: center;} .video {aspect-ratio: 16 / 9; width: 100% </style>
+<style> body {background-color: #fafad2;  max-width: 62.5rem; padding: 1rem; margin: auto;} img {width: 60%; height: auto;} figure {text-align: center;} .video {aspect-ratio: 16 / 9; width: 100% </style>
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -245,270 +264,104 @@
 <body>
 <div id="content">
 <header>
-<h1 class="title">Choose Your Own Math Adventure</h1>
-</header><hr>
+<h1 class="title">21st Century Mathematics From Scratch</h1>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org1b74a0c">Plan</a></li>
+<li><a href="#org74283b2">Insight</a>
+<ul>
+<li><a href="#what-are-functions">What are Functions</a></li>
+<li><a href="#what-are-polynomials">What are Polynomials</a></li>
+<li><a href="#what-are-matrices">What are Matrices</a></li>
+<li><a href="#what-is-algebra">What is Algebra</a></li>
+<li><a href="#what-is-integration">What is Integration</a></li>
+<li><a href="#what-are-integration">What are Derivatives</a></li>
+<li><a href="#what-are-differentials">What is Category Theory</a></li>
+<li><a href="#math-reasoning">Mathematical reasoning</a></li>
+<li><a href="#music-and-math">Music and math</a></li>
+<li><a href="#math-proofs">Math proofs</a></li>
+<li><a href="#math-difficulty">Math difficulty</a></li>
+<li><a href="#book-versions">Book reprints and versions</a></li>
+<li><a href="#classical-logic">Classical logic</a></li>
+<li><a href="#isaac-newton">Geometry &amp; Isaac Newton</a></li>
+<li><a href="#origins-of-geometry">Origins of geometry</a></li>
+</ul>
+</li>
+<li><a href="#org2808e75">BEGIN[todo]</a></li>
+</ul>
+</div>
+</nav>
+<hr>
 
+<p>
+I assembled material for the 21st century like linear algebra without free/pivot variables or echelon forms or defining the SVD using eigenvalues. We don't learn the Reimann 'integral' which was replaced in 1904 but still taught in universities. 
+</p>
 
-<figure id="org8999ee7">
-<img src="./u.GIF" alt="u.GIF">
+<p>
+We'll also learn some 21st century math like Univalent foundations which has enabled a ton of research because you can apply univalence to all kinds of things to ensure interchangeability in all contexts, so now there is a factory of new type theories emerging because of it. Category theory is also proliferating everywhere. The <a href="https://topos.institute/">Topos Insitute</a> for example is working on modeling huge bio systems with Julia language <a href="https://www.algebraicjulia.org/">frameworks</a> using categories with the goal being any model is a data structure that can be manipulated. 
+</p>
 
-</figure>
+<p>
+All the other workshops are self-contained this is just my version of a math course because it doesn't exist anywhere else. 
+</p>
 
 <p>
 <i>Do 1% effort for 100 days</i> - Prof <a href="https://youtu.be/YFUIPg8P2sY?t=278">Ryan O'Donnell</a>
 </p>
 
-<div id="outline-container-Option%201%3A%20The%20Math%20You%20Need" class="outline-2">
-<h2 id="Option%201%3A%20The%20Math%20You%20Need">Option 1: The Math You Need</h2>
-<div class="outline-text-2" id="text-Option%201%3A%20The%20Math%20You%20Need">
+<div id="outline-container-org1b74a0c" class="outline-2">
+<h2 id="org1b74a0c">Plan</h2>
+<div class="outline-text-2" id="text-org1b74a0c">
 <p>
-A good enough crash course of undergrad math filtered for the 21 century.
+All these are free from the author's website
 </p>
 
 <ul class="org-ul">
-<li>Algebra skills</li>
-<li>Writing proofs in Lean</li>
-<li>Matrix calculus</li>
-</ul>
-</div>
-
-<div id="outline-container-%5B%5B.%2Fthemathyouneed.html%5D%5BStart%20option%201%5D%5D" class="outline-3">
-<h3 id="%5B%5B.%2Fthemathyouneed.html%5D%5BStart%20option%201%5D%5D"><a href="./themathyouneed.html">Start option 1</a></h3>
-</div>
-</div>
-
-<div id="outline-container-Option%202%20SciML%20Performance%20Engineering" class="outline-2">
-<h2 id="Option%202%20SciML%20Performance%20Engineering">Option 2 SciML Performance Engineering</h2>
-<div class="outline-text-2" id="text-Option%202%20SciML%20Performance%20Engineering">
-<p>
-A research project into continuous dynamics, numerical linear algebra, linear approximation, probabilistic programming, uncertainty modeling, and neural networks.     
-</p>
-
+<li>Some of Terence Tao's <a href="https://www.math.ucla.edu/~tao/resource/general/131ah.1.03w/">notes</a></li>
+<li>Mathematics via problems by <a href="https://users.mccme.ru/skopenko/">Arkadiy Skopenkov</a></li>
+<li><a href="http://brendanfong.com/programmingcats.html">Category Theory</a> via programming</li>
+<li><a href="https://www.math.cmu.edu/~ploh/2021-228.shtml">Discrete Mathematics</a> via problems</li>
+<li>MIT's modernized 18.06 Linear Algebra via problems
 <ul class="org-ul">
-<li><a href="https://mitmath.github.io/18337/">18.337J Parallel Computing and SciML</a> MIT
-<ul class="org-ul">
-<li>Has recorded lectures on YouTube</li>
-<li>Performance engineering of large-scale scientific modeling</li>
-<li>Uses the Julia language, easy to pick up if you've programmed before</li>
-<li>Applications in finance, medicine, NASA, any model of a system where data evolves over time</li>
+<li>We will also learn calculus here</li>
 </ul></li>
-</ul>
-
-<p>
-This concerns high-performance parallel computing where scientists run insanely complex models such as <a href="https://news.mit.edu/2022/early-universe-model-0324">cosmological simulations</a> that are accelerated by physics-informed neural networks. This course teaches us how to optimize it all and as a side-effect how to optimize any high level code. We also learn all the dev tooling like VSCode, Git, making packages, code profilers, compiler type inference, a lot of topics.
-</p>
-</div>
-
-<div id="outline-container-%5B%5B.%2Fsciml.html%5D%5BStart%20option%202%5D%5D" class="outline-3">
-<h3 id="%5B%5B.%2Fsciml.html%5D%5BStart%20option%202%5D%5D"><a href="./sciml.html">Start option 2</a></h3>
-</div>
-</div>
-
-<div id="outline-container-Option%203%3A%20Create%20a%20Terminator" class="outline-2">
-<h2 id="Option%203%3A%20Create%20a%20Terminator">Option 3: Create a Terminator</h2>
-<div class="outline-text-2" id="text-Option%203%3A%20Create%20a%20Terminator">
-<p>
-You can do this with a phone. 
-</p>
-
+<li>Robert Harper's <a href="http://www.cs.cmu.edu/~rwh/courses/hott/">HoTT</a> lectures and <a href="https://homotopytypetheory.org/book/">book</a>
 <ul class="org-ul">
-<li><a href="http://underactuated.csail.mit.edu/index.html">Underactuated Robotics</a> MIT
-<ul class="org-ul">
-<li>Algorithms for walking, running, swimming, flying and manipulation</li>
-<li>Recorded <a href="https://www.youtube.com/channel/UChfUOAhz7ynELF-s_1LPpWg/playlists">lectures</a> on YouTube</li>
-<li>Assignments all done online w/Python using deepnote</li>
-<li>Useful to program/analyze any system with continuous variables in a feedback loop</li>
-</ul></li>
-</ul>
-
-<p>
-Underactuated means you don't maintain full control authority at all times you exploit natural dynamics.     
-</p>
-</div>
-
-<div id="outline-container-Start%20option%203%20here" class="outline-3">
-<h3 id="Start%20option%203%20here">Start option 3 here</h3>
-<div class="outline-text-3" id="text-Start%20option%203%20here">
-<p>
-TODO
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Option%204%3A%20Computational%20Geometry" class="outline-2">
-<h2 id="Option%204%3A%20Computational%20Geometry">Option 4: Computational Geometry</h2>
-<div class="outline-text-2" id="text-Option%204%3A%20Computational%20Geometry">
-<p>
-Geometry is a tool for doing math, like a framework you can manipulate visually. 
-</p>
-
-<ul class="org-ul">
-<li><a href="https://jeffe.cs.illinois.edu/teaching/compgeom/index.html">CS498 Computational Geometry</a> UIUC
-<ul class="org-ul">
-<li>Has recorded <a href="https://mediaspace.illinois.edu/media/t/1_ai5zh5fy">lectures</a></li>
-<li>Follows the <a href="http://www.cs.uu.nl/geobook/">book</a> <i>Computational Geometry: Algorithms and Applications</i>
-<ul class="org-ul">
-<li>Each chapter introduces a problem, transforms it into a geometric problem then solves it</li>
-<li>We also do the <a href="https://bookstore.ams.org/mcl-26">book</a> <i>Mathematics via Problems: Geometry</i> to teach ourselves all the geometry we missed growing up in N. America where it's no longer taught.</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<p>
-A data structure and algorithm design course with the same traditional topics such as dynamic programming, linear programming, graphs and trees except you can design it all visually and prove it with geometry. The data is usually manipulated as sets of numbers you interpret as points on a 3D surface. 
-</p>
-</div>
-
-
-<div id="outline-container-Start%20option%204%20here" class="outline-3">
-<h3 id="Start%20option%204%20here">Start option 4 here</h3>
-<div class="outline-text-3" id="text-Start%20option%204%20here">
-<p>
-TODO 
-</p>
-
-
-<figure id="orgf470138">
-<img src="./geometry.jpg" alt="geometry.jpg">   
-
-<figcaption><span class="figure-number">Figure 2: </span>Geometry of mathematical finance <a href="https://wwwen.uni.lu/index.php/research/fstm/dmath/research_areas/probability_theory_and_its_applications_mathematical_finance">uni.lu</a></figcaption>
-</figure>
-</div>
-
-<div id="outline-container-Geometry%20%26%20Isaac%20Newton" class="outline-4">
-<h4 id="Geometry%20%26%20Isaac%20Newton">Geometry &amp; Isaac Newton</h4>
-<div class="outline-text-4" id="text-Geometry%20%26%20Isaac%20Newton">
-<p>
-For geometry-themed entertainment try reading <a href="http://libgen.is/book/index.php?md5=B290F008ACE9DE45827692ED7A4CB944">Isaac Newton on Mathematical Certainty and Method</a> by Niccolo Guicciardini as you go through the geometry problems here, as Newton claimed geometric synthesis helped him make mathematical discoveries when writing <i>Principia</i> by performing geometric synthesis on the cause to prove the effects he observed through analysis.
-</p>
-
-<p>
-Isaac Newton entered Trinity College in 1661 as a <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03996/1">sub-sizar</a> meaning subsidized tuition in exchange for being an unpaid servant on campus. Cambridge then was just a diploma mill there were seldom any lectures and fellows (graduate students) took jobs as P/T tutors to supplement their income. Undergrad degrees consisted of one of these tutors giving you a list of books to read. According to his Trinity College notebook which Cambridge still has, this was a large reading list of Greek and Roman classics in Latin: Aristotle's <i>Organon</i> and <i>Metaphysics</i>, Porphyry's <i>Isagoge</i>, Plato and manuscripts of commentary on Aristotle usually written by other fellows to sell to undergrads. This was because of the <a href="https://en.wikipedia.org/wiki/Recovery_of_Aristotle">recovery of Aristotle</a> in the middle ages which shaped logic courses for the next few centuries. Newton didn't read much of Aristotle or any of the books assigned to him, but he later claimed he read enough to have learned how to properly categorize a problem, how to think logically, and later when he wrote the <i>Principia</i> how to use a cause to prove the effect. His algebra lectures that later became the book <i>Arithmetica Universalis</i> described different 'species' ie: Aristotelian categories of math objects that can be combined together, essentially he was describing types. 
-</p>
-
-<p>
-According to Newton's notebooks and the writings of his close friend DeMoivre, here is how Newton learned mathematics. Wandering the town fair in 1663 he comes across a book on astrology, and out of curiosity buys a copy as Newton was always into alchemy and other occult topics. It features trigonometry he doesn't understand so he goes to the mathematics department of Cambridge to find books on trig only to discover everyone there is deeply immersed in the work of Descartes. They give him Euclid and Oughtred's <a href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-oughtreds-clavis-mathematicae">Clavis</a>. He retries Euclid's <i>Elements</i> after having given up reading it before, and sees the proof of the Pythagorean theorem which makes him want to read the rest of the text. Newton's college notebooks show he was influenced by books II (geometrical algebra), V (proportions), VII (number theory) and X (irrationals) and that Euclid taught him how to write a proof while Aristotle's system of logic he studied gave him the rigorous thought to be able to follow the proofs.
-</p>
-
-<p>
-Since his Cambridge degree is essentially a joke, with the school so lax that nobody cares what you're doing, he abandons the official curriculum for the rest of his undergrad to hang around the math department. He pursues Kepler and Oughtred's book, writing he understands it except for the quadratic and cubic equations however his takeaway in his notes is that algebra can be used for exploration, which he starts doing by writing out hundreds of examples. He gets a B.A. in 1665 despite never finishing any of the official curriculum and is offered to be elected as a minor fellow pursuing a master's degree but the school is closed because of the plague in the summer of 1665.
-</p>
-
-
-<figure id="org05e7807">
-<img src="./geometrie.jpg" alt="geometrie.jpg">   
-
-<figcaption><span class="figure-number">Figure 3: </span>Cartesian Geometry by Van Schooten <a href="https://www.manhattanrarebooks.com/pages/books/2043/rene-descartes/geometria?soldItem=true">rarebooks</a></figcaption>
-</figure>
-
-<p>
-He goes home to his family farm and takes with him a 1659 two volume Latin translation of Descartes <a href="https://en.wikipedia.org/wiki/La_G%C3%A9om%C3%A9trie">La Geometrie</a> by van Schooten with appendices and commentary by other Cartesian research mathematicians. Newton later writes in his school notebook how a proof by Hudde to estimate the slope with a tangent in the appendix taught him how to transform one type of problem into another to study it in a different way. This book was considered a very hard text and the state of the art of 17th century analysis which uses almost the same notation we use today. He read 10 pages or so, couldn't understand the text, and reread from the beginning. Went a little further then stopped again going back to the beginning. He repeats this algorithm for all summer and autumn until he finally finishes the whole text. He misunderstands a technique of Descartes to his own benefit where he thinks Descartes is hinting the reader can figure out any properties of a curve and while trying to do so as an exercise develops his own sophisticated analysis well beyond the book or any other book of that time. During this period is when he started working 18 hours a day, 7 days a week. He didn't stop this work ethic until he died, even after becoming wealthy and living in London.
-</p>
-
-<p>
-In the winter of 1665 he reads <i>Arithmetica Infinitorum</i> by Wallis which is the arithmetic of infintesimals and Viete's <i>Opera Mathematica</i> another large book. In less than a full year Newton managed to bring himself up to date with the entire achievement of mid 17th century mathematics by himself. He discovers the generalized binomial theorem and infinite series analysis which he claimed to have invented to find short cuts to calculations. He returns briefly in 1666 to Cambridge before it's shut down by the plague again, his notes revealing he finished his differential and integral calculus during these few months back at school.  
-</p>
-
-<p>
-Describing his activities during the second plague year: "I am ashamed to tell to how many places I carried these computations, having no other business at the time, for then I took really too much delight in these inventions". There is notes he kept of calculating a logarithm to it's 52nd decimal point. He returns to Cambridge in 1667 where he is obsessed with uncovering the ancient analysis used in classical geometry. Pappus' book 7 contains a commentary about a lost group of tools and propositions that Euclid, Apollonius, Eratosthenes and other geometers of the day used that Pappus referred to as the 'treasury of analysis'. These lost Porisms (corollaries) are speculated by Newton to be <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03963/1">projective geometry</a>.
-</p>
-
-<p>
-Newton in his Lucasian chair lectures said that the ancients would never bother to introduce the algebra of curves with geometry because you lose the simplicity of working within geometry as its whole point was to escape the tediousness of calculations by simply drawing lines and circles. He also claims books like Pappus's <i>Collectio</i> deliberately hid the analysis, as it was considered an inelegant tool, and that ancient synthesis where they deduced a consequence from a given premise (a corollary) using visual means was a superior method as the analysis could not be reversed in steps like geometric synthesis could. He went further and claimed if you wanted to discover seemingly unrelated corollaries you had to use synthesis, describing the analysis of his day as a 'tedious pile of probabilities used by bunglers'.
-</p>
-
-<p>
-In <i>Arithmetica Universalis</i> which is an unauthorized book released by his successor at Cambridge who discovered Newton's Lucasian lectures in the library and published them as is, Newton writes how Descartes' attempts to include into standard plane geometry various curves like parabolas more than just a waste of time, they are 'ruining the simplicity of geometry'. In figure 108 he shows how he would solve this problem, by reinterpreting an ellipse, arguing the Cartesian methods fail to understand the point of doing everything with just a ruler and compass. 
-</p>
-
-<p>
-He later wrote in a manuscript on geometry that mechanics of motion was what generated all geometry, and that the ancients had understood this as well conceiving geometrical objects as generated by moving along a straight edge, circles via the movement of a compass, or translation like in Proposition 4 of Book 1 of Euclid's <i>Elements</i> where one triangle form is moved to compare to another. He then demonstrated that rotation of rulers were in fact transformation of the plane something that wasn't formally developed by other mathematicians for another 200 years. Here is how Newton used his <a href="https://youtu.be/paenRVq0vnc">rotating ruler</a> to create a power series. 
-</p>
-
-<iframe class="video" src="https://www.youtube.com/embed/qFo7xZFdBdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>
-Newton invented the concept of modern limits using epsilons (very small quantities) when writing the <i>Principia</i> during the geometric synthesis stage of his infinitesimal analysis. He decided limits demonstrated as geometric vanishing augments to be 'more in harmony with the geometry of the ancients in that there should be no need to introduce infinitely small figures into geometry'. Since infinitesimal analysis was merely a heuristic tool to him, he downgraded infinitesimals (which had no established theory or proofs anyway) to prefer his new limit proof method he derived from geometry synthesis, and is very similar to what everyone <a href="https://www.sciencedirect.com/science/article/pii/S0315086000923012">today</a> is using in modern calculus courses.
-</p>
-
-<blockquote>
-<p>
-"Comparing today the texts of Newton with the comments of his successors, it is striking how Newton’s original presentation is more modern, more understandable and richer in ideas than the translation due to commentators of his geometrical ideas into the formal language of the calculus of Leibnitz" -<a href="https://en.wikipedia.org/wiki/Vladimir_Arnold">Vladimir Arnold</a> 1990
-</p>
-</blockquote>
-</div>
-</div>
-
-<div id="outline-container-Geometric%20probability" class="outline-4">
-<h4 id="Geometric%20probability">Geometric probability</h4>
-<div class="outline-text-4" id="text-Geometric%20probability">
-<p>
-There's a <a href="http://www.cut-the-knot.org/">book</a> <i>Cut The Knot</i> that has a chapter on solving probabilities in a continuous sample space by recognizing the problem or solution can be represented using geometry.
-</p>
-
-<p>
-What is the probability that three randomly drawn real numbers in the interval between 0 and 1 have a sum less than 1? The solution recognizes that the three numbers can be points in 3D space, and form a pyramid. Dropping a volume 1 cube over the interval provides the distribution needed where by definition it must sum to 1. Now take the volume of the pyramid, that's the answer. Easy and intuitive.
-</p>
-</div>
-</div>
-
-<div id="outline-container-Origins%20of%20geometry" class="outline-4">
-<h4 id="Origins%20of%20geometry">Origins of geometry</h4>
-<div class="outline-text-4" id="text-Origins%20of%20geometry">
-<p>
-Some entertainment
-</p>
-<ul class="org-ul">
-<li><a href="https://youtu.be/yFMcNXC-dW0">A brief history of geometry I</a>
-<ul class="org-ul">
-<li>Mesolithic times to 1400 A.D.</li>
-</ul></li>
-<li><a href="https://youtu.be/AAiM8ymBCQk">A brief history of geometry II</a> 
-<ul class="org-ul">
-<li>European/Cartesian geometry</li>
-</ul></li>
-<li><a href="https://youtu.be/mKlxkpbze54">A brief history of geometry III</a>
-<ul class="org-ul">
-<li>19th century Complex/Non-Euclidean geometry</li>
-</ul></li>
-<li><a href="https://youtu.be/hlyTRZcJ8vo">A brief history of geometry IV</a>
-<ul class="org-ul">
-<li>Higher dimensional geometry</li>
+<li>plus Cartesian cubical derivatives</li>
+<li>plus more Category theory</li>
 </ul></li>
 </ul>
 </div>
 </div>
-</div>
-</div>
 
-
-<div id="outline-container-Functions" class="outline-2">
-<h2 id="Functions">Functions</h2>
-<div class="outline-text-2" id="text-Functions">
+<div id="outline-container-org74283b2" class="outline-2">
+<h2 id="org74283b2">Insight</h2>
+<div class="outline-text-2" id="text-org74283b2">
 <p>
-Most of the math you've learned was solely some kind of test bench for analyzing a function.
+The following is every insight I found over the years nobody else tells you when you start learning, and some entertainment research I did for motivation just to see for myself how others learned/used this material. 
 </p>
 </div>
 
-<div id="outline-container-What%20are%20functions" class="outline-3">
-<h3 id="What%20are%20functions">What are functions</h3>
-<div class="outline-text-3" id="text-What%20are%20functions">
+<div id="outline-container-orgfe84c95" class="outline-3">
+<h3 id="what-are-functions">What are Functions</h3>
+<div class="outline-text-3" id="text-what-are-functions">
 <p>
-An ancient concept of a function is written on a papyrus from 1850 BC describing the rule for finding the area of a rectangle using the product of two adjacent sides. Today we would say the area of a rectangle is a function of it's two adjacent sides or more generally when you multiply numbers together the final product is a function of its factors. We had special cases like these for centuries until Fermat, Descartes and other 1600s mathematicians decided to generalize them and give a clear description of what is common to all functions. Newton had <a href="https://www.originalsources.com/Document.aspx?DocID=KD4D8VTC327L3PA">his own term</a> for functions which he described as an expression of one term which is dependent on one variable. So they are an abstract notion of a mapping between relationships/dependencies.
+An ancient concept of a function is written on a papyrus from 1850 BC describing the rule for finding the area of a rectangle using the product of two adjacent sides. Today we would say the area of a rectangle is a function of it's two adjacent sides or more generally when you multiply numbers together the final product is a function of its factors. Any kind of relationship/dependency can be modeled as a function so long as it maps to a single output.
 </p>
 
 <p>
-Similar to <a href="https://cs.wheaton.edu/~tvandrun/dmfp/">functional programming</a>, math functions can take functions as input and return new functions, that's exactly what derivatives in calculus do. 
+Similar to <a href="https://cs.wheaton.edu/~tvandrun/dmfp/">programming</a>, math functions can take functions as input and return new functions, that's exactly what derivatives in calculus do. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-Polynomials" class="outline-3">
-<h3 id="Polynomials">Polynomials</h3>
-<div class="outline-text-3" id="text-Polynomials">
+<div id="outline-container-org4349cf7" class="outline-3">
+<h3 id="what-are-polynomials">What are Polynomials</h3>
+<div class="outline-text-3" id="text-what-are-polynomials">
 <p>
-Their general form where a<sub>n</sub> are negative or positive coefficients 
+Most of the math you learned in secondary school was solely some kind of test bench for analyzing a function. The general form of polynomials where a<sub>n</sub> are negative or positive coefficients 
 </p>
 
 <p>
@@ -516,60 +369,86 @@ Their general form where a<sub>n</sub> are negative or positive coefficients
 </p>
 
 <p>
-A polynomial is a specification of a function that is often used to approximate some other function and get all its statistics: which x is f(x) = 0? What value of x do we get the max/min of f(x)? What is the shape of its graph y = f(x)? 
-</p>
-
-<p>
-If you divide two polynomial functions the result is a function that generates rational numbers.
+A polynomial is a specification of a function that is often used to approximate some other function and get all its statistics: which x is f(x) = 0? What value of x do we get the max/min of f(x)? What is the shape of its graph y = f(x)? If you divide two polynomial functions the result is a function that generates rational numbers. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-Matrices" class="outline-3">
-<h3 id="Matrices">Matrices</h3>
-<div class="outline-text-3" id="text-Matrices">
+<div id="outline-container-orga7ec2c8" class="outline-3">
+<h3 id="what-are-matrices">What are Matrices</h3>
+<div class="outline-text-3" id="text-what-are-matrices">
 <p>
-A matrix is a linear mapping so it too encodes or specifies a function where f(x) = Ax and A is a matrix, x is a vector. A matrix multiplied by vector x is like giving it an input and the output is another vector. 
+A matrix is a linear mapping so it too encodes or specifies a function. The notation <i>Ax = b</i> means A is a matrix, x is a vector and b is the vector output. A matrix multiplied by a vector is like giving it an input. If you multiply two matrices it's just function composition. 
 </p>
 
 <p>
-When you encode a function as a matrix you also get it's statistics:
+When you encode a function as a matrix you can also get it's statistics using the SVD:
 </p>
 
 <ul class="org-ul">
 <li>Nullspace is the zeros of the function</li>
 <li>Column space is the range of the function</li>
-<li>The transpose is like undo operation to previous state</li>
+<li>The transpose is an undo operation</li>
 </ul>
-</div>
-</div>
-
-<div id="outline-container-Random%20variables" class="outline-3">
-<h3 id="Random%20variables">Random variables</h3>
-<div class="outline-text-3" id="text-Random%20variables">
-<p>
-These are a mapping between an event space and a measurable space, a simple intuition is they are filter/fold functions that return a real number representing a probability. Consider <a href="https://en.wikipedia.org/wiki/Dice">dice</a> a single six-sided die being rolled has a distribution (the sample space of all the events that can happen) of {1, 2, 3, 4, 5, 6} where each side of the die has a 1/6 probabiilty of occuring when rolled. If you were to ask what's the probability of the event that I roll a 3 or less this question is modeled as a random variable meaning a function that filters the distribution to {1, 2, 3} and folds their probability values 1/6 + 1/6 + 1/6 to return a total probability of 3/6 or 1/2 or 50% probability.
-</p>
 
 <p>
-Why they're called random <i>variables</i> and not probability functions I think comes from 1800s mathematicians describing a distribution subset of the relevant events in question A<sub>0</sub> to A<sub>i</sub> with mappings to real number values p<sub>0</sub> to p<sub>i</sub> where a variable X assumes all the summed values X = p<sub>0</sub> + &#x2026; + p<sub>i</sub> representing the total probability p but there's been some notion of this mapping since the 1600s so your guess is as good as mine. 
+A 'linear mapping' means you preserve all the operations of scaling and vector addition when you map something (recall a function is a 'map'). A vector lives in a vector space, it's an abtract object representing something that has the properties that when scaled (multiplication by any other object in any field) or added together does not break out of that space. In calculus courses they are usually 3D points represented by arrows in the (x,y,z) plane however the definition is so abstract a vector can also be a function or infinite sequence then the arrow representation makes no sense. 
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-Mathematical%20reasoning" class="outline-2">
-<h2 id="Mathematical%20reasoning">Mathematical reasoning</h2>
-<div class="outline-text-2" id="text-Mathematical%20reasoning">
+<div id="outline-container-org56cd13c" class="outline-3">
+<h3 id="what-is-algebra">What is Algebra</h3>
+<div class="outline-text-3" id="text-what-is-algebra">
 <p>
-Math is a <a href="https://youtu.be/WKeITf83wBo">long chain of deductions</a>. 
+Algebra was invented to figure out Islamic inheritance law where debt had to be paid out and assets distributed according to some complex formula. It was a method of 'balancing and restoring' so you could do a scalar multiplication to both sides of an equation or a moving operation with subtract/add to each side to cancel any kind of negative values since they had no method of dealing with negative numbers back then.
 </p>
 
+<p>
+An algebra today besides solving equations seems to me to just mean computation is possible, think simple gates in a circuit doing T or F booleans and presto you have computation or an algebra. An 'algebraic type' is a sum or product type meaning a type that was formed by combining other types. A list is an algebraic type it's type is empty <i>plus</i> a link. 
+</p>
+</div>
+</div>
 
-<figure id="orge7e6333">
+<div id="outline-container-orgcafca9e" class="outline-3">
+<h3 id="what-is-integration">What is Integration</h3>
+<div class="outline-text-3" id="text-what-is-integration">
+<p>
+Integration is just the undo function of taking a derivative sometimes called the anti-derivative. On YouTube they will tell you it's some notion of an area using Riemann sums because modern universities think students are too stupid to learn the Lebesgue integral that replaced it in 1904 so you are forced to learn 'improper integrals' and other nonsense. You 'integrate' a function meaning put it back together which was 'derived' from another function. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefc2071" class="outline-3">
+<h3 id="what-are-integration">What are Derivatives</h3>
+<div class="outline-text-3" id="text-what-are-integration">
+<p>
+The study of calculus is derivatives and nothing else really. When you take a derivative of a function it's a higher-order procedure that gives you a new function representing the rate of change. Interpreting this function depends what your model is, if it's position over time the derivative is velocity. It's also a magnification, take a curve and magnify it until it's a straight line at every local point you look at, in other words you are making a curve linear. It's also sometimes interpreted as the sensitivity of a function to very small changes in the input what happens to the output.
+</p>
+
+<p>
+In economics it has a similar <a href="https://link.springer.com/article/10.1007/s13138-020-00174-z">interpretation</a>. It's the amount of change while increasing production by a 'marginal unit'. The paper I linked notices the failure of students to transfer knowledge meaning you're supposed to recognize a concept in one context (elementary calc) and can apply it to another context in economics but of course their curriculum never works.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf59f8ca" class="outline-3">
+<h3 id="what-are-differentials">What is Category Theory</h3>
+<div class="outline-text-3" id="text-what-are-differentials">
+<p>
+It's a way to model any object in math by the maps (functions) to and from the object usually drawn as arrows. That's it, just one higher level of abstraction where mathematics is an ant farm you're watching. Category theory is unfortunately assumed to be difficult because the people who taught it always used abstract algebra jargon for examples because they wrote books for other mathematicians but the theory itself is simple and anyone can do it.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdce9d0a" class="outline-3">
+<h3 id="math-reasoning">Mathematical reasoning</h3>
+<div class="outline-text-3" id="text-math-reasoning">
+
+<figure>
 <img src="./proofs.png" alt="proofs.png">
 
-<figcaption><span class="figure-number">Figure 4: </span>What is a proof from <a href="http://www.cs.cmu.edu/~arielpro/15251f15/schedule.html">15-251</a></figcaption>
+<figcaption><span class="figure-number">Figure 1: </span>What is a proof from <a href="http://www.cs.cmu.edu/~arielpro/15251f15/schedule.html">15-251</a></figcaption>
 </figure>
 
 <p>
@@ -597,17 +476,76 @@ These connectives can of course be used to define each other:
 </ul></li>
 <li>Iff is (A \(\implies\) B) \(\land\) (B \(\implies\) A)</li>
 </ul>
-
-<p>
-If you take the math you need <a href="./themathyouneed.html">option</a> we'll use Lean proof assistant to prove all these connectives.
-</p>
+</div>
 </div>
 
-<div id="outline-container-Classical%20logic" class="outline-3">
-<h3 id="Classical%20logic">Classical logic</h3>
-<div class="outline-text-3" id="text-Classical%20logic">
+<div id="outline-container-org826e017" class="outline-3">
+<h3 id="music-and-math">Music and math</h3>
+<div class="outline-text-3" id="text-music-and-math">
 <p>
-We could also do what every student of math in history did before us which was to get a classical introduction to categories, logic, causality, and rhetoric. You can decide which ancient civilization's authors are worth reading but be aware of translation quality as some are unreadable without extensive attached commentary.
+The ancients considered architecture to be frozen music and music singing the architecture. They would take the porportions of elaborate domes, fictional celestial temples or even the mythical hanging gardens of babylon and write them into a rhythmic pattern called a talea then like the higher-order function map over the melody applying this talea in different measures creating a rich sound that did not exist during the time. For a few hundred years we mainly had chanting in <a href="https://youtu.be/fFo3O2FesMU">unison</a> which became very advanced polyphony in the 1400s <a href="https://youtu.be/2QyRXsGWGRA">like this</a> where you can hear the map.
+</p>
+
+<p>
+Pythagoreans and Plato claimed that music itself is nothing but auditory perception of numbers and if you try learning music notation after learning math notation which is very similar&#x2026; what do you think are they right? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd443ab5" class="outline-3">
+<h3 id="math-proofs">Math proofs</h3>
+<div class="outline-text-3" id="text-math-proofs">
+<p>
+A program is a math proof. The specification of the program is the 'theorem', the program that runs satisfying the spec is the proof of that theorem. All the math we are learning here, is just programming but looks different. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org327c887" class="outline-3">
+<h3 id="math-difficulty">Math difficulty</h3>
+<div class="outline-text-3" id="text-math-difficulty">
+<blockquote>
+<p>
+I have never taught this subject (elementary real analysis) without a few "weepers."  These are students who have always been convinced that they are "good at mathematics."  They aced the calculus courses, and yet are overwhelmed at the elementary real analysis level.  They can understand everything in class (they claim) but simply cannot write a correct proof for even the most trivial limit theorems of the course.  They have miserably failed the first midterm, something that they couldn't conceive would happen to them ever.
+</p>
+
+<p>
+Why is analysis so difficult?  They aren't much amused when I tell them that this material was <i>routinely taught in the former Soviet Union to 15 year olds</i>.
+</p>
+
+<p>
+Early study of any subject may not prepare you for the next level.  Real analysis courses are very subtle (not difficult really)  and demand greater insight and thought than the computational courses that precede them. 
+</p>
+
+<p>
+Learning a new subject does not always create challenges, but you should be aware that at some time in your life you will certainly encounter a new subject that overwhelms you at first.  Perhaps the most important skill you can learn is how to dig yourself out of trouble when a subject bites you hard.  You will have to do it eventually. 
+</p>
+
+<p>
+For high school students, if this happens in the first weeks of college&#x2014;well enjoy the experience and learn the necessary study skills.  You will need them again.  For math students&#x2013;don't get too smug.  At some point in your life you will have to work very hard to get to the next level.
+</p>
+
+<p>
+We will always find ourselves at some point in our life "unprepared" for the next level of study.  Consider it a question of character as to whether you can salvage yourself - Brian S Thomson  
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org09915f9" class="outline-3">
+<h3 id="book-versions">Book reprints and versions</h3>
+<div class="outline-text-3" id="text-book-versions">
+<p>
+There are a few publishers still around that will publish the exact copy of the original, or try the various online university archives that have photographed each page if you can. For example G.H. Hardy's <i>A Course of Pure Mathematics</i> is pure trash if you read the modern reprints. They have added all kinds of extra junk and watered it down losing all the charm of the original book. It's now just another shitty math book. Another example is the abomination that is the translation of e-maxx.ru called <a href="https://cp-algorithms.com/">cp-algorithms</a>. They made it into CLRS 2.0 losing all the charm of the original Russian work which is perfectly terse and easy to read without a ton of boring filler that distracts from what is trying to be taught. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e57efd" class="outline-3">
+<h3 id="classical-logic">Classical logic</h3>
+<div class="outline-text-3" id="text-classical-logic">
+<p>
+We could also do what every student of math in history did before us which was to get a classical introduction to categories, logic, causality, and rhetoric. You can decide which ancient civilization's authors are worth reading yourself.   
 </p>
 
 ><iframe class="video" src="https://www.youtube.com/embed/E6FdfJOj7CY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe
@@ -617,7 +555,7 @@ The Aristoteles Latinus project probably has the best <a href="https://stories.k
 </p>
 
 <p>
-The same project also translates the ancient Syrian and Islamic empire manuscripts, these civilizations had direct access to many of the original Greek texts and the original Syriac or Arabic is included beside the translation with a codex in the index. Some of these you can find on <a href="http://libgen.is/book/index.php?md5=A54F3F106902565FF464864A208B5662">library genesis</a> otherwise a real library is your only hope, as they are extremely expensive books and exist behind an academic paywall where you need a school login to access the database. 
+The same project also translates the ancient Islamic empire manuscripts, these civilizations had direct access to many of the original Greek texts at the library of Alexandria and the original Syriac or Arabic is included beside the translation with a codex in the index. Some of these you can find on <a href="http://libgen.is/book/index.php?md5=A54F3F106902565FF464864A208B5662">library genesis</a> otherwise a real library is your only hope, as they are extremely expensive books and exist behind an academic paywall where you need a school login to access the database. There's a few Euclid translations from Arabic that include better proofs than the original text but the standard is the Heath translation from the Vatican Greek documents they found in 1800s. 
 </p>
 
 <p>
@@ -645,12 +583,133 @@ Some edutainment on the history of logic from Aristotle to the present state:
 <li>De Morgan's laws</li>
 </ul></li>
 </ul>
+</div>
+</div>
 
+<div id="outline-container-orgabe9c1f" class="outline-3">
+<h3 id="isaac-newton">Geometry &amp; Isaac Newton</h3>
+<div class="outline-text-3" id="text-isaac-newton">
+
+<figure>
+<img src="./geometry.jpg" alt="geometry.jpg">   
+
+<figcaption><span class="figure-number">Figure 2: </span>Geometry of mathematical finance <a href="https://wwwen.uni.lu/index.php/research/fstm/dmath/research_areas/probability_theory_and_its_applications_mathematical_finance">uni.lu</a></figcaption>
+</figure>
+
+<p>
+For geometry-themed entertainment try <a href="http://libgen.is/book/index.php?md5=B290F008ACE9DE45827692ED7A4CB944">Isaac Newton on Mathematical Certainty and Method</a> by Niccolo Guicciardini.
+</p>
+
+<p>
+Isaac Newton entered Trinity College in 1661 for a law degree as a <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03996/1">sub-sizar</a> meaning subsidized tuition in exchange for being a domestic servant. Cambridge then was just a diploma mill there were seldom any lectures, the oral exams at the end of your degree basically optional and fellows (graduate students) took jobs as tutors to supplement their income. Undergrad degrees consisted of one of these tutors giving you a list of books to read. According to his Trinity College notebook which Cambridge still has, this curriculum was a large reading list of classics such as Du Val's four volume collected works of Aristotle like <i>Organon</i> and <i>Metaphysics</i>, Porphyry's <i>Isagoge</i>, Vossius's <i>Rhetoric</i>, Diogenes Laertius, Epicurus, Plato, and many Roman poets like Ovid. This was because of the <a href="https://en.wikipedia.org/wiki/Recovery_of_Aristotle">recovery of Aristotle</a> in the middle ages which shaped 'philosophy of natural sciences' courses for the next few centuries. There didn't exist titles like mathematician, practitioners then considered themselves philosophers. Newton soon stopped taking notes of his official curriculum, and must have read Walter Charleton’s <i>Physiologia</i> because he wrote down 37 headings on different pages that were questions to be answered investigating natural science topics, 18 of which came from Charleton's book and some from Aristotle. These were 'Of Atoms, Of a Vacuum, Of Vision' and many others. He gave each topic different sized gaps indicating how much he thought he needed to write about each. Everytime he would learn something about them he'd write notes under the heading like a comet position he once tracked. 
+</p>
+
+<p>
+According to Newton's notebook, and the writings of his close friend De Moivre, here is how Newton learned mathematics. Wandering the town fair in 1663 he comes across a book on astrology, and out of curiosity buys a copy. There's a figure he couldn't understand in the book because he didn't know trigonometry. He buys a book on trigonometry but couldn't understand the demonstrations because of a lack of geometry. At Cambridge he goes to the math department and everyone there is deeply immersed in the work of <i>La Geometrie</i> by Descartes. They tell him to buy Barrow's <a href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-isaac-barrows-euclidean-geometry">Euclid Elementorum</a> an easier version of Euclid's <i>Elements</i>. He skims it and after finding what he needs for the astrology/trig book abandons the book as 'too trivial' (later has to go back and relearn classic geometry).  
+</p>
+
+<p>
+He returns to the math department and is given Oughtred's <a href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-oughtreds-clavis-mathematicae">Clavis mathematicae</a> or <i>the key to mathematics</i> writing he understands it except for the solutions of quadratic and cubic equations however his takeaway in his notes is that algebra can be used for exploration, which he starts doing by writing out hundreds of examples.
+</p>
+
+
+<figure>
+<img src="./geometrie.jpg" alt="geometrie.jpg">   
+
+<figcaption><span class="figure-number">Figure 3: </span>Cartesian Geometry by Van Schooten <a href="https://www.manhattanrarebooks.com/pages/books/2043/rene-descartes/geometria?soldItem=true">rarebooks</a></figcaption>
+</figure>
+
+<p>
+Again he returns to the math department to ask for a new book, and they are all still immersed in Cartesian geometry so Newton, despite being told it was a very difficult book, borrows a 1659 two volume Latin translation of Descartes <a href="https://en.wikipedia.org/wiki/La_G%C3%A9om%C3%A9trie">La Geometrie</a> by van Schooten called <i>Geometria, a Renato des Cartes</i> with appendices and commentary by his students. This book was considered the state of the art of 17th century analytical geometry, it would be like reading a graduate text today by a leading expert that had an appendix full of lecture notes and PhD student dissertations. 
+</p>
+
+<p>
+This is the algorithm Newton used to read van Schooten's two volume book. He read a few pages or so, couldn't understand the text, and went back to the beginning. Went a little further then stopped again going back to the beginning. He repeats this loop by himself until he finally 'makes himself whole of Descartes'. Looking at the <a href="https://babel.hathitrust.org/cgi/pt?id=ucm.5320271924&amp;view=1up&amp;seq=24">online copy</a> of this 1659 version the Descartes geometry is about 104 pages and 450 or so pages of additional research/commentary. It is broken up into 3 parts and assuming he didn't have to reread each part everytime he looped, only the relevant part (~34 pages), it probably took him 3 months to finish van Schooten which is what his notebook shows that after a few months he was already doing research in analytical geometry trying to generalize Descartes. His notebook indicates he learned from the grad student commentaries how to transform a hard problem into a different simpler one.   
+</p>
+
+<p>
+Newton's notes which you can read online show him trying to generalize any math he read which often would lead him into algebraic corners where he would get stuck as there didn't exist at the time methods to solve/simplify. He seemed to assume everything he read was a special case of something more general such as the insight that integration is the reverse operation of differentiation so there must only be a theory of derivatives somewhere waiting to be discovered.
+</p>
+
+<p>
+After Descartes he returned the borrowed copy and bought a different copy of Descartes for himself, and van Schooten's <i>Exercitationes mathematicae libri quinque</i> or Five Books of Mathematical Exercises to help him fill in the blanks of his algebra misunderstandings as he had a lot of mistakes in his notebooks regarding negative roots. Newton assumed the cubic parabola was the same shape in all quandrants but soon after corrected these mistakes. Descartes geometry wasn't like today's Cartesian plane it originally consisted of just one positive quandrant but van Schooten and his students had expanded it. 
+</p>
+
+<p>
+Descartes' <i>La Geometrie</i> is filled with little comments of encouragement as he was afraid nobody would read his work if it was too long so everywhere there is these reassurences like 'don't worry reader the following isn't too hard' or insisting the reader figure out everything to not deny them of the satisfaction of figuring out the geometry thesmselves. The different copy Newton buys has all these comments left in tact and Newton misunderstands one of these comments by Descartes about the equation of curves stating it is easy to find everything you want to know about a curve from it's equation and the reader need not be bothered by a lengthy demonstration when in fact this is an unsolved problem. Newton breaks down the equation of a curve into many headings in his notebook and tries to generalize creating his own advanced analysis well beyond any other mathematician at the time.
+</p>
+
+<p>
+In the winter of 1664 he reads <i>Arithmetica Infinitorum</i> by Wallis which is the arithmetic of infintesimals. Newton recognizes many of the sums are similar to what he read in Oughtred's book, known today as Pascal's triangle and in typical fashion seeks to generalize and invents the binomial theorem. Newton then reads Viete's <i>Opera Mathematica</i> which was another textbook by van Schooten compiling all the work of Viete such as Diophantine equations. In less than a full year Newton managed to bring himself up to date with the entire achievement of mid 17th century mathematics by himself and begins self-directed research writing out 22 headlines of 'problems' in his notebook and classifying them into groups regarding integration, analytic geometry and mechanics. 
+</p>
+
+<p>
+The plague shuts down the school from the summer of 1665 to spring of 1667 and Newton returns home, makes himself an office by building bookshelves for his now large library and spends all his time doing research with his new analytical tools building them into calculus. Describing his activities during the second plague year: "I am ashamed to tell to how many places I carried these computations, having no other business at the time, for then I took really too much delight in these inventions". There is notes he kept of calculating a logarithm to it's 52nd decimal point. This is basically the end of story for Newton's analysis research, sometime during the pandemic years he is satisfied with his calculus and abandons research in math to pursue his other questions in his notebook. There is a lot of notes about how tedious it was to do calculations before he came up with his analysis so we can assume he became satisfied that he had all he needed. 
+</p>
+
+<p>
+Newton believed the ancients had already figured everything out, and this information was lost over time after living during the plague, the great fire of London and political upheaval. He believed their knowledge was encoded in myths written in Roman and Greek literature. He believed every myth was real but that their lives were embellished through story telling. A common alchemist practice for example was to interpret Ovid's <i>Metamorphoses</i> where the god of the forge/metalwork Vulcan catches his wife Venus and Mars locked in an embrace so traps them in a fine metallic net. The alchemists of the Royal Society that Newton belonged to frequently used the names of planets for metals so obtaining an alchemists manuscript by George Starkey he recreated this myth and ended up with an alloy with a strided net like surface. Newton also decoded Cadmus and the founding of Thebes from Ovid into practical lab instructions.
+</p>
+
+<p>
+20 years later he is offered to write the <i>Principia</i>, and wanting to prove his infintesimal calculus he tries uncovering the ancient analysis used in classical geometry. Pappus' book 7 contains a commentary about a lost group of tools and propositions that Euclid, Apollonius, Eratosthenes and other geometers of the day used that Pappus referred to as the 'treasury of analysis'. These lost Porisms (corollaries) are speculated by Newton to be <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03963/1">projective geometry</a>. 
+</p>
+
+<p>
+Newton in his Lucasian chair lectures said that the ancients would never bother to introduce the algebra of curves with geometry because you lose the simplicity of working within geometry as its whole point was to escape the tediousness of calculations by simply drawing lines and circles. He also claims books like Pappus's <i>Collectio</i> deliberately hid the analysis, as it was considered an inelegant tool, and that ancient synthesis where they deduced a consequence from a given premise (a corollary) using visual means was a superior method as the analysis could not be reversed in steps like geometric synthesis could. He went further and claimed if you wanted to discover seemingly unrelated corollaries you had to use synthesis, describing the analysis of his day as a 'tedious pile of probabilities used by bunglers'. People today claim he did this to avoid priority disputes over his analysis he kept hidden except for privately circulated manuscripts over 20 years prior, but the geometry he used <i>invented limits and plane transformations</i> that were not formally developed until 200 years later so he was probably right. His limits in geometry is very similar to what everyone <a href="https://www.sciencedirect.com/science/article/pii/S0315086000923012">today</a> is using in modern calculus courses.
+</p>
+
+<p>
+He later wrote in a manuscript on geometry that mechanics of motion was what generated all geometry and that the ancients had understood this as well conceiving geometrical objects as generated by moving along a straight edge, circles/elipses via the movement of a compass, or via translation like in Proposition 4 of Book 1 of Euclid's <i>Elements</i> where one triangle form is moved to compare to another. This is where he demonstrated that rotation of rulers were in fact transformation of the plane. Here is how Newton used his <a href="https://youtu.be/paenRVq0vnc">rotating ruler</a> to create a power series. 
+</p>
+
+<blockquote>
+<p>
+"Comparing today the texts of Newton with the comments of his successors, it is striking how Newton’s original presentation is more modern, more understandable and richer in ideas than the translation due to commentators of his geometrical ideas into the formal language of the calculus of Leibnitz" -<a href="https://en.wikipedia.org/wiki/Vladimir_Arnold">Vladimir Arnold</a> 1990
+</p>
+</blockquote>
+
+
+<iframe class="video" src="https://www.youtube.com/embed/qFo7xZFdBdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="outline-container-org1723481" class="outline-3">
+<h3 id="origins-of-geometry">Origins of geometry</h3>
+<div class="outline-text-3" id="text-origins-of-geometry">
+<ul class="org-ul">
+<li><a href="https://youtu.be/yFMcNXC-dW0">A brief history of geometry I</a>
+<ul class="org-ul">
+<li>Mesolithic times to 1400 A.D.</li>
+</ul></li>
+<li><a href="https://youtu.be/AAiM8ymBCQk">A brief history of geometry II</a> 
+<ul class="org-ul">
+<li>European/Cartesian geometry</li>
+</ul></li>
+<li><a href="https://youtu.be/mKlxkpbze54">A brief history of geometry III</a>
+<ul class="org-ul">
+<li>19th century Complex/Non-Euclidean geometry</li>
+</ul></li>
+<li><a href="https://youtu.be/hlyTRZcJ8vo">A brief history of geometry IV</a>
+<ul class="org-ul">
+<li>Higher dimensional geometry</li>
+</ul></li>
+</ul>
+
+<p>
+Wildberger invented his own universal geometry that works over any field, like his universal hyperbolic geometry which is actually very simple to use only using rational numbers and simple to write and optimize algorithms for if you're interested in computational geometry. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2808e75" class="outline-2">
+<h2 id="org2808e75">BEGIN[todo]</h2>
+<div class="outline-text-2" id="text-org2808e75">
 <hr>
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>

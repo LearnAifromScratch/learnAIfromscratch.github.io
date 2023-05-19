@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-11-11 Fri 14:23 -->
+<!-- 2023-05-18 Thu 18:20 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Machine Learning From Scratch</title>
+<title>Reinforcement Learning From Scratch</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -28,11 +28,6 @@
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
-  body {
-  max-width: 40rem;
-  padding: 1rem;
-  margin: auto;
-  }
   pre {
     border: 1px solid #ccc;
     box-shadow: 3px 3px 3px #eee;
@@ -43,7 +38,7 @@
   }
   pre.src {
     position: relative;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -55,7 +50,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
+  pre.src:hover:before { display: inline;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -198,112 +193,131 @@
 </style>
 <style> body {background-color: #fafad2} </style>
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
 
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
 <header>
-<h1 class="title">Machine Learning From Scratch</h1>
+<h1 class="title">Reinforcement Learning From Scratch</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#Intro">Intro</a>
+<li><a href="#org0f01614">Intro</a>
 <ul>
-<li><a href="#Applied">Applied</a></li>
-<li><a href="#Machine%20learning%20theory">Machine learning theory</a></li>
-<li><a href="#Or%20choose%20your%20own%20course">Or choose your own course</a></li>
+<li><a href="#orgf8a6bbf">Plan</a></li>
+<li><a href="#orgc79c50b">Option: Deep Learning</a></li>
+<li><a href="#org1381ca8">Option: Machine Learning</a></li>
+<li><a href="#orgd185923">Isn't Reinforcement Learning a Meme?</a></li>
 </ul>
 </li>
-<li><a href="#Begin">Begin</a>
-<ul>
-<li><a href="#Install%20Software">Install Software</a></li>
-</ul>
-</li>
-<li><a href="#Applied%20ML%20lecture%201">Applied ML lecture 1</a>
-<ul>
-<li><a href="#Theory%201">Theory 1</a></li>
-<li><a href="#CS4780%201">CS4780 1</a></li>
-</ul>
-</li>
-<li><a href="#Applied%20ML%20lecture%202">Applied ML lecture 2</a>
-<ul>
-<li><a href="#Theory%202">Theory 2</a>
-<ul>
-<li><a href="#Book%20chapter%202">Book chapter 2</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#org0167f21">TODO</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-Intro" class="outline-2">
-<h2 id="Intro">Intro</h2>
-<div class="outline-text-2" id="text-Intro">
+<div id="outline-container-org0f01614" class="outline-2">
+<h2 id="org0f01614">Intro</h2>
+<div class="outline-text-2" id="text-org0f01614">
 <p>
-This is the 2.0 version of this workshop after I audited many ML courses and filtered for the best resources. All the prereqs of probability, linear algebra/vector calculus will be covered as we go. Any books can be found on <a href="http://libgen.is/">library genesis</a>.
+In 2023 the education gods have blessed us with complete access to Reinforcement Learning which is the futuristic AI you likely imagined meaning autonomous cars/robots/space ships that can explore their environment and make decisions by themselves. We don't require access to a GPU or cloud hardware as a lot of RL is essentially dynamic programming something we already know how to do but will be taught in the course anyway. The entire course and all prereqs are done in the Julia programming language.
 </p>
 </div>
 
-<div id="outline-container-Applied" class="outline-3">
-<h3 id="Applied">Applied</h3>
-<div class="outline-text-3" id="text-Applied">
+<div id="outline-container-orgf8a6bbf" class="outline-3">
+<h3 id="orgf8a6bbf">Plan</h3>
+<div class="outline-text-3" id="text-orgf8a6bbf">
 <p>
-We will do a short-ish course taught by a core-developer of the scikit-learn library, he will also teach us how to <a href="https://www.youtube.com/playlist?list=PLM-1QqX7UksT6tREbR-n9Mhup0OoRBU34">contribute</a>. The slides are annotated with commentary if you press P while viewing (or click the speech bubble icon). This will also cover Keras, AutoML libraries. 
+The goal is self-directed research in RL making whatever it is you want to build so take what you want from this curriculum you don't have to do it all.  
+</p>
+
+<ul class="org-ul">
+<li>CMU's 16-745 <a href="https://github.com/orgs/Optimal-Control-16-745/repositories">Optimal Control and RL</a>
+<ul class="org-ul">
+<li>2023 lectures on <a href="https://www.youtube.com/playlist?list=PLZnJoM76RM6KugDT9sw5zhAmqKnGeoLRa">YouTube</a></li>
+</ul></li>
+<li>Some DL material from 10-703 <a href="https://cmudeeprl.github.io/703website_f22/lectures/">Deep RL</a>
+<ul class="org-ul">
+<li>We have access to the lectures</li>
+</ul></li>
+<li>Dynamic Programming/ODEs in Julia <a href="https://computationalthinking.mit.edu/Fall22/">here</a> and <a href="https://book.sciml.ai/lectures/">SciML book</a></li>
+<li>Linear Algebra in Julia <a href="https://web.stanford.edu/~boyd/vmls/vmls-julia-companion.pdf">here</a> and <a href="https://youtu.be/oGZK3yGF-6k">Matrix Calculus</a></li>
+<li>There's a 2023 <a href="http://www.mit.edu/~dimitrib/RLbook.html">book</a> and <a href="https://www.youtube.com/@dimitribert">lectures</a>
+<ul class="org-ul">
+<li>The S&amp;B RL book has a Julia <a href="https://github.com/JuliaReinforcementLearning/ReinforcementLearningAnIntroduction.jl">implementation</a> too</li>
+<li>MIT's statistical theory of RL <a href="http://www.mit.edu/~rakhlin/courses/course_stat_rl/course_stat_rl.pdf">book</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc79c50b" class="outline-3">
+<h3 id="orgc79c50b">Option: Deep Learning</h3>
+<div class="outline-text-3" id="text-orgc79c50b">
+<p>
+If you just want to learn Deep Learning CMU's <a href="https://deeplearning.cs.cmu.edu/S23/index.html">11-785 Intro to DL</a> is fully open with YouTube lectures and assignments available, many of which are practicing on Kaggle. MIT's course is also fully open in fact I think every university has their DL courses open right now because there is no chance of you being able to do it on a home system unless you use <a href="https://github.com/geohot/tinygrad">tinygrad</a> and buy the hilarious pre-order <a href="https://tinygrad.org/">tinybox</a> for $100 which is worth $15k (I'm not endorsing any kind of pre-order just pointing out it exists). There is also depth first learning <a href="https://www.depthfirstlearning.com/2019/NeuralODEs">Neural ODEs</a> and whenever I can I try and maintain <a href="https://github.com/LearnAifromScratch/depthfirstlearning.com/pull/1/commits/cf5d76213011cc5e6942cb068f1cbf12b0fd84ac">that site</a> because it's so good. 
+</p>
+
+<p>
+I didn't include DL here except for some of the Deep RL because it req access to a ton of resources which I imagine people don't have when they take this. DL theory of course you can create all kinds of new neural networks on your own like the current researchers doing 'liquid neural networks' if that kind of thing is your bag. CMU if you search their public Panopto has the entire (non)convex optimization courses available right now, that information I could not find anywhere else and is essentially 25 lectures how to select the pytorch optimize feature. Convex optimization once upon a time was heavily used until neural networks took over everything which are not convex. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1381ca8" class="outline-3">
+<h3 id="org1381ca8">Option: Machine Learning</h3>
+<div class="outline-text-3" id="text-org1381ca8">
+<p>
+There is an applied course by the guy who maintains scikit-learn:
 </p>
 
 <ul class="org-ul">
 <li>COMS-W4995 <a href="https://www.cs.columbia.edu/~amueller/comsw4995s20/schedule/">Applied Machine Learning</a> Columbia
 <ul class="org-ul">
-<li><b>Course assumes you are taking a theory course in parallel</b>
-<ul class="org-ul">
-<li>See theory courses below</li>
-</ul></li>
-<li>Can be done entirely in google colab (free) on a tablet/phone if you have to</li>
 <li>21 lectures on <a href="https://www.youtube.com/playlist?list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM">YouTube</a></li>
 <li>Homework on <a href="https://github.com/amueller/COMS4995-s20/tree/master/homework">GitHub</a></li>
 <li>Books recommended:
@@ -314,206 +328,35 @@ We will do a short-ish course taught by a core-developer of the scikit-learn lib
 </ul></li>
 </ul></li>
 </ul>
-</div>
-</div>
 
-<div id="outline-container-Machine%20learning%20theory" class="outline-3">
-<h3 id="Machine%20learning%20theory">Machine learning theory</h3>
-<div class="outline-text-3" id="text-Machine%20learning%20theory">
+
 <p>
-My choice to learn the theory is the first 20 chapters of the (free) <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">book</a> <i>Understanding Machine Learning: From Theory to Algorithms</i> w/<a href="https://www.youtube.com/playlist?list=PLPW2keNyw-usgvmR7FTQ3ZRjfLs5jT4BO">lectures</a>. It's still taught by the author at <a href="https://student.cs.uwaterloo.ca/~cs485/">Waterloo</a> in 2021 and CMU's PhD track intro course <a href="http://www.cs.cmu.edu/~nihars/teaching/10715-Fa21/index.html">10-715</a>. There's a <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/MLbookSol.pdf">solutions manual</a> for the few exercises in the book which will be an exercise in itself to try and understand. He doesn't assume a background and goes through all the math notation.  
+My choice to learn the theory is the first 20 chapters of the (free) <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">book</a> <i>Understanding Machine Learning: From Theory to Algorithms</i> w/<a href="https://www.youtube.com/playlist?list=PLPW2keNyw-usgvmR7FTQ3ZRjfLs5jT4BO">lectures</a>. It's still taught by the author at <a href="https://student.cs.uwaterloo.ca/~cs485/">Waterloo</a> in 2021 and CMU's PhD track intro course <a href="http://www.cs.cmu.edu/~nihars/teaching/10715-Fa21/index.html">10-715</a>. There's a <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/MLbookSol.pdf">solutions manual</a> for the few exercises in the book which will be an exercise in itself to try and understand. He doesn't assume a background and goes through all the math notation. 
+</p>
+
+<p>
+Those machine learning theory lectures are kind of amazing how he can explain it all and the theory isn't going to change so if you're interested try it but I won't go through it here.
 </p>
 </div>
 </div>
 
-<div id="outline-container-Or%20choose%20your%20own%20course" class="outline-3">
-<h3 id="Or%20choose%20your%20own%20course">Or choose your own course</h3>
-<div class="outline-text-3" id="text-Or%20choose%20your%20own%20course">
+<div id="outline-container-orgd185923" class="outline-3">
+<h3 id="orgd185923">Isn't Reinforcement Learning a Meme?</h3>
+<div class="outline-text-3" id="text-orgd185923">
 <p>
-I audited most of these courses, mix and match your own curriculum to go with COMS-W4995. If one topic doesn't make sense try reading/watching it in another source.    
-</p>
-
-<p>
-<b>CS4780</b>   
-The prof will actually explain the math notation and motivation behind the theory in this course too. It doesn't matter if the lectures are from 2018 because it's almost the <a href="https://www.cs.cornell.edu/courses/cs4780/2021fa/#Schedule">same</a> as the 2021 version, and all these topics come back into fashion again such as the recent <a href="https://www.youtube.com/watch?v=ahRPdiCop3E">paper</a> <i>Every Model Learned by Gradient Descent Is Approximately a Kernel Machine</i>.   
-</p>
-
-<ul class="org-ul">
-<li>CS4780 <a href="https://www.cs.cornell.edu/courses/cs4780/2018fa/">Machine Learning for Intelligent Systems</a> Cornell 
-<ul class="org-ul">
-<li>37 lectures on <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">YouTube</a> w/<a href="http://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/index.html">notes</a></li>
-<li>Homework w/solutions on <a href="https://www.dropbox.com/s/tbxnjzk5w67u0sp/Homeworks.zip?dl=0">dropbox</a></li>
-<li>Books the course recommends:
-<ul class="org-ul">
-<li><a href="https://probml.github.io/pml-book/book1.html">Probabilistic Machine Learning</a> [PML]
-<ul class="org-ul">
-<li>2021 draft includes Jupyter <a href="https://github.com/probml/pyprobml/tree/master/book1">notebooks</a> for each chapter</li>
-</ul></li>
-<li><a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The Elements of Statistical Learning</a> [ESL]</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<p>
-<b>Bio/Chem Machine Learning</b> Maybe you want an entirely different perspective, the exact same algorithms and theory we are doing can also be learned in the <a href="https://youtu.be/QyFrYUCXbgI">life sciences</a> in fact that lecture is probably one of the best introductions I've seen to ML/Neural Nets. You could use that course instead of the ones here to learn these algorithms/theory. AlphaFold2 did not totally solve <a href="https://youtu.be/1YHsSFWn5OA">protein folding</a> and you can get this data <a href="https://github.com/LPDI-EPFL/masif">yourself</a>. There's countless other uses for ML like <a href="https://youtu.be/AHVJv5RNqKs">drug design</a> or reverse engineering <a href="https://youtu.be/Jj9BbKhZSYM">eyesight</a>.  
-</p>
-
-<p>
-<b>10-701</b>
-General graduate intro for students who aren't PhD track in machine learning and want to use it for other fields. Taught by a systems bio <a href="http://www.cs.cmu.edu/~zivbj/">researcher</a> in <a href="https://algorithmsinnature.org/">algorithms used by nature</a> and Prof Xing the now president of <a href="https://mbzuai.ac.ae/">MBZUAI</a> (yes, you can get into MBZUAI). The lectures are worth watching as they will talk about what works now and what doesn't anymore, why there is a ton of classifiers, however it's a grad course so some math sophistication is assumed. Very good lectures on computational learning theory and probabilistic graph models. 
-</p>
-
-<ul class="org-ul">
-<li>10-701 <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/schedule.html">Intro to Machine Learning</a> CMU 
-<ul class="org-ul">
-<li>Lectures on <a href="https://www.youtube.com/playlist?list=PLsWN0V-b507g7dbQTUvFkKZEqdHR5Fh4P">YouTube</a></li>
-<li>Homework is <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/">avail</a> also <a href="https://github.com/jiaqigeng/CMU-10701-Machine-Learning">2021 hw solutions</a></li>
-</ul></li>
-</ul>
-
-<p>
-<b>10-301/601</b>
-Undergrad/MSc version of 10-701, errors in the slides and you have to watch the lectures as he handwrites all the algorithms on a tablet. Assumes a math background.    
-</p>
-
-<ul class="org-ul">
-<li>10-301 <a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> CMU
-<ul class="org-ul">
-<li>Lectures on <a href="https://www.youtube.com/playlist?list=PLpqQKYIU-snAPM89YPPwyQ9xdaiAdoouk">YouTube</a></li>
-<li>Hw is all open</li>
-<li>Can also be done entirely in google colab</li>
-<li>Recitations w/<a href="http://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">solutions</a> on the 2021 schedule</li>
-<li>Books recommended:
-<ul class="org-ul">
-<li><a href="http://ciml.info/">A Course in Machine Learning</a> [CIML]</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<p>
-<b>CS-433</b>
-EPFL's machine learning course. Has more learning theory than most other intro courses which is good, I didn't try any assignments but the labs come with full solutions. 
-</p>
-
-<ul class="org-ul">
-<li>CS-433 <a href="https://www.epfl.ch/labs/mlo/machine-learning-cs-433/">Machine Learning</a> EPFL
-<ul class="org-ul">
-<li>Lectures on <a href="https://www.youtube.com/playlist?list=PL4O4bXkI-fAd4nB7YYR5F8WitmPxjPeAa">YouTube</a></li>
-<li>A lot of labs on <a href="https://github.com/epfml/ML_course/tree/master/labs">GitHub</a> w/solutions</li>
-<li>Projects are <a href="https://www.aicrowd.com/challenges/epfl-machine-learning-higgs">competitions</a> I don't think you can audit without school login (I didn't try)</li>
-</ul></li>
-</ul>
-
-<p>
-<b>Many More</b>
-MIT now offers it's 2020 Machine Learning <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-036-introduction-to-machine-learning-fall-2020/">course</a> on open courseware with class recorded blackboard lectures, even the classic Andrew Ng machine learning course on Coursera is still worth doing none of the fundamentals have changed.
+The research today is going bezerk because you can do RL on a device and constantly be learning. It is in fact what I originally wanted this workshop to be but there wasn't any good materials for it when I started, now there is. Even if it's still a meme you can at least use it to bamboozle the autonomous drones they send after you in some <a href="https://youtu.be/xZpsiuErNH8">future war</a> (autonomous lethal 'solution' based on racing drones). After working in that industry for a while I can say what they are doing is <a href="https://youtu.be/2z2Slyt0WlE">crazy</a> look up autonomous drones on YouTube and change the results to the current year. 
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-Begin" class="outline-2">
-<h2 id="Begin">Begin</h2>
-<div class="outline-text-2" id="text-Begin">
-</div>
-<div id="outline-container-Install%20Software" class="outline-3">
-<h3 id="Install%20Software">Install Software</h3>
-<div class="outline-text-3" id="text-Install%20Software">
-<p>
-For COMS-4995 either install Python/Conda <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">locally</a> or use google colab (free). See <a href="https://docs.google.com/document/d/1RSGvlBG8dDfs62_0jJEHnQFN-Au6yFbp8M6QTNs3EIY/edit">this</a> brief tutorial for setting up google drive or how to <a href="https://www.kaggle.com/general/156610">directly</a> import kaggle datasets to colab. You can do all the intro ML courses entirely on a phone or tablet using colab if you had to. 
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-Applied%20ML%20lecture%201" class="outline-2">
-<h2 id="Applied%20ML%20lecture%201">Applied ML lecture 1</h2>
-<div class="outline-text-2" id="text-Applied%20ML%20lecture%201">
-<p>
-The coreqs for this course is the <a href="https://github.com/jakevdp/PythonDataScienceHandbook">Python Data Science Handbook</a> which you can at your leisure audit going through the <a href="https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks">notebooks</a> on GitHub or just read the NumPy and Pandas <a href="https://numpy.org/doc/stable/user/basics.html">documentation</a> as those libraries comes up, if you did the <a href="./software.html">software</a> workshop this will be trivial. 
-</p>
-
-<p>
-<a href="https://youtu.be/rbvpiPJuK64">Watch</a> or <a href="https://amueller.github.io/COMS4995-s20/slides/aml-01-introduction/#p1">read</a> the slides with notes though what he says in lecture is often different as the notes are from a previous semester and act as an outline. @50m he notes how ML is different than statistics as they're drawing up a hypothesis to ask a question about the data whereas we are making predictions on unseen data with models filled with assumptions. This guy is hilariously pessimistic saying don't use machine learning you probably don't need it.  
-</p>
-</div>
-
-<div id="outline-container-Theory%201" class="outline-3">
-<h3 id="Theory%201">Theory 1</h3>
-<div class="outline-text-3" id="text-Theory%201">
-<p>
-Watching <a href="https://youtu.be/b5NlRg8SjZg">lecture 1</a> of CS485. Skip to 8m, so far this is a pretty excellent intro. 
-</p>
-
-<p>
-We get a very intuitive mathematical model of machine learning which was largely statistics free anyone could follow. The introduction of the <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">book</a> [UML] covers what we just saw in the lecture ie: bait shyness. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-CS4780%201" class="outline-3">
-<h3 id="CS4780%201">CS4780 1</h3>
-<div class="outline-text-3" id="text-CS4780%201">
-<p>
-Watching <a href="https://youtu.be/MrLPzBxG95I">Supervised Learning Setup</a> which covers what we just learned with some more explanation, you can of course watch any of the other courses you want. @36:10 'curly X cartesian product curly Y' means every possible ordered pair combination of x from set X and y from set Y in a tuple for example if A = {1, 2} and Y = {3} then A x Y = {(1, 3), (2, 3)} so all his features x matched with a label y for each training sample. A feature vector is defined @44:50. End of lecture, we already did the bag of words vector representation as the first assignment in the <a href="./software.html">CS19</a> workshop.
-</p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-Applied%20ML%20lecture%202" class="outline-2">
-<h2 id="Applied%20ML%20lecture%202">Applied ML lecture 2</h2>
-<div class="outline-text-2" id="text-Applied%20ML%20lecture%202">
-<p>
-Watching <a href="https://youtu.be/OW3oco7nlV4">Visualization &amp; Matplotlib</a> lecture. Easy but incredibly useful lecture on the kinds of colors you should choose for visualizations so they don't look terribad.
-</p>
-</div>
-
-
-<div id="outline-container-Theory%202" class="outline-3">
-<h3 id="Theory%202">Theory 2</h3>
-<div class="outline-text-3" id="text-Theory%202">
-<p>
-Watching <a href="https://youtu.be/aILazXK059Y">lecture 2</a> of CS485. If you've never seen set notation audit <a href="https://youtu.be/59WX2V7Vjgg">this</a> for whatever you need but he explains the notation as he writes it for example {x : x = y} is 'x such that x = y' or h \(\in\) H means h in set H.
-</p>
-
-<p>
-To review h() is our hypothesis function that consumes S = {X_{i},Y_{i}} or sample set made up of X (color, firmness) and labels Y (tasty or not tasty). The hypothesis function generates a new label Y and we compare sample set labels to generated labels to determine accuracy. 
-</p>
-
-<p>
-@8:09 the true Loss function is defined as a new distribution which is a set of items that is labelled incorrectly by h(). A set he denotes with curly braces { } is just an unordered data structure or collection. Empirical loss @13:58 his notation |{  }| means size of the set. @28:11 a subset means it's entirely contained within that other set.
-</p>
-
-<p>
-@33:20 a probability distribution is a set where each element is an event and has a probability value assigned to it, where the probabilities must all add up to 1. A set of events for rolling a 6-sided die is {1,2,3,4,5,6} and we distribute 1/6 probability to each of them. We'll see later how this probability is distributed for data samples. 
-</p>
-
-<p>
-@39:25 he explains this later but h() in set H, recall that rectangle area of points he drew in the plane of color axis and fruit firmness axis saying suppose any sample from that rectangle is labelled tasty and anything outside it is not tasty. The function 'f' the correct labeller we want to choose is that rectangle. H is the set of all finite potential rectangles on that plane or in math lingo the function images of every possible h() function.
-</p>
-
-<p>
-@46:15 epsilon is just another math variable that by convention represents a tiny positive value. The rest of this lecture he explains all the notation as he goes. @1:13:40 recall a probability distro has to sum to 1, and we know that piece of the rectangle he drew is of (at least) size epsilon so the rest is 1-epsilon. The final upper bound (size of H) * (1-epsilon)^m if epsilon is .01 then this is (size of H) * (very small decimal) = even smaller decimal or 0. That whole proof was to show the more samples you have, ERM function or Empirical Risk Minimization on H the set or class of all finite learning functions is guaranteed to succeed in finding a correct learning function h(). 
-</p>
-</div>
-
-<div id="outline-container-Book%20chapter%202" class="outline-4">
-<h4 id="Book%20chapter%202">Book chapter 2</h4>
-<div class="outline-text-4" id="text-Book%20chapter%202">
-<p>
-Here is where the payoff comes for watching these lectures, try the <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf">book</a> chapter 2, there's no way you would have been able to understand that if he didn't walk through all the notation. This is normally used in a <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa21/index.html">grad course</a> on intro machine learning. Let's try the chapter exercises TODO  
-</p>
-
-
-
+<div id="outline-container-org0167f21" class="outline-2">
+<h2 id="org0167f21">TODO</h2>
+<div class="outline-text-2" id="text-org0167f21">
 <hr>
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
-</div>
 </div>
 </div>
 </div>

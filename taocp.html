@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-05-25 Thu 19:27 -->
+<!-- 2023-05-27 Sat 14:20 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Let's Do The Art of Computer Programming</title>
@@ -269,37 +269,37 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4bb8573">The Book(s)</a>
+<li><a href="#org2ce0039">The Book(s)</a>
 <ul>
-<li><a href="#org9752152">The Bill Gates quote</a></li>
-<li><a href="#org0f2c6b0">MMIX and MIX</a></li>
-<li><a href="#org6fad52e">Optimizing compilers are dead</a></li>
-<li><a href="#orgae4fa9d">Sedgewick <i>Intro to Algorithm Analysis</i></a></li>
-<li><a href="#orge1eb50e">The math preliminaries</a></li>
+<li><a href="#orgae268d8">The Bill Gates quote</a></li>
+<li><a href="#orgfc943c4">MMIX and MIX</a></li>
+<li><a href="#org535bc0a">Optimizing compilers are dead</a></li>
+<li><a href="#orge74956d">Sedgewick <i>Intro to Algorithm Analysis</i></a></li>
+<li><a href="#org78f8197">The math preliminaries</a></li>
 </ul>
 </li>
-<li><a href="#org68ed63e">Microcorruption CTF</a>
+<li><a href="#org044b33f">Microcorruption CTF</a>
 <ul>
-<li><a href="#org04cbfd7">New Orleans</a></li>
-<li><a href="#org9cdee88">Sydney</a></li>
-<li><a href="#org1152d9d">Hanoi</a></li>
-<li><a href="#org62038ed">Cusco</a></li>
-<li><a href="#orgacc65bb">Reykjavik</a></li>
-<li><a href="#org27160ac">Whitehorse</a></li>
-<li><a href="#org39c022a">Montevideo</a></li>
+<li><a href="#orgccf01ee">New Orleans</a></li>
+<li><a href="#orgff43c3e">Sydney</a></li>
+<li><a href="#org3b0943e">Hanoi</a></li>
+<li><a href="#org03676e1">Cusco</a></li>
+<li><a href="#orga212af8">Reykjavik</a></li>
+<li><a href="#orgeb48843">Whitehorse</a></li>
+<li><a href="#org6876979">Montevideo</a></li>
 </ul>
 </li>
-<li><a href="#org7836f8c">1.1 Algorithms</a></li>
-<li><a href="#orgc17c004">1.2.1 Mathematical Induction</a></li>
-<li><a href="#orgd25c21a">1.2.2 Numbers, Powers and LogsTODO</a></li>
+<li><a href="#org2adcd8e">1.1 Algorithms</a></li>
+<li><a href="#org1029b58">1.2.1 Mathematical Induction</a></li>
+<li><a href="#orgb27953f">1.2.2 Numbers, Powers and Logs</a></li>
 </ul>
 </div>
 </nav>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org4bb8573" class="outline-2">
-<h2 id="org4bb8573">The Book(s)</h2>
-<div class="outline-text-2" id="text-org4bb8573">
+<div id="outline-container-org2ce0039" class="outline-2">
+<h2 id="org2ce0039">The Book(s)</h2>
+<div class="outline-text-2" id="text-org2ce0039">
 <p>
 See the official <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site, I'm going to start with <i>Volume 1: Fundamental Algorithms</i>. These books aren't a reference, much of the index points to exercises and the content is often comparing two algorithms together. You can decide after you read it yourself how to classify them. 
 </p>
@@ -312,9 +312,9 @@ The physical book itself is a representation of the work that has gone into it's
 None of these notes will make any sense unless you are reading the book(s) with them I'm not copying the text. 
 </p>
 </div>
-<div id="outline-container-org9752152" class="outline-3">
-<h3 id="org9752152">The Bill Gates quote</h3>
-<div class="outline-text-3" id="text-org9752152">
+<div id="outline-container-orgae268d8" class="outline-3">
+<h3 id="orgae268d8">The Bill Gates quote</h3>
+<div class="outline-text-3" id="text-orgae268d8">
 <p>
 Everybody talks about the famous old quote in the back of volume 1 by Gates: 'you should definitely send me a resume if you can read the whole thing'. I found a more recent quote from 2005:
 </p>
@@ -348,15 +348,15 @@ I'm not sure what the double-star problems are, maybe the earlier editions had t
 </div>
 </div>
 
-<div id="outline-container-org0f2c6b0" class="outline-3">
-<h3 id="org0f2c6b0">MMIX and MIX</h3>
-<div class="outline-text-3" id="text-org0f2c6b0">
+<div id="outline-container-orgfc943c4" class="outline-3">
+<h3 id="orgfc943c4">MMIX and MIX</h3>
+<div class="outline-text-3" id="text-orgfc943c4">
 <p>
-You can if you want use the <i>MMIX Supplement</i> by Ruckert to replace most of the MIX/MIXAL content with MMIX/MMIXAL in volumes 1-3. MMIX isn't a single machine, you can customize the hardware however you want using Knuth's free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, bus speeds, anything. He documented that program with the book <i>MMIXware: A RISC Computer for the Third Millennium</i> and all the code is written in literate programming style so you can read the programs like you would any other book. RISC-V is taught in MIT's 6.004 course on <a href="https://www.youtube.com/playlist?list=PLOVc_J85b9DT9ZfKZmlRGIDVk6UXT_4yR">YouTube</a> to better understand a RISC architecture if you want. 
+You can if you want use the <i>MMIX Supplement</i> by Ruckert to replace the MIX/MIXAL content with MMIX/MMIXAL in volumes 1-3. MMIX isn't a single machine, you can customize the hardware however you want using Knuth's free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, bus speeds, anything. He documented that program with the book <i>MMIXware: A RISC Computer for the Third Millennium</i> and all the code is written in literate programming style so you can read the programs like you would any other book. RISC-V is taught in MIT's 6.004 course on <a href="https://www.youtube.com/playlist?list=PLOVc_J85b9DT9ZfKZmlRGIDVk6UXT_4yR">YouTube</a> to better understand a RISC architecture if you want. MMIX assumes an operating system exists.  
 </p>
 
 <p>
-To start I'm just going to use the original MIX, we can switch to MMIX anytime but the concepts are the same. You can do the entire book on pieces of paper, or if you want try the <a href="https://www.gnu.org/software/mdk/">GNU MDK</a> or <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">other software</a> to run MIXware meaning compile .mixal files to .mix and run them either with mixvm, gmixvm GUI, or a scheme interpreter.  
+To start I'm just going to use the original MIX, and switch in Volume 4 to MMIX but the concepts are the same. You can do the entire book on pieces of paper, or if you want try the <a href="https://www.gnu.org/software/mdk/">GNU MDK</a> or <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">other software</a> to run MIXware meaning compile .mixal files to .mix and run them either with mixvm, gmixvm GUI, or a scheme interpreter. MIX does not have an operating system so if you like to code bare chips choose that instead of MMIX.  
 </p>
 
 <p>
@@ -365,9 +365,9 @@ MMIX you can use the mixmasters <a href="http://mmix.cs.hm.edu/getstarted.html">
 </div>
 </div>
 
-<div id="outline-container-org6fad52e" class="outline-3">
-<h3 id="org6fad52e">Optimizing compilers are dead</h3>
-<div class="outline-text-3" id="text-org6fad52e">
+<div id="outline-container-org535bc0a" class="outline-3">
+<h3 id="org535bc0a">Optimizing compilers are dead</h3>
+<div class="outline-text-3" id="text-org535bc0a">
 <p>
 Another reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. Djb notes in this talk CloudFlare hand rolled his <a href="https://nacl.cr.yp.to/">ChaCha/Poly</a> using assembly to avoid wasting resources. Knuth also mentions Hoare suggesting that future compilers should have interactive transformations the programmer can use to specify optimizations themselves.
 </p>
@@ -378,18 +378,18 @@ If you're interested in this watch some of <a href="https://www.cs.cornell.edu/c
 </div>
 </div>
 
-<div id="outline-container-orgae4fa9d" class="outline-3">
-<h3 id="orgae4fa9d">Sedgewick <i>Intro to Algorithm Analysis</i></h3>
-<div class="outline-text-3" id="text-orgae4fa9d">
+<div id="outline-container-orge74956d" class="outline-3">
+<h3 id="orge74956d">Sedgewick <i>Intro to Algorithm Analysis</i></h3>
+<div class="outline-text-3" id="text-orge74956d">
 <p>
-Robert Sedgewick who was Knuth's PhD student has a new-ish <a href="https://sedgewick.io/courses/analysis-of-algorithms/">book</a> <i>An Intro to the Analysis of Algorithms</i> which is essentially a concise version of TAOCP, his website says the major goal is to prepare students for TAOCP. He uses what is called analytical combinatorics in a second book to do awesome things like skipping recurrences completely and just analyzing generating functions instead. There's a MOOC (free) for the book and memecoin lectures for it on cubits.ai it's an excellent book but since we are already TAOCP we'll just continue. 
+Robert Sedgewick who was Knuth's PhD student has a new-ish <a href="https://sedgewick.io/courses/analysis-of-algorithms/">book</a> <i>An Intro to the Analysis of Algorithms</i> which is essentially a concise version of TAOCP, his website says the major goal is to prepare students for TAOCP. He uses what is called analytical combinatorics in a second book to do awesome things like skipping recurrences completely and just analyzing generating functions instead. There's a MOOC (free) for the book and memecoin lectures for it on cubits.ai it's an excellent book but since we are already reading TAOCP we'll just continue. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge1eb50e" class="outline-3">
-<h3 id="orge1eb50e">The math preliminaries</h3>
-<div class="outline-text-3" id="text-orge1eb50e">
+<div id="outline-container-org78f8197" class="outline-3">
+<h3 id="org78f8197">The math preliminaries</h3>
+<div class="outline-text-3" id="text-org78f8197">
 <p>
 Much of the beginning math chapters are covered in this YouTube <a href="https://www.youtube.com/playlist?list=PLgTkKBA6LRqYuuQ-LboerRblBoD_q_eUM">playlist</a> by Poh-Shen Loh and also Ryan O'Donnell in this <a href="https://www.youtube.com/playlist?list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX">playlist</a> covers harmonic numbers asymptotics and other topics. We'll do them as they come up.  
 </p>
@@ -397,9 +397,9 @@ Much of the beginning math chapters are covered in this YouTube <a href="https:/
 </div>
 </div>
 
-<div id="outline-container-org68ed63e" class="outline-2">
-<h2 id="org68ed63e">Microcorruption CTF</h2>
-<div class="outline-text-2" id="text-org68ed63e">
+<div id="outline-container-org044b33f" class="outline-2">
+<h2 id="org044b33f">Microcorruption CTF</h2>
+<div class="outline-text-2" id="text-org044b33f">
 <p>
 The preface says we should familiar enough with programming that we've written and tested a few programs, which means assembly/machine language programs. We can learn that doing microcorruption.com CTF and having a visual interface to step through all the code in the debugger to see what it does, see how registers are manipulated etc.
 </p>
@@ -426,18 +426,18 @@ There's a <a href="https://microcorruption.com/public/manual.pdf">manual</a> for
 </p>
 </div>
 
-<div id="outline-container-org04cbfd7" class="outline-3">
-<h3 id="org04cbfd7">New Orleans</h3>
-<div class="outline-text-3" id="text-org04cbfd7">
+<div id="outline-container-orgccf01ee" class="outline-3">
+<h3 id="orgccf01ee">New Orleans</h3>
+<div class="outline-text-3" id="text-orgccf01ee">
 <p>
 The comparison instruction wants a 7 char password, the 'create password' sub-routine generates a 7 char password, try it just entering the 7 hex numbers in one password string, success.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9cdee88" class="outline-3">
-<h3 id="org9cdee88">Sydney</h3>
-<div class="outline-text-3" id="text-org9cdee88">
+<div id="outline-container-orgff43c3e" class="outline-3">
+<h3 id="orgff43c3e">Sydney</h3>
+<div class="outline-text-3" id="text-orgff43c3e">
 <p>
 Set breakpoint at most interesting function which looks like check password. Enter 'test' as text for password, then c to zip to the breakpoint. Pressing s and stepping, r15 is pointing to 439c where we see 7465 7374 or 'test'. Notice the instructions however:
 </p>
@@ -459,36 +459,36 @@ Note the actual code/instruction the machine uses is bf902b5d0000 or bf907021020
 </div>
 </div>
 
-<div id="outline-container-org1152d9d" class="outline-3">
-<h3 id="org1152d9d">Hanoi</h3>
-<div class="outline-text-3" id="text-org1152d9d">
+<div id="outline-container-org3b0943e" class="outline-3">
+<h3 id="org3b0943e">Hanoi</h3>
+<div class="outline-text-3" id="text-org3b0943e">
 <p>
 Passwords must be between 8-16 chars so I entered a gigantic password and while stepping through the execution noticed it overflowed to the second memory location 2410. Ctrl-f the instructions for 2410 and there's a comparison there so I overflowed the hex password to 17 digits with that comparison at 2410. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org62038ed" class="outline-3">
-<h3 id="org62038ed">Cusco</h3>
-<div class="outline-text-3" id="text-org62038ed">
+<div id="outline-container-org03676e1" class="outline-3">
+<h3 id="org03676e1">Cusco</h3>
+<div class="outline-text-3" id="text-org03676e1">
 <p>
 Entered another gigantic password, noticed it overflowed to where the program counter (the next instruction) is so overflowed it to change the pc to 'unlock door' instruction in little endian format.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgacc65bb" class="outline-3">
-<h3 id="orgacc65bb">Reykjavik</h3>
-<div class="outline-text-3" id="text-orgacc65bb">
+<div id="outline-container-orga212af8" class="outline-3">
+<h3 id="orga212af8">Reykjavik</h3>
+<div class="outline-text-3" id="text-orga212af8">
 <p>
 We can't see all the disassembly and have to step watching 'Current Instruction' box. Enter a single character password as a test and step until you see a cmp for the address in r4 offset by -0x24 or 36. Move back that amount in memory and you're at the password you just entered, so enter (little endian) whatever the cmp constant is. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org27160ac" class="outline-3">
-<h3 id="org27160ac">Whitehorse</h3>
-<div class="outline-text-3" id="text-org27160ac">
+<div id="outline-container-orgeb48843" class="outline-3">
+<h3 id="orgeb48843">Whitehorse</h3>
+<div class="outline-text-3" id="text-orgeb48843">
 <p>
 They took away the function to unlock the door, we have to read the <a href="https://microcorruption.com/public/manual.pdf">manual</a> about how the HSM 2 model works. In 3.1 <i>This enables the CPU to trigger software interrupt 0x7F to directly trigger the door lock to unlock</i> so we want to bamboozle this code to somehow run 0x7F. As usual start with a gigantic password and see where it is stored. Mine begins at memory location 347c. Looking at the conditional unlock door function I want to push 0x7f the unlock command instead of 0x7e the password comparison command, and then call that interrupt after.
 </p>
@@ -499,9 +499,9 @@ If you overflow your password you'll see in the 'current instruction' box it wil
 </div>
 </div>
 
-<div id="outline-container-org39c022a" class="outline-3">
-<h3 id="org39c022a">Montevideo</h3>
-<div class="outline-text-3" id="text-org39c022a">
+<div id="outline-container-org6876979" class="outline-3">
+<h3 id="org6876979">Montevideo</h3>
+<div class="outline-text-3" id="text-org6876979">
 <p>
 Two new functions strcpy and memset. Memset appears to clear the password storage memory and strcpy removes all null bytes 00 out of our password entry so if we want to use 0x7f or 7f00 we have to steal some code to add/subtract or AND off some bits to avoid strcpy deleting our payload. I used 32 junk filler + 0244 + payload as a hex password after many trial and error getting the overflow to lineup after strcpy killed my 0044 address.
 </p>
@@ -517,9 +517,9 @@ We've acheived TAOCP prereqs by now so we can start.
 </div>
 </div>
 
-<div id="outline-container-org7836f8c" class="outline-2">
-<h2 id="org7836f8c">1.1 Algorithms</h2>
-<div class="outline-text-2" id="text-org7836f8c">
+<div id="outline-container-org2adcd8e" class="outline-2">
+<h2 id="org2adcd8e">1.1 Algorithms</h2>
+<div class="outline-text-2" id="text-org2adcd8e">
 <p>
 Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. Page 7 he describes T<sub>n</sub> the running time of just the E1 step in the 1.1E algorith writing that if you were to do this for gigantic inputs eventually you'd discover you could find the value of any n with (constant * ln(n)) or in big-O notation O(ln(n)) where ln() is the natural logarithm function meaning it's the exponent x in e<sup>x</sup> = y we will shortly learn in the math chapters. We use e<sup>x</sup> and ln() instead of base 10 log (or even base 2 log sometimes) because they are much simpler to model with than n<sup>x</sup> since e<sup>x</sup> derivative is itself and other nice properties. 
 </p>
@@ -568,9 +568,9 @@ From <a href="https://en.wikipedia.org/wiki/Markov_algorithm#Execution_2">this e
 </div>
 </div>
 
-<div id="outline-container-orgc17c004" class="outline-2">
-<h2 id="orgc17c004">1.2.1 Mathematical Induction</h2>
-<div class="outline-text-2" id="text-orgc17c004">
+<div id="outline-container-org1029b58" class="outline-2">
+<h2 id="org1029b58">1.2.1 Mathematical Induction</h2>
+<div class="outline-text-2" id="text-org1029b58">
 <p>
 Proof by induction here is a little different than the usual texts on it in schools such as <a href="https://leanprover.github.io/logic_and_proof/the_natural_numbers_and_induction.html">here</a>. There they assume P(n), and prove the successor P(n+1). Here Knuth proves P(1), then proves every successor input which implies P(n+1) is true each time he does it. The first example, adding 2n + 1 to both sides that's the next successor so if we are at 2<sup>2</sup> = 1 + 3 then 2n + 1 on both sides is 1 + 3 + 5 = 2<sup>2</sup> + 4 + 1 or 9 or 3<sup>2</sup>. The bottom of page 14 he then talks about assuming P(k) by induction is true whenever k &lt; n. 
 </p>
@@ -580,16 +580,20 @@ The Fibonnaci example, that strike through symbol is the Latin Phi which is a co
 </p>
 
 <p>
-The assertions flow chart is similar to 'programming by contracts' where you have preconditions, loop invariants and postconditions. A restriction on the admissible inputs to a function is called a precondition. A postcondition asserts that the output of the algorithm is what you expect. The loop invariant is an assertion that is true before the loop, during every iteration and immediatley after exiting the loop here it is Eqs(6) where (am + bn = d) holds before and after division (it's an exercise later). I didn't know von Neumann invented these. Knuth and that end of chapter Turing quote inform us we should always be adding one or two assertions of the state of the algorithm at 'well chosen points' to actually understand the algorithm, Knuth claims you can't explain the algorithm to someone without them. 
+The assertions flow chart is similar to programming by <a href="https://www.cs.cmu.edu/~15122/schedule.shtml">contracts</a> where you have preconditions, loop invariants and postconditions. A restriction on the admissible inputs to a function is called a precondition. A postcondition asserts that the output of the algorithm is what you expect or as Dijkstra puts it 'imposing a condition upon the state in which the system must find itself after its activity'. The loop invariant is an assertion that is true before the loop, during every iteration and immediatley after exiting the loop here it is Eqs(6) where (am + bn = d) holds before and after division (it's an exercise later). I didn't know von Neumann invented these. Knuth and that end of chapter Turing quote inform us we should always be adding one or two assertions of the state of the algorithm at 'well chosen points' to actually understand the algorithm, Knuth claims you can't explain the algorithm to someone without them. 
 </p>
 
 <p>
-The exercises exist just for you to go back over the material and actively read it. You aren't supposed to know all the answers or else you wouldn't need to read this book. The intro told us to just skim these math preliminaries chapters and 'try a few exercises' coming back later when needed. 
+First let's understand <a href="https://leanprover.github.io/logic_and_proof/propositional_logic.html#rules-of-inference">implication</a>. By elimination rule if assertion A implies assertion B, and assertion A holds as the algorithm goes to the next step (we have a proof of A) then assertion B holds (we have a proof of B). Knuth says A2 implies A6, looking at the A6 assertions gcd(c,d) = gcd(m,n) are implied from A2 assertion c=m and d=n. 
+</p>
+
+<p>
+The intro told us to just skim these math preliminaries chapters and 'try a few exercises' coming back later when needed. 
 </p>
 
 
 <p>
-Exercises/Scratch work: 
+Exercises/scratchwork: 
 </p>
 <ul class="org-ul">
 <li>1: Simple including of P(0) base case</li>
@@ -629,17 +633,46 @@ Exercises/Scratch work:
 </ul></li>
 </ul></li>
 <li>8: There is a visualization for this <a href="https://en.wikipedia.org/wiki/Squared_triangular_number">here</a></li>
-<li>9: Input some actual values to see what you should do, a is a fraction 1/x where x &gt; 1. I massively screwed this up at first then wrote a page long proof which actually worked to my surprise because I always like to adhoc prove these things in the most ridiculous way because you end up learning more. I learned that from watching a Poh-Shen Loh interview on how he was almost cut from the national olympiad team until he just started original proofs doing whatever and it worked. The easier way is <a href="https://proofwiki.org/wiki/Bernoulli%27s_Inequality#:~:text=Proof%20by%20induction%3A,n%E2%89%A51%2Bnx">here</a>.</li>
+<li>9: Proof is <a href="https://proofwiki.org/wiki/Bernoulli%27s_Inequality#:~:text=Proof%20by%20induction%3A,n%E2%89%A51%2Bnx">here</a>, uses the induction hypothesis to rewrite (1 - a)(1 - a)<sup>n</sup> to (1 - a)(1 - na)</li>
+<li>11: Proof is <a href="https://math.stackexchange.com/a/1071084">here</a> and see <a href="https://www.cut-the-knot.org/m/Algebra/TelescopingSums.shtml">telescoping</a>.</li>
+<li>13: This is in the <a href="https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf">paper</a> Knuth cites by RW Floyd. The variable k in the solution seems to be initial time steps you add to each algorithm step in E. At the A3 state k=2 because E1 + E2 is T=2, and both A4/A5 are k=3 since it's a single  conditional E4 and +1 to A3, A6 is k=1 because we go back to A2 where T=1. There is 3 operations in the loop so we can assert whatever happens in the loop will be 3x the time, and this will be the always decreasing n-d if you look at page 14 table. It's an upper bound so if our algorithm has two numbers that are prime with no gcd they will always be decreasing by whatever d is. At least that is how I understand this but of course, we can come back to this chapter later when induction is brought up again.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd25c21a" class="outline-2">
-<h2 id="orgd25c21a">1.2.2 Numbers, Powers and LogsTODO</h2>
-<div class="outline-text-2" id="text-orgd25c21a">
+<div id="outline-container-orgb27953f" class="outline-2">
+<h2 id="orgb27953f">1.2.2 Numbers, Powers and Logs</h2>
+<div class="outline-text-2" id="text-orgb27953f">
 <p>
-TODO
+Knuth's definition of real numbers is explained <a href="https://en.wikipedia.org/wiki/0.999...">here</a> on Wikipedia how 0.999&#x2026; is 1 and 1/10<sup>k</sup> is explained as the positive distance from x, so 3 + .33 \(\le\) x = 3.33 \(\lt\) 3 + .331 and he suggests the appendix which flipping through it has all math notation used in the book in addition to constants and their values. 
 </p>
+
+<p>
+There's a good workshop for complex numbers <a href="https://www.youtube.com/live/5PcpBw5Hbwo?feature=share&amp;t=400">here</a> starting ~6:40 that explains the i which is the y-axis/unit circle rotating around like trigonometry functions and he has many for e as well. The 'natural logarithm' or 'lon' or ln is preferred by pretty much everyone because of it's easy calculating and modelling properties. 
+</p>
+
+<p>
+For example if you watch <a href="https://youtu.be/flge97Jp6uo">this</a> 
+</p>
+<ul class="org-ul">
+<li>ln(1 + x) is approximately x</li>
+<li>e<sup>x</sup> is approximately 1 + x</li>
+<li>derivative of e<sup>x</sup> is itself</li>
+<li>derivative of ln(x) is 1/x.</li>
+</ul>
+
+<p>
+Exercises/scratchwork
+</p>
+<ul class="org-ul">
+<li>4: If you forgot cubed roots/fraction rules:</li>
+</ul>
+<p>
+\[ (0.125)^{-2/3} = \frac{125}{1000}^{-2/3} = \frac{1}{8}^{-2/3} = \frac{1}{\sqrt[3]{\frac{1}{8^2}}} = \frac{1}{\sqrt[3]{\frac{1}{64}}} = \frac{1}{\sqrt[3]{\frac{1}{4\cdot4\cdot4}}} = \frac{1}{\frac{1}{4}} = \frac{1}{1}\cdot \frac{4}{1}\]
+</p>
+
+
+
 
 
 

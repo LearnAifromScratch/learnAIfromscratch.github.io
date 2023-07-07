@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-07-05 Wed 13:15 -->
+<!-- 2023-07-06 Thu 21:20 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>21st Century Undergrad Mathematics</title>
@@ -274,11 +274,10 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#notation">Notation</a></li>
 <li><a href="#data-structres">Data Structures</a></li>
-<li><a href="#objects">Objects</a></li>
 <li><a href="#math-reasoning">Mathematical reasoning</a></li>
 <li><a href="#equality">Equality</a></li>
 <li><a href="#what-are-functions">What are Functions</a></li>
-<li><a href="#org4a2170f">What is Linearity</a></li>
+<li><a href="#orgf162711">What is Linearity</a></li>
 <li><a href="#what-are-polynomials">What are Polynomials</a></li>
 <li><a href="#what-are-matrices">What are Matrices</a></li>
 <li><a href="#what-is-algebra">What is Algebra</a></li>
@@ -291,23 +290,27 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#Basics">Basics</a>
 <ul>
-<li><a href="#orgcfdc999">Arithmetic with natural numbers</a></li>
-<li><a href="#orgded651a">Laws of Subtraction</a></li>
-<li><a href="#org25ddd6d">The Hindu-Arabic number system</a></li>
-<li><a href="#orgfc544c4">Arithmetic with Hindu-Arabic notation</a></li>
-<li><a href="#org758f2d3">Laws of Division</a></li>
-<li><a href="#org0cb697e">Fractions</a></li>
-<li><a href="#org4050cfb">Arithmetic with fractions</a></li>
+<li><a href="#org3125da8">Arithmetic with natural numbers</a></li>
+<li><a href="#orgbde1c97">Laws of Subtraction</a></li>
+<li><a href="#orgb388bfc">The Hindu-Arabic number system</a></li>
+<li><a href="#orga20ce07">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#orgfd7f08b">Laws of Division</a></li>
+<li><a href="#org888825f">Fractions</a></li>
+<li><a href="#orgfbf242f">Arithmetic with fractions</a></li>
 </ul>
 </li>
 <li><a href="#begin-here">BEGIN HERE</a></li>
-<li><a href="#Integration">Integration Theory</a></li>
+<li><a href="#Integration-theory">Integration Theory</a></li>
+<li><a href="#Logic">Logic &amp; Proofs</a></li>
+<li><a href="#Linear-algebra">Linear Algebra</a></li>
+<li><a href="#Category-theory">Category Theory</a></li>
+<li><a href="#Type-theory">Homotopy Type Theory</a></li>
 </ul>
 </div>
 </nav>
 <hr>
 
-<div id="outline-container-orga5a09f5" class="outline-2">
+<div id="outline-container-org74d2664" class="outline-2">
 <h2 id="intro">Intro</h2>
 <div class="outline-text-2" id="text-intro">
 <p>
@@ -338,12 +341,16 @@ In undergrad course parlance this translates to an 'Intro to Proofs' course, Cal
 </p>
 
 <p>
+<b>This is not a linear curriculum, I expect you do it calling into work sick for a week or being bored one weekend</b>. We are reviewing these subjects enough so you can teach yourself in-depth whatever you are interested in. Then of course that becomes a life-long learning mission but how do you know what mission to take before you see all the battle plans? My advice is learn all the critical parts just enough to be fluent in whatever you are interested in doing and then go after that with your time. 
+</p>
+
+<p>
 <i>Do 1% effort for 100 days</i> - Prof <a href="https://youtu.be/YFUIPg8P2sY?t=278">Ryan O'Donnell</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2c532e2" class="outline-2">
+<div id="outline-container-org76c9b70" class="outline-2">
 <h2 id="insight">Insight to math crash course</h2>
 <div class="outline-text-2" id="text-insight">
 <p>
@@ -351,7 +358,7 @@ The following is every insight I picked up doing this material that often wasn't
 </p>
 </div>
 
-<div id="outline-container-org94b8903" class="outline-3">
+<div id="outline-container-org2090801" class="outline-3">
 <h3 id="notation">Notation</h3>
 <div class="outline-text-3" id="text-notation">
 <p>
@@ -361,7 +368,7 @@ Constants are usually represented by a, b, c or the beginning of the alphabet an
 </div>
 
 
-<div id="outline-container-orgbeeba43" class="outline-3">
+<div id="outline-container-orga554e9e" class="outline-3">
 <h3 id="data-structres">Data Structures</h3>
 <div class="outline-text-3" id="text-data-structres">
 <p>
@@ -370,21 +377,7 @@ Math has data structures just like programming languages. A tuple is an ordered 
 </div>
 </div>
 
-<div id="outline-container-org62c3914" class="outline-3">
-<h3 id="objects">Objects</h3>
-<div class="outline-text-3" id="text-objects">
-<p>
-In math almost everything is some kind of structure or constructed object you build from other objects just like in a program and these objects have types. Whenever you need to reduce complexity of something you can always deconstruct the object or build new abstract structures.
-</p>
-
-<p>
-The numbers themselves are different objects. There are natural, integer, rational, complex, p-adic, real and more numbers each of which is a different structure. The real numbers are a convenient abstraction to get around a bunch of legacy problems where the real number line is essentially an infinite collection of algorithms that are constantly running and return limit objects that are interpreted as numbers/values. The real number 5 as an example is an infinite sequence that converges to the limit 5. Limits are themselves an algebra of inequalities we'll shortly learn. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org695410a" class="outline-3">
+<div id="outline-container-orgeadf27b" class="outline-3">
 <h3 id="math-reasoning">Mathematical reasoning</h3>
 <div class="outline-text-3" id="text-math-reasoning">
 
@@ -422,7 +415,7 @@ These connectives can of course be used to define each other:
 </div>
 </div>
 
-<div id="outline-container-orga46bc43" class="outline-3">
+<div id="outline-container-org219a02a" class="outline-3">
 <h3 id="equality">Equality</h3>
 <div class="outline-text-3" id="text-equality">
 <p>
@@ -439,7 +432,7 @@ Axioms of equality:
 </div>
 
 
-<div id="outline-container-orga7d3fb7" class="outline-3">
+<div id="outline-container-org20de47b" class="outline-3">
 <h3 id="what-are-functions">What are Functions</h3>
 <div class="outline-text-3" id="text-what-are-functions">
 <p>
@@ -452,20 +445,20 @@ Similar to <a href="https://cs.wheaton.edu/~tvandrun/dmfp/">programming</a>, mat
 </div>
 </div>
 
-<div id="outline-container-org4a2170f" class="outline-3">
-<h3 id="org4a2170f">What is Linearity</h3>
-<div class="outline-text-3" id="text-org4a2170f">
+<div id="outline-container-orgf162711" class="outline-3">
+<h3 id="orgf162711">What is Linearity</h3>
+<div class="outline-text-3" id="text-orgf162711">
 <p>
 In math linear means one thing changes at the same rate as another so the relation between them doesn't change. Linear equations or relations have the form of a straight line when graphed hence why line is in the name linear. Almost everything you learn in first year mathematics is some kind of linear approximation to a more complex object because you want to approximate everything in the simple world of linearity then can use all the tools we have developed for linear functions like Euler's method for approximating differential equations so they can be analyzed.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgde26fcc" class="outline-3">
+<div id="outline-container-orgacc78e6" class="outline-3">
 <h3 id="what-are-polynomials">What are Polynomials</h3>
 <div class="outline-text-3" id="text-what-are-polynomials">
 <p>
-A monomial is anything in the form ax<sup>n</sup> where a is some constant (a number), and x is a variable meaning you substitute in values for x which can be a function, another monomial, or an integer. Notice if the exponent n = 0 then we have ax<sup>0</sup> which evalutes to a(1) or a constant so any single constant is also a monomial and if x = 0 then ax<sup>n</sup> is a0<sup>n</sup> or 0 so 0 is also a monomial since 3*0<sup>n</sup> = 0 and due to the substitution axiom this makes 0 a monomial too.
+A monomial is anything in the form ax<sup>n</sup> where a is some constant (a number), and x is a variable meaning you substitute in values for x which can be a function, another monomial, or an integer. Notice if the exponent n = 0 then we have ax<sup>0</sup> which evalutes to a(1) or a constant so any single constant is also a monomial and if x = 0 then ax<sup>n</sup> is a0<sup>n</sup> or 0 so 0 is also a monomial due to the substitution axiom of equality. 
 </p>
 
 <p>
@@ -482,7 +475,7 @@ The subscripts are an indexing scheme like how you would identify cells in an ar
 </div>
 </div>
 
-<div id="outline-container-org00d401d" class="outline-3">
+<div id="outline-container-orga36c32e" class="outline-3">
 <h3 id="what-are-matrices">What are Matrices</h3>
 <div class="outline-text-3" id="text-what-are-matrices">
 <p>
@@ -499,7 +492,7 @@ A vector we'll learn later is an abstract object. In calculus courses they are u
 </div>
 </div>
 
-<div id="outline-container-org17b519b" class="outline-3">
+<div id="outline-container-org2a3660c" class="outline-3">
 <h3 id="what-is-algebra">What is Algebra</h3>
 <div class="outline-text-3" id="text-what-is-algebra">
 <p>
@@ -516,11 +509,11 @@ An algebra seems to me to just mean computation is possible, think simple gates 
 </div>
 </div>
 
-<div id="outline-container-org73d6492" class="outline-3">
+<div id="outline-container-org4addba5" class="outline-3">
 <h3 id="what-are-integration">What are Derivatives</h3>
 <div class="outline-text-3" id="text-what-are-integration">
 <p>
-They are another linear approximation. When you take a derivative of a function it's a higher-order procedure that gives you a new function representing it's rate of change. Interpreting this derivative or rate of change function depends what your context is, if it's time mapped to position the derivative is the velocity. To find the derivative of a continuous curve you zoom in on a local fixed point until it appears to be a straight line. It's also sometimes interpreted as the sensitivity of a function to very small changes in the input versus what happens to the output.
+They are another linear approximation. When you take a derivative of a function it's a higher-order procedure that gives you a new function representing it's rate of change. Interpreting this derivative or rate of change function depends what your context is, if it's time mapped to position the derivative is the velocity. To find the derivative of a curve you zoom in on a local fixed point until it appears to be a straight line just like how you walk the round earth but everything seems flat from your zoomed perspective.
 </p>
 
 <p>
@@ -529,7 +522,7 @@ In economics it has a similar <a href="https://link.springer.com/article/10.1007
 </div>
 </div>
 
-<div id="outline-container-org5110137" class="outline-3">
+<div id="outline-container-org39fb42f" class="outline-3">
 <h3 id="what-is-integration">What is Integration</h3>
 <div class="outline-text-3" id="text-what-is-integration">
 <p>
@@ -538,7 +531,7 @@ Integration is the undo function of taking a derivative called the anti-derivati
 </div>
 </div>
 
-<div id="outline-container-org2d5bc61" class="outline-3">
+<div id="outline-container-orgcca44ef" class="outline-3">
 <h3 id="music-and-math">Music and math</h3>
 <div class="outline-text-3" id="text-music-and-math">
 <p>
@@ -551,7 +544,7 @@ Pythagoreans and Plato claimed that music itself is nothing but auditory percept
 </div>
 </div>
 
-<div id="outline-container-orgc16f0dc" class="outline-3">
+<div id="outline-container-org00c3d0d" class="outline-3">
 <h3 id="math-difficulty">Math difficulty</h3>
 <div class="outline-text-3" id="text-math-difficulty">
 <blockquote>
@@ -576,13 +569,17 @@ For high school students, if this happens in the first weeks of college&#x2014;w
 </p>
 
 <p>
-We will always find ourselves at some point in our life "unprepared" for the next level of study.  Consider it a question of character as to whether you can salvage yourself - Prof Brian S Thomson  
+We will always find ourselves at some point in our life "unprepared" for the next level of study.  Consider it a question of character as to whether you can salvage yourself  
 </p>
 </blockquote>
+
+<p>
+Quote from Prof Brian S Thomson the author of the integration theory book we'll do. If you know how to program then most math abstractions will be easy for you to understand because <i>it's all the same thing</i>. There is a <a href="https://cs3110.github.io/textbook/chapters/adv/curry-howard.html">correspondence</a> between logic, math and programming where a theorem in math is a specification of a program, and the program written to that spec is a proof. When you run the program you are simplifying the proof. The lambda calculus by Church and natural deduction logic (proof theory) by Gentzen both developed in the 1930s is the same thing. 
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgbd573bc" class="outline-3">
+<div id="outline-container-org8f402a2" class="outline-3">
 <h3 id="what-is-geometry">What is Geometry</h3>
 <div class="outline-text-3" id="text-what-is-geometry">
 
@@ -684,7 +681,7 @@ He later wrote in a manuscript on geometry that mechanics of motion was what gen
 </div>
 </div>
 
-<div id="outline-container-orgb6893e3" class="outline-2">
+<div id="outline-container-orgb608ebc" class="outline-2">
 <h2 id="Basics">Basics</h2>
 <div class="outline-text-2" id="text-Basics">
 <p>
@@ -697,9 +694,9 @@ We will rigorously learn algebra/analysis later so you just need the absolute ba
 </div>
 
 
-<div id="outline-container-orgcfdc999" class="outline-3">
-<h3 id="orgcfdc999">Arithmetic with natural numbers</h3>
-<div class="outline-text-3" id="text-orgcfdc999">
+<div id="outline-container-org3125da8" class="outline-3">
+<h3 id="org3125da8">Arithmetic with natural numbers</h3>
+<div class="outline-text-3" id="text-org3125da8">
 <ul class="org-ul">
 <li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
 </ul>
@@ -775,18 +772,18 @@ Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is 
 </div>
 </div>
 
-<div id="outline-container-orgded651a" class="outline-3">
-<h3 id="orgded651a">Laws of Subtraction</h3>
-<div class="outline-text-3" id="text-orgded651a">
+<div id="outline-container-orgbde1c97" class="outline-3">
+<h3 id="orgbde1c97">Laws of Subtraction</h3>
+<div class="outline-text-3" id="text-orgbde1c97">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org25ddd6d" class="outline-3">
-<h3 id="org25ddd6d">The Hindu-Arabic number system</h3>
-<div class="outline-text-3" id="text-org25ddd6d">
+<div id="outline-container-orgb388bfc" class="outline-3">
+<h3 id="orgb388bfc">The Hindu-Arabic number system</h3>
+<div class="outline-text-3" id="text-orgb388bfc">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -803,9 +800,9 @@ A simplified Roman numeral system is introduced
 </div>
 </div>
 
-<div id="outline-container-orgfc544c4" class="outline-3">
-<h3 id="orgfc544c4">Arithmetic with Hindu-Arabic notation</h3>
-<div class="outline-text-3" id="text-orgfc544c4">
+<div id="outline-container-orga20ce07" class="outline-3">
+<h3 id="orga20ce07">Arithmetic with Hindu-Arabic notation</h3>
+<div class="outline-text-3" id="text-orga20ce07">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -816,9 +813,9 @@ A new way of hand multiplication is shown, taking advantage of the fact the nota
 </div>
 </div>
 
-<div id="outline-container-org758f2d3" class="outline-3">
-<h3 id="org758f2d3">Laws of Division</h3>
-<div class="outline-text-3" id="text-org758f2d3">
+<div id="outline-container-orgfd7f08b" class="outline-3">
+<h3 id="orgfd7f08b">Laws of Division</h3>
+<div class="outline-text-3" id="text-orgfd7f08b">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -842,9 +839,9 @@ In every calculus course like the recorded <a href="https://ocw.mit.edu/courses/
 </div>
 </div>
 
-<div id="outline-container-org0cb697e" class="outline-3">
-<h3 id="org0cb697e">Fractions</h3>
-<div class="outline-text-3" id="text-org0cb697e">
+<div id="outline-container-org888825f" class="outline-3">
+<h3 id="org888825f">Fractions</h3>
+<div class="outline-text-3" id="text-org888825f">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -855,9 +852,9 @@ Interesting how he defines all these as types.
 </div>
 </div>
 
-<div id="outline-container-org4050cfb" class="outline-3">
-<h3 id="org4050cfb">Arithmetic with fractions</h3>
-<div class="outline-text-3" id="text-org4050cfb">
+<div id="outline-container-orgfbf242f" class="outline-3">
+<h3 id="orgfbf242f">Arithmetic with fractions</h3>
+<div class="outline-text-3" id="text-orgfbf242f">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -869,7 +866,7 @@ The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> us
 </div>
 </div>
 
-<div id="outline-container-org6e56c90" class="outline-2">
+<div id="outline-container-org0e8f697" class="outline-2">
 <h2 id="begin-here">BEGIN HERE</h2>
 <div class="outline-text-2" id="text-begin-here">
 <p>
@@ -946,7 +943,7 @@ Then take the limit of dx to zero or 2x + 0 but dx<sup>2</sup> can also be arbit
 </p>
 
 <p>
-There is a formula for any derivative of x<sup>n</sup> (power function) or polynomial ax<sup>n</sup> it's nx<sup>n-1</sup> the exponent comes down and multiplies whatever constant in front of x and the power of x is decreased by 1 so x<sup>2</sup> is 2x, 3x<sup>2</sup> is 6x etc. The derivative of a constant is 0 since 3 is also equal to 3x<sup>0</sup> so the 0 exponent comes down and wipes out everything by multiplication. The reverse procedure to take 2x and turn it back into x<sup>2</sup> is the integral which we will learn thoroughly later but it's a little more complex because the derivative you are reversing can come from multiple functions. 
+There is a formula for any derivative of x<sup>n</sup> (power function) it's nx<sup>n-1</sup> the exponent comes down and multiplies whatever constant in front of x and the power of x is decreased by 1 so x<sup>2</sup> is 2x, 3x<sup>2</sup> is 6x etc. The derivative of a constant is 0 since 3 is also equal to 3x<sup>0</sup> so the 0 exponent comes down and wipes out everything by multiplication. The reverse procedure to take 2x and turn it back into x<sup>2</sup> is the integral which we will learn thoroughly later but it's a little more complex because the derivative you are reversing can come from multiple functions. 
 </p>
 
 <p>
@@ -963,13 +960,68 @@ Finally let's watch the first 13 minutes of <a href="https://youtu.be/oGZK3yGF-6
 </div>
 </div>
 
-<div id="outline-container-orgd0b80b3" class="outline-2">
-<h2 id="Integration">Integration Theory</h2>
-<div class="outline-text-2" id="text-Integration">
+<div id="outline-container-orgad0bceb" class="outline-2">
+<h2 id="Integration-theory">Integration Theory</h2>
+<div class="outline-text-2" id="text-Integration-theory">
 <p>
-TODO
+In undegrad you take a sequence of calculus I &amp; II courses that are utterly obsolete, and even worse they teach you pointless analysis I &amp; II courses which they don't tell you have been replaced since the very early 20th century. Your first day of grad instruction everything you learned in undergrad is tossed out and you learn a completely different math. No refunds are given. 
 </p>
 
+<p>
+Schools think you are too stupid to understand this 100+ year old theory so teach you this intermediate integral which is as confusing as you can get because it doesn't work, never worked, and was quite literally an afterthought, a napkin definition, a throwaway theory just to accomplish a single task and the author never bothered to flesh out his integral because he was working on something else at the time. This is the trash you pay thousands of dollars for in undergrad. This undergrad teaching integral cannot include a large set of problems so they show you a ridiculous procedure to get around these century old problems with such nonsense like 'improper integrals' which do not exist whatsoever. They teach you these silly sums of infinite rectangles as the 'area' and claim this is integration but it's not. They hilariously then go on to claim the fundamental theorem of calculus includes this obsolete theory, which is a straight up lie. The fundamental theorem is derivatives and nothing else because integration is just the anti-derivative or undo procedure like going into your favorite editor and selecting 'undo'. There is indeed an area you can approximate under a curve but it's not the 'fundamental theorem' of anything
+</p>
+
+<p>
+So we will instead learn modern integration theory but before we do I'm auditing a book called <i>Calculus Reordered</i> by David M. Bressoud which you can get on libgen.is which is calculus taught in historical order. He made other books that teach you modern analysis as it was invented such as <i>A Radical Approach to Real Analysis</i> which is an excellent book, which has exercises, which has a sequel about the Lebesgue Integral. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org392360a" class="outline-2">
+<h2 id="Logic">Logic &amp; Proofs</h2>
+<div class="outline-text-2" id="text-Logic">
+<p>
+TODO speed read and write some programs in Lean. Do a Putnam Seminar and some Russian olympiad books on a p/t basis. Anyone can do this. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge838d27" class="outline-2">
+<h2 id="Linear-algebra">Linear Algebra</h2>
+<div class="outline-text-2" id="text-Linear-algebra">
+<p>
+This includes vector and matrix calculus so I'm doing the new versions of 18.02 and 18.06 (Strang retired, now Edelman runs 18.06) and some Wildberger lectures because he hilariously provides simple treatments of very advanced linear transformations. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge8b007d" class="outline-2">
+<h2 id="Category-theory">Category Theory</h2>
+<div class="outline-text-2" id="text-Category-theory">
+<p>
+The Topos Insitute has developed <a href="https://ncatlab.org/nlab/show/HomePage">nLab</a> which is a wiki for collaborative category theory and anything you want to know about the subject it will be there. The best introduction is probably Emily Riehl's book <a href="https://ncatlab.org/nlab/show/Category+Theory+in+Context">Category Theory in Context</a> which is a free download. It's a good book because every definition is accompanied with all the different interpretations in various fields of math because you can learn Category Theory in a programming language context then have no idea how it extends to abstract math objects so we'll start here then progress to categorical logic/type theory. 
+</p>
+
+<p>
+The very first page of the book she assumes we have 'a year of algebraic topology and abstract algebra/group theory' already so will often use those as examples of categories and morphisms, so let's get an idea of what those subjects are. Lucky for us Wildberger already taught an algebraic topology course and covers these topics.
+</p>
+
+<ul class="org-ul">
+<li>Intro to <a href="https://youtu.be/Kcyitn0LHSM">Abstract Algebra</a></li>
+</ul>
+
+<p>
+TODO but S I M P L E you can all do this. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96c3ca1" class="outline-2">
+<h2 id="Type-theory">Homotopy Type Theory</h2>
+<div class="outline-text-2" id="text-Type-theory">
+<p>
+TODO the HoTT book plus Robert Harper full grad seminar videos. We have to learn categorical logic too and Awodey from CMU has a new book for this as a preprint. Once Emily teaches you these abstractions and Robert Harper then goes through them in detail you will no problem get to this level. 
+</p>
 <hr>
 <p>
 <a href="./index.html">Home</a>

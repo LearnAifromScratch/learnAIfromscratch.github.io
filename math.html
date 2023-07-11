@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-07-06 Thu 21:20 -->
+<!-- 2023-07-10 Mon 19:52 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>21st Century Undergrad Mathematics</title>
@@ -277,7 +277,7 @@ for the JavaScript code in this tag.
 <li><a href="#math-reasoning">Mathematical reasoning</a></li>
 <li><a href="#equality">Equality</a></li>
 <li><a href="#what-are-functions">What are Functions</a></li>
-<li><a href="#orgf162711">What is Linearity</a></li>
+<li><a href="#org5aeca2c">What is Linearity</a></li>
 <li><a href="#what-are-polynomials">What are Polynomials</a></li>
 <li><a href="#what-are-matrices">What are Matrices</a></li>
 <li><a href="#what-is-algebra">What is Algebra</a></li>
@@ -290,13 +290,13 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#Basics">Basics</a>
 <ul>
-<li><a href="#org3125da8">Arithmetic with natural numbers</a></li>
-<li><a href="#orgbde1c97">Laws of Subtraction</a></li>
-<li><a href="#orgb388bfc">The Hindu-Arabic number system</a></li>
-<li><a href="#orga20ce07">Arithmetic with Hindu-Arabic notation</a></li>
-<li><a href="#orgfd7f08b">Laws of Division</a></li>
-<li><a href="#org888825f">Fractions</a></li>
-<li><a href="#orgfbf242f">Arithmetic with fractions</a></li>
+<li><a href="#orgdb8d0dd">Arithmetic with natural numbers</a></li>
+<li><a href="#org8ec5b9d">Laws of Subtraction</a></li>
+<li><a href="#org98ad038">The Hindu-Arabic number system</a></li>
+<li><a href="#orge23f080">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#org8557ae2">Laws of Division</a></li>
+<li><a href="#orgea10649">Fractions</a></li>
+<li><a href="#org10031c1">Arithmetic with fractions</a></li>
 </ul>
 </li>
 <li><a href="#begin-here">BEGIN HERE</a></li>
@@ -310,7 +310,7 @@ for the JavaScript code in this tag.
 </nav>
 <hr>
 
-<div id="outline-container-org74d2664" class="outline-2">
+<div id="outline-container-orgf6f30de" class="outline-2">
 <h2 id="intro">Intro</h2>
 <div class="outline-text-2" id="text-intro">
 <p>
@@ -341,16 +341,12 @@ In undergrad course parlance this translates to an 'Intro to Proofs' course, Cal
 </p>
 
 <p>
-<b>This is not a linear curriculum, I expect you do it calling into work sick for a week or being bored one weekend</b>. We are reviewing these subjects enough so you can teach yourself in-depth whatever you are interested in. Then of course that becomes a life-long learning mission but how do you know what mission to take before you see all the battle plans? My advice is learn all the critical parts just enough to be fluent in whatever you are interested in doing and then go after that with your time. 
-</p>
-
-<p>
 <i>Do 1% effort for 100 days</i> - Prof <a href="https://youtu.be/YFUIPg8P2sY?t=278">Ryan O'Donnell</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org76c9b70" class="outline-2">
+<div id="outline-container-org26b96ee" class="outline-2">
 <h2 id="insight">Insight to math crash course</h2>
 <div class="outline-text-2" id="text-insight">
 <p>
@@ -358,26 +354,30 @@ The following is every insight I picked up doing this material that often wasn't
 </p>
 </div>
 
-<div id="outline-container-org2090801" class="outline-3">
+<div id="outline-container-orgd62bf8f" class="outline-3">
 <h3 id="notation">Notation</h3>
 <div class="outline-text-3" id="text-notation">
 <p>
 Constants are usually represented by a, b, c or the beginning of the alphabet and variables represented by x, y, z or the end of the alphabet. Greek letters typically represent real numbers (constants) which are decimal numbers that don't seem to terminate such as pi, phi, Euler's constant gamma, etc. Functions that don't need a permanent name are usually f, g, h and sometimes functions are Greek letters. These conventions go back to Descartes. 
 </p>
-</div>
-</div>
 
-
-<div id="outline-container-orga554e9e" class="outline-3">
-<h3 id="data-structres">Data Structures</h3>
-<div class="outline-text-3" id="text-data-structres">
 <p>
-Math has data structures just like programming languages. A tuple is an ordered sequence/list (a, b) or n-tuple (a, b, c..) and there's unordered sets like Y = {1 2 3} and partially ordered sets like a binary relation. A vector is a tuple, and functions are defined as mappings between sets. A matrix is an array. Learning all the operations/rules of these data structures is trivial and you can freely cast things to new data structures if you wanted. 
+The notation can represent the same value or different ones: c + d = e can be different or all the same like 0 + 0 = 0. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgeadf27b" class="outline-3">
+
+<div id="outline-container-org6f8f8a0" class="outline-3">
+<h3 id="data-structres">Data Structures</h3>
+<div class="outline-text-3" id="text-data-structres">
+<p>
+Math has data structures just like programming languages. A tuple is an ordered sequence/list (a, b) or n-tuple (a, b, c..) and there's unordered sets and partially ordered sets like a binary relation. 'Infinite sets' are similar to a stream data structure in programming for example the natural numbers are an infinite set where to obtain the next one you just add one more to the set. A vector is a tuple, a function is defined as a mapping between sets, a matrix is an array. Learning all the operations/rules of these data structures is trivial and you can move things to new data structures if you wanted which is how we have vector calculus. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org41096cb" class="outline-3">
 <h3 id="math-reasoning">Mathematical reasoning</h3>
 <div class="outline-text-3" id="text-math-reasoning">
 
@@ -415,7 +415,7 @@ These connectives can of course be used to define each other:
 </div>
 </div>
 
-<div id="outline-container-org219a02a" class="outline-3">
+<div id="outline-container-org64cd3c1" class="outline-3">
 <h3 id="equality">Equality</h3>
 <div class="outline-text-3" id="text-equality">
 <p>
@@ -432,33 +432,33 @@ Axioms of equality:
 </div>
 
 
-<div id="outline-container-org20de47b" class="outline-3">
+<div id="outline-container-org11c4026" class="outline-3">
 <h3 id="what-are-functions">What are Functions</h3>
 <div class="outline-text-3" id="text-what-are-functions">
 <p>
-An ancient concept of a function is written on a papyrus from 1850 BC describing the rule for finding the area of a rectangle using the product of two adjacent sides. Today we would say the area of a rectangle is a function of it's two adjacent sides or more generally when you multiply numbers together the final product is a function of its factors. Any kind of relationship/dependency can be modeled as a function so long as it maps to a single output.
+An ancient concept of a function is written on a papyrus from 1850 BC describing the rule for finding the area of a rectangle using the product of two adjacent sides. Today we would say the area of a rectangle is a function of it's two adjacent sides or more generally when you multiply numbers together the final product is a function of its factors. Any kind of relationship/dependency can be modeled as a function so long as it maps to a single output or passes the 'vertical line test' when graphed meaning any arbitrary vertical line should only intercept the function once as there can only be one y-axis output per x-axis input. 
 </p>
 
 <p>
-Similar to <a href="https://cs.wheaton.edu/~tvandrun/dmfp/">programming</a>, math functions can take functions as input and return new functions, that's exactly what derivatives in calculus do. 
+Similar to <a href="https://cs.wheaton.edu/~tvandrun/dmfp/">programming</a> math functions can take functions as input and return new functions, that's exactly what derivatives in calculus do. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf162711" class="outline-3">
-<h3 id="orgf162711">What is Linearity</h3>
-<div class="outline-text-3" id="text-orgf162711">
+<div id="outline-container-org5aeca2c" class="outline-3">
+<h3 id="org5aeca2c">What is Linearity</h3>
+<div class="outline-text-3" id="text-org5aeca2c">
 <p>
-In math linear means one thing changes at the same rate as another so the relation between them doesn't change. Linear equations or relations have the form of a straight line when graphed hence why line is in the name linear. Almost everything you learn in first year mathematics is some kind of linear approximation to a more complex object because you want to approximate everything in the simple world of linearity then can use all the tools we have developed for linear functions like Euler's method for approximating differential equations so they can be analyzed.
+In math linear means one thing changes at the same rate as another so the relation between them doesn't change. This means you can tweak knobs in models and scale bigger or smaller with a one-to-one relationship so scaling a model by 5 magnifies by 5 it doesn't shoot to 25 like x<sup>2</sup>. Linear equations or relations have the form of a straight line when graphed hence why line is in the name linear. Almost everything you learn in first year mathematics is a linear approximation to a more complex object because you want to approximate everything in the simple world of linearity like Euler's method for approximating differential equations or linearizing an exponential by using logarithms. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgacc78e6" class="outline-3">
+<div id="outline-container-org532023f" class="outline-3">
 <h3 id="what-are-polynomials">What are Polynomials</h3>
 <div class="outline-text-3" id="text-what-are-polynomials">
 <p>
-A monomial is anything in the form ax<sup>n</sup> where a is some constant (a number), and x is a variable meaning you substitute in values for x which can be a function, another monomial, or an integer. Notice if the exponent n = 0 then we have ax<sup>0</sup> which evalutes to a(1) or a constant so any single constant is also a monomial and if x = 0 then ax<sup>n</sup> is a0<sup>n</sup> or 0 so 0 is also a monomial due to the substitution axiom of equality. 
+A monomial is anything in the form ax<sup>n</sup> where a is some constant, n is an arbitrary natural number and x is a variable meaning you substitute in values for x which can be a function, another monomial, or an integer. Notice if the exponent n = 0 then we have ax<sup>0</sup> which evalutes to a(1) or a constant so any single constant is also a monomial and if x = 0 then ax<sup>n</sup> is a0<sup>n</sup> or 0 so 0 is also a monomial due to the substitution axiom of equality. 
 </p>
 
 <p>
@@ -475,7 +475,7 @@ The subscripts are an indexing scheme like how you would identify cells in an ar
 </div>
 </div>
 
-<div id="outline-container-orga36c32e" class="outline-3">
+<div id="outline-container-orgcfa45e3" class="outline-3">
 <h3 id="what-are-matrices">What are Matrices</h3>
 <div class="outline-text-3" id="text-what-are-matrices">
 <p>
@@ -492,7 +492,7 @@ A vector we'll learn later is an abstract object. In calculus courses they are u
 </div>
 </div>
 
-<div id="outline-container-org2a3660c" class="outline-3">
+<div id="outline-container-orga8cece9" class="outline-3">
 <h3 id="what-is-algebra">What is Algebra</h3>
 <div class="outline-text-3" id="text-what-is-algebra">
 <p>
@@ -509,7 +509,7 @@ An algebra seems to me to just mean computation is possible, think simple gates 
 </div>
 </div>
 
-<div id="outline-container-org4addba5" class="outline-3">
+<div id="outline-container-org2496563" class="outline-3">
 <h3 id="what-are-integration">What are Derivatives</h3>
 <div class="outline-text-3" id="text-what-are-integration">
 <p>
@@ -522,7 +522,7 @@ In economics it has a similar <a href="https://link.springer.com/article/10.1007
 </div>
 </div>
 
-<div id="outline-container-org39fb42f" class="outline-3">
+<div id="outline-container-org4e00f4c" class="outline-3">
 <h3 id="what-is-integration">What is Integration</h3>
 <div class="outline-text-3" id="text-what-is-integration">
 <p>
@@ -531,7 +531,7 @@ Integration is the undo function of taking a derivative called the anti-derivati
 </div>
 </div>
 
-<div id="outline-container-orgcca44ef" class="outline-3">
+<div id="outline-container-orgcc248a2" class="outline-3">
 <h3 id="music-and-math">Music and math</h3>
 <div class="outline-text-3" id="text-music-and-math">
 <p>
@@ -544,7 +544,7 @@ Pythagoreans and Plato claimed that music itself is nothing but auditory percept
 </div>
 </div>
 
-<div id="outline-container-org00c3d0d" class="outline-3">
+<div id="outline-container-org99d95cb" class="outline-3">
 <h3 id="math-difficulty">Math difficulty</h3>
 <div class="outline-text-3" id="text-math-difficulty">
 <blockquote>
@@ -579,7 +579,7 @@ Quote from Prof Brian S Thomson the author of the integration theory book we'll 
 </div>
 </div>
 
-<div id="outline-container-org8f402a2" class="outline-3">
+<div id="outline-container-orgd952637" class="outline-3">
 <h3 id="what-is-geometry">What is Geometry</h3>
 <div class="outline-text-3" id="text-what-is-geometry">
 
@@ -681,7 +681,7 @@ He later wrote in a manuscript on geometry that mechanics of motion was what gen
 </div>
 </div>
 
-<div id="outline-container-orgb608ebc" class="outline-2">
+<div id="outline-container-org4f51a70" class="outline-2">
 <h2 id="Basics">Basics</h2>
 <div class="outline-text-2" id="text-Basics">
 <p>
@@ -694,9 +694,9 @@ We will rigorously learn algebra/analysis later so you just need the absolute ba
 </div>
 
 
-<div id="outline-container-org3125da8" class="outline-3">
-<h3 id="org3125da8">Arithmetic with natural numbers</h3>
-<div class="outline-text-3" id="text-org3125da8">
+<div id="outline-container-orgdb8d0dd" class="outline-3">
+<h3 id="orgdb8d0dd">Arithmetic with natural numbers</h3>
+<div class="outline-text-3" id="text-orgdb8d0dd">
 <ul class="org-ul">
 <li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
 </ul>
@@ -772,18 +772,18 @@ Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is 
 </div>
 </div>
 
-<div id="outline-container-orgbde1c97" class="outline-3">
-<h3 id="orgbde1c97">Laws of Subtraction</h3>
-<div class="outline-text-3" id="text-orgbde1c97">
+<div id="outline-container-org8ec5b9d" class="outline-3">
+<h3 id="org8ec5b9d">Laws of Subtraction</h3>
+<div class="outline-text-3" id="text-org8ec5b9d">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgb388bfc" class="outline-3">
-<h3 id="orgb388bfc">The Hindu-Arabic number system</h3>
-<div class="outline-text-3" id="text-orgb388bfc">
+<div id="outline-container-org98ad038" class="outline-3">
+<h3 id="org98ad038">The Hindu-Arabic number system</h3>
+<div class="outline-text-3" id="text-org98ad038">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -800,9 +800,9 @@ A simplified Roman numeral system is introduced
 </div>
 </div>
 
-<div id="outline-container-orga20ce07" class="outline-3">
-<h3 id="orga20ce07">Arithmetic with Hindu-Arabic notation</h3>
-<div class="outline-text-3" id="text-orga20ce07">
+<div id="outline-container-orge23f080" class="outline-3">
+<h3 id="orge23f080">Arithmetic with Hindu-Arabic notation</h3>
+<div class="outline-text-3" id="text-orge23f080">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -813,9 +813,9 @@ A new way of hand multiplication is shown, taking advantage of the fact the nota
 </div>
 </div>
 
-<div id="outline-container-orgfd7f08b" class="outline-3">
-<h3 id="orgfd7f08b">Laws of Division</h3>
-<div class="outline-text-3" id="text-orgfd7f08b">
+<div id="outline-container-org8557ae2" class="outline-3">
+<h3 id="org8557ae2">Laws of Division</h3>
+<div class="outline-text-3" id="text-org8557ae2">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -839,9 +839,9 @@ In every calculus course like the recorded <a href="https://ocw.mit.edu/courses/
 </div>
 </div>
 
-<div id="outline-container-org888825f" class="outline-3">
-<h3 id="org888825f">Fractions</h3>
-<div class="outline-text-3" id="text-org888825f">
+<div id="outline-container-orgea10649" class="outline-3">
+<h3 id="orgea10649">Fractions</h3>
+<div class="outline-text-3" id="text-orgea10649">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -852,9 +852,9 @@ Interesting how he defines all these as types.
 </div>
 </div>
 
-<div id="outline-container-orgfbf242f" class="outline-3">
-<h3 id="orgfbf242f">Arithmetic with fractions</h3>
-<div class="outline-text-3" id="text-orgfbf242f">
+<div id="outline-container-org10031c1" class="outline-3">
+<h3 id="org10031c1">Arithmetic with fractions</h3>
+<div class="outline-text-3" id="text-org10031c1">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -866,11 +866,107 @@ The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> us
 </div>
 </div>
 
-<div id="outline-container-org0e8f697" class="outline-2">
+<div id="outline-container-org95a5d2e" class="outline-2">
 <h2 id="begin-here">BEGIN HERE</h2>
 <div class="outline-text-2" id="text-begin-here">
 <p>
-We are going to learn calculus in 15 minutes. First 5m we will read about the convoluted and confusing way they teach you in school then for 10m we will watch an MIT professor demonstrate what's really going on. 
+I chose models here because seldom do you ever see these functions by themselves without being parameterized in a stats or algorithm book so it's helpful to see they do indeed take parameters just like programming functions. 
+</p>
+
+<p>
+<b>Linear models</b>
+</p>
+
+<p>
+Click <a href="https://www.desmos.com/calculator/cr2989cxmu">here</a> to see a desmos.com graph of y = ax + b otherwise known as a linear model or a linear function. In this notation both y and x are the same function and can be rewritten f(x) = ax + b then by subsitution axiom y = f(x) or y = ax + b. The constants a and b are parameters just like in a programming function. If you adjust those sliders changing the values of a and b you can see what they do where b shifts up and down the y-axis and a is the slope, steepness, rise/run ratio or y/x. If there is no change in y slope or 0/x then it is a horizontal line or a constant function. If there is no change in x slope or y/0 then it is a vertical line that intersects itself infinitely often and by definition not a function since every number on the y-axis is an output for a single x input. 
+</p>
+
+<p>
+A program in <a href="https://code.pyret.org/editor">pyret</a> to model what is going on would consume both slope and intercept, partially apply both and return a new function:
+</p>
+
+<pre class="example">
+fun create-line(m, b):
+  #y = mx + b
+  lam(x :: Number): (m * x) + b end
+end
+
+check:
+  f = create-line(5, 5)
+  f(5) is 30
+
+  #scale y by 10
+  #10y = 10m(x) + 10b 
+  10 * f(5) is 300
+end
+</pre>
+
+<p>
+<b>Exponential models</b>
+</p>
+
+<p>
+The function a<sup>x</sup> has parameters Ca<sup>kx</sup> where C is the y-intercept, k is how steep or the rate of growth, and a is almost always the constant e otherwise known as Euler's number. Sometimes you see base 2 but in practice (stats, theoretical cs, algorithm analysis) everyone prefers e for an exponential model because it has many nice properties such as it's derivative is itself.
+</p>
+
+<p>
+In calculus e<sup>x</sup> is usually written exp(x) and e<sup>kx</sup> is the model you use to estimate rate of growth where if k = 1/1 then 100% growth is assumed. This is why you often see k as a rational number (a rate) or a log to adjust the growth rate. Inputs x usually represent time so plug in time + desired growth rate and the exponential model will tell you how much growth at x time. 
+</p>
+
+<p>
+Now that you know these parameters, you also know every stats/probability function you will ever come across in undergrad mathematics for example:
+</p>
+
+<p>
+\[f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}\]
+</p>
+
+<p>
+C = \(\dfrac{1}{\sigma \sqrt{2\pi}}\), k = -1 and x is inside what is called a standard score or z-score in stats to get a mean of 0 and standard deviation of 1. You read that as the domain values (x inputs) to this stats model is z-scores. 
+</p>
+
+<p>
+<b>Logarithmic models</b>
+</p>
+
+<p>
+Logs are an undo/inverse method and how you would linearize an exponential function. The log of e<sup>x</sup> is called the natural logarithm 'lon' or ln(x) and it returns time in a calculus growth model so if e<sup>x</sup> returns growth and consumes time inputs then ln(x) consumes growth and returns (linear) time. Approximately ln(x) is (x - 1) and e<sup>x</sup> is (1 + x) and now you can see why everyone uses e as a growth model instead of a power function like 2<sup>x</sup> because working with e allows for manipulating models quickly to get an approximate answer. If you input ln(1) it's defined to return zero which makes sense because you are asking at what time do I reach 1x my current growth which is obviously 0 because you started with that growth. Similarily exp(0) is 1 because you are asking at time 0 what growth can I expect and you can expect 1x growth or the identity function of the same growth you started with. 
+</p>
+
+<p>
+Almost all graphs tend to use log-log (ln(x), ln(y)) or semi-log plotting (x, ln(y)) to linearize the data, almost all algorithm texts convert everything to logs to make it easier to work with, and multiplication of large numbers was done using logs before we had devices to reduce complexity of hand calculations. 
+</p>
+
+<p>
+The params to ln() are Cln(x - h) + v where parameters v is a vertical shift, h is a horizontal shift, and C is how steep it's climbing or descending depending on pos/negative. 
+</p>
+
+<p>
+The reason e<sup>ln(a)</sup> = a and ln(e<sup>a</sup>) = a is because ln(1) = 0 and ln(e) = 1. Since 1 = e<sup>0</sup> you can substitute that into ln(1) and get ln(e<sup>0</sup>) which is 0. If you substitute in e<sup>1</sup> you get ln(e<sup>1</sup>) = 1. If you input a log to e<sup>x</sup> then e<sup>ln(1)</sup> = e<sup>0</sup> = 1 or e<sup>ln(a)</sup> = a. 
+</p>
+
+<p>
+<b>Trigometric models</b>
+</p>
+
+<p>
+This is yet another linear model where you map motion around a circle to linear motion up and down the y-axis and left and right on the x-axis. There is only one trig function you need to know about which is the sine function because cosine is merely a horizontal shift of sine and everything else like tan, sec, cot etc is derived from sin/cos.  
+</p>
+
+<p>
+<a href="https://www.desmos.com/calculator/gfmnyhpjy4">Here</a> is the parameterized sine function model or \(f(x) = Asin[\frac{2\pi}{p}(x - h)] + v\) and adjusting the sliders for A, p, h and v it's obvious what they do. You will see this model used for any kind of periodic (repeating) data. 
+</p>
+
+<p>
+A good crash course is the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trigonometry Boot Camp</a>. There's a practice sheet and video containing a walk through of solutions if you want but really you just need to watch the <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">video</a> content as we won't be doing much trig outside of the sine function. The gist of this boot camp is there are 2 triangles that when scaled up/down and overlayed on the unit circle their tips lie on the unit circle and then radians can be used to find pi/3, pi/6 etc. All the identities are covered here too. 
+</p>
+
+<p>
+I actually use in practice <a href="https://www.youtube.com/playlist?list=PL3C58498718451C47">rational trig</a> because once upon a time I went through his book/playlist and converted all the trig functions to a program library and so find that much easier to use because then I can abstract away the angle/radian floating point and do vector trig for programming models where I work. 
+</p>
+
+<p>
+<b>Derivatives</b>
 </p>
 
 <p>
@@ -885,7 +981,7 @@ From the lecture notes <a href="https://ocw.mit.edu/courses/18-01-single-variabl
 
 
 <p>
-In the diagram <i>Geometric Viewpoint on Derivatives</i> the x<sub>0</sub> at the bottom the subscript 0 means some arbitrary x input so we are looking at a fixed point not the full range of all f(x) inputs, for example f(5). To the right is x<sub>0</sub> + delta-x meaning that x<sub>0</sub> input plus a small perturbation or f(5 + 0.0001). The question 'What is a tangent line exactly' if you super zoom a local point on that curve you get a linear straight line, which is the tangent. The function that returns the slope of that linear line is the derivative. Globally we have a non-linear function (a curve) but when we just look at it locally super zooming into a very, very small interval it's linear. 
+In the diagram <i>Geometric Viewpoint on Derivatives</i> the x<sub>0</sub> at the bottom the subscript 0 means some arbitrary x input so we are looking at a fixed point not the full range of all f(x) inputs, for example f(5). To the right is x<sub>0</sub> + delta-x meaning that x<sub>0</sub> input plus a small perturbation or f(5 + 0.0001). The question 'What is a tangent line exactly' if you super zoom a local point on that curve you get a linear straight line, which is the tangent. The function that returns the slope of that linear line, of the point on the curve you zoomed in on, is the derivative or rate of change of that function at that instant. Globally we have a non-linear function (a curve) but when we just look at it locally super zooming into a very, very small interval it's linear.
 </p>
 
 
@@ -895,15 +991,15 @@ In the diagram <i>Geometric Viewpoint on Derivatives</i> the x<sub>0</sub> at th
 </figure>
 
 <p>
-In every calc intro course they define the tangent as the limit (if it exists) of the secant line slope when the distance between points P and Q becomes almost 0 and YouTube is filled with animations of this secant line approaching the curve as you reduce the distance between points but you should consider this simply another scheme of linear approximation in math that is the big idea of calculus. 
+In every calc intro course they define the tangent as the limit (if it exists) of a secant line slope when the distance between points P and Q becomes almost 0 and YouTube is filled with animations of this secant line approaching the curve thus approximating the tangent as you reduce the distance between points but you should consider this simply another scheme of linear approximation in math that is the big idea of calculus. 
 </p>
 
 <p>
-Underneath it shows the derivative is equal to the 'difference quotient' or the limit of the ratio delta-y over delta-x which is f(x + dx) - f(x) divided by dx as the change in x goes to 0 or Q gets closer to P. If you look at this you realize it's y + dy - y over dx or dy/dx.
+Underneath the triangle it shows the derivative is equal to the 'difference quotient' or the limit of the ratio delta-y over delta-x which is f(x + dx) - f(x) divided by dx as the change in x goes to 0 or Q gets closer to P. If you look at this you realize it's y + dy - y over dx or dy/dx.
 </p>
 
 <p>
-You can make this into a <a href="https://papl.cs.brown.edu/2016/func-as-data.html#%28part._.A_.Little_.Calculus%29">program</a>:
+You can make this into a <a href="https://papl.cs.brown.edu/2016/func-as-data.html#%28part._.A_.Little_.Calculus%29">program</a> to show the derivative returns a new function:
 </p>
 <pre class="example">
 fun d-dx(f :: (Number -&gt; Number)) -&gt; (Number -&gt; Number):
@@ -922,15 +1018,7 @@ end
 </pre>
 
 <p>
-Making elementary calculus into programs helps you understand what's going on, here it's obvious now the derivative is a returned function. You can write algorithms for the chain rule, product rule, anything. 
-</p>
-
-<p>
-Looking at the first example f(x) = 1/x the parameters for the difference quotient is (function) - (function) divided by dx and the function in 1/x is x so the difference quotient input is 1/(function) - 1/(function) divided by dx. Do you get what they did there to simplify? It's all explained in the Wildberger lectures in the <a href="#Basics">Basics</a>.
-</p>
-
-<p>
-If we wanted the derivative for x<sup>2</sup> it would be (function)<sup>2</sup> or (x<sub>0</sub> + delta-x)<sup>2</sup> - (x<sub>0</sub>)<sup>2</sup> divided by delta-x. 
+Looking at the first example f(x) = 1/x if we wanted the derivative for x<sup>2</sup> it would be (function)<sup>2</sup> or (x<sub>0</sub> + delta-x)<sup>2</sup> - (x<sub>0</sub>)<sup>2</sup> divided by delta-x. 
 </p>
 
 <p>
@@ -947,7 +1035,7 @@ There is a formula for any derivative of x<sup>n</sup> (power function) it's nx<
 </p>
 
 <p>
-As mentioned earlier the interpretation of this linear approximation depends on context, in <a href="https://youtu.be/zfHEkt-1sqo">this video</a> Wildberger goes through the original physics interpretation of the derivative and how integrating reverses the procedure if you're interested.  
+In <a href="https://youtu.be/zfHEkt-1sqo">this video</a> Wildberger goes through the original physics interpretation of the derivative and how integrating reverses the procedure if you're interested.  
 </p>
 
 <p>
@@ -955,12 +1043,12 @@ As mentioned earlier the interpretation of this linear approximation depends on 
 </p>
 
 <p>
-Finally let's watch the first 13 minutes of <a href="https://youtu.be/oGZK3yGF-6k">this video</a>. This lecture is from the linear algebra course we'll be doing which is MIT's new modernized 18.06 that's taught by Alan Edelman. The part we are interested in is 1:27 to 12:54. @3:30 this is all explained with concrete values. You can now see that dy = f'(x) * dx or dy/dx = f'(x) using algebra to divide both sides by dx. Skipping to @9:05 he talks about linearization or how we are taking the parabola curve (non-linear) and approximating it with dy = f'(x)*dx which is our new y = f(x) linear function. The rest of this lecture we'll watch once we know some linear algebra but effectively you now know enough calculus to teach it to yourself using your resource of choice if you don't want to do the resources I'm doing.
+Finally let's watch the first 13 minutes of <a href="https://youtu.be/oGZK3yGF-6k">this video</a>. This lecture is from the linear algebra course we'll be doing which is MIT's new modernized 18.06 that's taught by Alan Edelman. The part we are interested in is 1:27 to 12:54. @3:30 this is all explained with concrete values. You can now see that dy = f'(x) * dx or dy/dx = f'(x) using algebra to divide both sides by dx. Skipping to @9:05 he talks about linearization or how we are taking the parabola curve (non-linear) and approximating it with dy = f'(x)*dx which is our new y = ax + 0 linear model. The rest of this lecture we'll watch once we know some linear algebra but effectively you now know enough calculus to teach it to yourself using your resource of choice if you don't want to do the resources I'm doing.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgad0bceb" class="outline-2">
+<div id="outline-container-orgca06908" class="outline-2">
 <h2 id="Integration-theory">Integration Theory</h2>
 <div class="outline-text-2" id="text-Integration-theory">
 <p>
@@ -968,34 +1056,40 @@ In undegrad you take a sequence of calculus I &amp; II courses that are utterly 
 </p>
 
 <p>
-Schools think you are too stupid to understand this 100+ year old theory so teach you this intermediate integral which is as confusing as you can get because it doesn't work, never worked, and was quite literally an afterthought, a napkin definition, a throwaway theory just to accomplish a single task and the author never bothered to flesh out his integral because he was working on something else at the time. This is the trash you pay thousands of dollars for in undergrad. This undergrad teaching integral cannot include a large set of problems so they show you a ridiculous procedure to get around these century old problems with such nonsense like 'improper integrals' which do not exist whatsoever. They teach you these silly sums of infinite rectangles as the 'area' and claim this is integration but it's not. They hilariously then go on to claim the fundamental theorem of calculus includes this obsolete theory, which is a straight up lie. The fundamental theorem is derivatives and nothing else because integration is just the anti-derivative or undo procedure like going into your favorite editor and selecting 'undo'. There is indeed an area you can approximate under a curve but it's not the 'fundamental theorem' of anything
+So we will instead learn a modern integration theory and at the same time audit a book (no exercises) called <i>Calculus Reordered</i> by David M. Bressoud which you can get on libgen.is which is calculus taught in historical order. He made other books that teach you modern analysis as it was invented such as <i>A Radical Approach to Real Analysis</i> which is an excellent book, which has exercises, which has a sequel about the Lebesgue Integral. 
 </p>
 
 <p>
-So we will instead learn modern integration theory but before we do I'm auditing a book called <i>Calculus Reordered</i> by David M. Bressoud which you can get on libgen.is which is calculus taught in historical order. He made other books that teach you modern analysis as it was invented such as <i>A Radical Approach to Real Analysis</i> which is an excellent book, which has exercises, which has a sequel about the Lebesgue Integral. 
+TODO
 </p>
 </div>
 </div>
 
-<div id="outline-container-org392360a" class="outline-2">
+
+<div id="outline-container-org11cc09f" class="outline-2">
 <h2 id="Logic">Logic &amp; Proofs</h2>
 <div class="outline-text-2" id="text-Logic">
 <p>
-TODO speed read and write some programs in Lean. Do a Putnam Seminar and some Russian olympiad books on a p/t basis. Anyone can do this. 
+TODO 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge838d27" class="outline-2">
+<div id="outline-container-org8fcfab9" class="outline-2">
 <h2 id="Linear-algebra">Linear Algebra</h2>
 <div class="outline-text-2" id="text-Linear-algebra">
 <p>
-This includes vector and matrix calculus so I'm doing the new versions of 18.02 and 18.06 (Strang retired, now Edelman runs 18.06) and some Wildberger lectures because he hilariously provides simple treatments of very advanced linear transformations. 
+There's many options to learn linear algebra. One is Brown's <a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">CS53</a> where all the lectures are open to the public, and it's a programming course so you use his <a href="https://codingthematrix.com/">book</a> to do all the assignments in Python. The course prefers the complex plane as the field for most transformations (so trig functions) which makes sense if you're interested in computer gfx/game programming. There's also the VMS book from Stanford of <a href="https://web.stanford.edu/~boyd/vmls/">Applied Linear Algebra</a> with lectures on youtube. 
+</p>
+
+<p>
+I'm going to do Edelman's modernized version of <a href="https://github.com/mitmath/1806/tree/spring20">18.06 Linear Algebra</a> where almost all the work/lectures is in programming notebooks, and some Poh-Shen Loh Putnam seminars on linear algebra since it's probably the most useful subject to know that connects to all math branches. I'll also do some <a href="https://www.youtube.com/playlist?list=PL01A21B9E302D50C1">lectures</a> of 'Linear Algebraic Geometry' because everything is done in an abstract affine space so vastly simplified so you can transfer knowledge here to abstract algebra. He even demonstrates 4D transformations.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge8b007d" class="outline-2">
+
+<div id="outline-container-orgaf87aa2" class="outline-2">
 <h2 id="Category-theory">Category Theory</h2>
 <div class="outline-text-2" id="text-Category-theory">
 <p>
@@ -1011,16 +1105,16 @@ The very first page of the book she assumes we have 'a year of algebraic topolog
 </ul>
 
 <p>
-TODO but S I M P L E you can all do this. 
+TODO 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org96c3ca1" class="outline-2">
+<div id="outline-container-org062f720" class="outline-2">
 <h2 id="Type-theory">Homotopy Type Theory</h2>
 <div class="outline-text-2" id="text-Type-theory">
 <p>
-TODO the HoTT book plus Robert Harper full grad seminar videos. We have to learn categorical logic too and Awodey from CMU has a new book for this as a preprint. Once Emily teaches you these abstractions and Robert Harper then goes through them in detail you will no problem get to this level. 
+TODO
 </p>
 <hr>
 <p>

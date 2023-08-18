@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-11-08 Mon 19:32 -->
+<!-- 2023-08-17 Thu 17:03 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Software Security</title>
+<title>A Security Consultant Curriculum</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -28,11 +28,6 @@
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
-  body {
-  max-width: 40rem;
-  padding: 1rem;
-  margin: auto;
-  }
   pre {
     border: 1px solid #ccc;
     box-shadow: 3px 3px 3px #eee;
@@ -43,7 +38,7 @@
   }
   pre.src {
     position: relative;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -55,7 +50,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
+  pre.src:hover:before { display: inline;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -196,252 +191,191 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<style> body {background-color: #fafad2} </style>
+<style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
 </head>
 <body>
 <div id="content">
 <header>
-<h1 class="title">Software Security</h1>
+<h1 class="title">A Security Consultant Curriculum</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#Intro">Intro</a>
+<li><a href="#org1f51c15">Software security</a>
 <ul>
-<li><a href="#CSCI%202951U%20Topics%20in%20Software%20Security">CSCI 2951U Topics in Software Security</a></li>
+<li><a href="#org97ca6dd">The absolute state of security</a></li>
 </ul>
 </li>
-<li><a href="#Lecture%201">Lecture 1</a>
+<li><a href="#org2a68886">Curriculum</a>
 <ul>
-<li><a href="#Pwn2Own">Pwn2Own</a></li>
-<li><a href="#Shadiest%20of%20all%20hacking%20competitions">Shadiest of all hacking competitions</a></li>
-<li><a href="#Basic%20machine%20arithmetic%20crash%20course">Basic machine arithmetic crash course</a></li>
-<li><a href="#Basic%20C%20crash%20course">Basic C crash course</a></li>
-<li><a href="#Paper%3A%20Eternal%20War%20in%20Memory">Paper: Eternal War in Memory</a></li>
-<li><a href="#"></a></li>
+<li><a href="#orgde4492f">PreReqs: How bad it all is</a></li>
+<li><a href="#org5d66802">Open source security problems</a></li>
+<li><a href="#orgb0dc5a8">It is impossible to avoid surveillance</a></li>
+<li><a href="#org0457cd3"></a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
+<style>details summary { color: green; }</style>
 
-<div id="outline-container-Intro" class="outline-2">
-<h2 id="Intro">Intro</h2>
-<div class="outline-text-2" id="text-Intro">
+<div id="outline-container-org1f51c15" class="outline-2">
+<h2 id="org1f51c15">Software security</h2>
+<div class="outline-text-2" id="text-org1f51c15">
 <p>
-What's the current 'state of the art' as way as software security only because I don't want my own software to be broken. 
+What's the state of the art in software security attacks right and how can we get paid to specialize in this? Is my own software junk? Is there any hope of having non-junk software, does anybody even really care? Here we find these answers. 
 </p>
 </div>
 
-<div id="outline-container-CSCI%202951U%20Topics%20in%20Software%20Security" class="outline-3">
-<h3 id="CSCI%202951U%20Topics%20in%20Software%20Security">CSCI 2951U Topics in Software Security</h3>
-<div class="outline-text-3" id="text-CSCI%202951U%20Topics%20in%20Software%20Security">
+<div id="outline-container-org97ca6dd" class="outline-3">
+<h3 id="org97ca6dd">The absolute state of security</h3>
+<div class="outline-text-3" id="text-org97ca6dd">
 <p>
-From the <a href="https://cs.brown.edu/courses/csci2951-u/">overview</a> of the <a href="https://cs.brown.edu/courses/csci2951-u/lectures.html">course</a>:   
-</p>
-
-<p>
-"CSCI 2951U investigates the state-of-the-art in software/systems exploitation and defense. More specifically, the course is structured as a seminar where students present (along with the instructor) research papers to their peers. We will begin with a summary of prevalent software and hardware related defects, which are typically found in applications written in memory unsafe languages, like C/C++, and/or contemporary architectures, such as x86 and ARM, and proceed to surveying what we are up against: traditional and modern exploitation techniques, ranging from classical code injection and code reuse up to the newest goodies, like JIT-ROP, Blind ROP, and software-based microarchitectural attacks. For the bulk part, we will be focusing on the latest advances in protection mechanisms, mitigation techniques, and tools against modern vulnerability classes and exploitation methods." 
-</p>
-
-<p>
-How the course works:
-</p>
-
-<p>
-"Every week we will be discussing (a set of) research papers. Students are expected to read the assigned papers and write a short review (critique) before each class&#x2026;..(Your paper review) should discuss the pros and cons of the proposed idea, protection mechanism, or bypass technique"
-</p>
-
-<p>
-Exactly what I am looking for, a survey of modern attacks and mitigations to stop them not a bunch of how-to tutorials, we can figure out the how-to ourselves after reading about their implementation and experiment ourselves. All the prereqs needed we'll just figure out ourselves backtracking and filling in gaps as we go.
+Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He honestly tells us how nobody cares or wants to fix the problems they just want to get a consultant fee putting out fires. He wrote multiple warnings to the Rails github repository only for them to hand wave the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future.
 </p>
 </div>
 </div>
 </div>
 
-
-<div id="outline-container-Lecture%201" class="outline-2">
-<h2 id="Lecture%201">Lecture 1</h2>
-<div class="outline-text-2" id="text-Lecture%201">
+<div id="outline-container-org2a68886" class="outline-2">
+<h2 id="org2a68886">Curriculum</h2>
+<div class="outline-text-2" id="text-org2a68886">
 <p>
-The lecture <a href="https://cs.brown.edu/courses/csci2951-u/slides/l01.pdf">slides</a>. There's prereqs but they indicate we are going to review the most important concepts anyway in all the papers and assigned reading, great.
-</p>
-
-<p>
-We just need to know:
+I split this up depending what you're interested in from easiest to get into to hardest
 </p>
 
 <ul class="org-ul">
-<li>basic C/x86 asm</li>
-<li>code injection</li>
-<li>code reuse (return oriented programming)</li>
-<li>linking and loading</li>
-<li>virtual memory    
+<li>Threat Analyst
 <ul class="org-ul">
-<li>all are covered by a <a href="https://www.youtube.com/playlist?list=PLcQU3vbfgCc9sVAiHf5761UUApjZ3ZD3x">few lectures</a> from CMUs 15-213 and <a href="https://cs.brown.edu/courses/csci1650/lectures.html">CSCI 1650</a></li>
+<li>We analyze job listings for this and see how fast we can teach ourselves the requirements because these are great side incomes investigating logs looking for problems.</li>
+</ul></li>
+
+<li>Pen testing/AppSec  
+<ul class="org-ul">
+<li>The company that sells Burpsuite maintains one of the best <a href="https://portswigger.net/daily-swig">security blogs</a>, if it's important to know it'll probably be there. They also have an <a href="https://portswigger.net/web-security">academy</a> of labs we'll do.</li>
+<li>MIT's 6.858 <a href="https://css.csail.mit.edu/6.858/2020/">Computer Systems Security</a> course from 2020 is open w/lectures on YouTube, and the material is not very different from 2022. More importantly all the labs are open.</li>
+</ul></li>
+
+<li>Exploits for fun and profit
+<ul class="org-ul">
+<li>Brown's <a href="https://cs.brown.edu/courses/csci1650/lectures.html">exploit</a> course is mostly open (no lectures, but assignments are open), and their grad <a href="https://cs.brown.edu/courses/csci2951-u/lectures.html">course</a> which is mainly papers about memory corruption Return-Oriented Programming techniques like JIT-ROP which will not go away ever with current architecture and still works. We'll also do MIT's <a href="http://csg.csail.mit.edu/6.S983/">CPU hacking</a> course learning about side-channels, cache-attacks, the 'trusted platform' attacks and rowhammer or flipping bits in memory without even accessing them.</li>
+</ul></li>
+
+<li>Post-Quantum Crypto/Cryptanalysis
+<ul class="org-ul">
+<li>Done in this <a href="https://functionalcs.github.io/curriculum/crypto.html">workshop</a> though we'll see some of it here. This is the most critical security because all your data is being vacuumed up and sitting somewhere waiting to be decrypted once 'quantum supremacy' happens.</li>
 </ul></li>
 </ul>
+</div>
 
+<div id="outline-container-orgde4492f" class="outline-3">
+<h3 id="orgde4492f">PreReqs: How bad it all is</h3>
+<div class="outline-text-3" id="text-orgde4492f">
 <p>
-The first paper they want us to read is <a href="https://ieeexplore.ieee.org/document/6547101">this</a> <i>SoK: Eternal War in Memory</i>. Get the DOI number from that page and paste it into <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> or click on PDF.
+If you haven't seen it, watch the CS19 lecture on <a href="https://youtu.be/7orQOW6fp2A">security</a>. I assume you did that whole course. 
 </p>
 
 <p>
-Reading the abstract they setup a general model for memory corruption attacks, pointing out performance is a problem for using better memory policies so nobody uses them. We read this with the course advice in mind to 'discuss the pros and cons of the proposed idea, protection mechanism, or bypass technique'. Let's read the paper.
-</p>
-</div>
-
-<div id="outline-container-Pwn2Own" class="outline-3">
-<h3 id="Pwn2Own">Pwn2Own</h3>
-<div class="outline-text-3" id="text-Pwn2Own">
-<p>
-This paper talks about <a href="https://www.zerodayinitiative.com/blog/2021/4/2/pwn2own-2021-schedule-and-live-results">pwn2own</a> which you can watch day 1 <a href="https://youtu.be/dA3aIMgRFY8">here</a> and around the 6hr mark there's a good interview with an Egyptian hacker who says it takes 3 months to understand how a thing works, then not very long after to find a vuln using IDA Pro to reverse engineer said thing. He says in the beginning he knew nothing and was just persistent to get to his level. There is a moment of cringe when the interviewer implies that web hacking is somehow not as 'hardcore' as blowing up junk VMs or reversing some junk proprietary binary. Egyptian hacker guy seems unimpressed with this question and repeats that you just have to put in the work to understand whatever it is you're trying to exploit. He ends with saying the biggest problem is <b>nobody is looking at solutions</b> which is something Egor Homakov another security researcher has written about many times: actual investment into real security is a waste of time to most software companies when the current market for software is like a slot machine you add as little investment as possible and pull that handle until you cash out meaning somebody bigger buys your software and now security is their problem. I'm also amazed anybody wastes their time with these competitions, if you look at their 2021 live results, some team chained together 6 bugs to execute code but because a single bug was declared to be already known (and of course not yet patched) they were screwed out of full payment.
-</p>
-</div>
-</div>
-
-<div id="outline-container-Shadiest%20of%20all%20hacking%20competitions" class="outline-3">
-<h3 id="Shadiest%20of%20all%20hacking%20competitions">Shadiest of all hacking competitions</h3>
-<div class="outline-text-3" id="text-Shadiest%20of%20all%20hacking%20competitions">
-<p>
-<a href="https://cytaka.com">Cytaka</a> is a <a href="https://youtu.be/zCjFz2RvINM">real</a> global competition held in Dubai or Israel every month engineered by what looks like Israeli-Emirates joint gov actors for $1m to $250k prize money. It's pretty obvious if you attend such a thing you'll likely be <a href="https://news.ycombinator.com/item?id=28541117">recruited</a> even if you don't win for state sponsored hacking, or recruited in the app. I have no moral high ground to say being a mercenary security developer for the Emirates is right or wrong since my own country is doing the exact same thing just has better image marketing. 
+Immediately npm breaches is brought up, the JavaScript package manager. You may have tried to install some Node.js software to run it locally and noticed there's hundreds of dependencies being automatically installed. If you missed the attack description the stream dependency was attacked to specifically target some Bitcoin wallet software in hopes that the wallet developers themselves would include it in their builds and they did. Hilariously all the attacker had to do was find some unmaintained but popular dependency and took over the entire project. Many browser plugins have had this happen too, either sold to adtech or malware writers or they helpfully take over the abandoned project. Shady adtech has done this too they buy QR code reading software in Google Play Store and 'enable ads' meaning when you scan a QR code, it fools the user into handing over financial details to some scam subscription. 
 </p>
 
 <p>
-Looking at the Cytaka app, it's gamified training so you need to win in-app money in order to open later levels. Actually not a bad idea, in fact I was going to gamify the entire learnai site eventually esp the math content. The top 10 each month get sent to compete, so everything resets monthly. Playing around in it, there's a lot of weird semantic mistakes in the multiple choice answers like 'all of the above' or 'everything above', and only one answer is correct. If you want try the app as you finish this workshop, maybe eventually you'll get into the top 10 that month and can compete for $, just be aware anyone hiring you there or in the app is surely from some kind of gov agency. 
+@9:00 we're getting into nightmare scenario where VSCode the editor most developers use is now compromised. The point is some dependency nobody pays attention to got turned into malicious code and found it's way into every critical program on earth almost.
 </p>
-</div>
-</div>
 
-<div id="outline-container-Basic%20machine%20arithmetic%20crash%20course" class="outline-3">
-<h3 id="Basic%20machine%20arithmetic%20crash%20course">Basic machine arithmetic crash course</h3>
-<div class="outline-text-3" id="text-Basic%20machine%20arithmetic%20crash%20course">
 <p>
-Watch the second <a href="https://youtu.be/SIHjTvIM1EQ">lecture</a> from CMU's 15-213 <a href="https://www.youtube.com/playlist?list=PL4YtNpAhVHFJVlaD203_8JkUOUT8RYUhY">playlist</a> to understand what a bit is, what a byte is, what two's complement is, TMax and Tmin, hexadecimal encoding, basic shift operations, you don't have to watch the whole lecture where it later goes into type casting. You can also get the latest version of <a href="https://csapp.cs.cmu.edu/">CS:APP</a> from library genesis if you don't want to watch a lecture, the lecturers wrote that book. It goes into much more detail than we will ever need here and can be looked at later. 
+@19:50 the seemingly benign software you find in the wild like adding colors to your terminal or javascript console is actually filled with malware of course but you probably knew that already. Famously this was almost all the flashlight/torch apps on app store before they cracked down.
+</p>
+
+<p>
+@28:14 he's reminding us again the most dangerous software is the software you least expect to be dangerous. @35:27 every basic shell copy program in every OS will bring in fopen() and then you're screwed, it has access to the entire filesystem. Where can you learn bourne shell &gt; or &lt; read, either MIT's <a href="https://missing.csail.mit.edu/2020/shell-tools/">course</a> on the <i>Missing Semester of your CS Education</i> or the book <i>The Unix Programming Environment</i> by Pike &amp; Kernighan from the 1980s which is a tiny book and well worth reading (we'll do it after this). I once used that book to pass a resume filter for StackOverflow you had to solve some puzzle in the shell and IIRC it was on like the 20th page or so of that book. 
+</p>
+
+<p>
+'The internet, operating systems, all programming languages, these things were built to be maximal insecure'.
+</p>
+
+<p>
+He talks about SELinux also known as MAC or mandatory access controls. MAC is something security people love because it's knob tweaking but states become so complex in modern systems you cannot guarantee your policy doesn't allow illicit states without some kind of logical assistant like Alloy/Forge or other SAT prover. SAT is a logical connectives problem like p1 or p2 or p3 and what combination of T/F satisfies that problem, they are known NP-Complete problems so MAC quickly gets out of control if you go overboard.      
 </p>
 </div>
 </div>
 
-<div id="outline-container-Basic%20C%20crash%20course" class="outline-3">
-<h3 id="Basic%20C%20crash%20course">Basic C crash course</h3>
-<div class="outline-text-3" id="text-Basic%20C%20crash%20course">
+<div id="outline-container-org5d66802" class="outline-3">
+<h3 id="org5d66802">Open source security problems</h3>
+<div class="outline-text-3" id="text-org5d66802">
 <p>
-Next these brief <a href="https://cs.uwaterloo.ca/~plragde/flaneries/IYMLC/Introduction_to_C.html">notes</a> to learn the C memory model. They are a great resource, getting right to the point and explaining just what we need aimed at a reader who has functional programming experience in Racket, and I assume you've done CS19 in the other <a href="https://learnaifromscratch.github.io/software.html">workshop</a> and Pyret was originally built from Racket so you will have no trouble understanding this.
+This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relevant still. Let's watch it. It's him as a security researcher thinking what would he do with an enormous security budget and a mandate to monitor as many communications as possible. Since he is involved in FreeBSD project he thinks about it from an open source sabotaging viewpoint. 
 </p>
 
 <p>
-Start <a href="https://cs.uwaterloo.ca/~plragde/flaneries/IYMLC/Introduction_to_C.html">reading</a> at 2.1 <i>Basics</i> looking at the C memory model diagram, each row is 32bits (one word) which the author notes that 32bits is used for the purposes of making it easier to read this guide as it's similar to how a 64bit model works anyway. This is a recurring theme in courses I have taken, for example CMU's operating system course is only taught with 32bit because conceptually the same thing is going on and 64bit is a nightmare to work with for assignments they do like building your own tiny kernel. If you read the course syllabus the prof does not consider fighting with x86-64 complexity to give you any more insight into how a kernel works.  
+@5:10 is very interesting. It reminds me of back in the day when there were many people writing 'security Android ROMs' or those in-memory operating systems you loaded up with a boot DVD/USB or advanced security OSs like Subgraph OS. They all disappeared to get highly paid elsewhere and abandoned their project like he talks about in this 2014 talk. 
 </p>
 
 <p>
-Back to 2.1, he goes through a sample C program, these are all sequentially executed statements that return nothing (void) they produce side effects and the return statement is an exit back to whatever program called it, usually a shell, and the return status numbers indicate error codes. Moving on to 2.2 and 2.3 you can see an example of prototypes or external global variables <a href="https://github.com/mit-pdos/xv6-riscv/blob/riscv/kernel/defs.h">here</a> in MIT's implementation of xv6 which is a V6 unix clone they use to teach their operating systems class. Some of the header files have external globals some don't. At the end of 2.3 there's questions: what happens if we exclude x file? The compiler can't link, if gcd-driver.c forgets to include gcd.h then the global variable being used in gcd-driver will fail, the compiler will also give warnings no prototypes when it compiles gcd-driver.c and doesn't know the types of the parameters of the gcd function inside gcd-func. This will all be covered when we do linking.
-</p>
-
-<p>
-2.4 <i>Iteration</i> if you've taken CS19 in the compsci/software workshop then you already know what structural recursion is, it means taking apart the structure the same way you built it up. Of course you can translate all the Racket programs in this book to Pyret (if you've done <a href="https://learnaifromscratch.github.io/software.html">this workshop</a>)
-</p>
-
-<pre class="example" id="orgfd231d0">
-fun sum1(n :: Number) -&gt; Number:
-  doc: "Structural Recursion, if the structure is a natural number n++ then disassemble by n--"
-  if n == 0:
-    0
-  else: n + sum1(n - 1)
-  end
-where:
-  sum1(5) is 5 + 4 + 3 + 2 + 1
-end
-
-fun sum2(n :: Number) -&gt; Number:
-  doc: "Accumulator recursion, keeps a running tally in a variable and returns it"
-  fun sum2-helper(counter, acc):
-    if counter == 0:
-      acc
-    else:
-      sum2-helper((counter - 1), acc + counter)
-    end
-  end
-  sum2-helper(n, 0)
-where:
-  sum2(5) is 5 + 4 + 3 + 2 + 1
-end
-</pre>
-
-<p>
-2.5 <i>Computational Model</i> the standard I/O library opened with the #include &lt;stdio.h&gt; statement translates to: open the namespace of this library filled with standard input/output programs so you can call them by name and they're all in scope like printf() function. Since we are taking a security course, you'll see later that the more refined scope you can have the better so your programs don't have access to things like the network if they're not supposed to. In other language idioms, you would prefer to only extract from libraries the single functionality you need like 'import printf from (library)', create a let block where that namespace is contained and then you aren't carrying around a gigantic attack space in the entire program.  
-</p>
-
-<p>
-The stack frame writeup here is excellent, no silly diagrams just memory examples. You can also watch <a href="https://youtu.be/lthX7JQjlgI">this</a> lecture describing what it is from a x86-64 point of view. If a program main() calls a new function y(), a stack frame is allocated where y() will store all it's local variables in memory. When y() returns that memory is deallocated and can't be relied on anymore. Here is plenty of opportunites for hacks, what if you change the return address of a stack frame to something else, you can jump somewhere different in the program or access memory you shouldn't be able to. What if you return the stack out of order like move the stack pointer to whatever frames you want on the stack? You can then like using lego blocks rearrange the all the returns to do your evil bidding which we'll learn soon. Skim through the next chapter to read about C loop idioms if you've never seen them, I didn't know they were originally to help signal to the compiler where to optimize. 
-</p>
-
-<p>
-Chapter 3 <a href="https://cs.uwaterloo.ca/~plragde/flaneries/IYMLC/Pointers.html">pointers</a>. This is the clearest and most efficient description of pointers I've ever read. 'Word size' means the largest size of memory that machine offers which is typically 64bit.
-</p>
-
-<p>
-Why do pointers exist? Because if you consider a machine's memory model to be a gigantic flat array of bytes, and you want to be able to create linked lists and queues or trees and whatever with that flat array, you can use a memory address abstraction to merely move around pointers that define the structure and everything you do is in constant time. Example: adding a new value on to the head of a linked list. Instead of having to copy the old list to a new resized memory location including the new head you merely move the list head pointer and leave everything else where it is. It doesn't have to be all side by side in memory, just needs a pointer to the next memory location to find the next linked list element. 
-</p>
-
-<p>
-The semantic demo here of pointers requires careful following until you get it, simply remember the rules of lvalue and rvalue:
-</p>
-
-<ul class="org-ul">
-<li>*p = 5 (lvalue, store 5 in memory location of p or &amp;p)</li>
-<li>x = *p (rvalue, return contents of &amp;p which is 5)</li>
-</ul>
-
-<p>
-Important quote: <i>C programs can expose enough of the machine they are running on that even perfectly correct programs can exhibit different behaviour when compiled and run on different machines</i>. More opportunites for hacks. 
-</p>
-
-<p>
-3.4 <i>Heap allocation in C</i> another great and brief chapter telling you just what's needed to know in order to understand how malloc works conceptually generating a pointer to a chunk of heap memory. Heap memory has different definitions ie: data structure heap memory, here it solely means the portion of memory that has been dynamically allocated by malloc. For example if main program calls a function, we know that function returns and the stack frame is lost and it's memory contents unreliable. If you want to keep that memory around for whatever reasons, have malloc manually initialze and free it later when not needed. More opportunities for hacks of course, what happens if if you free it <a href="https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory#">twice</a> accidentally or intentionally? These notes point out the true functionality of sizeof which is an instruction to the compiler for portability substituting the actual machine size.
-</p>
-
-<p>
-Skip to 3.7 and 3.8 about arrays though this entire set of notes is worth working through like seeing the heavy use of mutation for O(1) queue/dequeue running time. Now you know C array indexing. Reallocate or realloc is described here to dynamically resize arrays, briefly skim all this noting where to return if later needed. Finally <a href="https://cs.uwaterloo.ca/~plragde/flaneries/IYMLC/Intermediate_C.html">Intermediate C</a> skim over pointer arithmetic and strings. You're done.
+@12:28 this is what we came for how modern open source projects are sabotaged. @16:40 some modern mobile browser versions won't even let you use self-signed certs anymore even after clicking all the 'omg but the risks!' buttons. @25:45 is great, wait for some security problem and then 'find a helpful patch' and claim you reviewed it. The deceptive defaults I have been burned by many times. @28:18 OpenVPN is another disaster.
 </p>
 </div>
 </div>
 
-<div id="outline-container-Paper%3A%20Eternal%20War%20in%20Memory" class="outline-3">
-<h3 id="Paper%3A%20Eternal%20War%20in%20Memory">Paper: Eternal War in Memory</h3>
-<div class="outline-text-3" id="text-Paper%3A%20Eternal%20War%20in%20Memory">
+<div id="outline-container-orgb0dc5a8" class="outline-3">
+<h3 id="orgb0dc5a8">It is impossible to avoid surveillance</h3>
+<div class="outline-text-3" id="text-orgb0dc5a8">
 <p>
-Finishing <a href="https://ieeexplore.ieee.org/document/6547101">this</a> paper. Figure 1 was in the lecture slides, now we know what a dangling pointer is: a pointer to freed malloc created heap memory or the other example in the <i>If You Must Learn C</i> flanerie where he showed what happens when you have a dangling pointer to a stack frame, like trying to return the memory address of a variable created in the frame back to the calling program. Amazing how those 2 simple errors can result in 4 categories of disaster. The green part of the diagram is the common mitigations, like data space randomization to prevent information leak. In fact notice how much randomization is being used now in this figure to try and stop these attacks from instruction set randomization to making the memory addresses non deterministic so you can't easily predict where things are on a stack or in memory to jump to, and yet they still don't work. 
-</p>
-
-<p>
-Reading II <i>Attacks</i> everything begins with triggering a memory error. Kernel-space means the protected memory space reserved for your operation system functions as compared to user space which is low privilege run programs. 
+Do you remember Jacob Appelbaum? He disappeared after being cancelled and got his PhD under DJ Bernstein and Tanja Lange in post-quantum security. There is a very, very good interview <a href="https://www.youtube.com/watch?v=ujeUGAT5D-s">here</a>. Now we're going to read his PhD dissertation and find out just exactly how you can't avoid surveillance because everything you're doing today is being stored for decryption tomorrow. 
 </p>
 
 <p>
 TODO
 </p>
+
+
 
 
 
@@ -464,8 +398,8 @@ TODO
 
 
 
-<div id="outline-container-" class="outline-3">
-<h3 id=""></h3>
+<div id="outline-container-org0457cd3" class="outline-3">
+<h3 id="org0457cd3"></h3>
 </div>
 </div>
 </div>

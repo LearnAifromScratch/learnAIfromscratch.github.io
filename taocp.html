@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-08-24 Thu 19:54 -->
+<!-- 2023-08-24 Thu 20:03 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Let's Do The Art of Computer Programming</title>
@@ -269,38 +269,38 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgffa1665">The Book(s)</a>
+<li><a href="#org31d732c">The Book(s)</a>
 <ul>
-<li><a href="#org9e5e180">The Bill Gates quote</a></li>
-<li><a href="#org1b7637f">MMIX and MIX</a></li>
-<li><a href="#org4f70c2a">Optimizing compilers are dead</a></li>
-<li><a href="#org62bfc78">Sedgewick <i>Intro to Algorithm Analysis</i></a></li>
-<li><a href="#org6917204">The math preliminaries</a></li>
+<li><a href="#org0e2b2ce">The Bill Gates quote</a></li>
+<li><a href="#org05deb70">MMIX and MIX</a></li>
+<li><a href="#orgae29b59">Optimizing compilers are dead</a></li>
+<li><a href="#orgf8fbac5">Sedgewick <i>Intro to Algorithm Analysis</i></a></li>
+<li><a href="#orga45a1b7">The math preliminaries</a></li>
 </ul>
 </li>
-<li><a href="#org94b7ece">Microcorruption CTF</a>
+<li><a href="#orga5c9599">Microcorruption CTF</a>
 <ul>
-<li><a href="#org7cc3609">New Orleans</a></li>
-<li><a href="#org03aeeab">Sydney</a></li>
-<li><a href="#org606a7a1">Hanoi</a></li>
-<li><a href="#orgb000042">Cusco</a></li>
-<li><a href="#org139b788">Reykjavik</a></li>
-<li><a href="#org270439a">Whitehorse</a></li>
-<li><a href="#orgea19d20">Montevideo</a></li>
+<li><a href="#orgb49daed">New Orleans</a></li>
+<li><a href="#org351a3ec">Sydney</a></li>
+<li><a href="#orgc361268">Hanoi</a></li>
+<li><a href="#org371df10">Cusco</a></li>
+<li><a href="#orgbaa2efb">Reykjavik</a></li>
+<li><a href="#org6536866">Whitehorse</a></li>
+<li><a href="#org55ac4db">Montevideo</a></li>
 </ul>
 </li>
-<li><a href="#org1cef90c">1.1 Algorithms</a></li>
-<li><a href="#org42b1106">1.2.1 Mathematical Induction</a></li>
-<li><a href="#org878c17a">1.2.2 Numbers, Powers and Logs</a></li>
-<li><a href="#org7026472">1.2.3 Sums and Products</a></li>
+<li><a href="#org59238ad">1.1 Algorithms</a></li>
+<li><a href="#orgf68c581">1.2.1 Mathematical Induction</a></li>
+<li><a href="#org4498d11">1.2.2 Numbers, Powers and Logs</a></li>
+<li><a href="#org0cb2b82">1.2.3 Sums and Products</a></li>
 </ul>
 </div>
 </nav>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgffa1665" class="outline-2">
-<h2 id="orgffa1665">The Book(s)</h2>
-<div class="outline-text-2" id="text-orgffa1665">
+<div id="outline-container-org31d732c" class="outline-2">
+<h2 id="org31d732c">The Book(s)</h2>
+<div class="outline-text-2" id="text-org31d732c">
 <p>
 See the official <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site, I'm going to start with <i>Volume 1: Fundamental Algorithms</i>. These books aren't a reference, much of the index points to exercises and the content is often comparing two algorithms together. You can decide after you read it yourself how to classify them. 
 </p>
@@ -313,9 +313,9 @@ The physical book itself is a representation of the work that has gone into it's
 None of these notes will make any sense unless you are reading the book(s) with them I'm not copying the text. 
 </p>
 </div>
-<div id="outline-container-org9e5e180" class="outline-3">
-<h3 id="org9e5e180">The Bill Gates quote</h3>
-<div class="outline-text-3" id="text-org9e5e180">
+<div id="outline-container-org0e2b2ce" class="outline-3">
+<h3 id="org0e2b2ce">The Bill Gates quote</h3>
+<div class="outline-text-3" id="text-org0e2b2ce">
 <p>
 Everybody talks about the famous old quote in the back of volume 1 by Gates: 'you should definitely send me a resume if you can read the whole thing'. I found a more recent quote from 2005:
 </p>
@@ -349,9 +349,9 @@ I'm not sure what the double-star problems are, maybe the earlier editions had t
 </div>
 </div>
 
-<div id="outline-container-org1b7637f" class="outline-3">
-<h3 id="org1b7637f">MMIX and MIX</h3>
-<div class="outline-text-3" id="text-org1b7637f">
+<div id="outline-container-org05deb70" class="outline-3">
+<h3 id="org05deb70">MMIX and MIX</h3>
+<div class="outline-text-3" id="text-org05deb70">
 <p>
 You can if you want use the <i>MMIX Supplement</i> by Ruckert to replace the MIX/MIXAL content with MMIX/MMIXAL in volumes 1-3. MMIX isn't a single machine, you can customize the hardware however you want using Knuth's free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, bus speeds, anything. He documented that program with the book <i>MMIXware: A RISC Computer for the Third Millennium</i> and all the code is written in literate programming style so you can read the programs like you would any other book. RISC-V is taught in MIT's 6.004 course on <a href="https://www.youtube.com/playlist?list=PLOVc_J85b9DT9ZfKZmlRGIDVk6UXT_4yR">YouTube</a> to better understand a RISC architecture if you want. MMIX assumes an operating system exists. MMIX you can use the mixmasters <a href="http://mmix.cs.hm.edu/getstarted.html">version</a> or the 2017 sealed in time Knuth <a href="https://www-cs-faculty.stanford.edu/~knuth/programs/mmix.tar.gz">version</a> you compile from <a href="https://www-cs-faculty.stanford.edu/~knuth/cweb.html">c-web sources</a> that are extensively documented. 
 </p>
@@ -362,9 +362,9 @@ To start I'm just going to use the original MIX, and switch in Volume 4 to MMIX 
 </div>
 </div>
 
-<div id="outline-container-org4f70c2a" class="outline-3">
-<h3 id="org4f70c2a">Optimizing compilers are dead</h3>
-<div class="outline-text-3" id="text-org4f70c2a">
+<div id="outline-container-orgae29b59" class="outline-3">
+<h3 id="orgae29b59">Optimizing compilers are dead</h3>
+<div class="outline-text-3" id="text-orgae29b59">
 <p>
 Another reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. Djb notes in this talk CloudFlare hand rolled his <a href="https://nacl.cr.yp.to/">ChaCha/Poly</a> using assembly. Hoare suggests that future compilers should have interactive transformations the programmer can use to specify optimizations themselves.
 </p>
@@ -375,18 +375,18 @@ If you're interested in this watch some of <a href="https://www.cs.cornell.edu/c
 </div>
 </div>
 
-<div id="outline-container-org62bfc78" class="outline-3">
-<h3 id="org62bfc78">Sedgewick <i>Intro to Algorithm Analysis</i></h3>
-<div class="outline-text-3" id="text-org62bfc78">
+<div id="outline-container-orgf8fbac5" class="outline-3">
+<h3 id="orgf8fbac5">Sedgewick <i>Intro to Algorithm Analysis</i></h3>
+<div class="outline-text-3" id="text-orgf8fbac5">
 <p>
 Robert Sedgewick who was Knuth's PhD student has a new-ish <a href="https://sedgewick.io/courses/analysis-of-algorithms/">book</a> <i>An Intro to the Analysis of Algorithms</i> which is essentially a concise version of TAOCP, his website says the major goal is to prepare students for TAOCP. He uses what is called analytical combinatorics in a second book to do awesome things like skipping recurrences completely and just analyzing generating functions instead. There's a MOOC (free) for the book and memecoin lectures for it on cubits.ai it's an excellent book but since we are already reading TAOCP we'll just continue. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6917204" class="outline-3">
-<h3 id="org6917204">The math preliminaries</h3>
-<div class="outline-text-3" id="text-org6917204">
+<div id="outline-container-orga45a1b7" class="outline-3">
+<h3 id="orga45a1b7">The math preliminaries</h3>
+<div class="outline-text-3" id="text-orga45a1b7">
 <p>
 Much of the beginning math chapters are covered in this YouTube <a href="https://www.youtube.com/playlist?list=PLgTkKBA6LRqYuuQ-LboerRblBoD_q_eUM">playlist</a> by Poh-Shen Loh and also Ryan O'Donnell in this <a href="https://www.youtube.com/playlist?list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX">playlist</a> covers harmonic numbers asymptotics and other topics. We'll do them as they come up.  
 </p>
@@ -394,9 +394,9 @@ Much of the beginning math chapters are covered in this YouTube <a href="https:/
 </div>
 </div>
 
-<div id="outline-container-org94b7ece" class="outline-2">
-<h2 id="org94b7ece">Microcorruption CTF</h2>
-<div class="outline-text-2" id="text-org94b7ece">
+<div id="outline-container-orga5c9599" class="outline-2">
+<h2 id="orga5c9599">Microcorruption CTF</h2>
+<div class="outline-text-2" id="text-orga5c9599">
 <p>
 The preface says we should familiar enough with programming that we've written and tested a few programs, which means assembly/machine language programs. We can learn that doing microcorruption.com CTF and having a visual interface to step through all the code in the debugger to see what it does, see how registers are manipulated etc.
 </p>
@@ -423,18 +423,18 @@ There's a <a href="https://microcorruption.com/public/manual.pdf">manual</a> for
 </p>
 </div>
 
-<div id="outline-container-org7cc3609" class="outline-3">
-<h3 id="org7cc3609">New Orleans</h3>
-<div class="outline-text-3" id="text-org7cc3609">
+<div id="outline-container-orgb49daed" class="outline-3">
+<h3 id="orgb49daed">New Orleans</h3>
+<div class="outline-text-3" id="text-orgb49daed">
 <p>
 The comparison instruction wants a 7 char password, the 'create password' sub-routine generates a 7 char password, try it just entering the 7 hex numbers in one password string, success.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org03aeeab" class="outline-3">
-<h3 id="org03aeeab">Sydney</h3>
-<div class="outline-text-3" id="text-org03aeeab">
+<div id="outline-container-org351a3ec" class="outline-3">
+<h3 id="org351a3ec">Sydney</h3>
+<div class="outline-text-3" id="text-org351a3ec">
 <p>
 Set breakpoint at most interesting function which looks like check password. Enter 'test' as text for password, then c to zip to the breakpoint. Pressing s and stepping, r15 is pointing to 439c where we see 7465 7374 or 'test'. Notice the instructions however:
 </p>
@@ -456,36 +456,36 @@ Note the actual code/instruction the machine uses is bf902b5d0000 or bf907021020
 </div>
 </div>
 
-<div id="outline-container-org606a7a1" class="outline-3">
-<h3 id="org606a7a1">Hanoi</h3>
-<div class="outline-text-3" id="text-org606a7a1">
+<div id="outline-container-orgc361268" class="outline-3">
+<h3 id="orgc361268">Hanoi</h3>
+<div class="outline-text-3" id="text-orgc361268">
 <p>
 Passwords must be between 8-16 chars so I entered a gigantic password and while stepping through the execution noticed it overflowed to the second memory location 2410. Ctrl-f the instructions for 2410 and there's a comparison there so I overflowed the hex password to 17 digits with that comparison at 2410. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb000042" class="outline-3">
-<h3 id="orgb000042">Cusco</h3>
-<div class="outline-text-3" id="text-orgb000042">
+<div id="outline-container-org371df10" class="outline-3">
+<h3 id="org371df10">Cusco</h3>
+<div class="outline-text-3" id="text-org371df10">
 <p>
 Entered another gigantic password, noticed it overflowed to where the program counter (the next instruction) is so overflowed it to change the pc to 'unlock door' instruction in little endian format.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org139b788" class="outline-3">
-<h3 id="org139b788">Reykjavik</h3>
-<div class="outline-text-3" id="text-org139b788">
+<div id="outline-container-orgbaa2efb" class="outline-3">
+<h3 id="orgbaa2efb">Reykjavik</h3>
+<div class="outline-text-3" id="text-orgbaa2efb">
 <p>
 We can't see all the disassembly and have to step watching 'Current Instruction' box. Enter a single character password as a test and step until you see a cmp for the address in r4 offset by -0x24 or 36. Move back that amount in memory and you're at the password you just entered, so enter (little endian) whatever the cmp constant is. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org270439a" class="outline-3">
-<h3 id="org270439a">Whitehorse</h3>
-<div class="outline-text-3" id="text-org270439a">
+<div id="outline-container-org6536866" class="outline-3">
+<h3 id="org6536866">Whitehorse</h3>
+<div class="outline-text-3" id="text-org6536866">
 <p>
 They took away the function to unlock the door, we have to read the <a href="https://microcorruption.com/public/manual.pdf">manual</a> about how the HSM 2 model works. In 3.1 <i>This enables the CPU to trigger software interrupt 0x7F to directly trigger the door lock to unlock</i> so we want to bamboozle this code to somehow run 0x7F. As usual start with a gigantic password and see where it is stored. Mine begins at memory location 347c. Looking at the conditional unlock door function I want to push 0x7f the unlock command instead of 0x7e the password comparison command, and then call that interrupt after.
 </p>
@@ -496,9 +496,9 @@ If you overflow your password you'll see in the 'current instruction' box it wil
 </div>
 </div>
 
-<div id="outline-container-orgea19d20" class="outline-3">
-<h3 id="orgea19d20">Montevideo</h3>
-<div class="outline-text-3" id="text-orgea19d20">
+<div id="outline-container-org55ac4db" class="outline-3">
+<h3 id="org55ac4db">Montevideo</h3>
+<div class="outline-text-3" id="text-org55ac4db">
 <p>
 Two new functions strcpy and memset. Memset appears to clear the password storage memory and strcpy removes all null bytes 00 out of our password entry so if we want to use 0x7f or 7f00 we have to steal some code to add/subtract or AND off some bits to avoid strcpy deleting our payload. I used 32 junk filler + 0244 + payload as a hex password after many trial and error getting the overflow to lineup after strcpy killed my 0044 address.
 </p>
@@ -514,9 +514,9 @@ We've acheived TAOCP prereqs by now so we can start.
 </div>
 </div>
 
-<div id="outline-container-org1cef90c" class="outline-2">
-<h2 id="org1cef90c">1.1 Algorithms</h2>
-<div class="outline-text-2" id="text-org1cef90c">
+<div id="outline-container-org59238ad" class="outline-2">
+<h2 id="org59238ad">1.1 Algorithms</h2>
+<div class="outline-text-2" id="text-org59238ad">
 <p>
 Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. Page 7 he describes T<sub>n</sub> the running time of just the E1 step in the 1.1E algorith writing that if you were to do this for gigantic inputs eventually you'd discover you could find the value of any n with (constant * ln(n)) or in big-O notation O(ln(n)) where ln() is the natural logarithm function meaning it's the exponent x in e<sup>x</sup> = y we will shortly learn in the math chapters. We use e<sup>x</sup> and ln() instead of base 10 log (or even base 2 log sometimes) because they are much simpler to model with than n<sup>x</sup> since e<sup>x</sup> derivative is itself and other nice properties. 
 </p>
@@ -565,9 +565,9 @@ From <a href="https://en.wikipedia.org/wiki/Markov_algorithm#Execution_2">this e
 </div>
 </div>
 
-<div id="outline-container-org42b1106" class="outline-2">
-<h2 id="org42b1106">1.2.1 Mathematical Induction</h2>
-<div class="outline-text-2" id="text-org42b1106">
+<div id="outline-container-orgf68c581" class="outline-2">
+<h2 id="orgf68c581">1.2.1 Mathematical Induction</h2>
+<div class="outline-text-2" id="text-orgf68c581">
 <p>
 Proof by induction here is a little different than the usual texts on it in schools such as <a href="https://leanprover.github.io/logic_and_proof/the_natural_numbers_and_induction.html">here</a>. There they assume P(n), and prove the successor P(n+1). Here Knuth proves P(1), then proves every successor input which implies P(n+1) is true each time he does it. The first example, adding 2n + 1 to both sides that's the next successor so if we are at 2<sup>2</sup> = 1 + 3 then 2n + 1 on both sides is 1 + 3 + 5 = 2<sup>2</sup> + 4 + 1 or 9 or 3<sup>2</sup>. The bottom of page 14 he then talks about assuming P(k) by induction is true whenever k &lt; n. 
 </p>
@@ -637,9 +637,9 @@ Exercises/scratchwork:
 </div>
 </div>
 
-<div id="outline-container-org878c17a" class="outline-2">
-<h2 id="org878c17a">1.2.2 Numbers, Powers and Logs</h2>
-<div class="outline-text-2" id="text-org878c17a">
+<div id="outline-container-org4498d11" class="outline-2">
+<h2 id="org4498d11">1.2.2 Numbers, Powers and Logs</h2>
+<div class="outline-text-2" id="text-org4498d11">
 <p>
 Knuth's definition of real numbers is explained <a href="https://en.wikipedia.org/wiki/0.999...">here</a> on Wikipedia how 0.999&#x2026; is 1 and 1/10<sup>k</sup> is explained as the positive distance from x, so 3 + .33 \(\le\) x = 3.33 \(\lt\) 3 + .331 and he suggests the appendix which flipping through it has all math notation used in the book in addition to constants and their values. 
 </p>
@@ -687,11 +687,11 @@ Many of these exercises haven't been covered yet, like signed bits, shifting, wo
 </div>
 </div>
 
-<div id="outline-container-org7026472" class="outline-2">
-<h2 id="org7026472">1.2.3 Sums and Products</h2>
-<div class="outline-text-2" id="text-org7026472">
+<div id="outline-container-org0cb2b82" class="outline-2">
+<h2 id="org0cb2b82">1.2.3 Sums and Products</h2>
+<div class="outline-text-2" id="text-org0cb2b82">
 <p>
-Summation notation is similar to a fold or reduce function in programming. You iterate from start index to n and accumulate producing a final value. The R(j) notation means an inequality relation for the index. Infinite sums are not commutative for example the divergent sum: 1 - 1 + 1 - 1 +&#x2026; can be 0 or 1 if rearranged: 1 + (-1 + 1) + (-1 + 1).. but it's unlikely we will see many infinite sums until later volumes remember the math prelims here are for every volume up to 5A (then there is a new chapter math prelims redux). You can also come back to this chapter when you come across summation manipulation in practice later in the text.   
+Summation notation is similar to a fold or reduce function in programming. You iterate from start index to n and accumulate producing a final value. The R(j) notation means an inequality relation for the index. Infinite sums are not commutative/associative for example the divergent sum: 1 - 1 + 1 - 1 +&#x2026; can be 0 or 1 if rearranged: 1 + (-1 + 1) + (-1 + 1).. but it's unlikely we will see many infinite sums until later volumes remember the math prelims here are for every volume up to 5A (then there is a new chapter math prelims redux). You can also come back to this chapter when you come across summation manipulation in practice later in the text.   
 </p>
 
 <ul class="org-ul">
@@ -701,7 +701,7 @@ Summation notation is similar to a fold or reduce function in programming. You i
 </ul>
 
 <p>
-\[\sum\limits_{k = 2}^{\infty} {k} = \sum\limits_{j = 1}^{\infty} {(j + 1) = 2 + 3 + 4...}\]
+\[\sum\limits_{k = 2}^{\infty} {k} = \sum\limits_{j = 1}^{\infty} {(j + 1) = 2 + 3 + 4..}\]
 </p>
 
 <p>
@@ -719,7 +719,7 @@ Example 1 the relation indices are changed to represent odd or even, with every 
 </p>
 
 <p>
-Example 2 Knuth doubles the first example 2S that's why it ends up being multiplied by 1/2 or divided by 2 by the end. 
+Example 2 remember Knuth doubles the first example 2S = S<sub>1</sub> + S<sub>2</sub> that's why it ends up being multiplied by 1/2 or divided by 2 by the end. 
 </p>
 
 <p>

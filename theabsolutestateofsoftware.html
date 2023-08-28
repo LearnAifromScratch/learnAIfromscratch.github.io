@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-08-17 Thu 17:03 -->
+<!-- 2023-08-27 Sun 20:48 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Security Consultant Curriculum</title>
+<title>A Security Curriculum</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -242,22 +242,22 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <header>
-<h1 class="title">A Security Consultant Curriculum</h1>
+<h1 class="title">A Security Curriculum</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1f51c15">Software security</a>
+<li><a href="#org6bebd4d">Intro</a>
 <ul>
-<li><a href="#org97ca6dd">The absolute state of security</a></li>
+<li><a href="#orga11f705">Typical paid tracks</a></li>
 </ul>
 </li>
-<li><a href="#org2a68886">Curriculum</a>
+<li><a href="#org5ecf8d1">Materials</a>
 <ul>
-<li><a href="#orgde4492f">PreReqs: How bad it all is</a></li>
-<li><a href="#org5d66802">Open source security problems</a></li>
-<li><a href="#orgb0dc5a8">It is impossible to avoid surveillance</a></li>
-<li><a href="#org0457cd3"></a></li>
+<li><a href="#orgbd5ac40">How bad it all is</a></li>
+<li><a href="#orgefcb579">Open source project security</a></li>
+<li><a href="#orgf7f4a7a">The absolute state of the security industry</a></li>
+<li><a href="#org7a9b272"></a></li>
 </ul>
 </li>
 </ul>
@@ -265,58 +265,72 @@ for the JavaScript code in this tag.
 </nav>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org1f51c15" class="outline-2">
-<h2 id="org1f51c15">Software security</h2>
-<div class="outline-text-2" id="text-org1f51c15">
+<div id="outline-container-org6bebd4d" class="outline-2">
+<h2 id="org6bebd4d">Intro</h2>
+<div class="outline-text-2" id="text-org6bebd4d">
 <p>
-What's the state of the art in software security attacks right and how can we get paid to specialize in this? Is my own software junk? Is there any hope of having non-junk software, does anybody even really care? Here we find these answers. 
+What's the state of the art in software security attacks right and how can we get paid on the side to specialize in this? Is my own software junk? Is there any hope of having non-junk software? Here we find these answers. 
 </p>
 </div>
 
-<div id="outline-container-org97ca6dd" class="outline-3">
-<h3 id="org97ca6dd">The absolute state of security</h3>
-<div class="outline-text-3" id="text-org97ca6dd">
+<div id="outline-container-orga11f705" class="outline-3">
+<h3 id="orga11f705">Typical paid tracks</h3>
+<div class="outline-text-3" id="text-orga11f705">
+<ul class="org-ul">
+<li>SOC threat analyst</li>
+</ul>
+
 <p>
-Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He honestly tells us how nobody cares or wants to fix the problems they just want to get a consultant fee putting out fires. He wrote multiple warnings to the Rails github repository only for them to hand wave the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future.
+SOC means Security Operations Center. This is somebody working in shifts for a 24/7 (usually remotely) enterprise tier threat response contractor who is paid to anaylze system logs and network traffic to spot problems. You primarily extract and manipulate data mainly with in-house tools or using things like OS query and do 'threat intelligence'. You can learn everything you need to start with the 'tryhackme' challenges <a href="https://tryhackme.com/path/outline/soclevel">here</a>. 
+</p>
+
+<ul class="org-ul">
+<li>Security consultant</li>
+</ul>
+
+<p>
+Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to cloud deployment to how developers handle the keys for signing into the source repository. With large security consulting outfits the typical engagement is 2-3 consultants for 2 weeks where there is juniors competent in running security procedures like penetration testing and the principal consultant oversees them and presents all the reports the juniors produced justifying the money spent. On large contracts they will have reverse engineers and all kinds of specialists.     
+</p>
+
+<ul class="org-ul">
+<li>Freelance</li>
+</ul>
+
+<p>
+Security researchers who win pwn2own competitions and can breach major software in vehicles, browsers, anything. When you reach this level you'll know if your own software is junk or not so this is our goal here. This often means constructing entire models to mimic target behavior and running analysis on it.  
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2a68886" class="outline-2">
-<h2 id="org2a68886">Curriculum</h2>
-<div class="outline-text-2" id="text-org2a68886">
-<p>
-I split this up depending what you're interested in from easiest to get into to hardest
-</p>
-
+<div id="outline-container-org5ecf8d1" class="outline-2">
+<h2 id="org5ecf8d1">Materials</h2>
+<div class="outline-text-2" id="text-org5ecf8d1">
 <ul class="org-ul">
-<li>Threat Analyst
+<li>Basics
 <ul class="org-ul">
-<li>We analyze job listings for this and see how fast we can teach ourselves the requirements because these are great side incomes investigating logs looking for problems.</li>
+<li>CMU's 15-213 <a href="https://www.cs.cmu.edu/~213/">Intro to Computer Systems</a>
+<ul class="org-ul">
+<li>Assembly, C, cache memories, VMs, how a CPU/branch prediction works, compiler toolchain, network programming</li>
+<li>Student labs practicing return-oriented programming</li>
+<li>All lectures are open in previous years (course never changes)</li>
+</ul></li>
 </ul></li>
 
-<li>Pen testing/AppSec  
+<li>Pwn College
 <ul class="org-ul">
-<li>The company that sells Burpsuite maintains one of the best <a href="https://portswigger.net/daily-swig">security blogs</a>, if it's important to know it'll probably be there. They also have an <a href="https://portswigger.net/web-security">academy</a> of labs we'll do.</li>
-<li>MIT's 6.858 <a href="https://css.csail.mit.edu/6.858/2020/">Computer Systems Security</a> course from 2020 is open w/lectures on YouTube, and the material is not very different from 2022. More importantly all the labs are open.</li>
+<li><a href="https://pwn.college/">pwn.college</a> is run by Arizona State U and you get <i>sort-of</i> official recognition for completing this and opportunity to intern with them doing paid research (even as an international student)</li>
+<li>Lectures optional, it's mainly about completing the challenges
+<ul class="org-ul">
+<li>Goes well with reading papers from Brown's <a href="https://cs.brown.edu/courses/csci1650/lectures.html">exploit</a> undergrad course, their grad <a href="https://cs.brown.edu/courses/csci2951-u/lectures.html">course</a> and MIT's <a href="http://csg.csail.mit.edu/6.S983/">CPU hacking</a> course learning about flipping bits in memory without even accessing them</li>
 </ul></li>
-
-<li>Exploits for fun and profit
-<ul class="org-ul">
-<li>Brown's <a href="https://cs.brown.edu/courses/csci1650/lectures.html">exploit</a> course is mostly open (no lectures, but assignments are open), and their grad <a href="https://cs.brown.edu/courses/csci2951-u/lectures.html">course</a> which is mainly papers about memory corruption Return-Oriented Programming techniques like JIT-ROP which will not go away ever with current architecture and still works. We'll also do MIT's <a href="http://csg.csail.mit.edu/6.S983/">CPU hacking</a> course learning about side-channels, cache-attacks, the 'trusted platform' attacks and rowhammer or flipping bits in memory without even accessing them.</li>
-</ul></li>
-
-<li>Post-Quantum Crypto/Cryptanalysis
-<ul class="org-ul">
-<li>Done in this <a href="https://functionalcs.github.io/curriculum/crypto.html">workshop</a> though we'll see some of it here. This is the most critical security because all your data is being vacuumed up and sitting somewhere waiting to be decrypted once 'quantum supremacy' happens.</li>
 </ul></li>
 </ul>
 </div>
 
-<div id="outline-container-orgde4492f" class="outline-3">
-<h3 id="orgde4492f">PreReqs: How bad it all is</h3>
-<div class="outline-text-3" id="text-orgde4492f">
+<div id="outline-container-orgbd5ac40" class="outline-3">
+<h3 id="orgbd5ac40">How bad it all is</h3>
+<div class="outline-text-3" id="text-orgbd5ac40">
 <p>
 If you haven't seen it, watch the CS19 lecture on <a href="https://youtu.be/7orQOW6fp2A">security</a>. I assume you did that whole course. 
 </p>
@@ -342,16 +356,16 @@ Immediately npm breaches is brought up, the JavaScript package manager. You may 
 </p>
 
 <p>
-He talks about SELinux also known as MAC or mandatory access controls. MAC is something security people love because it's knob tweaking but states become so complex in modern systems you cannot guarantee your policy doesn't allow illicit states without some kind of logical assistant like Alloy/Forge or other SAT prover. SAT is a logical connectives problem like p1 or p2 or p3 and what combination of T/F satisfies that problem, they are known NP-Complete problems so MAC quickly gets out of control if you go overboard.      
+He talks about SELinux also known as MAC or mandatory access controls. MAC is something security people love because it's knob tweaking but state can become so complex in modern systems you cannot guarantee your policy doesn't allow illicit states without some kind of logical assistant like Alloy/Forge or SAT prover. SAT is a complexity theory problem, suppose you have logical connectives: exp1 OR exp2 AND exp3 what combination satisfies that problem, they are known NP-Complete problems.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5d66802" class="outline-3">
-<h3 id="org5d66802">Open source security problems</h3>
-<div class="outline-text-3" id="text-org5d66802">
+<div id="outline-container-orgefcb579" class="outline-3">
+<h3 id="orgefcb579">Open source project security</h3>
+<div class="outline-text-3" id="text-orgefcb579">
 <p>
-This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relevant still. Let's watch it. It's him as a security researcher thinking what would he do with an enormous security budget and a mandate to monitor as many communications as possible. Since he is involved in FreeBSD project he thinks about it from an open source sabotaging viewpoint. 
+This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relevant still. Since he is involved in FreeBSD project he thinks about it from an open source sabotaging viewpoint. 
 </p>
 
 <p>
@@ -359,27 +373,17 @@ This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relev
 </p>
 
 <p>
-@12:28 this is what we came for how modern open source projects are sabotaged. @16:40 some modern mobile browser versions won't even let you use self-signed certs anymore even after clicking all the 'omg but the risks!' buttons. @25:45 is great, wait for some security problem and then 'find a helpful patch' and claim you reviewed it. The deceptive defaults I have been burned by many times. @28:18 OpenVPN is another disaster.
+@12:28 this is what we came for how modern open source projects are sabotaged. @16:40 some modern mobile browser versions won't even let you use self-signed certs anymore even after clicking all the 'omg but the risks!' buttons. @25:45 is great, wait for some security problem and then 'find a helpful patch' and claim you reviewed it. The deceptive defaults I have been burned by many times. @28:18 OpenVPN is another disaster use wireguard but with Appelbaum's hack to make it post-quantum proof from his PhD dissertation.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb0dc5a8" class="outline-3">
-<h3 id="orgb0dc5a8">It is impossible to avoid surveillance</h3>
-<div class="outline-text-3" id="text-orgb0dc5a8">
+<div id="outline-container-orgf7f4a7a" class="outline-3">
+<h3 id="orgf7f4a7a">The absolute state of the security industry</h3>
+<div class="outline-text-3" id="text-orgf7f4a7a">
 <p>
-Do you remember Jacob Appelbaum? He disappeared after being cancelled and got his PhD under DJ Bernstein and Tanja Lange in post-quantum security. There is a very, very good interview <a href="https://www.youtube.com/watch?v=ujeUGAT5D-s">here</a>. Now we're going to read his PhD dissertation and find out just exactly how you can't avoid surveillance because everything you're doing today is being stored for decryption tomorrow. 
+Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He is completely blackpilled and tells us how nobody cares or wants to fix the problems they just want to get a consultant to help put out fires until they can cash out selling their company and now it's somebody else's problem. He wrote multiple warnings to the Rails github repository only for them to hand wave the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future. 
 </p>
-
-<p>
-TODO
-</p>
-
-
-
-
-
-
 
 <hr>
 <p>
@@ -398,8 +402,8 @@ TODO
 
 
 
-<div id="outline-container-org0457cd3" class="outline-3">
-<h3 id="org0457cd3"></h3>
+<div id="outline-container-org7a9b272" class="outline-3">
+<h3 id="org7a9b272"></h3>
 </div>
 </div>
 </div>

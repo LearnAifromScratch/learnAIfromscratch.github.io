@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-05-18 Thu 18:20 -->
+<!-- 2023-08-30 Wed 16:03 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reinforcement Learning From Scratch</title>
+<title>AI in 2023 From Scratch</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -242,121 +242,149 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <header>
-<h1 class="title">Reinforcement Learning From Scratch</h1>
+<h1 class="title">AI in 2023 From Scratch</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0f01614">Intro</a>
+<li><a href="#orga2fc6cb">Intro</a>
 <ul>
-<li><a href="#orgf8a6bbf">Plan</a></li>
-<li><a href="#orgc79c50b">Option: Deep Learning</a></li>
-<li><a href="#org1381ca8">Option: Machine Learning</a></li>
-<li><a href="#orgd185923">Isn't Reinforcement Learning a Meme?</a></li>
+<li><a href="#org4aa555e">Curriculum</a></li>
 </ul>
 </li>
-<li><a href="#org0167f21">TODO</a></li>
+<li><a href="#org08a28ad">LLMs and Artificial General Intelligence</a>
+<ul>
+<li><a href="#org80bf714">Primer on Matrices</a></li>
+<li><a href="#org1b3655f">Primer on probability</a></li>
+<li><a href="#orgbcd896b">Neural Networks</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org0f01614" class="outline-2">
-<h2 id="org0f01614">Intro</h2>
-<div class="outline-text-2" id="text-org0f01614">
+<div id="outline-container-orga2fc6cb" class="outline-2">
+<h2 id="orga2fc6cb">Intro</h2>
+<div class="outline-text-2" id="text-orga2fc6cb">
 <p>
-In 2023 the education gods have blessed us with complete access to Reinforcement Learning which is the futuristic AI you likely imagined meaning autonomous cars/robots/space ships that can explore their environment and make decisions by themselves. We don't require access to a GPU or cloud hardware as a lot of RL is essentially dynamic programming something we already know how to do but will be taught in the course anyway. The entire course and all prereqs are done in the Julia programming language.
+First we crash course how LLMs work (large language models) and how to program linear algebra. If you stick around then we learn it all at the foundations level from absolute scratch the mathematical theory of Machine Learning both past and future. If you're interested. I'm also doing the 2023 Reinforcement Learning course from CMU to learn how to program program dynamic agents that interact in our 3D world (autonomous drones/cars, boston dynamics tier robotics). 
 </p>
 </div>
 
-<div id="outline-container-orgf8a6bbf" class="outline-3">
-<h3 id="orgf8a6bbf">Plan</h3>
-<div class="outline-text-3" id="text-orgf8a6bbf">
+
+<div id="outline-container-org4aa555e" class="outline-3">
+<h3 id="org4aa555e">Curriculum</h3>
+<div class="outline-text-3" id="text-org4aa555e">
 <p>
-The goal is self-directed research in RL making whatever it is you want to build so take what you want from this curriculum you don't have to do it all.  
+First part
 </p>
 
 <ul class="org-ul">
-<li>CMU's 16-745 <a href="https://github.com/orgs/Optimal-Control-16-745/repositories">Optimal Control and RL</a>
+<li>LLMs crash course mainly using Cornell lectures/edx and whatever papers we can find
+<ul class="org-ul">
+<li>Done so you can jump on some open source project and make money chasing feature bounties</li>
+</ul></li>
+<li><a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">CS053</a> Brown University - Coding the Matrix
+<ul class="org-ul">
+<li>Programming Linear Algebra which is what you will be doing in 2023</li>
+<li>Covers probability too</li>
+</ul></li>
+</ul>
+
+<p>
+Second part
+</p>
+
+<ul class="org-ul">
+<li>This <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">playlist</a> of foundations of machine learning and <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a>
+<ul class="org-ul">
+<li>The theoretical foundations do not change and in the lectures all the math is explained</li>
+<li>If you find some 2023 paper about "nonparametric and deep compositional approaches to density estimation" then you'll know what that means after taking this</li>
+</ul></li>
+<li>Thomas' Calculus if you've never taken calculus and matrix calculus</li>
+<li>CMU's 16-745 <a href="https://github.com/orgs/Optimal-Control-16-745/repositories">Optimal Control and RL</a> 
 <ul class="org-ul">
 <li>2023 lectures on <a href="https://www.youtube.com/playlist?list=PLZnJoM76RM6KugDT9sw5zhAmqKnGeoLRa">YouTube</a></li>
 </ul></li>
-<li>Some DL material from 10-703 <a href="https://cmudeeprl.github.io/703website_f22/lectures/">Deep RL</a>
-<ul class="org-ul">
-<li>We have access to the lectures</li>
-</ul></li>
-<li>Dynamic Programming/ODEs in Julia <a href="https://computationalthinking.mit.edu/Fall22/">here</a> and <a href="https://book.sciml.ai/lectures/">SciML book</a></li>
-<li>Linear Algebra in Julia <a href="https://web.stanford.edu/~boyd/vmls/vmls-julia-companion.pdf">here</a> and <a href="https://youtu.be/oGZK3yGF-6k">Matrix Calculus</a></li>
-<li>There's a 2023 <a href="http://www.mit.edu/~dimitrib/RLbook.html">book</a> and <a href="https://www.youtube.com/@dimitribert">lectures</a>
-<ul class="org-ul">
-<li>The S&amp;B RL book has a Julia <a href="https://github.com/JuliaReinforcementLearning/ReinforcementLearningAnIntroduction.jl">implementation</a> too</li>
-<li>MIT's statistical theory of RL <a href="http://www.mit.edu/~rakhlin/courses/course_stat_rl/course_stat_rl.pdf">book</a></li>
-</ul></li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-orgc79c50b" class="outline-3">
-<h3 id="orgc79c50b">Option: Deep Learning</h3>
-<div class="outline-text-3" id="text-orgc79c50b">
-<p>
-If you just want to learn Deep Learning CMU's <a href="https://deeplearning.cs.cmu.edu/S23/index.html">11-785 Intro to DL</a> is fully open with YouTube lectures and assignments available, many of which are practicing on Kaggle. MIT's course is also fully open in fact I think every university has their DL courses open right now because there is no chance of you being able to do it on a home system unless you use <a href="https://github.com/geohot/tinygrad">tinygrad</a> and buy the hilarious pre-order <a href="https://tinygrad.org/">tinybox</a> for $100 which is worth $15k (I'm not endorsing any kind of pre-order just pointing out it exists). There is also depth first learning <a href="https://www.depthfirstlearning.com/2019/NeuralODEs">Neural ODEs</a> and whenever I can I try and maintain <a href="https://github.com/LearnAifromScratch/depthfirstlearning.com/pull/1/commits/cf5d76213011cc5e6942cb068f1cbf12b0fd84ac">that site</a> because it's so good. 
-</p>
-
-<p>
-I didn't include DL here except for some of the Deep RL because it req access to a ton of resources which I imagine people don't have when they take this. DL theory of course you can create all kinds of new neural networks on your own like the current researchers doing 'liquid neural networks' if that kind of thing is your bag. CMU if you search their public Panopto has the entire (non)convex optimization courses available right now, that information I could not find anywhere else and is essentially 25 lectures how to select the pytorch optimize feature. Convex optimization once upon a time was heavily used until neural networks took over everything which are not convex. 
-</p>
-</div>
 </div>
 
-<div id="outline-container-org1381ca8" class="outline-3">
-<h3 id="org1381ca8">Option: Machine Learning</h3>
-<div class="outline-text-3" id="text-org1381ca8">
+
+<div id="outline-container-org08a28ad" class="outline-2">
+<h2 id="org08a28ad">LLMs and Artificial General Intelligence</h2>
+<div class="outline-text-2" id="text-org08a28ad">
 <p>
-There is an applied course by the guy who maintains scikit-learn:
+There is a disconnect between the blogger junk articles promoting ChatGPT and all these doomers running around claiming the singularity is upon us. What the blog junk and marketing doesn't tell you is that very Large Language Models have "emergent properties" which means they have abilities that they weren't programmed to do and there is no explanation yet for why they have these abilities (phase shift/physics maybe). Collectively a giga model can have a behavior but each component does not have this behavior.  
 </p>
+</div>
 
-<ul class="org-ul">
-<li>COMS-W4995 <a href="https://www.cs.columbia.edu/~amueller/comsw4995s20/schedule/">Applied Machine Learning</a> Columbia
-<ul class="org-ul">
-<li>21 lectures on <a href="https://www.youtube.com/playlist?list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM">YouTube</a></li>
-<li>Homework on <a href="https://github.com/amueller/COMS4995-s20/tree/master/homework">GitHub</a></li>
-<li>Books recommended:
-<ul class="org-ul">
-<li><a href="http://appliedpredictivemodeling.com/">Applied Predictive Modeling</a> [APM]</li>
-<li><a href="https://amueller.github.io/#book">Intro to Machine Learning w/Python</a> [IMLP]</li>
-<li><a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a></li>
-</ul></li>
-</ul></li>
-</ul>
-
-
+<div id="outline-container-org80bf714" class="outline-3">
+<h3 id="org80bf714">Primer on Matrices</h3>
+<div class="outline-text-3" id="text-org80bf714">
 <p>
-My choice to learn the theory is the first 20 chapters of the (free) <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">book</a> <i>Understanding Machine Learning: From Theory to Algorithms</i> w/<a href="https://www.youtube.com/playlist?list=PLPW2keNyw-usgvmR7FTQ3ZRjfLs5jT4BO">lectures</a>. It's still taught by the author at <a href="https://student.cs.uwaterloo.ca/~cs485/">Waterloo</a> in 2021 and CMU's PhD track intro course <a href="http://www.cs.cmu.edu/~nihars/teaching/10715-Fa21/index.html">10-715</a>. There's a <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/MLbookSol.pdf">solutions manual</a> for the few exercises in the book which will be an exercise in itself to try and understand. He doesn't assume a background and goes through all the math notation. 
+Skimming 5 pages of <a href="https://see.stanford.edu/materials/lsoeldsee263/Additional1-notes-matrix-primer.pdf">this pdf</a> by Stephen Boyd it's all we need to start.  
 </p>
 
 <p>
-Those machine learning theory lectures are kind of amazing how he can explain it all and the theory isn't going to change so if you're interested try it but I won't go through it here.
+A matrix size is rows x columns and it can contain more then just numbers/scalars the entries can be cosine/sine or other functions. Basically a matrix is an encoding of a function that performs a linear transformation like rotations or reflections on the plane, shearing the plane moving everything above the x axis right and everything below left by some scale, stretching the plane, or taking something non-linear like a curve and transforming it via linear algebra to a linear approximation. That is essentially how vector calculus works it's a way of doing calculus in higher dimensions by transforming it all to a linear mapping because even though globally everything is non linear, locally (magnifying) it's linear. You can also project an n-dimensional plane onto a 3D or 2D plane you simply input a 3-dimensional vector (x,y,z) and the transformation matrix zeroes out the z producing (x,y). 
+</p>
+
+<p>
+Just like how function composition is associative so is multiplying matrices A(BC) = (AB)C and just like how function composition is not commutative neither is matrix multiplicaiton. A matrix multiplied by a vector is like giving a function an input, therefore the image of the matrix is the vector output.  
+</p>
+
+<p>
+It gets even more abstract. A 1x1 matrix is essentially a number. A 2x2 matrix is not only a transformation function it can also be a kind of generalized number with a richer arithmetic you can encode complex numbers in certain 2x2 diagonal matrices using scalars to multiply a matrix who's square is -1 thus a complex number. 
+</p>
+
+<p>
+Page 3 'basis vectors' using a representation of an arrow is best showcased <a href="https://youtu.be/yAb12PWrhV0?si=9CXusI8T9tJ0jPYs">in this vid</a> where at the end he goes slowly up in dimensions. Page 4 a transpose is a way to take the dot product at a higher dimension (we'll see it in machine learning vids). A dot product tells you the cosign of two vectors (in euclidean space) and if you remember highschool trig if cosine is 0 then the angle is 90deg or 2 vectors are perpendicular if vec1 dot vec2 = 0. Page 5 you can stop reading after scalar multiplication. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd185923" class="outline-3">
-<h3 id="orgd185923">Isn't Reinforcement Learning a Meme?</h3>
-<div class="outline-text-3" id="text-orgd185923">
+<div id="outline-container-org1b3655f" class="outline-3">
+<h3 id="org1b3655f">Primer on probability</h3>
+<div class="outline-text-3" id="text-org1b3655f">
 <p>
-The research today is going bezerk because you can do RL on a device and constantly be learning. It is in fact what I originally wanted this workshop to be but there wasn't any good materials for it when I started, now there is. Even if it's still a meme you can at least use it to bamboozle the autonomous drones they send after you in some <a href="https://youtu.be/xZpsiuErNH8">future war</a> (autonomous lethal 'solution' based on racing drones). After working in that industry for a while I can say what they are doing is <a href="https://youtu.be/2z2Slyt0WlE">crazy</a> look up autonomous drones on YouTube and change the results to the current year. 
+Use this <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">playlist</a> to teach yourself just the basics to start you need to know only familiarity with sets (first lecture), the basics of what a probability distro is and everything in <a href="https://youtu.be/siXj4hkUIp8?si=gISGy_xDGG7tvRL8">this lecture</a> (random variables, mean, variance and standard deviation). That's it. 
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org0167f21" class="outline-2">
-<h2 id="org0167f21">TODO</h2>
-<div class="outline-text-2" id="text-org0167f21">
+
+<div id="outline-container-orgbcd896b" class="outline-3">
+<h3 id="orgbcd896b">Neural Networks</h3>
+<div class="outline-text-3" id="text-orgbcd896b">
+<p>
+Watching <a href="https://youtu.be/MrLPzBxG95I?si=XPFkNpmdSEsly9Vk&amp;t=1947">Lecture 1 CS4780</a> by Kilian Weinberger probably the best instructor you will find for this material. The real lecture begins @32:27. He defines both y (labels or classification) and x (feature vector) after the intro. Notice the feature vector is cleaned/prepared data that somebody needs to figure out how to generate, this is almost never revealed by all the closed source LLMs. When you solve Google captcha 'choose all the bicycles in this picture' that's what you are doing preparing some kind of data for supervised learning. If you did <a href="./software.html">cs19</a> in the other workshop you remember doing DocDiff the first assignment using bag of words vector representation. 
+</p>
+
+<p>
+Watching <a href="https://youtu.be/zj-5nkNKAow?si=MC24y6-IDcmL77k4&amp;t=321">Lecture 2 CS4780</a> (skip to 5:20) tells you how to select the algorithm for the hypothesis function by running statistical loss functions and seeing which has the lowest errors, talks a bit how they test these hypothesis functions. 
+</p>
+
+<p>
+Watching <a href="https://youtu.be/BbYV8UfMJSA?si=aKfJ0NIeUFpDycAd&amp;t=2201">Lecture 4 CS4780</a> (skip to 36:50) the Perceptron. This is an algorithm that models a single brain neuron and was the first machine learning algorithm. You get layers of perceptrons you have a neural network. We skipped K-Nearest Neighbors (it's worth watching if you've never seen it) it's quickly reviewed in lecture 5. The hyperplane notation is y = mx + b and familar linear notation for a straight line but it's a higher-dimensional generalization. Note he drew the w vector perpendicular to the plane and we know w^{T}x is a dot product to determine the cosine of 2 vectors and if it's 0 then the vectors are perpendicular. So for any vector x we can compute y = wx + b and if 0 = wx + b then x is on the hyperplane. 
+</p>
+
+<p>
+Watching <a href="https://youtu.be/wl7gVvI-HuY?feature=shared&amp;t=662">Lecture 5 CS4780</a> (skip to 11:20). He shows us a simple Perceptron algorithm. TODO
+</p>
+
+
+
+
+
+
+
 <hr>
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

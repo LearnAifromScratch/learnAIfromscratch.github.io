@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-09-08 Fri 21:22 -->
+<!-- 2023-09-09 Sat 13:55 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Graduate Mathematics From Scratch</title>
@@ -249,38 +249,33 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#intro">Intro</a>
 <ul>
-<li><a href="#org30306a3">The biggest mistake in learning math</a></li>
-<li><a href="#org47b274d">Second biggest mistake in learning math</a></li>
-<li><a href="#org36ceec4">Who am I?</a></li>
-<li><a href="#org8acf989">PreReqs</a></li>
-<li><a href="#org8bb73b8">The goals of math education</a></li>
+<li><a href="#org401385c">Pre-reqs</a></li>
+<li><a href="#org3757f1c">The goals of education</a></li>
 </ul>
 </li>
-<li><a href="#orgf931c2b">Curriculum</a>
+<li><a href="#orgbd31870">Curriculum</a>
 <ul>
-<li><a href="#orgdfb55de">Arithmetic</a></li>
-<li><a href="#org6964531">Algebra</a></li>
-<li><a href="#org8095618">Logic</a></li>
-<li><a href="#org497a767">Geometry</a></li>
-<li><a href="#orgbbe1c8e">Calculus</a></li>
-<li><a href="#orgd54b86f">Probability</a></li>
+<li><a href="#orga4c960f">Arithmetic</a></li>
+<li><a href="#orgac26af3">Algebra</a></li>
+<li><a href="#org9085644">Logic</a></li>
+<li><a href="#org3d558e8">Geometry</a></li>
+<li><a href="#org0506e72">Calculus</a></li>
+<li><a href="#org839390f">Probability</a></li>
 <li><a href="#what-is-geometry">What is Geometry</a></li>
 </ul>
 </li>
 <li><a href="#elementary">START HERE Elementary school redux</a>
 <ul>
-<li><a href="#org59a6678">Arithmetic with natural numbers</a></li>
-<li><a href="#org870bc67">Subtraction and division</a></li>
-<li><a href="#org36da2ac">The Hindu-Arabic number system</a></li>
-<li><a href="#org8cea73c">Arithmetic with Hindu-Arabic notation</a></li>
-<li><a href="#org38084b8">Laws of Division</a></li>
-<li><a href="#org445908f">Fractions</a></li>
-<li><a href="#org4372ad5">Arithmetic with fractions</a></li>
-<li><a href="#orgeee6769">Laws of arithmetic for fracions</a></li>
-<li><a href="#orgeb54597">Integer construction</a></li>
-<li><a href="#orgfdec2d8">Rational numbers</a></li>
-<li><a href="#orgc846f8e">Grammar</a></li>
-<li><a href="#org7c243b2">Rational numbers (percents)</a></li>
+<li><a href="#org4aab573">Arithmetic with natural numbers</a></li>
+<li><a href="#org8c8ef1b">Subtraction and division</a></li>
+<li><a href="#org4f4ab7c">The Hindu-Arabic number system</a></li>
+<li><a href="#org723b5f8">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#org4c95e07">Laws of Division</a></li>
+<li><a href="#orgbda2dce">Fractions</a></li>
+<li><a href="#orgc63745c">Arithmetic with fractions</a></li>
+<li><a href="#org38426d0">Laws of arithmetic for fracions</a></li>
+<li><a href="#org20a9799">Integer construction</a></li>
+<li><a href="#org65db6f3">Rational numbers</a></li>
 </ul>
 </li>
 </ul>
@@ -288,7 +283,7 @@ for the JavaScript code in this tag.
 </nav>
 <hr>
 
-<div id="outline-container-orgf9fc8ef" class="outline-2">
+<div id="outline-container-orgc6aa3b6" class="outline-2">
 <h2 id="intro">Intro</h2>
 <div class="outline-text-2" id="text-intro">
 <p>
@@ -298,106 +293,98 @@ This is for anyone interested in re-doing their math background from the very be
 <p>
 This exists because probability and statistics are incomprehensible junk in undergrad and I wish to build models from scratch like stochastic processes so put this together for myself and others to follow. Some of the choices were from this mathematical maturity <a href="https://www.youtube.com/watch?v=zHU1xH6Ogs4">talk</a> and my own experience routinely running into highly abstract math while trying to follow some papers in the field that I'm interested in and having no idea what it means.  
 </p>
-</div>
-
-<div id="outline-container-org30306a3" class="outline-3">
-<h3 id="org30306a3">The biggest mistake in learning math</h3>
-<div class="outline-text-3" id="text-org30306a3">
-<p>
-The biggest mistake you can make in learning math is only taking things you think are 'useful'. In reality all of math is exactly the same thing from preschool arithmetic to twisting a torus in algebraic topology and you should take whatever high quality resources are available because whatever it is you want to do was already taught in a calculus class, algebraic geometry, commutative algebra or functional analysis. It literally is all the same thing so don't make the mistake that it's some kind of trade school knowledge specific to your trade and 'this math is a waste of time!' none of it is. You are learning this very, very abstract system of modeling that even abstracts the modeling. Pick whatever math topic you seem to feel you're the best at and you'll easily pick up all the rest no matter what it is because&#x2026;&#x2026;&#x2026;&#x2026;it's the same thing. 
-</p>
 
 <p>
-Did you get what I was trying to say there? We are learning extreme abstract logic and it is abstractly all the same thing. You could spend 5 years learning everything you can about obscure topology or whatever and then eventually you get it and grasp the universal model where you have this realization you can apply your knowledge to every single domain you can think of. That is what math really is and there is no 'useful' math it's all useful no matter what it is. 
+The biggest mistake you can make in learning math is only taking things you think are 'useful'. All of math is exactly the same thing from arithmetic to twisting a torus in algebraic topology and studying any part of it helps to learn this crazy abstract model. 
 </p>
 </div>
-</div>
 
-<div id="outline-container-org47b274d" class="outline-3">
-<h3 id="org47b274d">Second biggest mistake in learning math</h3>
-<div class="outline-text-3" id="text-org47b274d">
+<div id="outline-container-org401385c" class="outline-3">
+<h3 id="org401385c">Pre-reqs</h3>
+<div class="outline-text-3" id="text-org401385c">
 <p>
-Because math is so poorly taught in public schools (for people outside North America public school means government run 'free' schools) many people think you are some kind of genius if you know math and that it's absolutely impossible to know what you know. This is of course not true, it's a typical skill learned like everything else. I would say math is an easier skill because it's just mental you don't have to actually sculpt anything or shave a piece of wood exactly or even a brick layer has more advanced skill than what we're doing because that person has to combine skill with dexterity we just need to contemplate some abstract model. If you don't believe me try and learn Calculus here (no problem) then try and cut bricks so they perfectly fit a mould where a street crew cut out a hole to fix something. Good luck with that, there is no room for mistakes whereas what we are doing we can screw up as much as we want see all the statistical political polling sites who are consistently wrong about everything yet everyone still gives them money. 
-</p>
-
-<p>
-However you can use this myth to your advantage if you have kids you can teach them the material here (or using AOPS website) at a young age and the system will accelerate them into the top schools you don't have to pay for. I could (and should) write an entire workshop how to teach kids advanced math because I do it all the time just to laugh how everyone reacts like they are some prodigy and the kids get a free ride into charter/private schools. 
-</p>
-
-<p>
-There is also a myth you must have some kind of psycho personality where you spent years in a dimly lit room doing drill calculations and have an analytical outlook on life whereas they are 'creative' and never could take math. Another total fallacy. It comes from misinformation about Isaac Newton which I included below. Newton never drilled anything he always read math then tried by himself to generalize every theorem which requires creativity. Newton once stuck a metal rod in his eye to dislodge it and experiment with optics he was not a souless drone reciting calculations. 
+I assume you have taken a basic functional programming course where you are taught things like higher-order functions and hopefully domain-specific languages because it will help to see the exact same concepts as code you can run. There is such a course <a href="./software.html">here</a> or simply searching YouTube for 'higher order functions' is fine. Probably the best introduction is Robert Harper's <i>Programming in Standard ML</i> or <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s23/lect.html">COMP 212</a> <i>Functional Programming</i> (has YouTube lectures) by Dan Licata who was a PhD student of Robert Harper. The SML book by Harper will come up a few times in this curriculum in places you wouldn't expect like Terence Tao's books because of <a href="https://cs3110.github.io/textbook/chapters/adv/curry-howard.html">this</a> which shows programs, math and logic are all abstractly the same thing.   
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-org36ceec4" class="outline-3">
-<h3 id="org36ceec4">Who am I?</h3>
-<div class="outline-text-3" id="text-org36ceec4">
+<div id="outline-container-org3757f1c" class="outline-3">
+<h3 id="org3757f1c">The goals of education</h3>
+<div class="outline-text-3" id="text-org3757f1c">
 <p>
-I am you. Just a pleb running in the streets who grew up in this <a href="https://youtu.be/gUybirMnzFc?feature=shared">insane world</a> failing everything but managed to make it to the top. Becoming poor became a <a href="https://youtu.be/1s3fMaBdWD8?feature=shared">crime</a> where I live. The details of my life are cringe and not imporant what's critical is you and I'm designing this for you.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org8acf989" class="outline-3">
-<h3 id="org8acf989">PreReqs</h3>
-<div class="outline-text-3" id="text-org8acf989">
-<p>
-I assume you have taken a basic functional programming course where you are taught things like higher-order functions and hopefully domain-specific languages because it's very similar to abstract math. There is such a course <a href="./software.html">here</a>. A Haskell book is fine, the Cornell <a href="https://cs3110.github.io/textbook/cover.html">OCaml</a> book is fine, a Common Lisp or Scheme book is fine, simply typing into YouTube 'higher order functions' is fine. Probably the best introduction is Robert Harper's <i>Programming in Standard ML</i> or <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s23/lect.html">COMP 212</a> <i>Functional Programming</i> (has YouTube lectures) by Dan Licata who was a PhD student of Robert Harper. The SML book by Harper will come up a few times in this curriculum in places you wouldn't expect like Terence Tao's books. 
+I went through the common core of every western country that has it open to the public:
 </p>
 
-<p>
-The reason Harper's book comes up so many times is because of <a href="https://cs3110.github.io/textbook/chapters/adv/curry-howard.html">this</a>. Programming, math and logic are all abstractly the same thing. A theorem in math is a specification of a program. The code you write for that spec is the proof. Running the code is the source of truth that your proof is correct, and it simplifies the proof like how <i>Proofs from the Book</i> is about the most elegant proofs so is a running program. We'll see some of this here when we take logic and read <i>Programming in Martin Loff's Type Theory</i>.  
-</p>
-</div>
-</div>
-
-<div id="outline-container-org8bb73b8" class="outline-3">
-<h3 id="org8bb73b8">The goals of math education</h3>
-<div class="outline-text-3" id="text-org8bb73b8">
-<p>
-The goal of primary or elementary school (grade k through 5) is knowing what a rate is (fractions) and how to do division. If you know those two things you're pretty much good for middle school. It's also to learn basic literacy and writing, probably way more important than any math at this age. 
-</p>
+<ul class="org-ul">
+<li>Grade k - 5</li>
+</ul>
 
 <p>
-The goal of middle school (grade 6 through 8) is grammar. The math goal is more rates like converting decimals to rates, averages and percentages. 'Per cent' meaning per hundred, a rate.  
+The goal of primary or elementary school is knowing what a rate is (fractions) and how to do division. If you know those two things you're pretty much good. It's also to learn basic literacy and writing. 
 </p>
 
-<p>
-The goal of junior high (grade 8 through 10) is to learn functions and polynomials, rational numbers and trig ratios (yet more rates). 
-</p>
+<ul class="org-ul">
+<li>Grade 6 - 8</li>
+</ul>
 
 <p>
-The goal of high school is those dreaded quadratic equations and polynomials you remember having to endlessly factor, inequalities and recently calculus. They now have Grade 12 advanced placement calculus otherwise known as AP Calc to avoid paying a thousand dollars in tuition to relearn what your highschool should have taught you but it's kind of scam as universities have now broken up their freshman year into courses like 'Math 101: integral calculus with applications' so even though you placed out of the most basic Math 100 about derivatives you can't escape Math 101.  
+The goal of middle school is grammar. The math goal is more rates like converting decimals to rates, averages and percentages. 'Per cent' meaning per hundred, a rate.  
 </p>
 
-<p>
-The goal of undergrad is rhetoric and analytical logic. The secondary goal is to teach you how to read, understand and write a proof in abstract mathematics. Everything else you learn is essentially replaced in graduate school like your undergrad real analysis course is a waste of time because nobody has used the Riemann integral for over 100 years. The linear algebra you learn isn't good enough either but this doesn't matter because remember to goal is to be able to follow and write a proof which all these things helped you to do. Probability in undergrad (and thus statistics) are both pure garbage just demonstrating a bunch of diagrams 'look the circles all intersect ergo this theory works!'.
-</p>
+<ul class="org-ul">
+<li>Grade 8 - 10</li>
+</ul>
 
 <p>
-The goal of graduate school (the basic instruction in first year) is to teach the ability to learn mathematics "quickly". You are expected to just fix your linear algebra problems as normally there is no graduate linear algebra course. You are expected to just figure out measure theory and abstract algebra yourself. You meet with a supervisor and they start asking you questions about obscure abstract frameworks and when you respond you don't know they give you a tutorial right there then say finish this massive journal of papers I've collected on this topic yourself expecting you to devote hours per day doing this because the training wheels are gone and you're on your own swimming with the sharks. You meet with peers over lunch on a regular basis reading different recent papers then brainstorm together is there a theory that connects all these things? 
+The goal of junior high is to learn functions and polynomials, rational numbers and trig ratios (yet more rates). 
 </p>
 
+<ul class="org-ul">
+<li>Grade 11 - 12</li>
+</ul>
+
 <p>
-I have been to graduate school in the Netherlands for optimization (tip, don't have undergrad? Europe may accomodate you for gradute school look into it) so I will pull from experience. 
+The goal of high school is to prepare you for calculus so those dreaded quadratic equations and polynomials you remember having to endlessly factor, inequalities and other 'pre-calculus' tier subjects. Some schools have Grade 12 advanced placement calculus otherwise known as AP Calc to avoid paying a thousand dollars in tuition to relearn what your high school should have taught you but it's kind of scam as universities have now broken up their freshman year into courses like 'Math 101: integral calculus with applications' so even though you placed out of the most basic Math 100 about derivatives you can't escape Math 101.  
+</p>
+
+<ul class="org-ul">
+<li>Undergraduate (Bachelor or Associate degrees)</li>
+</ul>
+
+<p>
+The goal of undergrad is mastering skills in rhetoric, grammar and analytical logic so you can articulate a position in writing or speech and defend it while recognizing the faulty logic of bad rhetoric. Math is definitely used in modern rhetoric, there is plenty of positions and arguments made touting various statistics in the real world. The ability to write proofs is the most desired mathematical skill to get from undergrad.  
+</p>
+
+<ul class="org-ul">
+<li>Graduate (Masters)</li>
+</ul>
+
+<p>
+The goal of a Masters is a high-powered vocational degree. A lawyer goes to law school, a doctor goes to medical school, an engineer spends an additional year in graduate school and typically has to produce a thesis in order to be licensed by some engineering association. Basically undergrad is now the new high school and a masters is employment training where you apprentice with professionals. 
+</p>
+
+<ul class="org-ul">
+<li>Graduate (PhD)</li>
+</ul>
+
+<p>
+A PhD is doctor of philosophy. Traditionally there was no such thing as mathematicians or scientists you were simply somebody engaged in the natural philosophy. The goal of graduate school/phd track is to produce a dissertation which is original research that advances our current knowledge somehow. The basic instruction in first year is designed to bring you up to date with the last 50 years of modern mathematics and teach the ability to learn mathematics "quickly". You do actually get faster because by now you have seen this abstract model in every kind of context and can connect patterns so one subject is just like another. You read many, many proofs that use the same kind of strategy and eventually you can predict what they're going to use in a paper or comprehensive theory text before you even read it. At this stage you are more focused on what kind of assumptions the author of the proof has made because showing a single example that an assumption is not true unravels the whole proof and can be the topic of a published paper.   
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgf931c2b" class="outline-2">
-<h2 id="orgf931c2b">Curriculum</h2>
-<div class="outline-text-2" id="text-orgf931c2b">
+<div id="outline-container-orgbd31870" class="outline-2">
+<h2 id="orgbd31870">Curriculum</h2>
+<div class="outline-text-2" id="text-orgbd31870">
 <p>
 These may change this is a live course I am doing it with you. 
 </p>
 </div>
 
-<div id="outline-container-orgdfb55de" class="outline-3">
-<h3 id="orgdfb55de">Arithmetic</h3>
-<div class="outline-text-3" id="text-orgdfb55de">
+<div id="outline-container-orga4c960f" class="outline-3">
+<h3 id="orga4c960f">Arithmetic</h3>
+<div class="outline-text-3" id="text-orga4c960f">
 <p>
 Here we study the properties of numbers
 </p>
@@ -414,9 +401,9 @@ Here we study the properties of numbers
 </div>
 </div>
 
-<div id="outline-container-org6964531" class="outline-3">
-<h3 id="org6964531">Algebra</h3>
-<div class="outline-text-3" id="text-org6964531">
+<div id="outline-container-orgac26af3" class="outline-3">
+<h3 id="orgac26af3">Algebra</h3>
+<div class="outline-text-3" id="text-orgac26af3">
 <p>
 I didn't include an undergrad course in linear algebra because no matter what course you take, it won't be adequate. 
 </p>
@@ -434,9 +421,9 @@ I didn't include an undergrad course in linear algebra because no matter what co
 </div>
 </div>
 
-<div id="outline-container-org8095618" class="outline-3">
-<h3 id="org8095618">Logic</h3>
-<div class="outline-text-3" id="text-org8095618">
+<div id="outline-container-org9085644" class="outline-3">
+<h3 id="org9085644">Logic</h3>
+<div class="outline-text-3" id="text-org9085644">
 <ul class="org-ul">
 <li><a href="https://leanprover.github.io/logic_and_proof/">Logic and Proof</a> formalizing some basic proofs with Lean</li>
 <li>Aristotle's categories</li>
@@ -445,9 +432,9 @@ I didn't include an undergrad course in linear algebra because no matter what co
 </div>
 </div>
 
-<div id="outline-container-org497a767" class="outline-3">
-<h3 id="org497a767">Geometry</h3>
-<div class="outline-text-3" id="text-org497a767">
+<div id="outline-container-org3d558e8" class="outline-3">
+<h3 id="org3d558e8">Geometry</h3>
+<div class="outline-text-3" id="text-org3d558e8">
 <p>
 The kind of Geometry that was used for thousands of years to teach mathematical reasoning. 
 </p>
@@ -465,9 +452,9 @@ The kind of Geometry that was used for thousands of years to teach mathematical 
 </div>
 </div>
 
-<div id="outline-container-orgbbe1c8e" class="outline-3">
-<h3 id="orgbbe1c8e">Calculus</h3>
-<div class="outline-text-3" id="text-orgbbe1c8e">
+<div id="outline-container-org0506e72" class="outline-3">
+<h3 id="org0506e72">Calculus</h3>
+<div class="outline-text-3" id="text-org0506e72">
 <p>
 The Riemann integral was replaced over 100 years ago so we will be skipping undergrad 'improper integrals' as they don't exist. 
 </p>
@@ -484,9 +471,9 @@ The Riemann integral was replaced over 100 years ago so we will be skipping unde
 </div>
 </div>
 
-<div id="outline-container-orgd54b86f" class="outline-3">
-<h3 id="orgd54b86f">Probability</h3>
-<div class="outline-text-3" id="text-orgd54b86f">
+<div id="outline-container-org839390f" class="outline-3">
+<h3 id="org839390f">Probability</h3>
+<div class="outline-text-3" id="text-org839390f">
 <p>
 Some of the readings for measure theory are incomplete, we can use Axler's new text. 
 </p>
@@ -501,7 +488,7 @@ Some of the readings for measure theory are incomplete, we can use Axler's new t
 </div>
 
 
-<div id="outline-container-org1eae1e1" class="outline-3">
+<div id="outline-container-org153c9c3" class="outline-3">
 <h3 id="what-is-geometry">What is Geometry</h3>
 <div class="outline-text-3" id="text-what-is-geometry">
 
@@ -607,7 +594,7 @@ He later wrote in a manuscript on geometry that mechanics of motion was what gen
 </div>
 
 
-<div id="outline-container-org4c69aef" class="outline-2">
+<div id="outline-container-orgcc9ca57" class="outline-2">
 <h2 id="elementary">START HERE Elementary school redux</h2>
 <div class="outline-text-2" id="text-elementary">
 <p>
@@ -615,9 +602,9 @@ Welcome to 'advanced' elementary school. We start by seeing how number objects a
 </p>
 </div>
 
-<div id="outline-container-org59a6678" class="outline-3">
-<h3 id="org59a6678">Arithmetic with natural numbers</h3>
-<div class="outline-text-3" id="text-org59a6678">
+<div id="outline-container-org4aab573" class="outline-3">
+<h3 id="org4aab573">Arithmetic with natural numbers</h3>
+<div class="outline-text-3" id="text-org4aab573">
 <p>
 Wildberger originally made these lectures because his primary school kids were being taught trash mathematics in the 'new and improved' Australian school system (all western schools have this problem now). 
 </p>
@@ -697,9 +684,9 @@ Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is 
 </div>
 </div>
 
-<div id="outline-container-org870bc67" class="outline-3">
-<h3 id="org870bc67">Subtraction and division</h3>
-<div class="outline-text-3" id="text-org870bc67">
+<div id="outline-container-org8c8ef1b" class="outline-3">
+<h3 id="org8c8ef1b">Subtraction and division</h3>
+<div class="outline-text-3" id="text-org8c8ef1b">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
@@ -729,9 +716,9 @@ Oops, he didn't define negative numbers yet (or even zero) since n - m is only d
 </div>
 </div>
 
-<div id="outline-container-org36da2ac" class="outline-3">
-<h3 id="org36da2ac">The Hindu-Arabic number system</h3>
-<div class="outline-text-3" id="text-org36da2ac">
+<div id="outline-container-org4f4ab7c" class="outline-3">
+<h3 id="org4f4ab7c">The Hindu-Arabic number system</h3>
+<div class="outline-text-3" id="text-org4f4ab7c">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -753,9 +740,9 @@ This will come up in many of the algebra books we'll do later.
 </div>
 
 
-<div id="outline-container-org8cea73c" class="outline-3">
-<h3 id="org8cea73c">Arithmetic with Hindu-Arabic notation</h3>
-<div class="outline-text-3" id="text-org8cea73c">
+<div id="outline-container-org723b5f8" class="outline-3">
+<h3 id="org723b5f8">Arithmetic with Hindu-Arabic notation</h3>
+<div class="outline-text-3" id="text-org723b5f8">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -766,9 +753,9 @@ A new way of hand multiplication is shown, taking advantage of the fact the nota
 </div>
 </div>
 
-<div id="outline-container-org38084b8" class="outline-3">
-<h3 id="org38084b8">Laws of Division</h3>
-<div class="outline-text-3" id="text-org38084b8">
+<div id="outline-container-org4c95e07" class="outline-3">
+<h3 id="org4c95e07">Laws of Division</h3>
+<div class="outline-text-3" id="text-org4c95e07">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -814,9 +801,9 @@ This is the proper way of doing long division taking advantage of the encoding o
 </div>
 </div>
 
-<div id="outline-container-org445908f" class="outline-3">
-<h3 id="org445908f">Fractions</h3>
-<div class="outline-text-3" id="text-org445908f">
+<div id="outline-container-orgbda2dce" class="outline-3">
+<h3 id="orgbda2dce">Fractions</h3>
+<div class="outline-text-3" id="text-orgbda2dce">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -827,9 +814,9 @@ Interesting how he defines all these as types.
 </div>
 </div>
 
-<div id="outline-container-org4372ad5" class="outline-3">
-<h3 id="org4372ad5">Arithmetic with fractions</h3>
-<div class="outline-text-3" id="text-org4372ad5">
+<div id="outline-container-orgc63745c" class="outline-3">
+<h3 id="orgc63745c">Arithmetic with fractions</h3>
+<div class="outline-text-3" id="text-orgc63745c">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -840,9 +827,9 @@ The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> us
 </div>
 </div>
 
-<div id="outline-container-orgeee6769" class="outline-3">
-<h3 id="orgeee6769">Laws of arithmetic for fracions</h3>
-<div class="outline-text-3" id="text-orgeee6769">
+<div id="outline-container-org38426d0" class="outline-3">
+<h3 id="org38426d0">Laws of arithmetic for fracions</h3>
+<div class="outline-text-3" id="text-org38426d0">
 <ul class="org-ul">
 <li><a href="https://youtu.be/uADs1yepIIA?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
 </ul>
@@ -853,9 +840,9 @@ Follow all these proofs. As per Wildberger in a video in his playlist about prim
 </div>
 </div>
 
-<div id="outline-container-orgeb54597" class="outline-3">
-<h3 id="orgeb54597">Integer construction</h3>
-<div class="outline-text-3" id="text-orgeb54597">
+<div id="outline-container-org20a9799" class="outline-3">
+<h3 id="org20a9799">Integer construction</h3>
+<div class="outline-text-3" id="text-org20a9799">
 <ul class="org-ul">
 <li><a href="https://youtu.be/YDBLXCFrihc?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 12</li>
 </ul>
@@ -866,9 +853,9 @@ The point in watching these is to see how you can start with just the natural na
 </div>
 </div>
 
-<div id="outline-container-orgfdec2d8" class="outline-3">
-<h3 id="orgfdec2d8">Rational numbers</h3>
-<div class="outline-text-3" id="text-orgfdec2d8">
+<div id="outline-container-org65db6f3" class="outline-3">
+<h3 id="org65db6f3">Rational numbers</h3>
+<div class="outline-text-3" id="text-org65db6f3">
 <ul class="org-ul">
 <li><a href="https://youtu.be/MDMG9Ljb8l0?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 13</li>
 </ul>
@@ -876,56 +863,10 @@ The point in watching these is to see how you can start with just the natural na
 <p>
 We learn what a field is. He says we should try proving all the field operations and we will. If you're curious in the introduction <a href="https://youtu.be/83ZjYvkdzYI?feature=shared">here</a> he shows how the rational number line has been raised on the y-axis showing how all numbers on a line through the origin (0,0) are equal on the rational strip. It explains why a/1 is a and why a/0 is not defined.
 </p>
-</div>
-</div>
-
-<div id="outline-container-orgc846f8e" class="outline-3">
-<h3 id="orgc846f8e">Grammar</h3>
-<div class="outline-text-3" id="text-orgc846f8e">
-<p>
-Since we are in imaginary grammar school we have to learn some grammar. Herb Gross will use grammar all through his lectures as examples and if you forgot what an noun modifier is then now is the time to relearn it all. 
-</p>
-
-
-
-
-
-
-
-
-
-
 
 <p>
-I'm going to do the entire arithmetic <a href="https://www.youtube.com/playlist?list=PL9phnVI_EOVW9U2PZtGKRwMvHy3l4reYv">playlist</a> and prove all the operations at the same time. If you forgot rates like percent, decimal conversion, measurement then you will learn it all here taught from the perspective of a mathematician. These are an hour long so stuff a bunch of books or water into a bag and lift it while you watch or do this over breakfast. 
+TODO
 </p>
-
-<p>
-Watching <a href="https://youtu.be/2SgXMNwOieY?si=pOVTmrPYHcbCxtHn">First lecture</a>. Herb is big into language grammar and using it for comparisons so we'll learn some since we are in imaginary primary school anyway once called grammar school. 
-</p>
-</div>
-</div>
-
-
-
-
-
-
-<div id="outline-container-org7c243b2" class="outline-3">
-<h3 id="org7c243b2">Rational numbers (percents)</h3>
-<div class="outline-text-3" id="text-org7c243b2">
-<p>
-We will learn a bit about rates because calculus is entirely about rates. This is from Herb Gross' old school <i>Classic Arithmetic</i> series. Herb was a MIT professor back in the day when people from Boston could actually get into MIT.
-</p>
-
-<ul class="org-ul">
-<li><a href="https://youtu.be/-psLE41jElw?feature=shared">YouTube</a> - Percents and Mixed Numbers - Classic Arithmetic</li>
-</ul>
-
-<p>
-We skipped the first 11 lectures but this entire series is very good, 
-</p>
-
 
 
 

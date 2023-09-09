@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-07-10 Mon 19:52 -->
+<!-- 2023-09-08 Fri 21:22 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>21st Century Undergrad Mathematics</title>
+<title>Graduate Mathematics From Scratch</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -238,359 +238,281 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
 <header>
-<h1 class="title">21st Century Undergrad Mathematics</h1>
+<h1 class="title">Graduate Mathematics From Scratch</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#intro">Intro</a></li>
-<li><a href="#insight">Insight to math crash course</a>
+<li><a href="#intro">Intro</a>
 <ul>
-<li><a href="#notation">Notation</a></li>
-<li><a href="#data-structres">Data Structures</a></li>
-<li><a href="#math-reasoning">Mathematical reasoning</a></li>
-<li><a href="#equality">Equality</a></li>
-<li><a href="#what-are-functions">What are Functions</a></li>
-<li><a href="#org5aeca2c">What is Linearity</a></li>
-<li><a href="#what-are-polynomials">What are Polynomials</a></li>
-<li><a href="#what-are-matrices">What are Matrices</a></li>
-<li><a href="#what-is-algebra">What is Algebra</a></li>
-<li><a href="#what-are-integration">What are Derivatives</a></li>
-<li><a href="#what-is-integration">What is Integration</a></li>
-<li><a href="#music-and-math">Music and math</a></li>
-<li><a href="#math-difficulty">Math difficulty</a></li>
+<li><a href="#org30306a3">The biggest mistake in learning math</a></li>
+<li><a href="#org47b274d">Second biggest mistake in learning math</a></li>
+<li><a href="#org36ceec4">Who am I?</a></li>
+<li><a href="#org8acf989">PreReqs</a></li>
+<li><a href="#org8bb73b8">The goals of math education</a></li>
+</ul>
+</li>
+<li><a href="#orgf931c2b">Curriculum</a>
+<ul>
+<li><a href="#orgdfb55de">Arithmetic</a></li>
+<li><a href="#org6964531">Algebra</a></li>
+<li><a href="#org8095618">Logic</a></li>
+<li><a href="#org497a767">Geometry</a></li>
+<li><a href="#orgbbe1c8e">Calculus</a></li>
+<li><a href="#orgd54b86f">Probability</a></li>
 <li><a href="#what-is-geometry">What is Geometry</a></li>
 </ul>
 </li>
-<li><a href="#Basics">Basics</a>
+<li><a href="#elementary">START HERE Elementary school redux</a>
 <ul>
-<li><a href="#orgdb8d0dd">Arithmetic with natural numbers</a></li>
-<li><a href="#org8ec5b9d">Laws of Subtraction</a></li>
-<li><a href="#org98ad038">The Hindu-Arabic number system</a></li>
-<li><a href="#orge23f080">Arithmetic with Hindu-Arabic notation</a></li>
-<li><a href="#org8557ae2">Laws of Division</a></li>
-<li><a href="#orgea10649">Fractions</a></li>
-<li><a href="#org10031c1">Arithmetic with fractions</a></li>
+<li><a href="#org59a6678">Arithmetic with natural numbers</a></li>
+<li><a href="#org870bc67">Subtraction and division</a></li>
+<li><a href="#org36da2ac">The Hindu-Arabic number system</a></li>
+<li><a href="#org8cea73c">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#org38084b8">Laws of Division</a></li>
+<li><a href="#org445908f">Fractions</a></li>
+<li><a href="#org4372ad5">Arithmetic with fractions</a></li>
+<li><a href="#orgeee6769">Laws of arithmetic for fracions</a></li>
+<li><a href="#orgeb54597">Integer construction</a></li>
+<li><a href="#orgfdec2d8">Rational numbers</a></li>
+<li><a href="#orgc846f8e">Grammar</a></li>
+<li><a href="#org7c243b2">Rational numbers (percents)</a></li>
 </ul>
 </li>
-<li><a href="#begin-here">BEGIN HERE</a></li>
-<li><a href="#Integration-theory">Integration Theory</a></li>
-<li><a href="#Logic">Logic &amp; Proofs</a></li>
-<li><a href="#Linear-algebra">Linear Algebra</a></li>
-<li><a href="#Category-theory">Category Theory</a></li>
-<li><a href="#Type-theory">Homotopy Type Theory</a></li>
 </ul>
 </div>
 </nav>
 <hr>
 
-<div id="outline-container-orgf6f30de" class="outline-2">
+<div id="outline-container-orgf9fc8ef" class="outline-2">
 <h2 id="intro">Intro</h2>
 <div class="outline-text-2" id="text-intro">
 <p>
-I assembled experimental material for the 21st century such as the Lean proof assistant to learn mathematical logic, linear algebra without free/pivot variables or echelon forms or defining the SVD using eigenvalues. The Riemann integral was replaced 100+ years ago too but still taught in undergrad so we'll see some 'modern' integrals.  
+This is for anyone interested in re-doing their math background from the very beginning to a basic first-year graduate math core.  
 </p>
 
 <p>
-We'll also learn some 21st century math like Univalent foundations which has enabled an explosion in research because you can apply univalence to many different objects to ensure interchangeability in all contexts. There is a ton of research happening right now at the Topos Institute in Category Theory so we will learn what's going on there too.
+This exists because probability and statistics are incomprehensible junk in undergrad and I wish to build models from scratch like stochastic processes so put this together for myself and others to follow. Some of the choices were from this mathematical maturity <a href="https://www.youtube.com/watch?v=zHU1xH6Ogs4">talk</a> and my own experience routinely running into highly abstract math while trying to follow some papers in the field that I'm interested in and having no idea what it means.  
+</p>
+</div>
+
+<div id="outline-container-org30306a3" class="outline-3">
+<h3 id="org30306a3">The biggest mistake in learning math</h3>
+<div class="outline-text-3" id="text-org30306a3">
+<p>
+The biggest mistake you can make in learning math is only taking things you think are 'useful'. In reality all of math is exactly the same thing from preschool arithmetic to twisting a torus in algebraic topology and you should take whatever high quality resources are available because whatever it is you want to do was already taught in a calculus class, algebraic geometry, commutative algebra or functional analysis. It literally is all the same thing so don't make the mistake that it's some kind of trade school knowledge specific to your trade and 'this math is a waste of time!' none of it is. You are learning this very, very abstract system of modeling that even abstracts the modeling. Pick whatever math topic you seem to feel you're the best at and you'll easily pick up all the rest no matter what it is because&#x2026;&#x2026;&#x2026;&#x2026;it's the same thing. 
 </p>
 
 <p>
-tl;dr we will learn
+Did you get what I was trying to say there? We are learning extreme abstract logic and it is abstractly all the same thing. You could spend 5 years learning everything you can about obscure topology or whatever and then eventually you get it and grasp the universal model where you have this realization you can apply your knowledge to every single domain you can think of. That is what math really is and there is no 'useful' math it's all useful no matter what it is. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47b274d" class="outline-3">
+<h3 id="org47b274d">Second biggest mistake in learning math</h3>
+<div class="outline-text-3" id="text-org47b274d">
+<p>
+Because math is so poorly taught in public schools (for people outside North America public school means government run 'free' schools) many people think you are some kind of genius if you know math and that it's absolutely impossible to know what you know. This is of course not true, it's a typical skill learned like everything else. I would say math is an easier skill because it's just mental you don't have to actually sculpt anything or shave a piece of wood exactly or even a brick layer has more advanced skill than what we're doing because that person has to combine skill with dexterity we just need to contemplate some abstract model. If you don't believe me try and learn Calculus here (no problem) then try and cut bricks so they perfectly fit a mould where a street crew cut out a hole to fix something. Good luck with that, there is no room for mistakes whereas what we are doing we can screw up as much as we want see all the statistical political polling sites who are consistently wrong about everything yet everyone still gives them money. 
+</p>
+
+<p>
+However you can use this myth to your advantage if you have kids you can teach them the material here (or using AOPS website) at a young age and the system will accelerate them into the top schools you don't have to pay for. I could (and should) write an entire workshop how to teach kids advanced math because I do it all the time just to laugh how everyone reacts like they are some prodigy and the kids get a free ride into charter/private schools. 
+</p>
+
+<p>
+There is also a myth you must have some kind of psycho personality where you spent years in a dimly lit room doing drill calculations and have an analytical outlook on life whereas they are 'creative' and never could take math. Another total fallacy. It comes from misinformation about Isaac Newton which I included below. Newton never drilled anything he always read math then tried by himself to generalize every theorem which requires creativity. Newton once stuck a metal rod in his eye to dislodge it and experiment with optics he was not a souless drone reciting calculations. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org36ceec4" class="outline-3">
+<h3 id="org36ceec4">Who am I?</h3>
+<div class="outline-text-3" id="text-org36ceec4">
+<p>
+I am you. Just a pleb running in the streets who grew up in this <a href="https://youtu.be/gUybirMnzFc?feature=shared">insane world</a> failing everything but managed to make it to the top. Becoming poor became a <a href="https://youtu.be/1s3fMaBdWD8?feature=shared">crime</a> where I live. The details of my life are cringe and not imporant what's critical is you and I'm designing this for you.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8acf989" class="outline-3">
+<h3 id="org8acf989">PreReqs</h3>
+<div class="outline-text-3" id="text-org8acf989">
+<p>
+I assume you have taken a basic functional programming course where you are taught things like higher-order functions and hopefully domain-specific languages because it's very similar to abstract math. There is such a course <a href="./software.html">here</a>. A Haskell book is fine, the Cornell <a href="https://cs3110.github.io/textbook/cover.html">OCaml</a> book is fine, a Common Lisp or Scheme book is fine, simply typing into YouTube 'higher order functions' is fine. Probably the best introduction is Robert Harper's <i>Programming in Standard ML</i> or <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s23/lect.html">COMP 212</a> <i>Functional Programming</i> (has YouTube lectures) by Dan Licata who was a PhD student of Robert Harper. The SML book by Harper will come up a few times in this curriculum in places you wouldn't expect like Terence Tao's books. 
+</p>
+
+<p>
+The reason Harper's book comes up so many times is because of <a href="https://cs3110.github.io/textbook/chapters/adv/curry-howard.html">this</a>. Programming, math and logic are all abstractly the same thing. A theorem in math is a specification of a program. The code you write for that spec is the proof. Running the code is the source of truth that your proof is correct, and it simplifies the proof like how <i>Proofs from the Book</i> is about the most elegant proofs so is a running program. We'll see some of this here when we take logic and read <i>Programming in Martin Loff's Type Theory</i>.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8bb73b8" class="outline-3">
+<h3 id="org8bb73b8">The goals of math education</h3>
+<div class="outline-text-3" id="text-org8bb73b8">
+<p>
+The goal of primary or elementary school (grade k through 5) is knowing what a rate is (fractions) and how to do division. If you know those two things you're pretty much good for middle school. It's also to learn basic literacy and writing, probably way more important than any math at this age. 
+</p>
+
+<p>
+The goal of middle school (grade 6 through 8) is grammar. The math goal is more rates like converting decimals to rates, averages and percentages. 'Per cent' meaning per hundred, a rate.  
+</p>
+
+<p>
+The goal of junior high (grade 8 through 10) is to learn functions and polynomials, rational numbers and trig ratios (yet more rates). 
+</p>
+
+<p>
+The goal of high school is those dreaded quadratic equations and polynomials you remember having to endlessly factor, inequalities and recently calculus. They now have Grade 12 advanced placement calculus otherwise known as AP Calc to avoid paying a thousand dollars in tuition to relearn what your highschool should have taught you but it's kind of scam as universities have now broken up their freshman year into courses like 'Math 101: integral calculus with applications' so even though you placed out of the most basic Math 100 about derivatives you can't escape Math 101.  
+</p>
+
+<p>
+The goal of undergrad is rhetoric and analytical logic. The secondary goal is to teach you how to read, understand and write a proof in abstract mathematics. Everything else you learn is essentially replaced in graduate school like your undergrad real analysis course is a waste of time because nobody has used the Riemann integral for over 100 years. The linear algebra you learn isn't good enough either but this doesn't matter because remember to goal is to be able to follow and write a proof which all these things helped you to do. Probability in undergrad (and thus statistics) are both pure garbage just demonstrating a bunch of diagrams 'look the circles all intersect ergo this theory works!'.
+</p>
+
+<p>
+The goal of graduate school (the basic instruction in first year) is to teach the ability to learn mathematics "quickly". You are expected to just fix your linear algebra problems as normally there is no graduate linear algebra course. You are expected to just figure out measure theory and abstract algebra yourself. You meet with a supervisor and they start asking you questions about obscure abstract frameworks and when you respond you don't know they give you a tutorial right there then say finish this massive journal of papers I've collected on this topic yourself expecting you to devote hours per day doing this because the training wheels are gone and you're on your own swimming with the sharks. You meet with peers over lunch on a regular basis reading different recent papers then brainstorm together is there a theory that connects all these things? 
+</p>
+
+<p>
+I have been to graduate school in the Netherlands for optimization (tip, don't have undergrad? Europe may accomodate you for gradute school look into it) so I will pull from experience. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf931c2b" class="outline-2">
+<h2 id="orgf931c2b">Curriculum</h2>
+<div class="outline-text-2" id="text-orgf931c2b">
+<p>
+These may change this is a live course I am doing it with you. 
+</p>
+</div>
+
+<div id="outline-container-orgdfb55de" class="outline-3">
+<h3 id="orgdfb55de">Arithmetic</h3>
+<div class="outline-text-3" id="text-orgdfb55de">
+<p>
+Here we study the properties of numbers
 </p>
 
 <ul class="org-ul">
-<li>Proof/logic formalization</li>
-<li>Proof strategies</li>
-<li>Modernized single variable, vector and matrix calculus</li>
-<li>Homotopy Type Theory/Univalence axiom 
+<li>Herb Gross <i>Classical Arithmetic</i> archived <a href="https://www.mathasasecondlanguage.org/self-guided">here</a> with videos on YouTube</li>
+<li>Proving all the laws of naturals, integers. rationals and real numbers from Tao's <i>Analysis I</i></li>
+<li>Undergraduate <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8">Number Theory</a></li>
+<li>Undergraduate <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj537_iYA5QrvwhvMlpkJ1yGN">Complex Analysis</a> 
 <ul class="org-ul">
-<li>which means we have to learn <a href="https://math.jhu.edu/~eriehl/context/">category theory</a></li>
-<li>which also means we have to learn some abstract algebra/topology</li>
+<li>This will come up again in other courses</li>
 </ul></li>
 </ul>
-
-<p>
-In undergrad course parlance this translates to an 'Intro to Proofs' course, Calc I and II, Analysis I, Linear Algebra, a Putnam seminar and a grad seminar in category/type theory. 
-</p>
-
-<p>
-<i>Do 1% effort for 100 days</i> - Prof <a href="https://youtu.be/YFUIPg8P2sY?t=278">Ryan O'Donnell</a>
-</p>
 </div>
 </div>
 
-<div id="outline-container-org26b96ee" class="outline-2">
-<h2 id="insight">Insight to math crash course</h2>
-<div class="outline-text-2" id="text-insight">
+<div id="outline-container-org6964531" class="outline-3">
+<h3 id="org6964531">Algebra</h3>
+<div class="outline-text-3" id="text-org6964531">
 <p>
-The following is every insight I picked up doing this material that often wasn't immediately obvious or explained.
-</p>
-</div>
-
-<div id="outline-container-orgd62bf8f" class="outline-3">
-<h3 id="notation">Notation</h3>
-<div class="outline-text-3" id="text-notation">
-<p>
-Constants are usually represented by a, b, c or the beginning of the alphabet and variables represented by x, y, z or the end of the alphabet. Greek letters typically represent real numbers (constants) which are decimal numbers that don't seem to terminate such as pi, phi, Euler's constant gamma, etc. Functions that don't need a permanent name are usually f, g, h and sometimes functions are Greek letters. These conventions go back to Descartes. 
-</p>
-
-<p>
-The notation can represent the same value or different ones: c + d = e can be different or all the same like 0 + 0 = 0. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org6f8f8a0" class="outline-3">
-<h3 id="data-structres">Data Structures</h3>
-<div class="outline-text-3" id="text-data-structres">
-<p>
-Math has data structures just like programming languages. A tuple is an ordered sequence/list (a, b) or n-tuple (a, b, c..) and there's unordered sets and partially ordered sets like a binary relation. 'Infinite sets' are similar to a stream data structure in programming for example the natural numbers are an infinite set where to obtain the next one you just add one more to the set. A vector is a tuple, a function is defined as a mapping between sets, a matrix is an array. Learning all the operations/rules of these data structures is trivial and you can move things to new data structures if you wanted which is how we have vector calculus. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org41096cb" class="outline-3">
-<h3 id="math-reasoning">Mathematical reasoning</h3>
-<div class="outline-text-3" id="text-math-reasoning">
-
-<figure>
-<img src="./proofs.png" alt="proofs.png">
-
-<figcaption><span class="figure-number">Figure 1: </span>What is a proof from <a href="http://www.cs.cmu.edu/~arielpro/15251f15/schedule.html">15-251</a></figcaption>
-</figure>
-
-<p>
-The model for basically all mathematical reasoning:
+I didn't include an undergrad course in linear algebra because no matter what course you take, it won't be adequate. 
 </p>
 
 <ul class="org-ul">
-<li>AND \(\land\) (conjunction)</li>
-<li>OR \(\lor\) (disjunction)</li>
-<li>NOT \(\neg\)</li>
-<li>Implies A \(\implies\) B
+<li>Herb Gross <i>The Game of Algebra</i> lectures <a href="https://www.mathasasecondlanguage.org/self-guided">here</a>
 <ul class="org-ul">
-<li>only false when A is true and B is false</li>
+<li>Lectures to help us with the problem books <a href="https://bookstore.ams.org/mcl-25">Algebra</a> and <a href="https://bookstore.ams.org/view?ProductCode=MCL/19">Algebraic Inequalities</a> from the <i>Mathematical Circles Library</i></li>
 </ul></li>
-<li>Iff (if and only if) A \(\iff\) B</li>
+<li>Intro to <a href="https://maa.org/press/maa-reviews/essential-linear-algebra-with-applications">Linear</a> algebra via problems</li>
+<li>Graduate <a href="http://www.math.clemson.edu/~macaule/classes/s21_math8530/">Linear</a> algebra (first 9 chapters of Peter Lax's book)</li>
+<li>Graduate <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj51pjBvvCPipgAT3SYpIiIsJ">Groups</a>, <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj52XDLrmvrFDgwcf6XOm2TEE">Rings</a> and <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53Zxu3iRGMYL_89GDMvdkgt">Galois theory</a> (Serge Lang's <i>Algebra</i> book)</li>
+<li>Graduate <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53rSexSz7vsYt-3rpHPR3HB">Commutative &amp; Homological</a> algebra</li>
 </ul>
+</div>
+</div>
 
+<div id="outline-container-org8095618" class="outline-3">
+<h3 id="org8095618">Logic</h3>
+<div class="outline-text-3" id="text-org8095618">
+<ul class="org-ul">
+<li><a href="https://leanprover.github.io/logic_and_proof/">Logic and Proof</a> formalizing some basic proofs with Lean</li>
+<li>Aristotle's categories</li>
+<li>Graduate <a href="http://www.cs.cmu.edu/~rwh/courses/hott/">HoTT</a> 'higher dimensional type theory' to learn univalence</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org497a767" class="outline-3">
+<h3 id="org497a767">Geometry</h3>
+<div class="outline-text-3" id="text-org497a767">
 <p>
-These connectives can of course be used to define each other:
+The kind of Geometry that was used for thousands of years to teach mathematical reasoning. 
 </p>
+
 <ul class="org-ul">
-<li>A \(\implies\) B is \(\neg\) A \(\lor\) B
+<li><a href="https://ocw.metu.edu.tr/course/view.php?id=311">Geometry I</a> from the Middle East Technical University
 <ul class="org-ul">
-<li>implication is only true when either A is false OR B is true</li>
+<li>Lectures to help us with <a href="https://bookstore.ams.org/view?ProductCode=MCL/26">Geometry</a> from the <i>Mathematical Circles Library</i></li>
 </ul></li>
-<li>Iff is (A \(\implies\) B) \(\land\) (B \(\implies\) A)</li>
+<li>Graduate <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53j51FG6wCbQKjBgpjKa5PX">Algebraic Geometry</a> (there's 2 more playlist)
+<ul class="org-ul">
+<li>This is for my own interest in statistics</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org64cd3c1" class="outline-3">
-<h3 id="equality">Equality</h3>
-<div class="outline-text-3" id="text-equality">
+<div id="outline-container-orgbbe1c8e" class="outline-3">
+<h3 id="orgbbe1c8e">Calculus</h3>
+<div class="outline-text-3" id="text-orgbbe1c8e">
 <p>
-Axioms of equality:
+The Riemann integral was replaced over 100 years ago so we will be skipping undergrad 'improper integrals' as they don't exist. 
 </p>
 
 <ul class="org-ul">
-<li>Axiom 1: Given any object, it should be equal to itself (reflexive property).</li>
-<li>Axiom 2: Given any two objects x and y of the same type if x = y then y = x (symmetric property)</li>
-<li>Axiom 3: Given any three objects x, y, and z of the same type if x = y and y = z then x = z (transitive property)</li>
-<li>Axiom 4: Given any objects of the same type, if x = y then both are interchangable in all functions/operations. Any property that depends on x, if x = y then property(x) and property(y) are equivalent too (substitution)</li>
+<li>Herb Gross <i>Calculus Revisited</i> lectures on MIT OCW 
+<ul class="org-ul">
+<li>Covers the entire Thomas' Calculus <a href="http://libgen.is/book/index.php?md5=2585132E896213194BC27C2F7A795D1B">book</a></li>
+<li>See <a href="https://drive.google.com/file/d/1YnaHb_ovMNWXv3gQg6q_8dMCJcjBSBf5/view?pli=1">Context for Calculus</a> by David Bressoud</li>
+</ul></li>
+<li><a href="https://maa.org/press/maa-reviews/problems-in-real-analysis-advanced-calculus-on-the-real-axis">Problems in Real Analysis</a> book</li>
+<li><a href="https://www.youtube.com/@PoShenLoh/search?query=Putnam%20">Putnam Seminar</a> to see some calculus proof strategies</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd54b86f" class="outline-3">
+<h3 id="orgd54b86f">Probability</h3>
+<div class="outline-text-3" id="text-orgd54b86f">
+<p>
+Some of the readings for measure theory are incomplete, we can use Axler's new text. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://w3.impa.br/~landim/lectures.html">Graduate Probability</a> 
+<ul class="org-ul">
+<li>Measure theory, functional analysis (for stochastic processes)</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org11c4026" class="outline-3">
-<h3 id="what-are-functions">What are Functions</h3>
-<div class="outline-text-3" id="text-what-are-functions">
-<p>
-An ancient concept of a function is written on a papyrus from 1850 BC describing the rule for finding the area of a rectangle using the product of two adjacent sides. Today we would say the area of a rectangle is a function of it's two adjacent sides or more generally when you multiply numbers together the final product is a function of its factors. Any kind of relationship/dependency can be modeled as a function so long as it maps to a single output or passes the 'vertical line test' when graphed meaning any arbitrary vertical line should only intercept the function once as there can only be one y-axis output per x-axis input. 
-</p>
-
-<p>
-Similar to <a href="https://cs.wheaton.edu/~tvandrun/dmfp/">programming</a> math functions can take functions as input and return new functions, that's exactly what derivatives in calculus do. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org5aeca2c" class="outline-3">
-<h3 id="org5aeca2c">What is Linearity</h3>
-<div class="outline-text-3" id="text-org5aeca2c">
-<p>
-In math linear means one thing changes at the same rate as another so the relation between them doesn't change. This means you can tweak knobs in models and scale bigger or smaller with a one-to-one relationship so scaling a model by 5 magnifies by 5 it doesn't shoot to 25 like x<sup>2</sup>. Linear equations or relations have the form of a straight line when graphed hence why line is in the name linear. Almost everything you learn in first year mathematics is a linear approximation to a more complex object because you want to approximate everything in the simple world of linearity like Euler's method for approximating differential equations or linearizing an exponential by using logarithms. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org532023f" class="outline-3">
-<h3 id="what-are-polynomials">What are Polynomials</h3>
-<div class="outline-text-3" id="text-what-are-polynomials">
-<p>
-A monomial is anything in the form ax<sup>n</sup> where a is some constant, n is an arbitrary natural number and x is a variable meaning you substitute in values for x which can be a function, another monomial, or an integer. Notice if the exponent n = 0 then we have ax<sup>0</sup> which evalutes to a(1) or a constant so any single constant is also a monomial and if x = 0 then ax<sup>n</sup> is a0<sup>n</sup> or 0 so 0 is also a monomial due to the substitution axiom of equality. 
-</p>
-
-<p>
-You can string these together to form polynomials. The general form of polynomials where a<sub>n</sub> are negative or positive coefficients: 
-</p>
-
-<p>
-\[f(x) = a_{n}x^n + a_{n-1}x^{n-1} + ... + a_{1}x + a_0\]
-</p>
-
-<p>
-The subscripts are an indexing scheme like how you would identify cells in an array. A polynomial p(x) is a specification, or a model/approximation of another function f(x) for the purposes of getting all its statistics such as which x is f(x) = 0? What value of x is the max/min of f(x)? What is the shape of its graph y = f(x)? If you divide two polynomial functions the result is a function that generates rational numbers. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgcfa45e3" class="outline-3">
-<h3 id="what-are-matrices">What are Matrices</h3>
-<div class="outline-text-3" id="text-what-are-matrices">
-<p>
-A matrix is a linear mapping so it too encodes or specifies a function. The purpose of linear algebra in highschool is to solve 'systems of linear equations' where in university it's to study linear transformations. A linear transformation example is a rotation of a 2D square. Input (x, y) coords as a vector to a rotation matrix and it returns it's rotated coords. In practice most transformations are non-linear but can be approximated with linear transformations.
-</p>
-
-<p>
-The notation <i>Ax = b</i> means A is a matrix, x is a vector and b is the vector output. A matrix multiplied by a vector is like giving it an input. If you multiply two matrices it's just function composition. When you encode a function as a matrix you can also get it's statistics using the SVD or Singular value decomposition which factors it down to individual parts/spaces for example Nullspace is the zeros of the function and Column space is the range of the function.
-</p>
-
-<p>
-A vector we'll learn later is an abstract object. In calculus courses they are usually represented by arrows in the 2D (x, y) or 3D (x,y,z) plane however the definition is so abstract a vector can also be a function or infinite sequence then the arrow representation makes no sense. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orga8cece9" class="outline-3">
-<h3 id="what-is-algebra">What is Algebra</h3>
-<div class="outline-text-3" id="text-what-is-algebra">
-<p>
-Modern algebra was invented to figure out Islamic inheritance law where debt had to be paid out and assets distributed according to some complex formula. It was a method of 'balancing and restoring' so you could do a scalar multiplication to both sides of an equation or subtract/add to each side to cancel any kind of negative values since they had no method of dealing with negative numbers back then.
-</p>
-
-<p>
-You can learn ancient Greek algebra by reading Diophantus' <i>Arithmetica</i> and there is even <a href="https://polymathclassical.com/curriculum-diophantine-algebra/">classical curriculum</a> for this. 
-</p>
-
-<p>
-An algebra seems to me to just mean computation is possible, think simple gates in a circuit doing T or F booleans and presto you have computation or an algebra. An 'algebraic type' is a sum or product type meaning a type that was formed by combining other types. A list is an algebraic type it's type is empty <i>plus</i> a link. According to Robert Harper a dynamically typed language has a single sum type which is every type combined. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org2496563" class="outline-3">
-<h3 id="what-are-integration">What are Derivatives</h3>
-<div class="outline-text-3" id="text-what-are-integration">
-<p>
-They are another linear approximation. When you take a derivative of a function it's a higher-order procedure that gives you a new function representing it's rate of change. Interpreting this derivative or rate of change function depends what your context is, if it's time mapped to position the derivative is the velocity. To find the derivative of a curve you zoom in on a local fixed point until it appears to be a straight line just like how you walk the round earth but everything seems flat from your zoomed perspective.
-</p>
-
-<p>
-In economics it has a similar <a href="https://link.springer.com/article/10.1007/s13138-020-00174-z">interpretation</a>. It's the rate of change while increasing production by a 'marginal unit'. The paper I linked notices the failure of students to transfer knowledge meaning you're supposed to recognize a concept in one context (elementary calc) and can apply it to another context in economics but of course their curriculum never works as you just get a cook book of cherry picked problems with recipes to solve them and students are naturally confused. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org4e00f4c" class="outline-3">
-<h3 id="what-is-integration">What is Integration</h3>
-<div class="outline-text-3" id="text-what-is-integration">
-<p>
-Integration is the undo function of taking a derivative called the anti-derivative. On YouTube they will tell you it's some approximation of an area using Riemann sums because modern universities think students are too stupid to learn the Lebesgue integral that replaced it in 1904 so you are forced to learn 'improper integrals' and other nonsense. You <i>integrate</i> a function meaning put it back together which was <i>derived</i> (the derivative) from another function. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgcc248a2" class="outline-3">
-<h3 id="music-and-math">Music and math</h3>
-<div class="outline-text-3" id="text-music-and-math">
-<p>
-The ancients considered architecture to be frozen music and music singing the architecture. They would take the porportions of elaborate domes and fictional geometry of celestial temples and write them into a rhythmic pattern called a talea then like the higher-order function map over the melody applying this talea in different measures creating a rich sound that did not exist during the time. For a few hundred years we mainly had <a href="https://youtu.be/fFo3O2FesMU">chanting</a> which became very advanced polyphony in the 1400s <a href="https://www.youtube.com/clip/UgkxGJBo3DBCeZZxQqzXXvn3npNTJS9dpHxC">like this song</a> where you can hear the map.
-</p>
-
-<p>
-Pythagoreans and Plato claimed that music itself is nothing but auditory perception of numbers and if you try learning music notation after learning math notation what do you think are they right? 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org99d95cb" class="outline-3">
-<h3 id="math-difficulty">Math difficulty</h3>
-<div class="outline-text-3" id="text-math-difficulty">
-<blockquote>
-<p>
-I have never taught this subject (elementary real analysis) without a few "weepers."  These are students who have always been convinced that they are "good at mathematics."  They aced the calculus courses, and yet are overwhelmed at the elementary real analysis level.  They can understand everything in class (they claim) but simply cannot write a correct proof for even the most trivial limit theorems of the course.  They have miserably failed the first midterm, something that they couldn't conceive would happen to them ever.
-</p>
-
-<p>
-Why is analysis so difficult?  They aren't much amused when I tell them that this material was <i>routinely taught in the former Soviet Union to 15 year olds</i>.
-</p>
-
-<p>
-Early study of any subject may not prepare you for the next level.  Real analysis courses are very subtle (not difficult really)  and demand greater insight and thought than the computational courses that precede them. 
-</p>
-
-<p>
-Learning a new subject does not always create challenges, but you should be aware that at some time in your life you will certainly encounter a new subject that overwhelms you at first.  Perhaps the most important skill you can learn is how to dig yourself out of trouble when a subject bites you hard.  You will have to do it eventually. 
-</p>
-
-<p>
-For high school students, if this happens in the first weeks of college&#x2014;well enjoy the experience and learn the necessary study skills.  You will need them again.  For math students&#x2013;don't get too smug.  At some point in your life you will have to work very hard to get to the next level.
-</p>
-
-<p>
-We will always find ourselves at some point in our life "unprepared" for the next level of study.  Consider it a question of character as to whether you can salvage yourself  
-</p>
-</blockquote>
-
-<p>
-Quote from Prof Brian S Thomson the author of the integration theory book we'll do. If you know how to program then most math abstractions will be easy for you to understand because <i>it's all the same thing</i>. There is a <a href="https://cs3110.github.io/textbook/chapters/adv/curry-howard.html">correspondence</a> between logic, math and programming where a theorem in math is a specification of a program, and the program written to that spec is a proof. When you run the program you are simplifying the proof. The lambda calculus by Church and natural deduction logic (proof theory) by Gentzen both developed in the 1930s is the same thing. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgd952637" class="outline-3">
+<div id="outline-container-org1eae1e1" class="outline-3">
 <h3 id="what-is-geometry">What is Geometry</h3>
 <div class="outline-text-3" id="text-what-is-geometry">
 
 <figure>
 <img src="./geometry.jpg" alt="geometry.jpg">   
 
-<figcaption><span class="figure-number">Figure 2: </span>Geometry of mathematical finance <a href="https://wwwen.uni.lu/index.php/research/fstm/dmath/research_areas/probability_theory_and_its_applications_mathematical_finance">uni.lu</a></figcaption>
+<figcaption><span class="figure-number">Figure 1: </span>Geometry of mathematical finance <a href="https://wwwen.uni.lu/index.php/research/fstm/dmath/research_areas/probability_theory_and_its_applications_mathematical_finance">uni.lu</a></figcaption>
 </figure>
 
 <p>
-Geometry is way of doing math, not a separate math subject. Think of it as an interpretation of math into visuals you can manipulate using logic. We will try some of it later but it's optional. 
+Geometry is way of doing math. For a few thousand years you learned mathematical reasoning by going through Euclid's Elements and demonstrating the proofs by showing how earlier proofs apply to the one you are demonstrating. Isaac Newton used it to prove limits back when everyone was using infintesimals.  
 </p>
 
 <p>
@@ -598,7 +520,7 @@ Geometry is way of doing math, not a separate math subject. Think of it as an in
 </p>
 
 <p>
-I did some research on how Isaac Newton learned math, if you're curious expand detials.
+I did some research on how Isaac Newton learned math, if you're curious expand details.
 </p>
 <details>
 <p>
@@ -621,7 +543,7 @@ He returns to the math department and is given Oughtred's <a href="https://www.m
 <figure>
 <img src="./geometrie.jpg" alt="geometrie.jpg">   
 
-<figcaption><span class="figure-number">Figure 3: </span>Cartesian Geometry by Van Schooten <a href="https://www.manhattanrarebooks.com/pages/books/2043/rene-descartes/geometria?soldItem=true">rarebooks</a></figcaption>
+<figcaption><span class="figure-number">Figure 2: </span>Cartesian Geometry by Van Schooten <a href="https://www.manhattanrarebooks.com/pages/books/2043/rene-descartes/geometria?soldItem=true">rarebooks</a></figcaption>
 </figure>
 
 <p>
@@ -677,26 +599,29 @@ He later wrote in a manuscript on geometry that mechanics of motion was what gen
 
 <iframe class="video" src="https://www.youtube.com/embed/qFo7xZFdBdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </details>
+
+
+<hr>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org4f51a70" class="outline-2">
-<h2 id="Basics">Basics</h2>
-<div class="outline-text-2" id="text-Basics">
+
+<div id="outline-container-org4c69aef" class="outline-2">
+<h2 id="elementary">START HERE Elementary school redux</h2>
+<div class="outline-text-2" id="text-elementary">
 <p>
-If you completely forgot all highschool math we will review it here. Alternatively you could also try Herb Gross' <a href="https://www.youtube.com/playlist?list=PL9phnVI_EOVW9U2PZtGKRwMvHy3l4reYv">Arithmetic</a> course the book and study guide is linked in the video descriptions on google drive. You could also get the Art of Problem Solving <a href="https://artofproblemsolving.com/store/book/aops-vol1">Vol 1: The Basics</a>. 
+Welcome to 'advanced' elementary school. We start by seeing how number objects are constructed.
+</p>
+</div>
+
+<div id="outline-container-org59a6678" class="outline-3">
+<h3 id="org59a6678">Arithmetic with natural numbers</h3>
+<div class="outline-text-3" id="text-org59a6678">
+<p>
+Wildberger originally made these lectures because his primary school kids were being taught trash mathematics in the 'new and improved' Australian school system (all western schools have this problem now). 
 </p>
 
-<p>
-We will rigorously learn algebra/analysis later so you just need the absolute basics to start.  
-</p>
-</div>
-
-
-<div id="outline-container-orgdb8d0dd" class="outline-3">
-<h3 id="orgdb8d0dd">Arithmetic with natural numbers</h3>
-<div class="outline-text-3" id="text-orgdb8d0dd">
 <ul class="org-ul">
 <li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
 </ul>
@@ -772,18 +697,41 @@ Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is 
 </div>
 </div>
 
-<div id="outline-container-org8ec5b9d" class="outline-3">
-<h3 id="org8ec5b9d">Laws of Subtraction</h3>
-<div class="outline-text-3" id="text-org8ec5b9d">
+<div id="outline-container-org870bc67" class="outline-3">
+<h3 id="org870bc67">Subtraction and division</h3>
+<div class="outline-text-3" id="text-org870bc67">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
+
+<p>
+Prove the subtraction laws 
+</p>
+
+<ul class="org-ul">
+<li>n - (m + k) = (n - m) - k 
+<ul class="org-ul">
+<li>The left side is n + (-1)(m + k)</li>
+<li>(-1)(m + k) via distributive law is (-1)m + (-1)k</li>
+<li>(-1)m is m + m groups at -1 times which makes no sense so we can commute</li>
+<li>m(-1) now it's m copies of -1</li>
+<li>n + (-1<sub>1</sub> + -1<sub>2</sub> .. + -1<sub>m</sub>) is -1 added up m times or -m</li>
+<li>n - m + (-1<sub>1</sub> + -1<sub>2</sub> .. + -1<sub>k</sub>) is -1 added up k times or -k
+<ul class="org-ul">
+<li>n - m - k = n - m - k proved</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Oops, he didn't define negative numbers yet (or even zero) since n - m is only defined if n &gt; m (we are still in the natural numbers only) so we can't just move variables to the other side either. We will prove this however shortly.
+</p>
 </div>
 </div>
 
-<div id="outline-container-org98ad038" class="outline-3">
-<h3 id="org98ad038">The Hindu-Arabic number system</h3>
-<div class="outline-text-3" id="text-org98ad038">
+<div id="outline-container-org36da2ac" class="outline-3">
+<h3 id="org36da2ac">The Hindu-Arabic number system</h3>
+<div class="outline-text-3" id="text-org36da2ac">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -797,51 +745,78 @@ A simplified Roman numeral system is introduced
 <li>327 = 3 x 10<sup>2</sup> + 2 x 10<sup>1</sup> + 7 x 10<sup>0</sup></li>
 </ul></li>
 </ul>
+
+<p>
+This will come up in many of the algebra books we'll do later. 
+</p>
 </div>
 </div>
 
-<div id="outline-container-orge23f080" class="outline-3">
-<h3 id="orge23f080">Arithmetic with Hindu-Arabic notation</h3>
-<div class="outline-text-3" id="text-orge23f080">
+
+<div id="outline-container-org8cea73c" class="outline-3">
+<h3 id="org8cea73c">Arithmetic with Hindu-Arabic notation</h3>
+<div class="outline-text-3" id="text-org8cea73c">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
 
 <p>
-A new way of hand multiplication is shown, taking advantage of the fact the notation is using the distributive law.  
+A new way of hand multiplication is shown, taking advantage of the fact the notation is using the distributive law. "Borrowing" while doing hand subtraction now makes sense. Wildberger rants how his daughter was taught a ridiculous way and this is now true everywhere. Look at a kid's local school curriculum one day how utterly terrible it is. It's like they hired a clown college to rewrite all of primary math.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8557ae2" class="outline-3">
-<h3 id="org8557ae2">Laws of Division</h3>
-<div class="outline-text-3" id="text-org8557ae2">
+<div id="outline-container-org38084b8" class="outline-3">
+<h3 id="org38084b8">Laws of Division</h3>
+<div class="outline-text-3" id="text-org38084b8">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
 
 <p>
-Laws you may have forgot: 
+Make sure you follow the proofs and the substitution he's using. In every calculus course like the recorded <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/">lectures</a> for MIT's 18.01 the prof repeatedly uses these laws without explaining them manipulating equations on the board.     
 </p>
 
 <p>
-\(\dfrac{k/m}{n} = \dfrac{k}{mn}\)                        
+Wildberger is ranting here about long division because schools removed it claiming it was 'too difficult'. 
 </p>
 
+<pre class="example">
+7)203
+</pre>
 
 <p>
-\(\dfrac{k}{m/n} = \dfrac{kn}{m}\)   
+How many groups of 7 x 10<sup>2</sup> fit into 203? 0 so reduce to how many groups of 7 x 10<sup>1</sup> fit into 203? 20 
 </p>
 
+<pre class="example">
+   20  
+7)203
+ -140
+   63  
+</pre>
+
 <p>
-In every calculus course like the recorded <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/">lectures</a> for MIT's 18.01 the prof repeatedly uses these laws without explaining them manipulating equations on the board.     
+How many groups of 7 x 10<sup>1</sup> fit into 63? 0 so reduce to how many groups of 7 x 10<sup>0</sup> fit into 63? 9 
+</p>
+
+<pre class="example">
+   29
+7)203 
+ -140
+   63
+  -63
+</pre>
+
+<p>
+This is the proper way of doing long division taking advantage of the encoding of the numbers as being multiplied by powers of 10. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgea10649" class="outline-3">
-<h3 id="orgea10649">Fractions</h3>
-<div class="outline-text-3" id="text-orgea10649">
+<div id="outline-container-org445908f" class="outline-3">
+<h3 id="org445908f">Fractions</h3>
+<div class="outline-text-3" id="text-org445908f">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -852,274 +827,115 @@ Interesting how he defines all these as types.
 </div>
 </div>
 
-<div id="outline-container-org10031c1" class="outline-3">
-<h3 id="org10031c1">Arithmetic with fractions</h3>
-<div class="outline-text-3" id="text-org10031c1">
+<div id="outline-container-org4372ad5" class="outline-3">
+<h3 id="org4372ad5">Arithmetic with fractions</h3>
+<div class="outline-text-3" id="text-org4372ad5">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
 
 <p>
-The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> used in the proof represents another similar variable. This is our first experience with a proof strategy: multiply both sides of something linear by a scalar.
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org95a5d2e" class="outline-2">
-<h2 id="begin-here">BEGIN HERE</h2>
-<div class="outline-text-2" id="text-begin-here">
-<p>
-I chose models here because seldom do you ever see these functions by themselves without being parameterized in a stats or algorithm book so it's helpful to see they do indeed take parameters just like programming functions. 
-</p>
-
-<p>
-<b>Linear models</b>
-</p>
-
-<p>
-Click <a href="https://www.desmos.com/calculator/cr2989cxmu">here</a> to see a desmos.com graph of y = ax + b otherwise known as a linear model or a linear function. In this notation both y and x are the same function and can be rewritten f(x) = ax + b then by subsitution axiom y = f(x) or y = ax + b. The constants a and b are parameters just like in a programming function. If you adjust those sliders changing the values of a and b you can see what they do where b shifts up and down the y-axis and a is the slope, steepness, rise/run ratio or y/x. If there is no change in y slope or 0/x then it is a horizontal line or a constant function. If there is no change in x slope or y/0 then it is a vertical line that intersects itself infinitely often and by definition not a function since every number on the y-axis is an output for a single x input. 
-</p>
-
-<p>
-A program in <a href="https://code.pyret.org/editor">pyret</a> to model what is going on would consume both slope and intercept, partially apply both and return a new function:
-</p>
-
-<pre class="example">
-fun create-line(m, b):
-  #y = mx + b
-  lam(x :: Number): (m * x) + b end
-end
-
-check:
-  f = create-line(5, 5)
-  f(5) is 30
-
-  #scale y by 10
-  #10y = 10m(x) + 10b 
-  10 * f(5) is 300
-end
-</pre>
-
-<p>
-<b>Exponential models</b>
-</p>
-
-<p>
-The function a<sup>x</sup> has parameters Ca<sup>kx</sup> where C is the y-intercept, k is how steep or the rate of growth, and a is almost always the constant e otherwise known as Euler's number. Sometimes you see base 2 but in practice (stats, theoretical cs, algorithm analysis) everyone prefers e for an exponential model because it has many nice properties such as it's derivative is itself.
-</p>
-
-<p>
-In calculus e<sup>x</sup> is usually written exp(x) and e<sup>kx</sup> is the model you use to estimate rate of growth where if k = 1/1 then 100% growth is assumed. This is why you often see k as a rational number (a rate) or a log to adjust the growth rate. Inputs x usually represent time so plug in time + desired growth rate and the exponential model will tell you how much growth at x time. 
-</p>
-
-<p>
-Now that you know these parameters, you also know every stats/probability function you will ever come across in undergrad mathematics for example:
-</p>
-
-<p>
-\[f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}\]
-</p>
-
-<p>
-C = \(\dfrac{1}{\sigma \sqrt{2\pi}}\), k = -1 and x is inside what is called a standard score or z-score in stats to get a mean of 0 and standard deviation of 1. You read that as the domain values (x inputs) to this stats model is z-scores. 
-</p>
-
-<p>
-<b>Logarithmic models</b>
-</p>
-
-<p>
-Logs are an undo/inverse method and how you would linearize an exponential function. The log of e<sup>x</sup> is called the natural logarithm 'lon' or ln(x) and it returns time in a calculus growth model so if e<sup>x</sup> returns growth and consumes time inputs then ln(x) consumes growth and returns (linear) time. Approximately ln(x) is (x - 1) and e<sup>x</sup> is (1 + x) and now you can see why everyone uses e as a growth model instead of a power function like 2<sup>x</sup> because working with e allows for manipulating models quickly to get an approximate answer. If you input ln(1) it's defined to return zero which makes sense because you are asking at what time do I reach 1x my current growth which is obviously 0 because you started with that growth. Similarily exp(0) is 1 because you are asking at time 0 what growth can I expect and you can expect 1x growth or the identity function of the same growth you started with. 
-</p>
-
-<p>
-Almost all graphs tend to use log-log (ln(x), ln(y)) or semi-log plotting (x, ln(y)) to linearize the data, almost all algorithm texts convert everything to logs to make it easier to work with, and multiplication of large numbers was done using logs before we had devices to reduce complexity of hand calculations. 
-</p>
-
-<p>
-The params to ln() are Cln(x - h) + v where parameters v is a vertical shift, h is a horizontal shift, and C is how steep it's climbing or descending depending on pos/negative. 
-</p>
-
-<p>
-The reason e<sup>ln(a)</sup> = a and ln(e<sup>a</sup>) = a is because ln(1) = 0 and ln(e) = 1. Since 1 = e<sup>0</sup> you can substitute that into ln(1) and get ln(e<sup>0</sup>) which is 0. If you substitute in e<sup>1</sup> you get ln(e<sup>1</sup>) = 1. If you input a log to e<sup>x</sup> then e<sup>ln(1)</sup> = e<sup>0</sup> = 1 or e<sup>ln(a)</sup> = a. 
-</p>
-
-<p>
-<b>Trigometric models</b>
-</p>
-
-<p>
-This is yet another linear model where you map motion around a circle to linear motion up and down the y-axis and left and right on the x-axis. There is only one trig function you need to know about which is the sine function because cosine is merely a horizontal shift of sine and everything else like tan, sec, cot etc is derived from sin/cos.  
-</p>
-
-<p>
-<a href="https://www.desmos.com/calculator/gfmnyhpjy4">Here</a> is the parameterized sine function model or \(f(x) = Asin[\frac{2\pi}{p}(x - h)] + v\) and adjusting the sliders for A, p, h and v it's obvious what they do. You will see this model used for any kind of periodic (repeating) data. 
-</p>
-
-<p>
-A good crash course is the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trigonometry Boot Camp</a>. There's a practice sheet and video containing a walk through of solutions if you want but really you just need to watch the <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">video</a> content as we won't be doing much trig outside of the sine function. The gist of this boot camp is there are 2 triangles that when scaled up/down and overlayed on the unit circle their tips lie on the unit circle and then radians can be used to find pi/3, pi/6 etc. All the identities are covered here too. 
-</p>
-
-<p>
-I actually use in practice <a href="https://www.youtube.com/playlist?list=PL3C58498718451C47">rational trig</a> because once upon a time I went through his book/playlist and converted all the trig functions to a program library and so find that much easier to use because then I can abstract away the angle/radian floating point and do vector trig for programming models where I work. 
-</p>
-
-<p>
-<b>Derivatives</b>
-</p>
-
-<p>
-From the lecture notes <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lec1/">here</a>:  
-</p>
-
-
-<figure>
-<img src="./secant.png" alt="secant.png">
-
-</figure>
-
-
-<p>
-In the diagram <i>Geometric Viewpoint on Derivatives</i> the x<sub>0</sub> at the bottom the subscript 0 means some arbitrary x input so we are looking at a fixed point not the full range of all f(x) inputs, for example f(5). To the right is x<sub>0</sub> + delta-x meaning that x<sub>0</sub> input plus a small perturbation or f(5 + 0.0001). The question 'What is a tangent line exactly' if you super zoom a local point on that curve you get a linear straight line, which is the tangent. The function that returns the slope of that linear line, of the point on the curve you zoomed in on, is the derivative or rate of change of that function at that instant. Globally we have a non-linear function (a curve) but when we just look at it locally super zooming into a very, very small interval it's linear.
-</p>
-
-
-<figure>
-<img src="./derivative.png" alt="derivative.png">
-
-</figure>
-
-<p>
-In every calc intro course they define the tangent as the limit (if it exists) of a secant line slope when the distance between points P and Q becomes almost 0 and YouTube is filled with animations of this secant line approaching the curve thus approximating the tangent as you reduce the distance between points but you should consider this simply another scheme of linear approximation in math that is the big idea of calculus. 
-</p>
-
-<p>
-Underneath the triangle it shows the derivative is equal to the 'difference quotient' or the limit of the ratio delta-y over delta-x which is f(x + dx) - f(x) divided by dx as the change in x goes to 0 or Q gets closer to P. If you look at this you realize it's y + dy - y over dx or dy/dx.
-</p>
-
-<p>
-You can make this into a <a href="https://papl.cs.brown.edu/2016/func-as-data.html#%28part._.A_.Little_.Calculus%29">program</a> to show the derivative returns a new function:
-</p>
-<pre class="example">
-fun d-dx(f :: (Number -&gt; Number)) -&gt; (Number -&gt; Number):
-  epsilon = 0.001
-  lam(x): (f(x + epsilon) - f(x)) / epsilon end
-end
-
-fun power-2(x): x * x end
-
-check:
-  # check the derivative of x^2 is 2x 
-
-  derivative-square = d-dx(power-2) 
-  derivative-square(5) is 10.001
-end
-</pre>
-
-<p>
-Looking at the first example f(x) = 1/x if we wanted the derivative for x<sup>2</sup> it would be (function)<sup>2</sup> or (x<sub>0</sub> + delta-x)<sup>2</sup> - (x<sub>0</sub>)<sup>2</sup> divided by delta-x. 
-</p>
-
-<p>
-Derivative of x<sup>2</sup> using the difference quotient:
-\[\frac{(x + dx)^2 - x^2}{dx} = \frac{x^2 + 2xdx + dx^2 - x^2}{dx} = \frac{2xdx}{dx} + \frac{dx^2}{dx} = 2x + dx\] 
-</p>
-
-<p>
-Then take the limit of dx to zero or 2x + 0 but dx<sup>2</sup> can also be arbitrarily discarded because it is second order junk, dx is already a tiny infintesimal amount, so dx<sup>2</sup> will be even smaller so essentially 0.
-</p>
-
-<p>
-There is a formula for any derivative of x<sup>n</sup> (power function) it's nx<sup>n-1</sup> the exponent comes down and multiplies whatever constant in front of x and the power of x is decreased by 1 so x<sup>2</sup> is 2x, 3x<sup>2</sup> is 6x etc. The derivative of a constant is 0 since 3 is also equal to 3x<sup>0</sup> so the 0 exponent comes down and wipes out everything by multiplication. The reverse procedure to take 2x and turn it back into x<sup>2</sup> is the integral which we will learn thoroughly later but it's a little more complex because the derivative you are reversing can come from multiple functions. 
-</p>
-
-<p>
-In <a href="https://youtu.be/zfHEkt-1sqo">this video</a> Wildberger goes through the original physics interpretation of the derivative and how integrating reverses the procedure if you're interested.  
-</p>
-
-<p>
-<b>Calculus from MIT's 18.06 Linear Algebra</b>
-</p>
-
-<p>
-Finally let's watch the first 13 minutes of <a href="https://youtu.be/oGZK3yGF-6k">this video</a>. This lecture is from the linear algebra course we'll be doing which is MIT's new modernized 18.06 that's taught by Alan Edelman. The part we are interested in is 1:27 to 12:54. @3:30 this is all explained with concrete values. You can now see that dy = f'(x) * dx or dy/dx = f'(x) using algebra to divide both sides by dx. Skipping to @9:05 he talks about linearization or how we are taking the parabola curve (non-linear) and approximating it with dy = f'(x)*dx which is our new y = ax + 0 linear model. The rest of this lecture we'll watch once we know some linear algebra but effectively you now know enough calculus to teach it to yourself using your resource of choice if you don't want to do the resources I'm doing.
+The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> used in the proof represents another similar variable. Make sure you can figure out his proof write it out yourself if you have to. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgca06908" class="outline-2">
-<h2 id="Integration-theory">Integration Theory</h2>
-<div class="outline-text-2" id="text-Integration-theory">
-<p>
-In undegrad you take a sequence of calculus I &amp; II courses that are utterly obsolete, and even worse they teach you pointless analysis I &amp; II courses which they don't tell you have been replaced since the very early 20th century. Your first day of grad instruction everything you learned in undergrad is tossed out and you learn a completely different math. No refunds are given. 
-</p>
-
-<p>
-So we will instead learn a modern integration theory and at the same time audit a book (no exercises) called <i>Calculus Reordered</i> by David M. Bressoud which you can get on libgen.is which is calculus taught in historical order. He made other books that teach you modern analysis as it was invented such as <i>A Radical Approach to Real Analysis</i> which is an excellent book, which has exercises, which has a sequel about the Lebesgue Integral. 
-</p>
-
-<p>
-TODO
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org11cc09f" class="outline-2">
-<h2 id="Logic">Logic &amp; Proofs</h2>
-<div class="outline-text-2" id="text-Logic">
-<p>
-TODO 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org8fcfab9" class="outline-2">
-<h2 id="Linear-algebra">Linear Algebra</h2>
-<div class="outline-text-2" id="text-Linear-algebra">
-<p>
-There's many options to learn linear algebra. One is Brown's <a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">CS53</a> where all the lectures are open to the public, and it's a programming course so you use his <a href="https://codingthematrix.com/">book</a> to do all the assignments in Python. The course prefers the complex plane as the field for most transformations (so trig functions) which makes sense if you're interested in computer gfx/game programming. There's also the VMS book from Stanford of <a href="https://web.stanford.edu/~boyd/vmls/">Applied Linear Algebra</a> with lectures on youtube. 
-</p>
-
-<p>
-I'm going to do Edelman's modernized version of <a href="https://github.com/mitmath/1806/tree/spring20">18.06 Linear Algebra</a> where almost all the work/lectures is in programming notebooks, and some Poh-Shen Loh Putnam seminars on linear algebra since it's probably the most useful subject to know that connects to all math branches. I'll also do some <a href="https://www.youtube.com/playlist?list=PL01A21B9E302D50C1">lectures</a> of 'Linear Algebraic Geometry' because everything is done in an abstract affine space so vastly simplified so you can transfer knowledge here to abstract algebra. He even demonstrates 4D transformations.   
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-orgaf87aa2" class="outline-2">
-<h2 id="Category-theory">Category Theory</h2>
-<div class="outline-text-2" id="text-Category-theory">
-<p>
-The Topos Insitute has developed <a href="https://ncatlab.org/nlab/show/HomePage">nLab</a> which is a wiki for collaborative category theory and anything you want to know about the subject it will be there. The best introduction is probably Emily Riehl's book <a href="https://ncatlab.org/nlab/show/Category+Theory+in+Context">Category Theory in Context</a> which is a free download. It's a good book because every definition is accompanied with all the different interpretations in various fields of math because you can learn Category Theory in a programming language context then have no idea how it extends to abstract math objects so we'll start here then progress to categorical logic/type theory. 
-</p>
-
-<p>
-The very first page of the book she assumes we have 'a year of algebraic topology and abstract algebra/group theory' already so will often use those as examples of categories and morphisms, so let's get an idea of what those subjects are. Lucky for us Wildberger already taught an algebraic topology course and covers these topics.
-</p>
-
+<div id="outline-container-orgeee6769" class="outline-3">
+<h3 id="orgeee6769">Laws of arithmetic for fracions</h3>
+<div class="outline-text-3" id="text-orgeee6769">
 <ul class="org-ul">
-<li>Intro to <a href="https://youtu.be/Kcyitn0LHSM">Abstract Algebra</a></li>
+<li><a href="https://youtu.be/uADs1yepIIA?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
 </ul>
 
 <p>
-TODO 
+Follow all these proofs. As per Wildberger in a video in his playlist about primary school education the best possible outcome of a primary student is knowing what a fraction is and their laws.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org062f720" class="outline-2">
-<h2 id="Type-theory">Homotopy Type Theory</h2>
-<div class="outline-text-2" id="text-Type-theory">
+<div id="outline-container-orgeb54597" class="outline-3">
+<h3 id="orgeb54597">Integer construction</h3>
+<div class="outline-text-3" id="text-orgeb54597">
+<ul class="org-ul">
+<li><a href="https://youtu.be/YDBLXCFrihc?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 12</li>
+</ul>
+
 <p>
-TODO
+The point in watching these is to see how you can start with just the natural natural numbers and keep going defining more and more complexity with new numbers. 
 </p>
+</div>
+</div>
+
+<div id="outline-container-orgfdec2d8" class="outline-3">
+<h3 id="orgfdec2d8">Rational numbers</h3>
+<div class="outline-text-3" id="text-orgfdec2d8">
+<ul class="org-ul">
+<li><a href="https://youtu.be/MDMG9Ljb8l0?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 13</li>
+</ul>
+
+<p>
+We learn what a field is. He says we should try proving all the field operations and we will. If you're curious in the introduction <a href="https://youtu.be/83ZjYvkdzYI?feature=shared">here</a> he shows how the rational number line has been raised on the y-axis showing how all numbers on a line through the origin (0,0) are equal on the rational strip. It explains why a/1 is a and why a/0 is not defined.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc846f8e" class="outline-3">
+<h3 id="orgc846f8e">Grammar</h3>
+<div class="outline-text-3" id="text-orgc846f8e">
+<p>
+Since we are in imaginary grammar school we have to learn some grammar. Herb Gross will use grammar all through his lectures as examples and if you forgot what an noun modifier is then now is the time to relearn it all. 
+</p>
+
+
+
+
+
+
+
+
+
+
+
+<p>
+I'm going to do the entire arithmetic <a href="https://www.youtube.com/playlist?list=PL9phnVI_EOVW9U2PZtGKRwMvHy3l4reYv">playlist</a> and prove all the operations at the same time. If you forgot rates like percent, decimal conversion, measurement then you will learn it all here taught from the perspective of a mathematician. These are an hour long so stuff a bunch of books or water into a bag and lift it while you watch or do this over breakfast. 
+</p>
+
+<p>
+Watching <a href="https://youtu.be/2SgXMNwOieY?si=pOVTmrPYHcbCxtHn">First lecture</a>. Herb is big into language grammar and using it for comparisons so we'll learn some since we are in imaginary primary school anyway once called grammar school. 
+</p>
+</div>
+</div>
+
+
+
+
+
+
+<div id="outline-container-org7c243b2" class="outline-3">
+<h3 id="org7c243b2">Rational numbers (percents)</h3>
+<div class="outline-text-3" id="text-org7c243b2">
+<p>
+We will learn a bit about rates because calculus is entirely about rates. This is from Herb Gross' old school <i>Classic Arithmetic</i> series. Herb was a MIT professor back in the day when people from Boston could actually get into MIT.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://youtu.be/-psLE41jElw?feature=shared">YouTube</a> - Percents and Mixed Numbers - Classic Arithmetic</li>
+</ul>
+
+<p>
+We skipped the first 11 lectures but this entire series is very good, 
+</p>
+
+
+
+
+
+
 <hr>
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-09-09 Sat 13:55 -->
+<!-- 2023-09-09 Sat 15:20 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Graduate Mathematics From Scratch</title>
@@ -249,33 +249,37 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#intro">Intro</a>
 <ul>
-<li><a href="#org401385c">Pre-reqs</a></li>
-<li><a href="#org3757f1c">The goals of education</a></li>
+<li><a href="#org1fa5e58">Pre-reqs</a></li>
+<li><a href="#org7a5c15b">The goals of education</a></li>
 </ul>
 </li>
-<li><a href="#orgbd31870">Curriculum</a>
+<li><a href="#org6ed0494">Curriculum</a>
 <ul>
-<li><a href="#orga4c960f">Arithmetic</a></li>
-<li><a href="#orgac26af3">Algebra</a></li>
-<li><a href="#org9085644">Logic</a></li>
-<li><a href="#org3d558e8">Geometry</a></li>
-<li><a href="#org0506e72">Calculus</a></li>
-<li><a href="#org839390f">Probability</a></li>
+<li><a href="#org9cb8475">Arithmetic</a></li>
+<li><a href="#org9750821">Algebra</a></li>
+<li><a href="#org6d028e7">Logic</a></li>
+<li><a href="#org96e3dad">Calculus</a></li>
+<li><a href="#orga792a28">Probability</a></li>
+<li><a href="#org2f51b22">Geometry</a>
+<ul>
 <li><a href="#what-is-geometry">What is Geometry</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#elementary">START HERE Elementary school redux</a>
 <ul>
-<li><a href="#org4aab573">Arithmetic with natural numbers</a></li>
-<li><a href="#org8c8ef1b">Subtraction and division</a></li>
-<li><a href="#org4f4ab7c">The Hindu-Arabic number system</a></li>
-<li><a href="#org723b5f8">Arithmetic with Hindu-Arabic notation</a></li>
-<li><a href="#org4c95e07">Laws of Division</a></li>
-<li><a href="#orgbda2dce">Fractions</a></li>
-<li><a href="#orgc63745c">Arithmetic with fractions</a></li>
-<li><a href="#org38426d0">Laws of arithmetic for fracions</a></li>
-<li><a href="#org20a9799">Integer construction</a></li>
-<li><a href="#org65db6f3">Rational numbers</a></li>
+<li><a href="#orgf7bb5f9">Arithmetic with natural numbers</a></li>
+<li><a href="#org39aa228">Subtraction and division</a></li>
+<li><a href="#org5182864">The Hindu-Arabic number system</a></li>
+<li><a href="#orgbdfad7b">Arithmetic with Hindu-Arabic notation</a></li>
+<li><a href="#orgc600e24">Laws of Division</a></li>
+<li><a href="#org851e60a">Fractions</a></li>
+<li><a href="#orgb85db23">Arithmetic with fractions</a></li>
+<li><a href="#org275d1ee">Laws of arithmetic for fracions</a></li>
+<li><a href="#org45e00f1">Integer construction</a></li>
+<li><a href="#org2aca2f7">Rational numbers</a></li>
+<li><a href="#org70e64ea">Arithmetic</a></li>
 </ul>
 </li>
 </ul>
@@ -283,7 +287,7 @@ for the JavaScript code in this tag.
 </nav>
 <hr>
 
-<div id="outline-container-orgc6aa3b6" class="outline-2">
+<div id="outline-container-orgf59344f" class="outline-2">
 <h2 id="intro">Intro</h2>
 <div class="outline-text-2" id="text-intro">
 <p>
@@ -295,24 +299,24 @@ This exists because probability and statistics are incomprehensible junk in unde
 </p>
 
 <p>
-The biggest mistake you can make in learning math is only taking things you think are 'useful'. All of math is exactly the same thing from arithmetic to twisting a torus in algebraic topology and studying any part of it helps to learn this crazy abstract model. 
+The biggest mistake you can make in learning math is only taking things you think are 'useful'. All of math is exactly the same thing from arithmetic to twisting a torus in algebraic topology and studying any part of it helps to learn this crazy abstract world. If high quality resources exists at your ability level you should take them regardless of perceived utility.  
 </p>
 </div>
 
-<div id="outline-container-org401385c" class="outline-3">
-<h3 id="org401385c">Pre-reqs</h3>
-<div class="outline-text-3" id="text-org401385c">
+<div id="outline-container-org1fa5e58" class="outline-3">
+<h3 id="org1fa5e58">Pre-reqs</h3>
+<div class="outline-text-3" id="text-org1fa5e58">
 <p>
-I assume you have taken a basic functional programming course where you are taught things like higher-order functions and hopefully domain-specific languages because it will help to see the exact same concepts as code you can run. There is such a course <a href="./software.html">here</a> or simply searching YouTube for 'higher order functions' is fine. Probably the best introduction is Robert Harper's <i>Programming in Standard ML</i> or <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s23/lect.html">COMP 212</a> <i>Functional Programming</i> (has YouTube lectures) by Dan Licata who was a PhD student of Robert Harper. The SML book by Harper will come up a few times in this curriculum in places you wouldn't expect like Terence Tao's books because of <a href="https://cs3110.github.io/textbook/chapters/adv/curry-howard.html">this</a> which shows programs, math and logic are all abstractly the same thing.   
+I assume you have taken a basic functional programming course where you are taught things like higher-order functions and hopefully domain-specific languages because it will help to see the exact same concepts as code you can run. There is such a course <a href="./software.html">here</a> or simply searching YouTube for 'higher order functions' is fine. Probably the best introduction is Robert Harper's <i>Programming in Standard ML</i> or <a href="https://dlicata.wescreates.wesleyan.edu/teaching/fp-s23/lect.html">COMP 212</a> <i>Functional Programming</i> (has YouTube lectures) by Dan Licata who was a PhD student of Robert Harper. The SML book by Harper will come up a few times in this curriculum in places you wouldn't expect like Terence Tao's books because of <a href="https://cs3110.github.io/textbook/chapters/adv/curry-howard.html">this</a> observation which shows programs, math and logic are all abstractly the same thing.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3757f1c" class="outline-3">
-<h3 id="org3757f1c">The goals of education</h3>
-<div class="outline-text-3" id="text-org3757f1c">
+<div id="outline-container-org7a5c15b" class="outline-3">
+<h3 id="org7a5c15b">The goals of education</h3>
+<div class="outline-text-3" id="text-org7a5c15b">
 <p>
-I went through the common core of every western country that has it open to the public:
+I went through the common core of every western country that has it open to the public and watched <a href="https://youtu.be/H0z9sJyTv2w?si=pNoBwqVwc_5URGTO">this talk</a> on what is the purpose of education and who actually benefits. 
 </p>
 
 <ul class="org-ul">
@@ -356,11 +360,11 @@ The goal of undergrad is mastering skills in rhetoric, grammar and analytical lo
 </p>
 
 <ul class="org-ul">
-<li>Graduate (Masters)</li>
+<li>Graduate (Masters, MD, JD, MScEng etc)</li>
 </ul>
 
 <p>
-The goal of a Masters is a high-powered vocational degree. A lawyer goes to law school, a doctor goes to medical school, an engineer spends an additional year in graduate school and typically has to produce a thesis in order to be licensed by some engineering association. Basically undergrad is now the new high school and a masters is employment training where you apprentice with professionals. 
+A Masters is a high-powered vocational degree. A lawyer goes to law school, a doctor goes to medical school, an engineer spends an additional year or two in graduate school and typically has to produce a thesis in order to be licensed by some engineering association. Basically undergrad is now the new high school and a masters is employment training where you apprentice with professionals and get formal certification to practice your trade.  
 </p>
 
 <ul class="org-ul">
@@ -368,23 +372,23 @@ The goal of a Masters is a high-powered vocational degree. A lawyer goes to law 
 </ul>
 
 <p>
-A PhD is doctor of philosophy. Traditionally there was no such thing as mathematicians or scientists you were simply somebody engaged in the natural philosophy. The goal of graduate school/phd track is to produce a dissertation which is original research that advances our current knowledge somehow. The basic instruction in first year is designed to bring you up to date with the last 50 years of modern mathematics and teach the ability to learn mathematics "quickly". You do actually get faster because by now you have seen this abstract model in every kind of context and can connect patterns so one subject is just like another. You read many, many proofs that use the same kind of strategy and eventually you can predict what they're going to use in a paper or comprehensive theory text before you even read it. At this stage you are more focused on what kind of assumptions the author of the proof has made because showing a single example that an assumption is not true unravels the whole proof and can be the topic of a published paper.   
+PhD means doctor of philosophy. Traditionally there was no such titles as mathematician or scientist you were simply somebody engaged in the natural philosophy. The goal of graduate school/phd track is to produce a dissertation which is original research that advances our current knowledge somehow. The basic instruction in first year is designed to bring you up to date with the last 50 years of modern mathematics and teach the ability to learn mathematics "quickly". You do actually get faster because by now you have seen this abstract model in every kind of context and can connect patterns so one subject is just like another. You read many, many proofs that use the same kind of strategy and eventually you can predict what they're going to use in a paper or comprehensive theory text before you even read it. At this stage you are more focused on what kind of assumptions the author of the proof has made because showing a single example that an assumption is not true unravels the whole proof and can be the topic of a published paper.   
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgbd31870" class="outline-2">
-<h2 id="orgbd31870">Curriculum</h2>
-<div class="outline-text-2" id="text-orgbd31870">
+<div id="outline-container-org6ed0494" class="outline-2">
+<h2 id="org6ed0494">Curriculum</h2>
+<div class="outline-text-2" id="text-org6ed0494">
 <p>
-These may change this is a live course I am doing it with you. 
+Each topic goes from the most elementary and increments to a more advanced coverage. 
 </p>
 </div>
 
-<div id="outline-container-orga4c960f" class="outline-3">
-<h3 id="orga4c960f">Arithmetic</h3>
-<div class="outline-text-3" id="text-orga4c960f">
+<div id="outline-container-org9cb8475" class="outline-3">
+<h3 id="org9cb8475">Arithmetic</h3>
+<div class="outline-text-3" id="text-org9cb8475">
 <p>
 Here we study the properties of numbers
 </p>
@@ -401,11 +405,11 @@ Here we study the properties of numbers
 </div>
 </div>
 
-<div id="outline-container-orgac26af3" class="outline-3">
-<h3 id="orgac26af3">Algebra</h3>
-<div class="outline-text-3" id="text-orgac26af3">
+<div id="outline-container-org9750821" class="outline-3">
+<h3 id="org9750821">Algebra</h3>
+<div class="outline-text-3" id="text-org9750821">
 <p>
-I didn't include an undergrad course in linear algebra because no matter what course you take, it won't be adequate. 
+Calculus course we take will teach introductory linear algebra 
 </p>
 
 <ul class="org-ul">
@@ -413,7 +417,7 @@ I didn't include an undergrad course in linear algebra because no matter what co
 <ul class="org-ul">
 <li>Lectures to help us with the problem books <a href="https://bookstore.ams.org/mcl-25">Algebra</a> and <a href="https://bookstore.ams.org/view?ProductCode=MCL/19">Algebraic Inequalities</a> from the <i>Mathematical Circles Library</i></li>
 </ul></li>
-<li>Intro to <a href="https://maa.org/press/maa-reviews/essential-linear-algebra-with-applications">Linear</a> algebra via problems</li>
+<li>Intro to <a href="https://maa.org/press/maa-reviews/essential-linear-algebra-with-applications">Linear</a> transformations via problems</li>
 <li>Graduate <a href="http://www.math.clemson.edu/~macaule/classes/s21_math8530/">Linear</a> algebra (first 9 chapters of Peter Lax's book)</li>
 <li>Graduate <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj51pjBvvCPipgAT3SYpIiIsJ">Groups</a>, <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj52XDLrmvrFDgwcf6XOm2TEE">Rings</a> and <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53Zxu3iRGMYL_89GDMvdkgt">Galois theory</a> (Serge Lang's <i>Algebra</i> book)</li>
 <li>Graduate <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53rSexSz7vsYt-3rpHPR3HB">Commutative &amp; Homological</a> algebra</li>
@@ -421,40 +425,24 @@ I didn't include an undergrad course in linear algebra because no matter what co
 </div>
 </div>
 
-<div id="outline-container-org9085644" class="outline-3">
-<h3 id="org9085644">Logic</h3>
-<div class="outline-text-3" id="text-org9085644">
-<ul class="org-ul">
-<li><a href="https://leanprover.github.io/logic_and_proof/">Logic and Proof</a> formalizing some basic proofs with Lean</li>
-<li>Aristotle's categories</li>
-<li>Graduate <a href="http://www.cs.cmu.edu/~rwh/courses/hott/">HoTT</a> 'higher dimensional type theory' to learn univalence</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org3d558e8" class="outline-3">
-<h3 id="org3d558e8">Geometry</h3>
-<div class="outline-text-3" id="text-org3d558e8">
+<div id="outline-container-org6d028e7" class="outline-3">
+<h3 id="org6d028e7">Logic</h3>
+<div class="outline-text-3" id="text-org6d028e7">
 <p>
-The kind of Geometry that was used for thousands of years to teach mathematical reasoning. 
+Proof assistant software is getting better so we will try it
 </p>
 
 <ul class="org-ul">
-<li><a href="https://ocw.metu.edu.tr/course/view.php?id=311">Geometry I</a> from the Middle East Technical University
-<ul class="org-ul">
-<li>Lectures to help us with <a href="https://bookstore.ams.org/view?ProductCode=MCL/26">Geometry</a> from the <i>Mathematical Circles Library</i></li>
-</ul></li>
-<li>Graduate <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53j51FG6wCbQKjBgpjKa5PX">Algebraic Geometry</a> (there's 2 more playlist)
-<ul class="org-ul">
-<li>This is for my own interest in statistics</li>
-</ul></li>
+<li><a href="https://leanprover.github.io/logic_and_proof/">Logic and Proof</a> formalizing some basic proofs with Lean</li>
+<li>Aristotle's Categories is much harder than it looks and a way of thinking</li>
+<li>Graduate <a href="http://www.cs.cmu.edu/~rwh/courses/hott/">HoTT</a> 'higher dimensional type theory' to learn univalence a 21st century invention to prove two things are equal in all contexts and is the basis for many new type theories</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0506e72" class="outline-3">
-<h3 id="org0506e72">Calculus</h3>
-<div class="outline-text-3" id="text-org0506e72">
+<div id="outline-container-org96e3dad" class="outline-3">
+<h3 id="org96e3dad">Calculus</h3>
+<div class="outline-text-3" id="text-org96e3dad">
 <p>
 The Riemann integral was replaced over 100 years ago so we will be skipping undergrad 'improper integrals' as they don't exist. 
 </p>
@@ -471,9 +459,9 @@ The Riemann integral was replaced over 100 years ago so we will be skipping unde
 </div>
 </div>
 
-<div id="outline-container-org839390f" class="outline-3">
-<h3 id="org839390f">Probability</h3>
-<div class="outline-text-3" id="text-org839390f">
+<div id="outline-container-orga792a28" class="outline-3">
+<h3 id="orga792a28">Probability</h3>
+<div class="outline-text-3" id="text-orga792a28">
 <p>
 Some of the readings for measure theory are incomplete, we can use Axler's new text. 
 </p>
@@ -488,9 +476,29 @@ Some of the readings for measure theory are incomplete, we can use Axler's new t
 </div>
 
 
-<div id="outline-container-org153c9c3" class="outline-3">
-<h3 id="what-is-geometry">What is Geometry</h3>
-<div class="outline-text-3" id="text-what-is-geometry">
+<div id="outline-container-org2f51b22" class="outline-3">
+<h3 id="org2f51b22">Geometry</h3>
+<div class="outline-text-3" id="text-org2f51b22">
+<p>
+The kind of Geometry that was used for thousands of years to teach mathematical reasoning. 
+</p>
+
+<ul class="org-ul">
+<li>Paul Lockhart's book <i>Measurement</i></li>
+<li><a href="https://ocw.metu.edu.tr/course/view.php?id=311">Geometry I</a> from the Middle East Technical University
+<ul class="org-ul">
+<li>Lectures to help us with <a href="https://bookstore.ams.org/view?ProductCode=MCL/26">Geometry</a> from the <i>Mathematical Circles Library</i></li>
+</ul></li>
+<li>Graduate <a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53j51FG6wCbQKjBgpjKa5PX">Algebraic Geometry</a> (there's 2 more playlist)
+<ul class="org-ul">
+<li>This is for my own interest in statistics but it's an incredibly mind blowing art and probably the hardest math here</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-org59e4b76" class="outline-4">
+<h4 id="what-is-geometry">What is Geometry</h4>
+<div class="outline-text-4" id="text-what-is-geometry">
 
 <figure>
 <img src="./geometry.jpg" alt="geometry.jpg">   
@@ -592,9 +600,10 @@ He later wrote in a manuscript on geometry that mechanics of motion was what gen
 </div>
 </div>
 </div>
+</div>
 
 
-<div id="outline-container-orgcc9ca57" class="outline-2">
+<div id="outline-container-org41eb88b" class="outline-2">
 <h2 id="elementary">START HERE Elementary school redux</h2>
 <div class="outline-text-2" id="text-elementary">
 <p>
@@ -602,9 +611,9 @@ Welcome to 'advanced' elementary school. We start by seeing how number objects a
 </p>
 </div>
 
-<div id="outline-container-org4aab573" class="outline-3">
-<h3 id="org4aab573">Arithmetic with natural numbers</h3>
-<div class="outline-text-3" id="text-org4aab573">
+<div id="outline-container-orgf7bb5f9" class="outline-3">
+<h3 id="orgf7bb5f9">Arithmetic with natural numbers</h3>
+<div class="outline-text-3" id="text-orgf7bb5f9">
 <p>
 Wildberger originally made these lectures because his primary school kids were being taught trash mathematics in the 'new and improved' Australian school system (all western schools have this problem now). 
 </p>
@@ -667,11 +676,7 @@ Right hand side: k(nm) is nm + nm repeated k times (nm<sub>1</sub> + &#x2026; + 
 </p>
 
 <p>
-First let's prove n1 = 1n or 1n = n. We proved n1 = n already, so we can use substitution to replace n in 1n.
-</p>
-
-<p>
-1n is 1(1<sub>1</sub> + .. + 1<sub>n</sub>) and using the distributive law this is (1<sub>1</sub> + .. + 1<sub>n</sub>) or n. So now we have n1 = 1n.
+First let's prove n1 = 1n or 1n = n. We proved n1 = n already, so we can use substitution to replace n in 1n with 1(1<sub>1</sub> + .. + 1<sub>n</sub>) and using the distributive law this is (1<sub>1</sub> + .. + 1<sub>n</sub>) or n. Now we have n1 = 1n.
 </p>
 
 <p>
@@ -679,14 +684,14 @@ Looking at the right side: mn is (n<sub>1</sub> + &#x2026; + n<sub>m</sub>)
 </p>
 
 <p>
-Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is m, so we have nm = nm.  
+Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is m, we have nm = nm.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8c8ef1b" class="outline-3">
-<h3 id="org8c8ef1b">Subtraction and division</h3>
-<div class="outline-text-3" id="text-org8c8ef1b">
+<div id="outline-container-org39aa228" class="outline-3">
+<h3 id="org39aa228">Subtraction and division</h3>
+<div class="outline-text-3" id="text-org39aa228">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
@@ -711,14 +716,14 @@ Prove the subtraction laws
 </ul>
 
 <p>
-Oops, he didn't define negative numbers yet (or even zero) since n - m is only defined if n &gt; m (we are still in the natural numbers only) so we can't just move variables to the other side either. We will prove this however shortly.
+Oops, he didn't define negative numbers yet (or even zero) since n - m is only defined if n &gt; m (we are still in the natural numbers only) so we can't just move variables to the other side either. We will prove this anyway soon. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4f4ab7c" class="outline-3">
-<h3 id="org4f4ab7c">The Hindu-Arabic number system</h3>
-<div class="outline-text-3" id="text-org4f4ab7c">
+<div id="outline-container-org5182864" class="outline-3">
+<h3 id="org5182864">The Hindu-Arabic number system</h3>
+<div class="outline-text-3" id="text-org5182864">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -740,9 +745,9 @@ This will come up in many of the algebra books we'll do later.
 </div>
 
 
-<div id="outline-container-org723b5f8" class="outline-3">
-<h3 id="org723b5f8">Arithmetic with Hindu-Arabic notation</h3>
-<div class="outline-text-3" id="text-org723b5f8">
+<div id="outline-container-orgbdfad7b" class="outline-3">
+<h3 id="orgbdfad7b">Arithmetic with Hindu-Arabic notation</h3>
+<div class="outline-text-3" id="text-orgbdfad7b">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -753,9 +758,9 @@ A new way of hand multiplication is shown, taking advantage of the fact the nota
 </div>
 </div>
 
-<div id="outline-container-org4c95e07" class="outline-3">
-<h3 id="org4c95e07">Laws of Division</h3>
-<div class="outline-text-3" id="text-org4c95e07">
+<div id="outline-container-orgc600e24" class="outline-3">
+<h3 id="orgc600e24">Laws of Division</h3>
+<div class="outline-text-3" id="text-orgc600e24">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -801,9 +806,9 @@ This is the proper way of doing long division taking advantage of the encoding o
 </div>
 </div>
 
-<div id="outline-container-orgbda2dce" class="outline-3">
-<h3 id="orgbda2dce">Fractions</h3>
-<div class="outline-text-3" id="text-orgbda2dce">
+<div id="outline-container-org851e60a" class="outline-3">
+<h3 id="org851e60a">Fractions</h3>
+<div class="outline-text-3" id="text-org851e60a">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -814,9 +819,9 @@ Interesting how he defines all these as types.
 </div>
 </div>
 
-<div id="outline-container-orgc63745c" class="outline-3">
-<h3 id="orgc63745c">Arithmetic with fractions</h3>
-<div class="outline-text-3" id="text-orgc63745c">
+<div id="outline-container-orgb85db23" class="outline-3">
+<h3 id="orgb85db23">Arithmetic with fractions</h3>
+<div class="outline-text-3" id="text-orgb85db23">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -827,9 +832,9 @@ The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> us
 </div>
 </div>
 
-<div id="outline-container-org38426d0" class="outline-3">
-<h3 id="org38426d0">Laws of arithmetic for fracions</h3>
-<div class="outline-text-3" id="text-org38426d0">
+<div id="outline-container-org275d1ee" class="outline-3">
+<h3 id="org275d1ee">Laws of arithmetic for fracions</h3>
+<div class="outline-text-3" id="text-org275d1ee">
 <ul class="org-ul">
 <li><a href="https://youtu.be/uADs1yepIIA?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
 </ul>
@@ -840,9 +845,9 @@ Follow all these proofs. As per Wildberger in a video in his playlist about prim
 </div>
 </div>
 
-<div id="outline-container-org20a9799" class="outline-3">
-<h3 id="org20a9799">Integer construction</h3>
-<div class="outline-text-3" id="text-org20a9799">
+<div id="outline-container-org45e00f1" class="outline-3">
+<h3 id="org45e00f1">Integer construction</h3>
+<div class="outline-text-3" id="text-org45e00f1">
 <ul class="org-ul">
 <li><a href="https://youtu.be/YDBLXCFrihc?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 12</li>
 </ul>
@@ -853,9 +858,9 @@ The point in watching these is to see how you can start with just the natural na
 </div>
 </div>
 
-<div id="outline-container-org65db6f3" class="outline-3">
-<h3 id="org65db6f3">Rational numbers</h3>
-<div class="outline-text-3" id="text-org65db6f3">
+<div id="outline-container-org2aca2f7" class="outline-3">
+<h3 id="org2aca2f7">Rational numbers</h3>
+<div class="outline-text-3" id="text-org2aca2f7">
 <ul class="org-ul">
 <li><a href="https://youtu.be/MDMG9Ljb8l0?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 13</li>
 </ul>
@@ -863,9 +868,22 @@ The point in watching these is to see how you can start with just the natural na
 <p>
 We learn what a field is. He says we should try proving all the field operations and we will. If you're curious in the introduction <a href="https://youtu.be/83ZjYvkdzYI?feature=shared">here</a> he shows how the rational number line has been raised on the y-axis showing how all numbers on a line through the origin (0,0) are equal on the rational strip. It explains why a/1 is a and why a/0 is not defined.
 </p>
+</div>
+</div>
+
+<div id="outline-container-org70e64ea" class="outline-3">
+<h3 id="org70e64ea">Arithmetic</h3>
+<div class="outline-text-3" id="text-org70e64ea">
+<p>
+I'm going to do in it's entirety <a href="https://www.mathasasecondlanguage.org/self-guided">Arithmetic</a> by Herb Gross. This is vocational school style math that was originally taught to adults at community colleges and in prisons in North Carolina. It is a seriously high quality resource designed for self-studying and contains all the things someone would expect you to know from elementary arithmetic like what is a constant rate, what is a non-constant rate. The book is <a href="http://web.archive.org/web/20170713214904/http://www.adjectivenounmath.com/id78.html">here</a> archived. I am following the study guides for each module that tell you exactly what to do and contain the problem sets.
+</p>
+
+<ul class="org-ul">
+<li>Reading the study guide for <a href="http://web.archive.org/web/20170713214904/http://www.adjectivenounmath.com/sitebuildercontent/sitebuilderfiles/module1StudyGuide.pdf">Module 1</a></li>
+</ul>
 
 <p>
-TODO
+TODO 
 </p>
 
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-08-30 Wed 16:03 -->
+<!-- 2023-09-14 Thu 19:10 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI in 2023 From Scratch</title>
+<title>AI in 2023</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="jbh">
 <style type="text/css">
@@ -238,141 +238,126 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
 <header>
-<h1 class="title">AI in 2023 From Scratch</h1>
+<h1 class="title">AI in 2023</h1>
 </header><nav id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga2fc6cb">Intro</a>
+<li><a href="#org29c5de6">Curriculum</a></li>
+<li><a href="#orgd6c0d89">Linear Algebra</a>
 <ul>
-<li><a href="#org4aa555e">Curriculum</a></li>
-</ul>
-</li>
-<li><a href="#org08a28ad">LLMs and Artificial General Intelligence</a>
-<ul>
-<li><a href="#org80bf714">Primer on Matrices</a></li>
-<li><a href="#org1b3655f">Primer on probability</a></li>
-<li><a href="#orgbcd896b">Neural Networks</a></li>
+<li><a href="#orgef07561">Functions</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orga2fc6cb" class="outline-2">
-<h2 id="orga2fc6cb">Intro</h2>
-<div class="outline-text-2" id="text-orga2fc6cb">
+<div id="outline-container-org29c5de6" class="outline-2">
+<h2 id="org29c5de6">Curriculum</h2>
+<div class="outline-text-2" id="text-org29c5de6">
 <p>
-First we crash course how LLMs work (large language models) and how to program linear algebra. If you stick around then we learn it all at the foundations level from absolute scratch the mathematical theory of Machine Learning both past and future. If you're interested. I'm also doing the 2023 Reinforcement Learning course from CMU to learn how to program program dynamic agents that interact in our 3D world (autonomous drones/cars, boston dynamics tier robotics). 
-</p>
-</div>
-
-
-<div id="outline-container-org4aa555e" class="outline-3">
-<h3 id="org4aa555e">Curriculum</h3>
-<div class="outline-text-3" id="text-org4aa555e">
-<p>
-First part
+First part so you can jump on some feature bounties for an AI open source projects
 </p>
 
 <ul class="org-ul">
-<li>LLMs crash course mainly using Cornell lectures/edx and whatever papers we can find
-<ul class="org-ul">
-<li>Done so you can jump on some open source project and make money chasing feature bounties</li>
-</ul></li>
-<li><a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">CS053</a> Brown University - Coding the Matrix
-<ul class="org-ul">
-<li>Programming Linear Algebra which is what you will be doing in 2023</li>
-<li>Covers probability too</li>
-</ul></li>
+<li>Neural Networks/LLMs <a href="https://karpathy.ai/zero-to-hero.html">crash course</a></li>
+<li>Some of Brown's CS4780 like <a href="https://youtu.be/Nu7VZeW5TaE?si=lLPsluH0sxWHmnhC">Transformers</a></li>
+<li>Brown's CS053 <a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">Coding the Matrix</a></li>
+<li>CMU's 10-606/607 <a href="https://www.cs.cmu.edu/~10606-f21/">Math for ML</a> for anything not in CS053</li>
 </ul>
 
+
 <p>
-Second part
+Second part the complete mathematical justification of how machine learning works
 </p>
 
 <ul class="org-ul">
 <li>This <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">playlist</a> of foundations of machine learning and <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a>
 <ul class="org-ul">
-<li>The theoretical foundations do not change and in the lectures all the math is explained</li>
 <li>If you find some 2023 paper about "nonparametric and deep compositional approaches to density estimation" then you'll know what that means after taking this</li>
 </ul></li>
-<li>Thomas' Calculus if you've never taken calculus and matrix calculus</li>
-<li>CMU's 16-745 <a href="https://github.com/orgs/Optimal-Control-16-745/repositories">Optimal Control and RL</a> 
+<li>CMU's 16-745 <a href="https://github.com/orgs/Optimal-Control-16-745/repositories">Optimal Control and RL</a> boston dynamic tier robots
 <ul class="org-ul">
 <li>2023 lectures on <a href="https://www.youtube.com/playlist?list=PLZnJoM76RM6KugDT9sw5zhAmqKnGeoLRa">YouTube</a></li>
 </ul></li>
 </ul>
 </div>
 </div>
+
+
+<div id="outline-container-orgd6c0d89" class="outline-2">
+<h2 id="orgd6c0d89">Linear Algebra</h2>
+<div class="outline-text-2" id="text-orgd6c0d89">
+<p>
+None of this will make any sense if you don't know some linear algebra and probability, this course covers both.
+</p>
+
+<ul class="org-ul">
+<li>Proceed to <a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">CS0533</a> and obtain the book <i>Coding the Matrix</i> from <a href="https://en.wikipedia.org/wiki/Library_Genesis">library genesis</a> or buy a cheap copy. 
+<ul class="org-ul">
+<li>All the lectures are open if you click on video.</li>
+<li>All the lab writeups are in the book, code stencils are <a href="http://resources.codingthematrix.com/">here</a></li>
+<li>Auto-grading is <a href="http://grading.codingthematrix.com/edition1/index.html">here</a></li>
+</ul></li>
+</ul>
 </div>
 
-
-<div id="outline-container-org08a28ad" class="outline-2">
-<h2 id="org08a28ad">LLMs and Artificial General Intelligence</h2>
-<div class="outline-text-2" id="text-org08a28ad">
+<div id="outline-container-orgef07561" class="outline-3">
+<h3 id="orgef07561">Functions</h3>
+<div class="outline-text-3" id="text-orgef07561">
 <p>
-There is a disconnect between the blogger junk articles promoting ChatGPT and all these doomers running around claiming the singularity is upon us. What the blog junk and marketing doesn't tell you is that very Large Language Models have "emergent properties" which means they have abilities that they weren't programmed to do and there is no explanation yet for why they have these abilities (phase shift/physics maybe). Collectively a giga model can have a behavior but each component does not have this behavior.  
-</p>
-</div>
-
-<div id="outline-container-org80bf714" class="outline-3">
-<h3 id="org80bf714">Primer on Matrices</h3>
-<div class="outline-text-3" id="text-org80bf714">
-<p>
-Skimming 5 pages of <a href="https://see.stanford.edu/materials/lsoeldsee263/Additional1-notes-matrix-primer.pdf">this pdf</a> by Stephen Boyd it's all we need to start.  
+First <a href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b82b2c07-3009-4208-b6a0-9357cfaca62b">lecture</a> starts at @34:40. 
 </p>
 
 <p>
-A matrix size is rows x columns and it can contain more then just numbers/scalars the entries can be cosine/sine or other functions. Basically a matrix is an encoding of a function that performs a linear transformation like rotations or reflections on the plane, shearing the plane moving everything above the x axis right and everything below left by some scale, stretching the plane, or taking something non-linear like a curve and transforming it via linear algebra to a linear approximation. That is essentially how vector calculus works it's a way of doing calculus in higher dimensions by transforming it all to a linear mapping because even though globally everything is non linear, locally (magnifying) it's linear. You can also project an n-dimensional plane onto a 3D or 2D plane you simply input a 3-dimensional vector (x,y,z) and the transformation matrix zeroes out the z producing (x,y). 
+A set comprehension is really just a map and filter. @1:06 one-to-one the definition he uses is the contrapositive of 'if a is not equal to b, then f(a) does not equal f(b). The main thing to remember from this lecture is that if two functions are composable, then they have an inverse, and they are only invertible when having the properties one-to-one and onto or every unique input maps to a unique output, and every output has an input or every output is in the image of the domain. This will come up again when we learn invertible matrices. Reading the book <i>The Function</i> chapter, we covered it all in the lecture except an exercise to prove Lemma 0.3.20 that if f and g are invertible, and composed, then the compose is also invertible. 
 </p>
 
 <p>
-Just like how function composition is associative so is multiplying matrices A(BC) = (AB)C and just like how function composition is not commutative neither is matrix multiplicaiton. A matrix multiplied by a vector is like giving a function an input, therefore the image of the matrix is the vector output.  
+To figure this out let's go back in the book and walk through all the proofs. The first was Proposition 0.3.12 and it's using 0.3.5 <i>Composition of Functions</i> definition to rewrite into h((g of f)(x)), then same definition to rewrite to h(g(fx)) and finally the same form proposition 0.3.12. Key here is to see (h of (g of f)(x)) being (h of (function)(x)) since (g of f) can be seen as one function abstraction during the proof.
 </p>
 
 <p>
-It gets even more abstract. A 1x1 matrix is essentially a number. A 2x2 matrix is not only a transformation function it can also be a kind of generalized number with a richer arithmetic you can encode complex numbers in certain 2x2 diagonal matrices using scalars to multiply a matrix who's square is -1 thus a complex number. 
+Next proof is Lemma 0.3.16 a contradiction that suppose f is invertible without being one-to-one, then if we invert f the image will point to two different inputs, which can't be possible if the function is invertible. Unless of course both those inputs are equal, as per the definition if a = b then f(a) = f(b) and in this case we really just have f(a) then since a = b so a = a.
 </p>
 
 <p>
-Page 3 'basis vectors' using a representation of an arrow is best showcased <a href="https://youtu.be/yAb12PWrhV0?si=9CXusI8T9tJ0jPYs">in this vid</a> where at the end he goes slowly up in dimensions. Page 4 a transpose is a way to take the dot product at a higher dimension (we'll see it in machine learning vids). A dot product tells you the cosign of two vectors (in euclidean space) and if you remember highschool trig if cosine is 0 then the angle is 90deg or 2 vectors are perpendicular if vec1 dot vec2 = 0. Page 5 you can stop reading after scalar multiplication. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org1b3655f" class="outline-3">
-<h3 id="org1b3655f">Primer on probability</h3>
-<div class="outline-text-3" id="text-org1b3655f">
-<p>
-Use this <a href="https://www.youtube.com/playlist?list=PLIljB45xT85AMigTyprOuf__daeklnLse">playlist</a> to teach yourself just the basics to start you need to know only familiarity with sets (first lecture), the basics of what a probability distro is and everything in <a href="https://youtu.be/siXj4hkUIp8?si=gISGy_xDGG7tvRL8">this lecture</a> (random variables, mean, variance and standard deviation). That's it. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-orgbcd896b" class="outline-3">
-<h3 id="orgbcd896b">Neural Networks</h3>
-<div class="outline-text-3" id="text-orgbcd896b">
-<p>
-Watching <a href="https://youtu.be/MrLPzBxG95I?si=XPFkNpmdSEsly9Vk&amp;t=1947">Lecture 1 CS4780</a> by Kilian Weinberger probably the best instructor you will find for this material. The real lecture begins @32:27. He defines both y (labels or classification) and x (feature vector) after the intro. Notice the feature vector is cleaned/prepared data that somebody needs to figure out how to generate, this is almost never revealed by all the closed source LLMs. When you solve Google captcha 'choose all the bicycles in this picture' that's what you are doing preparing some kind of data for supervised learning. If you did <a href="./software.html">cs19</a> in the other workshop you remember doing DocDiff the first assignment using bag of words vector representation. 
+Next proof is Lemma 0.3.17 another contradiction where it's basically telling us in order for something to be invertible it has an image with every element mapped to an unique input.   
 </p>
 
 <p>
-Watching <a href="https://youtu.be/zj-5nkNKAow?si=MC24y6-IDcmL77k4&amp;t=321">Lecture 2 CS4780</a> (skip to 5:20) tells you how to select the algorithm for the hypothesis function by running statistical loss functions and seeing which has the lowest errors, talks a bit how they test these hypothesis functions. 
+Next proof is Theorem 0.3.18 using the above two lemmas to define a function g whose domain is the output of f. Then composing these two will result in identity functions as we get the input returned. Finally 0.3.19 strategy is take two inverses then show they must be equal thus only 1 inverse per function if they are invertible. To prove Lemma 0.3.20 using figure 4 example, if you compose first f(g(1)) you get p which is 1 when inverted. If you compose two inverted functions g(f(x)) then \(f^{-1}(p)\) is \(g^{-1}(a)\) or 1 and both are equal. Read his previous proofs and see if you can mimic them to prove that composing then inverting is equal to two composed inverted functions.  
 </p>
 
-<p>
-Watching <a href="https://youtu.be/BbYV8UfMJSA?si=aKfJ0NIeUFpDycAd&amp;t=2201">Lecture 4 CS4780</a> (skip to 36:50) the Perceptron. This is an algorithm that models a single brain neuron and was the first machine learning algorithm. You get layers of perceptrons you have a neural network. We skipped K-Nearest Neighbors (it's worth watching if you've never seen it) it's quickly reviewed in lecture 5. The hyperplane notation is y = mx + b and familar linear notation for a straight line but it's a higher-dimensional generalization. Note he drew the w vector perpendicular to the plane and we know w^{T}x is a dot product to determine the cosine of 2 vectors and if it's 0 then the vectors are perpendicular. So for any vector x we can compute y = wx + b and if 0 = wx + b then x is on the hyperplane. 
-</p>
 
-<p>
-Watching <a href="https://youtu.be/wl7gVvI-HuY?feature=shared&amp;t=662">Lecture 5 CS4780</a> (skip to 11:20). He shows us a simple Perceptron algorithm. TODO
-</p>
+
 
 
 

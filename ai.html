@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-09-14 Thu 19:10 -->
+<!-- 2023-09-14 Thu 19:55 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI in 2023</title>
@@ -269,19 +269,19 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org29c5de6">Curriculum</a></li>
-<li><a href="#orgd6c0d89">Linear Algebra</a>
+<li><a href="#org767b121">Curriculum</a></li>
+<li><a href="#org11316ca">Linear Algebra</a>
 <ul>
-<li><a href="#orgef07561">Functions</a></li>
+<li><a href="#org9a3a3cd">Functions</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org29c5de6" class="outline-2">
-<h2 id="org29c5de6">Curriculum</h2>
-<div class="outline-text-2" id="text-org29c5de6">
+<div id="outline-container-org767b121" class="outline-2">
+<h2 id="org767b121">Curriculum</h2>
+<div class="outline-text-2" id="text-org767b121">
 <p>
 First part so you can jump on some feature bounties for an AI open source projects
 </p>
@@ -312,15 +312,15 @@ Second part the complete mathematical justification of how machine learning work
 </div>
 
 
-<div id="outline-container-orgd6c0d89" class="outline-2">
-<h2 id="orgd6c0d89">Linear Algebra</h2>
-<div class="outline-text-2" id="text-orgd6c0d89">
+<div id="outline-container-org11316ca" class="outline-2">
+<h2 id="org11316ca">Linear Algebra</h2>
+<div class="outline-text-2" id="text-org11316ca">
 <p>
 None of this will make any sense if you don't know some linear algebra and probability, this course covers both.
 </p>
 
 <ul class="org-ul">
-<li>Proceed to <a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">CS0533</a> and obtain the book <i>Coding the Matrix</i> from <a href="https://en.wikipedia.org/wiki/Library_Genesis">library genesis</a> or buy a cheap copy. 
+<li>Proceed to <a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">CS053</a> and obtain the book <i>Coding the Matrix</i> from <a href="https://en.wikipedia.org/wiki/Library_Genesis">library genesis</a> or buy a cheap copy. 
 <ul class="org-ul">
 <li>All the lectures are open if you click on video.</li>
 <li>All the lab writeups are in the book, code stencils are <a href="http://resources.codingthematrix.com/">here</a></li>
@@ -329,23 +329,23 @@ None of this will make any sense if you don't know some linear algebra and proba
 </ul>
 </div>
 
-<div id="outline-container-orgef07561" class="outline-3">
-<h3 id="orgef07561">Functions</h3>
-<div class="outline-text-3" id="text-orgef07561">
+<div id="outline-container-org9a3a3cd" class="outline-3">
+<h3 id="org9a3a3cd">Functions</h3>
+<div class="outline-text-3" id="text-org9a3a3cd">
 <p>
 First <a href="https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b82b2c07-3009-4208-b6a0-9357cfaca62b">lecture</a> starts at @34:40. 
 </p>
 
 <p>
-A set comprehension is really just a map and filter. @1:06 one-to-one the definition he uses is the contrapositive of 'if a is not equal to b, then f(a) does not equal f(b). The main thing to remember from this lecture is that if two functions are composable, then they have an inverse, and they are only invertible when having the properties one-to-one and onto or every unique input maps to a unique output, and every output has an input or every output is in the image of the domain. This will come up again when we learn invertible matrices. Reading the book <i>The Function</i> chapter, we covered it all in the lecture except an exercise to prove Lemma 0.3.20 that if f and g are invertible, and composed, then the compose is also invertible. 
+A set comprehension is really just a map and filter. @1:06 one-to-one the definition he uses is the contrapositive of 'if a is not equal to b, then f(a) does not equal f(b)'. The main thing to remember from this lecture is that if two functions are composable, then they have an inverse, and they are only invertible when having the properties one-to-one and onto. This will come up again when we learn invertible matrices. Reading the book <i>The Function</i> chapter, we covered it all in the lecture except an exercise to prove Lemma 0.3.20 that if f and g are invertible, and composed, then the compose is also invertible. 
 </p>
 
 <p>
-To figure this out let's go back in the book and walk through all the proofs. The first was Proposition 0.3.12 and it's using 0.3.5 <i>Composition of Functions</i> definition to rewrite into h((g of f)(x)), then same definition to rewrite to h(g(fx)) and finally the same form proposition 0.3.12. Key here is to see (h of (g of f)(x)) being (h of (function)(x)) since (g of f) can be seen as one function abstraction during the proof.
+To figure this out let's go back in the book and walk through all the proofs. The first was Proposition 0.3.12 and it's using 0.3.5 <i>Composition of Functions</i> definition to rewrite into h((g of f)(x)), then same definition to rewrite to h(g(f(x))) and finally the same form as proposition 0.3.12. Key here is to see (h of (g of f)(x)) being (h of (function)(x)) since (g of f) is really just a single function. 
 </p>
 
 <p>
-Next proof is Lemma 0.3.16 a contradiction that suppose f is invertible without being one-to-one, then if we invert f the image will point to two different inputs, which can't be possible if the function is invertible. Unless of course both those inputs are equal, as per the definition if a = b then f(a) = f(b) and in this case we really just have f(a) then since a = b so a = a.
+Next proof is Lemma 0.3.16 a contradiction, suppose f is invertible without being one-to-one, then if we invert f the image will point to two different inputs, which can't be possible if the function is invertible. Unless of course both those inputs are equal, as per the definition if a = b then f(a) = f(b) and in this case we really just have f(a) then since a = b so a = a.
 </p>
 
 <p>
@@ -353,7 +353,11 @@ Next proof is Lemma 0.3.17 another contradiction where it's basically telling us
 </p>
 
 <p>
-Next proof is Theorem 0.3.18 using the above two lemmas to define a function g whose domain is the output of f. Then composing these two will result in identity functions as we get the input returned. Finally 0.3.19 strategy is take two inverses then show they must be equal thus only 1 inverse per function if they are invertible. To prove Lemma 0.3.20 using figure 4 example, if you compose first f(g(1)) you get p which is 1 when inverted. If you compose two inverted functions g(f(x)) then \(f^{-1}(p)\) is \(g^{-1}(a)\) or 1 and both are equal. Read his previous proofs and see if you can mimic them to prove that composing then inverting is equal to two composed inverted functions.  
+Next proof is Theorem 0.3.18 using the above two lemmas to define a function g whose domain is the output of f. Then composing these two will result in identity functions as we get the input returned. Finally 0.3.19 strategy is take two inverses then show they must be equal thus only 1 inverse per function if they are invertible. 
+</p>
+
+<p>
+To prove Lemma 0.3.20 using figure 4 example, if you compose first f(g(1)) you get p which is 1 when inverted. If you compose two inverted functions g(f(x)) then \(f^{-1}(p)\) is \(g^{-1}(a)\) or 1 and both are equal. Read his previous proofs and see if you can mimic them to prove that composing then inverting is equal to two composed inverted functions.  
 </p>
 
 

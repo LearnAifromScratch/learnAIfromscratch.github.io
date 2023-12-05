@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-09-14 Thu 19:51 -->
+<!-- 2023-12-04 Mon 19:42 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Let's Do The Art of Computer Programming</title>
@@ -269,75 +269,66 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc9d6714">Intro</a>
+<li><a href="#orgbe69623">Intro</a>
 <ul>
-<li><a href="#org7d9d4b6">Materials</a></li>
-<li><a href="#org970ba2c">The Bill Gates quote</a></li>
-<li><a href="#orgfd7e08a">MMIX and MIX</a></li>
-<li><a href="#org2f3721d">Optimizing compilers are dead</a></li>
+<li><a href="#org10d6e76">Get the book(s)</a></li>
+<li><a href="#org8a3bb7d">The Bill Gates quote</a></li>
+<li><a href="#org9623d1a">MMIX and MIX</a></li>
+<li><a href="#orgc5580d5">Optimizing compilers are dead</a></li>
 </ul>
 </li>
-<li><a href="#org3c6aa83">Microcorruption CTF</a>
+<li><a href="#orgb8efdda">Prereq: Microcorruption</a>
 <ul>
-<li><a href="#orgb75899b">New Orleans</a></li>
-<li><a href="#org54768e6">Sydney</a></li>
-<li><a href="#org8d23c7d">Hanoi</a></li>
-<li><a href="#orga84e49c">Cusco</a></li>
-<li><a href="#orgd462ee6">Reykjavik</a></li>
-<li><a href="#org844add8">Whitehorse</a></li>
-<li><a href="#orge5de362">Montevideo</a></li>
+<li><a href="#orge05a312">New Orleans</a></li>
+<li><a href="#orge38995d">Sydney</a></li>
+<li><a href="#orgabb81eb">Hanoi</a></li>
+<li><a href="#orge200364">Cusco</a></li>
+<li><a href="#org75d1c47">Reykjavik</a></li>
+<li><a href="#orgf7c2109">Whitehorse</a></li>
+<li><a href="#org99ff13e">Montevideo</a></li>
 </ul>
 </li>
-<li><a href="#org965e15b">1.1 Algorithms</a>
+<li><a href="#org54ff6af">0.1 Calculus</a>
 <ul>
-<li><a href="#org4999151">Thomas' Calculus</a></li>
-<li><a href="#orgaff3fce">Discrete Math lecture 1</a></li>
+<li><a href="#orgd32ad40">Curriculum</a></li>
+<li><a href="#org61bf479">Introduction</a></li>
+<li><a href="#org9310313">Analytic Geometry</a></li>
 </ul>
 </li>
-<li><a href="#org6283e3e">1.2.1 Mathematical Induction</a></li>
-<li><a href="#org11f78ba">1.2.2 Numbers, Powers and Logs</a></li>
-<li><a href="#org8993164">1.2.3 Sums and Products (part 1)</a></li>
+<li><a href="#org15a8212">1.1 Algorithms</a></li>
 </ul>
 </div>
 </nav>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgc9d6714" class="outline-2">
-<h2 id="orgc9d6714">Intro</h2>
-<div class="outline-text-2" id="text-orgc9d6714">
+<div id="outline-container-orgbe69623" class="outline-2">
+<h2 id="orgbe69623">Intro</h2>
+<div class="outline-text-2" id="text-orgbe69623">
 <p>
-I'm going to start with <i>Volume 1: Fundamental Algorithms</i> 3rd edition by Don Knuth. These books aren't a reference, much of the index points to exercises and the content is often comparing two algorithms together. The overall theme of the book is practical running times instead of academic running times such as when Knuth implemented various MST algorithms in the 90s and was surprised to find they were all slower on real hardware than Kruskal's 1957 algorithm because of very large constants being hidden by big-O notation. If inputs were actually cranked up to infinity these algorithms are faster but in our discrete world have poor runtime results and for that reason many common algorithms you know about from other texts won't be in TAOCP because they aren't worth running.  
+I'm going to start with <i>Volume 1: Fundamental Algorithms</i> 3rd edition by Don Knuth. These books aren't a reference, much of the index points to exercises and the content is often comparing two algorithms together. There is currently 5 volumes out as 4B was released in 2023. You approach these books as educational entertainment so instead of solving a crossword puzzle in the morning over a coffee you're reading about generating all possible trees.    
 </p>
 
 <p>
-The physical book itself is a representation of the work that has gone into it's writing with high quality typography, perfect paper and a binding where no matter what page you flip to the book stays flat. If you were to ever invest money into a physical book this would be one of those books. The pdf version Knuth paid the Berkeley Mathematical Sciences Publishers to create a compressed searchable text with hyperlinks throughout the document and guaranteed that the final version was correct in all notation/figures.  
+The physical book itself is a representation of the work that has gone into it's writing with high quality typography, perfect paper, and a binding where no matter what page you flip to the book stays flat. If you were to ever invest money into a physical book this would be one of those books. The pdf version Knuth paid the Berkeley Mathematical Sciences Publishers to create a compressed searchable text with hyperlinks throughout the document and even guaranteed that the final version was correct in all notation/figures. 
+</p>
+
+<p>
+Caveat: we have no choice but to do a significant calculus prerequisite to understand the exercises. Consider it chapter 0 of TAOCP.      
 </p>
 </div>
 
-<div id="outline-container-org7d9d4b6" class="outline-3">
-<h3 id="org7d9d4b6">Materials</h3>
-<div class="outline-text-3" id="text-org7d9d4b6">
-<ul class="org-ul">
-<li>See the <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site for details or where to get official pdf/copies. You want the 3rd edition and most recent printings that fix errata.  
-<ul class="org-ul">
-<li>If you can't buy them use <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> to get a pdf and the best copy I can currently find is <a href="https://libgen.is/book/index.php?md5=F2637A0DD548C819D4500220806283CE">this one</a> which should have hyperlinks in the pdf to equations/chapters. If you can't access that domain for any reason choose another from the wikipedia page for libgen and search for <a href="https://web.archive.org/web/20230826190357/https://libgen.is/book/index.php?md5=F2637A0DD548C819D4500220806283CE">this upload</a>.</li>
-</ul></li>
-<li><a href="https://archive.org/details/calculusanalytic3rd00thom/page/n5/mode/2up">Calculus and Analytic Geometry</a> 3rd ed by George Thomas (pdf on <a href="http://libgen.rs/book/index.php?md5=2585132E896213194BC27C2F7A795D1B">libgen</a>)</li>
-<li>Discrete Mathematics <a href="https://www.math.cmu.edu/~ploh/2021-228.shtml">course</a> (YouTube <a href="https://www.youtube.com/playlist?list=PLgTkKBA6LRqYuuQ-LboerRblBoD_q_eUM">playlist</a>) 
-<ul class="org-ul">
-<li>Helps teach how to solve the many problems in TAOCP and covers generating functions</li>
-</ul></li>
-</ul>
-
+<div id="outline-container-org10d6e76" class="outline-3">
+<h3 id="org10d6e76">Get the book(s)</h3>
+<div class="outline-text-3" id="text-org10d6e76">
 <p>
-In the preface the only official prereqs Knuth expects are 'a knowledge of calculus' and some prior programming.     
+See the <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site for details or where to get official pdf/copies. You want the 3rd edition and most recent printings that fix errata. If you can't buy them use <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> to get a pdf and the best copy I can currently find is <a href="https://libgen.is/book/index.php?md5=F2637A0DD548C819D4500220806283CE">this one</a> which should have hyperlinks in the pdf. If you can't access that domain for any reason choose another from the wikipedia page for libgen and search for <a href="https://web.archive.org/web/20230826190357/https://libgen.is/book/index.php?md5=F2637A0DD548C819D4500220806283CE">this upload</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org970ba2c" class="outline-3">
-<h3 id="org970ba2c">The Bill Gates quote</h3>
-<div class="outline-text-3" id="text-org970ba2c">
+<div id="outline-container-org8a3bb7d" class="outline-3">
+<h3 id="org8a3bb7d">The Bill Gates quote</h3>
+<div class="outline-text-3" id="text-org8a3bb7d">
 <p>
 Everybody talks about the famous old quote in the back of volume 1 by Gates: 'you should definitely send me a resume if you can read the whole thing'. I found a more recent quote from 2005:
 </p>
@@ -371,34 +362,34 @@ I'm not sure what the double-star problems are, maybe the earlier editions had t
 </div>
 </div>
 
-<div id="outline-container-orgfd7e08a" class="outline-3">
-<h3 id="orgfd7e08a">MMIX and MIX</h3>
-<div class="outline-text-3" id="text-orgfd7e08a">
+<div id="outline-container-org9623d1a" class="outline-3">
+<h3 id="org9623d1a">MMIX and MIX</h3>
+<div class="outline-text-3" id="text-org9623d1a">
 <p>
-You can if you want use the <i>MMIX Supplement</i> by Ruckert to replace the MIX/MIXAL content with MMIX/MMIXAL in volumes 1-3. MMIX isn't a single machine, you can customize the hardware however you want using Knuth's free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, bus speeds, anything. He documented that program with the book <i>MMIXware: A RISC Computer for the Third Millennium</i> and all the code is written in literate programming style so you can read the programs like you would any other book. RISC-V is taught in MIT's 6.004 course on <a href="https://www.youtube.com/playlist?list=PLOVc_J85b9DT9ZfKZmlRGIDVk6UXT_4yR">YouTube</a> to better understand a RISC architecture if you want. MMIX assumes an operating system exists. MMIX you can use the mixmasters <a href="http://mmix.cs.hm.edu/getstarted.html">version</a> or the 2017 sealed in time Knuth <a href="https://www-cs-faculty.stanford.edu/~knuth/programs/mmix.tar.gz">version</a> you compile from <a href="https://www-cs-faculty.stanford.edu/~knuth/cweb.html">c-web sources</a> that are extensively documented. 
+You can if you want use the <i>MMIX Supplement</i> by Ruckert to replace the MIX/MIXAL content with MMIX/MMIXAL in volumes 1-3. MMIX isn't a single machine, you can customize the hardware however you want using Knuth's free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, bus speeds, anything. He documented that program with the book <i>MMIXware: A RISC Computer for the Third Millennium</i> and all the code is written in literate programming style so you can read the programs like you would any other book. RISC-V is taught in MIT's 6.004 course on <a href="https://www.youtube.com/playlist?list=PLOVc_J85b9DT9ZfKZmlRGIDVk6UXT_4yR">YouTube</a> to better understand a RISC architecture. MMIX you can use the mixmasters <a href="http://mmix.cs.hm.edu/getstarted.html">version</a> or the 2017 sealed in time Knuth <a href="https://www-cs-faculty.stanford.edu/~knuth/programs/mmix.tar.gz">version</a> you compile from <a href="https://www-cs-faculty.stanford.edu/~knuth/cweb.html">c-web sources</a> that are extensively documented. 
 </p>
 
 <p>
-To start I'm just going to use the original MIX, and switch in Volume 4 to MMIX but the concepts are the same. We can use the <a href="https://www.gnu.org/software/mdk/">GNU MDK</a> or <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">other software</a> to run MIXware meaning compile .mixal files to .mix and run them either with mixvm, gmixvm GUI, or a scheme interpreter. MIX does not have an operating system so if you like to code bare architecture and do some old school inputs choose that instead of MMIX. Knuth in interviews claims learning MIX is still important because it gives you an idea of where all this modern abstraction decisions came from originally but in some future version of TAOCP he's removing it all for MMIX.    
+To start I'm going to use the original MIX and switch in Volume 4 to MMIX since all the books still use MIXAL code. We can use the <a href="https://www.gnu.org/software/mdk/">GNU MDK</a> or <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">other software</a> to run MIXware meaning compile .mixal files to .mix and simulate running them either with mixvm, gmixvm GUI, or a scheme interpreter. Knuth in interviews claims learning old style MIX gives you an idea of where all the modern abstraction decisions came from originally but in some future version of TAOCP he's removing it all for MMIX. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2f3721d" class="outline-3">
-<h3 id="org2f3721d">Optimizing compilers are dead</h3>
-<div class="outline-text-3" id="text-org2f3721d">
+<div id="outline-container-orgc5580d5" class="outline-3">
+<h3 id="orgc5580d5">Optimizing compilers are dead</h3>
+<div class="outline-text-3" id="text-orgc5580d5">
 <p>
-Another reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. Djb notes in this talk CloudFlare hand rolled his <a href="https://nacl.cr.yp.to/">ChaCha/Poly</a> using assembly. Hoare suggests that future compilers should have interactive transformations the programmer can use to specify optimizations themselves.
+A reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. Djb notes in this talk CloudFlare hand rolled his <a href="https://nacl.cr.yp.to/">ChaCha/Poly</a> using assembly. Hoare suggests that future compilers should have interactive transformations the programmer can use to specify optimizations themselves.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org3c6aa83" class="outline-2">
-<h2 id="org3c6aa83">Microcorruption CTF</h2>
-<div class="outline-text-2" id="text-org3c6aa83">
+<div id="outline-container-orgb8efdda" class="outline-2">
+<h2 id="orgb8efdda">Prereq: Microcorruption</h2>
+<div class="outline-text-2" id="text-orgb8efdda">
 <p>
-The preface says we should familiar enough with programming that we've written and tested a few programs, which means assembly/machine language programs. We can learn that doing microcorruption.com CTF and having a visual interface to step through all the code in the debugger to see what it does, see how registers are manipulated etc.
+The preface says we should familiar enough with programming that we've written and tested a few programs, which means assembly/machine language programs. I assume you already know basic programming from somewhere else but not an assembly language. We can learn that doing microcorruption.com CTF and having a visual interface to step through all the code in the debugger to see what it does, see how registers are manipulated etc.
 </p>
 
 <p>
@@ -423,18 +414,18 @@ There's a <a href="https://microcorruption.com/public/manual.pdf">manual</a> for
 </p>
 </div>
 
-<div id="outline-container-orgb75899b" class="outline-3">
-<h3 id="orgb75899b">New Orleans</h3>
-<div class="outline-text-3" id="text-orgb75899b">
+<div id="outline-container-orge05a312" class="outline-3">
+<h3 id="orge05a312">New Orleans</h3>
+<div class="outline-text-3" id="text-orge05a312">
 <p>
 The comparison instruction wants a 7 char password, the 'create password' sub-routine generates a 7 char password, try it just entering the 7 hex numbers in one password string, success.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org54768e6" class="outline-3">
-<h3 id="org54768e6">Sydney</h3>
-<div class="outline-text-3" id="text-org54768e6">
+<div id="outline-container-orge38995d" class="outline-3">
+<h3 id="orge38995d">Sydney</h3>
+<div class="outline-text-3" id="text-orge38995d">
 <p>
 Set breakpoint at most interesting function which looks like check password. Enter 'test' as text for password, then c to zip to the breakpoint. Pressing s and stepping, r15 is pointing to 439c where we see 7465 7374 or 'test'. Notice the instructions however:
 </p>
@@ -456,36 +447,36 @@ Note the actual code/instruction the machine uses is bf902b5d0000 or bf907021020
 </div>
 </div>
 
-<div id="outline-container-org8d23c7d" class="outline-3">
-<h3 id="org8d23c7d">Hanoi</h3>
-<div class="outline-text-3" id="text-org8d23c7d">
+<div id="outline-container-orgabb81eb" class="outline-3">
+<h3 id="orgabb81eb">Hanoi</h3>
+<div class="outline-text-3" id="text-orgabb81eb">
 <p>
 Passwords must be between 8-16 chars so I entered a gigantic password and while stepping through the execution noticed it overflowed to the second memory location 2410. Ctrl-f the instructions for 2410 and there's a comparison there so I overflowed the hex password to 17 digits with that comparison at 2410. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga84e49c" class="outline-3">
-<h3 id="orga84e49c">Cusco</h3>
-<div class="outline-text-3" id="text-orga84e49c">
+<div id="outline-container-orge200364" class="outline-3">
+<h3 id="orge200364">Cusco</h3>
+<div class="outline-text-3" id="text-orge200364">
 <p>
 Entered another gigantic password, noticed it overflowed to where the program counter (the next instruction) is so overflowed it to change the pc to 'unlock door' instruction in little endian format.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd462ee6" class="outline-3">
-<h3 id="orgd462ee6">Reykjavik</h3>
-<div class="outline-text-3" id="text-orgd462ee6">
+<div id="outline-container-org75d1c47" class="outline-3">
+<h3 id="org75d1c47">Reykjavik</h3>
+<div class="outline-text-3" id="text-org75d1c47">
 <p>
 We can't see all the disassembly and have to step watching 'Current Instruction' box. Enter a single character password as a test and step until you see a cmp for the address in r4 offset by -0x24 or 36. Move back that amount in memory and you're at the password you just entered, so enter (little endian) whatever the cmp constant is. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org844add8" class="outline-3">
-<h3 id="org844add8">Whitehorse</h3>
-<div class="outline-text-3" id="text-org844add8">
+<div id="outline-container-orgf7c2109" class="outline-3">
+<h3 id="orgf7c2109">Whitehorse</h3>
+<div class="outline-text-3" id="text-orgf7c2109">
 <p>
 They took away the function to unlock the door, we have to read the <a href="https://microcorruption.com/public/manual.pdf">manual</a> about how the HSM 2 model works. In 3.1 <i>This enables the CPU to trigger software interrupt 0x7F to directly trigger the door lock to unlock</i> so we want to bamboozle this code to somehow run 0x7F. As usual start with a gigantic password and see where it is stored. Mine begins at memory location 347c. Looking at the conditional unlock door function I want to push 0x7f the unlock command instead of 0x7e the password comparison command, and then call that interrupt after.
 </p>
@@ -496,29 +487,118 @@ If you overflow your password you'll see in the 'current instruction' box it wil
 </div>
 </div>
 
-<div id="outline-container-orge5de362" class="outline-3">
-<h3 id="orge5de362">Montevideo</h3>
-<div class="outline-text-3" id="text-orge5de362">
+<div id="outline-container-org99ff13e" class="outline-3">
+<h3 id="org99ff13e">Montevideo</h3>
+<div class="outline-text-3" id="text-org99ff13e">
 <p>
 Two new functions strcpy and memset. Memset appears to clear the password storage memory and strcpy removes all null bytes 00 out of our password entry so if we want to use 0x7f or 7f00 we have to steal some code to add/subtract or AND off some bits to avoid strcpy deleting our payload. I used 32 junk filler + 0244 + payload as a hex password after many trial and error getting the overflow to lineup after strcpy killed my 0044 address.
 </p>
 
 <p>
-You can play with instructions <a href="https://microcorruption.com/assembler">here</a> and use any hex calculator. I added some arbitrary value to 0x7f, moved it to a register, pushed it to the stack and called that interrupt again. Success.
-</p>
-
-<p>
-We've acheived TAOCP prereqs by now so we can start.  
+You can play with instructions <a href="https://microcorruption.com/assembler">here</a> and use any hex calculator. I added some arbitrary value to 0x7f, moved it to a register, pushed it to the stack and called that interrupt again. Success. We achieved enough of the programming prereqs. 
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org965e15b" class="outline-2">
-<h2 id="org965e15b">1.1 Algorithms</h2>
-<div class="outline-text-2" id="text-org965e15b">
+<div id="outline-container-org54ff6af" class="outline-2">
+<h2 id="org54ff6af">0.1 Calculus</h2>
+<div class="outline-text-2" id="text-org54ff6af">
 <p>
-Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. Page 7 he describes T<sub>n</sub> the running time of just the E1 step in the 1.1E algorith, writing that if you were to do this for gigantic inputs eventually you'd discover you could find the value of any n with (constant * ln(n)) or in big-O notation O(ln(n)) where ln() is the natural logarithm function meaning it's the exponent x in e<sup>x</sup> = y we will shortly learn in the math chapters. 
+If you flip through the exercises of TAOCP many assume you've taken a typical undergrad calculus sequence. There's exercises with complex variables, sets, limits, natural log, proof by induction, infinite series, Riemann sums, probability, linear algebra, power series, recurrences/differentials and more. Luckily for us there already exists a book with all these topics it's the classic calculus book by George Thomas that Knuth read in first year university. 
+</p>
+
+<p>
+Go to this <a href="http://www.jstor.org/stable/3026529">jstor</a> archive of an interview with Knuth and copy the DOI into <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to read the <a href="https://sci-hub.se/https://doi.org/10.2307/3026529">pdf</a>: 
+</p>
+
+<blockquote>
+<p>
+At Case, I spent hours and hours studying the mathematics book we used -Calculus and Analytic Geometry by Thomas- and I worked every supplementary problem in the book. We were assigned only the even-numbered problems, but I did every single one together with the
+extras in the back of the book because I felt so scared (of failing). I thought I should do all of them. I found at first that it was very slow going, and I worked late at night to do it. I think the only reason I did this was because I was worried about passing. But then I found out that after a few months I could do all of the problems in the same amount of time that it took the other kids to do just the odd-numbered ones. I had learned enough about problem solving by that time that I could gain speed, so it turned out to be very lucky that I crashed into it real hard at the beginning.
+</p>
+</blockquote>
+
+<p>
+The <a href="https://www.jstor.org/stable/3026489">second part</a> of the interview:
+</p>
+
+<blockquote>
+<p>
+We should teach people things with an emphasis on how they were discovered. I've always told my students to try to do the same when reading
+technical materials; that is, don't turn the page until you have thought a while about what's probably going to be on the next page, because then you will be able to read faster when you do turn the page. Before you see how to solve the problem, think about it. How would you solve it? Why do you want to solve the problem? All these questions should be asked before you read the solution. Nine times out of ten you won't solve it yourself, but you'll be ready to better appreciate the solutions and you'll learn a lot more about the process of developing mathematics as you go.
+I think that's why I got stuck in Chapter One all of the time when reading textbooks in college. I always liked the idea of "why?" Why is it that way? How did anybody ever think of that from the very beginning? Everyone should continue asking these questions. It enhances your ability to absorb. You can reconstruct so much of mathematics from a small part when you know how the parts are put together. We teach students to derive things in geometry, but a lot of times the exercises test if they know the theorem, not the proof. To do well in mathematics, you should learn methods and not results. And you should learn how the methods were invented.
+</p>
+</blockquote>
+
+<p>
+The 1953 second version of Thomas' book that Knuth used is on archive.org and is nearly identical to the 1960s 3rd version all the publisher did was split it into two volumes and move the supplementary problems in the back to the end of each chapter and rename them 'misc problems'. You can still buy these old versions on Abe Books too. 
+</p>
+</div>
+
+<div id="outline-container-orgd32ad40" class="outline-3">
+<h3 id="orgd32ad40">Curriculum</h3>
+<div class="outline-text-3" id="text-orgd32ad40">
+<p>
+Herb Gross lectures from MIT OCW that cover the same book:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/">Single Variable Calculus</a></li>
+<li><a href="https://ocw.mit.edu/courses/res-18-007-calculus-revisited-multivariable-calculus-fall-2011/">Multivariable Calculus</a></li>
+<li><a href="https://ocw.mit.edu/courses/res-18-008-calculus-revisited-complex-variables-differential-equations-and-linear-algebra-fall-2011/">Complex Variables, Differential Eq, Linear Alg</a>
+<ul class="org-ul">
+<li>The book <a href="https://archive.org/details/calculusanalytic3rd00thom/page/n5/mode/2up">online</a> version or <a href="http://libgen.rs/book/index.php?md5=2585132E896213194BC27C2F7A795D1B">pdf</a> (large because it's HD scanned)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org61bf479" class="outline-3">
+<h3 id="org61bf479">Introduction</h3>
+<div class="outline-text-3" id="text-org61bf479">
+<p>
+Watching the first <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/course-introduction/">lecture</a> of the Herb Gross lectures that go with the Thomas book. He is very good at explaining how all this works. 
+</p>
+
+<p>
+Calculus solves two problems: 
+</p>
+<ul class="org-ul">
+<li>you know how fast a quantity is changing and you want to know much of it exists at any moment (the derivative)</li>
+<li>you know how much of a quantity there is and you want to know how fast it is changing at any moment (the definite integral)</li>
+</ul>
+
+<p>
+Every rate of change function has an accumulation function and every accumulation function has a rate of change function. 
+</p>
+
+<p>
+@21m in the lecture the graph goes up (increase rate of change) thus the area grows bigger. Area is just one possible accumulation function, we can accumulate anything that can be represented as an amount such as sensitivity, wealth, trades, velocity, distance, products produced, etc. @22m the tangent line is a linear approximation. If you super zoom that non-linear curve graph then locally it appears to be a straight line and that line is the tangent. 
+</p>
+
+<p>
+If you look at the <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/pages/study-materials/">study guide</a> for part I and the supplementary notes, there's some set theory in there but we'll learn it <a href="https://hrmacbeth.github.io/math2001/">here</a> too when we actually start TAOCP. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9310313" class="outline-3">
+<h3 id="org9310313">Analytic Geometry</h3>
+<div class="outline-text-3" id="text-org9310313">
+<p>
+Second <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/lecture-1-analytic-geometry/">lecture</a> and we can start the book. TODO
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org15a8212" class="outline-2">
+<h2 id="org15a8212">1.1 Algorithms</h2>
+<div class="outline-text-2" id="text-org15a8212">
+<p>
+Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. 
 </p>
 
 <p>
@@ -560,229 +640,12 @@ The last Markov algorithm example is pattern matching on strings. Alpha \(\alpha
 </p>
 
 <p>
-From <a href="https://en.wikipedia.org/wiki/Markov_algorithm#Execution_2">this example</a> we have 3 rules, and if the string doesn't match any rule patterns we terminate the algorithm. The set 'I' is the input so f("101", 0). Omega would be the output f("|||||", 8). Both of these are contained in Q and every other intermediary state like f("0|01", 1). There's an exercise for this and I still don't really understand some of the variables he uses but let's move on, I get what an algorithm is. 
-</p>
-</div>
-
-<div id="outline-container-org4999151" class="outline-3">
-<h3 id="org4999151">Thomas' Calculus</h3>
-<div class="outline-text-3" id="text-org4999151">
-<p>
-In the preface Knuth expects us to know this book. We don't have to do all of it just what a Calc I course would teach so single variable calculus and the Riemann integral.  
+From <a href="https://en.wikipedia.org/wiki/Markov_algorithm#Execution_2">this example</a> we have 3 rules, and if the string doesn't match any rule patterns we terminate the algorithm. The set 'I' is the input so f("101", 0). Omega would be the output f("|||||", 8). Both of these are contained in Q and every other intermediary state like f("0|01", 1). 
 </p>
 
 <p>
-In numerous interviews Knuth talks about how in highschool he never understood math then panicked as a freshman in 1956 at Case Tech in Cleveland when he was warned about students failing and getting expelled. He said they used Thomas' <i>Calculus and Analytic Geometry</i> 1953 second edition which was so well written he decided to publish his books using the same publisher Addison Wesley. The other students were assigned the even or odd problems instead Knuth did all the problems and the supplementary problems in the back of the book. He described his life then like being a machine who had to spend nights grinding these problems because at first he was very slow but he eventually became so good at it he could do all the end of chapter problems faster than the regular students only doing half the problems. He claims after this he could just 'coast' in mathematics because 'I had learned to solve problems' and that being scared motivated him to 'start strong and coast rather than always climbing and being on a lower part of the learning curve'.
+TODO, have to finish chapter 0.
 </p>
-
-<p>
-We have access to the same book. The 1953 second version is nearly identical on archive.org to the 1960s 3rd version all the publisher did was split it into two volumes and move the supplementary problems in the back to the end of chapters and call them 'misc problems'. I bought a copy of a 1961 printing from Abe Books shipped to me from a Baltimore library for $40 that is essentially unused/new if you want a physical copy just be aware of the listing saying if it's both volumes are just one. 
-</p>
-
-<p>
-You can read this book <a href="https://archive.org/details/calculusanalytic3rd00thom/page/n5/mode/2up">online</a> or download a <a href="http://libgen.rs/book/index.php?md5=2585132E896213194BC27C2F7A795D1B">pdf</a> from libgen. I will work through the whole book <a href="./math.html">here</a>, we have access to old Herb Gross lectures from MIT too which are excellent. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgaff3fce" class="outline-3">
-<h3 id="orgaff3fce">Discrete Math lecture 1</h3>
-<div class="outline-text-3" id="text-orgaff3fce">
-<p>
-As noted in the intro we have to mix in the CMU 2021 Discrete Mathematics <a href="https://www.math.cmu.edu/~ploh/2021-228.shtml">course</a> with TAOCP as the lectures are commbinatorics problem solving workshops that help to explain later chapters like generating functions. The professor is the US olympiad national coach so they are worth doing to see how you would experiment around with problems that seem impossible to solve. I'm not doing the assignments for this course instead the problems in TAOCP are our assignments. 
-</p>
-
-<p>
-Watching <a href="https://www.youtube.com/live/0K540qqyJJU?feature=shared">lecture 1</a> that starts at 15:18. He says at @22:04 if you find something where the order matters you have the opportunity to order it differently. ~41m he suggests always solving an easier version first. This was a nice lecture showing how you try stuff: count from the left and reason your way through, count from the right and reason your way through creating a bound on the answer. 
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org6283e3e" class="outline-2">
-<h2 id="org6283e3e">1.2.1 Mathematical Induction</h2>
-<div class="outline-text-2" id="text-org6283e3e">
-<p>
-Proof by induction here is a little different than the usual texts on it in schools such as <a href="https://leanprover.github.io/logic_and_proof/the_natural_numbers_and_induction.html">here</a>. There they assume P(n), and prove the successor P(n+1). Here Knuth proves P(1) then proves every successor input up to P(n) which implies P(n+1) is true each time he does it. The first example, adding 2n + 1 to both sides that's the next successor so if we are at 2<sup>2</sup> = 1 + 3 then 2n + 1 on both sides is 1 + 3 + 5 = 2<sup>2</sup> + 4 + 1 or 9 or 3<sup>2</sup>. The bottom of page 14 he then talks about assuming P(k) by induction is true whenever k &lt; n. 
-</p>
-
-<p>
-The Fibonnaci example, that strike through symbol is the Latin Phi which is a constant here representing 'the golden ratio' because if you divide every Fib<sub>n</sub> by Fib<sub>n-1</sub> you get a better and better approximation to 1.61803.. or Phi. So 3/2 is 1.5, 8/5 is 1.6, 13/8 is 1.624 and it keeps going approaching Phi. This 'divine/golden ratio' is originally from Euclid's book where he paritioned a straight line into segments, then shows the various ratios of each line segment ratio'd against the original are the same and the resulting quotient is Phi. Fibonacci sequence/Phi keeps popping up in astronomy (Kepler) and in plants, chemistry, everywhere. Fibonacci numbers are also a simple model of population growth. In the inequality Knuth factored out the common term from \(\phi^{n-2} + \phi^{n-1}\) to get \(\phi^{n-2}(1 + \phi)\) look up exponent rules if you forgot them (they're in the next section 1.2.2).    
-</p>
-
-<p>
-The assertions flow chart is similar to programming by <a href="https://www.cs.cmu.edu/~15122/schedule.shtml">contracts</a> where you have preconditions, loop invariants and postconditions. A restriction on the admissible inputs to a function is called a precondition. A postcondition asserts that the output of the algorithm is what you expect or as Dijkstra puts it 'imposing a condition upon the state in which the system must find itself after its activity'. The loop invariant is an assertion that is true before the loop, during every iteration and immediatley after exiting the loop here it is Eqs(6) where (am + bn = d) holds before and after division (it's an exercise later). I didn't know von Neumann invented these. Knuth and that end of chapter Turing quote inform us we should always be adding one or two assertions of the state of the algorithm at 'well chosen points' to actually understand the algorithm, Knuth claims you can't explain the algorithm to someone without them. 
-</p>
-
-<p>
-First let's understand <a href="https://leanprover.github.io/logic_and_proof/propositional_logic.html#rules-of-inference">implication</a>. By elimination rule if assertion A implies assertion B, and assertion A holds as the algorithm goes to the next step (we have a proof of A) then assertion B holds (we have a proof of B). Knuth says A2 implies A6, looking at the A6 assertions gcd(c,d) = gcd(m,n) are implied from A2 assertion c=m and d=n. 
-</p>
-
-<p>
-The intro told us to just skim these math preliminaries chapters and 'try a few exercises' coming back later when needed. 
-</p>
-
-
-<p>
-Exercises/scratchwork: 
-</p>
-<ul class="org-ul">
-<li>1: Simple including of P(0) base case</li>
-<li>2: a<sup>n-1+1</sup> = 1 is a<sup>n</sup> = 1, but our theorem is a<sup>n-1</sup> = 1</li>
-<li>3: if n=1 then 1/(1-1)1 is going to be 1/0</li>
-<li>4: We just saw the proof \(\phi^{n-2} \le\) F<sub>n</sub> \(\le \phi^{n-1}\) and n+1 is the inequality  \(\phi^{n-1} \le\) F<sub>n+1</sub> \(\le \phi^n\)</li>
-<li>5: Here n is the 'inductive n+1 step' and the two lesser products of primes are the hypothesis which we assumed true.</li>
-<li>6: Step through the changes and substitute:
-<ul class="org-ul">
-<li>am + bn = d</li>
-<li>am + bn = r</li>
-<li>(a'-qa)m + bn = r  (t-qa but t became a')</li>
-<li>(a'-qa)m + (b'-qb)n = r (t-qb but at this state t became b')</li>
-<li>a'm - qam + b'n - qbn = r</li>
-<li>(a'm + b'n) - q(am + bn) = r
-<ul class="org-ul">
-<li>move q(am + bn) to other side</li>
-<li>(a'm + b'n) = q(am + bn) + r
-<ul class="org-ul">
-<li>this is c = qd + r</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>7: Prove sum 1 to n is n(n+1)/2
-<ul class="org-ul">
-<li>base case: 1(1+1)/2 is 1</li>
-<li>hypothesis: 1+ &#x2026; +n is n(n+1)/2</li>
-<li>n+1 step: (1 to n) + (n + 1) = (n + 1)(n + 1 + 1)/2 
-<ul class="org-ul">
-<li>Our hypothesis says (1 to n) is n(n+1)/2 so we can substitute</li>
-</ul></li>
-<li>n(n + 1)/2 + (n + 1) = (n + 1)(n + 2)/2</li>
-<li>(n<sup>2</sup> + n)/2 + (n + 1)/1 = (n + 1)(n + 2)/2</li>
-<li>(n<sup>2</sup> + 3n + 2)/2 = (n + 1)(n + 2)/2 
-<ul class="org-ul">
-<li>(n + 1)(n + 2)/2 = (n + 1)(n + 2)/2</li>
-</ul></li>
-</ul></li>
-<li>8: There is a visualization for this <a href="https://en.wikipedia.org/wiki/Squared_triangular_number">here</a></li>
-<li>9: Proof is <a href="https://proofwiki.org/wiki/Bernoulli%27s_Inequality#:~:text=Proof%20by%20induction%3A,n%E2%89%A51%2Bnx">here</a>, uses the induction hypothesis to rewrite (1 - a)(1 - a)<sup>n</sup> to (1 - a)(1 - na)</li>
-<li>11: Proof is <a href="https://math.stackexchange.com/a/1071084">here</a> and see <a href="https://www.cut-the-knot.org/m/Algebra/TelescopingSums.shtml">telescoping</a>.</li>
-<li>13: This is in the <a href="https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf">paper</a> Knuth cites by RW Floyd. The variable k in the solution seems to be initial time steps you add to each algorithm step in E. At the A3 state k=2 because E1 + E2 is T=2, and both A4/A5 are k=3 since it's a single  conditional E4 and +1 to A3, A6 is k=1 because we go back to A2 where T=1. There is 3 operations in the loop so we can assert whatever happens in the loop will be 3x the time, and this will be the always decreasing n-d if you look at page 14 table.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org11f78ba" class="outline-2">
-<h2 id="org11f78ba">1.2.2 Numbers, Powers and Logs</h2>
-<div class="outline-text-2" id="text-org11f78ba">
-<p>
-Knuth's definition of real numbers is explained <a href="https://en.wikipedia.org/wiki/0.999...">here</a> on Wikipedia how 0.999&#x2026; is 1 and 1/10<sup>k</sup> is explained as the positive distance from x, so 3 + .33 \(\le\) x = 3.33 \(\lt\) 3 + .331 and he suggests the appendix which flipping through it has all math notation used in the book in addition to constants and their values. 
-</p>
-
-<p>
-There's a good workshop for complex numbers <a href="https://www.youtube.com/live/5PcpBw5Hbwo?feature=share&amp;t=400">here</a> starting ~6:40 that explains the i which is the y-axis/unit circle rotating around like trigonometry functions and he has many for e<sup>x</sup> as well. Both e and the 'natural logarithm' or 'lon' or ln(x) has easy hand calculating properties. 
-</p>
-
-<p>
-For example if you watch <a href="https://youtu.be/flge97Jp6uo">this</a> 
-</p>
-<ul class="org-ul">
-<li>ln(1 + x) is approximately x (for small x)</li>
-<li>e<sup>x</sup> is approximately 1 + x (for small x)</li>
-<li>derivative of e<sup>x</sup> is itself</li>
-<li>derivative of ln(x) is 1/x</li>
-</ul>
-
-
-<p>
-Exercises/scratchwork
-</p>
-<ul class="org-ul">
-<li>4: If you forgot cubed roots/fraction rules:</li>
-</ul>
-<p>
-\[ (0.125)^{-2/3} = \frac{125}{1000}^{-2/3} = \frac{1}{8}^{-2/3} = \frac{1}{\sqrt[3]{\frac{1}{8^2}}} = \frac{1}{\sqrt[3]{\frac{1}{64}}} = \frac{1}{\sqrt[3]{\frac{1}{4\cdot4\cdot4}}} = \frac{1}{\frac{1}{4}} = \frac{1}{1}\cdot \frac{4}{1}\]
-</p>
-<ul class="org-ul">
-<li>5: Solution is <a href="https://math.stackexchange.com/a/177133">here</a> and binary numbers are powers of 2 explained <a href="https://youtu.be/f8xfVVVWXNU">here</a> at around 1m in.</li>
-<li>7: Worth trying if you've never done it before. Prove the two eq(5) for both positive and negative exponents, fix one variable to induct on: 
-<ul class="org-ul">
-<li>For all a &gt; 0 and all integers a and c (b<sup>a</sup>)<sup>c</sup> = b<sup>ac</sup></li>
-<li>Base: 
-<ul class="org-ul">
-<li>(b<sup>a</sup>)<sup>1</sup> is b<sup>a</sup> since anything to the power of 1 is itself by definition.</li>
-<li>So we have b<sup>a</sup> = b<sup>a</sup> when c = 1</li>
-</ul></li>
-<li>Assume:
-<ul class="org-ul">
-<li>(b<sup>a</sup>)<sup>c</sup> = b<sup>ac</sup></li>
-</ul></li>
-<li>Successor:
-<ul class="org-ul">
-<li>(b<sup>a</sup>)<sup>c+1</sup> = b<sup>a(c+1)</sup></li>
-</ul></li>
-<li>Proof:
-<ul class="org-ul">
-<li>(b<sup>a</sup>)<sup>c</sup>(b<sup>a</sup>)<sup>1</sup> =  b<sup>a(c+1)</sup> because (base)<sup>x</sup> * (base)<sup>y</sup> is (base)<sup>x+y</sup></li>
-<li>b<sup>ac</sup>b<sup>a</sup>  = b<sup>a(c+1)</sup> because we assumed (b<sup>a</sup>)<sup>c</sup> = b<sup>ac</sup> so can substitute</li>
-<li>this is b<sup>ac+a</sup> or b<sup>a(c+1)</sup> = b<sup>a(c+1)</sup></li>
-</ul></li>
-<li>Of course there is also the negative integer case but it's similar</li>
-</ul></li>
-</ul>
-
-<p>
-If you get that a logarithm is an exponent and all the operations on it are the same as exponents like (ln(xy) is ln(x) + ln(y) because e<sup>x</sup> * e<sup>y</sup> is e<sup>x+y</sup> then you're good to move on and come back here later whenever needed. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org8993164" class="outline-2">
-<h2 id="org8993164">1.2.3 Sums and Products (part 1)</h2>
-<div class="outline-text-2" id="text-org8993164">
-<p>
-Summation notation is similar to a fold or reduce function in programming. You iterate from start index to n and accumulate producing a final value. The R(j) notation means an inequality relation for the index. Infinite sums are not commutative/associative for example the divergent sum: 1 - 1 + 1 - 1 +&#x2026; can be 0 or 1 if rearranged: 1 + (-1 + 1) + (-1 + 1).. but it's unlikely we will see many infinite sums until later volumes remember the math prelims here are for every volume up to 5A (then there is a new chapter math prelims redux). 
-</p>
-
-<ul class="org-ul">
-<li>Rule a is simple if you write out some basic examples for yourself though the book example is pretty clear.</li>
-</ul>
-
-
-<ul class="org-ul">
-<li>Rule b says you can rearrange the index or values in the sums all you want just make sure you include everything by adjusting the sum if needed. The change of variable transformation shifts to start at a new index. The function p(j) for example can be j = k - 1</li>
-</ul>
-
-<p>
-\[\sum\limits_{k = 2}^{n} {k} = \sum\limits_{j = 1}^{n} {(j + 1) = 2 + 3 + 4..}\]
-</p>
-
-<p>
-The summation index can now start at 1 instead of 2 since p(1) is p(1 = 2 - 1) and nothing in the original sum changed, just instead of starting at k = 2 we now have a transformation p(j) starting at 1. After the indexing transformation add (j + 1) in the sum to keep the same values. We can change the index variables to sum backwards (discrete sum) if we wanted or any permutation.  
-</p>
-
-<ul class="org-ul">
-<li>Rule c the double index a<sub>ij</sub> is a matrix or in the examples a 2D array. It says we can commute the two sums in a product of sums and he shows how they end up being sum + sum so commutable anyway.</li>
-</ul>
-
-
-<ul class="org-ul">
-<li>Rule d sum 1 to m, then sum m to n, so we are summing m index twice hence the domain now being 1 to n + a<sub>m</sub></li>
-</ul>
-
-
-<p>
-Example 1 the relation indices are changed to represent odd or even, with every term in the inequality divided by 2 in the last step but leaving a<sub>2j+1</sub> in the main sum. Example of changing index variables and adjusting the main sum to take the new change into account.
-</p>
-
-<p>
-Example 2 remember Knuth doubles the first example 2S = S<sub>1</sub> + S<sub>2</sub> that's why it ends up being multiplied by 1/2 or divided by 2 by the end. 
-</p>
-
-<p>
-TODO
-</p>
-
-
 
 <hr>
 <p>

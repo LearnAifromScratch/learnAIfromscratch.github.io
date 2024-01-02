@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-08-27 Sun 20:48 -->
+<!-- 2024-01-01 Mon 22:55 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A Security Curriculum</title>
@@ -247,17 +247,12 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6bebd4d">Intro</a>
+<li><a href="#org8f71918">Curriculum</a>
 <ul>
-<li><a href="#orga11f705">Typical paid tracks</a></li>
-</ul>
-</li>
-<li><a href="#org5ecf8d1">Materials</a>
-<ul>
-<li><a href="#orgbd5ac40">How bad it all is</a></li>
-<li><a href="#orgefcb579">Open source project security</a></li>
-<li><a href="#orgf7f4a7a">The absolute state of the security industry</a></li>
-<li><a href="#org7a9b272"></a></li>
+<li><a href="#org69fbcdd">Typical industry tracks</a></li>
+<li><a href="#org74a6f31">How bad it all is</a></li>
+<li><a href="#orgcf8fdf0">Open source sabotage</a></li>
+<li><a href="#org984c4c2">The absolute state of the security industry</a></li>
 </ul>
 </li>
 </ul>
@@ -265,23 +260,39 @@ for the JavaScript code in this tag.
 </nav>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org6bebd4d" class="outline-2">
-<h2 id="org6bebd4d">Intro</h2>
-<div class="outline-text-2" id="text-org6bebd4d">
+<div id="outline-container-org8f71918" class="outline-2">
+<h2 id="org8f71918">Curriculum</h2>
+<div class="outline-text-2" id="text-org8f71918">
 <p>
-What's the state of the art in software security attacks right and how can we get paid on the side to specialize in this? Is my own software junk? Is there any hope of having non-junk software? Here we find these answers. 
+I skimmed through beginners.re the famously gigantic reverse engineering text and noticed a lot of it was similar to the CMU course <a href="https://www.cs.cmu.edu/~213/">15-213</a>. His advice in the book was to write small programs then translate them to assembly which is pretty much almost all the exercises in the course book for 15-213. Overflowing and ROP or return oriented programming labs are also included so we should just start with 15-213. 
+</p>
+
+<p>
+-15-213 <a href="https://www.cs.cmu.edu/~213/">Introduction to Computer Systems</a>
+</p>
+<ul class="org-ul">
+<li>All the recorded lectures/recitation are on <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b96d90ae-9871-4fae-91e2-b1627b43e25e%22&amp;page=0&amp;maxResults=50">Panopto</a> or search <a href="https://www.youtube.com/playlist?list=PLQ5cMeVTtiJkUilq92Cw9D6RhAJhPJ_JX">YouTube</a></li>
+<li>The book labs are <a href="http://csapp.cs.cmu.edu/3e/labs.html">here</a></li>
+</ul>
+
+<p>
+At the same time I'm going try Tanja Lange's <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto22/">post quantum crypto</a> course. Most 'intro to security' courses have you learning cryptography but we may as well learn modern cryptography. 
+</p>
+
+<p>
+After I'm going to explore the PortSwigger <a href="https://portswigger.net/web-security">academy</a> (free), <a href="https://pwn.college/">pwn.college</a> (free) and read through some papers from Brown's <a href="https://cs.brown.edu/courses/csci1650/lectures.html">exploit</a> undergrad course, their grad <a href="https://cs.brown.edu/courses/csci2951-u/lectures.html">course</a> and MIT's <a href="http://csg.csail.mit.edu/6.S983/">CPU hacking</a> course learning about flipping bits in memory without even accessing them. Then I'm going to try some <a href="https://www.reversinghero.com/">reverse engineering</a>.  
 </p>
 </div>
 
-<div id="outline-container-orga11f705" class="outline-3">
-<h3 id="orga11f705">Typical paid tracks</h3>
-<div class="outline-text-3" id="text-orga11f705">
+<div id="outline-container-org69fbcdd" class="outline-3">
+<h3 id="org69fbcdd">Typical industry tracks</h3>
+<div class="outline-text-3" id="text-org69fbcdd">
 <ul class="org-ul">
 <li>SOC threat analyst</li>
 </ul>
 
 <p>
-SOC means Security Operations Center. This is somebody working in shifts for a 24/7 (usually remotely) enterprise tier threat response contractor who is paid to anaylze system logs and network traffic to spot problems. You primarily extract and manipulate data mainly with in-house tools or using things like OS query and do 'threat intelligence'. You can learn everything you need to start with the 'tryhackme' challenges <a href="https://tryhackme.com/path/outline/soclevel">here</a>. 
+SOC means Security Operations Center. This is somebody working in shifts for a 24/7 (usually remotely) enterprise tier threat response contractor who is paid to anaylze system logs (almost always Windows OS logs) and network traffic to spot problems. You primarily extract and filter data mainly with in-house tools or using things like OSquery and do 'threat intelligence'. To get into this find some kind of learning path for SOC Level 1 and 2 but these almost always cost money. This <a href="https://tryhackme.com/path/outline/soclevel1">one</a> is the cheapest I could find or you could simply use their syllabus to look up everything yourself like OSquery, wireshark, MITRE etc. To find these companies search for security operations center jobs or try Sophos.  
 </p>
 
 <ul class="org-ul">
@@ -289,7 +300,7 @@ SOC means Security Operations Center. This is somebody working in shifts for a 2
 </ul>
 
 <p>
-Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to cloud deployment to how developers handle the keys for signing into the source repository. With large security consulting outfits the typical engagement is 2-3 consultants for 2 weeks where there is juniors competent in running security procedures like penetration testing and the principal consultant oversees them and presents all the reports the juniors produced justifying the money spent. On large contracts they will have reverse engineers and all kinds of specialists.     
+Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to cloud deployment to how developers handle the keys for signing into the source repository. With large security consulting outfits the typical engagement is 2-3 consultants for 2 weeks where there is juniors competent in running security procedures like penetration testing and the principal consultant oversees them and presents all the reports the juniors produced justifying the money spent. On large contracts they will have reverse engineers and all kinds of other specialists charging insanely high hourly rates. The major outfits are Leviathan security, IOactive, Bishop Fox, NCC group, Crowdstrike, or search for security consultant jobs.        
 </p>
 
 <ul class="org-ul">
@@ -297,50 +308,24 @@ Someone charging 7-20k+ per week for an application security assessment. This ki
 </ul>
 
 <p>
-Security researchers who win pwn2own competitions and can breach major software in vehicles, browsers, anything. When you reach this level you'll know if your own software is junk or not so this is our goal here. This often means constructing entire models to mimic target behavior and running analysis on it.  
+Security researchers who win pwn2own competitions, reverse engineer, chase bug bounties and <a href="https://www.zerodayinitiative.com/about/benefits/">sell exploits</a>. These guys often get contracted by the above companies to be specialists or they run their own companies. They sometimes build entire target models to simulate attacks or use formal verification methods on program control flow graphs to expose logical flaws and other techniques we'll see. 
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org5ecf8d1" class="outline-2">
-<h2 id="org5ecf8d1">Materials</h2>
-<div class="outline-text-2" id="text-org5ecf8d1">
-<ul class="org-ul">
-<li>Basics
-<ul class="org-ul">
-<li>CMU's 15-213 <a href="https://www.cs.cmu.edu/~213/">Intro to Computer Systems</a>
-<ul class="org-ul">
-<li>Assembly, C, cache memories, VMs, how a CPU/branch prediction works, compiler toolchain, network programming</li>
-<li>Student labs practicing return-oriented programming</li>
-<li>All lectures are open in previous years (course never changes)</li>
-</ul></li>
-</ul></li>
-
-<li>Pwn College
-<ul class="org-ul">
-<li><a href="https://pwn.college/">pwn.college</a> is run by Arizona State U and you get <i>sort-of</i> official recognition for completing this and opportunity to intern with them doing paid research (even as an international student)</li>
-<li>Lectures optional, it's mainly about completing the challenges
-<ul class="org-ul">
-<li>Goes well with reading papers from Brown's <a href="https://cs.brown.edu/courses/csci1650/lectures.html">exploit</a> undergrad course, their grad <a href="https://cs.brown.edu/courses/csci2951-u/lectures.html">course</a> and MIT's <a href="http://csg.csail.mit.edu/6.S983/">CPU hacking</a> course learning about flipping bits in memory without even accessing them</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-
-<div id="outline-container-orgbd5ac40" class="outline-3">
-<h3 id="orgbd5ac40">How bad it all is</h3>
-<div class="outline-text-3" id="text-orgbd5ac40">
+<div id="outline-container-org74a6f31" class="outline-3">
+<h3 id="org74a6f31">How bad it all is</h3>
+<div class="outline-text-3" id="text-org74a6f31">
 <p>
-If you haven't seen it, watch the CS19 lecture on <a href="https://youtu.be/7orQOW6fp2A">security</a>. I assume you did that whole course. 
+If you haven't seen it, watch the CS19 lecture on <a href="https://youtu.be/7orQOW6fp2A">security</a>.  
 </p>
 
 <p>
-Immediately npm breaches is brought up, the JavaScript package manager. You may have tried to install some Node.js software to run it locally and noticed there's hundreds of dependencies being automatically installed. If you missed the attack description the stream dependency was attacked to specifically target some Bitcoin wallet software in hopes that the wallet developers themselves would include it in their builds and they did. Hilariously all the attacker had to do was find some unmaintained but popular dependency and took over the entire project. Many browser plugins have had this happen too, either sold to adtech or malware writers or they helpfully take over the abandoned project. Shady adtech has done this too they buy QR code reading software in Google Play Store and 'enable ads' meaning when you scan a QR code, it fools the user into handing over financial details to some scam subscription. 
+Immediately npm breaches is brought up, the JavaScript package manager. If you've ever installed some Node.js software to run it locally you will have noticed there's hundreds of dependencies being automatically installed. If you missed the attack description the stream dependency was attacked to specifically target some Bitcoin wallet software in hopes that the wallet developers themselves would include it in their builds and they did. All the attacker had to do was find some unmaintained but popular dependency and took over the entire project. Many browser plugins have had this happen too, either sold to adtech or malware writers or they helpfully take over the abandoned project. 
 </p>
 
 <p>
-@9:00 we're getting into nightmare scenario where VSCode the editor most developers use is now compromised. The point is some dependency nobody pays attention to got turned into malicious code and found it's way into every critical program on earth almost.
+@9:00 we're getting into nightmare scenario where VSCode the IDE most developers use is now compromised. The point is some dependency nobody pays attention to got turned into malicious code and found it's way into almost every critical program on earth.
 </p>
 
 <p>
@@ -348,7 +333,7 @@ Immediately npm breaches is brought up, the JavaScript package manager. You may 
 </p>
 
 <p>
-@28:14 he's reminding us again the most dangerous software is the software you least expect to be dangerous. @35:27 every basic shell copy program in every OS will bring in fopen() and then you're screwed, it has access to the entire filesystem. Where can you learn bourne shell &gt; or &lt; read, either MIT's <a href="https://missing.csail.mit.edu/2020/shell-tools/">course</a> on the <i>Missing Semester of your CS Education</i> or the book <i>The Unix Programming Environment</i> by Pike &amp; Kernighan from the 1980s which is a tiny book and well worth reading (we'll do it after this). I once used that book to pass a resume filter for StackOverflow you had to solve some puzzle in the shell and IIRC it was on like the 20th page or so of that book. 
+@28:14 he's reminding us again the most dangerous software is the software you least expect to be dangerous. @35:27 every basic shell copy program in every OS will bring in fopen() and then you're screwed, it has access to the entire filesystem. 
 </p>
 
 <p>
@@ -356,33 +341,37 @@ Immediately npm breaches is brought up, the JavaScript package manager. You may 
 </p>
 
 <p>
-He talks about SELinux also known as MAC or mandatory access controls. MAC is something security people love because it's knob tweaking but state can become so complex in modern systems you cannot guarantee your policy doesn't allow illicit states without some kind of logical assistant like Alloy/Forge or SAT prover. SAT is a complexity theory problem, suppose you have logical connectives: exp1 OR exp2 AND exp3 what combination satisfies that problem, they are known NP-Complete problems.
+He talks about SELinux also known as MAC or mandatory access controls like AppArmor. MAC is something enterprise security people love because it's knob tweaking but state can become so complex in modern systems you cannot guarantee your policy doesn't allow illicit states without some kind of logical assistant to model everything and run tests on. Whenever you search for AppArmor or SELinux the number one recommendation or most-searched for is how to turn it off and in the real world that's what everyone does. Turn it off from enforcing any policy so their software can work without crashing or restricting features.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgefcb579" class="outline-3">
-<h3 id="orgefcb579">Open source project security</h3>
-<div class="outline-text-3" id="text-orgefcb579">
+<div id="outline-container-orgcf8fdf0" class="outline-3">
+<h3 id="orgcf8fdf0">Open source sabotage</h3>
+<div class="outline-text-3" id="text-orgcf8fdf0">
 <p>
 This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relevant still. Since he is involved in FreeBSD project he thinks about it from an open source sabotaging viewpoint. 
 </p>
 
 <p>
-@5:10 is very interesting. It reminds me of back in the day when there were many people writing 'security Android ROMs' or those in-memory operating systems you loaded up with a boot DVD/USB or advanced security OSs like Subgraph OS. They all disappeared to get highly paid elsewhere and abandoned their project like he talks about in this 2014 talk. 
+@5:10 is very interesting. It reminds me of back in the day when there were many people writing 'security Android ROMs' or those in-memory operating systems you loaded up with a boot live DVD/USB or advanced security OSs like Subgraph OS. They all disappeared and abandoned their projects and he imagines in the talk how legit developers are purposely bribed to do so being put on some nice salary at a 'friends of NSA' company and told not to port new features to their open source projects.  
 </p>
 
 <p>
-@12:28 this is what we came for how modern open source projects are sabotaged. @16:40 some modern mobile browser versions won't even let you use self-signed certs anymore even after clicking all the 'omg but the risks!' buttons. @25:45 is great, wait for some security problem and then 'find a helpful patch' and claim you reviewed it. The deceptive defaults I have been burned by many times. @28:18 OpenVPN is another disaster use wireguard but with Appelbaum's hack to make it post-quantum proof from his PhD dissertation.
+@12:28 this is what we came for how modern open source projects are sabotaged. @16:40 some mobile browser versions won't even let you use self-signed certs anymore even after clicking all the 'omg but are you aware of the risks!' buttons. @25:45 is great, wait for some security problem and then 'find a helpful patch' and claim you reviewed it. The deceptive defaults I have been burned by many times. @28:18 OpenVPN is another disaster use wireguard but with Appelbaum's hack to make it post-quantum proof from his PhD dissertation we'll shortly read.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf7f4a7a" class="outline-3">
-<h3 id="orgf7f4a7a">The absolute state of the security industry</h3>
-<div class="outline-text-3" id="text-orgf7f4a7a">
+<div id="outline-container-org984c4c2" class="outline-3">
+<h3 id="org984c4c2">The absolute state of the security industry</h3>
+<div class="outline-text-3" id="text-org984c4c2">
 <p>
-Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He is completely blackpilled and tells us how nobody cares or wants to fix the problems they just want to get a consultant to help put out fires until they can cash out selling their company and now it's somebody else's problem. He wrote multiple warnings to the Rails github repository only for them to hand wave the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future. 
+Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He is completely blackpilled and tells us how nobody cares or wants to fix the problems they just want to get a consultant to help put out fires until they can cash out selling their company and now it's somebody else's problem. If you raise the alarm you often threatened or dismissed. He wrote multiple warnings to the Rails github repository only for them to hand wave the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future.  
+</p>
+
+<p>
+TODO
 </p>
 
 <hr>
@@ -390,20 +379,6 @@ Egor Homakov a security researcher once wrote <a href="https://web.archive.org/w
 <a href="./index.html">Home</a>
 </p>
 </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<div id="outline-container-org7a9b272" class="outline-3">
-<h3 id="org7a9b272"></h3>
 </div>
 </div>
 </div>

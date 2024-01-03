@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-12-04 Mon 19:42 -->
+<!-- 2024-01-01 Mon 23:04 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Let's Do The Art of Computer Programming</title>
@@ -269,41 +269,42 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgbe69623">Intro</a>
+<li><a href="#org6be4db9">Intro</a>
 <ul>
-<li><a href="#org10d6e76">Get the book(s)</a></li>
-<li><a href="#org8a3bb7d">The Bill Gates quote</a></li>
-<li><a href="#org9623d1a">MMIX and MIX</a></li>
-<li><a href="#orgc5580d5">Optimizing compilers are dead</a></li>
+<li><a href="#orgf7f5572">Get the book(s)</a></li>
+<li><a href="#org5bda939">The Bill Gates quote</a></li>
+<li><a href="#orgbf3c655">MMIX and MIX</a></li>
+<li><a href="#orgade889b">Optimizing compilers are dead</a></li>
 </ul>
 </li>
-<li><a href="#orgb8efdda">Prereq: Microcorruption</a>
+<li><a href="#org822aa2b">Prereq: Microcorruption</a>
 <ul>
-<li><a href="#orge05a312">New Orleans</a></li>
-<li><a href="#orge38995d">Sydney</a></li>
-<li><a href="#orgabb81eb">Hanoi</a></li>
-<li><a href="#orge200364">Cusco</a></li>
-<li><a href="#org75d1c47">Reykjavik</a></li>
-<li><a href="#orgf7c2109">Whitehorse</a></li>
-<li><a href="#org99ff13e">Montevideo</a></li>
+<li><a href="#org6a5439a">New Orleans</a></li>
+<li><a href="#orga076eca">Sydney</a></li>
+<li><a href="#orgda81240">Hanoi</a></li>
+<li><a href="#org3ab5ce0">Cusco</a></li>
+<li><a href="#org8a072e7">Reykjavik</a></li>
+<li><a href="#org0d65ad1">Whitehorse</a></li>
+<li><a href="#org0c758d7">Montevideo</a></li>
 </ul>
 </li>
-<li><a href="#org54ff6af">0.1 Calculus</a>
+<li><a href="#orgbd43b09">Chapter 0: Calculus</a>
 <ul>
-<li><a href="#orgd32ad40">Curriculum</a></li>
-<li><a href="#org61bf479">Introduction</a></li>
-<li><a href="#org9310313">Analytic Geometry</a></li>
+<li><a href="#org82220ee">Curriculum</a></li>
+<li><a href="#orgb52c99c">Introduction</a></li>
+<li><a href="#org4e8ecff">Proofs in Lean</a></li>
+<li><a href="#org23680e8">Analytic Geometry</a></li>
 </ul>
 </li>
-<li><a href="#org15a8212">1.1 Algorithms</a></li>
+<li><a href="#org823296b">1.1 Algorithms</a></li>
 </ul>
 </div>
 </nav>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgbe69623" class="outline-2">
-<h2 id="orgbe69623">Intro</h2>
-<div class="outline-text-2" id="text-orgbe69623">
+<div id="outline-container-org6be4db9" class="outline-2">
+<h2 id="org6be4db9">Intro</h2>
+<div class="outline-text-2" id="text-org6be4db9">
 <p>
 I'm going to start with <i>Volume 1: Fundamental Algorithms</i> 3rd edition by Don Knuth. These books aren't a reference, much of the index points to exercises and the content is often comparing two algorithms together. There is currently 5 volumes out as 4B was released in 2023. You approach these books as educational entertainment so instead of solving a crossword puzzle in the morning over a coffee you're reading about generating all possible trees.    
 </p>
@@ -312,23 +313,23 @@ I'm going to start with <i>Volume 1: Fundamental Algorithms</i> 3rd edition by D
 The physical book itself is a representation of the work that has gone into it's writing with high quality typography, perfect paper, and a binding where no matter what page you flip to the book stays flat. If you were to ever invest money into a physical book this would be one of those books. The pdf version Knuth paid the Berkeley Mathematical Sciences Publishers to create a compressed searchable text with hyperlinks throughout the document and even guaranteed that the final version was correct in all notation/figures. 
 </p>
 
-<p>
-Caveat: we have no choice but to do a significant calculus prerequisite to understand the exercises. Consider it chapter 0 of TAOCP.      
-</p>
+<ul class="org-ul">
+<li>Caveat: we have no choice but to do a significant calculus and linear algebra prerequisite to understand the exercises. Consider it chapter 0 of TAOCP.</li>
+</ul>
 </div>
 
-<div id="outline-container-org10d6e76" class="outline-3">
-<h3 id="org10d6e76">Get the book(s)</h3>
-<div class="outline-text-3" id="text-org10d6e76">
+<div id="outline-container-orgf7f5572" class="outline-3">
+<h3 id="orgf7f5572">Get the book(s)</h3>
+<div class="outline-text-3" id="text-orgf7f5572">
 <p>
 See the <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site for details or where to get official pdf/copies. You want the 3rd edition and most recent printings that fix errata. If you can't buy them use <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> to get a pdf and the best copy I can currently find is <a href="https://libgen.is/book/index.php?md5=F2637A0DD548C819D4500220806283CE">this one</a> which should have hyperlinks in the pdf. If you can't access that domain for any reason choose another from the wikipedia page for libgen and search for <a href="https://web.archive.org/web/20230826190357/https://libgen.is/book/index.php?md5=F2637A0DD548C819D4500220806283CE">this upload</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8a3bb7d" class="outline-3">
-<h3 id="org8a3bb7d">The Bill Gates quote</h3>
-<div class="outline-text-3" id="text-org8a3bb7d">
+<div id="outline-container-org5bda939" class="outline-3">
+<h3 id="org5bda939">The Bill Gates quote</h3>
+<div class="outline-text-3" id="text-org5bda939">
 <p>
 Everybody talks about the famous old quote in the back of volume 1 by Gates: 'you should definitely send me a resume if you can read the whole thing'. I found a more recent quote from 2005:
 </p>
@@ -362,9 +363,9 @@ I'm not sure what the double-star problems are, maybe the earlier editions had t
 </div>
 </div>
 
-<div id="outline-container-org9623d1a" class="outline-3">
-<h3 id="org9623d1a">MMIX and MIX</h3>
-<div class="outline-text-3" id="text-org9623d1a">
+<div id="outline-container-orgbf3c655" class="outline-3">
+<h3 id="orgbf3c655">MMIX and MIX</h3>
+<div class="outline-text-3" id="text-orgbf3c655">
 <p>
 You can if you want use the <i>MMIX Supplement</i> by Ruckert to replace the MIX/MIXAL content with MMIX/MMIXAL in volumes 1-3. MMIX isn't a single machine, you can customize the hardware however you want using Knuth's free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, bus speeds, anything. He documented that program with the book <i>MMIXware: A RISC Computer for the Third Millennium</i> and all the code is written in literate programming style so you can read the programs like you would any other book. RISC-V is taught in MIT's 6.004 course on <a href="https://www.youtube.com/playlist?list=PLOVc_J85b9DT9ZfKZmlRGIDVk6UXT_4yR">YouTube</a> to better understand a RISC architecture. MMIX you can use the mixmasters <a href="http://mmix.cs.hm.edu/getstarted.html">version</a> or the 2017 sealed in time Knuth <a href="https://www-cs-faculty.stanford.edu/~knuth/programs/mmix.tar.gz">version</a> you compile from <a href="https://www-cs-faculty.stanford.edu/~knuth/cweb.html">c-web sources</a> that are extensively documented. 
 </p>
@@ -375,9 +376,9 @@ To start I'm going to use the original MIX and switch in Volume 4 to MMIX since 
 </div>
 </div>
 
-<div id="outline-container-orgc5580d5" class="outline-3">
-<h3 id="orgc5580d5">Optimizing compilers are dead</h3>
-<div class="outline-text-3" id="text-orgc5580d5">
+<div id="outline-container-orgade889b" class="outline-3">
+<h3 id="orgade889b">Optimizing compilers are dead</h3>
+<div class="outline-text-3" id="text-orgade889b">
 <p>
 A reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. Djb notes in this talk CloudFlare hand rolled his <a href="https://nacl.cr.yp.to/">ChaCha/Poly</a> using assembly. Hoare suggests that future compilers should have interactive transformations the programmer can use to specify optimizations themselves.
 </p>
@@ -385,9 +386,9 @@ A reason to learn this material is given by DJ Bernstein's talk a few years ago 
 </div>
 </div>
 
-<div id="outline-container-orgb8efdda" class="outline-2">
-<h2 id="orgb8efdda">Prereq: Microcorruption</h2>
-<div class="outline-text-2" id="text-orgb8efdda">
+<div id="outline-container-org822aa2b" class="outline-2">
+<h2 id="org822aa2b">Prereq: Microcorruption</h2>
+<div class="outline-text-2" id="text-org822aa2b">
 <p>
 The preface says we should familiar enough with programming that we've written and tested a few programs, which means assembly/machine language programs. I assume you already know basic programming from somewhere else but not an assembly language. We can learn that doing microcorruption.com CTF and having a visual interface to step through all the code in the debugger to see what it does, see how registers are manipulated etc.
 </p>
@@ -414,18 +415,18 @@ There's a <a href="https://microcorruption.com/public/manual.pdf">manual</a> for
 </p>
 </div>
 
-<div id="outline-container-orge05a312" class="outline-3">
-<h3 id="orge05a312">New Orleans</h3>
-<div class="outline-text-3" id="text-orge05a312">
+<div id="outline-container-org6a5439a" class="outline-3">
+<h3 id="org6a5439a">New Orleans</h3>
+<div class="outline-text-3" id="text-org6a5439a">
 <p>
 The comparison instruction wants a 7 char password, the 'create password' sub-routine generates a 7 char password, try it just entering the 7 hex numbers in one password string, success.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge38995d" class="outline-3">
-<h3 id="orge38995d">Sydney</h3>
-<div class="outline-text-3" id="text-orge38995d">
+<div id="outline-container-orga076eca" class="outline-3">
+<h3 id="orga076eca">Sydney</h3>
+<div class="outline-text-3" id="text-orga076eca">
 <p>
 Set breakpoint at most interesting function which looks like check password. Enter 'test' as text for password, then c to zip to the breakpoint. Pressing s and stepping, r15 is pointing to 439c where we see 7465 7374 or 'test'. Notice the instructions however:
 </p>
@@ -447,36 +448,36 @@ Note the actual code/instruction the machine uses is bf902b5d0000 or bf907021020
 </div>
 </div>
 
-<div id="outline-container-orgabb81eb" class="outline-3">
-<h3 id="orgabb81eb">Hanoi</h3>
-<div class="outline-text-3" id="text-orgabb81eb">
+<div id="outline-container-orgda81240" class="outline-3">
+<h3 id="orgda81240">Hanoi</h3>
+<div class="outline-text-3" id="text-orgda81240">
 <p>
 Passwords must be between 8-16 chars so I entered a gigantic password and while stepping through the execution noticed it overflowed to the second memory location 2410. Ctrl-f the instructions for 2410 and there's a comparison there so I overflowed the hex password to 17 digits with that comparison at 2410. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge200364" class="outline-3">
-<h3 id="orge200364">Cusco</h3>
-<div class="outline-text-3" id="text-orge200364">
+<div id="outline-container-org3ab5ce0" class="outline-3">
+<h3 id="org3ab5ce0">Cusco</h3>
+<div class="outline-text-3" id="text-org3ab5ce0">
 <p>
 Entered another gigantic password, noticed it overflowed to where the program counter (the next instruction) is so overflowed it to change the pc to 'unlock door' instruction in little endian format.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org75d1c47" class="outline-3">
-<h3 id="org75d1c47">Reykjavik</h3>
-<div class="outline-text-3" id="text-org75d1c47">
+<div id="outline-container-org8a072e7" class="outline-3">
+<h3 id="org8a072e7">Reykjavik</h3>
+<div class="outline-text-3" id="text-org8a072e7">
 <p>
 We can't see all the disassembly and have to step watching 'Current Instruction' box. Enter a single character password as a test and step until you see a cmp for the address in r4 offset by -0x24 or 36. Move back that amount in memory and you're at the password you just entered, so enter (little endian) whatever the cmp constant is. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf7c2109" class="outline-3">
-<h3 id="orgf7c2109">Whitehorse</h3>
-<div class="outline-text-3" id="text-orgf7c2109">
+<div id="outline-container-org0d65ad1" class="outline-3">
+<h3 id="org0d65ad1">Whitehorse</h3>
+<div class="outline-text-3" id="text-org0d65ad1">
 <p>
 They took away the function to unlock the door, we have to read the <a href="https://microcorruption.com/public/manual.pdf">manual</a> about how the HSM 2 model works. In 3.1 <i>This enables the CPU to trigger software interrupt 0x7F to directly trigger the door lock to unlock</i> so we want to bamboozle this code to somehow run 0x7F. As usual start with a gigantic password and see where it is stored. Mine begins at memory location 347c. Looking at the conditional unlock door function I want to push 0x7f the unlock command instead of 0x7e the password comparison command, and then call that interrupt after.
 </p>
@@ -487,9 +488,9 @@ If you overflow your password you'll see in the 'current instruction' box it wil
 </div>
 </div>
 
-<div id="outline-container-org99ff13e" class="outline-3">
-<h3 id="org99ff13e">Montevideo</h3>
-<div class="outline-text-3" id="text-org99ff13e">
+<div id="outline-container-org0c758d7" class="outline-3">
+<h3 id="org0c758d7">Montevideo</h3>
+<div class="outline-text-3" id="text-org0c758d7">
 <p>
 Two new functions strcpy and memset. Memset appears to clear the password storage memory and strcpy removes all null bytes 00 out of our password entry so if we want to use 0x7f or 7f00 we have to steal some code to add/subtract or AND off some bits to avoid strcpy deleting our payload. I used 32 junk filler + 0244 + payload as a hex password after many trial and error getting the overflow to lineup after strcpy killed my 0044 address.
 </p>
@@ -501,11 +502,11 @@ You can play with instructions <a href="https://microcorruption.com/assembler">h
 </div>
 </div>
 
-<div id="outline-container-org54ff6af" class="outline-2">
-<h2 id="org54ff6af">0.1 Calculus</h2>
-<div class="outline-text-2" id="text-org54ff6af">
+<div id="outline-container-orgbd43b09" class="outline-2">
+<h2 id="orgbd43b09">Chapter 0: Calculus</h2>
+<div class="outline-text-2" id="text-orgbd43b09">
 <p>
-If you flip through the exercises of TAOCP many assume you've taken a typical undergrad calculus sequence. There's exercises with complex variables, sets, limits, natural log, proof by induction, infinite series, Riemann sums, probability, linear algebra, power series, recurrences/differentials and more. Luckily for us there already exists a book with all these topics it's the classic calculus book by George Thomas that Knuth read in first year university. 
+If you flip through the exercises of TAOCP many assume you've taken a typical undergrad calculus sequence. There's exercises with complex variables, sets, limits, natural logs, proof by induction, infinite series, Riemann sums, probability, linear algebra, power series, recurrences/differentials and more. There already exists a book with all these topics it's the classic calculus book by George Thomas that Knuth read in first year university. 
 </p>
 
 <p>
@@ -536,9 +537,9 @@ The 1953 second version of Thomas' book that Knuth used is on archive.org and is
 </p>
 </div>
 
-<div id="outline-container-orgd32ad40" class="outline-3">
-<h3 id="orgd32ad40">Curriculum</h3>
-<div class="outline-text-3" id="text-orgd32ad40">
+<div id="outline-container-org82220ee" class="outline-3">
+<h3 id="org82220ee">Curriculum</h3>
+<div class="outline-text-3" id="text-org82220ee">
 <p>
 Herb Gross lectures from MIT OCW that cover the same book:
 </p>
@@ -549,14 +550,19 @@ Herb Gross lectures from MIT OCW that cover the same book:
 <li><a href="https://ocw.mit.edu/courses/res-18-008-calculus-revisited-complex-variables-differential-equations-and-linear-algebra-fall-2011/">Complex Variables, Differential Eq, Linear Alg</a>
 <ul class="org-ul">
 <li>The book <a href="https://archive.org/details/calculusanalytic3rd00thom/page/n5/mode/2up">online</a> version or <a href="http://libgen.rs/book/index.php?md5=2585132E896213194BC27C2F7A795D1B">pdf</a> (large because it's HD scanned)</li>
+<li>A workbook <a href="https://hrmacbeth.github.io/math2001/">here</a> to program math in Lean</li>
 </ul></li>
 </ul>
+
+<p>
+I will include some so-called modern calculus like how the Riemann integral was replaced and 'improper integrals' don't actually exist. 
+</p>
 </div>
 </div>
 
-<div id="outline-container-org61bf479" class="outline-3">
-<h3 id="org61bf479">Introduction</h3>
-<div class="outline-text-3" id="text-org61bf479">
+<div id="outline-container-orgb52c99c" class="outline-3">
+<h3 id="orgb52c99c">Introduction</h3>
+<div class="outline-text-3" id="text-orgb52c99c">
 <p>
 Watching the first <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/course-introduction/">lecture</a> of the Herb Gross lectures that go with the Thomas book. He is very good at explaining how all this works. 
 </p>
@@ -574,29 +580,34 @@ Every rate of change function has an accumulation function and every accumulatio
 </p>
 
 <p>
-@21m in the lecture the graph goes up (increase rate of change) thus the area grows bigger. Area is just one possible accumulation function, we can accumulate anything that can be represented as an amount such as sensitivity, wealth, trades, velocity, distance, products produced, etc. @22m the tangent line is a linear approximation. If you super zoom that non-linear curve graph then locally it appears to be a straight line and that line is the tangent. 
+@21m in the lecture the graph goes up (increase rate of change) thus the area grows bigger. Area is just one possible accumulation function, we can accumulate anything that can be represented as an amount such as function sensitivity, wealth, trades, velocity, distance, products produced, etc. @22m the tangent line is a linear approximation. If you super zoom that non-linear curve graph then locally it appears to be a straight line and that line is the tangent. 
 </p>
+</div>
+</div>
 
+<div id="outline-container-org4e8ecff" class="outline-3">
+<h3 id="org4e8ecff">Proofs in Lean</h3>
+<div class="outline-text-3" id="text-org4e8ecff">
 <p>
-If you look at the <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/pages/study-materials/">study guide</a> for part I and the supplementary notes, there's some set theory in there but we'll learn it <a href="https://hrmacbeth.github.io/math2001/">here</a> too when we actually start TAOCP. 
+While we read this book try writing some proofs in Lean <a href="https://functionalcs.github.io/curriculum/#org240518a">here</a> at the same time. It helps to change the way you think about math how you can explore with it and the Thomas book is full of proofs so this may help to understand them. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9310313" class="outline-3">
-<h3 id="org9310313">Analytic Geometry</h3>
-<div class="outline-text-3" id="text-org9310313">
+<div id="outline-container-org23680e8" class="outline-3">
+<h3 id="org23680e8">Analytic Geometry</h3>
+<div class="outline-text-3" id="text-org23680e8">
 <p>
-Second <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/lecture-1-analytic-geometry/">lecture</a> and we can start the book. TODO
+Second <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/resources/lecture-1-analytic-geometry/">lecture</a> and we can start the book. @21m notice the log approximation was pretty close, that's because logs themselves are a way to linearize exponents. All the log laws which we'll soon learn, are the same as exponent laws but you're only dealing with small complexity not gigantic numbers if you were manipulating exponents.    
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org15a8212" class="outline-2">
-<h2 id="org15a8212">1.1 Algorithms</h2>
-<div class="outline-text-2" id="text-org15a8212">
+<div id="outline-container-org823296b" class="outline-2">
+<h2 id="org823296b">1.1 Algorithms</h2>
+<div class="outline-text-2" id="text-org823296b">
 <p>
 Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. 
 </p>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-01-29 Mon 19:51 -->
+<!-- 2024-01-29 Mon 20:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -248,33 +248,33 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org68e0e9a">Start here</a>
+<li><a href="#orgedce537">Start here</a>
 <ul>
-<li><a href="#orgce25046">Being a wagie</a></li>
-<li><a href="#org30b0c7a">Being a freelancer</a>
+<li><a href="#org77e7144">Being a wagie</a></li>
+<li><a href="#orgb0c8f34">Being a freelancer</a>
 <ul>
-<li><a href="#orgb9449dd">Other freelancing</a></li>
+<li><a href="#orgaddc30d">Other freelancing</a></li>
 </ul>
 </li>
-<li><a href="#orgad7e69c">Business of software</a></li>
-<li><a href="#org3d87e7e">Being an open source (paid) dev</a></li>
-<li><a href="#org8cbe554">University</a></li>
-<li><a href="#org04bfd3d">Curriculum</a></li>
-<li><a href="#orge4e99e4">Math</a></li>
+<li><a href="#org0911aa3">Business of software</a></li>
+<li><a href="#org76c525d">Being an open source (paid) dev</a></li>
+<li><a href="#orgcb7634f">University</a></li>
+<li><a href="#org71b7ecb">Curriculum</a></li>
+<li><a href="#org7b351df">Math</a></li>
 </ul>
 </li>
-<li><a href="#orgba6eb99">Task 1 Kattis</a>
+<li><a href="#orgfa93d6d">Task 1 Kattis</a>
 <ul>
-<li><a href="#orga7d90e6">Begin task!</a></li>
-<li><a href="#orgfaa6ae9">Input/Output</a></li>
-<li><a href="#org0353742">Real competitive programming</a></li>
+<li><a href="#orgbf28e77">Begin task!</a></li>
+<li><a href="#org2c70953">Input/Output</a></li>
+<li><a href="#org3523363">Real competitive programming</a></li>
 </ul>
 </li>
-<li><a href="#orga5427ac">Task 2 USACO bronze</a>
+<li><a href="#orgfceb56a">Task 2 USACO bronze</a>
 <ul>
-<li><a href="#org42b2269">Time complexity</a>
+<li><a href="#orgf4752c6">Time complexity</a>
 <ul>
-<li><a href="#org060a221">C++ STL</a></li>
+<li><a href="#org1949017">C++ STL</a></li>
 </ul>
 </li>
 </ul>
@@ -284,9 +284,9 @@ for the JavaScript code in this tag.
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org68e0e9a" class="outline-2">
-<h2 id="org68e0e9a">Start here</h2>
-<div class="outline-text-2" id="text-org68e0e9a">
+<div id="outline-container-orgedce537" class="outline-2">
+<h2 id="orgedce537">Start here</h2>
+<div class="outline-text-2" id="text-orgedce537">
 <p>
 Here we make software for fun and profit either freelancing, as wagies or selling software. We also learn everything we can find about advanced algorithm design and implementation on real world hardware. 
 </p>
@@ -303,9 +303,9 @@ I assume you are taking at the same time some kind of intro course such as:
 </div>
 
 
-<div id="outline-container-orgce25046" class="outline-3">
-<h3 id="orgce25046">Being a wagie</h3>
-<div class="outline-text-3" id="text-orgce25046">
+<div id="outline-container-org77e7144" class="outline-3">
+<h3 id="org77e7144">Being a wagie</h3>
+<div class="outline-text-3" id="text-org77e7144">
 <p>
 To be a software developer, not a 'junior' or 'intermediate' or other fake title you should never give yourself, you simply have to prove to someone that you can teach yourself as needed, that you know the basics of problem solving strategies (divide and conquer, dynamic programming etc), that you can reason about the basic efficiency of your code (basic big-O and amortized analysis) and that you have personal standards for your work meaning you care that it is safe code and doesn't look like a pile of garbage. The most critical factor that I've seen sitting in on interviews is the ability to <i>teach yourself as needed</i> because there is no possible way to prepare for every kind of wagie software job and all their internal tooling they use. 
 </p>
@@ -324,7 +324,7 @@ We don't have anyone to vouch for us who is presently working and worked with us
 </ul>
 
 <p>
-Both these problems are solved by doing basic competitive programming resources. Bugs in interview style code, for the entry level jobs we are aiming at, is a case of misunderstanding the problem and not having enough experience seeing many elementary bound checking errors. Similarily an optimal solution can only be found if you've seen it already implemented. Algorithmic skills they don't have time to teach but everything else like the business methods they use to write software and custom tools can all be learned easily as a wagie and everyone does it differently. For example most companies use a mercurial fork they've customized or cloned like Google's custom Piper, Facebook's Eden, Mozilla or Jane Street who wraps commands around hg. The reason is you can architect Mercurial beyond a file system model to instead make it into a distributed database which we will learn here. The point is you would never be able to teach yourself these internal tools they are learned on the job which is why the ability to teach yourself and figure it out on your own is key to being a wagie.  
+Both these problems are solved by doing basic competitive programming resources. Bugs in interview style code, for the entry level jobs we are aiming at, is a case of misunderstanding the problem and not having enough experience. Similarily an optimal solution can only be found if you've seen it already implemented. Algorithmic skills they don't have time to teach but everything else like the business methods they use to write software and custom tools can all be learned easily as a wagie and everyone does it differently. For example all other curriculums will insist you learn git while many companies use a mercurial fork they've customized or cloned like Google's custom Piper, Facebook's Eden, Mozilla or Jane Street who wraps commands around hg. The reason is you can architect Mercurial beyond a file system model to instead make it into a distributed database which we will learn here. The point is you would never be able to teach yourself these internal tools they are learned on the job which is why the ability to teach yourself and figure it out on your own is key to being a wagie.  
 </p>
 
 <p>
@@ -334,9 +334,9 @@ tl;dr clearly we should take some competition programming training which we will
 </div>
 
 
-<div id="outline-container-org30b0c7a" class="outline-3">
-<h3 id="org30b0c7a">Being a freelancer</h3>
-<div class="outline-text-3" id="text-org30b0c7a">
+<div id="outline-container-orgb0c8f34" class="outline-3">
+<h3 id="orgb0c8f34">Being a freelancer</h3>
+<div class="outline-text-3" id="text-orgb0c8f34">
 <p>
 You can start doing this walking around your city, or even dealing with the sometimes crazy people who offer craigslist work. Local is always the best way because you are a real person they can physically see and know how to get in contact with. You have to build a network like meeting somebody who has a lot of airbnb businesses, or a restaurant, or some vintage clothing store with no online presence. You can also do this being a wagie and leaving with a network of people you know who will pay you. You can also do this if you have an impressive pedigree/resume and tell companies to pay you as a freelancer. 
 </p>
@@ -354,9 +354,9 @@ I dabbled in many bounties like gitcoin or gitpay but always some guy claims it 
 </p>
 </div>
 
-<div id="outline-container-orgb9449dd" class="outline-4">
-<h4 id="orgb9449dd">Other freelancing</h4>
-<div class="outline-text-4" id="text-orgb9449dd">
+<div id="outline-container-orgaddc30d" class="outline-4">
+<h4 id="orgaddc30d">Other freelancing</h4>
+<div class="outline-text-4" id="text-orgaddc30d">
 <p>
 If you can write software you can also contract yourself as a 'software support engineer' which often pays just as much or teach some classes, do code review for codementor or similar sites. You can also advertise yourself as a teacher locally to anyone who wants to learn what you know. 
 </p>
@@ -364,9 +364,9 @@ If you can write software you can also contract yourself as a 'software support 
 </div>
 </div>
 
-<div id="outline-container-orgad7e69c" class="outline-3">
-<h3 id="orgad7e69c">Business of software</h3>
-<div class="outline-text-3" id="text-orgad7e69c">
+<div id="outline-container-org0911aa3" class="outline-3">
+<h3 id="org0911aa3">Business of software</h3>
+<div class="outline-text-3" id="text-org0911aa3">
 <p>
 If you want to start a software company with the intent of selling it then do not create a LLC. Limited Liability Corps are for lawyers and contractors or side projects. You want something that can issue shares like a S corp in the US which can be turned into a C corp later if needed. No venture capitalists will invest in an LLC but you can convert one to another which looks like a huge hassle so may as well just start with a regular corporation if the intent is being sold or raising capital. If the intent is running a small side business then just get a sole proprietorship so you can get a business bank account. You're not going to be sued if you're not involved in industries like finance/crypto or something regulatory like health or whatever and most of the LLC protections touted aren't that good anyway. The best advice for a startup <a href="https://www.youtube.com/watch?v=gQPlhycLmMk">is here</a> where your goal is always to capture a majority of the market in some form of monopoly avoiding competition but not everything needs to be a billion dollar valuation we can sneak in here and see what happens. 
 </p>
@@ -389,9 +389,9 @@ That eliminates a lot of software we can build ourselves however online analytic
 </div>
 </div>
 
-<div id="outline-container-org3d87e7e" class="outline-3">
-<h3 id="org3d87e7e">Being an open source (paid) dev</h3>
-<div class="outline-text-3" id="text-org3d87e7e">
+<div id="outline-container-org76c525d" class="outline-3">
+<h3 id="org76c525d">Being an open source (paid) dev</h3>
+<div class="outline-text-3" id="text-org76c525d">
 <p>
 Github now has some kind of scheme where maintainers of certain projects get paid for their work via sponsorship. Look into it yourself, lot's of obscure projects people still pay for that need help and are willing to cash you in. You can also get directly <a href="https://calebporzio.com/i-just-hit-dollar-100000yr-on-github-sponsors-heres-how-i-did-it">sponsored</a>.  
 </p>
@@ -403,9 +403,9 @@ Think about developer tooling here, target people who getting paid already and m
 </div>
 
 
-<div id="outline-container-org8cbe554" class="outline-3">
-<h3 id="org8cbe554">University</h3>
-<div class="outline-text-3" id="text-org8cbe554">
+<div id="outline-container-orgcb7634f" class="outline-3">
+<h3 id="orgcb7634f">University</h3>
+<div class="outline-text-3" id="text-orgcb7634f">
 <p>
 With the exception of engineering (mechanical, electrical etc) or linguistics in 2024 there is no point to take anything else in undergrad except classical studies in my pleb opinion. You can go to a non-yale law school or non-hopkins med school after your degree in classics because all they care about is your money. You can buy a non-thesis compsci MSc after for $7-12k which is the same thing we learn here for free with much less detail. Technical courses in a silly time compressed setting like undergrad absolutely sucks and makes it a miserable experience churning out pointless assignments. I hated my compsci classes they were just awful OOP garbage imagine paying $45k to sit in a large auditorium and look at Java slides then be given 6 hours per night of busy work. 
 </p>
@@ -433,9 +433,9 @@ Consider this to help you with the skills of (jargon) stakeholder negotiations a
 </div>
 
 
-<div id="outline-container-org04bfd3d" class="outline-3">
-<h3 id="org04bfd3d">Curriculum</h3>
-<div class="outline-text-3" id="text-org04bfd3d">
+<div id="outline-container-org71b7ecb" class="outline-3">
+<h3 id="org71b7ecb">Curriculum</h3>
+<div class="outline-text-3" id="text-org71b7ecb">
 <p>
 Given the above, what should we do? 
 </p>
@@ -456,9 +456,9 @@ You could work on something else instead such as <a href="https://www.cs.cornell
 </div>
 </div>
 
-<div id="outline-container-orge4e99e4" class="outline-3">
-<h3 id="orge4e99e4">Math</h3>
-<div class="outline-text-3" id="text-orge4e99e4">
+<div id="outline-container-org7b351df" class="outline-3">
+<h3 id="org7b351df">Math</h3>
+<div class="outline-text-3" id="text-org7b351df">
 <p>
 We can figure out the math as needed here otherwise try <a href="https://hrmacbeth.github.io/math2001/index.html">The Mechanics of Proof</a> you write all the exercises in Lean a dependently typed proof assistant. It's the first thing I go through in <a href="https://functionalcs.github.io/curriculum/">Functional CS</a>. 
 </p>
@@ -466,26 +466,26 @@ We can figure out the math as needed here otherwise try <a href="https://hrmacbe
 </div>
 </div>
 
-<div id="outline-container-orgba6eb99" class="outline-2">
-<h2 id="orgba6eb99">Task 1 Kattis</h2>
-<div class="outline-text-2" id="text-orgba6eb99">
+<div id="outline-container-orgfa93d6d" class="outline-2">
+<h2 id="orgfa93d6d">Task 1 Kattis</h2>
+<div class="outline-text-2" id="text-orgfa93d6d">
 <p>
 In competitive programming you submit source code as a solution to a problem and the online judge compiles and runs your code against tests. There is a huge list of online judges available like Kattis, SPOJ, Timus, Aizu, and more <a href="https://usaco.guide/general/olympiads?lang=cpp">worldwide</a>. This is how we practice to get skilled in algorithm design and problem solving. 
 </p>
 </div>
 
-<div id="outline-container-orga7d90e6" class="outline-3">
-<h3 id="orga7d90e6">Begin task!</h3>
-<div class="outline-text-3" id="text-orga7d90e6">
+<div id="outline-container-orgbf28e77" class="outline-3">
+<h3 id="orgbf28e77">Begin task!</h3>
+<div class="outline-text-3" id="text-orgbf28e77">
 <p>
 Choose one of these <a href="https://open.kattis.com/languages">languages</a>. List all the problems by <a href="https://open.kattis.com/problems?order=difficulty_data">easiest</a> and start with the very first one 'Velkomin!'. Many of these early Reykjavik university problems have you covering everything needed for I/O they're very good. Kattis accepts APL, Prolog, Fortran and many other wtf tier languages so be sure to pick the language you like the most not C++ we'll learn it later in the USACO guide. Stallman once <a href="https://aplwiki.com/wiki/Richard_Stallman">wrote an entire editor</a> in APL somehow. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfaa6ae9" class="outline-3">
-<h3 id="orgfaa6ae9">Input/Output</h3>
-<div class="outline-text-3" id="text-orgfaa6ae9">
+<div id="outline-container-org2c70953" class="outline-3">
+<h3 id="org2c70953">Input/Output</h3>
+<div class="outline-text-3" id="text-org2c70953">
 <p>
 Read the book or online documemtation of the language you chose or use the USACO <a href="https://usaco.guide/general/input-output">guide</a> first chapter to teach yourself how input/output works in C++/Java/Python. There's the USACO <a href="https://ide.usaco.guide/">online IDE</a> too if you want but Kattis accepts multiple submissions so you don't even need an IDE or text editor to start. 
 </p>
@@ -516,9 +516,9 @@ Finish up to 1.4 Easy problems on Kattis or until you get how I/O works in your 
 </div>
 </div>
 
-<div id="outline-container-org0353742" class="outline-3">
-<h3 id="org0353742">Real competitive programming</h3>
-<div class="outline-text-3" id="text-org0353742">
+<div id="outline-container-org3523363" class="outline-3">
+<h3 id="org3523363">Real competitive programming</h3>
+<div class="outline-text-3" id="text-org3523363">
 <p>
 Here is Gennady Korotkevich aka tourist <a href="https://youtu.be/97tieEKfvBs">practicing</a> on codeforces and explaining what he's doing, though he didn't start with C++ he used to win the IOI with Pascal in high school then switched later for the ICPC. The first thing to notice is he's using a basic text editor and minimalist shell that looks like <a href="https://mingw.osdn.io/">MinGW</a> and a <a href="https://www.farmanager.com/screenshots.php?l=en">file manager</a> where he manually submits through the codeforces website UI. He prepares individual directories named after the problem, then always makes a sol.cpp file in that directory so he doesn't have to change a macro he's written to compile the solution from the shell.
 </p>
@@ -556,9 +556,9 @@ A time limit exceeded verdict shows how he would optimize to get accepted verdic
 </div>
 </div>
 
-<div id="outline-container-orga5427ac" class="outline-2">
-<h2 id="orga5427ac">Task 2 USACO bronze</h2>
-<div class="outline-text-2" id="text-orga5427ac">
+<div id="outline-container-orgfceb56a" class="outline-2">
+<h2 id="orgfceb56a">Task 2 USACO bronze</h2>
+<div class="outline-text-2" id="text-orgfceb56a">
 <p>
 We are now <a href="https://usaco.guide/bronze/">bronze level</a>. There's a set of videos for bronze free <a href="https://joincpi.org/video-classes">here</a>.  
 </p>
@@ -568,9 +568,9 @@ USACO online judge only accepts C/C++, Java or Python but you can also learn fro
 </p>
 </div>
 
-<div id="outline-container-org42b2269" class="outline-3">
-<h3 id="org42b2269">Time complexity</h3>
-<div class="outline-text-3" id="text-org42b2269">
+<div id="outline-container-orgf4752c6" class="outline-3">
+<h3 id="orgf4752c6">Time complexity</h3>
+<div class="outline-text-3" id="text-orgf4752c6">
 <p>
 Skimming through <a href="https://usaco.guide/bronze/time-comp">time complexity</a>. This is a nice writeup how big-O works and how USACO problems typically are under 100 in input size so we can get away with order of n<sup>3</sup> to n<sup>4</sup> complexity or 3-4 nested loops. What you should remember here is that everything in a loop is multiplied by how many times it's being iterated so if you have 100 constant ops per loop and your loop is size n then it's 100n or O(n) since constants are suppressed in the definition. If you have another loop nested going through the entire input twice then it's n * n. Complete search or brute force where you try every possible solution is exponential and possible here if inputs under 20. 
 </p>
@@ -605,9 +605,9 @@ Caveats
 </ul>
 </div>
 
-<div id="outline-container-org060a221" class="outline-4">
-<h4 id="org060a221">C++ STL</h4>
-<div class="outline-text-4" id="text-org060a221">
+<div id="outline-container-org1949017" class="outline-4">
+<h4 id="org1949017">C++ STL</h4>
+<div class="outline-text-4" id="text-org1949017">
 <p>
 C++ has versions C++98/03/11/14/17/20/23 these all represent years there was a new standard. The current state of C++20/23 or 'modern' C++ is you can do functional programming with it. Options, lambdas, higher-order functions, monads and more all now exist in the definition depending which compiler you use. Google has <a href="https://github.com/carbon-language/carbon-lang/blob/trunk/docs/project/difficulties_improving_cpp.md">rage quit</a> C++ and is writing their own replacement called <a href="https://github.com/carbon-language/carbon-lang">Carbon</a> and as a result clang/llvm has not even implemented all C++20 features. If you want to use C++20/23 in some project you have to use GNU gcc or Microsoft msvc. 
 </p>

@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-05-27 Mon 21:23 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Software Development</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="jbh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Software Development</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9a4be0c">Start here</a>
+<ul>
+<li><a href="#org528920e">Curriculum</a></li>
+<li><a href="#orgea3d061">Strategy</a></li>
+</ul>
+</li>
+<li><a href="#org194a32d">BEGIN HERE</a>
+<ul>
+<li><a href="#orge156486">Make a fake startup</a></li>
+<li><a href="#org78b8368">Contribute to FSF</a></li>
+</ul>
+</li>
+<li><a href="#org8d18f81">USACO guide</a>
+<ul>
+<li><a href="#org4992947">Input/Output</a>
+<ul>
+<li><a href="#org552a3e0">Real competitive programming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3d16755">USACO bronze</a>
+<ul>
+<li><a href="#org346b3d4">C++ versions</a></li>
+<li><a href="#org93453aa">Big-O explained</a></li>
+<li><a href="#org5a43c5c">Time complexity</a></li>
+<li><a href="#orgd413c8d">Asymptotics</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<style>details summary { color: green; }</style>
+
+<div id="outline-container-org9a4be0c" class="outline-2">
+<h2 id="org9a4be0c">Start here</h2>
+<div class="outline-text-2" id="text-org9a4be0c">
+<p>
+I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
+</p>
+<ul class="org-ul">
+<li><a href="./accelerated.html">Accelerated Intro to CS</a></li>
+<li><a href="https://functionalcs.github.io/curriculum/">Functional CS</a></li>
+<li><a href="https://functionalcs.github.io/curriculum/sicp.html">SICP</a></li>
+<li>anything</li>
+</ul>
+
+<p>
+This exists to solve two problems. The first is finding a job or freelance gig doing $THING you like which seems like it's next to impossible these days. There's tricks we can try. 
+</p>
+
+<p>
+The second problem is recruiters always ask me where to find candidates for fintech type roles. I pressed them on what exactly they look for in 2024 then found free resources that taught as close to the requirements as possible. Everything here was vetted by them as being desireable as a basic foundation then the character of the candidate is the determining factor not their credentials. What they want is someone with the ability to figure out things themselves, who can program applications requiring high throughput, and who has an in-depth knowledge of at least one language and can describe in detail how it's memory abstraction works to tune or work around it's managed runtime. If you possess the above then you can be taught everything else.  
+</p>
+
+<p>
+These kinds of roles used to require a degree from an elite school but today campus recruiting is monopolized by big tech and gov crony contractors that manipulate school guidelines by pressuring students with 2 week expiring offers and paying the school to lock out all competition so it's a struggle to find anyone qualified to do this kind of work. Even if you want nothing to do with fintech we are learning to be apprentice race car mechanics but for application development the same skills here translate to anywhere like getting hired at Yellowbrick in Silicon Valley, working in Amsterdam for DuckDB or working worldwide for Databricks.
+</p>
+</div>
+
+
+<div id="outline-container-org528920e" class="outline-3">
+<h3 id="org528920e">Curriculum</h3>
+<div class="outline-text-3" id="text-org528920e">
+<p>
+Andy Pavlo runs two fully open courses at CMU where even the grading scripts are available and the advanced course teaches you how a modern application with microservice architecture is designed, network kernel bypass, cache hierachies, compiling queries to execute faster, algorithms for Azure or Amazon stored data analytics basically everything you need for the system design of a 2024 application. Nothing else exists like this anywhere we should take advantage. 
+</p>
+
+<p>
+USACO guide has a unique way to learn and practice algorithm design concepts we can mix with a course in theoretical algorithm design to see the current state of the art in running times. At the same time we can read about algorithm engineering how to code profile whatever we've built. 
+</p>
+
+<p>
+Some queueing theory is here since once you start recognizing queues you see them everywhere it's the same with the USACO guide where if you practice enough algorithm design you begin to see problems that fit an algorithm design strategy. 
+</p>
+
+<p>
+Finally plai.org to teach the standard model of languages because many 'modern' languages are just clones of each other which in turn are simply clones of ALGOL 68.    
+</p>
+
+<ul class="org-ul">
+<li>The <a href="https://usaco.guide/">USACO guide</a> 
+<ul class="org-ul">
+<li>w/ optional <a href="https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/pages/assignments/">data structures</a>, <a href="http://www.cs.cmu.edu/~15850/">algorithm design</a> and <a href="https://people.csail.mit.edu/jshun/6506-s23/">algorithm engineering</a></li>
+</ul></li>
+<li>A workbook on <a href="https://www.plai.org/">languages</a></li>
+<li><a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">Queueing theory</a> and probability models</li>
+<li><a href="https://15721.courses.cs.cmu.edu/spring2024/">Advanced DBMS (OLAP)</a> state of the art analytics
+<ul class="org-ul">
+<li>Here we learn kernel bypass methods for low latency networking, code profiling and optimization, everything we can about modern distributed application architecture</li>
+<li>Similar development to what a <a href="https://github.com/northwesternfintech/2025QuantInternships">quant developer</a> would do</li>
+</ul></li>
+</ul>
+
+<p>
+Most of the content here is your language of choice, even USACO you can write the solutions in your preferred language then translate it to a C/C++/Java program who cares. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea3d061" class="outline-3">
+<h3 id="orgea3d061">Strategy</h3>
+<div class="outline-text-3" id="text-orgea3d061">
+<p>
+Find a mentor. There is someone somewhere doing what you want to do and making a lot of money doing it and your task is to do enough material here to reach a level where you can get in with them somehow and absorb everything. Once you are in all you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life. If they get promoted, you get promoted. If they found a company, you are the first hire. If they get hired at a top tier trading firm everyone says you have no chance of getting into guess who they will tell the hiring managers they should also hire. 
+</p>
+
+<p>
+You approach this person and sell yourself telling them you are available if they have some work to offload because you want to learn it all from the ground up. There is always something to do and your goal is to be this magic portal where work they despise doing can be dumped and it returns as per specifications they gave you then there's time for them to show you things. You make your way up to highly sophisticated work until you end up being essential because it's a mutually beneficial relationship. I actually took all the above advice from a <a href="https://www.youtube.com/@mdeoldadvicebitsonly-fanch2934/videos">comedian</a> many years ago and it worked. In my case I approached someone not even in the same department as me doing things everyone said was impossible and simply became the trash can that they throw stuff at and now I'm their right-hand man. In finance this is tricky because of signing multiple NDAs even between employees but if you sell yourself to them that you are serious about being mentored they will make it happen.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org194a32d" class="outline-2">
+<h2 id="org194a32d">BEGIN HERE</h2>
+<div class="outline-text-2" id="text-org194a32d">
+</div>
+<div id="outline-container-orge156486" class="outline-3">
+<h3 id="orge156486">Make a fake startup</h3>
+<div class="outline-text-3" id="text-orge156486">
+<p>
+Buy a domain for $20, design and deploy a basic startup website. Here's a typical <a href="https://www.apriora.ai/">example</a> (a startup to detect applicants using GPT). Look around existing sites note how they are all the same as you scroll it loads whatever biz graphics and there's usually just a 'sign up here to be notified when&#x2026;' page. Never mention any other company names, keep it as vague as possible with just a team and careers page. 
+</p>
+
+<p>
+<i>This is where you worked for 1.5 years</i>. 
+</p>
+
+<p>
+Do not give yourself a ridiculous title. You are a <b>full stack developer</b> and spent your time there building features in the language/framework you currently know and are targeting employment in. Make an email sig and use you@domain.com for communications. Nobody will ever contact your fake startup but if they do don't reply. Will they see the domain is only x minutes old? Will they find out the company is fake? Who cares, you will be vetted through their interview process anyway. If anyone asks why you are leaving "I am seeking new challenges and mentorship in blah blah blah".
+</p>
+
+<p>
+All new hires are generally given 3 months until they become 'productive' and everyone else you work with is faking it until they make it so don't worry. Caveat: this only works if you legit did a real compsci intro course, legit can talk confidently about your skills, legit can figure out new technology yourself and aren't harassing every other co-worker for basic things like how to commit in the repository. Using open source projects to write minor features repeatedly will help you learn all this.  
+</p>
+
+<p>
+Every year MIT has a competition called <a href="https://weblab.mit.edu/schedule/">web lab</a> where you learn the basics of Git, HTML/CSS, JS, Svelte CSS, React, Node and everything else you need to slap up a simple website. All the lectures are on YouTube and all assignments free on GitHub. There's no reason you can't do this yourself if you did any intro course here. Hosting for this try fly.io it's one of my favorites because it's 'serverless' and has a generous free option (with amazing documentation) but anything will do for your fake startup and fake work experience. To be honest you already have 1.5 years experience if you did any of the (difficult) intro to CS workshops here like the 2 semesters in 1 Brown university course CS19.
+</p>
+
+<p>
+They want to play games hiring you can play the game too. We don't live in any kind of sane times right now do whatever it takes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78b8368" class="outline-3">
+<h3 id="org78b8368">Contribute to FSF</h3>
+<div class="outline-text-3" id="text-org78b8368">
+<p>
+As mentioned above you will best be able to pull this off if you actually can commit code somewhere and receive feedback. I personally recommend only ever contributing to 'free software' as in GNU or <a href="https://www.fsf.org/">Free Software Foundation</a> projects. OSS or 'open source' is a scam where they use you for free labor and then make money from your work whereas FSF is a liberating experience your code will live for decades and nobody can wrap it in some license locking out new features like how Apple screwed over the OpenBSD pf firewall devs or how Android is a disaster. Read Steven Levy's classic book and skip to chapter 'The Last of the True Hackers'. 
+</p>
+
+<p>
+I remember a decade ago everyone telling me that clang was 'superior' and why would you ever need g++/gcc? 'It will always be free what are you a conspiracy theorist'. We will shortly learn Google abandoned clang recently and only gcc is keeping up with new C++/20/23+ features that's why you invest your time in free software because the whims of some temporal corporation cannot be trusted and this has been a truth since the early 1980s when Richard Stallman was at MIT lab warning everyone and nobody took him seriously except two people named Gerald Jay Sussman and Hal Abelson.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d18f81" class="outline-2">
+<h2 id="org8d18f81">USACO guide</h2>
+<div class="outline-text-2" id="text-org8d18f81">
+<p>
+In competitive programming you submit source code as a solution to a problem and the online judge compiles and runs your code against tests. There is a huge list of online judges available like Kattis, SPOJ, Timus, Aizu, and more <a href="https://usaco.guide/general/olympiads?lang=cpp">worldwide</a>. 
+</p>
+
+<p>
+First task is to choose one of these <a href="https://open.kattis.com/languages">languages</a>. We'll learn C++ for USACO so pick something else here that you want to use. List all the problems by <a href="https://open.kattis.com/problems?order=difficulty_data">easiest</a> and start with the very first one 'Velkomin!'. You get unlimited submissions to the Kattis judge. 
+</p>
+</div>
+
+<div id="outline-container-org4992947" class="outline-3">
+<h3 id="org4992947">Input/Output</h3>
+<div class="outline-text-3" id="text-org4992947">
+<p>
+Read the book or online documemtation of the language you chose or use the USACO <a href="https://usaco.guide/general/input-output">guide</a> first chapter to teach yourself how input/output works in C++/Java/Python. There's the USACO <a href="https://ide.usaco.guide/">online IDE</a> too if you want.
+</p>
+
+<p>
+The problem <a href="https://open.kattis.com/problems/qaly">qaly</a> is an example of how to take multiple lines of input. Many of these problems the first input will be how much more input to expect which you can then loop on:
+</p>
+
+<pre class="example">
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int tt;  
+    double sum = 0;  
+    cin &gt;&gt; tt;   // pipe first stdin to tt
+    while (tt--) {  // false when input empty 
+        double a, b;  // each loop declare these 2 new assignables
+        cin &gt;&gt; a &gt;&gt; b; // take 2 more inputs
+        sum = sum + (a * b);  // accumulator
+        }
+    cout &lt;&lt; sum;  // pipe sum to stdout
+}
+</pre>
+
+<p>
+Finish up to 1.4 Easy problems on Kattis or until you get how I/O works in your language.  
+</p>
+</div>
+
+<div id="outline-container-org552a3e0" class="outline-4">
+<h4 id="org552a3e0">Real competitive programming</h4>
+<div class="outline-text-4" id="text-org552a3e0">
+<p>
+Here is Gennady Korotkevich aka tourist <a href="https://youtu.be/97tieEKfvBs">practicing</a> on codeforces and explaining what he's doing, though he didn't start with C++ he used to win the IOI with Pascal in high school then switched later for the ICPC. The first thing to notice is he's using a basic text editor and minimalist shell that looks like <a href="https://mingw.osdn.io/">MinGW</a> and a <a href="https://www.farmanager.com/screenshots.php?l=en">file manager</a> where he manually submits through the codeforces website UI. He prepares individual directories named after the problem, then always makes a sol.cpp file in that directory so he doesn't have to change a macro he's written to compile the solution from the shell.
+</p>
+
+<p>
+His C++ template:
+</p>
+<pre class="example">
+// include every C++ std library and bits library
+// doesn't work on all platforms
+#include &lt;bits/stdc++.h&gt;
+
+// use std namespace to avoid having to write std::cin or std::cout
+// in other words bringing into scope all C++ std libraries 
+using namespace std;
+
+int main() {
+// turn off default cout flush 
+ ios::synch_with_stdio(false);
+ cin.tie(0)
+</pre>
+
+<p>
+std::cin is synchronized to std::cout and performs default buffer flushing operations so to save some runtime he disables this sync. His compiler flags he explains in one of these recorded streams, or you can figure out yourself as you go, most of them are to make compiler messages extra verbose for debugging. Note you would never write software outside of competitive programming like this because he has opened a gigantic scope.  
+</p>
+
+<p>
+You don't have to watch the entire 2hr vid, the last problem seems like the most informative. He begins most problems by writing himself examples as comments. He copies the problem input test cases into a text file 'in1' then pipes it into his compiled program "sol.exe &lt; in1" from the shell as stdin (standard input). He writes multiple submissions to compare their runtime/memory usage. He looks for some kind of mathematical structure in the formulas given in the problem writeup. After submission he looks up the solutions and compares them to his own.    
+</p>
+
+<p>
+A time limit exceeded verdict shows how he would optimize to get accepted verdict also trolling the stream by making all the variable names to single letters claiming it will speed up the program. The judging server ran his program faster than his own laptop, something to remember if debugging and believing your solution still isn't optimized enough, resubmit anyway as you get unlimited submissions. 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d16755" class="outline-2">
+<h2 id="org3d16755">USACO bronze</h2>
+<div class="outline-text-2" id="text-org3d16755">
+<p>
+We are now <a href="https://usaco.guide/bronze/">bronze level</a>. There's a set of videos for bronze free <a href="https://joincpi.org/video-classes">here</a>.  
+</p>
+
+<p>
+USACO online judge only accepts C/C++, Java or Python but you can also learn from the guide then practice on Kattis using <a href="https://cpbook.net/methodstosolve">Methods to Solve</a> or the translation of e-maxx <a href="https://cp-algorithms.com/index.html">here</a> then you can use any language you want from Haskell to APL. 
+</p>
+</div>
+
+<div id="outline-container-org346b3d4" class="outline-3">
+<h3 id="org346b3d4">C++ versions</h3>
+<div class="outline-text-3" id="text-org346b3d4">
+<p>
+C++ has versions C++98/03/11/14/17/20/23 these all represent years there was a new standard. The current state of C++20/23 or 'modern' C++ is you can kind of do functional programming with it. Options, lambdas, higher-order functions, monads and more all now exist in the definition depending which compiler you use. Google has <a href="https://github.com/carbon-language/carbon-lang/blob/trunk/docs/project/difficulties_improving_cpp.md">rage quit</a> C++ and is writing their own replacement called <a href="https://github.com/carbon-language/carbon-lang">Carbon</a> and as a result clang/llvm has not even implemented the entire C++20 spec and probably never will which is why you should put efforts into free software compilers and not trust any company. If you want to use C++20/23 in some project you have to use GNU gcc or Microsoft msvc.  
+</p>
+
+<p>
+Competitive programming typically only accepts C++11/14/17 which we can refer to online documentation for and most of our time in USACO will creating static arrays and using the <a href="https://en.wikipedia.org/wiki/Standard_Template_Library">standard template library</a>. The STL to me seems like a big hack to make C++ a <a href="https://en.wikipedia.org/wiki/Generic_programming">generic programming</a> language a concept invented by ML in 1973. If you took the Standard ML course listed in the intro to this workship then generic programming is simply polymorphism or 'a types. If you took the accelerated intro course then generic programming is the same as 'type variables' in other words a function who's type is determined by whatever parameters you give it:
+</p>
+
+<pre class="example">
+# a generic maximum function of any type T
+
+fun my-max&lt;T&gt;(a :: T, b :: T)-&gt; T:
+  if (a &gt; b):
+    a
+    # if not(a &gt; b) then a == b or a &lt; b   
+  else:
+    b
+  end
+where:
+  my-max(2, 3) is 3
+  # a is unicode 97, b is 98
+  my-max("a", "b") is "b"
+end
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org93453aa" class="outline-3">
+<h3 id="org93453aa">Big-O explained</h3>
+<div class="outline-text-3" id="text-org93453aa">
+<p>
+The first resource we can use where 'running time' is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
+</p>
+
+<p>
+The formal definition is:
+</p>
+
+<p>
+\(f(x) \le c\cdot g(x)\) for all inputs \(x \ge x_0\) as x goes to infinity. If that inequality holds then f(x) is in O(g(x)).
+</p>
+
+<p>
+Full explanation:
+</p>
+<ul class="org-ul">
+<li>x floating around by itself or f(x) = x or y = x represent the same thing.</li>
+<li>the big-O definition doesn't care if c = 1 or c = 1 trillion.</li>
+<li>if inputs 'go to infinity' traditionally you write n instead of x.</li>
+<li>x<sub>0</sub> means some specific input of x or threshold. 
+<ul class="org-ul">
+<li>can be the first input or the trillionth input the big-O definition doesn't care.</li>
+<li>all inputs are positive as it would make no sense to model negative input.</li>
+</ul></li>
+<li>f(x) is a cost function.</li>
+<li>g(x) is chosen from a list of existing math functions, see below.</li>
+</ul>
+
+<p>
+Toy example: Suppose a program consists of 2 constant operations followed by a single loop with 10 constant operations in the loop body. In the RAM model this is f(x) = 10x + 2
+</p>
+
+<ul class="org-ul">
+<li>f(n) = 10n + 2
+<ul class="org-ul">
+<li>n because f(x) 'goes to infinity'</li>
+</ul></li>
+<li>10n + 2 &lt;= cn 
+<ul class="org-ul">
+<li>true if c = 11 for all inputs x &gt;= 2</li>
+<li>also true if c = 12, a thousand, a billion</li>
+</ul></li>
+</ul>
+
+<p>
+<b>f() function</b> is a cost function derived from a cost model. It's where you count up every constant operation and loop costs by analyzing source code. This is not always easy since what costs do you assign when the code triggers garbage collection or something triggers memory allocation because an object has been created deep in some library code or for functions that can consume other functions as inputs. 
+</p>
+
+<p>
+<b>The g() function</b> is chosen from a list of math functions that represent a 'family of functions'. A family means all functions that are linear, all functions that are quadratic, all functions that are linearithmic etc. It actually is a specific list as we'll soon see. 
+</p>
+
+<p>
+Why are constants hidden in big-O? If you read SICP their example is 16 and 8 both differ by a factor of 2 and 8 but we don't care which factor. In real life however you will never have infinite inputs so the constant factors do actually matter if they are very large hiding a lot of operations. 
+</p>
+
+<p>
+O(g(x)) represents an upper bound for all functions in the family g(x). It doesn't represent growth since f(n) = n<sup>2</sup> does not grow to be quadratic, f() already is quadratic, thus f() is in \(O(n^{2})\) or upper bounded by every quadratic function. The function n is bounded by n, n<sup>2</sup> and n<sup>n</sup> that's why it's <i>an</i> upper bound not <i>the</i> upper bound as there's many upper bounds but you obviously want the closest fitting bound.
+</p>
+
+<p>
+Big-O is in a hierarchy of asymptotics there's many more like little-o (strictly less than), big-Omega (strictly greater than), or big-Theta which describes a lower bound and an upper bound. For example an algorithm that searches a list is going to be at least a lower bound of O(n) because it has to look at everything once and upper bounded by O(n) so it is \(\theta(n)\). 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org5a43c5c" class="outline-3">
+<h3 id="org5a43c5c">Time complexity</h3>
+<div class="outline-text-3" id="text-org5a43c5c">
+<p>
+Skim through <a href="https://usaco.guide/bronze/time-comp">time complexity</a>. Sign up to <a href="https://joincpi.org/video-classes">here</a> where all the <a href="https://www.youtube.com/watch?v=lDEriEvhS48">videos</a> are. Watching the video he explains the 4 suggested resources:
+</p>
+
+<p>
+First is 'IUSACO' 3-Algorithm Analysis <a href="https://darrenyao.com/usacobook/cpp.pdf#page=12">here</a>. It's only chapter 3 and 4 pages long. Explained in the video.
+</p>
+
+<p>
+Next is 'CPH' 2-Time Complexity <a href="https://usaco.guide/CPH.pdf#page=27">here</a> from the competitive programming handbook. This is already known to us from the intro courses so let's look at 2.4 <i>Maximum subarray sum</i>. If it doesn't make sense it means which sequence or combination of neighboring elements produces the greatest sum. Try to solve this yourself before reading their solution. Remember you can prep something with multiple linear consecutive runs since O(n + n) is O(2n) which is of course O(n) and in this problem try removing the negative first and last array element since why would you keep them. The solution they give is <a href="https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/">Kadane's Algorithm</a>.
+</p>
+
+<p>
+Next is 'PAPS' 5-Time Complexity <a href="https://usaco.guide/PAPS.pdf#page=99">here</a> and the wall clock (using time() in the shell) is again mentioned but we'll learn you can't rely on wall clock time. Insertion sort we already did in the intro to CS courses where we learned for small data insert can be a constant operation. Page 91 he substituted t<sub>i</sub> for i and since this is a sum where the counter starts at 0, it's going to sum 0 + 1 + 2&#x2026; up to n - 1 times and we already know a sum from 1 to n closed form is (n + 1)n/2 or here (n - 1)n/2 but we can see the dominating power is going to be n<sup>2</sup> and this is followed by an example how n<sup>2</sup> is both an upper bound of n<sup>2</sup> and n. The proof of the bound first he noted that if you multiply N &gt;= 1 you get N<sup>2</sup> &gt;= N and this fact is used in the inequality something we will see in depth later.
+</p>
+
+<p>
+The <a href="https://www.youtube.com/watch?v=zUUkiEllHG0">video</a> they suggest goes through how to find function f(x) by analyzing the source. @11:03 remember you multiply everything in the body of a loop by the amount of times you loop. Without doing any of the analysis I can immediately tell this is n * c * n<sup>3</sup> or n<sup>4</sup> 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd413c8d" class="outline-3">
+<h3 id="orgd413c8d">Asymptotics</h3>
+<div class="outline-text-3" id="text-orgd413c8d">
+<p>
+A good resource is <a href="https://www.youtube.com/watch?v=_gKb855_3bk&amp;list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX&amp;index=5">this video</a> from CMU's <i>CS Theory Toolkit</i> course which I will watch now. Now we know epsilon \(O(\epsilon)\) or delta \(O(\delta)\) means inputs are going to zero. @7:23 a multiplicative error is defined <a href="https://math.stackexchange.com/questions/2994057/whats-the-meaning-of-multiplicative-errors-and-additive-errors">here</a> notice if you log the multiplicative error then by log laws it becomes an additive error. Logarithms you should think as a way to linearize an exponent you have something complex like 10<sup>n</sup> and when you take it's log<sub>10</sub> it's just n and much easier to work with. It can also represent the amount of zeros in a number if you took the accelerated CS course noted in the intro to this workshop. If some function is logarithmic in costs on your web site and you get 1m new traffic hits then you are only paying 6x extra costs. This lecture notes the difference in notation between log (base 10) lg (base 2) and ln (base e) though often in algorithm and compsci texts they just use log with the implicit understanding it's supposed to be base 2. 
+</p>
+
+<p>
+@13m poly means polynomial or anything that is g(x)<sup>c</sup> or \(g(x)^{O(1)}\) some kind of exponent that is a constant. @18m epsilon is tiny, so epsilon<sup>2</sup> is going to be even smaller that's why it's bounded \(\widetilde{O}(\epsilon)\) and of course 'O twiddle' hides logarithmic factors. 
+</p>
+
+<p>
+TODO I slacked at this but I'm back. 
+</p>
+
+<hr />
+<p>
+<a href="./index.html">Home</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

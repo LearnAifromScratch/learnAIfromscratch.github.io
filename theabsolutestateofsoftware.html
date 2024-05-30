@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-04-05 Fri 01:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A Security Curriculum</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="jbh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">A Security Curriculum</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgab6db3a">Curriculum</a>
+<ul>
+<li><a href="#org7452b64">Typical industry tracks</a></li>
+<li><a href="#org46bd2cc">How bad it all is</a></li>
+<li><a href="#orgf628ad4">Open source sabotage</a></li>
+<li><a href="#org5b7bc99">The absolute state of the security industry</a></li>
+<li><a href="#orga347cd8">Surveillance</a></li>
+</ul>
+</li>
+<li><a href="#org05dc1f1">Prelims</a></li>
+</ul>
+</div>
+</div>
+<style>details summary { color: green; }</style>
+
+<div id="outline-container-orgab6db3a" class="outline-2">
+<h2 id="orgab6db3a">Curriculum</h2>
+<div class="outline-text-2" id="text-orgab6db3a">
+<p>
+I skimmed through beginners.re the famously gigantic reverse engineering text and noticed a lot of it was similar to the CMU course <a href="https://www.cs.cmu.edu/~213/">15-213</a>. His advice in the book was to write small programs then translate them to assembly which is pretty much almost all the exercises in the course book for 15-213. Overflowing and ROP or return oriented programming labs are also included so we should just start with 15-213. This material is also a prereq for Brown's <a href="https://cs.brown.edu/courses/csci1650/lectures.html">Software Exploitation</a> course. 
+</p>
+
+<p>
+We can explore the PortSwigger <a href="https://portswigger.net/web-security">academy</a> (free), <a href="https://pwn.college/">pwn.college</a> (free) and read through some papers from Brown's grad <a href="https://cs.brown.edu/courses/csci2951-u/lectures.html">course</a> and MIT's <a href="http://csg.csail.mit.edu/6.S983/">CPU hacking</a> course learning about flipping bits in memory without even accessing them. There's also a lot of <a href="https://www.reversinghero.com/">reverse engineering</a> resources we can play around with. 
+</p>
+
+<p>
+Since we have full access I'm going to try Tanja Lange's Post Quantum Crypto <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto22/">course</a> the first part goes through all the main contenders for a future crypto standard, the second part is various methods for cryptanalysis. Almost all computer security type courses make you take some kind of crypto we may as well learn the future of crypto. We have this <a href="https://shoup.net/ntb/">book</a> to help us which has no formal prereqs.   
+</p>
+</div>
+
+<div id="outline-container-org7452b64" class="outline-3">
+<h3 id="org7452b64">Typical industry tracks</h3>
+<div class="outline-text-3" id="text-org7452b64">
+<ul class="org-ul">
+<li>SOC threat analyst</li>
+</ul>
+
+<p>
+SOC means Security Operations Center. This is somebody working in shifts for a 24/7 (usually remotely) enterprise tier threat response contractor who is paid to anaylze system logs (almost always Windows OS logs) and network traffic to spot problems. You primarily extract and filter data mainly with in-house tools or using things like OSquery and do 'threat intelligence'. To get into this find some kind of learning path for SOC Level 1 and 2 but these almost always cost money. This <a href="https://tryhackme.com/path/outline/soclevel1">one</a> is the cheapest I could find or you could simply use their syllabus to look up everything yourself like OSquery, wireshark, MITRE etc. To find these companies search for security operations center jobs or try Sophos. I imagine these kinds of outfits exist so companies can satisfy some kind of insurance compliance or lawsuit protection from any breaches or leaked data.
+</p>
+
+<ul class="org-ul">
+<li>Security consultant</li>
+</ul>
+
+<p>
+Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to cloud deployment to how developers handle the keys for signing into the source repository. With large security consulting outfits the typical engagement is 2-3 consultants for 2 weeks where there is juniors competent in running security procedures like penetration testing and the principal consultant oversees them and presents all the reports the juniors produced justifying the money spent. On large contracts they will have reverse engineers and all kinds of other specialists charging insanely high hourly rates. The major outfits are Leviathan security, IOactive, Bishop Fox, NCC group, Crowdstrike, or search for security consultant jobs.        
+</p>
+
+<ul class="org-ul">
+<li>Freelance</li>
+</ul>
+
+<p>
+Security researchers who win pwn2own competitions, reverse engineer, chase bug bounties and <a href="https://www.zerodayinitiative.com/about/benefits/">sell exploits</a> sometimes on APT or <a href="https://docs.google.com/spreadsheets/u/1/d/1H9_xaxQHpWaa4O_Son4Gx0YOIzlcBWMsdvePFX68EKU/pubhtml#">Advanced Persistent Threat</a> marketplaces. These guys often get contracted by the above companies to be specialists or they run their own companies. They sometimes build entire target models to simulate attacks or use formal verification methods on program control flow graphs to expose logical flaws and other techniques we'll see. Look at all the shady stuff <a href="https://apt.securelist.com/">here</a> there seems to be nonstop nation state tier malware in the wild. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46bd2cc" class="outline-3">
+<h3 id="org46bd2cc">How bad it all is</h3>
+<div class="outline-text-3" id="text-org46bd2cc">
+<p>
+If you haven't seen it, watch the CS19 lecture on <a href="https://youtu.be/7orQOW6fp2A">security</a>.  
+</p>
+
+<p>
+Immediately npm breaches is brought up, the JavaScript package manager. If you've ever installed some Node.js software to run it locally you will have noticed there's hundreds of dependencies being automatically installed. If you missed the attack description the stream dependency was attacked to specifically target some Bitcoin wallet software in hopes that the wallet developers themselves would include it in their builds and they did. All the attacker had to do was find some unmaintained but popular dependency and took over the entire project. Many browser plugins have had this happen too, either sold to adtech or malware writers or they helpfully take over the abandoned project. 
+</p>
+
+<p>
+@9:00 we're getting into nightmare scenario where VSCode the IDE most developers use is now compromised. The point is some dependency nobody pays attention to got turned into malicious code and found it's way into almost every critical program on earth.
+</p>
+
+<p>
+@19:50 the seemingly benign software you find in the wild like adding colors to your terminal or javascript console is actually filled with malware of course but you probably knew that already. Famously this was almost all the flashlight/torch apps on app store before they cracked down.
+</p>
+
+<p>
+@28:14 he's reminding us again the most dangerous software is the software you least expect to be dangerous. @35:27 every basic shell copy program in every OS will bring in fopen() and then you're screwed, it has access to the entire filesystem. 
+</p>
+
+<p>
+'The internet, operating systems, all programming languages, these things were built to be maximal insecure'.
+</p>
+
+<p>
+He talks about SELinux also known as MAC or mandatory access controls like AppArmor. MAC is something enterprise security people love because it's knob tweaking but state can become so complex in modern systems you cannot guarantee your policy doesn't allow illicit states without some kind of logical assistant to model everything and run tests on. Whenever you search for AppArmor or SELinux the number one recommendation or most-searched for query is <i>how to turn it off</i> because it's intefering in someone's work and in the real world that's what everyone does. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf628ad4" class="outline-3">
+<h3 id="orgf628ad4">Open source sabotage</h3>
+<div class="outline-text-3" id="text-orgf628ad4">
+<p>
+This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relevant still. Since he is involved in FreeBSD project he thinks about it from an open source sabotaging viewpoint. 
+</p>
+
+<p>
+@5:10 is very interesting. It reminds me of back in the day when there were many people writing 'security Android ROMs' or those in-memory operating systems you loaded up with a boot live DVD/USB or advanced security OSs like Subgraph OS. They all disappeared and abandoned their projects and he imagines in the talk how legit developers are purposely bribed to do so being put on some nice salary at a 'friends of NSA' company. Reminder this is just a thought experiment what he would do if tasked to sabotage he's not accusing anyone of anything. 
+</p>
+
+<p>
+@12:28 this is what we came for how modern open source projects are derailed or infiltrated. @16:40 some mobile browser versions won't even let you use self-signed certs anymore even after clicking all the 'omg but are you aware of the risks!' buttons. @25:45 is great, wait for some security problem and then 'find a helpful patch' and claim you reviewed it but oops missed something. The deceptive defaults I have been burned by many times. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b7bc99" class="outline-3">
+<h3 id="org5b7bc99">The absolute state of the security industry</h3>
+<div class="outline-text-3" id="text-org5b7bc99">
+<p>
+Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He is completely blackpilled and tells us how nobody cares or wants to fix the problems. If you raise the alarm you often threatened or dismissed. He wrote multiple warnings to the Rails github repository only for them to hand wave the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga347cd8" class="outline-3">
+<h3 id="orga347cd8">Surveillance</h3>
+<div class="outline-text-3" id="text-orga347cd8">
+<p>
+Now cancelled former Tor developer and 'Wikileaks associate' Jacob Appelbaum quietly got a PhD from two of the world's premiere crypto experts DJ Bernstein and Tanja Lange at TU/e in the Netherlands. I don't know or care about any of the details of his fall from being the darling of the hacktivist scene all I care is he did write a thesis/dissertation that was overseen by advisors I respect so we may as well read it. The pdf is <a href="https://research.tue.nl/en/publications/communication-in-a-world-of-pervasive-surveillance-sources-and-me">here</a> or direct link <a href="https://research.tue.nl/files/197416841/20220325_Appelbaum_hf.pdf">here</a>. 
+</p>
+
+<p>
+Skimming the intro this is more of a political manifesto instead of a thesis I'm surprised the school didn't demand he remove a lot of cringe here. In the section he calls bad mathematics he shames on cruise control others who take fed cash yet seems completely unaware he once worked for the Tor Project which is funded by US <a href="https://support.torproject.org/misc/misc-3/">federal agencies</a> like the DoD. If you follow DJ Bernstein then you know he amusingly rants on the IETF crypto working group mailing list whenever some stooge proposes yet another badly designed or patent trolled elliptic curve scheme so that to me is the definition of 'bad mathematics' trying to sneak in broken by design protocols. In 1.2 <i>Thinking about the future</i> some of the claims derived from the questionable sources he lists are so wild even Wikipedia jannies wouldn't have green lighted this so I skipped but the theme as far I can tell is crypto still works if it's designed/used correctly. Everything else he is trying to say in way too many words can be summed up by <a href="https://www.youtube.com/watch?v=TVwKjGbz60k">this video</a>.
+</p>
+
+<p>
+Section 2 <i>Background on network protocols</i> skimming this quickly OpenVPN is demonized as being the target of NSA weakening but OpenVPN code is so ridiculously bad and convoluted that they probably didn't really have to do anything nefarious to it except promote it's use. 
+</p>
+
+<p>
+Section 3 <i>Background on cryptography</i> if you look at Tanja Lange's <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto22/">crypto course</a> page she recommends for general background this free online <a href="https://cacr.uwaterloo.ca/hac/">book</a> so we can refer to it as we very lightly read this section. The <a href="https://cacr.uwaterloo.ca/hac/about/chap9.pdf">hash functions</a> chapter a hash function h maps bit-strings of arbitrary but finite length to strings of fixed length so the domain of the function (inputs) maps to a range (outputs) that is many-to-one as the inputs are larger than the range so there exists the possibility of collisions where 2 distinct pairs of inputs have the same output. Now you know how password hashing works, the hashes map to a plain text input but the Appelbaum thesis notes these password hash functions are designed to be extremely slow by purposely running inefficient calculations that require large amounts of contiguous memory so you can't easily brute force the hash bombing it with millions of strings to guess passwords. 
+</p>
+
+<p>
+Block ciphers <a href="https://cacr.uwaterloo.ca/hac/about/chap7.pdf">chapter</a> seems to be a function that accepts as input a n-bit sized vector of plaintext and a key vector then a product transformation occurs to create ciphertext that is the same size of the input. If the input exceeds the size of the n-bit block then it's partitioned into same size blocks and encrypted seperately using a mode of operation to do so one old example is ECB or electronic-codebook mode. A symmetric key is shared via some Diffie-Hellman like public key system we can learn later. The term 'nonce bit' is called IV or initialization vector in older books. Djb's ChaCha20 high speed crypto and Poly1305 MAC is mentioned and <a href="https://datatracker.ietf.org/doc/html/rfc7539">detailed here</a> using C like pseudocode if interested. Skimming the rest there's an interesting comment about NIKE or non-interactive key exchange that has a deniability property where finding encrypted content that decrypts with someone else's key is not definitive proof of any communication between each other. 
+</p>
+
+<p>
+Chapter 4 you probably already know most of this if you read the Snowden leaks and 2017 Wikileaks CIA files and there's a bunch of material here on glowie PSYOPS strategies all laid out in chronological order. Applebaum goes totally off the rails here back into political manifesto territory. A lot of content here is straight up ranting but the later content going through all known shady nation state malware and explaining how it works is worth reading. Even though a lot of these exploit 'products' in the leaked ANT catalog are from 10 years ago I doubt much has changed especially what data they were after. 
+</p>
+
+<p>
+Chapter 5 GNU naming system has a good crash course on how DNS works. The NSA shenanigans here running some global monitoring bot network to hide their DNS queries is interesting. GNS is a <a href="https://docs.gnunet.org/latest/users/gns.html">GNUnet</a> app which I like way more than all the blockchain nonsense going on right now requiring massive amounts of mining. Note to self look into GNUnet more.   
+</p>
+
+<p>
+Chapter 6 WireGuard tweak it only works for some future quantum adversary meaning if traffic is vacuumed up and held to be broken years later then this tweak works otherwise an active quantum adversary you have to redesign the entire WireGuard protocol. That's if quantum computers aren't a total scam every company involved always makes suspect promises of massive amounts of qbits then nothing happens. 
+</p>
+
+<p>
+Chapter 7 Vula has code to read <a href="https://vula.link/">here</a> and is developed anonymously obviously because of Appelbaum's pariah status. I'll have to come back here after we get familiar with post quantum crypto an automatic LAN encrypting scheme is a pretty awesome idea. 
+</p>
+
+<p>
+Chapter 8 REUNION is a PAKE for real life key encrypted key exchange, a kind of Assange tier tradecraft meeting protocol for short message exchanging like contact info. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org05dc1f1" class="outline-2">
+<h2 id="org05dc1f1">Prelims</h2>
+<div class="outline-text-2" id="text-org05dc1f1">
+<p>
+-15-213 <a href="https://www.cs.cmu.edu/~213/">Introduction to Computer Systems</a>
+</p>
+<ul class="org-ul">
+<li>All the (optional to watch) recorded lectures/recitation are on <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b96d90ae-9871-4fae-91e2-b1627b43e25e%22&amp;page=0&amp;maxResults=50">Panopto</a> or search <a href="https://www.youtube.com/playlist?list=PLQ5cMeVTtiJkUilq92Cw9D6RhAJhPJ_JX">YouTube</a></li>
+<li>The book labs are <a href="http://csapp.cs.cmu.edu/3e/labs.html">here</a></li>
+</ul>
+
+<p>
+There is a problem with the book where the global version the publisher paid someone to screw with the practice problems and many of the solutions in the book are wrong. The only decent pdf you can find is the global version too I don't think they have a US electronic version. I bought the global version for I think $20 and the actual chapter contents are identical it's only many of the early exercises I find that were bungled. You can use library genesis to get an OCR'd copy but they are all gigantic in size see this <a href="http://libgen.is/book/index.php?md5=A665E0B6F83F9FE49120BE27F3A85902">upload</a> where the Chinese uploader describes all the versions available. However does it really matter? If there's a practice problem translating C to assembly we can always generate the unoptimized assembly with the compiler and verify it ourselves or figure out easily any hex to binary solution.  
+</p>
+
+<p>
+TODO 
+</p>
+
+<hr />
+<p>
+<a href="./index.html">Home</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

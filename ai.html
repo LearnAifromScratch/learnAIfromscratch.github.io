@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-04-06 Sat 00:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI in 2024</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="jbh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {background-color: #fafad2} </style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">AI in 2024</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org3e1fac8">Intro</a>
+<ul>
+<li><a href="#org7e43f81">Tour of university AI courses</a></li>
+<li><a href="#org9b257ff">Tour of Applied AI courses</a></li>
+<li><a href="#org0580a4f">Limits of current AI</a></li>
+</ul>
+</li>
+<li><a href="#orgc3ca856">Strategy</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3e1fac8" class="outline-2">
+<h2 id="org3e1fac8">Intro</h2>
+<div class="outline-text-2" id="text-org3e1fac8">
+<p>
+As of this writing (April 5 2024) if you look at arxiv.org submissions for Machine Learning since April 1 there is 625 papers. In the past 12 months there was 17,468 papers just on on Neural Networks (Deep Learning). The field changes so much there is no way to keep up unless you can teach yourself how to read these papers and implement (optimize) them. We will learn here how exactly to do that because there is one constant that doesn't change and that's the original theory how all this works. There is also a resource called <a href="https://www.depthfirstlearning.com/2020/Resurrecting-Sigmoid">Depth First Learning</a> where curriculums are built around papers so we can understand them written by the researchers of the paper themselves and try and implement them. 
+</p>
+</div>
+
+<div id="outline-container-org7e43f81" class="outline-3">
+<h3 id="org7e43f81">Tour of university AI courses</h3>
+<div class="outline-text-3" id="text-org7e43f81">
+<p>
+I've audited every public 'Intro to ML' or 'Intro to Deep Learning' course that can be found with a bot and honestly none of them teach you more than what you would learn doing the classic Andrew Ng course. If you insist on taking a typical undergrad course here are some of the better one's: 
+</p>
+
+<ul class="org-ul">
+<li>Brown's CS4780 <a href="https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">ML for Intelligent Systems</a> (2018)
+<ul class="org-ul">
+<li>Same content more or less as 2023 CMU course</li>
+<li>Probably the best lecture style</li>
+<li>Homework is <a href="https://www.dropbox.com/s/tbxnjzk5w67u0sp/Homeworks.zip?dl=0">here</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>CMU's 10-301 <a href="https://www.cs.cmu.edu/~mgormley/courses/10601-s23/">Intro to ML</a> (2023)
+<ul class="org-ul">
+<li>Lecture <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22d5bf275d-ff88-4bf6-a865-b065010f55c2%22">recordings</a> and recitation <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b7db1d38-50a1-4c45-9eed-b07400ccc0ef%22">recordings</a> that cover the homework</li>
+<li>Many older <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22892c28d3-f548-4a7a-9de0-ae90011552fa%22">archives</a> like Summer 2022</li>
+</ul></li>
+<li>Caltech <a href="https://www.youtube.com/playlist?list=PLD63A284B7615313A">playlist</a> explaining the theory of ML
+<ul class="org-ul">
+<li>Nice content here about what exactly is linear</li>
+</ul></li>
+</ul>
+
+<p>
+A totally different perspective:
+</p>
+
+<ul class="org-ul">
+<li>Berkeley's <a href="https://inst.eecs.berkeley.edu/~cs188/sp24/">CS188</a> which covers the old school Peter Norvig AI book
+<ul class="org-ul">
+<li>If you can't find all the 2024 videos look at <a href="https://inst.eecs.berkeley.edu/~cs188/fa23/">2023</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>CMU's 16-745 <a href="https://github.com/Optimal-Control-16-745">Optimal Control</a> (Reinforcement Learning)
+<ul class="org-ul">
+<li>Lectures on <a href="https://www.youtube.com/playlist?list=PLZnJoM76RM6KugDT9sw5zhAmqKnGeoLRa">YouTube</a></li>
+<li>Explains dynamics as you go but you'll have to look up <a href="https://en.wikipedia.org/wiki/Fourth,_fifth,_and_sixth_derivatives_of_position">notation</a></li>
+</ul></li>
+</ul>
+
+<p>
+I omitted a ton of other courses like ETH Zurich, Harvard, Berkeley, Waterloo, and countless more because it's just the same content at different levels of confusion. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b257ff" class="outline-3">
+<h3 id="org9b257ff">Tour of Applied AI courses</h3>
+<div class="outline-text-3" id="text-org9b257ff">
+<p>
+The scikit-learn core developer Andreas Mueller taught <a href="https://www.youtube.com/playlist?list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM">this course</a> at Columbia in NY and it's definitely one of the best introductions to software frameworks after you learn all the theory. Another is this Neural Networks/LLMs <a href="https://karpathy.ai/zero-to-hero.html">crash course</a> by Andrej Karpathy. My favorite course is <a href="https://book.sciml.ai/course/">Scientific ML</a> which is an applied course on optimization for physics-informed AI aka 'expert-guided AI'. 
+</p>
+
+<p>
+Biggest open research problem is reducing hardware overhead of neural networks that means redefining floating point, fine control of garbage collectors for AutoDiff and optimizing numerical linear algebra libraries. You probably never imagined the cutting edge AI research in the future would be in numerical methods for specialized integer hardware and ASICs but alas here we are.   
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0580a4f" class="outline-3">
+<h3 id="org0580a4f">Limits of current AI</h3>
+<div class="outline-text-3" id="text-org0580a4f">
+<p>
+Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this model for everything? Someone from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc3ca856" class="outline-2">
+<h2 id="orgc3ca856">Strategy</h2>
+<div class="outline-text-2" id="text-orgc3ca856">
+<ul class="org-ul">
+<li>This <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">playlist</a> of theoretical foundations and <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a> 
+<ul class="org-ul">
+<li>Same book is still used in recent PhD <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa22/index.html">courses</a></li>
+</ul></li>
+</ul>
+
+<p>
+If you flip through that pdf it looks absolutely incomprehensible but the magic of the course we are doing is he walks through all the math and explains it. Then we can try a deep learning paper from Depth First Learning and implement it with (non)convex <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%2235028909-68d2-46be-b0d8-af020148d304%22">optimization</a>. 
+</p>
+
+<p>
+While we finish the book/lectures I will go through some geometry-centric <a href="https://www.youtube.com/playlist?list=PLIljB45xT85BhzJ-oWNug1YtUjfWp1qAp">linear algebra</a> videos because honestly they are best resource anywhere to see in your mind what is going on such as hyperplanes. Anything not covered will be picked up in the Depth First Learning content.  
+</p>
+
+
+<p>
+TODO setting up every workshop so I can just execute 1-3 hrs of work a day and finish everything here. 
+</p>
+
+<hr />
+<p>
+<a href="./index.html">Home</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

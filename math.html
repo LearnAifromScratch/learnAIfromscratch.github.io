@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-04-10 Wed 14:17 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Mathematical Tripos From Scratch</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="jbh" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style> body {background-color: #fafad2;  max-width: 62.5rem; padding: 1rem; margin: auto;} img {width: 60%; height: auto;} figure {text-align: center;} .video {aspect-ratio: 16 / 9; width: 100% </style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">The Mathematical Tripos From Scratch</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge3c076e">Intro</a>
+<ul>
+<li><a href="#orga366a4a">The purpose of education</a></li>
+<li><a href="#what-is-geometry">What actually is Geometry</a></li>
+</ul>
+</li>
+<li><a href="#orgd3ae9f6">Basic Arithmetic</a>
+<ul>
+<li><a href="#org42c48cb">Rates</a></li>
+</ul>
+</li>
+<li><a href="#org6673e53">Basic Algebra, Geometry and Combinatorics</a>
+<ul>
+<li><a href="#org5c612ec">Algebra TODO</a></li>
+<li><a href="#org99b16ce">Geometry TODO</a></li>
+<li><a href="#org92b0863">Combinatorics TODO</a></li>
+</ul>
+</li>
+<li><a href="#org244f80f">Mathematical Tripos</a>
+<ul>
+<li><a href="#org2153609">Why do this</a></li>
+<li><a href="#orga6e4d4d">How it works</a></li>
+<li><a href="#org8041600">Curriculum</a></li>
+<li><a href="#org44d6c4c">How we will do it</a></li>
+</ul>
+</li>
+<li><a href="#org6aa6506">Part 1A TODO</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orge3c076e" class="outline-2">
+<h2 id="orge3c076e">Intro</h2>
+<div class="outline-text-2" id="text-orge3c076e">
+<p>
+This is for anyone who wants to bring themselves up to date with the last few hundred years of mathematics. Here we teach ourselves the entire Part IA, IB and II of the Cambridge <a href="https://www.maths.cam.ac.uk/undergrad/lecturelists">Math Tripos</a> because a surprising amount of it (lectures, psets, exams) is available for free online for anyone to self-study. A Fields medal winner Richard Borcherds has <a href="https://www.youtube.com/@richarde.borcherds7998/videos">lectures</a> on YouTube covering a lot of the part II courses and we can try the Lean proof assistant for some of the course exercises once we start taking abstract algebra. 
+</p>
+
+<p>
+My reasons for taking this are physics-informed machine learning where you can use prior knowledge to contrain the training and for writing <a href="https://github.com/RedPRL/algaeff">experimental</a> proof assistants and libraries in Lean/Agda.   
+</p>
+
+<p>
+Almost everything here is free if not use <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> and pick a domain which isn't blacklisted by your DNS provider (or <a href="https://wiki.archlinux.org/title/Alternative_DNS_services">change</a> DNS providers)
+</p>
+</div>
+
+<div id="outline-container-orga366a4a" class="outline-3">
+<h3 id="orga366a4a">The purpose of education</h3>
+<div class="outline-text-3" id="text-orga366a4a">
+<p>
+Consider this <a href="https://youtu.be/H0z9sJyTv2w?si=pNoBwqVwc_5URGTO">talk</a> on who actually benefits from education looking at ancient societies and their interpretation on what education should be. The average tuition is now USD$12k for public college or $60k for a private college (NYU, Fordham, Columbia) <i>per year</i> and that doesn't include living costs. The story is the same in Canada and other countries too. Nobody can afford to go anymore or is refusing to go not wanting $90k in debt.. 
+</p>
+
+<p>
+Cambridge is somehow still reasonably priced if you're a local it is about same tuition as a public school in US plus equal amount of tuition costs for living expenses but the tripos is only 3 years so you spend $66k instead of $88k. Their campus meals are famously cheap too they don't nickle and dime the student body like when I was at university and everywhere you turn there exists some kind of petty fee or crony run campus monopoly to increase your debt.    
+</p>
+</div>
+</div>
+
+<div id="outline-container-org509e2ee" class="outline-3">
+<h3 id="what-is-geometry">What actually is Geometry</h3>
+<div class="outline-text-3" id="text-what-is-geometry">
+
+<div class="figure">
+<p><img src="./geometry.jpg" alt="geometry.jpg" />   
+</p>
+<p><span class="figure-number">Figure 1: </span>Geometry of mathematical finance <a href="https://wwwen.uni.lu/index.php/research/fstm/dmath/research_areas/probability_theory_and_its_applications_mathematical_finance">uni.lu</a></p>
+</div>
+
+<p>
+Geometry is way of doing math. Isaac Newton used it to prove limits back when everyone was using infintesimals.  
+</p>
+
+<p>
+<b>Isaac Newton and Geometry</b>   
+</p>
+
+<p>
+For geometry-themed entertainment try <a href="http://libgen.is/book/index.php?md5=B290F008ACE9DE45827692ED7A4CB944">Isaac Newton on Mathematical Certainty and Method</a> by Niccolo Guicciardini.
+</p>
+
+<p>
+Isaac Newton entered Trinity College in 1661 for it seems a medical degree as a <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03996/1">sub-sizar</a> meaning subsidized tuition in exchange for being a domestic servant on campus waiting tables and working in the kitchen, whatever labor that was needed. Cambridge then was just a diploma mill there were seldom any lectures, the oral exams at the end of your degree basically optional, and fellows (graduate students) took jobs as tutors to supplement their income when they weren't getting drunk in nearby taverns. Undergrad degrees consisted of one of these tutors giving you a list of books to read. According to his Trinity College notebook which Cambridge still has this curriculum was a large reading list of classics such as Du Val's four volume collected works of Aristotle like <i>Organon</i> and <i>Metaphysics</i>, Porphyry's <i>Isagoge</i>, Vossius's <i>Rhetoric</i>, Diogenes Laertius, Epicurus, Plato, and many Roman poets like Ovid. This was because of the <a href="https://en.wikipedia.org/wiki/Recovery_of_Aristotle">recovery of Aristotle</a> in the middle ages which shaped 'philosophy of natural sciences' courses for the next few centuries. There didn't exist titles like mathematician, practitioners then considered themselves philosophers. Newton soon stopped taking notes of his official curriculum and must have read Walter Charleton’s <i>Physiologia</i> because he wrote down 37 headings on different pages that were questions to be answered investigating natural science topics, 18 of which came from Charleton's book and some from Aristotle. These were 'Of Atoms, Of a Vacuum, Of Vision' and many others. He gave each topic different sized gaps indicating how much he thought he needed to write about each. Everytime he would learn something about them he'd write notes under the heading like a comet position he once tracked. 
+</p>
+
+<p>
+According to Newton's notebook and the writings of his close friend De Moivre here is how Newton learned mathematics. Wandering the town fair in 1663 he comes across a book on astrology and out of curiosity of the occult buys a copy. There's a figure he couldn't understand in the book because he didn't know trigonometry. He buys a book on trigonometry but couldn't understand the demonstrations because of a lack of geometry. At Cambridge he goes to the math department and everyone there is deeply immersed in the work of <i>La Geometrie</i> by Descartes. They tell him to buy Barrow's <a href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-isaac-barrows-euclidean-geometry">Euclid Elementorum</a> an 'easier' or explained version of Euclid's <i>Elements</i>. He skims it and after finding what he needs for the astrology/trig book abandons the book as 'too trivial demonstrations' (later has to go back and relearn classic geometry).  
+</p>
+
+<p>
+He returns to the math department and is given Oughtred's <a href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-oughtreds-clavis-mathematicae">Clavis mathematicae</a> or <i>the key to mathematics</i> writing he understands it except for the solutions of quadratic and cubic equations however his takeaway in his notes is that algebra can be used for exploration, which he starts doing by writing out hundreds of examples.
+</p>
+
+
+<div class="figure">
+<p><img src="./geometrie.jpg" alt="geometrie.jpg" />   
+</p>
+<p><span class="figure-number">Figure 2: </span>Cartesian Geometry by Van Schooten <a href="https://www.manhattanrarebooks.com/pages/books/2043/rene-descartes/geometria?soldItem=true">rarebooks</a></p>
+</div>
+
+<p>
+Again he returns to the math department to ask for a new book, and they are all still immersed in Cartesian geometry so Newton, despite being told it was a very difficult book, borrows a 1659 two volume Latin translation of Descartes <a href="https://en.wikipedia.org/wiki/La_G%C3%A9om%C3%A9trie">La Geometrie</a> by van Schooten called <i>Geometria, a Renato des Cartes</i> with appendices and commentary by his students. This book was considered the state of the art of 17th century analytical geometry, it would be like reading a graduate text today by a leading expert that had an appendix full of lecture notes and PhD student dissertations. 
+</p>
+
+<p>
+This is the algorithm Newton used to read van Schooten's two volume book. He read a few pages or so, couldn't understand the text, and went back to the beginning. Went a little further then stopped again going back to the beginning. He repeats this loop by himself until he finally 'makes himself whole of Descartes'. Looking at the <a href="https://babel.hathitrust.org/cgi/pt?id=ucm.5320271924&amp;view=1up&amp;seq=24">online copy</a> of this 1659 version the Descartes geometry is about 104 pages and 450 or so pages of additional research/commentary. It is broken up into 3 parts and assuming he didn't have to reread each part everytime he looped, only the relevant part (~34 pages), it probably took him 3 months to finish van Schooten which is what his notebook shows that after a few months he was already doing research in analytical geometry trying to generalize Descartes. His notebook indicates he learned from the grad student commentaries how to transform a hard problem into a different simpler one. Somewhere around this time he moves dorms complaining his peers were too busy partying so lives with more serious students.   
+</p>
+
+<p>
+Newton's notes which you can read online show him trying to generalize any math he read which often would lead him into algebraic corners where he would get stuck as there didn't exist at the time methods to solve/simplify. He seemed to assume everything he read was a special case of something more general such as the insight that integration is the reverse operation of differentiation so there must only be a theory of derivatives somewhere waiting to be discovered.
+</p>
+
+<p>
+After Descartes he returned the borrowed copy and bought a different copy of Descartes for himself, and van Schooten's <i>Exercitationes mathematicae libri quinque</i> or Five Books of Mathematical Exercises to help him fill in the blanks of his algebra misunderstandings as he had a lot of mistakes in his notebooks regarding negative roots. Newton assumed the cubic parabola was the same shape in all quadrants but soon after corrected these mistakes. Descartes geometry wasn't like today's Cartesian plane it originally consisted of just one positive quadrant but van Schooten and his students had expanded it. 
+</p>
+
+<p>
+Descartes' <i>La Geometrie</i> is filled with little comments of encouragement as he was afraid nobody would read his work if it was too long so everywhere there is these reassurences like 'don't worry reader the following isn't too hard' or insisting the reader figure out a problem themselves to not deny them of the satisfaction he found figuring it out himself. The different copy Newton buys has all these comments left in tact and Newton misunderstands, or the translation is incorrect, one of these comments by Descartes about the equation of curves stating 'it is easy' to find everything you want to know about a curve from it's equation and the reader need not be bothered by a lengthy demonstration when in fact this is an unsolved problem. Newton can't figure out this supposedly simple exercise in Descartes' book so breaks down the equation of a curve into many headings in his notebook and tries to generalize which led to him creating his own advanced analysis well beyond any other mathematician at the time.
+</p>
+
+<p>
+Around the same time when he was trying to figure out that Descartes exercise he reads <i>Arithmetica Infinitorum</i> by Wallis which is the arithmetic of infintesimals. Newton recognizes many of the sums are similar to what he read in Oughtred's book, known today as Pascal's triangle and in typical fashion seeks to generalize and invents the binomial theorem. Newton then reads Viete's <i>Opera Mathematica</i> which was another textbook by van Schooten compiling all the work of Viete such as Diophantine equations. In less than a full year Newton managed to bring himself up to date with the entire achievement of mid 17th century mathematics by himself and begins self-directed research writing out 22 headlines of 'problems' in his notebook and classifying them into groups regarding integration, analytic geometry and mechanics. 
+</p>
+
+<p>
+In April 1664 Newton has been a subsizar for three years and has to apply for a new scholarship at Trinity College where he first meets the Lucasian Professor Isaac Barrow who examines him on Euclid and finds he knows nothing about geometry. However Barrow had also worked on infinitesimals and apparently had invented some of calculus himself but not noticed if you read the <a href="https://archive.org/details/geometricallectu00barr/page/n21/mode/2up">book</a> <i>The Geometrical Lectures of Isaac Barrow</i>. The author found in Barrow's notes he definitely had a kind of proto-calculus worked out but didn't seem to notice or care about it's analytical importance enough to write a treatise about it. Through these conversations no doubt Barrow recognized the potential of Newton and unlike modern day academia where he would have tried to squash Newton and sabotage his work he becomes Newton's mentor and starts giving him work to do like helping to publish Barrow's books and giving Newton all his research on infinitesimals. Barrow also helps Newton obtain his scholarship in exchange for the agreement Newton attend his lectures on geometry and learn the importance of Euclid.    
+</p>
+
+<p>
+The plague shuts down the school from the summer of 1665 to spring of 1667 and Newton returns home, makes himself an office by building bookshelves for his now large library and spends all his time doing research with his new analytical tools building them into modern calculus. Describing his activities during the second plague year: "I am ashamed to tell to how many places I carried these computations, having no other business at the time, for then I took really too much delight in these inventions". There is notes he kept of calculating a logarithm to it's 52nd decimal point. This is basically the end of story for Newton's analysis research, sometime during the pandemic years he is satisfied with his calculus and abandons research in math to pursue his other questions in his notebook. There is a lot of notes about how tedious it was to do calculations before he came up with his analysis so we can assume he became satisfied that he had all he needed. 
+</p>
+
+<p>
+Newton believed the ancients had already figured everything out, and this information was lost over time after disasters had destroyed the information. He based this from his own experience living during the plague, the great fire of London and political upheaval. This led him to alchemy where he believed their knowledge was encoded in myths written in Roman and Greek literature where every myth was real but that their lives were embellished through story telling. A common alchemist practice for example was to interpret Ovid's <i>Metamorphoses</i> where the god of the forge/metalwork Vulcan catches his wife Venus and Mars locked in an embrace so traps them in a fine metallic net. The alchemists of the Royal Society that Newton belonged to frequently used the names of planets for metals so obtaining an alchemists manuscript by George Starkey he recreated this myth and ended up with an alloy with a strided net like surface. Newton also decoded Cadmus and the founding of Thebes from Ovid into practical lab instructions. 
+</p>
+
+
+<p>
+20 years later Newton has produced numerous manuscripts but refuses to release any of them until he is offered to write the <i>Principia</i>, and wanting to prove infintesimal calculus he tries uncovering the ancient analysis used in classical geometry. Pappus' book 7 contains a commentary about the tools and propositions that Euclid, Apollonius, Eratosthenes and other geometers of the day used that Pappus referred to as the 'treasury of analysis'. These were said to be contained in books by Euclid but those were never recovered. These lost Porisms (corollaries) are speculated by Newton to be <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03963/1">projective geometry</a>. 
+</p>
+
+<p>
+Newton in his Lucasian chair lectures said that the ancients would never bother to introduce the algebra of curves with geometry because you lose the simplicity of working within geometry as its whole point was to escape the tediousness of calculations by simply drawing lines and circles. He also claims books like Pappus's <i>Collectio</i> deliberately hid the analysis, as it was considered an inelegant tool and that ancient synthesis where they deduced a consequence from a given premise (a corollary) using geometric demonstrations was a superior method as the analysis could not be reversed in steps like geometric synthesis could. He went further and claimed if you wanted to discover seemingly unrelated corollaries you had to use synthesis, describing the analysis of his day as a 'tedious pile of probabilities used by bunglers'. In other words if he didn't rely on geometry he could not have found most of the critical results of the <i>Principia</i>. People today claim he did this to avoid priority disputes over his analysis he kept hidden except for privately circulated manuscripts, but he used geometry to invent limits and plane transformations that were not formally developed until 200 years later so he was probably right. His limits are very similar to what everyone <a href="https://www.sciencedirect.com/science/article/pii/S0315086000923012">today</a> is using in modern calculus courses. If you take a calculus course today they will tell you Newton's influence to promote geometry allowed continental mathematicians to freely develop analysis which kept back Britain decades in the field of analysis. 
+</p>
+
+<p>
+He later wrote in a manuscript on geometry that mechanics of motion was what generated all geometry and that the ancients had understood this as well conceiving geometrical objects as generated by moving along a straight edge, circles/elipses via the movement of a compass, or via translation like in Proposition 4 of Book 1 of Euclid's <i>Elements</i> where one triangle form is moved to compare to another. This is where he demonstrated that rotation of rulers were in fact transformation of the plane. Here is how Newton used his <a href="https://youtu.be/paenRVq0vnc">rotating ruler</a> to create a power series. 
+</p>
+
+<blockquote>
+<p>
+"Comparing today the texts of Newton with the comments of his successors, it is striking how Newton’s original presentation is more modern, more understandable and richer in ideas than the translation due to commentators of his geometrical ideas into the formal language of the calculus of Leibnitz" -<a href="https://en.wikipedia.org/wiki/Vladimir_Arnold">Vladimir Arnold</a> 1990
+</p>
+</blockquote>
+
+<p>
+Newton's completely different life then began at age 52 when he left Cambridge and went on to become both the warden and master of the London mint for 30 years a highly lucrative job with enormous bonuses. He cracked down on mint corruption and absenteeism by personally overseeing the wagies and making them perform tedious tests on batches while producing highly pure coinage due to his dabbling in alchemy. He would disguise himself and go into taverns to try and set up meetings with the counterfeiting underground and even dressed up his staff to have them infiltrate organized crime. Newton had a Professor Moriarty tier <a href="https://en.wikipedia.org/wiki/William_Chaloner">nemesis</a> that he pursued for a long time and built a watertight case to have him tried and executed. Due to his new standing in London elite circles he's made president of the Royal Society and was hilariously ruthless ruling it with an iron fist vanquishing all his previous critics. His <a href="https://en.wikipedia.org/wiki/Catherine_Barton">niece</a> came to live with him in London and was some kind of famous socialite of the time holding many parties at his house where he'd entertain guests with his expensive cider that he had made buying apple trees from Ralph Austen of Oxford a renowned cider maker. Newton was famous for wit and performing dramatic demonstrations which Princess Caroline enjoyed so much he was a regular feature of her court. He was not the miserable loner that modern day biographers wish to portray him and his letters show regular payments and gifts to all extended family members. According to a Cambridge historian who wrote <i>Life after Gravity</i> Newton gave as a dowry to his niece and her future daughter a 200 acre estate which he later moved into when he was dying. He had an elaborate sun dial built in the gardens: 
+</p>
+
+<blockquote>
+<p>
+A very curious relic of Sir Isaac survives in the garden at Cranbury Park, viz. a sun-dial, said to have been calculated by Newton. It is in bronze, in excellent preservation, and the gnomon so perforated as to form the cypher I. C. seen either way. The dial is divided into nine circles, the outermost divided into minutes, next, the hours, then a circle marked "Watch slow, Watch fast," another with the names of places shown when the hour coincides with our noonday, such as Samarcand and Aleppo, etc., all round the world. Nearer the centre are degrees, then the months divided into days. There is a circle marked with the points and divisions of the compass, and within, a diagram of the compass, the points alternately plain and embossed.
+</p>
+</blockquote>
+
+<iframe class="video" src="https://www.youtube.com/embed/qFo7xZFdBdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr />
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd3ae9f6" class="outline-2">
+<h2 id="orgd3ae9f6">Basic Arithmetic</h2>
+<div class="outline-text-2" id="text-orgd3ae9f6">
+<p>
+We start by seeing how number objects are constructed. 
+</p>
+</div>
+
+<div id="outline-container-orgd91279e" class="outline-4">
+<h4 id="orgd91279e">Arithmetic with natural numbers</h4>
+<div class="outline-text-4" id="text-orgd91279e">
+<p>
+Wildberger originally made these lectures because his primary school kids were being taught trash mathematics in the 'new and improved' Australian school system. He also prefers to define mathematical objects as types instead of sets and thinks the real numbers are a bogus abstraction but we are far, far away from even knowing what a real number actually is.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
+</ul>
+
+<p>
+The successor function s(n) = n + 1 for natural numbers:
+</p>
+<ul class="org-ul">
+<li>s(0) = 1</li>
+<li>s(s(0)) = 2</li>
+<li>s(s(s(0))) = 3</li>
+</ul>
+
+<p>
+Let's prove the laws of multiplication using his definitions
+</p>
+
+<p>
+<b>Prove n * 1 = n</b>
+</p>
+
+<p>
+The definition of multiplication: mn is n + n repeated m times so n1 is 1 + 1 repeated n times so 1<sub>1</sub> + 1<sub>2</sub> + &#x2026; + 1<sub>n</sub> = n
+</p>
+
+<p>
+We will need this result for the other proofs.
+</p>
+
+<p>
+<b>Prove the distributive law: (k + n)m = km + nm</b>
+</p>
+
+<p>
+km is m + m repeated k times or m<sub>1</sub> + &#x2026; + m<sub>k</sub> and (k + n)m means m + m repeated (k + n) times. Distributing m in (k + n)m we get: ((m<sub>1</sub> + m +&#x2026;m<sub>k</sub>) + (m<sub>1</sub> + m +&#x2026;m<sub>n</sub>)) and now the left side matches the right side since km + nm is the same when expanded. 
+</p>
+
+<p>
+<b>Prove the associative law: (kn)m = k(nm)</b>
+</p>
+
+<p>
+(kn)m is m + m repeated kn times and kn is n + n repeated k times:
+</p>
+
+<p>
+(n<sub>1</sub> + &#x2026; + n<sub>k</sub>)m or (mn<sub>1</sub> + &#x2026; + mn<sub>k</sub>) using distributive law. 
+</p>
+
+<p>
+Right hand side: k(nm) is nm + nm repeated k times (nm<sub>1</sub> + &#x2026; + nm<sub>k</sub>) and factor out m, both sides of the equation are the same since we haven't proven the commutative law yet so can't claim nm sequence is the same as mn sequence.  
+</p>
+
+<p>
+<b>Prove the commutative law: nm = mn</b>
+</p>
+
+<p>
+First let's prove n1 = 1n or 1n = n. We proved n1 = n already, so we can use substitution to replace n in 1n with 1(1<sub>1</sub> + .. + 1<sub>n</sub>) and using the distributive law this is (1<sub>1</sub> + .. + 1<sub>n</sub>) or n. Now we have n1 = 1n.
+</p>
+
+<p>
+Looking at the right side: mn is (n<sub>1</sub> + &#x2026; + n<sub>m</sub>)
+</p>
+
+<p>
+Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is m, we have nm = nm.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec6baee" class="outline-4">
+<h4 id="orgec6baee">Subtraction and division</h4>
+<div class="outline-text-4" id="text-orgec6baee">
+<ul class="org-ul">
+<li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
+</ul>
+
+<p>
+Prove the subtraction laws 
+</p>
+
+<ul class="org-ul">
+<li>n - (m + k) = (n - m) - k 
+<ul class="org-ul">
+<li>The left side is n + (-1)(m + k)</li>
+<li>(-1)(m + k) via distributive law is (-1)m + (-1)k</li>
+<li>(-1)m is m + m groups at -1 times which makes no sense so we can commute</li>
+<li>m(-1) now it's m copies of -1</li>
+<li>n + (-1<sub>1</sub> + -1<sub>2</sub> .. + -1<sub>m</sub>) is -1 added up m times or -m</li>
+<li>n - m + (-1<sub>1</sub> + -1<sub>2</sub> .. + -1<sub>k</sub>) is -1 added up k times or -k
+<ul class="org-ul">
+<li>n - m - k = n - m - k proved</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+Oops, he didn't define negative numbers yet (or even zero) since n - m is only defined if n &gt; m (we are still in the natural numbers only) so we can't just move variables to the other side either. Can you prove this another way? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e4af5e" class="outline-4">
+<h4 id="org7e4af5e">The Hindu-Arabic number system</h4>
+<div class="outline-text-4" id="text-org7e4af5e">
+<ul class="org-ul">
+<li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
+</ul>
+
+<p>
+A simplified Roman numeral system is introduced 
+</p>
+<ul class="org-ul">
+<li>Uses powers of 10 
+<ul class="org-ul">
+<li>327 = 3 x 10<sup>2</sup> + 2 x 10<sup>1</sup> + 7 x 10<sup>0</sup></li>
+</ul></li>
+</ul>
+
+<p>
+This will come up in many of the algebra books we'll do later. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgaa82459" class="outline-4">
+<h4 id="orgaa82459">Arithmetic with Hindu-Arabic notation</h4>
+<div class="outline-text-4" id="text-orgaa82459">
+<ul class="org-ul">
+<li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
+</ul>
+
+<p>
+A new way of hand multiplication is shown, taking advantage of the fact the notation is using the distributive law. "Borrowing" while doing hand subtraction now makes sense. Wildberger rants how his daughter was taught a ridiculous way and this is now true everywhere. Look at a kid's local school curriculum one day how utterly terrible it is. It's like they hired a clown college to rewrite all of primary math.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82c81e3" class="outline-4">
+<h4 id="org82c81e3">Laws of Division</h4>
+<div class="outline-text-4" id="text-org82c81e3">
+<ul class="org-ul">
+<li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
+</ul>
+
+<p>
+Make sure you follow the proofs and the substitution he's using. In every calculus course like the recorded <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/">lectures</a> for MIT's 18.01 the prof repeatedly uses these laws without explaining them manipulating equations on the board.     
+</p>
+
+<p>
+Wildberger is ranting here about long division because schools removed it claiming it was 'too difficult'. I learned it by exploiting the Hindu-Arabic encoding:
+</p>
+
+<pre class="example">
+7)203
+</pre>
+
+<p>
+How many groups of 7 x 10<sup>2</sup> fit into 203? 0 so reduce to how many groups of 7 x 10<sup>1</sup> fit into 203? 20 
+</p>
+
+<pre class="example">
+   20  
+7)203
+ -140
+   63  
+</pre>
+
+<p>
+How many groups of 7 x 10<sup>1</sup> fit into 63? 0 so reduce to how many groups of 7 x 10<sup>0</sup> fit into 63? 9 
+</p>
+
+<pre class="example">
+   29
+7)203 
+ -140
+   63
+  -63
+</pre>
+
+<p>
+Of course we have software for this now so drilling long division seems pointless. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge621b6a" class="outline-4">
+<h4 id="orge621b6a">Fractions</h4>
+<div class="outline-text-4" id="text-orge621b6a">
+<ul class="org-ul">
+<li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
+</ul>
+
+<p>
+Interesting how he defines all these as types.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1b836a" class="outline-4">
+<h4 id="orgc1b836a">Arithmetic with fractions</h4>
+<div class="outline-text-4" id="text-orgc1b836a">
+<ul class="org-ul">
+<li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
+</ul>
+
+<p>
+The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> used in the proof represents another similar variable. Make sure you can figure out his proof write it out yourself if you have to. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8eaf2db" class="outline-4">
+<h4 id="org8eaf2db">Laws of arithmetic for fracions</h4>
+<div class="outline-text-4" id="text-org8eaf2db">
+<ul class="org-ul">
+<li><a href="https://youtu.be/uADs1yepIIA?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
+</ul>
+
+<p>
+Follow all these proofs. As per Wildberger in a video in his playlist about primary school education the best possible outcome of a primary student is knowing what a fraction is and their laws. When I watched Poh-Shen Loh's 'Daily Challenge' video about critical math for middle school he said the same thing that it was rates/fractions how they become prominent when you take calculus.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org703a43f" class="outline-4">
+<h4 id="org703a43f">Integer construction</h4>
+<div class="outline-text-4" id="text-org703a43f">
+<ul class="org-ul">
+<li><a href="https://youtu.be/YDBLXCFrihc?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 12</li>
+</ul>
+
+<p>
+The point in watching these is to see how you can start with just the natural natural numbers and keep going defining more and more complexity with new numbers. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org091d23d" class="outline-4">
+<h4 id="org091d23d">Rational numbers</h4>
+<div class="outline-text-4" id="text-org091d23d">
+<ul class="org-ul">
+<li><a href="https://youtu.be/MDMG9Ljb8l0?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 13</li>
+</ul>
+
+<p>
+We learn what a field is. He says we should try proving all the field operations and we will. If you're curious in the introduction <a href="https://youtu.be/83ZjYvkdzYI?feature=shared">here</a> he shows how the rational number line has been raised on the y-axis showing how all numbers on a line through the origin (0,0) are equal on the rational strip. It explains why a/1 is a and why a/0 is not defined.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42c48cb" class="outline-3">
+<h3 id="org42c48cb">Rates</h3>
+<div class="outline-text-3" id="text-org42c48cb">
+<p>
+Now that we know the basic of mathematical objects and how they're construct let's try <a href="https://www.mathasasecondlanguage.org/self-guided">Arithmetic</a> by Herb Gross. This is vocational school style math that was originally taught to adults at community colleges and in prisons in North Carolina. The book is <a href="http://web.archive.org/web/20170713214904/http://www.adjectivenounmath.com/id78.html">here</a> archived. The YouTube <a href="https://www.youtube.com/playlist?list=PL9phnVI_EOVW9U2PZtGKRwMvHy3l4reYv">playlist</a> has exercise explanation videos you don't have to watch unless needed but they're very good.
+</p>
+
+<ul class="org-ul">
+<li>Study guide for <a href="http://web.archive.org/web/20170713214904/http://www.adjectivenounmath.com/sitebuildercontent/sitebuilderfiles/module1StudyGuide.pdf">Module 1</a></li>
+</ul>
+
+<p>
+Watching <a href="https://youtu.be/2SgXMNwOieY?si=jDSY-og8mcpVLjbv">lecture 1</a> <i>The Development of a Place Value System</i>. We just learned some of this from Wildberger but he explains it in greater detail like the origins of the Roman X and V symbol, how a sand reckoner worked and became an abacus and how the same sand reckoner method is used today in our place value system. Interesting lecture worth watching if you've wondered where all this originated from. I skimmed the <a href="http://web.archive.org/web/20170713214904/http://www.adjectivenounmath.com/id78.html">text</a> and did the 'Self-test Form A and Form B' in the study guide which took only a few minutes. 
+</p>
+
+<ul class="org-ul">
+<li>Study guide for <a href="http://web.archive.org/web/20170324135818/http://www.adjectivenounmath.com/sitebuildercontent/sitebuilderfiles/module2studyguide.pdf">Module 2</a></li>
+</ul>
+
+<p>
+Watching <a href="https://youtu.be/jN7Q0DBfwWw?si=kshEuTzBd3xo_aCg">lecture 2</a> <i>Addition and Subtraction of Whole Numbers</i>. Interesting how all this is explained completely different from how I was taught. He's using bounds and inequalities. This is as basic as it gets and of course the self test is trivial.  
+</p>
+
+
+<ul class="org-ul">
+<li>Study guide for <a href="http://web.archive.org/web/20170324140144/http://www.adjectivenounmath.com/sitebuildercontent/sitebuilderfiles/module3studyguide.pdf">Module 3</a></li>
+</ul>
+
+<p>
+Watching <a href="https://youtu.be/0wrK0DQYs_0?si=T9S1L1lQVrsz2UoM">lecture 3</a> <i>Multiplication and Division of Whole Numbers</i>. He explains the commutative property in a fool proof way. His multiplication explanation is pretty good, I've never seen it this way before I was just taught to memorize algorithms. End of lecture he introduces rates, and the division symbol I think I learned from his calculus course ages ago is a fraction line with two placeholders meaning a ratio or rational number. I didn't do any of the exercises they are trivial as I was drilled this countless times as a kid. 
+</p>
+
+<ul class="org-ul">
+<li>Study guide for <a href="http://web.archive.org/web/20170324141404/http://www.adjectivenounmath.com/sitebuildercontent/sitebuilderfiles/module4studyguide.pdf">Module 4</a></li>
+</ul>
+
+<p>
+Watching <a href="https://youtu.be/boess1e68T0?si=-N5wgCF9Tm3WWBnz">lecture 4</a> <i>Rational Numbers, Part 1</i>. Once again it's amazing to me how he is able to explain all this in a 100% fool proof way. If you want motivation for watching this become the 3blue1brown of arithmetic using his style. This is what Khan Academy should have been but alas. The end of this lecture is one of the first problems in the algebra olympiad problem book we'll do. This lecture is only 52m long there's an editing problem at the end bleeding into the problem solving video. Reminder there is a textbook for this course too in the <a href="http://web.archive.org/web/20170713214904/http://www.adjectivenounmath.com/id78.html">archive</a> of the course if interested. 
+</p>
+
+<ul class="org-ul">
+<li>Study guide for <a href="http://web.archive.org/web/20170324140931/http://www.adjectivenounmath.com/sitebuildercontent/sitebuilderfiles/module5studyguide.pdf">Module 5</a></li>
+</ul>
+
+<p>
+Watching <a href="https://youtu.be/wvh2fXgOZxY?si=7FvNI1YT6yvcZCSx">lecture 5</a> <i>Rational Numbers, Part 2</i>. This is again elementary but presented in an interesting way to teach inverse rates. Doing the 'Self-Test 5, Form B' in the study module the first question asks which is bigger 3/4, 17/24 or 5/6. Make them all the same ratio. That question is very similar to one of Poh-shen Loh's 'daily challenge' vids for middle school olympiads where he says rates are the #1 thing students get wrong.
+</p>
+
+<ul class="org-ul">
+<li>Study guide for <a href="http://web.archive.org/web/20170324140257/http://www.adjectivenounmath.com/sitebuildercontent/sitebuilderfiles/module6studyguide.pdf">Module 6</a></li>
+</ul>
+
+<p>
+Watching <a href="https://youtu.be/-psLE41jElw?si=rcsh_FDDfdatmnkm">lecture 6</a> <i>Rational Numbers, Part 3</i>. 'Mixed numbers' is simply addition of two fractions so 4 and 1/3 is 4/1 + 1/3 or A/B + C/D = AD + CB. This is once again trivial to us but try doing everything in your head a different way than an algorithm (after you know the algorithm he's teaching) using distribution, associative or commutative properties. For example @16m we know from Wildberger vids that's 2.5 groups of 4.5 so 4.5 + 4.5 + 2.25 and he shows this in the video too again using inequalities as a bound to check for correctness.          
+</p>
+
+<p>
+This lecture is to set up the last half which is all about percents and he tells us where the percent notation comes from. 
+</p>
+
+<ul class="org-ul">
+<li>Study guide for <a href="http://web.archive.org/web/20170324133524/http://www.adjectivenounmath.com/sitebuildercontent/sitebuilderfiles/module8studyguide.pdf">Module 7</a></li>
+</ul>
+
+<p>
+Watching <a href="https://www.youtube.com/watch?v=0gOClJfVexU">lecture 7</a> <i>Rational Numbers, Part 4 - Decimals</i>. 
+</p>
+
+<p>
+More rates, why because calculus is the study of rates of change so if we don't know rates we won't get calculus.  
+</p>
+
+<ul class="org-ul">
+<li>Study guide for <a href="http://web.archive.org/web/20170324140556/http://www.adjectivenounmath.com/sitebuildercontent/sitebuilderfiles/module7studyguide.pdf">Module 8</a> <i>Rational Numbers, Part 5 - Decimal Division</i></li>
+</ul>
+
+<p>
+This lecture ends the techniques of arithmetic, the rest of the course is practical applications and this <a href="https://www.youtube.com/watch?v=Ebilcr1H9kI">geometry</a> primer. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6673e53" class="outline-2">
+<h2 id="org6673e53">Basic Algebra, Geometry and Combinatorics</h2>
+<div class="outline-text-2" id="text-org6673e53">
+<p>
+The reason most students in the west struggle with the concepts of calculus or continuous math is because they don't have the background in combinatorics, algebra and (real) geometry that students everywhere else do. There's no background needed for either three except arithmetic.
+</p>
+
+<p>
+Each week I will try one lecture/problems from each of the following together since they all have connections and the tripos we will be doing 4 concurrent topics at a time anyway. 
+</p>
+</div>
+
+<div id="outline-container-org5c612ec" class="outline-3">
+<h3 id="org5c612ec">Algebra TODO</h3>
+<div class="outline-text-3" id="text-org5c612ec">
+<p>
+Algebra as we know it today was invented 1200 years ago as a 'system of balancing' to figure out complex Islamic inheritance law and being able to add scalars to both sides of an equation to remove negative numbers. Before that Diophantus wrote several treatises on arithmetic which was really proto-algebra and again invented to solve Athens legal procedures about dividing of estates between family members. The most interesting aspect of Diophantus' work is that it's quite modern how it teaches you how to do math by solving problems giving examples of potential mistakes and dead ends. If you're interested read <i>Brill's Companion to the Reception of Ancient Rhetoric</i> chapter 26 <i>The Rhetoric of Math</i> on library genesis. 
+</p>
+
+<ul class="org-ul">
+<li>Herb Gross <i>The Game of Algebra</i> lectures <a href="https://www.mathasasecondlanguage.org/self-guided">here</a></li>
+<li><a href="https://bookstore.ams.org/mcl-25">Algebra via Problems</a> from the <i>Mathematical Circles Library</i>, library genesis or author's <a href="https://users.mccme.ru/skopenko/">website</a></li>
+</ul>
+
+<p>
+The problem book if you read the preface is not read cover to cover like a regular book you pick out problems at your skill level then iterate again to try harder ones if interested. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99b16ce" class="outline-3">
+<h3 id="org99b16ce">Geometry TODO</h3>
+<div class="outline-text-3" id="text-org99b16ce">
+<p>
+The kind of Geometry that was used for thousands of years to teach mathematical reasoning. 
+</p>
+
+<p>
+Curriculum:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://ocw.metu.edu.tr/course/view.php?id=311">Geometry I</a> from the Middle East Technical University</li>
+<li><a href="https://bookstore.ams.org/view?ProductCode=MCL/26">Geometry via problems</a> the <i>Mathematical Circles Library</i> or author's <a href="https://users.mccme.ru/mskopenkov/skopenkov-pdf/mbl26.pdf">website</a></li>
+<li>A few <a href="https://www.youtube.com/playlist?list=PLIljB45xT85BhzJ-oWNug1YtUjfWp1qAp">lectures</a> on geometry with vectors</li>
+</ul>
+
+<p>
+Watching the first <a href="https://ocw.metu.edu.tr/course/view.php?id=311">lecture</a> of MATH 373 - Geometry, there's a playlist on <a href="https://www.youtube.com/playlist?list=PLuiPz6iU5SQ828B8vmWXrjMDGXHGH3ci6">YouTube</a>. If you read the syllabus there's recommended books but I'm only going to use the Skopenkov/Zaslavsky problem book. These are crazy good lectures explaining how a ratio is signed even though ancient greeks didn't have negative numbers TODO  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org92b0863" class="outline-3">
+<h3 id="org92b0863">Combinatorics TODO</h3>
+<div class="outline-text-3" id="text-org92b0863">
+<p>
+Curriculum:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/playlist?list=PLgTkKBA6LRqYuuQ-LboerRblBoD_q_eUM">Discrete Mathematics</a> from CMU</li>
+<li><a href="https://bookstore.ams.org/view?ProductCode=MCL/29">Combinatorics via problems</a> the <i>Mathematical Circles Library</i> or author's <a href="https://users.mccme.ru/mskopenkov/skopenkov-pdf/mcl29.pdf">website</a></li>
+</ul>
+
+<p>
+I'm also doing the workbook <i>The Mechanics of Proof</i> <a href="https://functionalcs.github.io/curriculum/#orgaf68338">here</a> which is a Discrete Math course at Fordham designed by a former tripos Part III graduate Heather Macbeth. After an abstract algebra course we can try and formalize some of our example sheets.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org244f80f" class="outline-2">
+<h2 id="org244f80f">Mathematical Tripos</h2>
+<div class="outline-text-2" id="text-org244f80f">
+</div>
+<div id="outline-container-org2153609" class="outline-3">
+<h3 id="org2153609">Why do this</h3>
+<div class="outline-text-3" id="text-org2153609">
+<p>
+Everything cool going on right now requires an extensive math background if you want to get into it as a hobby or for money and since school is now out of reach for most of us we have to teach ourselves.   
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orga6e4d4d" class="outline-3">
+<h3 id="orga6e4d4d">How it works</h3>
+<div class="outline-text-3" id="text-orga6e4d4d">
+<p>
+The real life mathematical tripos consists of Part IA, IB and II and is supposed to take 3 years to achieve a BA honors degree. Part III is a masters degree. It is a fully immersive degree where all you do is math 6 days a week there is no other electives. Each year has three terms that are only 80 days long: Michaelmas, Lent and Easter. You do 4 courses of 24 lectures each term except Easter which is <a href="https://www.maths.cam.ac.uk/undergrad/catam/part-ia-lectures">computational projects</a> and some students take non-examinable lectures to help with next term. All the exams are taken in June (Easter term) and are 3 hours long each with each exam testing 2 courses you took. This is why it's considered a very hard degree because imagine taking 8 courses and having to know them so well that you can pass a 3 hour test many months later. 
+</p>
+
+<p>
+During the term you work through 4 example sheets per course which are problems specifically designed to help you learn the material. These are usually due every 6 lectures and attending lectures is optional some just read the notes and work through the recommended books. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8041600" class="outline-3">
+<h3 id="org8041600">Curriculum</h3>
+<div class="outline-text-3" id="text-org8041600">
+<p>
+Here is the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.pdf">schedule</a> for 2023 and what we'll be doing is the table on the second page followed by details about the courses. Every year the tripos <a href="https://www.maths.cam.ac.uk/undergrad/lecturelists">publishes</a> their curriculum and each professor has lecture notes and exams on their personal sites or by students like <a href="https://thirdsgames.co.uk/maths.html">here</a> or <a href="https://www.neelnanda.io/about">Neel Nanda's</a> intuitive notes. 
+</p>
+
+<p>
+Here is a sample recorded <a href="https://www.youtube.com/watch?v=71lsEVpKM88">lecture</a>. 
+</p>
+</div>
+
+<div id="outline-container-org19e0796" class="outline-4">
+<h4 id="org19e0796">Part IA (first year)</h4>
+<div class="outline-text-4" id="text-org19e0796">
+<p>
+Part IA is mandatory there's no options. Cambridge allows students to sit in on any lectures they want so often students attend 1B Groups to fill in the theory. 
+</p>
+
+
+<ul class="org-ul">
+<li>Michaelmas
+<ul class="org-ul">
+<li>Vectors/Matrices</li>
+<li>Differential Eq</li>
+<li>Groups
+<ul class="org-ul">
+<li>Usually 8 extra lectures of 1B Groups</li>
+</ul></li>
+<li>Numbers and Sets</li>
+<li>Mechanics refresher (no exam)</li>
+</ul></li>
+<li>Lent
+<ul class="org-ul">
+<li>Analysis</li>
+<li>Probability</li>
+<li>Vector Calculus</li>
+<li>Dynamics</li>
+</ul></li>
+<li>Easter 
+<ul class="org-ul">
+<li>Variational Principles (not examined this year)</li>
+<li>Computational Projects</li>
+<li>Exams for all courses taken in Michaelmas and Lent.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf7ce1c0" class="outline-4">
+<h4 id="orgf7ce1c0">Part IB (second year)</h4>
+<div class="outline-text-4" id="text-orgf7ce1c0">
+<p>
+This is another sample term. We get a choice to pick whatever we want so long as we don't break dependencies for Part II see the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.pdf">schedule</a>.
+</p>
+
+<ul class="org-ul">
+<li>Michaelmas
+<ul class="org-ul">
+<li>Linear Algebra</li>
+<li>Analysis and Topology</li>
+<li>Methods</li>
+<li>Quantum Mechanics</li>
+<li>Markov Chains</li>
+</ul></li>
+<li>Lent
+<ul class="org-ul">
+<li>Groups, Ring, Modules</li>
+<li>Geometry</li>
+<li>Complex Analysis</li>
+<li>Statistics</li>
+<li>Electromagnetism</li>
+<li>Fluid Dynamics</li>
+</ul></li>
+<li>Easter
+<ul class="org-ul">
+<li>Optimisation</li>
+<li>Computational Projects</li>
+<li>Exams for all courses taken in Michaelmas and Lent</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd27bb31" class="outline-4">
+<h4 id="orgd27bb31">Part II (third year)</h4>
+<div class="outline-text-4" id="text-orgd27bb31">
+<p>
+Choose ~8 courses in your interest. I am already doing 3 in other workshops with Applied Probability, Machine Learning math and Cryptography so those will be my choices. 
+</p>
+
+<p>
+We can try Classical Mechanics and Differential Geometry to do Sussman's two books <a href="http://groups.csail.mit.edu/mac/users/gjs/6946/index.html">Structure and Interpretation of Classical Mechanics</a> and <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9580/9580.pdf?dl=1">Functional Differential Geometry</a> which satisifes the computational projects. His book uses the material we learned in Variational Principles.
+</p>
+
+<p>
+That leaves 3 courses. We have full recorded lecture access for topics in Number Theory, Galois Theory, Representation theory, Algebraic Geometry, Mathematical Finance topics, Relativity, and Quantum Computation. Lecture notes for all the courses in Part II can be found online. Whatever you will need for part III you take here.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org0082d86" class="outline-4">
+<h4 id="org0082d86">Part III (Masters)</h4>
+<div class="outline-text-4" id="text-org0082d86">
+<p>
+List of courses <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/part-iii-guide-courses">here</a> and we have access to the <a href="http://www.dpmms.cam.ac.uk/study/#PartIII">example sheets</a> for most topics. You would obviously take whatever you are interested in this is a deep study. They allow you to write an essay ~30 pages like a thesis to replace having to do a 3 hour exam on that course. Only 5 full unit courses are examed during Easter and the <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/current/tripos-examination-papers/2023">exams</a> you only attempt 3 questions. 
+</p>
+
+<p>
+My interests here would be type theory related:
+</p>
+
+<ul class="org-ul">
+<li>Category Theory</li>
+<li>Model Theory (natural deduction logic, lambda calculus, Heyting algebra)</li>
+<li>Algebraic Geometry (sheaves)</li>
+<li>Commutative Algebra (needed for Algebraic Geometry)</li>
+<li>Abelian Varieties (modules/univalent type theory)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org44d6c4c" class="outline-3">
+<h3 id="org44d6c4c">How we will do it</h3>
+<div class="outline-text-3" id="text-org44d6c4c">
+<p>
+We are only studying for the specific topics in the course, not contents of entire books until we get to Part III which is notoriously difficult. In the past the tripos was a kind of ridiculous endurance test and students would be athletic doing 'mountaineering' and other stamina improving exercises so they could survive the marathon exam schedule back then.  
+</p>
+
+<p>
+The algorithm is as follows
+</p>
+<ul class="org-ul">
+<li>Take material and work through the <a href="http://www.dpmms.cam.ac.uk/study/IB/LinearAlgebra/">examples sheets</a></li>
+<li>Practice with the recommended books</li>
+<li>Write the <a href="https://www.maths.cam.ac.uk/undergrad/pastpapers/past-ia-ib-and-ii-examination-papers">exams</a> and <a href="https://gowers.wordpress.com/2012/04/28/a-look-at-a-few-tripos-questions-i/">follow advice</a> of previous tripos grads</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org6aa6506" class="outline-2">
+<h2 id="org6aa6506">Part 1A TODO</h2>
+<div class="outline-text-2" id="text-org6aa6506">
+<hr />
+<p>
+<a href="./index.html">Home</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

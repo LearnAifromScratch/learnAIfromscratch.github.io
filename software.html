@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-05-27 Mon 21:23 -->
+<!-- 2024-06-03 Mon 19:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -270,33 +270,35 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9a4be0c">Start here</a>
+<li><a href="#org34dc186">Start here</a>
 <ul>
-<li><a href="#org528920e">Curriculum</a></li>
-<li><a href="#orgea3d061">Strategy</a></li>
+<li><a href="#org0afbd02">Curriculum</a></li>
+<li><a href="#orgfcc271d">Strategy</a></li>
+<li><a href="#orgf39e29b">Make a fake startup</a></li>
+<li><a href="#orgcc6f8de">Contribute to FSF</a></li>
 </ul>
 </li>
-<li><a href="#org194a32d">BEGIN HERE</a>
+<li><a href="#org88cd33a">Software Design</a>
 <ul>
-<li><a href="#orge156486">Make a fake startup</a></li>
-<li><a href="#org78b8368">Contribute to FSF</a></li>
+<li><a href="#org16f9cac">Gitless</a></li>
 </ul>
 </li>
-<li><a href="#org8d18f81">USACO guide</a>
+<li><a href="#org5deb94a">USACO guide</a>
 <ul>
-<li><a href="#org4992947">Input/Output</a>
+<li><a href="#org965c8c5">'Fast' languages</a></li>
+<li><a href="#org0ed2524">Input/Output</a>
 <ul>
-<li><a href="#org552a3e0">Real competitive programming</a></li>
+<li><a href="#org4a25671">Real competitive programming</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org3d16755">USACO bronze</a>
+<li><a href="#orgc60d9a3">USACO bronze</a>
 <ul>
-<li><a href="#org346b3d4">C++ versions</a></li>
-<li><a href="#org93453aa">Big-O explained</a></li>
-<li><a href="#org5a43c5c">Time complexity</a></li>
-<li><a href="#orgd413c8d">Asymptotics</a></li>
+<li><a href="#orgcf67922">C++ versions</a></li>
+<li><a href="#org325d26a">Big-O explained</a></li>
+<li><a href="#org470a93d">Time complexity</a></li>
+<li><a href="#org3e79ff5">Asymptotics</a></li>
 </ul>
 </li>
 </ul>
@@ -304,9 +306,9 @@ for the JavaScript code in this tag.
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org9a4be0c" class="outline-2">
-<h2 id="org9a4be0c">Start here</h2>
-<div class="outline-text-2" id="text-org9a4be0c">
+<div id="outline-container-org34dc186" class="outline-2">
+<h2 id="org34dc186">Start here</h2>
+<div class="outline-text-2" id="text-org34dc186">
 <p>
 I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
 </p>
@@ -318,36 +320,28 @@ I assume you are teaching yourself at the same time some kind of intro course yo
 </ul>
 
 <p>
-This exists to solve two problems. The first is finding a job or freelance gig doing $THING you like which seems like it's next to impossible these days. There's tricks we can try. 
+This exists to solve two problems. 
 </p>
 
 <p>
-The second problem is recruiters always ask me where to find candidates for fintech type roles. I pressed them on what exactly they look for in 2024 then found free resources that taught as close to the requirements as possible. Everything here was vetted by them as being desireable as a basic foundation then the character of the candidate is the determining factor not their credentials. What they want is someone with the ability to figure out things themselves, who can program applications requiring high throughput, and who has an in-depth knowledge of at least one language and can describe in detail how it's memory abstraction works to tune or work around it's managed runtime. If you possess the above then you can be taught everything else.  
+The first is finding a job or freelance gig doing $THING you like which <i>seems</i> like it's next to impossible these days. How to bridge the gap from toiling by yourself in obscurity to getting paid. 
 </p>
 
 <p>
-These kinds of roles used to require a degree from an elite school but today campus recruiting is monopolized by big tech and gov crony contractors that manipulate school guidelines by pressuring students with 2 week expiring offers and paying the school to lock out all competition so it's a struggle to find anyone qualified to do this kind of work. Even if you want nothing to do with fintech we are learning to be apprentice race car mechanics but for application development the same skills here translate to anywhere like getting hired at Yellowbrick in Silicon Valley, working in Amsterdam for DuckDB or working worldwide for Databricks.
+The second problem is recruiters always ask me where to find candidates for fintech type roles. I pressed them on what exactly they look for in 2024 then found free resources that taught as close to the requirements as possible. Everything here was vetted by them as being desireable as a basic foundation then the character of the candidate is the determining factor not their credentials. What they want is someone with the ability to figure out things themselves, who can program applications requiring high throughput with an in-depth knowledge of at least one language and can describe in detail how it's memory abstraction works to tune or work around it's managed runtime. If you possess the above then you can be taught everything else.  
+</p>
+
+<p>
+These kinds of roles used to require a degree from an elite school but today campus recruiting is monopolized by big tech and government crony contractors that manipulate school guidelines by pressuring students with 2 week expiring offers and paying the school to lock out all competition so it's a struggle to find anyone qualified to do this kind of work. Even if you want nothing to do with fintech we are learning to be apprentice race car engineers but for application development the same skills here translate to anywhere.
 </p>
 </div>
 
 
-<div id="outline-container-org528920e" class="outline-3">
-<h3 id="org528920e">Curriculum</h3>
-<div class="outline-text-3" id="text-org528920e">
+<div id="outline-container-org0afbd02" class="outline-3">
+<h3 id="org0afbd02">Curriculum</h3>
+<div class="outline-text-3" id="text-org0afbd02">
 <p>
-Andy Pavlo runs two fully open courses at CMU where even the grading scripts are available and the advanced course teaches you how a modern application with microservice architecture is designed, network kernel bypass, cache hierachies, compiling queries to execute faster, algorithms for Azure or Amazon stored data analytics basically everything you need for the system design of a 2024 application. Nothing else exists like this anywhere we should take advantage. 
-</p>
-
-<p>
-USACO guide has a unique way to learn and practice algorithm design concepts we can mix with a course in theoretical algorithm design to see the current state of the art in running times. At the same time we can read about algorithm engineering how to code profile whatever we've built. 
-</p>
-
-<p>
-Some queueing theory is here since once you start recognizing queues you see them everywhere it's the same with the USACO guide where if you practice enough algorithm design you begin to see problems that fit an algorithm design strategy. 
-</p>
-
-<p>
-Finally plai.org to teach the standard model of languages because many 'modern' languages are just clones of each other which in turn are simply clones of ALGOL 68.    
+In addition to some wild software building we will study:
 </p>
 
 <ul class="org-ul">
@@ -360,37 +354,31 @@ Finally plai.org to teach the standard model of languages because many 'modern' 
 <li><a href="https://15721.courses.cs.cmu.edu/spring2024/">Advanced DBMS (OLAP)</a> state of the art analytics
 <ul class="org-ul">
 <li>Here we learn kernel bypass methods for low latency networking, code profiling and optimization, everything we can about modern distributed application architecture</li>
-<li>Similar development to what a <a href="https://github.com/northwesternfintech/2025QuantInternships">quant developer</a> would do</li>
 </ul></li>
 </ul>
-
-<p>
-Most of the content here is your language of choice, even USACO you can write the solutions in your preferred language then translate it to a C/C++/Java program who cares. 
-</p>
 </div>
 </div>
 
-<div id="outline-container-orgea3d061" class="outline-3">
-<h3 id="orgea3d061">Strategy</h3>
-<div class="outline-text-3" id="text-orgea3d061">
+<div id="outline-container-orgfcc271d" class="outline-3">
+<h3 id="orgfcc271d">Strategy</h3>
+<div class="outline-text-3" id="text-orgfcc271d">
 <p>
 Find a mentor. There is someone somewhere doing what you want to do and making a lot of money doing it and your task is to do enough material here to reach a level where you can get in with them somehow and absorb everything. Once you are in all you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life. If they get promoted, you get promoted. If they found a company, you are the first hire. If they get hired at a top tier trading firm everyone says you have no chance of getting into guess who they will tell the hiring managers they should also hire. 
 </p>
 
 <p>
-You approach this person and sell yourself telling them you are available if they have some work to offload because you want to learn it all from the ground up. There is always something to do and your goal is to be this magic portal where work they despise doing can be dumped and it returns as per specifications they gave you then there's time for them to show you things. You make your way up to highly sophisticated work until you end up being essential because it's a mutually beneficial relationship. I actually took all the above advice from a <a href="https://www.youtube.com/@mdeoldadvicebitsonly-fanch2934/videos">comedian</a> many years ago and it worked. In my case I approached someone not even in the same department as me doing things everyone said was impossible and simply became the trash can that they throw stuff at and now I'm their right-hand man. In finance this is tricky because of signing multiple NDAs even between employees but if you sell yourself to them that you are serious about being mentored they will make it happen.  
+You approach this person and sell yourself telling them you are available if they have some work to offload because you want to learn it all from the ground up. There is always something to do and your goal is to be this magic portal where work they despise doing can be dumped and it returns as per specifications they gave you then there's time for them to show you things. You make your way up to highly sophisticated work until you end up being essential because it's a mutually beneficial relationship. I actually took all the above advice from a <a href="https://www.youtube.com/@mdeoldadvicebitsonly-fanch2934/videos">comedian</a> many years ago and it worked. In finance this can be tricky because of signing multiple NDAs even between employees but if you sell yourself to them that you are serious about being mentored they will tell management to make it happen. 
+</p>
+
+<p>
+Easiest way to meet a mentor is get the lowest job you can at a place where there's experts making the place money and then approach them asking for work to do on top of whatever else you're doing. After a few months of this if any work comes up in their department you're the one they want to move in. 
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org194a32d" class="outline-2">
-<h2 id="org194a32d">BEGIN HERE</h2>
-<div class="outline-text-2" id="text-org194a32d">
-</div>
-<div id="outline-container-orge156486" class="outline-3">
-<h3 id="orge156486">Make a fake startup</h3>
-<div class="outline-text-3" id="text-orge156486">
+<div id="outline-container-orgf39e29b" class="outline-3">
+<h3 id="orgf39e29b">Make a fake startup</h3>
+<div class="outline-text-3" id="text-orgf39e29b">
 <p>
 Buy a domain for $20, design and deploy a basic startup website. Here's a typical <a href="https://www.apriora.ai/">example</a> (a startup to detect applicants using GPT). Look around existing sites note how they are all the same as you scroll it loads whatever biz graphics and there's usually just a 'sign up here to be notified when&#x2026;' page. Never mention any other company names, keep it as vague as possible with just a team and careers page. 
 </p>
@@ -400,54 +388,118 @@ Buy a domain for $20, design and deploy a basic startup website. Here's a typica
 </p>
 
 <p>
-Do not give yourself a ridiculous title. You are a <b>full stack developer</b> and spent your time there building features in the language/framework you currently know and are targeting employment in. Make an email sig and use you@domain.com for communications. Nobody will ever contact your fake startup but if they do don't reply. Will they see the domain is only x minutes old? Will they find out the company is fake? Who cares, you will be vetted through their interview process anyway. If anyone asks why you are leaving "I am seeking new challenges and mentorship in blah blah blah".
+Do not give yourself a ridiculous title. You are a full stack developer and spent your time there building features in the language/framework you currently know and are targeting employment in. Make an email sig and use you@domain.com for communications. Nobody will ever contact your fake startup but if they do don't reply. Will they see the domain is only x minutes old? Will they find out the company is fake? Who cares, you will be vetted through their interview process anyway. If anyone asks why you are leaving "I am seeking new challenges".
 </p>
 
 <p>
-All new hires are generally given 3 months until they become 'productive' and everyone else you work with is faking it until they make it so don't worry. Caveat: this only works if you legit did a real compsci intro course, legit can talk confidently about your skills, legit can figure out new technology yourself and aren't harassing every other co-worker for basic things like how to commit in the repository. Using open source projects to write minor features repeatedly will help you learn all this.  
+All new hires are generally expected to take 3 months until they become productive and everyone else you work with is faking it until they make it so don't worry. Every year MIT has a competition called <a href="https://weblab.mit.edu/schedule/">web lab</a> where you learn the basics of Git, HTML/CSS, JS, Svelte CSS, React, Node and everything else you need to slap up a simple website. All the lectures are on YouTube and all assignments free on GitHub. These <a href="https://61040-fa23.github.io/schedule">slides</a> are also very good explaining what an API is, how to use VitePress (static site generator using Vue.js), how HTML/CSS work, etc.
 </p>
 
 <p>
-Every year MIT has a competition called <a href="https://weblab.mit.edu/schedule/">web lab</a> where you learn the basics of Git, HTML/CSS, JS, Svelte CSS, React, Node and everything else you need to slap up a simple website. All the lectures are on YouTube and all assignments free on GitHub. There's no reason you can't do this yourself if you did any intro course here. Hosting for this try fly.io it's one of my favorites because it's 'serverless' and has a generous free option (with amazing documentation) but anything will do for your fake startup and fake work experience. To be honest you already have 1.5 years experience if you did any of the (difficult) intro to CS workshops here like the 2 semesters in 1 Brown university course CS19.
+There's no reason you can't do this yourself if you did any intro course here. Hosting for this try fly.io it's 'serverless' and has a generous free option with well written documentation but anything will do for your fake startup and fake work experience. 
 </p>
 
 <p>
-They want to play games hiring you can play the game too. We don't live in any kind of sane times right now do whatever it takes.
+To be honest you already have 1-2 years experience if you did any of the (difficult) intro to CS workshops here like the 2 semesters in 1 Brown university course CS19. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org78b8368" class="outline-3">
-<h3 id="org78b8368">Contribute to FSF</h3>
-<div class="outline-text-3" id="text-org78b8368">
-<p>
-As mentioned above you will best be able to pull this off if you actually can commit code somewhere and receive feedback. I personally recommend only ever contributing to 'free software' as in GNU or <a href="https://www.fsf.org/">Free Software Foundation</a> projects. OSS or 'open source' is a scam where they use you for free labor and then make money from your work whereas FSF is a liberating experience your code will live for decades and nobody can wrap it in some license locking out new features like how Apple screwed over the OpenBSD pf firewall devs or how Android is a disaster. Read Steven Levy's classic book and skip to chapter 'The Last of the True Hackers'. 
-</p>
 
+<div id="outline-container-orgcc6f8de" class="outline-3">
+<h3 id="orgcc6f8de">Contribute to FSF</h3>
+<div class="outline-text-3" id="text-orgcc6f8de">
 <p>
-I remember a decade ago everyone telling me that clang was 'superior' and why would you ever need g++/gcc? 'It will always be free what are you a conspiracy theorist'. We will shortly learn Google abandoned clang recently and only gcc is keeping up with new C++/20/23+ features that's why you invest your time in free software because the whims of some temporal corporation cannot be trusted and this has been a truth since the early 1980s when Richard Stallman was at MIT lab warning everyone and nobody took him seriously except two people named Gerald Jay Sussman and Hal Abelson.   
+You will best be able to pull this off if you actually can commit code somewhere and receive feedback. I recommend only ever contributing to 'free software' as in GNU or <a href="https://www.fsf.org/">Free Software Foundation</a> projects. OSS or 'open source' is a scam where they use you for free labor and then make money from your work whereas FSF your code will live for decades and nobody can wrap it in some license locking out new features like how Apple screwed over the OpenBSD pf firewall devs. Read Steven Levy's classic book and skip to the chapter 'The Last of the True Hackers'. 
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org8d18f81" class="outline-2">
-<h2 id="org8d18f81">USACO guide</h2>
-<div class="outline-text-2" id="text-org8d18f81">
+<div id="outline-container-org88cd33a" class="outline-2">
+<h2 id="org88cd33a">Software Design</h2>
+<div class="outline-text-2" id="text-org88cd33a">
 <p>
-In competitive programming you submit source code as a solution to a problem and the online judge compiles and runs your code against tests. There is a huge list of online judges available like Kattis, SPOJ, Timus, Aizu, and more <a href="https://usaco.guide/general/olympiads?lang=cpp">worldwide</a>. 
+MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. It used to be called 6.170 before MIT renumbered every course recently. Universities always do ridiculous things every 5 years it's like some new dean comes in and demands oh we have to reinvent everything and buy all new (awful) edtech. This is why you should never feel like you don't belong here because they definitely don't and they're being paid outrageous money to screw up everything.  
+</p>
+
+<p>
+First look at these <a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">slides</a> from 2023 titled <i>Diverge-Converge</i> it briefly explains how you go from brainstorming features of something you want to build into concepts. 
+</p>
+
+<p>
+Click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos. They are all worth watching but we are interested in the two lectures on conceptual design. Watch <a href="https://drive.google.com/file/d/1lzAbrqk9LNLhGMLbsTuVgAm6p9_Do_Ux/view?usp=sharing">lecture 1</a> and <a href="https://drive.google.com/file/d/1AZ85ui0k2QpCKgfJZXUPSk-jdSi36MzP/view?usp=sharing">lecture 2</a>. Look at the recent <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">slides</a>. You have surely encountered badly designed software and this is a way to model your ideas as state machines then synch them together to compose an application that people can actually understand how to use. 
+</p>
+
+<p>
+If you don't understand what you just looked at don't worry we'll be implementing it in full you will get it. 
+</p>
+</div>
+
+<div id="outline-container-org16f9cac" class="outline-3">
+<h3 id="org16f9cac">Gitless</h3>
+<div class="outline-text-3" id="text-org16f9cac">
+<p>
+Now we are going to take all the above introductions to conceptual design and rewrite the git interface to make it intuitive to use. We have to learn git anyway so may as well write a CLI (command line interface) or you could make it ridiculous and call it 'visual git' or something with DAG graphics.  
+</p>
+
+<p>
+Many companies today use a customized Mercurial fork or rewritten clone instead of git like Meta's rust written EdenFS and <a href="https://github.com/facebook/sapling">Sapling SCM</a> because git was originally developed to take advantage of linux file system optimizations ergo is conceptually attatched to a file system while Mercurial can be easily adapted to be stuffed in a database, distributed or run on any OS. In a mercurial style of version control you probably don't care about individual commits so you don't even add comments to commits you instead care about entire branch development.     
+</p>
+
+<p>
+Let's learn what git actually is by watching MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i>. Lecture starts ~7m in. So far the data structure and model is trivial to understand if you did any intro course here such as <a href="./accelerated.html">CS19</a> where it's file system assignment was almost identical to this. 
+</p>
+
+<p>
+Proceed to <a href="https://gitless.com/#research">gitless.com</a> and navigate to research or <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> page on MIT's software design group. You will finds <a href="https://www.youtube.com/watch?v=31XZYMjg93o">this</a> talk about the problems with git design. The guy giving this talk was the PhD student of the prof we watched in the conceptual design lectures and now is a co-founder of <a href="https://www.getaleph.com/careers">Aleph</a> some fintech data startup (which is hiring, maybe you can impress him with your conceptual design skills). Watching this talk TODO
+</p>
+
+<p>
+.. cont
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5deb94a" class="outline-2">
+<h2 id="org5deb94a">USACO guide</h2>
+<div class="outline-text-2" id="text-org5deb94a">
+<p>
+In competitive programming you submit source code as a solution to a problem and the online judge compiles and runs your code against (often 'secret') tests. There is a huge list of online judges available like Kattis, SPOJ, Timus, Aizu, and more <a href="https://usaco.guide/general/olympiads?lang=cpp">worldwide</a>. 
 </p>
 
 <p>
 First task is to choose one of these <a href="https://open.kattis.com/languages">languages</a>. We'll learn C++ for USACO so pick something else here that you want to use. List all the problems by <a href="https://open.kattis.com/problems?order=difficulty_data">easiest</a> and start with the very first one 'Velkomin!'. You get unlimited submissions to the Kattis judge. 
 </p>
+
+<p>
+The point of doing this is to learn algorithm design which really is 'system design' or 'platform engineering' or 'high throughput data pipelines' it's all the same there's some complex things that need to be optimized as much as possible. This is the bare minimum you need to step to some mentor somewhere and solve their problem like their trading data they use for training has some crazy garbage where data was included after trades ended that day but aren't accurately timestamped like there's a timestamp discrepancy in numerous feeds so you need a fast way to complete search and label over 100 terabytes of data discarding everything that should not be included in the training set. Now imagine 80+ of these data pipelines all dumping terabytes on you every minute so your algorithm needs to be as modular as possible so you can abstract it over any kind of noisy data and it needs to run automatically 24/7 as data comes firing in all hours globally. The faster you do this the more money everyone you work with (including you) makes because you are a race car programmer now and this data is the pit stop between trades where the first wins. 
+</p>
+
+<p>
+This is why we are learning this.   
+</p>
 </div>
 
-<div id="outline-container-org4992947" class="outline-3">
-<h3 id="org4992947">Input/Output</h3>
-<div class="outline-text-3" id="text-org4992947">
+<div id="outline-container-org965c8c5" class="outline-3">
+<h3 id="org965c8c5">'Fast' languages</h3>
+<div class="outline-text-3" id="text-org965c8c5">
 <p>
-Read the book or online documemtation of the language you chose or use the USACO <a href="https://usaco.guide/general/input-output">guide</a> first chapter to teach yourself how input/output works in C++/Java/Python. There's the USACO <a href="https://ide.usaco.guide/">online IDE</a> too if you want.
+There is no such thing as an interpreted language there is only languages which don't have a good compiler. C++ is only as fast as there is memory allocations in the code so while you may have heard it's the 'fastest' it's not if you don't know what you're doing in fact most in the wild C++ code is junk that runs just as slow as whatever you can think of. We used to be taught static arrays were the best possible data structures but they rely on magic hardware adders which is useless for parallel computing which we are now doing for absolutely everything where I am anyway so the preferred structure is trees now. 
+</p>
+
+<p>
+Being fast means you have an intimate relationship with how your preferred language works collecting garbage or allocating memory and objects so we need to learn how this works and thankfully there is a guide for this called plai.org in other words choose the language you best like and never choose something someone claims is 'fast' because you can probably tune your preferred language to obliterate most C++. Common Lisp you can go right down to the compiler and generate assembly (same with Julia, SML, OCaml) so sky is the limit.     
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ed2524" class="outline-3">
+<h3 id="org0ed2524">Input/Output</h3>
+<div class="outline-text-3" id="text-org0ed2524">
+<p>
+Read the book or online documemtation of the language you chose or use the USACO <a href="https://usaco.guide/general/input-output">guide</a> first chapter to teach yourself how input/output works in C/C++/Java/Python. There's the USACO <a href="https://ide.usaco.guide/">online IDE</a> too if you want.
 </p>
 
 <p>
@@ -475,9 +527,9 @@ Finish up to 1.4 Easy problems on Kattis or until you get how I/O works in your 
 </p>
 </div>
 
-<div id="outline-container-org552a3e0" class="outline-4">
-<h4 id="org552a3e0">Real competitive programming</h4>
-<div class="outline-text-4" id="text-org552a3e0">
+<div id="outline-container-org4a25671" class="outline-4">
+<h4 id="org4a25671">Real competitive programming</h4>
+<div class="outline-text-4" id="text-org4a25671">
 <p>
 Here is Gennady Korotkevich aka tourist <a href="https://youtu.be/97tieEKfvBs">practicing</a> on codeforces and explaining what he's doing, though he didn't start with C++ he used to win the IOI with Pascal in high school then switched later for the ICPC. The first thing to notice is he's using a basic text editor and minimalist shell that looks like <a href="https://mingw.osdn.io/">MinGW</a> and a <a href="https://www.farmanager.com/screenshots.php?l=en">file manager</a> where he manually submits through the codeforces website UI. He prepares individual directories named after the problem, then always makes a sol.cpp file in that directory so he doesn't have to change a macro he's written to compile the solution from the shell.
 </p>
@@ -516,9 +568,9 @@ A time limit exceeded verdict shows how he would optimize to get accepted verdic
 </div>
 </div>
 
-<div id="outline-container-org3d16755" class="outline-2">
-<h2 id="org3d16755">USACO bronze</h2>
-<div class="outline-text-2" id="text-org3d16755">
+<div id="outline-container-orgc60d9a3" class="outline-2">
+<h2 id="orgc60d9a3">USACO bronze</h2>
+<div class="outline-text-2" id="text-orgc60d9a3">
 <p>
 We are now <a href="https://usaco.guide/bronze/">bronze level</a>. There's a set of videos for bronze free <a href="https://joincpi.org/video-classes">here</a>.  
 </p>
@@ -528,15 +580,15 @@ USACO online judge only accepts C/C++, Java or Python but you can also learn fro
 </p>
 </div>
 
-<div id="outline-container-org346b3d4" class="outline-3">
-<h3 id="org346b3d4">C++ versions</h3>
-<div class="outline-text-3" id="text-org346b3d4">
+<div id="outline-container-orgcf67922" class="outline-3">
+<h3 id="orgcf67922">C++ versions</h3>
+<div class="outline-text-3" id="text-orgcf67922">
 <p>
-C++ has versions C++98/03/11/14/17/20/23 these all represent years there was a new standard. The current state of C++20/23 or 'modern' C++ is you can kind of do functional programming with it. Options, lambdas, higher-order functions, monads and more all now exist in the definition depending which compiler you use. Google has <a href="https://github.com/carbon-language/carbon-lang/blob/trunk/docs/project/difficulties_improving_cpp.md">rage quit</a> C++ and is writing their own replacement called <a href="https://github.com/carbon-language/carbon-lang">Carbon</a> and as a result clang/llvm has not even implemented the entire C++20 spec and probably never will which is why you should put efforts into free software compilers and not trust any company. If you want to use C++20/23 in some project you have to use GNU gcc or Microsoft msvc.  
+C++ has versions C++98/03/11/14/17/20/23 these all represent years there was a new standard but that doesn't mean everyone implements the entire standard in their compiler. The current state of C++20/23 or 'modern' C++ is you can kind of do functional programming with it. Options, lambdas, higher-order functions, monads and more all now exist in the definition depending which compiler you use. Google has <a href="https://github.com/carbon-language/carbon-lang/blob/trunk/docs/project/difficulties_improving_cpp.md">rage quit</a> C++ and is writing their own replacement called <a href="https://github.com/carbon-language/carbon-lang">Carbon</a> and as a result clang/llvm has not even implemented the entire C++20 spec and probably never will which is why you should put efforts into free software compilers and not trust any company. If you want to use C++20/23 in some project you have to use GNU gcc or Microsoft msvc.  
 </p>
 
 <p>
-Competitive programming typically only accepts C++11/14/17 which we can refer to online documentation for and most of our time in USACO will creating static arrays and using the <a href="https://en.wikipedia.org/wiki/Standard_Template_Library">standard template library</a>. The STL to me seems like a big hack to make C++ a <a href="https://en.wikipedia.org/wiki/Generic_programming">generic programming</a> language a concept invented by ML in 1973. If you took the Standard ML course listed in the intro to this workship then generic programming is simply polymorphism or 'a types. If you took the accelerated intro course then generic programming is the same as 'type variables' in other words a function who's type is determined by whatever parameters you give it:
+Competitive programming typically only accepts C++11/14/17, Python3 and Java and Kotlin unless you do exotic competitive programming like the ICFP. Most of our time in USACO will be creating static arrays and using the <a href="https://en.wikipedia.org/wiki/Standard_Template_Library">standard template library</a>. The STL to me seems like a big hack to make C++ a <a href="https://en.wikipedia.org/wiki/Generic_programming">generic programming</a> language a concept invented by ML in 1973. If you took the Standard ML course listed in the intro to this workshop then generic programming is simply polymorphism or 'a types. If you took the accelerated intro course then generic programming is the same as 'type variables' in other words a function who's type is determined by whatever parameters you give it:
 </p>
 
 <pre class="example">
@@ -558,9 +610,9 @@ end
 </div>
 </div>
 
-<div id="outline-container-org93453aa" class="outline-3">
-<h3 id="org93453aa">Big-O explained</h3>
-<div class="outline-text-3" id="text-org93453aa">
+<div id="outline-container-org325d26a" class="outline-3">
+<h3 id="org325d26a">Big-O explained</h3>
+<div class="outline-text-3" id="text-org325d26a">
 <p>
 The first resource we can use where 'running time' is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
 </p>
@@ -628,9 +680,9 @@ Big-O is in a hierarchy of asymptotics there's many more like little-o (strictly
 </div>
 
 
-<div id="outline-container-org5a43c5c" class="outline-3">
-<h3 id="org5a43c5c">Time complexity</h3>
-<div class="outline-text-3" id="text-org5a43c5c">
+<div id="outline-container-org470a93d" class="outline-3">
+<h3 id="org470a93d">Time complexity</h3>
+<div class="outline-text-3" id="text-org470a93d">
 <p>
 Skim through <a href="https://usaco.guide/bronze/time-comp">time complexity</a>. Sign up to <a href="https://joincpi.org/video-classes">here</a> where all the <a href="https://www.youtube.com/watch?v=lDEriEvhS48">videos</a> are. Watching the video he explains the 4 suggested resources:
 </p>
@@ -653,9 +705,9 @@ The <a href="https://www.youtube.com/watch?v=zUUkiEllHG0">video</a> they suggest
 </div>
 </div>
 
-<div id="outline-container-orgd413c8d" class="outline-3">
-<h3 id="orgd413c8d">Asymptotics</h3>
-<div class="outline-text-3" id="text-orgd413c8d">
+<div id="outline-container-org3e79ff5" class="outline-3">
+<h3 id="org3e79ff5">Asymptotics</h3>
+<div class="outline-text-3" id="text-org3e79ff5">
 <p>
 A good resource is <a href="https://www.youtube.com/watch?v=_gKb855_3bk&amp;list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX&amp;index=5">this video</a> from CMU's <i>CS Theory Toolkit</i> course which I will watch now. Now we know epsilon \(O(\epsilon)\) or delta \(O(\delta)\) means inputs are going to zero. @7:23 a multiplicative error is defined <a href="https://math.stackexchange.com/questions/2994057/whats-the-meaning-of-multiplicative-errors-and-additive-errors">here</a> notice if you log the multiplicative error then by log laws it becomes an additive error. Logarithms you should think as a way to linearize an exponent you have something complex like 10<sup>n</sup> and when you take it's log<sub>10</sub> it's just n and much easier to work with. It can also represent the amount of zeros in a number if you took the accelerated CS course noted in the intro to this workshop. If some function is logarithmic in costs on your web site and you get 1m new traffic hits then you are only paying 6x extra costs. This lecture notes the difference in notation between log (base 10) lg (base 2) and ln (base e) though often in algorithm and compsci texts they just use log with the implicit understanding it's supposed to be base 2. 
 </p>
@@ -665,7 +717,7 @@ A good resource is <a href="https://www.youtube.com/watch?v=_gKb855_3bk&amp;list
 </p>
 
 <p>
-TODO I slacked at this but I'm back. 
+TODO we are doing graduate courses on cruise control and nobody can stop us. 
 </p>
 
 <hr />

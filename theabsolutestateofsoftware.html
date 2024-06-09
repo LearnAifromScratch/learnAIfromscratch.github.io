@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-05 Fri 01:05 -->
+<!-- 2024-06-09 Sun 13:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Security Curriculum</title>
@@ -248,69 +248,194 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgab6db3a">Curriculum</a>
+<li><a href="#org6c71a8c">Curriculum</a>
 <ul>
-<li><a href="#org7452b64">Typical industry tracks</a></li>
-<li><a href="#org46bd2cc">How bad it all is</a></li>
-<li><a href="#orgf628ad4">Open source sabotage</a></li>
-<li><a href="#org5b7bc99">The absolute state of the security industry</a></li>
-<li><a href="#orga347cd8">Surveillance</a></li>
+<li><a href="#orgeccd646">Assembly</a></li>
+<li><a href="#org2d5c169">Systems</a></li>
+<li><a href="#orgb10edde">Software Exploitation</a></li>
+<li><a href="#orgfe4ee7f">Hardware Exploitation</a></li>
+<li><a href="#org61bc3b9">Cryptography</a></li>
 </ul>
 </li>
-<li><a href="#org05dc1f1">Prelims</a></li>
+<li><a href="#orgdb34dee">Typical industry tracks</a></li>
+<li><a href="#orgdbdcbc8">How bad it all is</a>
+<ul>
+<li><a href="#orgd4a326d">Open source sabotage</a></li>
+<li><a href="#org849d341">The security industry</a></li>
+<li><a href="#org6cb820e">Massive surveillance</a></li>
+</ul>
+</li>
+<li><a href="#orgfa9012e">Begin</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgab6db3a" class="outline-2">
-<h2 id="orgab6db3a">Curriculum</h2>
-<div class="outline-text-2" id="text-orgab6db3a">
+<div id="outline-container-org6c71a8c" class="outline-2">
+<h2 id="org6c71a8c">Curriculum</h2>
+<div class="outline-text-2" id="text-org6c71a8c">
 <p>
-I skimmed through beginners.re the famously gigantic reverse engineering text and noticed a lot of it was similar to the CMU course <a href="https://www.cs.cmu.edu/~213/">15-213</a>. His advice in the book was to write small programs then translate them to assembly which is pretty much almost all the exercises in the course book for 15-213. Overflowing and ROP or return oriented programming labs are also included so we should just start with 15-213. This material is also a prereq for Brown's <a href="https://cs.brown.edu/courses/csci1650/lectures.html">Software Exploitation</a> course. 
-</p>
-
-<p>
-We can explore the PortSwigger <a href="https://portswigger.net/web-security">academy</a> (free), <a href="https://pwn.college/">pwn.college</a> (free) and read through some papers from Brown's grad <a href="https://cs.brown.edu/courses/csci2951-u/lectures.html">course</a> and MIT's <a href="http://csg.csail.mit.edu/6.S983/">CPU hacking</a> course learning about flipping bits in memory without even accessing them. There's also a lot of <a href="https://www.reversinghero.com/">reverse engineering</a> resources we can play around with. 
-</p>
-
-<p>
-Since we have full access I'm going to try Tanja Lange's Post Quantum Crypto <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto22/">course</a> the first part goes through all the main contenders for a future crypto standard, the second part is various methods for cryptanalysis. Almost all computer security type courses make you take some kind of crypto we may as well learn the future of crypto. We have this <a href="https://shoup.net/ntb/">book</a> to help us which has no formal prereqs.   
+Here is everything I found that fits together to achieve the goal of being able to follow the <a href="https://www.robertxiao.ca/hacking/">people</a> who keep winning DEFCON and other CTFs so we can get good enough to eventually be paid to do this. 
 </p>
 </div>
 
-<div id="outline-container-org7452b64" class="outline-3">
-<h3 id="org7452b64">Typical industry tracks</h3>
-<div class="outline-text-3" id="text-org7452b64">
+<div id="outline-container-orgeccd646" class="outline-3">
+<h3 id="orgeccd646">Assembly</h3>
+<div class="outline-text-3" id="text-orgeccd646">
 <ul class="org-ul">
-<li>SOC threat analyst</li>
+<li>CMU <a href="https://www.cs.cmu.edu/~213/">15-213</a> Intro to Computer Systems (any year)
+<ul class="org-ul">
+<li>Recorded lectures on YouTube and Panopto</li>
+<li>Labs introduce return-oriented programming (ROP)</li>
+<li>Optional free asm <a href="https://www.xorpd.net/pages/x86_adventures.html">exercises/course</a></li>
+<li>We can try any reverse engineering <a href="https://www.reversinghero.com/">CTF style</a> game</li>
+</ul></li>
 </ul>
 
 <p>
-SOC means Security Operations Center. This is somebody working in shifts for a 24/7 (usually remotely) enterprise tier threat response contractor who is paid to anaylze system logs (almost always Windows OS logs) and network traffic to spot problems. You primarily extract and filter data mainly with in-house tools or using things like OSquery and do 'threat intelligence'. To get into this find some kind of learning path for SOC Level 1 and 2 but these almost always cost money. This <a href="https://tryhackme.com/path/outline/soclevel1">one</a> is the cheapest I could find or you could simply use their syllabus to look up everything yourself like OSquery, wireshark, MITRE etc. To find these companies search for security operations center jobs or try Sophos. I imagine these kinds of outfits exist so companies can satisfy some kind of insurance compliance or lawsuit protection from any breaches or leaked data.
-</p>
-
-<ul class="org-ul">
-<li>Security consultant</li>
-</ul>
-
-<p>
-Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to cloud deployment to how developers handle the keys for signing into the source repository. With large security consulting outfits the typical engagement is 2-3 consultants for 2 weeks where there is juniors competent in running security procedures like penetration testing and the principal consultant oversees them and presents all the reports the juniors produced justifying the money spent. On large contracts they will have reverse engineers and all kinds of other specialists charging insanely high hourly rates. The major outfits are Leviathan security, IOactive, Bishop Fox, NCC group, Crowdstrike, or search for security consultant jobs.        
-</p>
-
-<ul class="org-ul">
-<li>Freelance</li>
-</ul>
-
-<p>
-Security researchers who win pwn2own competitions, reverse engineer, chase bug bounties and <a href="https://www.zerodayinitiative.com/about/benefits/">sell exploits</a> sometimes on APT or <a href="https://docs.google.com/spreadsheets/u/1/d/1H9_xaxQHpWaa4O_Son4Gx0YOIzlcBWMsdvePFX68EKU/pubhtml#">Advanced Persistent Threat</a> marketplaces. These guys often get contracted by the above companies to be specialists or they run their own companies. They sometimes build entire target models to simulate attacks or use formal verification methods on program control flow graphs to expose logical flaws and other techniques we'll see. Look at all the shady stuff <a href="https://apt.securelist.com/">here</a> there seems to be nonstop nation state tier malware in the wild. 
+I skimmed through beginners.re the famously gigantic reverse engineering text and his advice in the book was to write small programs then translate them to assembly which is pretty much almost all the exercises in the course book for 15-213. This course also introduces gdb, cache memories, disk hardware, network programming, everything.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org46bd2cc" class="outline-3">
-<h3 id="org46bd2cc">How bad it all is</h3>
-<div class="outline-text-3" id="text-org46bd2cc">
+<div id="outline-container-org2d5c169" class="outline-3">
+<h3 id="org2d5c169">Systems</h3>
+<div class="outline-text-3" id="text-org2d5c169">
+<ul class="org-ul">
+<li>MIT <a href="https://pdos.csail.mit.edu/6.1810/2023/schedule.html">6.1810</a> Operating System Engineering 2023
+<ul class="org-ul">
+<li>Recorded lectures on YouTube see the 2021 <a href="https://pdos.csail.mit.edu/6.828/2021/schedule.html">version</a></li>
+<li>All labs and hw is open to us</li>
+</ul></li>
+</ul>
+
+<p>
+This MIT course is modelled after the classic OS hacker's <a href="https://en.wikipedia.org/wiki/A_Commentary_on_the_UNIX_Operating_System">book</a> <i>Lions' Commentary on Unix 6th Edition</i> which documented the Unix v6 kernel with the source code included that you read at the same time. The arch is RISC-V but doesn't matter it will be easy to pick up after 15-213.
+</p>
+
+<ul class="org-ul">
+<li>MIT <a href="https://css.csail.mit.edu/6.858/2023/">6.5660</a> Computer Systems Security 2023
+<ul class="org-ul">
+<li>Recorded lectures on YouTube see the 2022 <a href="https://css.csail.mit.edu/6.858/2022/">version</a></li>
+<li>Some of the labs similar to the PortSwigger <a href="https://portswigger.net/web-security">academy</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb10edde" class="outline-3">
+<h3 id="orgb10edde">Software Exploitation</h3>
+<div class="outline-text-3" id="text-orgb10edde">
+<ul class="org-ul">
+<li>ASU <a href="https://www.youtube.com/playlist?list=PL-ymxv0nOtqr7zM7ZBREoWa-eeSaKFJQd">598</a> Software Exploitation 2024
+<ul class="org-ul">
+<li>Part of the <a href="https://pwn.college/">pwn.college</a> site they run</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>GMU <a href="https://cs395-binx.github.io/">395</a> Linux Binary Exploitation 2021
+<ul class="org-ul">
+<li>Full access to everything</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>GATECH <a href="https://tc.gts3.org/cs6265/2023/cal.html">6265</a> Information Security Lab 2023
+<ul class="org-ul">
+<li>Recorded lectures on YouTube</li>
+<li>Access to <a href="https://tc.gts3.org/cs6265/tut/index.html">tutorials</a> but not labs</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Brown <a href="https://cs.brown.edu/courses/csci1650/lectures.html">1650</a> Software Security &amp; Exploitation 2023
+<ul class="org-ul">
+<li>Labs are open, mainly paper reading and practice</li>
+<li>The grad <a href="https://cs.brown.edu/courses/csci2951-u/lectures.html#l01">version</a></li>
+</ul></li>
+</ul>
+
+<p>
+There is no single course for this the field is always evolving we can only hope for a solid background on memory and how to attack it. Numerous CTFs exist for this like <a href="https://plaidctf.com/">PLAID</a> or <a href="https://picoctf.org/">picoCTF</a> some we can replay/practice. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe4ee7f" class="outline-3">
+<h3 id="orgfe4ee7f">Hardware Exploitation</h3>
+<div class="outline-text-3" id="text-orgfe4ee7f">
+<ul class="org-ul">
+<li>MIT <a href="http://csg.csail.mit.edu/6.S983/">G.S983</a> Secure Hardware Design 2023
+<ul class="org-ul">
+<li>How CPU attacks work and flipping bits in memory without even accessing them</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org61bc3b9" class="outline-3">
+<h3 id="org61bc3b9">Cryptography</h3>
+<div class="outline-text-3" id="text-org61bc3b9">
+<p>
+Since we have full access I'm going to try Tanja Lange's Post Quantum Crypto <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto22/">course</a> the first part goes through all the main contenders for a future crypto standard and the second part is various methods for cryptanalysis. Almost all computer security type courses make you take some kind of crypto we may as well learn the future of crypto. We have this <a href="https://shoup.net/ntb/">book</a> to help us which has no formal prereqs and the <a href="https://cryptopals.com/">cryptopals</a> challenges.   
+</p>
+
+<p>
+Of course this means we can also get into <a href="https://www.youtube.com/watch?v=8yRCQpb6yww">ridiculous</a> web3 <a href="https://cryptoctf.org/home-2/">CTFs</a> held on yachts anyone can join where you capture wallets instead of flags. That is if the other participants don't <a href="https://cryptoctf.org/2022/09/11/writeup-of-flag-submission-forgery-by-si/">forge</a> submission sigs.   
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdb34dee" class="outline-2">
+<h2 id="orgdb34dee">Typical industry tracks</h2>
+<div class="outline-text-2" id="text-orgdb34dee">
+</div>
+<div id="outline-container-org07a5f64" class="outline-4">
+<h4 id="org07a5f64">SOC threat analyst</h4>
+<div class="outline-text-4" id="text-org07a5f64">
+<p>
+SOC means Security Operations Center. This is a wagie working shifts for a 24/7 (usually remotely) enterprise tier threat response contractor who is paid to anaylze system logs (almost always Windows OS logs) and analyze network traffic to spot problems. You primarily extract and filter data with tools like OSquery and do 'threat intelligence'. To get into this find some kind of learning path for SOC Level 1 and 2 but these almost always cost money. This <a href="https://tryhackme.com/path/outline/soclevel1">one</a> is the cheapest I could find or you could simply use their syllabus to look up everything yourself like OSquery, wireshark, MITRE etc. To find these companies search for security operations center jobs or try Sophos. I imagine these kinds of outfits exist so companies can satisfy some kind of insurance compliance or lawsuit protection from any breaches or leaked data. If you get in here you want to move up to running the place and showing up to the SOC HQ wearing those tiny shades because every tech company will hire you as a Chief Information Security Officer (CISO). Outside of finance the CISO is usually given no budget and no authority you get paid a lot of money to sit on the executive board while answering emails and making presentations it's a ceremonial job almost.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org74e2558" class="outline-4">
+<h4 id="org74e2558">Security consultant</h4>
+<div class="outline-text-4" id="text-org74e2558">
+<p>
+Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to Azure or AWS deployment to how developers handle the keys for signing into the source repository. With large security consulting outfits the typical engagement is 2-3 consultants for 2 weeks where there is juniors competent in running security procedures like penetration testing and the principal consultant oversees them and presents all the reports the juniors produced justifying the money spent. On large contracts they will contract reverse engineers and all kinds of other specialists charging insanely high hourly rates. The major outfits are Leviathan security, IOactive, Bishop Fox, NCC group, Crowdstrike, or search for security consultant jobs. 
+</p>
+
+<p>
+If you live in France then get in with <a href="https://www.synacktiv.com/en/join-us#recrutement">Synacktiv</a> they place first or second in every global competition or <a href="https://www.reversetactics.com/">REverse Tactics</a>. If you live in Saudi Arabia join <a href="https://haboob.sa/">Haboob SA</a> they also win global competition prizes. If you live in Korea join <a href="https://kaist-hacking.github.io/">KAIST</a> or <a href="https://theori.io/career/hiring">theori</a>. If you live in Vietnam join <a href="https://viettelcybersecurity.com/">Viettel</a>. If you live in Taiwan join <a href="https://devco.re/en/company/jobs/">DEVCORE</a>. If you're in Germany join the redrocket <a href="https://discord.com/invite/5YktcJZ">club</a>.          
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9566c9" class="outline-4">
+<h4 id="orgc9566c9">Freelance researcher</h4>
+<div class="outline-text-4" id="text-orgc9566c9">
+<p>
+Selling <a href="https://www.crowdfense.com/exploit-acquisition-program/">exploits</a> for a lot of money.     
+</p>
+
+<p>
+These researchers will build entire target models to simulate environments/hardware or use formal verification methods on program control flow graphs to expose logical flaws and other techniques we'll see. This is the top of the game and you're probably winning CTFs every year on some elite team or working for some agency. 
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgdbdcbc8" class="outline-2">
+<h2 id="orgdbdcbc8">How bad it all is</h2>
+<div class="outline-text-2" id="text-orgdbdcbc8">
 <p>
 If you haven't seen it, watch the CS19 lecture on <a href="https://youtu.be/7orQOW6fp2A">security</a>.  
 </p>
@@ -339,43 +464,42 @@ Immediately npm breaches is brought up, the JavaScript package manager. If you'v
 He talks about SELinux also known as MAC or mandatory access controls like AppArmor. MAC is something enterprise security people love because it's knob tweaking but state can become so complex in modern systems you cannot guarantee your policy doesn't allow illicit states without some kind of logical assistant to model everything and run tests on. Whenever you search for AppArmor or SELinux the number one recommendation or most-searched for query is <i>how to turn it off</i> because it's intefering in someone's work and in the real world that's what everyone does. 
 </p>
 </div>
-</div>
 
-<div id="outline-container-orgf628ad4" class="outline-3">
-<h3 id="orgf628ad4">Open source sabotage</h3>
-<div class="outline-text-3" id="text-orgf628ad4">
+<div id="outline-container-orgd4a326d" class="outline-3">
+<h3 id="orgd4a326d">Open source sabotage</h3>
+<div class="outline-text-3" id="text-orgd4a326d">
 <p>
-This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relevant still. Since he is involved in FreeBSD project he thinks about it from an open source sabotaging viewpoint. 
+This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relevant still. Poul-Henning Kamp is involved in the FreeBSD project and here he imagines what would he do if he was tasked by some nation state to 'control' or sabotage open source.  
 </p>
 
 <p>
-@5:10 is very interesting. It reminds me of back in the day when there were many people writing 'security Android ROMs' or those in-memory operating systems you loaded up with a boot live DVD/USB or advanced security OSs like Subgraph OS. They all disappeared and abandoned their projects and he imagines in the talk how legit developers are purposely bribed to do so being put on some nice salary at a 'friends of NSA' company. Reminder this is just a thought experiment what he would do if tasked to sabotage he's not accusing anyone of anything. 
+@5:10 is very interesting. It reminds me of back in the day when there were many people writing 'security Android ROMs' or those in-memory operating systems you loaded up with a boot live DVD/USB or advanced security OSs like Subgraph OS. They all disappeared and abandoned their projects and he imagines in the talk how legit developers are purposely bribed to do so being put on some nice salary at a 'friends of NSA' company. 
 </p>
 
 <p>
-@12:28 this is what we came for how modern open source projects are derailed or infiltrated. @16:40 some mobile browser versions won't even let you use self-signed certs anymore even after clicking all the 'omg but are you aware of the risks!' buttons. @25:45 is great, wait for some security problem and then 'find a helpful patch' and claim you reviewed it but oops missed something. The deceptive defaults I have been burned by many times. 
+@12:28 this is what we came for how modern open source projects can be derailed or infiltrated. @16:40 some mobile browser versions won't even let you use self-signed certs anymore even after clicking all the 'omg but are you aware of the risks!' buttons. The deceptive defaults he mentions I have been burned by many times. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5b7bc99" class="outline-3">
-<h3 id="org5b7bc99">The absolute state of the security industry</h3>
-<div class="outline-text-3" id="text-org5b7bc99">
+<div id="outline-container-org849d341" class="outline-3">
+<h3 id="org849d341">The security industry</h3>
+<div class="outline-text-3" id="text-org849d341">
 <p>
 Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He is completely blackpilled and tells us how nobody cares or wants to fix the problems. If you raise the alarm you often threatened or dismissed. He wrote multiple warnings to the Rails github repository only for them to hand wave the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga347cd8" class="outline-3">
-<h3 id="orga347cd8">Surveillance</h3>
-<div class="outline-text-3" id="text-orga347cd8">
+<div id="outline-container-org6cb820e" class="outline-3">
+<h3 id="org6cb820e">Massive surveillance</h3>
+<div class="outline-text-3" id="text-org6cb820e">
 <p>
-Now cancelled former Tor developer and 'Wikileaks associate' Jacob Appelbaum quietly got a PhD from two of the world's premiere crypto experts DJ Bernstein and Tanja Lange at TU/e in the Netherlands. I don't know or care about any of the details of his fall from being the darling of the hacktivist scene all I care is he did write a thesis/dissertation that was overseen by advisors I respect so we may as well read it. The pdf is <a href="https://research.tue.nl/en/publications/communication-in-a-world-of-pervasive-surveillance-sources-and-me">here</a> or direct link <a href="https://research.tue.nl/files/197416841/20220325_Appelbaum_hf.pdf">here</a>. 
+Now cancelled former Tor developer and 'Wikileaks associate' Jacob Appelbaum quietly got a PhD from two of the world's premiere crypto experts DJ Bernstein and Tanja Lange at TU/e in the Netherlands. I don't know or care about any of the details of his fall from grace but he did write a thesis/dissertation so we may as well read it. The pdf is <a href="https://research.tue.nl/en/publications/communication-in-a-world-of-pervasive-surveillance-sources-and-me">here</a> or direct link <a href="https://research.tue.nl/files/197416841/20220325_Appelbaum_hf.pdf">here</a>. 
 </p>
 
 <p>
-Skimming the intro this is more of a political manifesto instead of a thesis I'm surprised the school didn't demand he remove a lot of cringe here. In the section he calls bad mathematics he shames on cruise control others who take fed cash yet seems completely unaware he once worked for the Tor Project which is funded by US <a href="https://support.torproject.org/misc/misc-3/">federal agencies</a> like the DoD. If you follow DJ Bernstein then you know he amusingly rants on the IETF crypto working group mailing list whenever some stooge proposes yet another badly designed or patent trolled elliptic curve scheme so that to me is the definition of 'bad mathematics' trying to sneak in broken by design protocols. In 1.2 <i>Thinking about the future</i> some of the claims derived from the questionable sources he lists are so wild even Wikipedia jannies wouldn't have green lighted this so I skipped but the theme as far I can tell is crypto still works if it's designed/used correctly. Everything else he is trying to say in way too many words can be summed up by <a href="https://www.youtube.com/watch?v=TVwKjGbz60k">this video</a>.
+Skimming the intro this is more of a political manifesto instead of a thesis I'm surprised the school didn't demand he remove a lot of cringe here. In the section he calls bad mathematics he shames on cruise control others who take fed cash yet seems completely unaware he once worked for the Tor Project which is funded by US <a href="https://support.torproject.org/misc/misc-3/">federal agencies</a> like the DoD. If you follow DJ Bernstein then you know he amusingly rants on the IETF crypto working group mailing list whenever some stooge proposes yet another badly designed or patent trolled elliptic curve scheme so that to me is the definition of 'bad mathematics' trying to sneak in broken by design protocols. In 1.2 <i>Thinking about the future</i> some of the claims derived from the questionable sources he lists are so wild even Wikipedia jannies wouldn't have green lighted this so I skipped most of it but the theme as far I can tell is crypto still works if it's designed/used correctly. 
 </p>
 
 <p>
@@ -383,23 +507,23 @@ Section 2 <i>Background on network protocols</i> skimming this quickly OpenVPN i
 </p>
 
 <p>
-Section 3 <i>Background on cryptography</i> if you look at Tanja Lange's <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto22/">crypto course</a> page she recommends for general background this free online <a href="https://cacr.uwaterloo.ca/hac/">book</a> so we can refer to it as we very lightly read this section. The <a href="https://cacr.uwaterloo.ca/hac/about/chap9.pdf">hash functions</a> chapter a hash function h maps bit-strings of arbitrary but finite length to strings of fixed length so the domain of the function (inputs) maps to a range (outputs) that is many-to-one as the inputs are larger than the range so there exists the possibility of collisions where 2 distinct pairs of inputs have the same output. Now you know how password hashing works, the hashes map to a plain text input but the Appelbaum thesis notes these password hash functions are designed to be extremely slow by purposely running inefficient calculations that require large amounts of contiguous memory so you can't easily brute force the hash bombing it with millions of strings to guess passwords. 
+Section 3 <i>Background on cryptography</i> if you look at Tanja Lange's <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto22/">crypto course</a> page she recommends for general background this free online <a href="https://cacr.uwaterloo.ca/hac/">book</a> so we can refer to it as we very lightly read this section. The <a href="https://cacr.uwaterloo.ca/hac/about/chap9.pdf">hash functions</a> chapter a hash function h maps bit-strings of arbitrary but finite length to strings of fixed length so the domain of the function (inputs) maps to a range (outputs) that is many-to-one as the inputs are larger than the range so there exists the possibility of collisions where 2 distinct pairs of inputs have the same output. Now you know how password hashing works, the hashes map to a plain text input but the Appelbaum thesis notes these password hash functions are designed to be extremely slow by purposely running inefficient calculations that require large amounts of contiguous memory so you can't easily brute force the hash by bombing it with millions of strings to guess passwords. 
 </p>
 
 <p>
-Block ciphers <a href="https://cacr.uwaterloo.ca/hac/about/chap7.pdf">chapter</a> seems to be a function that accepts as input a n-bit sized vector of plaintext and a key vector then a product transformation occurs to create ciphertext that is the same size of the input. If the input exceeds the size of the n-bit block then it's partitioned into same size blocks and encrypted seperately using a mode of operation to do so one old example is ECB or electronic-codebook mode. A symmetric key is shared via some Diffie-Hellman like public key system we can learn later. The term 'nonce bit' is called IV or initialization vector in older books. Djb's ChaCha20 high speed crypto and Poly1305 MAC is mentioned and <a href="https://datatracker.ietf.org/doc/html/rfc7539">detailed here</a> using C like pseudocode if interested. Skimming the rest there's an interesting comment about NIKE or non-interactive key exchange that has a deniability property where finding encrypted content that decrypts with someone else's key is not definitive proof of any communication between each other. 
+Block ciphers <a href="https://cacr.uwaterloo.ca/hac/about/chap7.pdf">chapter</a> seems to be a function that accepts as input a n-bit sized vector of plaintext and a key vector then a product transformation occurs to create ciphertext that is the same size of the input. If the input exceeds the size of the n-bit block then it's partitioned into same size blocks and encrypted seperately using a mode of operation to do so one old example is ECB or electronic-codebook mode. A symmetric key is shared via some Diffie-Hellman like public key system we can learn later. The term 'nonce bit' is called IV or initialization vector in older books. Djb's ChaCha20 high speed crypto and Poly1305 MAC is mentioned and <a href="https://datatracker.ietf.org/doc/html/rfc7539">detailed here</a> if interested. Skimming the rest of this chapter there's an interesting comment about NIKE or non-interactive key exchange that has a deniability property where finding encrypted content that decrypts with someone else's key is still not definitive proof of any communication between each other. 
 </p>
 
 <p>
-Chapter 4 you probably already know most of this if you read the Snowden leaks and 2017 Wikileaks CIA files and there's a bunch of material here on glowie PSYOPS strategies all laid out in chronological order. Applebaum goes totally off the rails here back into political manifesto territory. A lot of content here is straight up ranting but the later content going through all known shady nation state malware and explaining how it works is worth reading. Even though a lot of these exploit 'products' in the leaked ANT catalog are from 10 years ago I doubt much has changed especially what data they were after. 
+Chapter 4 you probably already know most of this if you read the Snowden leaks and 2017 Wikileaks CIA files and there's a bunch of material here in this chapter on glowie PSYOPS strategies all laid out in chronological order. Applebaum goes totally off the rails again back into political manifesto territory. A lot of content is straight up ranting but the later content going through all known shady nation state malware and explaining how it works is worth reading. Even though a lot of these exploit 'products' in the leaked ANT catalog are from 10 years ago I doubt much has changed especially what data they were after so the methods change but the target is the same. 
 </p>
 
 <p>
-Chapter 5 GNU naming system has a good crash course on how DNS works. The NSA shenanigans here running some global monitoring bot network to hide their DNS queries is interesting. GNS is a <a href="https://docs.gnunet.org/latest/users/gns.html">GNUnet</a> app which I like way more than all the blockchain nonsense going on right now requiring massive amounts of mining. Note to self look into GNUnet more.   
+Chapter 5 GNU naming system has a good crash course on how DNS works. The NSA shenanigans detailed here are amusing they ran some global monitoring bot network to hide their DNS queries after an attack to admire their work and avoid blame. GNS is a <a href="https://docs.gnunet.org/latest/users/gns.html">GNUnet</a> app which I like way more than all the blockchain nonsense going on right now requiring massive amounts of mining. Note to self look into GNUnet more.   
 </p>
 
 <p>
-Chapter 6 WireGuard tweak it only works for some future quantum adversary meaning if traffic is vacuumed up and held to be broken years later then this tweak works otherwise an active quantum adversary you have to redesign the entire WireGuard protocol. That's if quantum computers aren't a total scam every company involved always makes suspect promises of massive amounts of qbits then nothing happens. 
+Chapter 6 WireGuard tweak it only works for some future quantum adversary meaning if traffic is vacuumed up and held to be broken years later then this tweak works otherwise an active quantum adversary you have to redesign the entire WireGuard protocol. That's if quantum computers aren't a total scam every company in the field always makes suspect promises of massive amounts of qbits then nothing happens. 
 </p>
 
 <p>
@@ -413,24 +537,23 @@ Chapter 8 REUNION is a PAKE for real life key encrypted key exchange, a kind of 
 </div>
 </div>
 
-<div id="outline-container-org05dc1f1" class="outline-2">
-<h2 id="org05dc1f1">Prelims</h2>
-<div class="outline-text-2" id="text-org05dc1f1">
+
+<div id="outline-container-orgfa9012e" class="outline-2">
+<h2 id="orgfa9012e">Begin</h2>
+<div class="outline-text-2" id="text-orgfa9012e">
 <p>
 -15-213 <a href="https://www.cs.cmu.edu/~213/">Introduction to Computer Systems</a>
 </p>
 <ul class="org-ul">
-<li>All the (optional to watch) recorded lectures/recitation are on <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b96d90ae-9871-4fae-91e2-b1627b43e25e%22&amp;page=0&amp;maxResults=50">Panopto</a> or search <a href="https://www.youtube.com/playlist?list=PLQ5cMeVTtiJkUilq92Cw9D6RhAJhPJ_JX">YouTube</a></li>
+<li>All the recorded lectures/recitation are on <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b96d90ae-9871-4fae-91e2-b1627b43e25e%22&amp;page=0&amp;maxResults=50">Panopto</a> or search <a href="https://www.youtube.com/playlist?list=PLQ5cMeVTtiJkUilq92Cw9D6RhAJhPJ_JX">YouTube</a></li>
 <li>The book labs are <a href="http://csapp.cs.cmu.edu/3e/labs.html">here</a></li>
 </ul>
 
 <p>
-There is a problem with the book where the global version the publisher paid someone to screw with the practice problems and many of the solutions in the book are wrong. The only decent pdf you can find is the global version too I don't think they have a US electronic version. I bought the global version for I think $20 and the actual chapter contents are identical it's only many of the early exercises I find that were bungled. You can use library genesis to get an OCR'd copy but they are all gigantic in size see this <a href="http://libgen.is/book/index.php?md5=A665E0B6F83F9FE49120BE27F3A85902">upload</a> where the Chinese uploader describes all the versions available. However does it really matter? If there's a practice problem translating C to assembly we can always generate the unoptimized assembly with the compiler and verify it ourselves or figure out easily any hex to binary solution.  
+There is a problem with the book where the global version the publisher paid someone to screw with the practice problems and many of the solutions in the book are wrong. The only decent pdf you can find is the global version too I don't think they have a US electronic version. I bought the global version for I think $20 and the actual chapter contents are identical it's only many of the early exercises I find that were bungled. You can use library genesis to get an OCR'd copy but they are all gigantic in size see this <a href="http://libgen.is/book/index.php?md5=A665E0B6F83F9FE49120BE27F3A85902">upload</a> where the Chinese uploader describes all the versions available. However does it really matter? If there's a practice problem translating C to assembly we can always generate the unoptimized assembly with the compiler and verify it ourselves or figure out easily any hex to binary solution. 
 </p>
 
-<p>
-TODO 
-</p>
+
 
 <hr />
 <p>

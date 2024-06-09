@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-06-09 Sun 13:20 -->
+<!-- 2024-06-09 Sun 16:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Security Curriculum</title>
@@ -248,40 +248,41 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6c71a8c">Curriculum</a>
+<li><a href="#orgc926dc5">Curriculum</a>
 <ul>
-<li><a href="#orgeccd646">Assembly</a></li>
-<li><a href="#org2d5c169">Systems</a></li>
-<li><a href="#orgb10edde">Software Exploitation</a></li>
-<li><a href="#orgfe4ee7f">Hardware Exploitation</a></li>
-<li><a href="#org61bc3b9">Cryptography</a></li>
+<li><a href="#orga3a1a3e">Assembly</a></li>
+<li><a href="#orgdbd4497">Systems</a></li>
+<li><a href="#org5265910">Software Exploitation</a></li>
+<li><a href="#orgce5e1f4">Hardware Exploitation</a></li>
+<li><a href="#org9578780">Cryptography</a></li>
+<li><a href="#org1f613c7">Security Research</a></li>
 </ul>
 </li>
-<li><a href="#orgdb34dee">Typical industry tracks</a></li>
-<li><a href="#orgdbdcbc8">How bad it all is</a>
+<li><a href="#org277a8c9">Typical industry tracks</a></li>
+<li><a href="#org8511010">How bad it all is</a>
 <ul>
-<li><a href="#orgd4a326d">Open source sabotage</a></li>
-<li><a href="#org849d341">The security industry</a></li>
-<li><a href="#org6cb820e">Massive surveillance</a></li>
+<li><a href="#org6b4b97e">Open source sabotage</a></li>
+<li><a href="#org0481246">The security industry</a></li>
+<li><a href="#org4569d62">Massive surveillance</a></li>
 </ul>
 </li>
-<li><a href="#orgfa9012e">Begin</a></li>
+<li><a href="#org16e4f8f">Begin</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org6c71a8c" class="outline-2">
-<h2 id="org6c71a8c">Curriculum</h2>
-<div class="outline-text-2" id="text-org6c71a8c">
+<div id="outline-container-orgc926dc5" class="outline-2">
+<h2 id="orgc926dc5">Curriculum</h2>
+<div class="outline-text-2" id="text-orgc926dc5">
 <p>
-Here is everything I found that fits together to achieve the goal of being able to follow the <a href="https://www.robertxiao.ca/hacking/">people</a> who keep winning DEFCON and other CTFs so we can get good enough to eventually be paid to do this. 
+Here is everything I found that fits together to achieve the goal of being able to follow the <a href="https://www.robertxiao.ca/hacking/">people</a> who keep winning DEFCON and other CTFs so we can get good enough to eventually be paid to do this as a junior consultant and work our way up. 
 </p>
 </div>
 
-<div id="outline-container-orgeccd646" class="outline-3">
-<h3 id="orgeccd646">Assembly</h3>
-<div class="outline-text-3" id="text-orgeccd646">
+<div id="outline-container-orga3a1a3e" class="outline-3">
+<h3 id="orga3a1a3e">Assembly</h3>
+<div class="outline-text-3" id="text-orga3a1a3e">
 <ul class="org-ul">
 <li>CMU <a href="https://www.cs.cmu.edu/~213/">15-213</a> Intro to Computer Systems (any year)
 <ul class="org-ul">
@@ -298,9 +299,9 @@ I skimmed through beginners.re the famously gigantic reverse engineering text an
 </div>
 </div>
 
-<div id="outline-container-org2d5c169" class="outline-3">
-<h3 id="org2d5c169">Systems</h3>
-<div class="outline-text-3" id="text-org2d5c169">
+<div id="outline-container-orgdbd4497" class="outline-3">
+<h3 id="orgdbd4497">Systems</h3>
+<div class="outline-text-3" id="text-orgdbd4497">
 <ul class="org-ul">
 <li>MIT <a href="https://pdos.csail.mit.edu/6.1810/2023/schedule.html">6.1810</a> Operating System Engineering 2023
 <ul class="org-ul">
@@ -323,9 +324,14 @@ This MIT course is modelled after the classic OS hacker's <a href="https://en.wi
 </div>
 </div>
 
-<div id="outline-container-orgb10edde" class="outline-3">
-<h3 id="orgb10edde">Software Exploitation</h3>
-<div class="outline-text-3" id="text-orgb10edde">
+<div id="outline-container-org5265910" class="outline-3">
+<h3 id="org5265910">Software Exploitation</h3>
+<div class="outline-text-3" id="text-org5265910">
+<p>
+Numerous CTFs exist for this like <a href="https://plaidctf.com/">PLAID</a> or <a href="https://picoctf.org/">picoCTF</a> some we can replay/practice. 
+</p>
+
+
 <ul class="org-ul">
 <li>ASU <a href="https://www.youtube.com/playlist?list=PL-ymxv0nOtqr7zM7ZBREoWa-eeSaKFJQd">598</a> Software Exploitation 2024
 <ul class="org-ul">
@@ -360,14 +366,14 @@ This MIT course is modelled after the classic OS hacker's <a href="https://en.wi
 </ul>
 
 <p>
-There is no single course for this the field is always evolving we can only hope for a solid background on memory and how to attack it. Numerous CTFs exist for this like <a href="https://plaidctf.com/">PLAID</a> or <a href="https://picoctf.org/">picoCTF</a> some we can replay/practice. 
+We can take all these at the same time.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfe4ee7f" class="outline-3">
-<h3 id="orgfe4ee7f">Hardware Exploitation</h3>
-<div class="outline-text-3" id="text-orgfe4ee7f">
+<div id="outline-container-orgce5e1f4" class="outline-3">
+<h3 id="orgce5e1f4">Hardware Exploitation</h3>
+<div class="outline-text-3" id="text-orgce5e1f4">
 <ul class="org-ul">
 <li>MIT <a href="http://csg.csail.mit.edu/6.S983/">G.S983</a> Secure Hardware Design 2023
 <ul class="org-ul">
@@ -378,9 +384,9 @@ There is no single course for this the field is always evolving we can only hope
 </div>
 
 
-<div id="outline-container-org61bc3b9" class="outline-3">
-<h3 id="org61bc3b9">Cryptography</h3>
-<div class="outline-text-3" id="text-org61bc3b9">
+<div id="outline-container-org9578780" class="outline-3">
+<h3 id="org9578780">Cryptography</h3>
+<div class="outline-text-3" id="text-org9578780">
 <p>
 Since we have full access I'm going to try Tanja Lange's Post Quantum Crypto <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto22/">course</a> the first part goes through all the main contenders for a future crypto standard and the second part is various methods for cryptanalysis. Almost all computer security type courses make you take some kind of crypto we may as well learn the future of crypto. We have this <a href="https://shoup.net/ntb/">book</a> to help us which has no formal prereqs and the <a href="https://cryptopals.com/">cryptopals</a> challenges.   
 </p>
@@ -390,52 +396,65 @@ Of course this means we can also get into <a href="https://www.youtube.com/watch
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-orgdb34dee" class="outline-2">
-<h2 id="orgdb34dee">Typical industry tracks</h2>
-<div class="outline-text-2" id="text-orgdb34dee">
-</div>
-<div id="outline-container-org07a5f64" class="outline-4">
-<h4 id="org07a5f64">SOC threat analyst</h4>
-<div class="outline-text-4" id="text-org07a5f64">
+<div id="outline-container-org1f613c7" class="outline-3">
+<h3 id="org1f613c7">Security Research</h3>
+<div class="outline-text-3" id="text-org1f613c7">
 <p>
-SOC means Security Operations Center. This is a wagie working shifts for a 24/7 (usually remotely) enterprise tier threat response contractor who is paid to anaylze system logs (almost always Windows OS logs) and analyze network traffic to spot problems. You primarily extract and filter data with tools like OSquery and do 'threat intelligence'. To get into this find some kind of learning path for SOC Level 1 and 2 but these almost always cost money. This <a href="https://tryhackme.com/path/outline/soclevel1">one</a> is the cheapest I could find or you could simply use their syllabus to look up everything yourself like OSquery, wireshark, MITRE etc. To find these companies search for security operations center jobs or try Sophos. I imagine these kinds of outfits exist so companies can satisfy some kind of insurance compliance or lawsuit protection from any breaches or leaked data. If you get in here you want to move up to running the place and showing up to the SOC HQ wearing those tiny shades because every tech company will hire you as a Chief Information Security Officer (CISO). Outside of finance the CISO is usually given no budget and no authority you get paid a lot of money to sit on the executive board while answering emails and making presentations it's a ceremonial job almost.  
-</p>
-</div>
-</div>
-
-<div id="outline-container-org74e2558" class="outline-4">
-<h4 id="org74e2558">Security consultant</h4>
-<div class="outline-text-4" id="text-org74e2558">
-<p>
-Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to Azure or AWS deployment to how developers handle the keys for signing into the source repository. With large security consulting outfits the typical engagement is 2-3 consultants for 2 weeks where there is juniors competent in running security procedures like penetration testing and the principal consultant oversees them and presents all the reports the juniors produced justifying the money spent. On large contracts they will contract reverse engineers and all kinds of other specialists charging insanely high hourly rates. The major outfits are Leviathan security, IOactive, Bishop Fox, NCC group, Crowdstrike, or search for security consultant jobs. 
-</p>
-
-<p>
-If you live in France then get in with <a href="https://www.synacktiv.com/en/join-us#recrutement">Synacktiv</a> they place first or second in every global competition or <a href="https://www.reversetactics.com/">REverse Tactics</a>. If you live in Saudi Arabia join <a href="https://haboob.sa/">Haboob SA</a> they also win global competition prizes. If you live in Korea join <a href="https://kaist-hacking.github.io/">KAIST</a> or <a href="https://theori.io/career/hiring">theori</a>. If you live in Vietnam join <a href="https://viettelcybersecurity.com/">Viettel</a>. If you live in Taiwan join <a href="https://devco.re/en/company/jobs/">DEVCORE</a>. If you're in Germany join the redrocket <a href="https://discord.com/invite/5YktcJZ">club</a>.          
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgc9566c9" class="outline-4">
-<h4 id="orgc9566c9">Freelance researcher</h4>
-<div class="outline-text-4" id="text-orgc9566c9">
-<p>
-Selling <a href="https://www.crowdfense.com/exploit-acquisition-program/">exploits</a> for a lot of money.     
-</p>
-
-<p>
-These researchers will build entire target models to simulate environments/hardware or use formal verification methods on program control flow graphs to expose logical flaws and other techniques we'll see. This is the top of the game and you're probably winning CTFs every year on some elite team or working for some agency. 
+We can extract the logic of entire programs looking at their Control Flow Graphs and go <a href="https://www.cs.cmu.edu/~15414/schedule.html">bug hunting</a> using the tools of formal verification to break the logic. Brown university too has a new book for their <a href="https://csci1710.github.io/book/">Logic for Systems</a> course and this is how you take a system design with security access levels and run simulations to combine states and break out of containment. 
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-orgdbdcbc8" class="outline-2">
-<h2 id="orgdbdcbc8">How bad it all is</h2>
-<div class="outline-text-2" id="text-orgdbdcbc8">
+<div id="outline-container-org277a8c9" class="outline-2">
+<h2 id="org277a8c9">Typical industry tracks</h2>
+<div class="outline-text-2" id="text-org277a8c9">
+<p>
+This curriculum targets security consultant and researcher but if you know how to break things everyone will want to hire you.
+</p>
+</div>
+
+<div id="outline-container-orgd027078" class="outline-4">
+<h4 id="orgd027078">SOC threat analyst</h4>
+<div class="outline-text-4" id="text-orgd027078">
+<p>
+SOC means Security Operations Center. This is a wagie working shifts for a 24/7 (usually remotely) enterprise tier threat response contractor who is paid to anaylze system logs (almost always Windows OS logs) and analyze network traffic to spot problems. They have some kind of monitoring tools and you primarily extract and filter data with OSquery and do 'threat intelligence'. The curriculum we are already doing is more than enough to get into this or find some kind of learning path for SOC Level 1 and 2 but these almost always cost money. This is the only <a href="https://www.edx.org/learn/cybersecurity/ibm-threat-intelligence-lifecycle-fundamentals">free course</a> (edx) I could find. This <a href="https://tryhackme.com/path/outline/soclevel1">one</a> is the cheapest I could find it appears to be some subscription model of $14/m or you could simply use their syllabus to look up everything yourself like OSquery, wireshark, Snort, MITRE etc. Most people get into this via the military or were former system admins or pay for <a href="https://www.isc2.org/certifications/cc">certs</a>. 
+</p>
+
+<p>
+To find SOCs search for security operations center jobs or try Sophos or NCC Group (Netherlands or Philippines) these companies have to hire local citizens and can't outsource because of security clearances. I imagine these outfits exist so gov contractors and giant medical companies can satisfy some kind of insurance compliance or lawsuit protection from any breaches/leaked data. If you get in here you want to move up to running the place because they pay for all your silly certs and because every tech company will hire you as a Chief Information Security Officer (CISO) should you leave SOC work. Outside of finance and pharma/medical the CISO is usually given next to no budget and no authority you get paid a lot of money to sit on the executive board while answering emails and making presentations it's a ceremonial job almost where you hire the same SOC you used to work for and then play golf or whatever CISO's actually do all day.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc81f42d" class="outline-4">
+<h4 id="orgc81f42d">Security consultant</h4>
+<div class="outline-text-4" id="text-orgc81f42d">
+<p>
+Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to secOps deployment to how developers handle the keys for signing into the source repository. With large security consulting outfits the typical engagement is 2-3 consultants for 2 weeks where there is juniors competent in running security procedures like penetration testing and the principal consultant oversees them and presents all the reports the juniors produced justifying the money spent. On large contracts they will outsource reverse engineers and all kinds of other specialists charging insanely high hourly rates. The major outfits are Leviathan security, IOactive, Bishop Fox, NCC group, Crowdstrike, or search for security consultant jobs. Leviathan is probably the biggest in the US because I believe you have to contract either them and/or Bishop Fox in order use any kind of Google auth in your software. They even sell a 'virtual CISO' <a href="https://www.leviathansecurity.com/services/risk-advisory-services/virtual-chief-information-security-officer">service</a>. If these outfits aren't hiring send in a general application or email them and say you want to apprentice showing them some kind of proof of your skills like custom tools you wrote or something. 
+</p>
+
+<p>
+If you live in France then get in with <a href="https://www.synacktiv.com/en/join-us#recrutement">Synacktiv</a> they place first or second in every global competition or <a href="https://www.reversetactics.com/">REverse Tactics</a>. If you live in Saudi Arabia join <a href="https://haboob.sa/">Haboob SA</a> they also win global competition prizes. If you live in Korea join <a href="https://kaist-hacking.github.io/">KAIST</a> or <a href="https://theori.io/career/hiring">theori</a>. If you live in Vietnam join <a href="https://viettelcybersecurity.com/">Viettel</a>. If you live in Taiwan join <a href="https://devco.re/en/company/jobs/">DEVCORE</a>. If you're in Germany join the redrocket <a href="https://discord.com/invite/5YktcJZ">club</a>. If you're in the Netherlands get into NCC group (Delft) or go to TU/e and take Tanja Lange's master cryptology courses.      
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaaee7b6" class="outline-4">
+<h4 id="orgaaee7b6">Freelance researcher</h4>
+<div class="outline-text-4" id="text-orgaaee7b6">
+<p>
+Selling <a href="https://www.crowdfense.com/exploit-acquisition-program/">exploits</a> for a lot of money. Some of these bounties are hilarious like only 100k for code signing bypass, it must be easier than it looks if it pays that low. If you can send a SMS with no click total root access of any Android phone you will be paid $7m. They also really want Docker Escape vuln. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8511010" class="outline-2">
+<h2 id="org8511010">How bad it all is</h2>
+<div class="outline-text-2" id="text-org8511010">
 <p>
 If you haven't seen it, watch the CS19 lecture on <a href="https://youtu.be/7orQOW6fp2A">security</a>.  
 </p>
@@ -465,9 +484,9 @@ He talks about SELinux also known as MAC or mandatory access controls like AppAr
 </p>
 </div>
 
-<div id="outline-container-orgd4a326d" class="outline-3">
-<h3 id="orgd4a326d">Open source sabotage</h3>
-<div class="outline-text-3" id="text-orgd4a326d">
+<div id="outline-container-org6b4b97e" class="outline-3">
+<h3 id="org6b4b97e">Open source sabotage</h3>
+<div class="outline-text-3" id="text-org6b4b97e">
 <p>
 This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relevant still. Poul-Henning Kamp is involved in the FreeBSD project and here he imagines what would he do if he was tasked by some nation state to 'control' or sabotage open source.  
 </p>
@@ -482,18 +501,18 @@ This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relev
 </div>
 </div>
 
-<div id="outline-container-org849d341" class="outline-3">
-<h3 id="org849d341">The security industry</h3>
-<div class="outline-text-3" id="text-org849d341">
+<div id="outline-container-org0481246" class="outline-3">
+<h3 id="org0481246">The security industry</h3>
+<div class="outline-text-3" id="text-org0481246">
 <p>
 Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He is completely blackpilled and tells us how nobody cares or wants to fix the problems. If you raise the alarm you often threatened or dismissed. He wrote multiple warnings to the Rails github repository only for them to hand wave the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6cb820e" class="outline-3">
-<h3 id="org6cb820e">Massive surveillance</h3>
-<div class="outline-text-3" id="text-org6cb820e">
+<div id="outline-container-org4569d62" class="outline-3">
+<h3 id="org4569d62">Massive surveillance</h3>
+<div class="outline-text-3" id="text-org4569d62">
 <p>
 Now cancelled former Tor developer and 'Wikileaks associate' Jacob Appelbaum quietly got a PhD from two of the world's premiere crypto experts DJ Bernstein and Tanja Lange at TU/e in the Netherlands. I don't know or care about any of the details of his fall from grace but he did write a thesis/dissertation so we may as well read it. The pdf is <a href="https://research.tue.nl/en/publications/communication-in-a-world-of-pervasive-surveillance-sources-and-me">here</a> or direct link <a href="https://research.tue.nl/files/197416841/20220325_Appelbaum_hf.pdf">here</a>. 
 </p>
@@ -538,9 +557,9 @@ Chapter 8 REUNION is a PAKE for real life key encrypted key exchange, a kind of 
 </div>
 
 
-<div id="outline-container-orgfa9012e" class="outline-2">
-<h2 id="orgfa9012e">Begin</h2>
-<div class="outline-text-2" id="text-orgfa9012e">
+<div id="outline-container-org16e4f8f" class="outline-2">
+<h2 id="org16e4f8f">Begin</h2>
+<div class="outline-text-2" id="text-org16e4f8f">
 <p>
 -15-213 <a href="https://www.cs.cmu.edu/~213/">Introduction to Computer Systems</a>
 </p>

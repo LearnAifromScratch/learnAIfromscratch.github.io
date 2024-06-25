@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-06 Sat 00:16 -->
+<!-- 2024-06-24 Mon 17:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2024</title>
@@ -248,127 +248,79 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3e1fac8">Intro</a>
+<li><a href="#org1d2db31">Intro</a>
 <ul>
-<li><a href="#org7e43f81">Tour of university AI courses</a></li>
-<li><a href="#org9b257ff">Tour of Applied AI courses</a></li>
-<li><a href="#org0580a4f">Limits of current AI</a></li>
+<li><a href="#org146dd50">Limits of AI</a></li>
 </ul>
 </li>
-<li><a href="#orgc3ca856">Strategy</a></li>
+<li><a href="#orgf31c682">PreReqs</a></li>
+<li><a href="#org1946721">Transformer Mechanistic Interpretability TODO</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org3e1fac8" class="outline-2">
-<h2 id="org3e1fac8">Intro</h2>
-<div class="outline-text-2" id="text-org3e1fac8">
+<div id="outline-container-org1d2db31" class="outline-2">
+<h2 id="org1d2db31">Intro</h2>
+<div class="outline-text-2" id="text-org1d2db31">
 <p>
-As of this writing (April 5 2024) if you look at arxiv.org submissions for Machine Learning since April 1 there is 625 papers. In the past 12 months there was 17,468 papers just on on Neural Networks (Deep Learning). The field changes so much there is no way to keep up unless you can teach yourself how to read these papers and implement (optimize) them. We will learn here how exactly to do that because there is one constant that doesn't change and that's the original theory how all this works. There is also a resource called <a href="https://www.depthfirstlearning.com/2020/Resurrecting-Sigmoid">Depth First Learning</a> where curriculums are built around papers so we can understand them written by the researchers of the paper themselves and try and implement them. 
+The current state of AI is transformer architecture which have all been trained by self-supervised learning where they are now even creating their own optimized architecture by themselves and showing emergent properties meaning they posess abilities they weren't designed for. The whole point of AI was the model will one day build itself a better model and that day is today.
+</p>
+
+<p>
+There's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> which is essentially reverse engineering AI. Neel Nanda has helpfully produced a concrete <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for this and even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> in this field through the ML Alignment &amp; Theory Scholars program so we may as well start there.
 </p>
 </div>
 
-<div id="outline-container-org7e43f81" class="outline-3">
-<h3 id="org7e43f81">Tour of university AI courses</h3>
-<div class="outline-text-3" id="text-org7e43f81">
+<div id="outline-container-org146dd50" class="outline-3">
+<h3 id="org146dd50">Limits of AI</h3>
+<div class="outline-text-3" id="text-org146dd50">
 <p>
-I've audited every public 'Intro to ML' or 'Intro to Deep Learning' course that can be found with a bot and honestly none of them teach you more than what you would learn doing the classic Andrew Ng course. If you insist on taking a typical undergrad course here are some of the better one's: 
+Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf31c682" class="outline-2">
+<h2 id="orgf31c682">PreReqs</h2>
+<div class="outline-text-2" id="text-orgf31c682">
+<p>
+Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">guide</a> for prereqs he provides the material for transformer architecture but first we need to know the following:
 </p>
 
 <ul class="org-ul">
-<li>Brown's CS4780 <a href="https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/">ML for Intelligent Systems</a> (2018)
-<ul class="org-ul">
-<li>Same content more or less as 2023 CMU course</li>
-<li>Probably the best lecture style</li>
-<li>Homework is <a href="https://www.dropbox.com/s/tbxnjzk5w67u0sp/Homeworks.zip?dl=0">here</a></li>
-</ul></li>
-</ul>
-
-
-<ul class="org-ul">
-<li>CMU's 10-301 <a href="https://www.cs.cmu.edu/~mgormley/courses/10601-s23/">Intro to ML</a> (2023)
-<ul class="org-ul">
-<li>Lecture <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22d5bf275d-ff88-4bf6-a865-b065010f55c2%22">recordings</a> and recitation <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b7db1d38-50a1-4c45-9eed-b07400ccc0ef%22">recordings</a> that cover the homework</li>
-<li>Many older <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22892c28d3-f548-4a7a-9de0-ae90011552fa%22">archives</a> like Summer 2022</li>
-</ul></li>
-<li>Caltech <a href="https://www.youtube.com/playlist?list=PLD63A284B7615313A">playlist</a> explaining the theory of ML
-<ul class="org-ul">
-<li>Nice content here about what exactly is linear</li>
-</ul></li>
-</ul>
-
-<p>
-A totally different perspective:
-</p>
-
-<ul class="org-ul">
-<li>Berkeley's <a href="https://inst.eecs.berkeley.edu/~cs188/sp24/">CS188</a> which covers the old school Peter Norvig AI book
-<ul class="org-ul">
-<li>If you can't find all the 2024 videos look at <a href="https://inst.eecs.berkeley.edu/~cs188/fa23/">2023</a></li>
-</ul></li>
-</ul>
-
-
-<ul class="org-ul">
-<li>CMU's 16-745 <a href="https://github.com/Optimal-Control-16-745">Optimal Control</a> (Reinforcement Learning)
-<ul class="org-ul">
-<li>Lectures on <a href="https://www.youtube.com/playlist?list=PLZnJoM76RM6KugDT9sw5zhAmqKnGeoLRa">YouTube</a></li>
-<li>Explains dynamics as you go but you'll have to look up <a href="https://en.wikipedia.org/wiki/Fourth,_fifth,_and_sixth_derivatives_of_position">notation</a></li>
-</ul></li>
+<li>Linear algebra</li>
+<li>Probability basics</li>
+<li>Multivariable calculus basics</li>
 </ul>
 
 <p>
-I omitted a ton of other courses like ETH Zurich, Harvard, Berkeley, Waterloo, and countless more because it's just the same content at different levels of confusion. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org9b257ff" class="outline-3">
-<h3 id="org9b257ff">Tour of Applied AI courses</h3>
-<div class="outline-text-3" id="text-org9b257ff">
-<p>
-The scikit-learn core developer Andreas Mueller taught <a href="https://www.youtube.com/playlist?list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM">this course</a> at Columbia in NY and it's definitely one of the best introductions to software frameworks after you learn all the theory. Another is this Neural Networks/LLMs <a href="https://karpathy.ai/zero-to-hero.html">crash course</a> by Andrej Karpathy. My favorite course is <a href="https://book.sciml.ai/course/">Scientific ML</a> which is an applied course on optimization for physics-informed AI aka 'expert-guided AI'. 
+All these topics are covered by MIT's <a href="https://github.com/mitmath/18065">18.065 Matrix Methods</a> and MIT's <a href="http://introtodeeplearning.com/">Deep Learning</a> boot camp to fill in the geometry so we can visualize what we're doing. However that course assumes you've already had a multivariable calculus background, which means you had a scalar calculus background, and some kind of undergrad linear algebra introduction. 
 </p>
 
 <p>
-Biggest open research problem is reducing hardware overhead of neural networks that means redefining floating point, fine control of garbage collectors for AutoDiff and optimizing numerical linear algebra libraries. You probably never imagined the cutting edge AI research in the future would be in numerical methods for specialized integer hardware and ASICs but alas here we are.   
-</p>
-</div>
-</div>
-
-<div id="outline-container-org0580a4f" class="outline-3">
-<h3 id="org0580a4f">Limits of current AI</h3>
-<div class="outline-text-3" id="text-org0580a4f">
-<p>
-Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this model for everything? Someone from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
-</p>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-orgc3ca856" class="outline-2">
-<h2 id="orgc3ca856">Strategy</h2>
-<div class="outline-text-2" id="text-orgc3ca856">
-<ul class="org-ul">
-<li>This <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">playlist</a> of theoretical foundations and <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a> 
-<ul class="org-ul">
-<li>Same book is still used in recent PhD <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa22/index.html">courses</a></li>
-</ul></li>
-</ul>
-
-<p>
-If you flip through that pdf it looks absolutely incomprehensible but the magic of the course we are doing is he walks through all the math and explains it. Then we can try a deep learning paper from Depth First Learning and implement it with (non)convex <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%2235028909-68d2-46be-b0d8-af020148d304%22">optimization</a>. 
+We can get both by auditing Evan Chen's <a href="https://web.evanchen.cc/napkin.html">Napkin</a> which prefers to use the tools of graduate mathematics because undergrad math is a convoluted mess that nobody actually uses. For example the Riemann integral was obsoleted well over 100+ years ago but they hilariously make you take it in every undergrad course from Calc I to Analysis II even teaching you nonsense like 'improper integrals' which don't exist. The Lebesgue integral replaced it, then in the (1960s?) the Henstock-Kurzweil integral replaced the Lebesgue integral by generalizing it as a special case and the proofs for these things are simple once all the machinery of a measure space is set up. They're nothing like undergrad proofs. Probability is another mess that is absolutely trivial to understand once you have a measurable space and is a bunch of garbage when you don't. 
 </p>
 
 <p>
-While we finish the book/lectures I will go through some geometry-centric <a href="https://www.youtube.com/playlist?list=PLIljB45xT85BhzJ-oWNug1YtUjfWp1qAp">linear algebra</a> videos because honestly they are best resource anywhere to see in your mind what is going on such as hyperplanes. Anything not covered will be picked up in the Depth First Learning content.  
+Mechanistic Interpretability is all about spotting patterns at a high level while we peel off transformations (matrices) so we should begin with math that generalizes everything to it's behavior.
 </p>
-
 
 <p>
-TODO setting up every workshop so I can just execute 1-3 hrs of work a day and finish everything here. 
+TODO
 </p>
+</div>
+</div>
+
+
+<div id="outline-container-org1946721" class="outline-2">
+<h2 id="org1946721">Transformer Mechanistic Interpretability TODO</h2>
+<div class="outline-text-2" id="text-org1946721">
+<p>
+The <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">concrete steps</a> to get started reverse engineering GPT models. 
+</p>
+
+
 
 <hr />
 <p>

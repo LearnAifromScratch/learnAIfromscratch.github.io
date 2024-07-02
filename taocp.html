@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-07-01 Mon 18:13 -->
+<!-- 2024-07-01 Mon 18:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Let's Read the Art of Computer Programming</title>
@@ -270,43 +270,43 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3a18401">Intro</a>
+<li><a href="#orgf752f9d">Intro</a>
 <ul>
-<li><a href="#org882ec1f">Get the book(s)</a></li>
-<li><a href="#org1066132">The Bill Gates quote</a></li>
-<li><a href="#orgeb3c287">MMIX/MIX</a></li>
-<li><a href="#orgbb38546">Optimizing compilers are dead</a></li>
+<li><a href="#org796ae7c">Get the book(s)</a></li>
+<li><a href="#org6fb16d1">The Bill Gates quote</a></li>
+<li><a href="#org0e41285">MMIX/MIX</a></li>
+<li><a href="#orgc3b3f88">Optimizing compilers are dead</a></li>
 </ul>
 </li>
-<li><a href="#org99422a2">Prereq: Assembly</a>
+<li><a href="#org6a93566">Prereq: Assembly</a>
 <ul>
-<li><a href="#org8746fa5">New Orleans</a></li>
-<li><a href="#orgbd71fbf">Sydney</a></li>
-<li><a href="#org176920c">Hanoi</a></li>
-<li><a href="#orgb9c7f84">Cusco</a></li>
-<li><a href="#org4f48a74">Reykjavik</a></li>
-<li><a href="#orgb7aea33">Whitehorse</a></li>
-<li><a href="#orgfdc6563">Montevideo</a></li>
+<li><a href="#org1e3f701">New Orleans</a></li>
+<li><a href="#orgc280ec6">Sydney</a></li>
+<li><a href="#org0d410f4">Hanoi</a></li>
+<li><a href="#org2fd2abf">Cusco</a></li>
+<li><a href="#org17d49f8">Reykjavik</a></li>
+<li><a href="#orgb959aec">Whitehorse</a></li>
+<li><a href="#org1ad4c4f">Montevideo</a></li>
 </ul>
 </li>
-<li><a href="#orgd4bb680">Prereq: Architecture</a></li>
-<li><a href="#orgd726c88">Prereq: Calculus</a>
+<li><a href="#org1df2313">Prereq: Architecture</a></li>
+<li><a href="#org54debc5">Prereq: Calculus</a>
 <ul>
-<li><a href="#orgc6dbb54">How to learn calculus</a></li>
-<li><a href="#org44b537d">Lax 1.1</a></li>
-<li><a href="#org0eaddec">Lax 1.2</a></li>
-<li><a href="#orgc717b79">Lax 1.3</a></li>
+<li><a href="#orgb7174a8">How to learn calculus</a></li>
+<li><a href="#org65662a8">Lax 1.1</a></li>
+<li><a href="#org5641045">Lax 1.2</a></li>
+<li><a href="#orgd2dd2e0">Lax 1.3</a></li>
 </ul>
 </li>
-<li><a href="#org1ba13d0">1.1 Algorithms</a></li>
+<li><a href="#orgea06482">1.1 Algorithms</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org3a18401" class="outline-2">
-<h2 id="org3a18401">Intro</h2>
-<div class="outline-text-2" id="text-org3a18401">
+<div id="outline-container-orgf752f9d" class="outline-2">
+<h2 id="orgf752f9d">Intro</h2>
+<div class="outline-text-2" id="text-orgf752f9d">
 <p>
 I'm going to start with <i>Volume 1: Fundamental Algorithms</i> 3rd edition by Don Knuth and keep going. These books don't seem to be a reference much of the index for major results points to exercises and the content is often comparing two algorithms together. Kirchoff's law of electrical circuit theory is used to analyze program control flow where the number of times an instruction is executed must equal the number of times a program transfers to that instruction. Knuth dislikes jargon and everything is practical you won't find theoretically good on paper algorithms where inputs are jacked up to infinity that hide a huge constant of ops like when Knuth wrote <i>The Stanford GraphBase</i> <a href="https://www-cs-faculty.stanford.edu/~knuth/sgb.html">book</a> and discovered Kruskal's algorithm beats Fibonacci heaps. The algorithms from that book are all in volume 4. 
 </p>
@@ -316,9 +316,9 @@ The physical book itself is a representation of the careful work that has gone i
 </p>
 </div>
 
-<div id="outline-container-org882ec1f" class="outline-3">
-<h3 id="org882ec1f">Get the book(s)</h3>
-<div class="outline-text-3" id="text-org882ec1f">
+<div id="outline-container-org796ae7c" class="outline-3">
+<h3 id="org796ae7c">Get the book(s)</h3>
+<div class="outline-text-3" id="text-org796ae7c">
 <p>
 See the <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site for details or where to get official pdf/copies. I'm using the 3rd edition look for the most recent printings that fix errata. If you can't buy them use <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> to get a pdf.
 </p>
@@ -326,9 +326,9 @@ See the <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a>
 </div>
 
 
-<div id="outline-container-org1066132" class="outline-3">
-<h3 id="org1066132">The Bill Gates quote</h3>
-<div class="outline-text-3" id="text-org1066132">
+<div id="outline-container-org6fb16d1" class="outline-3">
+<h3 id="org6fb16d1">The Bill Gates quote</h3>
+<div class="outline-text-3" id="text-org6fb16d1">
 <p>
 Everybody talks about the famous old quote in the back of volume 1 by Gates: 'you should definitely send me a resume if you can read the whole thing'. I found a more recent quote from 2005:
 </p>
@@ -362,9 +362,9 @@ I'm not sure what the double-star problems are maybe the earlier editions had th
 </div>
 </div>
 
-<div id="outline-container-orgeb3c287" class="outline-3">
-<h3 id="orgeb3c287">MMIX/MIX</h3>
-<div class="outline-text-3" id="text-orgeb3c287">
+<div id="outline-container-org0e41285" class="outline-3">
+<h3 id="org0e41285">MMIX/MIX</h3>
+<div class="outline-text-3" id="text-org0e41285">
 <p>
 Volumes 1-3 still contain the original MIX machine and there exists <a href="https://www.gnu.org/software/mdk/">GNU MDK</a> or <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">other software</a> to run MIXware meaning compile .mixal files to .mix and simulate running them either with mixvm, gmixvm GUI, or a scheme interpreter.
 </p>
@@ -379,9 +379,9 @@ Knuth releases these updates called <a href="https://www-cs-faculty.stanford.edu
 </div>
 </div>
 
-<div id="outline-container-orgbb38546" class="outline-3">
-<h3 id="orgbb38546">Optimizing compilers are dead</h3>
-<div class="outline-text-3" id="text-orgbb38546">
+<div id="outline-container-orgc3b3f88" class="outline-3">
+<h3 id="orgc3b3f88">Optimizing compilers are dead</h3>
+<div class="outline-text-3" id="text-orgc3b3f88">
 <p>
 A reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. 
 </p>
@@ -389,9 +389,9 @@ A reason to learn this material is given by DJ Bernstein's talk a few years ago 
 </div>
 </div>
 
-<div id="outline-container-org99422a2" class="outline-2">
-<h2 id="org99422a2">Prereq: Assembly</h2>
-<div class="outline-text-2" id="text-org99422a2">
+<div id="outline-container-org6a93566" class="outline-2">
+<h2 id="org6a93566">Prereq: Assembly</h2>
+<div class="outline-text-2" id="text-org6a93566">
 <p>
 The preface says we should familiar enough with programming that we've written and tested a few programs, which means assembly/machine language programs. I assume you already know basic programming from somewhere else but not an assembly language. We can learn that doing microcorruption.com CTF and having a visual interface to step through all the code in the debugger to see what it does, see how registers are manipulated etc.
 </p>
@@ -418,18 +418,18 @@ There's a <a href="https://microcorruption.com/public/manual.pdf">manual</a> for
 </p>
 </div>
 
-<div id="outline-container-org8746fa5" class="outline-3">
-<h3 id="org8746fa5">New Orleans</h3>
-<div class="outline-text-3" id="text-org8746fa5">
+<div id="outline-container-org1e3f701" class="outline-3">
+<h3 id="org1e3f701">New Orleans</h3>
+<div class="outline-text-3" id="text-org1e3f701">
 <p>
 The comparison instruction wants a 7 char password, the 'create password' sub-routine generates a 7 char password, try it just entering the 7 hex numbers in one password string, success.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbd71fbf" class="outline-3">
-<h3 id="orgbd71fbf">Sydney</h3>
-<div class="outline-text-3" id="text-orgbd71fbf">
+<div id="outline-container-orgc280ec6" class="outline-3">
+<h3 id="orgc280ec6">Sydney</h3>
+<div class="outline-text-3" id="text-orgc280ec6">
 <p>
 Set breakpoint at most interesting function which looks like check password. Enter 'test' as text for password, then c to zip to the breakpoint. Pressing s and stepping, r15 is pointing to 439c where we see 7465 7374 or 'test'. Notice the instructions however:
 </p>
@@ -451,36 +451,36 @@ Note the actual code/instruction the machine uses is bf902b5d0000 or bf907021020
 </div>
 </div>
 
-<div id="outline-container-org176920c" class="outline-3">
-<h3 id="org176920c">Hanoi</h3>
-<div class="outline-text-3" id="text-org176920c">
+<div id="outline-container-org0d410f4" class="outline-3">
+<h3 id="org0d410f4">Hanoi</h3>
+<div class="outline-text-3" id="text-org0d410f4">
 <p>
 Passwords must be between 8-16 chars so I entered a gigantic password and while stepping through the execution noticed it overflowed to the second memory location 2410. Ctrl-f the instructions for 2410 and there's a comparison there so I overflowed the hex password to 17 digits with that comparison at 2410. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb9c7f84" class="outline-3">
-<h3 id="orgb9c7f84">Cusco</h3>
-<div class="outline-text-3" id="text-orgb9c7f84">
+<div id="outline-container-org2fd2abf" class="outline-3">
+<h3 id="org2fd2abf">Cusco</h3>
+<div class="outline-text-3" id="text-org2fd2abf">
 <p>
 Entered another gigantic password, noticed it overflowed to where the program counter (the next instruction) is so overflowed it to change the pc to 'unlock door' instruction in little endian format.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4f48a74" class="outline-3">
-<h3 id="org4f48a74">Reykjavik</h3>
-<div class="outline-text-3" id="text-org4f48a74">
+<div id="outline-container-org17d49f8" class="outline-3">
+<h3 id="org17d49f8">Reykjavik</h3>
+<div class="outline-text-3" id="text-org17d49f8">
 <p>
 We can't see all the disassembly and have to step watching 'Current Instruction' box. Enter a single character password as a test and step until you see a cmp for the address in r4 offset by -0x24 or 36. Move back that amount in memory and you're at the password you just entered, so enter (little endian) whatever the cmp constant is. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb7aea33" class="outline-3">
-<h3 id="orgb7aea33">Whitehorse</h3>
-<div class="outline-text-3" id="text-orgb7aea33">
+<div id="outline-container-orgb959aec" class="outline-3">
+<h3 id="orgb959aec">Whitehorse</h3>
+<div class="outline-text-3" id="text-orgb959aec">
 <p>
 They took away the function to unlock the door, we have to read the <a href="https://microcorruption.com/public/manual.pdf">manual</a> about how the HSM 2 model works. In 3.1 <i>This enables the CPU to trigger software interrupt 0x7F to directly trigger the door lock to unlock</i> so we want to bamboozle this code to somehow run 0x7F. As usual start with a gigantic password and see where it is stored. Mine begins at memory location 347c. Looking at the conditional unlock door function I want to push 0x7f the unlock command instead of 0x7e the password comparison command, and then call that interrupt after.
 </p>
@@ -491,9 +491,9 @@ If you overflow your password you'll see in the 'current instruction' box it wil
 </div>
 </div>
 
-<div id="outline-container-orgfdc6563" class="outline-3">
-<h3 id="orgfdc6563">Montevideo</h3>
-<div class="outline-text-3" id="text-orgfdc6563">
+<div id="outline-container-org1ad4c4f" class="outline-3">
+<h3 id="org1ad4c4f">Montevideo</h3>
+<div class="outline-text-3" id="text-org1ad4c4f">
 <p>
 Two new functions strcpy and memset. Memset appears to clear the password storage memory and strcpy removes all null bytes 00 out of our password entry so if we want to use 0x7f or 7f00 we have to steal some code to add/subtract or AND off some bits to avoid strcpy deleting our payload. I used 32 junk filler + 0244 + payload as a hex password after many trial and error getting the overflow to lineup after strcpy killed my 0044 address.
 </p>
@@ -505,9 +505,9 @@ You can play with instructions <a href="https://microcorruption.com/assembler">h
 </div>
 </div>
 
-<div id="outline-container-orgd4bb680" class="outline-2">
-<h2 id="orgd4bb680">Prereq: Architecture</h2>
-<div class="outline-text-2" id="text-orgd4bb680">
+<div id="outline-container-org1df2313" class="outline-2">
+<h2 id="org1df2313">Prereq: Architecture</h2>
+<div class="outline-text-2" id="text-org1df2313">
 <p>
 I'm going to crash course some lectures from MIT's 6.004 on RISC-V while reading the TAOCP chapter 1.3.1 on MIX which is a simple 1960s machine.
 </p>
@@ -535,9 +535,9 @@ MIX has very basic peripherals for input like tape drives but this doesn't matte
 </div>
 
 
-<div id="outline-container-orgd726c88" class="outline-2">
-<h2 id="orgd726c88">Prereq: Calculus</h2>
-<div class="outline-text-2" id="text-orgd726c88">
+<div id="outline-container-org54debc5" class="outline-2">
+<h2 id="org54debc5">Prereq: Calculus</h2>
+<div class="outline-text-2" id="text-org54debc5">
 <p>
 In the preface 'a knowledge of basic calculus will suffice' is stated however basic calculus to Knuth probably means something like the following. Go to this <a href="http://www.jstor.org/stable/3026529">jstor</a> archive of an interview with Knuth and copy the DOI into <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to read the <a href="https://sci-hub.se/https://doi.org/10.2307/3026529">pdf</a>: 
 </p>
@@ -563,9 +563,9 @@ You can see the exact version Knuth used on <a href="https://archive.org/details
 </p>
 </div>
 
-<div id="outline-container-orgc6dbb54" class="outline-3">
-<h3 id="orgc6dbb54">How to learn calculus</h3>
-<div class="outline-text-3" id="text-orgc6dbb54">
+<div id="outline-container-orgb7174a8" class="outline-3">
+<h3 id="orgb7174a8">How to learn calculus</h3>
+<div class="outline-text-3" id="text-orgb7174a8">
 <p>
 Thomas' book is 900+ pages and took Knuth a year to complete with lectures and teaching assistants while he was at Case Tech. Since we are already doing hundreds of problems in TAOCP we really only need a single variable crash course that focuses on engineering instead of abstract real analysis. 
 </p>
@@ -574,15 +574,17 @@ Thomas' book is 900+ pages and took Knuth a year to complete with lectures and t
 There is a global survey of calculus education <a href="http://libgen.is/book/index.php?md5=DF1EDF1D2A43F2DC7BDE7DECA07F2040">here</a> the biggest problem students have is understanding that limits are an infinite process. It's so bad that in 2016 Arizona State profs were paid by the NSF to redo the curriculum so they came up with one that doesn't have limits at all called <a href="http://patthompson.net/ThompsonCalc/">Project DIRACC</a> it only contains the natural idea of a limit via exhaustive Archimedes style approximation (that doesn't end ergo infinite process) when accumulation (integration) is studied. They recommend Peter Lax's treatment of limits so that's what we'll do. 
 </p>
 
-<p>
-Obtain the book <a href="https://maa.org/press/maa-reviews/calculus-with-applications">Calculus with Applications</a> by Peter Lax/Terrell on library genesis. The errata for it is <a href="https://extras.springer.com/?query=978-1-4614-7945-1">here</a>. At the same time obtain Evan Chen's <a href="https://web.evanchen.cc/napkin.html">Napkin</a> it's a pdf crash course in metric spaces and topology both which will help us better understand what is actually going on. Lax will present the engineering view of scalar calculus we need such as learning what exp() and log() are and Evan Chen will show us at a higher level how it all fits together nicely. 
-</p>
+<ul class="org-ul">
+<li>Obtain the book <a href="https://maa.org/press/maa-reviews/calculus-with-applications">Calculus with Applications</a> by Peter Lax/Terrell on library genesis. The errata for it is <a href="https://extras.springer.com/?query=978-1-4614-7945-1">here</a>.</li>
+<li>Obtain Evan Chen's <a href="https://web.evanchen.cc/napkin.html">Napkin</a> it's a crash course in metric spaces and topology both which will help us better see what is actually going on.</li>
+<li>Obtain the free book <a href="http://classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">The Calculus Integral</a> by Brain S Thomson it's kind of a radical theory of integration book that can be used to really understand what continuity actually is.</li>
+</ul>
 </div>
 </div>
 
-<div id="outline-container-org44b537d" class="outline-3">
-<h3 id="org44b537d">Lax 1.1</h3>
-<div class="outline-text-3" id="text-org44b537d">
+<div id="outline-container-org65662a8" class="outline-3">
+<h3 id="org65662a8">Lax 1.1</h3>
+<div class="outline-text-3" id="text-org65662a8">
 <p>
 Limits are an algebra of inequalities so we start right away with inequalities. Eq (1.1) \(\epsilon\) is epsilon a variable traditionally used for something close to zero or in other words a very small displacement and is explained in chapter 1.3. Problem 1.8 we can solve right now it states for any numbers a and b, only one of those 3 conditions hold in b &lt;= a &lt;= b and since b can't be less than itself it must equal a. Figure 1.9 multiply each side by 1/4 and square root both sides. In the visual proof it's the side of a plus the short side of b squared or the area of a square which is side x side. 
 </p>
@@ -663,9 +665,9 @@ Ex 1.18 For (c) if you expand the definition of p(x) where it's a sum of squares
 </div>
 </div>
 
-<div id="outline-container-org0eaddec" class="outline-3">
-<h3 id="org0eaddec">Lax 1.2</h3>
-<div class="outline-text-3" id="text-org0eaddec">
+<div id="outline-container-org5641045" class="outline-3">
+<h3 id="org5641045">Lax 1.2</h3>
+<div class="outline-text-3" id="text-org5641045">
 <p>
 The proof of existence of square roots, a line interval is one side of a square and he defined a set S where every element squared is strictly less than 5.1. Because we are dealing with infinite decimal precision there will always be some gigantic decimal who's square is less than 5.1 so the least upper bound is 5.1 as there must exist an a<sup>2</sup> in S that equals 5.1 and that is the upper bound. It doesn't really make sense since the set was declared to be strictly less than 5.1 but does once you consider an infinite amount of extra precision can be added forever to a<sup>2</sup> = 5.9999999999&#x2026; that approaches 5.1 so the least upper bound 'r' must be r<sup>2</sup> = 5.1
 </p>
@@ -676,15 +678,15 @@ The rounding exercises here I skipped because the entire second half of Vol 2 of
 </div>
 </div>
 
-<div id="outline-container-orgc717b79" class="outline-3">
-<h3 id="orgc717b79">Lax 1.3</h3>
-<div class="outline-text-3" id="text-orgc717b79">
+<div id="outline-container-orgd2dd2e0" class="outline-3">
+<h3 id="orgd2dd2e0">Lax 1.3</h3>
+<div class="outline-text-3" id="text-orgd2dd2e0">
 <p>
 The Greek letter epsilon is finally defined. A sequence is a data-structure (a list) containing ordered elements that here are approximations to a number. For example the square root of 2 you can pretend is an algorithm attatched to the real line who produces an infinite stream of approximations that are stored in a list. This list has the properties that it converges towards the number n who's square is 2 because each additional approximation creates a smaller epsilon or tolerance level between the last approximation. If you watch <a href="https://www.youtube.com/watch?v=K4eAyn-oK4M">this</a> starting at 5:30 he draws a geometric intuition of what the limit definition is. 
 </p>
 
 <p>
-Example 1.11 5n + 5 is 5(n + 1) and now the denominator cancels. The approximation of root 2 in 1.3a using the squeeze theorem is pretty straight forward and similar to Newton's method though I didn't get the 'applying this repeatedly magically produces 1/2<sup>n</sup> known limit of 0' except from the earlier chapter on the arithmetic mean of n numbers and he rolled this back to s<sub>1</sub> but doesn't matter I'm sure the exercises will have more of these manipulate via algebra to find the limit type problems. The rest of this chapter is your standard criteria for convergence type content and some series content which is also in the TAOCP. 
+Example 1.11 5n + 5 is 5(n + 1) and now the denominator cancels. The approximation of root 2 in 1.3a using the squeeze theorem is pretty straight forward and similar to Newton's method though I didn't get the 'applying this repeatedly magically produces 1/2<sup>n</sup> known limit of 0' except from the earlier chapter on the arithmetic mean of n numbers and he rolled this back to s<sub>1</sub> but doesn't matter I'm sure the exercises will have more of these manipulate via algebra to find the limit type problems. The rest of this chapter is your standard criteria for convergence type content and some series content which is also in TAOCP.  
 </p>
 
 <p>
@@ -702,9 +704,9 @@ Ex 1.25 hah, find all the definitions and theorems in this chapter and illustrat
 </div>
 </div>
 
-<div id="outline-container-org1ba13d0" class="outline-2">
-<h2 id="org1ba13d0">1.1 Algorithms</h2>
-<div class="outline-text-2" id="text-org1ba13d0">
+<div id="outline-container-orgea06482" class="outline-2">
+<h2 id="orgea06482">1.1 Algorithms</h2>
+<div class="outline-text-2" id="text-orgea06482">
 <p>
 Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. 
 </p>

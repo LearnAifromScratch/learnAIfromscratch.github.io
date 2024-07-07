@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-06-26 Wed 07:15 -->
+<!-- 2024-07-07 Sun 09:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -270,46 +270,48 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org91d2d05">Start here</a>
+<li><a href="#orgf63f7e2">Start here</a>
 <ul>
-<li><a href="#org178ac5e">Curriculum</a></li>
-<li><a href="#org355a898">Strategy</a>
+<li><a href="#orgfc5b316">Curriculum</a></li>
+<li><a href="#orgf80214b">Strategy</a>
 <ul>
-<li><a href="#orgeb463cf">Make yourself appear employed</a></li>
-<li><a href="#orgb19cd73">Contribute to FSF</a></li>
+<li><a href="#org04e1b72">Make yourself appear employed</a></li>
+<li><a href="#org35c1a8b">Contribute to FSF</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org2613122">Software Design</a>
+<li><a href="#orgee0b8b6">Algorithms</a>
 <ul>
-<li><a href="#orgf3ea9b7">Gitless</a></li>
+<li><a href="#org1e70e5b">USACO beginner</a></li>
+<li><a href="#orgdc5e41a">USACO bronze</a></li>
+<li><a href="#org2d5ce85">C++ versions</a></li>
+<li><a href="#org373371d">Big-O explained</a></li>
+<li><a href="#org03cd754">Time complexity</a></li>
+<li><a href="#org4f72c13">Data structures</a></li>
+<li><a href="#org1d7ed25">Simulation</a>
+<ul>
+<li><a href="#orgbdb2312">Shell game</a></li>
 </ul>
 </li>
-<li><a href="#org5d74dfc">USACO guide</a>
-<ul>
-<li><a href="#orga13c0f4">Input/Output</a>
-<ul>
-<li><a href="#orgfceea21">Real competitive programming</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#org9bbec5e">USACO bronze</a>
+<li><a href="#orgeb44b79">Software Design</a>
 <ul>
-<li><a href="#org25bb540">C++ versions</a></li>
-<li><a href="#orgb42fc0f">Big-O explained</a></li>
-<li><a href="#orgad196fb">Time complexity</a></li>
+<li><a href="#orgfdcc08d">Gitless</a></li>
 </ul>
 </li>
+<li><a href="#orgeae477f">Languages TODO</a></li>
+<li><a href="#org0e519ae">Probability TODO</a></li>
+<li><a href="#org5b83d9a">Advanced dbms TODO</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org91d2d05" class="outline-2">
-<h2 id="org91d2d05">Start here</h2>
-<div class="outline-text-2" id="text-org91d2d05">
+<div id="outline-container-orgf63f7e2" class="outline-2">
+<h2 id="orgf63f7e2">Start here</h2>
+<div class="outline-text-2" id="text-orgf63f7e2">
 <p>
 I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
 </p>
@@ -325,21 +327,21 @@ This exists to solve two problems.
 </p>
 
 <p>
-The first is finding a job or freelance gig doing $THING you like which <i>seems</i> like it's next to impossible these days. 
+The first is finding a job or freelancing which <i>seems</i> like it's next to impossible these days but in reality they are desperate for developers who know the kinds of skills we'll be doing here.
 </p>
 
 <p>
-The second problem is recruiters always ask me where to find candidates for fintech type roles. I pressed them on what exactly they look for in 2024 then found free resources that taught as close to the requirements as possible. Everything here was vetted by them as being desireable as a basic foundation then the character of the candidate is the determining factor not their credentials. What they want is someone with the ability to figure out things themselves, who can program applications requiring high throughput, an in-depth knowledge of at least one language and can describe in detail how it's memory abstraction works to tune or work around it's managed runtime. If you possess the above then you can be taught everything else.  
+The second problem is recruiters always ask me where to find candidates for fintech type roles like 'quant developer'. I pressed them on what exactly they look for in 2024 then found free resources that taught as close to the requirements as possible. Everything here was vetted by them as being desireable as a basic foundation (USACO, plai.org, queueing theory, familiar with low-latency network kernel bypass) then the character of the candidate is the determining factor not their claimed experience or credentials. What they want is someone with the ability to figure out things themselves but who knows what they don't know meaning they won't bluff their way through meetings or sabotage the code with unexpected side effects. This person can write software for high throughput applications and can describe in detail the language they are using meaning how it's memory abstraction works and if it's a managed runtime how to tune or avoid triggering unnecessary garbage collection. If you possess the above then they claim you can be taught everything else. 
 </p>
 
 <p>
-Campus recruiting used to cover this but today is monopolized by big tech corps and government crony contractors that manipulate school guidelines by pressuring students with 2 week expiring offers and paying the school to lock out all competition so it's a struggle to find anyone qualified to do this kind of work. Even if you want nothing to do with fintech we are learning to be apprentice race car engineers but for application development the same skills here translate to anywhere.
+Campus recruiting used to cover this but today is monopolized by big tech corps and government crony run contractors that manipulate school guidelines by pressuring students with 2 week expiring offers and paying the school to lock out all competition so it's a struggle to find anyone qualified to do this kind of work as many companies can't even break into the campus internship or graduate hiring pool. 
 </p>
 </div>
 
-<div id="outline-container-org178ac5e" class="outline-3">
-<h3 id="org178ac5e">Curriculum</h3>
-<div class="outline-text-3" id="text-org178ac5e">
+<div id="outline-container-orgfc5b316" class="outline-3">
+<h3 id="orgfc5b316">Curriculum</h3>
+<div class="outline-text-3" id="text-orgfc5b316">
 <p>
 There will be much more than this such as software design but here is a brief choose your own adventure.
 </p>
@@ -352,7 +354,7 @@ There will be much more than this such as software design but here is a brief ch
 </ul>
 
 <p>
-The USACO guide is really good at preparing you for any kind of filtering companies may do through codility or hackerrank and it's completely free unlike leetcode. The graduate design courses are optional if you like getting into the details of the current fastest possible algorithms otherwise nobody will expect you to know this. 
+The USACO guide is really good at preparing you for any kind of filtering companies may do through codility or hackerrank and it's completely free. This is what the national US team for the info olympiad uses to recruit for further coaching and if you <a href="https://www.ioi2024.eg/">notice</a> many of the sponsors are all finance corps or massive telecoms because this is how they find the best raw talent.  
 </p>
 
 <ul class="org-ul">
@@ -360,7 +362,7 @@ The USACO guide is really good at preparing you for any kind of filtering compan
 </ul>
 
 <p>
-Explains that almost all 'industry popular' languages are virtually identical and demystifies all the OOP jargon. It's a workbook we use a web-based <a href="https://github.com/LuKuangChen/stacker-2023">stacker</a> to see exactly how programs work.    
+Explains that almost all industry popular languages are virtually identical and demystifies all the OOP jargon. It's a workbook we use a web-based <a href="https://github.com/LuKuangChen/stacker-2023">stacker</a> to see exactly how programs execute.    
 </p>
 
 <ul class="org-ul">
@@ -376,16 +378,16 @@ If you write enough software eventually you discover that almost everything is s
 </ul>
 
 <p>
-Here we learn kernel bypass methods for low latency networking, code profiling and optimization, everything we can about modern distributed application architecture. We can also look at their AI tuning <a href="https://15799.courses.cs.cmu.edu/spring2022/">seminar</a> for dbms optimization knob tuning.
+Here we learn kernel bypass methods for low latency networking, code profiling and optimization, hashing/join algorithms, search space complexity reduction, everything we can about modern distributed application architecture like microservices. We can also look at their AI tuning <a href="https://15799.courses.cs.cmu.edu/spring2022/">seminar</a> for relational dbms optimization knob tuning. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org355a898" class="outline-3">
-<h3 id="org355a898">Strategy</h3>
-<div class="outline-text-3" id="text-org355a898">
+<div id="outline-container-orgf80214b" class="outline-3">
+<h3 id="orgf80214b">Strategy</h3>
+<div class="outline-text-3" id="text-orgf80214b">
 <p>
-Find a mentor. There is someone somewhere doing what you want to do and making a lot of money doing it and your task is to do enough material here to reach a level where you can get in with them somehow and absorb everything. Once you are in all you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life. If they get promoted you get promoted. If they go off and found a new company you are the first hire. If they get hired at a top tier trading firm everyone says you have no chance of getting into guess who they will tell the hiring managers they should also hire. 
+Find a mentor. There is someone somewhere doing what you want to do and making a lot of money doing it and your task is to complete enough material here to reach a level where you can get in with them somehow and absorb everything. Once you are in all you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life. If they get promoted you get promoted. If they go off and found a new company you are the first hire. If they get hired at a top tier trading firm everyone says you have no chance of getting into guess who they will tell the hiring managers they should also hire. 
 </p>
 
 <p>
@@ -393,98 +395,51 @@ You approach this person and sell yourself telling them you are available if the
 </p>
 </div>
 
-<div id="outline-container-orgeb463cf" class="outline-4">
-<h4 id="orgeb463cf">Make yourself appear employed</h4>
-<div class="outline-text-4" id="text-orgeb463cf">
+<div id="outline-container-org04e1b72" class="outline-4">
+<h4 id="org04e1b72">Make yourself appear employed</h4>
+<div class="outline-text-4" id="text-org04e1b72">
 <p>
-Some advice from <a href="https://news.ycombinator.com/item?id=40478197">here</a>:
-</p>
-
-
-<p>
-"If you can, try to appear employed. For better or worse, people will see you as more desirable if you are employed. This might mean setting up an LLC called Foo Software, giving yourself a role of Software Engineer, and then bidding on projects on Upwork. You don't have to lie about what you are doing if anyone asks (and most won't ask for details), but this gives you something to put on your resume and some experience."
+Some advice from <a href="https://news.ycombinator.com/item?id=40478197">here</a>: "If you can, try to appear employed. For better or worse, people will see you as more desirable if you are employed. This might mean setting up an LLC called Foo Software, giving yourself a role of Software Engineer, and then bidding on projects on Upwork. You don't have to lie about what you are doing if anyone asks (and most won't ask for details), but this gives you something to put on your resume and some experience."
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb19cd73" class="outline-4">
-<h4 id="orgb19cd73">Contribute to FSF</h4>
-<div class="outline-text-4" id="text-orgb19cd73">
+<div id="outline-container-org35c1a8b" class="outline-4">
+<h4 id="org35c1a8b">Contribute to FSF</h4>
+<div class="outline-text-4" id="text-org35c1a8b">
 <p>
-You will best be able to pull this off if you actually can commit code somewhere and receive feedback until you become a competent developer people can trust. I recommend only ever contributing to 'free software' as in GNU <a href="https://www.fsf.org/">Free Software Foundation</a> projects like Blender or the gcc compiler are filled with experts that can mentor you.  
+You will best be able to pull this off if you actually can commit code somewhere and receive feedback until you become a competent developer people can trust. I recommend only ever contributing to 'free software' as in GNU <a href="https://www.fsf.org/">Free Software Foundation</a> projects like Blender or the gcc compiler are filled with experts that can mentor you. Look through the optimization tags on Blender's issues list there is a lot of opportunity to practice what we learn here and have it reviewed. 
 </p>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2613122" class="outline-2">
-<h2 id="org2613122">Software Design</h2>
-<div class="outline-text-2" id="text-org2613122">
+<div id="outline-container-orgee0b8b6" class="outline-2">
+<h2 id="orgee0b8b6">Algorithms</h2>
+<div class="outline-text-2" id="text-orgee0b8b6">
 <p>
-MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. It used to be called 6.170 before MIT renumbered every course recently. Universities always do ridiculous things every 5 years it's like some new dean comes in and demands oh we have to reinvent everything and buy all new (awful) edtech. This is why you should never feel like you don't belong here because they definitely don't and they're being paid outrageous money to screw up everything.  
-</p>
-
-<p>
-First look at these <a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">slides</a> from 2023 titled <i>Diverge-Converge</i> it briefly explains how you go from brainstorming features of something you want to build into concepts. 
-</p>
-
-<p>
-Click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos. They are all worth watching but we are interested in the two lectures on conceptual design. Watch <a href="https://drive.google.com/file/d/1lzAbrqk9LNLhGMLbsTuVgAm6p9_Do_Ux/view?usp=sharing">lecture 1</a> and <a href="https://drive.google.com/file/d/1AZ85ui0k2QpCKgfJZXUPSk-jdSi36MzP/view?usp=sharing">lecture 2</a>. Look at the recent <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">slides</a>. You have surely encountered badly designed software and this is a way to model your ideas as state machines then synch them together to compose an application that people can actually understand how to use. 
-</p>
-
-<p>
-If you don't understand what you just looked at don't worry we'll be implementing it in full you will get it. 
+I include some <i>optional</i> graduate algorithm design material from CMU and MIT but there is no reason to take it unless you enjoy theory and seeing how all this works from scratch. USACO will be complete drilling in undergrad algorithm design.  
 </p>
 </div>
 
-<div id="outline-container-orgf3ea9b7" class="outline-3">
-<h3 id="orgf3ea9b7">Gitless</h3>
-<div class="outline-text-3" id="text-orgf3ea9b7">
-<p>
-Now we are going to take all the above introductions to conceptual design and rewrite the git interface to make it intuitive to use. We have to learn git anyway so may as well write a CLI (command line interface) or you could make it ridiculous and call it 'visual git' or something with DAG graphics.  
-</p>
-
-<p>
-Many companies today use a customized Mercurial fork or rewritten clone instead of git like Meta's rust written EdenFS and <a href="https://github.com/facebook/sapling">Sapling SCM</a> because git was originally developed to take advantage of linux file system optimizations ergo is conceptually attatched to a file system while Mercurial can be easily adapted to be stuffed in a database, distributed or run on any OS. In a Mercurial style of version control you probably don't care about individual commits so you don't even add comments to commits you instead care about entire branch development.     
-</p>
-
-<p>
-Let's learn what git actually is by watching MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i>. Lecture starts ~7m in. So far the data structure and model is trivial to understand if you did any intro course here such as <a href="./accelerated.html">CS19</a> where it's file system assignment was similar. 
-</p>
-
-<p>
-Proceed to <a href="https://gitless.com/#research">gitless.com</a> and navigate to research or <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> page on MIT's software design group. You will finds <a href="https://www.youtube.com/watch?v=31XZYMjg93o">this</a> talk about the problems with git design. The guy giving this talk was the PhD student of the prof we watched in the conceptual design lectures and now is a co-founder of <a href="https://www.getaleph.com/careers">Aleph</a> some fintech data startup (which is hiring, maybe you can impress him with your conceptual design skills). Watching this talk TODO
-</p>
-
-<p>
-.. cont
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org5d74dfc" class="outline-2">
-<h2 id="org5d74dfc">USACO guide</h2>
-<div class="outline-text-2" id="text-org5d74dfc">
+<div id="outline-container-org1e70e5b" class="outline-3">
+<h3 id="org1e70e5b">USACO beginner</h3>
+<div class="outline-text-3" id="text-org1e70e5b">
 <p>
 In competitive programming you submit source code as a solution to a problem and the online judge compiles and runs your code against tests. There is a huge list of online judges available like Kattis, SPOJ, Timus, Aizu, and more <a href="https://usaco.guide/general/olympiads?lang=cpp">worldwide</a>. 
 </p>
 
 <p>
-First task is to choose one of these <a href="https://open.kattis.com/languages">languages</a>. We'll learn C++ for USACO so pick something else here that you want to use. List all the problems by <a href="https://open.kattis.com/problems?order=difficulty_data">easiest</a> and start with the very first one 'Velkomin!'. You get unlimited submissions to the Kattis judge. 
+First task is to choose one of these <a href="https://open.kattis.com/languages">languages</a>. List all the problems by <a href="https://open.kattis.com/problems?order=difficulty_data">easiest</a> and start with the very first one 'Velkomin!'. You get unlimited submissions to the Kattis judge. There's the USACO <a href="https://ide.usaco.guide/">online IDE</a> too if you want or many other <a href="https://usaco.guide/general/running-code-online?lang=cpp">online IDEs</a> or use the Kattis source text box to enter code none of these beginner problems require an IDE.
 </p>
 
 <p>
-The point of doing this is to learn algorithm design which really is 'system design' there's some complex thing you want to build that needs to be optimized as much as possible and this is how you get better at recognizing patterns and matching them to typical algorithm design strategies.
+<b>Input/Output</b>
 </p>
-</div>
 
-<div id="outline-container-orga13c0f4" class="outline-3">
-<h3 id="orga13c0f4">Input/Output</h3>
-<div class="outline-text-3" id="text-orga13c0f4">
 <p>
-Read the book or online documemtation of the language you chose or use the USACO <a href="https://usaco.guide/general/input-output">guide</a> first chapter to teach yourself how input/output works in C/C++/Java/Python. There's the USACO <a href="https://ide.usaco.guide/">online IDE</a> too if you want.
+Read the USACO <a href="https://usaco.guide/general/input-output">guide</a> first chapter to teach yourself how input/output works in C/C++/Java/Python. 
 </p>
 
 <p>
@@ -508,13 +463,13 @@ int main(){
 </pre>
 
 <p>
-Finish up to 1.4 Easy problems on Kattis or until you get how I/O works in your language.  
+Finish up to 1.4 Easy problems on Kattis or until you get how I/O works in your language. You're ready for USACO Bronze now. 
 </p>
-</div>
 
-<div id="outline-container-orgfceea21" class="outline-4">
-<h4 id="orgfceea21">Real competitive programming</h4>
-<div class="outline-text-4" id="text-orgfceea21">
+<p>
+<b>Real competitive programming</b>
+</p>
+
 <p>
 Here is Gennady Korotkevich aka tourist <a href="https://youtu.be/97tieEKfvBs">practicing</a> on codeforces and explaining what he's doing, though he didn't start with C++ he used to win the IOI with Pascal in high school then switched later for the ICPC. The first thing to notice is he's using a basic text editor and minimalist shell that looks like <a href="https://mingw.osdn.io/">MinGW</a> and a <a href="https://www.farmanager.com/screenshots.php?l=en">file manager</a> where he manually submits through the codeforces website UI. He prepares individual directories named after the problem, then always makes a sol.cpp file in that directory so he doesn't have to change a macro he's written to compile the solution from the shell.
 </p>
@@ -550,54 +505,32 @@ A time limit exceeded verdict shows how he would optimize to get accepted verdic
 </p>
 </div>
 </div>
-</div>
-</div>
 
-<div id="outline-container-org9bbec5e" class="outline-2">
-<h2 id="org9bbec5e">USACO bronze</h2>
-<div class="outline-text-2" id="text-org9bbec5e">
+<div id="outline-container-orgdc5e41a" class="outline-3">
+<h3 id="orgdc5e41a">USACO bronze</h3>
+<div class="outline-text-3" id="text-orgdc5e41a">
 <p>
 We are now <a href="https://usaco.guide/bronze/">bronze level</a>. There's a set of videos for bronze free <a href="https://joincpi.org/video-classes">here</a>.  
 </p>
 
 <p>
-USACO online judge only accepts C/C++, Java or Python but you can also learn from the guide then practice on Kattis using <a href="https://cpbook.net/methodstosolve">Methods to Solve</a> or the translation of e-maxx <a href="https://cp-algorithms.com/index.html">here</a> then you can use any language you want from Haskell to APL. 
+USACO online judge only accepts C/C++, Java or Python but what I do is I experiment and write out solutions first in my language of choice then translate that to C++ seeing how fast of a solution I can write. The specific language details are at the bottom <a href="https://usaco.org/index.php?page=instructions">here</a> we can use C++17, Java 11, Python 3.6 and old Python 2.7. I'm going to use their official online IDE if you want to run it locally install the same compilers they use in a virtual machine or install GNU Guix it allows for multiple specific version to be installed. 
 </p>
 </div>
+</div>
 
-<div id="outline-container-org25bb540" class="outline-3">
-<h3 id="org25bb540">C++ versions</h3>
-<div class="outline-text-3" id="text-org25bb540">
+<div id="outline-container-org2d5ce85" class="outline-3">
+<h3 id="org2d5ce85">C++ versions</h3>
+<div class="outline-text-3" id="text-org2d5ce85">
 <p>
-C++ has versions C++98/03/11/14/17/20/23 these all represent years there was a new standard but that doesn't mean everyone implements the entire standard in their compiler. The current state of C++20/23 or 'modern' C++ is you can kind of do functional programming with it. Options, lambdas, higher-order functions, monads and more all now exist in the definition depending which compiler you use. Google has <a href="https://github.com/carbon-language/carbon-lang/blob/trunk/docs/project/difficulties_improving_cpp.md">rage quit</a> C++ and is writing their own replacement called <a href="https://github.com/carbon-language/carbon-lang">Carbon</a> and as a result clang/llvm has not even implemented the entire C++20 spec and probably never will which is why you should put efforts into free software compilers and not trust any company. If you want to use C++20/23 in some project you have to use GNU gcc or Microsoft msvc.  
+C++ has versions C++98/03/11/14/17/20/23/26 these all represent years there was a new standard but that doesn't mean everyone implements the entire standard in their compiler. The current state of C++20/23/26 or 'modern' C++ is you can kind of do functional programming with it. Options, lambdas, higher-order functions, monads and more all now exist in the definition depending which compiler you use. Google has <a href="https://github.com/carbon-language/carbon-lang/blob/trunk/docs/project/difficulties_improving_cpp.md">rage quit</a> C++ and is writing their own replacement called <a href="https://github.com/carbon-language/carbon-lang">Carbon</a> and as a result clang/llvm has not even implemented the entire C++20 spec and probably never will which is why you should put efforts into free software compilers and not trust any company to maintain these tools. If you want to use the latest standard in some project you have to use GNU or Microsoft compilers. 
 </p>
-
-<p>
-Competitive programming typically only accepts C++11/14/17, Python3 and Java and Kotlin unless you do exotic competitive programming like the ICFP. Most of our time in USACO will be creating static arrays and using the <a href="https://en.wikipedia.org/wiki/Standard_Template_Library">standard template library</a>. The STL to me seems like a big hack to make C++ a <a href="https://en.wikipedia.org/wiki/Generic_programming">generic programming</a> language a concept invented by ML in 1973. If you took the Standard ML course listed in the intro to this workshop then generic programming is simply polymorphism or 'a types. If you took the accelerated intro course then generic programming is the same as 'type variables' in other words a function who's type is determined by whatever parameters you give it:
-</p>
-
-<pre class="example">
-# a generic maximum function of any type T
-
-fun my-max&lt;T&gt;(a :: T, b :: T)-&gt; T:
-  if (a &gt; b):
-    a
-    # if not(a &gt; b) then a == b or a &lt; b   
-  else:
-    b
-  end
-where:
-  my-max(2, 3) is 3
-  # a is unicode 97, b is 98
-  my-max("a", "b") is "b"
-end
-</pre>
 </div>
 </div>
 
-<div id="outline-container-orgb42fc0f" class="outline-3">
-<h3 id="orgb42fc0f">Big-O explained</h3>
-<div class="outline-text-3" id="text-orgb42fc0f">
+<div id="outline-container-org373371d" class="outline-3">
+<h3 id="org373371d">Big-O explained</h3>
+<div class="outline-text-3" id="text-org373371d">
 <p>
 The first resource we can use where 'running time' is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
 </p>
@@ -619,23 +552,23 @@ The formal definition is:
 </p>
 
 <p>
-Why are constants hidden in big-O? If you read SICP their example is 16 and 8 both differ by a factor of 2 and 8 but we don't care which factor. In real life however you will never have infinite inputs so the constant factors do actually matter if they are very large hiding a lot of operations. A classic example of this is when Knuth was writing the Stanford GraphBase (contents are all in Vol 4A of TAOCP) and all his real world testing of graph algorithms found that 'Fibonacci heaps' that were analyzed using a technique called amortized analaysis weren't any better than Kruskal's old algorithm because the analysis was hiding large constants. 
+Why are constants hidden in big-O? If you read SICP their example is 16 and 8 both differ by a factor of 2 and 8 but we don't care which factor. In real life however you will never have infinite inputs so the constant factors do actually matter if they are very large hiding a lot of operations. A classic example of this is when Knuth was writing the Stanford GraphBase (contents are all in Vol 4A of TAOCP) and his real world testing of graph algorithms found that 'Fibonacci heaps' that were analyzed using a technique called amortized analaysis weren't any better than Kruskal's old algorithm because the analysis was hiding large constant operations. You can also do multiple rounds of a linear time algorithm on a graph to reduce the amount of constant operations needed before applying a graph algorithm like Kruskal's. 
 </p>
 
 <p>
-O(g(x)) represents an upper bound for all functions in the family g(x). It doesn't represent growth since f(n) = n<sup>2</sup> does not grow to be quadratic, f() already is quadratic, thus f() is in \(O(n^{2})\) or upper bounded by every quadratic function. A function n or f(n) is bounded by n, n<sup>2</sup> and n<sup>n</sup> that's why it's <i>an</i> upper bound not <i>the</i> upper bound as there's many upper bounds but you obviously want the closest fitting bound.
+O(g(x)) represents an upper bound for all functions in the family g(x). It doesn't represent growth since f(n) = n<sup>2</sup> does not grow to be quadratic, f() already is quadratic, thus f() is in \(O(n^{2})\) or upper bounded by every quadratic function. A function n or f(n) is bounded by n, n<sup>2</sup> and n<sup>n</sup> that's why it's <i>an</i> upper bound not <i>the</i> upper bound as there's many upper bounds but we obviously want the closest fitting bound.
 </p>
 
 <p>
-Big-O is in a hierarchy of asymptotics there's many more like little-o (strictly less than), big-Omega (strictly greater than), or big-Theta \(\theta(n)\) which describes a tight lower and upper bound. For example a program that searches a single list for a specific element is going to be at least a lower bound of O(n) because it has to look at everything once and upper bounded by O(n) so it is \(\theta(n)\). 
+There's many more like little-o (strictly less than), big-Omega (strictly greater than), or big-Theta \(\theta(n)\) which describes a tight lower and upper bound. For example a program that searches a single list for a specific element is going to be at least a lower bound of O(n) because it has to look at everything once and upper bounded by O(n) so it is \(\theta(n)\). 
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-orgad196fb" class="outline-3">
-<h3 id="orgad196fb">Time complexity</h3>
-<div class="outline-text-3" id="text-orgad196fb">
+<div id="outline-container-org03cd754" class="outline-3">
+<h3 id="org03cd754">Time complexity</h3>
+<div class="outline-text-3" id="text-org03cd754">
 <p>
 Skim through <a href="https://usaco.guide/bronze/time-comp">time complexity</a>. Sign up to <a href="https://joincpi.org/video-classes">here</a> where all the <a href="https://www.youtube.com/watch?v=lDEriEvhS48">videos</a> are. Watching the video he explains the 4 suggested resources:
 </p>
@@ -653,18 +586,163 @@ Next is 'PAPS' 5-Time Complexity <a href="https://usaco.guide/PAPS.pdf#page=99">
 </p>
 
 <p>
-The <a href="https://www.youtube.com/watch?v=zUUkiEllHG0">video</a> they suggest goes through how to find function f(x) by analyzing the source. @11:03 remember you multiply everything in the body of a loop by the amount of times you loop. Without doing any of the analysis I can immediately tell this is n * c * n<sup>3</sup> or n<sup>4</sup> 
+The <a href="https://www.youtube.com/watch?v=zUUkiEllHG0">video</a> they suggest goes through how to find function f(x) by analyzing the source. @11:03 remember you multiply everything in the body of a loop by the amount of times you loop. Without doing any of the analysis I can immediately tell this is n * c * n<sup>3</sup> or n<sup>4</sup> but this becomes less obvious when objects are initialized in some library you called. We'll learn this through the experience of doing it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f72c13" class="outline-3">
+<h3 id="org4f72c13">Data structures</h3>
+<div class="outline-text-3" id="text-org4f72c13">
+<p>
+You can always first try and solve USACO bronze problems in your language of choice then translate the solution into optimized C++ when you think you have a solution and want to run it against the official testing. 
 </p>
 
 <p>
-TODO&#x2026; try the bronze problems.
+Reading through the <a href="https://usaco.guide/bronze/intro-ds">intro to data structures</a> the writeup in USACO guide is all we will need for bronze problems but you may want to look through the slides of <a href="https://federico-busato.github.io/Modern-CPP-Programming/">Modern C++ Programming</a> by Federico Busato a senior developer at NVIDIA. USACO only allows up to C++17 features but he clearly labels what feature works with what version. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d7ed25" class="outline-3">
+<h3 id="org1d7ed25">Simulation</h3>
+<div class="outline-text-3" id="text-org1d7ed25">
+</div>
+<div id="outline-container-orgbdb2312" class="outline-4">
+<h4 id="orgbdb2312">Shell game</h4>
+<div class="outline-text-4" id="text-orgbdb2312">
+<p>
+The first problem is <a href="https://usaco.org/index.php?page=viewproblem2&amp;cpid=891">shell game</a>. You have to make an account on USACO.org to submit entries here: <a href="https://usaco.org/index.php">https://usaco.org/index.php</a>
 </p>
 
+<p>
+The sample input first line tells us how many times to loop input. Second line tells us shell 2 and 1 were swapped and the guess was 1. If the pebble was in 1 then the guess is incorrect as it swapped with 2. If the pebble was in 2 then the guess was correct. 
+</p>
+
+<p>
+Write out some examples of keeping track of the state for all 3 potential initial pebble positions.
+</p>
+
+<ul class="org-ul">
+<li>If pebble init 1 then 2, 3, 1</li>
+<li>If pebble init 2 then 1, 1, 3</li>
+<li>If pebble init 3 then 3, 2, 2</li>
+</ul>
+
+<p>
+We only have to update whenever swap a or swap b equals the current position of any of the 3 initial positions. Here's some scratch work I did
+</p>
+
+<pre class="example">
+Init swap array a[0] = 1, a[1] = 2, a[2] = 3
+Init guess array g[0] = 0, g[1] = 0, g[2] = 0 
+Loop array
+ If swap1 = a[i] then a[i] = swap2
+ If swap2 = a[i] then a[i] = swap1
+ // after state change
+ is guess = a[i]? increase g[i - 1]
+Return max of g
+</pre>
+
+<p>
+This is where I know I'm probably not representing the optimal simulation because I have 2 if-statements and you always want to just do a single operation if you can not a pile of if's. Anyway I tried this solution and it worked all tests passed using 1.6mb of memory and 1ms execution time. 
+</p>
+
+<pre class="example">
+#include &lt;array&gt;
+#include &lt;cstdio&gt; // needed for i/o
+#include &lt;algorithm&gt; // needed for max
+
+int main() {
+  // get the first line of input
+ freopen("shell.in", "r", stdin);
+ int n;
+ scanf("%d", &amp;n);
+
+ std::array&lt;int, 3&gt; state = {1, 2, 3};
+ std::array&lt;int, 3&gt; guess{};
+
+ for (int i = 0; i &lt; n; i++) {
+     int a, b, g;
+     scanf("%d %d %d", &amp;a, &amp;b, &amp;g);
+  for (int s = 0; s &lt; 3; s++) {
+      if (a == state[s]) {state[s] = b;}
+      else if (b == state[s]) {state[s] = a;}}
+  for (int x = 0; x &lt; 3; x++) {
+      if (g == state[x]) {guess[x]++;}}}
+
+ freopen("shell.out", "w", stdout);
+ printf("%d\n", std::max({guess[0], guess[1], guess[2]}));
+}
+</pre>
+
+<p>
+Looking at their solution they accurately replicated the simulation while I hacked it. I have 2 nested loops but they only loop 3 times (constant) so my solution is n * 3 * 3 or 9n which is O(n) looping on the original input n. Their solution is 3n or O(n) but runs with 2.8mb memory and 2ms execution time so my hacked solution is faster for only 10 tests the server does. If I were to guess why I'm using static arrays and I'm not simulating every swap only updating when the pebble is moved. 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeb44b79" class="outline-2">
+<h2 id="orgeb44b79">Software Design</h2>
+<div class="outline-text-2" id="text-orgeb44b79">
+<p>
+MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. It used to be called 6.170 before MIT renumbered every course recently. Universities always do ridiculous things every 5 years it's like some new dean comes in and demands oh we have to reinvent everything and buy all new (awful) edtech. This is why you should never feel like you don't belong here because they definitely don't and they're being paid outrageous money to screw up everything.  
+</p>
+
+<p>
+First look at these <a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">slides</a> from 2023 titled <i>Diverge-Converge</i> it briefly explains how you go from brainstorming features of something you want to build into concepts. 
+</p>
+
+<p>
+Click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos. They are all worth watching but we are interested in the two lectures on conceptual design. Watch <a href="https://drive.google.com/file/d/1lzAbrqk9LNLhGMLbsTuVgAm6p9_Do_Ux/view?usp=sharing">lecture 1</a> and <a href="https://drive.google.com/file/d/1AZ85ui0k2QpCKgfJZXUPSk-jdSi36MzP/view?usp=sharing">lecture 2</a>. Look at the recent <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">slides</a>. You have surely encountered badly designed software and this is a way to model your ideas as state machines then synch them together to compose an application that people can actually understand how to use. 
+</p>
+
+<p>
+If you don't understand what you just looked at don't worry we'll be implementing it in full you will get it. 
+</p>
+</div>
+
+<div id="outline-container-orgfdcc08d" class="outline-3">
+<h3 id="orgfdcc08d">Gitless</h3>
+<div class="outline-text-3" id="text-orgfdcc08d">
+<p>
+Now we are going to take all the above introductions to conceptual design and rewrite the git interface to make it intuitive to use. We have to learn git anyway so may as well write a CLI (command line interface) or you could make it ridiculous and call it 'visual git' or something with DAG graphics.  
+</p>
+
+<p>
+Many companies today use a customized Mercurial fork or rewritten clone instead of git like Meta's rust written EdenFS and <a href="https://github.com/facebook/sapling">Sapling SCM</a> because git was originally developed to take advantage of linux file system optimizations ergo is conceptually attatched to a file system while Mercurial can be easily adapted to be stuffed in a database, distributed or run on any OS. In a Mercurial style of version control you probably don't care about individual commits so you don't even add comments to commits you instead care about entire branch development.     
+</p>
+
+<p>
+Let's learn what git actually is by watching MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i>. Lecture starts ~7m in. So far the data structure and model is trivial to understand if you did any intro course here such as <a href="./accelerated.html">CS19</a> where it's file system assignment was similar. 
+</p>
+
+<p>
+Proceed to <a href="https://gitless.com/#research">gitless.com</a> and navigate to research or <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> page on MIT's software design group. You will finds <a href="https://www.youtube.com/watch?v=31XZYMjg93o">this</a> talk about the problems with git design. The guy giving this talk was the PhD student of the prof we watched in the conceptual design lectures and now is a co-founder of <a href="https://www.getaleph.com/careers">Aleph</a> some fintech data startup (which is hiring, maybe you can impress him with your conceptual design skills). Watching this talk TODO
+</p>
+
+<p>
+.. cont
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeae477f" class="outline-2">
+<h2 id="orgeae477f">Languages TODO</h2>
+</div>
+<div id="outline-container-org0e519ae" class="outline-2">
+<h2 id="org0e519ae">Probability TODO</h2>
+</div>
+<div id="outline-container-org5b83d9a" class="outline-2">
+<h2 id="org5b83d9a">Advanced dbms TODO</h2>
+<div class="outline-text-2" id="text-org5b83d9a">
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-07-21 Sun 22:23 -->
+<!-- 2024-07-21 Sun 23:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Security Curriculum</title>
@@ -248,55 +248,52 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7b3da81">Curriculum</a>
+<li><a href="#orge2cd3df">Curriculum</a>
 <ul>
-<li><a href="#orgb6221c0">C/x86 Assembly</a></li>
-<li><a href="#org4a645da">Operating Systems</a></li>
-<li><a href="#org9e476d2">Software Exploitation</a></li>
-<li><a href="#orgd9b3ef5">Cryptography</a></li>
+<li><a href="#orgaee2226">C/x86 Assembly</a></li>
+<li><a href="#org6b2a024">Operating Systems</a></li>
+<li><a href="#org8248e39">Software Exploitation</a></li>
+<li><a href="#org3f3a90f">Cryptography</a></li>
 </ul>
 </li>
-<li><a href="#orgbcdf98f">Typical industry options</a></li>
-<li><a href="#org51e19a8">How bad it all is</a>
+<li><a href="#org0f3a9fe">Typical industry options</a></li>
+<li><a href="#orgdf69f6d">How bad it all is</a>
 <ul>
-<li><a href="#org62c5ac5">Open source sabotage</a></li>
-<li><a href="#org2e36dbe">The absolute state of the security industry</a></li>
-<li><a href="#org3f9c356">Massive surveillance</a></li>
+<li><a href="#org1adbda7">Open source sabotage</a></li>
+<li><a href="#orgc3b6d82">The absolute state of the security industry</a></li>
+<li><a href="#org0c6337f">Massive surveillance</a></li>
+<li><a href="#org660fe53">History of h4xxing</a></li>
+<li><a href="#orga11b39a">The last of the true hackers</a></li>
+<li><a href="#org815ef7a">The last of the true blackhats</a></li>
+<li><a href="#org1a4b693">Max Ray Vision</a></li>
+<li><a href="#orgfdc566b">ASTRA</a></li>
+<li><a href="#orgaada649">Darknet OPSEC</a></li>
 </ul>
 </li>
-<li><a href="#orgb770878">The real history of h4xxing</a>
+<li><a href="#org8eb2d0f">Principles of Imperative Programming</a>
 <ul>
-<li><a href="#org0d41b1a">The last of the true hackers</a></li>
-<li><a href="#orgf7dcd7c">The last of the true blackhats</a></li>
-<li><a href="#org011d823">Max Ray Vision</a></li>
-<li><a href="#org52d0de4">ASTRA</a></li>
+<li><a href="#org35e277f">Setup</a></li>
+<li><a href="#org1049632">Contracts</a></li>
+<li><a href="#org337f018">Ints</a></li>
 </ul>
 </li>
-<li><a href="#org90a35ef">"Darknet OPSEC"</a></li>
-<li><a href="#orgb87db0b">Principles of Imperative Programming</a>
+<li><a href="#org7601743">Intro to computer systems</a>
 <ul>
-<li><a href="#orgfc1038a">Setup</a></li>
-<li><a href="#org2d197ee">Contracts</a></li>
-<li><a href="#orgb160315">Ints</a></li>
+<li><a href="#orgc81c81d">Lecture 2</a></li>
 </ul>
 </li>
-<li><a href="#org7f0621d">Intro to computer systems</a>
-<ul>
-<li><a href="#orge30fc71">Lecture 2</a></li>
-</ul>
-</li>
-<li><a href="#orgaf9e027">Operating Systems Engineering TODO</a></li>
-<li><a href="#org8c1a631">Binary Exploitation TODO</a></li>
-<li><a href="#org5eaab3a">Cryptography TODO</a></li>
-<li><a href="#org40cb7ce">Attacking networks TODO</a></li>
+<li><a href="#org5487145">Operating Systems Engineering TODO</a></li>
+<li><a href="#org1536287">Binary Exploitation TODO</a></li>
+<li><a href="#orgf34999f">Cryptography TODO</a></li>
+<li><a href="#org814b57b">Attacking networks TODO</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org7b3da81" class="outline-2">
-<h2 id="org7b3da81">Curriculum</h2>
-<div class="outline-text-2" id="text-org7b3da81">
+<div id="outline-container-orge2cd3df" class="outline-2">
+<h2 id="orge2cd3df">Curriculum</h2>
+<div class="outline-text-2" id="text-orge2cd3df">
 <p>
 Here is everything I found that fits together to achieve the goal of being able to follow the <a href="https://www.robertxiao.ca/hacking/">people</a> who keep winning DEFCON and other CTFs so we can get good enough to eventually be paid to do this being a junior consultant and working our way up in the security industry which can be even more sketchy than old school blackhat communities. 
 </p>
@@ -310,9 +307,9 @@ Everything here is practice with some reading and the recorded lectures if avail
 </p>
 </div>
 
-<div id="outline-container-orgb6221c0" class="outline-3">
-<h3 id="orgb6221c0">C/x86 Assembly</h3>
-<div class="outline-text-3" id="text-orgb6221c0">
+<div id="outline-container-orgaee2226" class="outline-3">
+<h3 id="orgaee2226">C/x86 Assembly</h3>
+<div class="outline-text-3" id="text-orgaee2226">
 <p>
 How the C memory abstraction works and undefined behavior.
 </p>
@@ -354,9 +351,9 @@ Building the ultimate covert channels by exploiting hardware.
 </div>
 
 
-<div id="outline-container-org4a645da" class="outline-3">
-<h3 id="org4a645da">Operating Systems</h3>
-<div class="outline-text-3" id="text-org4a645da">
+<div id="outline-container-org6b2a024" class="outline-3">
+<h3 id="org6b2a024">Operating Systems</h3>
+<div class="outline-text-3" id="text-org6b2a024">
 <p>
 This MIT course is modelled after the classic OS hacker's <a href="https://en.wikipedia.org/wiki/A_Commentary_on_the_UNIX_Operating_System">book</a> <i>Lions' Commentary on Unix 6th Edition</i> which documented the Unix v6 kernel with the source code included that you read at the same time. 
 </p>
@@ -372,9 +369,9 @@ This MIT course is modelled after the classic OS hacker's <a href="https://en.wi
 </div>
 
 
-<div id="outline-container-org9e476d2" class="outline-3">
-<h3 id="org9e476d2">Software Exploitation</h3>
-<div class="outline-text-3" id="text-org9e476d2">
+<div id="outline-container-org8248e39" class="outline-3">
+<h3 id="org8248e39">Software Exploitation</h3>
+<div class="outline-text-3" id="text-org8248e39">
 <p>
 Numerous CTFs exist for this we can replaylike <a href="https://plaidctf.com/">PLAID</a> or <a href="https://picoctf.org/">picoCTF</a> which has an extensive practice area from easy to hard difficulty.  
 </p>
@@ -419,9 +416,9 @@ We can take these all at the same time. These courses on day 1 expect fluency in
 </div>
 </div>
 
-<div id="outline-container-orgd9b3ef5" class="outline-3">
-<h3 id="orgd9b3ef5">Cryptography</h3>
-<div class="outline-text-3" id="text-orgd9b3ef5">
+<div id="outline-container-org3f3a90f" class="outline-3">
+<h3 id="org3f3a90f">Cryptography</h3>
+<div class="outline-text-3" id="text-org3f3a90f">
 <p>
 This is 'real' crypto and not the bozo world of web3 schemes but we will learn enough should you want to get into <a href="https://www.youtube.com/watch?v=8yRCQpb6yww">ridiculous</a> web3 <a href="https://cryptoctf.org/home-2/">CTFs</a> held on yachts in the Emirates to capture wallets instead of flags. That is if the other participants don't <a href="https://cryptoctf.org/2022/09/11/writeup-of-flag-submission-forgery-by-si/">forge</a> submission sigs.  
 </p>
@@ -476,17 +473,17 @@ While we take those courses and learn cryptanalysis these are all the hacking pr
 </div>
 </div>
 
-<div id="outline-container-orgbcdf98f" class="outline-2">
-<h2 id="orgbcdf98f">Typical industry options</h2>
-<div class="outline-text-2" id="text-orgbcdf98f">
+<div id="outline-container-org0f3a9fe" class="outline-2">
+<h2 id="org0f3a9fe">Typical industry options</h2>
+<div class="outline-text-2" id="text-org0f3a9fe">
 <p>
 You can always <a href="https://krebsonsecurity.com/2012/06/how-to-break-into-security-ptacek-edition/">create your own</a> security role from inside a company you already work for. 
 </p>
 </div>
 
-<div id="outline-container-org4602ca9" class="outline-4">
-<h4 id="org4602ca9">Freelance researcher</h4>
-<div class="outline-text-4" id="text-org4602ca9">
+<div id="outline-container-orgee49ccb" class="outline-4">
+<h4 id="orgee49ccb">Freelance researcher</h4>
+<div class="outline-text-4" id="text-orgee49ccb">
 <p>
 Selling <a href="https://www.crowdfense.com/exploit-acquisition-program/">exploits</a> for a lot of money. Some of these bounties are hilarious like only 100k for code signing bypass, it must be easier than it looks if it pays lower than a Wordpress exploit. They also really want a Docker escape vuln. <a href="https://zerodium.com/">Zerodium</a> is another broker and their <a href="https://zerodium.com/program.html">payouts chart</a> is supposedly market rates. The way this works is they pay you over time not all at once that way there's incentive for you to not turn around and resell to a competitor. 
 </p>
@@ -497,9 +494,9 @@ If you can do this typically you will want to work for <a href="https://dfsec.co
 </div>
 </div>
 
-<div id="outline-container-orgfaa3ef5" class="outline-4">
-<h4 id="orgfaa3ef5">SOC threat analyst</h4>
-<div class="outline-text-4" id="text-orgfaa3ef5">
+<div id="outline-container-orgfaa2db9" class="outline-4">
+<h4 id="orgfaa2db9">SOC threat analyst</h4>
+<div class="outline-text-4" id="text-orgfaa2db9">
 <p>
 SOC means Security Operations Center. This is a wagie working shifts for a 24/7 (usually remotely) enterprise tier threat response contractor who is paid to anaylze system logs (almost always Windows OS logs) and analyze network traffic to spot problems. They have some kind of monitoring tools and you primarily extract and filter data with OSquery and do 'threat intelligence'. The curriculum we are already doing is more than enough to get into this or find some kind of learning path for SOC Level 1 and 2 but these almost always cost money. This is the only <a href="https://www.edx.org/learn/cybersecurity/ibm-threat-intelligence-lifecycle-fundamentals">free course</a> (edx) I could find. This <a href="https://tryhackme.com/path/outline/soclevel1">one</a> is the cheapest I could find it appears to be some subscription model of $14/m or you could simply use their syllabus to look up everything yourself like OSquery, wireshark, Snort, MITRE etc. Most people get into this via the military or were former system admins or pay for <a href="https://www.isc2.org/certifications/cc">certs</a>. 
 </p>
@@ -510,9 +507,9 @@ To find SOCs search for security operations center jobs or try Sophos or NCC Gro
 </div>
 </div>
 
-<div id="outline-container-org4541ea1" class="outline-4">
-<h4 id="org4541ea1">Security consultant</h4>
-<div class="outline-text-4" id="text-org4541ea1">
+<div id="outline-container-org08b6a1c" class="outline-4">
+<h4 id="org08b6a1c">Security consultant</h4>
+<div class="outline-text-4" id="text-org08b6a1c">
 <p>
 Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to secOps deployment to how developers handle the keys for signing into the source repository. With large security consulting outfits the typical engagement is 2-3 consultants for 2 weeks where there is juniors competent in running security procedures like penetration testing and the principal consultant oversees them and presents all the reports the juniors produced justifying the money spent. On large contracts they will outsource reverse engineers and all kinds of other specialists charging insanely high hourly rates. The major outfits are Leviathan security, IOactive, Bishop Fox, NCC group, Crowdstrike (if they are still in business after that parser being exploitable and not verifying inputs blew up the whole world) or search for security consultant jobs. Leviathan is probably the biggest in the US because I believe you have to contract either them and/or Bishop Fox in order use any kind of Google auth in your software. They even sell a 'virtual CISO' <a href="https://www.leviathansecurity.com/services/risk-advisory-services/virtual-chief-information-security-officer">service</a>. If these outfits aren't hiring send in a general application or email them and say you want to apprentice showing them some kind of proof of your skills like custom tools you wrote or something. 
 </p>
@@ -523,9 +520,9 @@ If you live in France then get in with <a href="https://www.synacktiv.com/en/joi
 </div>
 </div>
 
-<div id="outline-container-org675aa1d" class="outline-4">
-<h4 id="org675aa1d">The security business</h4>
-<div class="outline-text-4" id="text-org675aa1d">
+<div id="outline-container-orgafd8be2" class="outline-4">
+<h4 id="orgafd8be2">The security business</h4>
+<div class="outline-text-4" id="text-orgafd8be2">
 <p>
 If you live in the UK look at the <a href="https://portswigger.net/careers">openings</a> page for PortSwigger the company that sells Burpsuite the most popular web penetration toolkit. Specifically look at the opening for <a href="https://portswigger.net/careers/master-of-the-swigverse">Master of the Swigverse</a> they offer to teach you from the ground up the entire business of selling a security product. Full mentorship in competition analysis, customer engagement to improve the product, hiring wagies to code, public relations, general management of teams and finance. 
 </p>
@@ -533,9 +530,9 @@ If you live in the UK look at the <a href="https://portswigger.net/careers">open
 </div>
 </div>
 
-<div id="outline-container-org51e19a8" class="outline-2">
-<h2 id="org51e19a8">How bad it all is</h2>
-<div class="outline-text-2" id="text-org51e19a8">
+<div id="outline-container-orgdf69f6d" class="outline-2">
+<h2 id="orgdf69f6d">How bad it all is</h2>
+<div class="outline-text-2" id="text-orgdf69f6d">
 <p>
 If you haven't seen it, watch the CS19 lecture on <a href="https://youtu.be/7orQOW6fp2A">security</a>.  
 </p>
@@ -565,9 +562,9 @@ He talks about SELinux also known as MAC or mandatory access controls like AppAr
 </p>
 </div>
 
-<div id="outline-container-org62c5ac5" class="outline-3">
-<h3 id="org62c5ac5">Open source sabotage</h3>
-<div class="outline-text-3" id="text-org62c5ac5">
+<div id="outline-container-org1adbda7" class="outline-3">
+<h3 id="org1adbda7">Open source sabotage</h3>
+<div class="outline-text-3" id="text-org1adbda7">
 <p>
 This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relevant still. Poul-Henning Kamp is involved in the FreeBSD project and here he imagines what would he do if he was tasked by some nation state to 'control' or sabotage open source.  
 </p>
@@ -582,18 +579,18 @@ This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but very relev
 </div>
 </div>
 
-<div id="outline-container-org2e36dbe" class="outline-3">
-<h3 id="org2e36dbe">The absolute state of the security industry</h3>
-<div class="outline-text-3" id="text-org2e36dbe">
+<div id="outline-container-orgc3b6d82" class="outline-3">
+<h3 id="orgc3b6d82">The absolute state of the security industry</h3>
+<div class="outline-text-3" id="text-orgc3b6d82">
 <p>
 Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He is completely blackpilled and tells us how nobody cares or wants to fix the problems. If you raise the alarm you often threatened or dismissed. He wrote multiple warnings to the Rails github repository only for them to hand wave the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3f9c356" class="outline-3">
-<h3 id="org3f9c356">Massive surveillance</h3>
-<div class="outline-text-3" id="text-org3f9c356">
+<div id="outline-container-org0c6337f" class="outline-3">
+<h3 id="org0c6337f">Massive surveillance</h3>
+<div class="outline-text-3" id="text-org0c6337f">
 <p>
 Now cancelled former Tor developer and 'Wikileaks associate' Jacob Appelbaum quietly got a PhD from two of the world's premiere crypto experts DJ Bernstein and Tanja Lange at TU/e in the Netherlands. I don't know or care about any of the details of his fall from grace but he did write a thesis/dissertation so we may as well read it. The pdf is <a href="https://research.tue.nl/en/publications/communication-in-a-world-of-pervasive-surveillance-sources-and-me">here</a> or direct link <a href="https://research.tue.nl/files/197416841/20220325_Appelbaum_hf.pdf">here</a>. 
 </p>
@@ -635,11 +632,10 @@ Chapter 8 REUNION is a PAKE for real life key encrypted key exchange, a kind of 
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-orgb770878" class="outline-2">
-<h2 id="orgb770878">The real history of h4xxing</h2>
-<div class="outline-text-2" id="text-orgb770878">
+<div id="outline-container-org660fe53" class="outline-3">
+<h3 id="org660fe53">History of h4xxing</h3>
+<div class="outline-text-3" id="text-org660fe53">
 <p>
 In the early days you basically stumbled into hacking/phreaking by accident by either curious discovery pressing a combo of commands or blew a Cap'n Crunch free cereal box whistle into the phone handset and gained complete control over the system. Techniques were traded for free there was no real security industry for software or even much organized criminal activity until the <a href="https://en.wikipedia.org/wiki/The_Hacker_Crackdown">hacker crackdown</a>. Most crime was stealing technical manuals and juvenile pranks on <a href="https://en.wikipedia.org/wiki/EFnet">EFnet</a> rivals was typical in the 90s or getting the numbers to a group of payphones in NYC, figuring out how to call them for free, and some other hacker would answer and give you advice where to find information. That was the scene then a bunch of 'keyboard cowboys' and around this time <a href="https://www.youtube.com/watch?v=33WuGp6fs3s">Hackers the movie</a> came out which besides the (fruit boots) inline skates was very realistic it should almost be a documentary like how you'd go to meets and they'd drill you what do you actually know. 
 </p>
@@ -656,11 +652,12 @@ Today these criminals have an opposite strategy of trying to not get noticed ins
 Anonymous was the 'hive' it was a large group of kids willing to use the tools that blackhats gave them either for lelz or in order to cover for whatever they had just done with the same tool. "Damn this attack signature is too unique I'm going to get caught for sure! Wait I know who to blame for this the hacker <a href="https://www.youtube.com/watch?v=xlGvhIBHnJM">known as&#x2026;</a>"
 </p>
 </div>
+</div>
 
 
-<div id="outline-container-org0d41b1a" class="outline-3">
-<h3 id="org0d41b1a">The last of the true hackers</h3>
-<div class="outline-text-3" id="text-org0d41b1a">
+<div id="outline-container-orga11b39a" class="outline-3">
+<h3 id="orga11b39a">The last of the true hackers</h3>
+<div class="outline-text-3" id="text-orga11b39a">
 
 <div class="figure">
 <p><img src="./rms.jpg" alt="rms.jpg" width="300" />
@@ -673,9 +670,9 @@ Obtain the book <a href="https://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Co
 </div>
 </div>
 
-<div id="outline-container-orgf7dcd7c" class="outline-3">
-<h3 id="orgf7dcd7c">The last of the true blackhats</h3>
-<div class="outline-text-3" id="text-orgf7dcd7c">
+<div id="outline-container-org815ef7a" class="outline-3">
+<h3 id="org815ef7a">The last of the true blackhats</h3>
+<div class="outline-text-3" id="text-org815ef7a">
 
 <div class="figure">
 <p><img src="./theut.jpg" alt="theut.jpg" width="300" />
@@ -700,9 +697,9 @@ He was making a nice salary in NYC as a trading systems software developer (at n
 </div>
 </div>
 
-<div id="outline-container-org011d823" class="outline-3">
-<h3 id="org011d823">Max Ray Vision</h3>
-<div class="outline-text-3" id="text-org011d823">
+<div id="outline-container-org1a4b693" class="outline-3">
+<h3 id="org1a4b693">Max Ray Vision</h3>
+<div class="outline-text-3" id="text-org1a4b693">
 
 <div class="figure">
 <p><img src="./maxrayvision.jpg" alt="maxrayvision.jpg" width="300" />
@@ -724,9 +721,9 @@ Max used a lot of tricks like hiding his very popular marketplace in plain site 
 </div>
 
 
-<div id="outline-container-org52d0de4" class="outline-3">
-<h3 id="org52d0de4">ASTRA</h3>
-<div class="outline-text-3" id="text-org52d0de4">
+<div id="outline-container-orgfdc566b" class="outline-3">
+<h3 id="orgfdc566b">ASTRA</h3>
+<div class="outline-text-3" id="text-orgfdc566b">
 <p>
 There is a hacker called ASTRA who was revealed to be a 58 year old retired mathematician living in Greece. He remotely broke into France's Dassault corporation which manufactures military aircraft and weapons and sold secrets worth 350 million dollars from 2002 until 2008 to their competitors worldwide with the help of a global crime network. He was clearly not an employee leaking information or anything or else he'd be in prison and his identity revealed. Nobody has ever revealed his identity because he likely was hacking OpenSSL or something they deemed too important to not know about so retained him as a consultant. He was living under <i>perfectly forged</i> gov identities in Athens that he had hacked (again prob OpenSSL or other crypto hacking breaking into gov dbms) and they never revealed how they caught him though likely it was following money or a lesser guy in his crime network was picked up and snitched. 
 </p>
@@ -736,11 +733,10 @@ The lesson here is if you're going to do this (you shouldn't) then go for the ol
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org90a35ef" class="outline-2">
-<h2 id="org90a35ef">"Darknet OPSEC"</h2>
-<div class="outline-text-2" id="text-org90a35ef">
+<div id="outline-container-orgaada649" class="outline-3">
+<h3 id="orgaada649">Darknet OPSEC</h3>
+<div class="outline-text-3" id="text-orgaada649">
 <p>
 Let's watch <a href="https://www.youtube.com/watch?v=01oeaBb85Xc">this</a> DEFCON 30 talk from last year about a guy involved in shady stuff. I have some experience in this so will add annoying commentary but I was never using these sites to sell or buy I was interested in custom software buildilng and they would always make me an internal member with access to private messaging groups just because I'm good at <a href="http://www.infiltration.org/zine.html">infiltration</a>. This talk is about 'keeping safe from the federal gov' but in reality you can't as we'll see.
 </p>
@@ -782,28 +778,29 @@ End of this he warns it's a bad business model doing what he did and the return 
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-orgb87db0b" class="outline-2">
-<h2 id="orgb87db0b">Principles of Imperative Programming</h2>
-<div class="outline-text-2" id="text-orgb87db0b">
+<div id="outline-container-org8eb2d0f" class="outline-2">
+<h2 id="org8eb2d0f">Principles of Imperative Programming</h2>
+<div class="outline-text-2" id="text-org8eb2d0f">
 <p>
-This is just reading notes/slides and doing some exercises to learn loop invariants and reasoning about code so we can break it. We also need the information here to do 15-213 the x86-64 architecture course and later the operating systems course.
+This is only reading notes/slides and doing some exercises in the notes (they have solutions) to learn loop invariants and reasoning about code so we can break it. We also need the information here to do 15-213 the x86-64 architecture course and later the operating systems course.
 </p>
 
 <ul class="org-ul">
 <li>CMU <a href="http://www.cs.cmu.edu/~15122/schedule.shtml">15-122</a> Principles of Imperative Computing
 <ul class="org-ul">
-<li>Use wget to get <a href="http://www.cs.cmu.edu/~rjsimmon/15122-f13/">these</a> includes some solutions.</li>
+<li>Use wget to get <a href="http://www.cs.cmu.edu/~rjsimmon/15122-f13/">these</a> includes some solutions if you want to try assignments.</li>
 <li>Andre Platzer site <a href="https://symbolaris.com/course/pic13-schedule.html">symbolaris</a> has different semesters if you want but content is generally the same every year</li>
 </ul></li>
 </ul>
 </div>
 
-<div id="outline-container-orgfc1038a" class="outline-3">
-<h3 id="orgfc1038a">Setup</h3>
-<div class="outline-text-3" id="text-orgfc1038a">
+<div id="outline-container-org35e277f" class="outline-3">
+<h3 id="org35e277f">Setup</h3>
+<div class="outline-text-3" id="text-org35e277f">
 <p>
-First let's get c0 programming language (pronounced c-naught or c-not) by installing it <a href="https://bitbucket.org/c0-lang/docs/wiki/Downloads">here</a>. Use can use any text editor, you either compile a c0 program to a binary and run it or you use coin interpreter see this <a href="https://www.youtube.com/watch?v=2Are6AK5Nn4">setup video</a> and skip to @8m 'Running a c0 program'. You can also use various editor plugins. If you use VScode it's in the <a href="https://marketplace.visualstudio.com/items?itemName=15122staff.c0-lsp">marketplace</a> if you use emacs like me they have a c0-mode but I'm just going to manually run everything mostly in coin.
+First let's get c0 programming language (pronounced c-naught or c-not) by installing it <a href="https://bitbucket.org/c0-lang/docs/wiki/Downloads">here</a>. Use can use any text editor and run them in the coin interpreter see this <a href="https://www.youtube.com/watch?v=2Are6AK5Nn4">setup video</a> and skip to @8m 'Running a c0 program'. You can also use various editor plugins. If you use VScode it's in the <a href="https://marketplace.visualstudio.com/items?itemName=15122staff.c0-lsp">marketplace</a> if you use emacs like me they have a c0-mode but I'm just going to manually run everything mostly in coin.
 </p>
 
 <p>
@@ -836,11 +833,11 @@ Type 'coin mystery2.co' and you get the c0 interpreter. Inside the interpreter e
 </div>
 </div>
 
-<div id="outline-container-org2d197ee" class="outline-3">
-<h3 id="org2d197ee">Contracts</h3>
-<div class="outline-text-3" id="text-org2d197ee">
+<div id="outline-container-org1049632" class="outline-3">
+<h3 id="org1049632">Contracts</h3>
+<div class="outline-text-3" id="text-org1049632">
 <p>
-Reading the <a href="https://www.cs.cmu.edu/~15122/handouts/lectures/01-contracts.pdf">first lecture</a> and <a href="http://www.cs.cmu.edu/~15122/handouts/slides/review/01-contracts.pdf">slides</a> from this year's version. They are both worth looking at, the notes are like a book and slides have some additional content aimed at students like 'why is this bad code'. Sometimes they erase semesters if so try and earlier one linked above. Like we did in setup paste that mystery program to test.c0 and load it in coin and try it out with inputs as per lecture notes. In <i>Finding a Loop Invariant</i> the exit condition in the while loop is (y &gt; 1) and you think about what the value of all mutable assignables are right before that exit condition is tested. 
+Reading the <a href="https://www.cs.cmu.edu/~15122/handouts/lectures/01-contracts.pdf">first lecture</a> and <a href="http://www.cs.cmu.edu/~15122/handouts/slides/review/01-contracts.pdf">slides</a> from this year's version. They are both worth looking at, the notes are like a book and slides have some additional content aimed at students like 'why is this bad code'. Always start with the slides first then look into the lecture if you need to know more or to try the exercises. Sometimes they erase or archive semesters if that happens try an earlier one linked above. 
 </p>
 
 <p>
@@ -878,7 +875,7 @@ int f (int x, int y)
 </pre>
 
 <p>
-Page 24, <a href="https://mathworld.wolfram.com/IntegerDivision.html">integer division</a> 1/2 is 0: (2*n+1)/2 is 2*n/2 + 1/2 or n + 0. Page 25, the antecedent in an implication: If (antecedent) then (consequent) which returns a t/f boolean.
+Page 24, <a href="https://mathworld.wolfram.com/IntegerDivision.html">integer division</a> 1/2 is 0: (2*n+1)/2 is 2*n/2 + 1/2 or n + 0. Page 25, the antecedent in an implication: If (antecedent) then (consequent) which returns a t/f boolean. 
 </p>
 
 <p>
@@ -887,20 +884,24 @@ This was a very detailed logical look at a simple function and in the end it sti
 </div>
 </div>
 
-<div id="outline-container-orgb160315" class="outline-3">
-<h3 id="orgb160315">Ints</h3>
-<div class="outline-text-3" id="text-orgb160315">
+<div id="outline-container-org337f018" class="outline-3">
+<h3 id="org337f018">Ints</h3>
+<div class="outline-text-3" id="text-org337f018">
 <p>
-Lecture <a href="http://www.cs.cmu.edu/~15122/handouts/lectures/02-ints.pdf">notes</a> and <a href="http://www.cs.cmu.edu/~15122/handouts/slides/review/02-ints.pdf">slides</a>. TODO
+Lecture <a href="http://www.cs.cmu.edu/~15122/handouts/lectures/02-ints.pdf">notes</a> and <a href="http://www.cs.cmu.edu/~15122/handouts/slides/review/02-ints.pdf">slides</a>. If either one doesn't make sense look at the other. Horner's rule you use the result of the previous for the next but we'll learn later in 15-213 this is all much easier when you use hexadecimal you can quickly manipulate binary numbers and figure out their decimal if needed. If it's not clear 11000110 is 2<sup>7</sup> + 2<sup>6</sup> + 2<sup>2</sup> + 2<sup>1</sup> 
+</p>
+
+<p>
+TODO
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org7f0621d" class="outline-2">
-<h2 id="org7f0621d">Intro to computer systems</h2>
-<div class="outline-text-2" id="text-org7f0621d">
+<div id="outline-container-org7601743" class="outline-2">
+<h2 id="org7601743">Intro to computer systems</h2>
+<div class="outline-text-2" id="text-org7601743">
 <p>
 -15-213 <a href="https://www.cs.cmu.edu/~213/">Introduction to Computer Systems</a>
 </p>
@@ -914,9 +915,9 @@ There is a problem with the book where the global version the publisher paid som
 </p>
 </div>
 
-<div id="outline-container-orge30fc71" class="outline-3">
-<h3 id="orge30fc71">Lecture 2</h3>
-<div class="outline-text-3" id="text-orge30fc71">
+<div id="outline-container-orgc81c81d" class="outline-3">
+<h3 id="orgc81c81d">Lecture 2</h3>
+<div class="outline-text-3" id="text-orgc81c81d">
 <p>
 Watching the <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6ca8cdb4-6961-42d9-8fac-299e53759a17">second lecture</a> since the first is just logistics for the course. The lectures are definitely helpful for this course because the book is filled with so many details you can easily get lost but it's up to you. 
 </p>
@@ -928,21 +929,21 @@ Watching the <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?i
 </div>
 </div>
 
-<div id="outline-container-orgaf9e027" class="outline-2">
-<h2 id="orgaf9e027">Operating Systems Engineering TODO</h2>
+<div id="outline-container-org5487145" class="outline-2">
+<h2 id="org5487145">Operating Systems Engineering TODO</h2>
 </div>
 
-<div id="outline-container-org8c1a631" class="outline-2">
-<h2 id="org8c1a631">Binary Exploitation TODO</h2>
+<div id="outline-container-org1536287" class="outline-2">
+<h2 id="org1536287">Binary Exploitation TODO</h2>
 </div>
 
-<div id="outline-container-org5eaab3a" class="outline-2">
-<h2 id="org5eaab3a">Cryptography TODO</h2>
+<div id="outline-container-orgf34999f" class="outline-2">
+<h2 id="orgf34999f">Cryptography TODO</h2>
 </div>
 
-<div id="outline-container-org40cb7ce" class="outline-2">
-<h2 id="org40cb7ce">Attacking networks TODO</h2>
-<div class="outline-text-2" id="text-org40cb7ce">
+<div id="outline-container-org814b57b" class="outline-2">
+<h2 id="org814b57b">Attacking networks TODO</h2>
+<div class="outline-text-2" id="text-org814b57b">
 <hr />
 <p>
 <a href="./index.html">Home</a>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-07 Wed 20:16 -->
+<!-- 2024-08-07 Wed 22:14 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Mathematical Tripos From Scratch</title>
@@ -248,43 +248,51 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org5b92283">Intro</a>
+<li><a href="#org823b8ca">Intro</a>
 <ul>
-<li><a href="#org1a39443">The purpose of education</a></li>
-<li><a href="#orga39715d">Isaac Newton at Cambridge</a></li>
+<li><a href="#orgf151d0c">The purpose of education</a></li>
+<li><a href="#org708c350">Isaac Newton at Cambridge</a></li>
 </ul>
 </li>
-<li><a href="#org8edd2d5">Basic Arithmetic</a></li>
-<li><a href="#orgacd7e7d">Basic Geometry</a></li>
-<li><a href="#orgdcca494">Basic Algebra</a></li>
-<li><a href="#org538e1fe">Mathematical Tripos</a>
+<li><a href="#orga7a8b88">Basic Arithmetic</a></li>
+<li><a href="#orge09c71d">Basic Geometry</a></li>
+<li><a href="#orgc42f6f5">Basic Algebra</a></li>
+<li><a href="#orgb93fbbc">Mathematical Tripos</a>
 <ul>
-<li><a href="#orgce7f0f9">How it works</a></li>
-<li><a href="#org1478096">Curriculum</a></li>
-<li><a href="#orgdeca417">How we will do it</a></li>
+<li><a href="#org89e2451">How it works</a></li>
+<li><a href="#orgdc1be12">Curriculum</a></li>
+<li><a href="#orgd81239b">How we will do it</a></li>
 </ul>
 </li>
-<li><a href="#org4ab4942">Part 1A</a></li>
+<li><a href="#org0a58f54">Part 1A TODO</a>
+<ul>
+<li><a href="#orgb0d47b4">Groups</a></li>
+<li><a href="#org87e5853">Vectors and Matrices</a></li>
+<li><a href="#orgd2fae6b">Differential Equations</a></li>
+<li><a href="#org7c48399">Numbers and Sets</a></li>
+<li><a href="#org0a1e17e">Mechanics</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <hr />
 
-<div id="outline-container-org5b92283" class="outline-2">
-<h2 id="org5b92283">Intro</h2>
-<div class="outline-text-2" id="text-org5b92283">
+<div id="outline-container-org823b8ca" class="outline-2">
+<h2 id="org823b8ca">Intro</h2>
+<div class="outline-text-2" id="text-org823b8ca">
 <p>
 This is for anyone who wants to bring themselves up to date with the last few hundred years of mathematics. Here we teach ourselves the entire Part IA, IB and II of the Cambridge <a href="https://www.maths.cam.ac.uk/undergrad/lecturelists">Math Tripos</a> because a surprising amount of it (lectures, psets, exams) is available for free online for anyone to self-study. A Fields medal winner Richard Borcherds has <a href="https://www.youtube.com/@richarde.borcherds7998/videos">lectures</a> on YouTube covering some Part II courses. Almost everything here is free if not use <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> and pick a domain which isn't blacklisted by your DNS provider (or <a href="https://wiki.archlinux.org/title/Alternative_DNS_services">change</a> DNS providers)
 </p>
 
 <p>
-I only use the most basic prereqs we'll just have to fill in the blanks as we go. 
+I only use the most basic prereqs we'll just have to fill in the blanks as we go. This is just for fun the math content of the rest of the workshops are self-contained here we finally get decent at math. 
 </p>
 </div>
 
-<div id="outline-container-org1a39443" class="outline-3">
-<h3 id="org1a39443">The purpose of education</h3>
-<div class="outline-text-3" id="text-org1a39443">
+<div id="outline-container-orgf151d0c" class="outline-3">
+<h3 id="orgf151d0c">The purpose of education</h3>
+<div class="outline-text-3" id="text-orgf151d0c">
 <p>
 Consider this <a href="https://youtu.be/H0z9sJyTv2w?si=pNoBwqVwc_5URGTO">talk</a> on who actually benefits from education looking at ancient societies and their interpretation on what education should be. The average tuition is now USD$12k for public college or $60k for a private college (NYU, Fordham, Columbia) <i>per year</i> and that doesn't include living costs. The story is the same in Canada and other countries too. Nobody can afford to go anymore or is refusing to go not wanting $90k in debt. 
 </p>
@@ -295,9 +303,9 @@ Cambridge is somehow still reasonably priced if you're a local it is about same 
 </div>
 </div>
 
-<div id="outline-container-orga39715d" class="outline-3">
-<h3 id="orga39715d">Isaac Newton at Cambridge</h3>
-<div class="outline-text-3" id="text-orga39715d">
+<div id="outline-container-org708c350" class="outline-3">
+<h3 id="org708c350">Isaac Newton at Cambridge</h3>
+<div class="outline-text-3" id="text-org708c350">
 <p>
 For geometry-themed entertainment try <a href="http://libgen.is/book/index.php?md5=B290F008ACE9DE45827692ED7A4CB944">Isaac Newton on Mathematical Certainty and Method</a> by Niccolo Guicciardini.
 </p>
@@ -397,17 +405,17 @@ A very curious relic of Sir Isaac survives in the garden at Cranbury Park, viz. 
 </div>
 </div>
 
-<div id="outline-container-org8edd2d5" class="outline-2">
-<h2 id="org8edd2d5">Basic Arithmetic</h2>
-<div class="outline-text-2" id="text-org8edd2d5">
+<div id="outline-container-orga7a8b88" class="outline-2">
+<h2 id="orga7a8b88">Basic Arithmetic</h2>
+<div class="outline-text-2" id="text-orga7a8b88">
 <p>
 We start by seeing how number objects are constructed. 
 </p>
 </div>
 
-<div id="outline-container-org0c74eac" class="outline-4">
-<h4 id="org0c74eac">Arithmetic with natural numbers</h4>
-<div class="outline-text-4" id="text-org0c74eac">
+<div id="outline-container-orgf14e5bf" class="outline-4">
+<h4 id="orgf14e5bf">Arithmetic with natural numbers</h4>
+<div class="outline-text-4" id="text-orgf14e5bf">
 <p>
 Wildberger originally made these lectures because his primary school kids were being taught trash mathematics in the 'new and improved' Australian school system. He also prefers to define mathematical objects as types instead of sets and thinks the real numbers are a bogus abstraction but we are far, far away from even knowing what a real number actually is.
 </p>
@@ -483,9 +491,9 @@ Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is 
 </div>
 </div>
 
-<div id="outline-container-org3f98e42" class="outline-4">
-<h4 id="org3f98e42">Subtraction and division</h4>
-<div class="outline-text-4" id="text-org3f98e42">
+<div id="outline-container-orgd9d9d63" class="outline-4">
+<h4 id="orgd9d9d63">Subtraction and division</h4>
+<div class="outline-text-4" id="text-orgd9d9d63">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
@@ -515,9 +523,9 @@ Oops, he didn't define negative numbers yet (or even zero) since n - m is only d
 </div>
 </div>
 
-<div id="outline-container-org4a22612" class="outline-4">
-<h4 id="org4a22612">The Hindu-Arabic number system</h4>
-<div class="outline-text-4" id="text-org4a22612">
+<div id="outline-container-orga76ad8b" class="outline-4">
+<h4 id="orga76ad8b">The Hindu-Arabic number system</h4>
+<div class="outline-text-4" id="text-orga76ad8b">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -539,9 +547,9 @@ This will come up in many of the algebra books we'll do later.
 </div>
 
 
-<div id="outline-container-org54483f2" class="outline-4">
-<h4 id="org54483f2">Arithmetic with Hindu-Arabic notation</h4>
-<div class="outline-text-4" id="text-org54483f2">
+<div id="outline-container-org5189698" class="outline-4">
+<h4 id="org5189698">Arithmetic with Hindu-Arabic notation</h4>
+<div class="outline-text-4" id="text-org5189698">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -552,9 +560,9 @@ A new way of hand multiplication is shown, taking advantage of the fact the nota
 </div>
 </div>
 
-<div id="outline-container-org2132652" class="outline-4">
-<h4 id="org2132652">Laws of Division</h4>
-<div class="outline-text-4" id="text-org2132652">
+<div id="outline-container-org0dde87c" class="outline-4">
+<h4 id="org0dde87c">Laws of Division</h4>
+<div class="outline-text-4" id="text-org0dde87c">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -600,9 +608,9 @@ Of course we have software for this now so drilling long division seems pointles
 </div>
 </div>
 
-<div id="outline-container-org1d5c10e" class="outline-4">
-<h4 id="org1d5c10e">Fractions</h4>
-<div class="outline-text-4" id="text-org1d5c10e">
+<div id="outline-container-orgb93b335" class="outline-4">
+<h4 id="orgb93b335">Fractions</h4>
+<div class="outline-text-4" id="text-orgb93b335">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -613,9 +621,9 @@ Interesting how he defines all these as types.
 </div>
 </div>
 
-<div id="outline-container-orgdcbf72a" class="outline-4">
-<h4 id="orgdcbf72a">Arithmetic with fractions</h4>
-<div class="outline-text-4" id="text-orgdcbf72a">
+<div id="outline-container-org09543c4" class="outline-4">
+<h4 id="org09543c4">Arithmetic with fractions</h4>
+<div class="outline-text-4" id="text-org09543c4">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -626,9 +634,9 @@ The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> us
 </div>
 </div>
 
-<div id="outline-container-org69007ad" class="outline-4">
-<h4 id="org69007ad">Laws of arithmetic for fracions</h4>
-<div class="outline-text-4" id="text-org69007ad">
+<div id="outline-container-org66b7e30" class="outline-4">
+<h4 id="org66b7e30">Laws of arithmetic for fracions</h4>
+<div class="outline-text-4" id="text-org66b7e30">
 <ul class="org-ul">
 <li><a href="https://youtu.be/uADs1yepIIA?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
 </ul>
@@ -639,9 +647,9 @@ Follow all these proofs. As per Wildberger in a video in his playlist about prim
 </div>
 </div>
 
-<div id="outline-container-org19a21d3" class="outline-4">
-<h4 id="org19a21d3">Integer construction</h4>
-<div class="outline-text-4" id="text-org19a21d3">
+<div id="outline-container-org559cb1f" class="outline-4">
+<h4 id="org559cb1f">Integer construction</h4>
+<div class="outline-text-4" id="text-org559cb1f">
 <ul class="org-ul">
 <li><a href="https://youtu.be/YDBLXCFrihc?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 12</li>
 </ul>
@@ -652,9 +660,9 @@ The point in watching these is to see how you can start with just the natural na
 </div>
 </div>
 
-<div id="outline-container-org6b7173e" class="outline-4">
-<h4 id="org6b7173e">Rational numbers</h4>
-<div class="outline-text-4" id="text-org6b7173e">
+<div id="outline-container-org596e661" class="outline-4">
+<h4 id="org596e661">Rational numbers</h4>
+<div class="outline-text-4" id="text-org596e661">
 <ul class="org-ul">
 <li><a href="https://youtu.be/MDMG9Ljb8l0?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 13</li>
 </ul>
@@ -665,9 +673,9 @@ We learn what a field is. He says we should try proving all the field operations
 </div>
 </div>
 
-<div id="outline-container-orgae432cc" class="outline-4">
-<h4 id="orgae432cc">More Arithmetic (Optional)</h4>
-<div class="outline-text-4" id="text-orgae432cc">
+<div id="outline-container-org854d093" class="outline-4">
+<h4 id="org854d093">More Arithmetic (Optional)</h4>
+<div class="outline-text-4" id="text-org854d093">
 <p>
 If for whatever reasons you want even more arithmetic try <a href="https://www.mathasasecondlanguage.org/self-guided">Arithmetic</a> by Herb Gross. This is vocational school style math that was originally taught to adults at community colleges and in prisons in North Carolina. The book is <a href="http://web.archive.org/web/20170713214904/http://www.adjectivenounmath.com/id78.html">here</a> archived. The YouTube <a href="https://www.youtube.com/playlist?list=PL9phnVI_EOVW9U2PZtGKRwMvHy3l4reYv">playlist</a> has exercise explanation videos you don't have to watch unless needed but they're very good he teaches everything using bounds and inequalities or relating them to English grammar.
 </p>
@@ -675,17 +683,17 @@ If for whatever reasons you want even more arithmetic try <a href="https://www.m
 </div>
 </div>
 
-<div id="outline-container-orgacd7e7d" class="outline-2">
-<h2 id="orgacd7e7d">Basic Geometry</h2>
-<div class="outline-text-2" id="text-orgacd7e7d">
+<div id="outline-container-orge09c71d" class="outline-2">
+<h2 id="orge09c71d">Basic Geometry</h2>
+<div class="outline-text-2" id="text-orge09c71d">
 <p>
 We will take <a href="https://ocw.metu.edu.tr/course/view.php?id=311">MATH 373</a> in part IB of the Tripos there's a playlist on <a href="https://www.youtube.com/playlist?list=PLuiPz6iU5SQ828B8vmWXrjMDGXHGH3ci6">YouTube</a>. We'll learn Euclidean, Projective and Hyperbolic geometry plus do a math circles book by Skopenkov of problems. 
 </p>
 </div>
 
-<div id="outline-container-org3986e2a" class="outline-4">
-<h4 id="org3986e2a">Euclid's Elements</h4>
-<div class="outline-text-4" id="text-org3986e2a">
+<div id="outline-container-org45ba6f1" class="outline-4">
+<h4 id="org45ba6f1">Euclid's Elements</h4>
+<div class="outline-text-4" id="text-org45ba6f1">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=yICpKzPv1xI&amp;list=PL5A714C94D40392AB&amp;index=19">YouTube</a> - Arithmetic and Geometry Math Foundations 19</li>
 <li><a href="https://www.youtube.com/watch?v=YAdEfQsIGt8&amp;list=PL5A714C94D40392AB&amp;index=20">YouTube</a> - Arithmetic and Geometry Math Foundations 20</li>
@@ -705,9 +713,9 @@ All modern geometry and algebra is derived from Euclid's book. Wildberger breaks
 </div>
 </div>
 
-<div id="outline-container-orgdcca494" class="outline-2">
-<h2 id="orgdcca494">Basic Algebra</h2>
-<div class="outline-text-2" id="text-orgdcca494">
+<div id="outline-container-orgc42f6f5" class="outline-2">
+<h2 id="orgc42f6f5">Basic Algebra</h2>
+<div class="outline-text-2" id="text-orgc42f6f5">
 <p>
 Algebra as we know it today was invented 1200 years ago as a 'system of balancing' to figure out complex Islamic inheritance law and being able to add scalars to both sides of an equation to remove negative numbers since they had to concept of integers back then. Before that Diophantus wrote several treatises on arithmetic which was really proto-algebra and again invented to solve Athens legal procedures about dividing of estates between family members. The most interesting aspect of Diophantus' work is that it's quite modern how it teaches you how to do math by solving problems giving examples of potential mistakes and dead ends. If you're interested read <i>Brill's Companion to the Reception of Ancient Rhetoric</i> chapter 26 <i>The Rhetoric of Math</i> on library genesis. 
 </p>
@@ -732,13 +740,13 @@ Algebra including abstract and linear algebra is one of the first topics in the 
 </div>
 
 
-<div id="outline-container-org538e1fe" class="outline-2">
-<h2 id="org538e1fe">Mathematical Tripos</h2>
-<div class="outline-text-2" id="text-org538e1fe">
+<div id="outline-container-orgb93fbbc" class="outline-2">
+<h2 id="orgb93fbbc">Mathematical Tripos</h2>
+<div class="outline-text-2" id="text-orgb93fbbc">
 </div>
-<div id="outline-container-orgce7f0f9" class="outline-3">
-<h3 id="orgce7f0f9">How it works</h3>
-<div class="outline-text-3" id="text-orgce7f0f9">
+<div id="outline-container-org89e2451" class="outline-3">
+<h3 id="org89e2451">How it works</h3>
+<div class="outline-text-3" id="text-org89e2451">
 <p>
 The real life mathematical tripos consists of Part IA, IB and II and is supposed to take 3 years to achieve a BA honors degree. Part III is a masters degree. It is a fully immersive degree where all you do is math 6 days a week there is no other electives. Each year has three terms that are only 80 days long: Michaelmas, Lent and Easter. You do 4 courses of 24 lectures each term except Easter which is <a href="https://www.maths.cam.ac.uk/undergrad/catam/part-ia-lectures">computational projects</a> and some students take non-examinable lectures to help with next term. All the exams are taken in June (Easter term) and are 3 hours long each with each exam testing 2 courses you took. This is why it's considered a very hard degree because imagine taking 8 courses and having to know them so well that you can pass a 3 hour test many months later. 
 </p>
@@ -749,9 +757,9 @@ During the term you work through 4 example sheets per course which are problems 
 </div>
 </div>
 
-<div id="outline-container-org1478096" class="outline-3">
-<h3 id="org1478096">Curriculum</h3>
-<div class="outline-text-3" id="text-org1478096">
+<div id="outline-container-orgdc1be12" class="outline-3">
+<h3 id="orgdc1be12">Curriculum</h3>
+<div class="outline-text-3" id="text-orgdc1be12">
 <p>
 Here is the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.pdf">schedule</a> for 2023 and what we'll be doing is the table on the second page followed by details about the courses. Every year the tripos <a href="https://www.maths.cam.ac.uk/undergrad/lecturelists">publishes</a> their curriculum and each professor has lecture notes and exams on their personal sites or by students like <a href="https://thirdsgames.co.uk/maths.html">here</a> or <a href="https://www.neelnanda.io/about">Neel Nanda's</a> intuitive notes. 
 </p>
@@ -761,9 +769,9 @@ Here is a sample recorded <a href="https://www.youtube.com/watch?v=71lsEVpKM88">
 </p>
 </div>
 
-<div id="outline-container-org246a263" class="outline-4">
-<h4 id="org246a263">Part IA (first year)</h4>
-<div class="outline-text-4" id="text-org246a263">
+<div id="outline-container-orgefcddb3" class="outline-4">
+<h4 id="orgefcddb3">Part IA (first year)</h4>
+<div class="outline-text-4" id="text-orgefcddb3">
 <p>
 Part IA is mandatory there's no options. Cambridge allows students to sit in on any lectures they want so often students attend 1B Groups to fill in the theory. 
 </p>
@@ -798,9 +806,9 @@ Part IA is mandatory there's no options. Cambridge allows students to sit in on 
 </div>
 </div>
 
-<div id="outline-container-orgeaebe61" class="outline-4">
-<h4 id="orgeaebe61">Part IB (second year)</h4>
-<div class="outline-text-4" id="text-orgeaebe61">
+<div id="outline-container-org861bc5a" class="outline-4">
+<h4 id="org861bc5a">Part IB (second year)</h4>
+<div class="outline-text-4" id="text-org861bc5a">
 <p>
 This is another sample term. We get a choice to pick whatever we want so long as we don't break dependencies for Part II see the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.pdf">schedule</a>.
 </p>
@@ -833,9 +841,9 @@ This is another sample term. We get a choice to pick whatever we want so long as
 </div>
 </div>
 
-<div id="outline-container-org13b4c58" class="outline-4">
-<h4 id="org13b4c58">Part II (third year)</h4>
-<div class="outline-text-4" id="text-org13b4c58">
+<div id="outline-container-org965d7e7" class="outline-4">
+<h4 id="org965d7e7">Part II (third year)</h4>
+<div class="outline-text-4" id="text-org965d7e7">
 <p>
 Choose ~8 courses in your interest.
 </p>
@@ -850,9 +858,9 @@ We have full recorded lecture access for topics in Number Theory, Galois Theory,
 </div>
 </div>
 
-<div id="outline-container-org1f3805f" class="outline-4">
-<h4 id="org1f3805f">Part III (Masters)</h4>
-<div class="outline-text-4" id="text-org1f3805f">
+<div id="outline-container-orga57e926" class="outline-4">
+<h4 id="orga57e926">Part III (Masters)</h4>
+<div class="outline-text-4" id="text-orga57e926">
 <p>
 List of courses <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/part-iii-guide-courses">here</a> and we have access to the <a href="http://www.dpmms.cam.ac.uk/study/#PartIII">example sheets</a> for most topics. You would obviously take whatever you are interested in this is a deep study. They allow you to write an essay ~30 pages like a thesis to replace having to do a 3 hour exam on that course. Only 5 full unit courses are examed during Easter and the <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/current/tripos-examination-papers/2023">exams</a> you only attempt 3 questions. 
 </p>
@@ -860,9 +868,9 @@ List of courses <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/part-iii-
 </div>
 </div>
 
-<div id="outline-container-orgdeca417" class="outline-3">
-<h3 id="orgdeca417">How we will do it</h3>
-<div class="outline-text-3" id="text-orgdeca417">
+<div id="outline-container-orgd81239b" class="outline-3">
+<h3 id="orgd81239b">How we will do it</h3>
+<div class="outline-text-3" id="text-orgd81239b">
 <p>
 We are only studying for the specific topics in the course, not contents of entire books until we get to Part III which is notoriously difficult since it's a masters. In the past the Tripos was a kind of ridiculous endurance test and students would be athletic doing 'mountaineering' and other stamina improving exercises so they could survive the marathon exam schedule back then.  
 </p>
@@ -881,25 +889,75 @@ The algorithm is as follows
 </div>
 
 
-<div id="outline-container-org4ab4942" class="outline-2">
-<h2 id="org4ab4942">Part 1A</h2>
-<div class="outline-text-2" id="text-org4ab4942">
+<div id="outline-container-org0a58f54" class="outline-2">
+<h2 id="org0a58f54">Part 1A TODO</h2>
+<div class="outline-text-2" id="text-org0a58f54">
 <p>
-According to the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.pdf">schedule</a> we start term 1 (Michaelmas) with Groups, Numbers &amp; Sets, Differential Equations and Vectors and Matrices. Since we don't have 'A levels mechanics' we have to take that too. In real life you would get 80 days to do this completing the 4 <a href="https://www.maths.cam.ac.uk/undergrad/examplesheets">example sheets</a> per course but wouldn't be examined on the material until June next year so have 9 months to prepare. The computational projects are all done in May/June as well.  
+According to the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.pdf">schedule</a> we start term 1 (Michaelmas) with Groups, Numbers &amp; Sets, Differential Equations and Vectors and Matrices. Since we don't have 'A levels mechanics' we have to take that too but it's 12 lectures and not 24 like the others. In real life you would get 80 days to do this completing the 4 <a href="https://www.maths.cam.ac.uk/undergrad/examplesheets">example sheets</a> per course but wouldn't be examined on the material until June next year so have 9 months to prepare. The computational projects are all done in May/June as well.  
 </p>
 
 <p>
 Ok we have arrived on campus and are given <a href="https://www.maths.cam.ac.uk/undergrad/files/studyskills.pdf">this</a> leaflet on study skills in mathematics.
 </p>
+</div>
+
+<div id="outline-container-orgb0d47b4" class="outline-3">
+<h3 id="orgb0d47b4">Groups</h3>
+<div class="outline-text-3" id="text-orgb0d47b4">
+<p>
+We don't have access to all the Cambridge lectures however we do have access to <a href="http://www.math.clemson.edu/~macaule/classes/m20_math4120/">Modern Algebra</a> which uses the text <a href="http://web.bentley.edu/empl/c/ncarter/vgt/index.html">Visual Group Theory</a> that is recommended by Cambridge if you look at the schedule. There's a copy on library genesis. A work book we can use which fills in some of the rigor left out by the VGT book is <a href="https://github.com/dcernst/IBL-AbstractAlgebra/blob/master/ConstructionZone/IBL-AbstractAlgebra.pdf">here</a> and called <i>An Inquiry-Based Approach to Abstract Algebra</i> by Dana Ernst. 
+</p>
 
 <p>
-First lecture is <a href="https://youtu.be/YoxDETQJpjA?feature=shared">Groups</a>. TODO  
+We have access to the first Cambridge lecture on <a href="https://youtu.be/YoxDETQJpjA?feature=shared">Groups</a> TODO
 </p>
+</div>
+</div>
+
+<div id="outline-container-org87e5853" class="outline-3">
+<h3 id="org87e5853">Vectors and Matrices</h3>
+<div class="outline-text-3" id="text-org87e5853">
+<p>
+The recommended book that covers every topic is <i>Algebra and Geometry</i> by Alan Beardon however so does this <a href="http://www.math.clemson.edu/~macaule/classes/f23_math8530/index.html">full course</a> (and covers 1B Linear Algebra) so we may as well do both at the same time.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2fae6b" class="outline-3">
+<h3 id="orgd2fae6b">Differential Equations</h3>
+<div class="outline-text-3" id="text-orgd2fae6b">
+<p>
+This course is almost exactly the same as MIT's <a href="https://ocw.mit.edu/courses/18-03-differential-equations-spring-2010/pages/syllabus/">18.03</a> on Open CourseWare using the same recommended book. It is also similar to this <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> that also has boundary value problems. There is a problem <a href="https://stevenclontz.github.io/checkit-clontz-diff-eq/#/bank/">bank</a> with solutions too. The recommended book has a crash course in derivatives and partial derivatives. If we can do the sample sheets then we're good.   
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7c48399" class="outline-3">
+<h3 id="org7c48399">Numbers and Sets</h3>
+<div class="outline-text-3" id="text-org7c48399">
+<p>
+Covered by <a href="https://hrmacbeth.github.io/math2001/">The Mechanics of Proof</a> and the author is a Cambridge tripos grad, we can program all the proofs in Lean then use Lean for all the abstract math in later courses. The Homotopy Type Theory book iirc covers the countability of sets. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a1e17e" class="outline-3">
+<h3 id="org0a1e17e">Mechanics</h3>
+<div class="outline-text-3" id="text-org0a1e17e">
+<p>
+Non-examinable simple crash course on classical mechanics.  
+</p>
+
+<p>
+&#x2026; cont TODO
+</p>
+
 
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

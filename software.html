@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-07-22 Mon 22:20 -->
+<!-- 2024-08-10 Sat 07:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -270,49 +270,36 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org81dbf58">Start here</a>
+<li><a href="#org4d68810">Start here</a>
 <ul>
-<li><a href="#org2017ecb">Curriculum</a></li>
-<li><a href="#orgf15e854">Strategy</a>
-<ul>
-<li><a href="#orgc086642">Make yourself appear employed</a></li>
-<li><a href="#orgf6df075">Contribute to FSF</a></li>
+<li><a href="#orge079cfa">Curriculum</a></li>
+<li><a href="#org263b4f8">Mentorships</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#org2a4795d">USACO Bronze</a>
+<li><a href="#orgb00c9e1">USACO Bronze</a>
 <ul>
-<li><a href="#orgf84d425">Big-O explained</a></li>
-<li><a href="#org2e2f03b">Time complexity</a></li>
-<li><a href="#org67b7188">Data structures</a></li>
-<li><a href="#orgbfcead1">Simulation</a>
+<li><a href="#org2a22730">Big-O explained</a></li>
+<li><a href="#org936633b">Problems</a>
 <ul>
-<li><a href="#org4e313dc">Shell game</a></li>
-<li><a href="#orgd895327">Mixing milk</a></li>
-<li><a href="#org4a719eb">Stuck in a Rut</a></li>
+<li><a href="#orgc1d6d5d">November 2011</a></li>
 </ul>
 </li>
-<li><a href="#orgef68473">Complete Search TODO</a></li>
+<li><a href="#org6392ae8">Algorithm design</a></li>
 </ul>
 </li>
-<li><a href="#orge8a85a3">Algorithm Design</a></li>
-<li><a href="#org0882ac6">Software Design</a>
+<li><a href="#org7cbfed7">Software Design</a>
 <ul>
-<li><a href="#org36df12f">Gitless</a></li>
+<li><a href="#orgf22f421">Gitless</a></li>
 </ul>
 </li>
-<li><a href="#orgebfbeb2">Languages TODO</a></li>
-<li><a href="#orgc656a3e">Probability TODO</a></li>
-<li><a href="#org27ceae4">Advanced dbms TODO</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org81dbf58" class="outline-2">
-<h2 id="org81dbf58">Start here</h2>
-<div class="outline-text-2" id="text-org81dbf58">
+<div id="outline-container-org4d68810" class="outline-2">
+<h2 id="org4d68810">Start here</h2>
+<div class="outline-text-2" id="text-org4d68810">
 <p>
 I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
 </p>
@@ -324,25 +311,25 @@ I assume you are teaching yourself at the same time some kind of intro course yo
 </ul>
 
 <p>
-This exists to solve two problems. 
+This is under construction as I have to work on it a few hours a day until it's finished. Some days I have time and others I don't, you should take this for fun and not worry if nothing makes sense right away it never does but in time you'll probably be better than me at this. 
 </p>
 
 <p>
-The first is finding a job or freelancing which <i>seems</i> like it's next to impossible these days but they are desperate for developers who know the skills we'll be doing here.
+I am often in contact with recruiters in finance and ask them what exactly do you want for 'new grads' or entry-level candidates. People in this work are writing trading optimizers to lower fees on trades, low-latency network software, and making models faster for quant researchers that process unthinkably huge amounts of proprietary data feeds.  The answer is always a solid grasp of algorithms, memory and concurrency models, CPU-architecture, operating systems and databases. If you show competency in most of the above then you can be taught everything else and you're in. Everything here was vetted by them as being desirable as a basic foundation for someone who doesn't have a degree: USACO training, PLAI.org programming language memory models, queueing theory, and Andy Pavlo's CMU course which teaches how modern high performance applications are designed. 
 </p>
 
 <p>
-The second problem is recruiters always ask me where to find candidates for fintech roles like 'quant developer'. I pressed them on what exactly they look for in 2024 then found free resources that taught as close to the requirements as possible. Everything here was vetted by them as being desirable as a basic foundation (USACO, plai.org, queueing theory, some experience with low-latency network kernel bypass) then the character of the candidate is the determining factor not their claimed experience or credentials. What they want is someone with the ability to figure out things themselves but who knows what they don't know meaning they won't bluff their way through meetings or sabotage the code with unexpected side effects. This person can write software for high throughput applications and can describe in detail the language they are using meaning how the memory abstraction works and if it's a managed runtime how to tune or avoid triggering unnecessary garbage collection. If you possess the above then they claim you can be taught everything else. 
+The interviews for these roles are often a single zoom call with a request to <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> and seeing if you even bother asking questions to clarify the requirements or write examples of edge cases to see how careless you are as a developer because mistakes cost money. This is essentially the new fizz buzz filter. After expect to be asked about your chosen language's memory model and any jargon you use they will ask to define it on the spot to catch you bluffing. If you have a solid set of credentials and pass this part that's basically it and you're in however if you are a risk to them with questionable credentials or none at all then expect a collaborative design of a deceptively simple interface like a controller for a game. The task is then to optimize this design and justify each stage of optimization such as knowing about elementary queuing theory techniques to reduce wait times. They will ask can your code take better advantage of cache locality and avoid calling into the object cache and missing then having to allocate a new object on the heap during a loop. How would you test this code, how would you review this code if someone gave it to you, would you feel confident putting this in production right now? Nothing impossible that you can't teach yourself with some practice. They want to see what you are like to work with when trying to collaborate on solving a problem and that you possess a motivation for learning. If you find them asking you about math or things you didn't put on your resume it's because they think you can do another role like quant trading which pays more.
 </p>
 
 <p>
-Campus recruiting used to cover this but today is monopolized by big tech corps and government crony-run contractors that manipulate school guidelines by pressuring students with 2-week expiring offers and paying the school to lock out all competition so it's a struggle to find anyone qualified to do this kind of work as many companies can't even break into the campus internship or graduate hiring pool. 
+Campus recruiting used to be available but is getting more monopolized by big corps or shady outfits that manipulate school guidelines by pressuring students with 2-week expiring offers (aka exploding offers) so it is a struggle to find anyone qualified to do this kind of work. Professors sometimes act like recruiters now too receiving a form of commission setting up their students with companies that want them further draining the hiring and internship pool. That means there's opportunities for self-studying students.   
 </p>
 </div>
 
-<div id="outline-container-org2017ecb" class="outline-3">
-<h3 id="org2017ecb">Curriculum</h3>
-<div class="outline-text-3" id="text-org2017ecb">
+<div id="outline-container-orge079cfa" class="outline-3">
+<h3 id="orge079cfa">Curriculum</h3>
+<div class="outline-text-3" id="text-orge079cfa">
 <p>
 There will be much more than this such as software design but here is a brief choose your own adventure.
 </p>
@@ -355,7 +342,7 @@ There will be much more than this such as software design but here is a brief ch
 </ul>
 
 <p>
-The USACO guide is excellent at preparing you for any kind of algorithmic test filtering companies may do and it's completely free. This is what the national US team for the info olympiad uses to recruit for further coaching and if you <a href="https://www.ioi2024.eg/">notice</a> many of the sponsors are all finance corps or telecoms because this is how they find the best raw talent.  
+The USACO guide is excellent at preparing you for any kind of algorithmic test filtering companies may do and it's completely free.  
 </p>
 
 <ul class="org-ul">
@@ -379,84 +366,63 @@ If you write enough software eventually you discover that almost everything is s
 </ul>
 
 <p>
-Here we learn kernel bypass methods for low latency networking, code profiling and optimization, hashing/join algorithms, search space complexity reduction, and modern distributed application architecture like microservices. We can also look at their AI tuning <a href="https://15799.courses.cs.cmu.edu/spring2022/">seminar</a> for relational dbms optimization knob tuning. 
+Here we learn kernel bypass methods for low latency networking, code profiling and optimization, hashing/join algorithms, search space complexity reduction, and modern distributed application architecture like microservices. We can also look at their AI tuning <a href="https://15799.courses.cs.cmu.edu/spring2022/">seminar</a> for relational dbms optimization knob tuning. You can use any language here you'd like.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf15e854" class="outline-3">
-<h3 id="orgf15e854">Strategy</h3>
-<div class="outline-text-3" id="text-orgf15e854">
+<div id="outline-container-org263b4f8" class="outline-3">
+<h3 id="org263b4f8">Mentorships</h3>
+<div class="outline-text-3" id="text-org263b4f8">
 <p>
-Find a mentor. There is someone somewhere doing what you want to do and making a lot of money doing it and your task is to complete enough material here to reach a level where you can get in with them somehow and absorb everything. Once you are in all you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life. If they get promoted you get promoted. If they go off and start a new company you are the first hire. If they get hired at a top trading firm everyone says you have no chance of getting into guess who they will tell the hiring managers they should also hire. 
+You never sell yourself as a junior. Companies will hire anyone who knows how to sell themselves and can pass the simple technical competence filters. You always pretend to be employed in the industry even if this means setting up a personal page declaring yourself a freelancer.  
 </p>
 
 <p>
-You approach this person and sell yourself telling them you are available if they have some work because you want to learn it all from the ground up. There is always something to do and your goal is to be this magic portal where tedious work they despise doing can be dumped and it returns as per specifications they gave you. If you can do this then there's time for them to show you things. You eventually make your way up to highly sophisticated work until you end up being essential to them where they couldn't imagine going back to working without you because it's a mutually beneficial relationship. I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and it worked. In fintech, this can be tricky because of signing multiple NDAs even between internal departments but if you sell yourself to them that you are serious about being mentored they will tell management to make it happen. 
+There are many companies that prefer to hire on-site junior developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and mentor them to senior developers. One is in New Hampsire (near Boston) called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. They use <a href="https://web.mit.edu/6.102/www/sp24/">TypeScript</a> which if you've done <a href="./accelerated.html">Accelerated Intro to CS</a> or even <a href="https://functionalcs.github.io/curriculum/">Functional CS</a> will be trivial for you to pick up. The workbook at plai.org will also teach you the memory model of the JS language. 
 </p>
-</div>
 
-<div id="outline-container-orgc086642" class="outline-4">
-<h4 id="orgc086642">Make yourself appear employed</h4>
-<div class="outline-text-4" id="text-orgc086642">
 <p>
-Some advice from <a href="https://news.ycombinator.com/item?id=40478197">here</a>: "If you can, try to appear employed. For better or worse, people will see you as more desirable if you are employed. This might mean setting up an LLC called Foo Software, giving yourself the role of Software Engineer, and then bidding on projects on Upwork. You don't have to lie about what you are doing if anyone asks (and most won't ask for details), but this gives you something to put on your resume and some experience."
+If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. 
 </p>
-</div>
-</div>
 
-<div id="outline-container-orgf6df075" class="outline-4">
-<h4 id="orgf6df075">Contribute to FSF</h4>
-<div class="outline-text-4" id="text-orgf6df075">
 <p>
-You will best be able to pull this off if you actually can commit code somewhere and receive feedback until you become a competent developer people can trust. I recommend only ever contributing to 'free software' as in GNU <a href="https://www.fsf.org/">Free Software Foundation</a> projects like Blender or the gcc compiler are filled with experts that can mentor you. Look through the optimization tags on Blender's issues list there is a lot of opportunity to practice what we learn here and have it reviewed. 
+If you contribute to open source projects you will pick up work for example while writing this workshop I tried out contributing to <a href="https://developer.blender.org/docs/">Blender</a> then made a LinkedIn profile claiming to be a self-taught student and C++ developer with a single pull request for a feature written from scratch as my portfolio. Numerous local gaming companies tried to recruit me shortly after saying they would train. LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> I've only ever used it to harvest recruiter offers.
 </p>
-</div>
+
+<p>
+You can also approach whoever you think is the best local developer and simply ask for work to do. Open source software is easiest if not you contact someone in your community either through a meetup, hackathon, or email and ask for tasks to do saying you want to learn it all from scratch. If you are remote they are reluctant to work with you but if you both live in the same city and can meet up once in a while that makes them trust you more. Once you are in all you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually start paying you once you have proven to be indispensible. Even better if they get promoted you get promoted. If they go off and start a new company you are the first hire. If they get hired at a top trading firm everyone says you have no chance of getting into guess who they will tell the hiring managers they should also hire. 
+</p>
+
+<p>
+I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and tried it out internally after being hired to write software. I started frequenting the area where all the money was being made by people with fancy degrees and asked for things to do until the work became sophisticated enough they wanted to move me in there with them. This can be tricky because of signing multiple NDAs even between internal departments but if you sell yourself to them that you are serious about being mentored they will tell management to make it happen. 
+</p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2a4795d" class="outline-2">
-<h2 id="org2a4795d">USACO Bronze</h2>
-<div class="outline-text-2" id="text-org2a4795d">
+
+<div id="outline-container-orgb00c9e1" class="outline-2">
+<h2 id="orgb00c9e1">USACO Bronze</h2>
+<div class="outline-text-2" id="text-orgb00c9e1">
 <p>
-In competitive programming you submit source code as a solution to a problem and the online judge compiles and runs your code against tests. There is a huge list of online judges available like Kattis, SPOJ, Timus, Aizu, and more <a href="https://usaco.guide/general/olympiads?lang=cpp">worldwide</a>. 
+The best way to learn is to start <a href="https://usaco.org/index.php?page=contests">here</a> and try solving the bronze level problems in each contest.
 </p>
 
 <p>
-Choose one of these <a href="https://open.kattis.com/languages">languages</a>. List all the problems by <a href="https://open.kattis.com/problems?order=difficulty_data">easiest</a> and start with the very first one 'Velkomin!'. You get unlimited submissions to the Kattis judge. There's the USACO <a href="https://ide.usaco.guide/">online IDE</a> too if you want or many other <a href="https://usaco.guide/general/running-code-online?lang=cpp">online IDEs</a> or use the Kattis source text box to enter code none of these beginner problems require an IDE.
+Use the following as needed: 
+</p>
+<ul class="org-ul">
+<li>The <a href="https://usaco.guide/bronze/">USACO guide</a> bronze chapter</li>
+<li>The set of videos for bronze <a href="https://joincpi.org/video-classes">here</a></li>
+</ul>
+
+<p>
+Each problem has all the test data included to test your own solution and a full writeup often containing a proof why the solution is correct. We will learn how to write these proofs. Do these in your language of choice. If you want to submit entries to the online judge (you don't have to) make an account on USACO.org here: <a href="https://usaco.org/index.php">https://usaco.org/index.php</a>  
 </p>
 
 <p>
-<b>Input/Output</b>
-</p>
-
-<p>
-Read the USACO <a href="https://usaco.guide/general/input-output">guide</a> first chapter to teach yourself how input/output works in C/C++/Java/Python. 
-</p>
-
-<p>
-The problem <a href="https://open.kattis.com/problems/qaly">qaly</a> is an example of how to take multiple lines of input. Usually the first input will be how much more input to expect which you can then loop on:
-</p>
-
-<pre class="example">
-#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int tt;  
-    double sum = 0;  
-    cin &gt;&gt; tt;   // pipe first stdin to tt
-    while (tt--) {  // false when input empty 
-        double a, b;  // each loop declare these 2 new assignables
-        cin &gt;&gt; a &gt;&gt; b; // take 2 more inputs
-        sum = sum + (a * b);  // accumulator
-        }
-    cout &lt;&lt; sum;  // pipe sum to stdout
-}
-</pre>
-
-<p>
-Do enough of these until you get the hang of I/O in your language. 
+Instead of having the online judge report our memory usage and runtime we can figure out how to do this ourselves.
 </p>
 
 <p>
@@ -464,7 +430,7 @@ Do enough of these until you get the hang of I/O in your language.
 </p>
 
 <p>
-Here is Gennady Korotkevich aka tourist <a href="https://youtu.be/97tieEKfvBs">practicing</a> on codeforces and explaining what he's doing, though he didn't start with C++ he used to win the IOI with Pascal in high school then switched later for the ICPC. The first thing to notice is he's using a basic text editor and minimalist shell that looks like <a href="https://mingw.osdn.io/">MinGW</a> and a <a href="https://www.farmanager.com/screenshots.php?l=en">file manager</a> where he manually submits through the codeforces website UI. He prepares individual directories named after the problem, then always makes a sol.cpp file in that directory so he doesn't have to change a macro he's written to compile the solution from the shell.
+Here is Gennady Korotkevich aka tourist <a href="https://youtu.be/97tieEKfvBs">practicing</a> on codeforces and explaining what he's doing, though he didn't start with C++ he used to win the IOI with Pascal in high school then switched later. The first thing to notice is he's using a basic text editor and minimalist shell that looks like MinGW a Windows port of GCC and <a href="https://www.farmanager.com/screenshots.php?l=en">Far Manager</a> where he manually submits through the codeforces website UI. He prepares individual directories named after the problem then always makes a sol.cpp file in that directory so he doesn't have to change a macro he's written to compile the solution from the shell.
 </p>
 
 <p>
@@ -486,42 +452,29 @@ int main() {
 </pre>
 
 <p>
-std::cin is synchronized to std::cout and performs default buffer flushing operations so to save some runtime he disables this sync. His compiler flags he explains in one of these recorded streams, or you can figure out yourself as you go, most of them are to make compiler messages extra verbose for debugging. Note you would never write software outside of competitive programming like this because he has opened a gigantic scope.  
+std::cin is synchronized to std::cout and performs default buffer flushing operations so to save some runtime he disables this sync. His compiler flags he explains in one of these recorded streams, most of them are to make compiler messages extra verbose for debugging. Note you would never write software outside of competitive programming like this because he has opened a gigantic scope.  
 </p>
 
 <p>
-You don't have to watch the entire 2hr vid, the last problem seems like the most informative. He begins most problems by writing examples as comments. He copies the problem input test cases into a text file 'in1' then pipes it into his compiled program "sol.exe &lt; in1" from the shell as stdin (standard input). He writes multiple submissions to compare their runtime/memory usage. He looks for some kind of mathematical structure in the formulas given in the problem write-up. After a submission he looks up the solutions others did and compares them to his own but note he solved the problems first, he didn't give up and go straight to the solution.    
+You don't have to watch the entire 2hr vid, the last problem seems like the most informative. He begins most problems by writing examples as comments. He copies the problem input test cases into a text file 'in1' then pipes it into his compiled program "sol.exe &lt; in1" from the shell as stdin (standard input). He writes multiple submissions to compare their runtime/memory usage. He looks for some kind of mathematical structure in the formulas given in the problem write-up. After a submission he reviews the solutions others did and compares them to his own but note he solved the problems first, he didn't give up and go straight to the solution.    
 </p>
 
 <p>
-A time limit exceeded verdict shows how he would optimize to get accepted verdict also trolling the stream by making all the variable names into single letters claiming it will speed up the program. The judging server ran his program faster than his laptop, something to remember if debugging and believing your solution still isn't optimized enough, resubmit anyway as you get unlimited submissions. 
-</p>
-
-<p>
-<b>USACO bronze</b> 
-</p>
-
-<p>
-We are now <a href="https://usaco.guide/bronze/">bronze level</a>. There's a set of videos for bronze free <a href="https://joincpi.org/video-classes">here</a>. 
-</p>
-
-<p>
-USACO online judge only accepts C/C++, Java or Python but what I do is I experiment and write out solutions first in my language of choice then translate that to C++ seeing how fast of a solution I can write. The specific language details are at the bottom <a href="https://usaco.org/index.php?page=instructions">here</a> we can use C/C++17, Java 11, Python 3.6 and old Python 2.7. I'm going to use their official online IDE if you want to run it locally install the same compilers they use in a virtual machine or install GNU Guix which allows for multiple versions of compilers/environments to be installed. 
+A TLE or time limit exceeded verdict shows how he would optimize to get accepted verdict also trolling the stream by making all the variable names into single letters claiming it will speed up the program. The judging server ran his program faster than his laptop, something to remember if debugging and believing your solution still isn't optimized enough. 
 </p>
 
 <p>
 <b>C++ versions</b>
 </p>
 
-
 <p>
-C++ has versions C++98/03/11/14/17/20/23/26 these all represent years a new standard was released but that doesn't mean everyone implements the entire standard in their compiler. The current state of C++20/23/26 or 'modern' C++ is you can kind of do functional programming with it. Options, lambdas, higher-order functions, monads and more all now exist in the definition depending on which compiler you use. Google has <a href="https://github.com/carbon-language/carbon-lang/blob/trunk/docs/project/difficulties_improving_cpp.md">rage quit</a> C++ and is writing their own replacement called <a href="https://github.com/carbon-language/carbon-lang">Carbon</a> and as a result, clang/llvm has not even implemented the entire C++20 spec. I think only GCC or the GNU compiler collection implements C++23 features. 
+I'm probably going to do all the problems in OCaml or Scheme. If you want to submit entries in C++ and are curious about versions like C++98/03/11/14/17/20/23/26 these all represent years a new standard was released but that doesn't mean every compiler implements the entire standard. Google has <a href="https://github.com/carbon-language/carbon-lang/blob/trunk/docs/project/difficulties_improving_cpp.md">rage quit</a> C++ and is writing their own replacement called <a href="https://github.com/carbon-language/carbon-lang">Carbon</a> and as a result clang/llvm has not even implemented the entire C++20 spec. I think only GCC or the GNU compiler collection implements C++23 features. The best source I have found is the slides of <a href="https://federico-busato.github.io/Modern-CPP-Programming/">Modern C++ Programming</a> by Federico Busato a senior developer at NVIDIA. USACO only allows up to C++17 features but he clearly labels what feature works with what version. 
 </p>
 </div>
 
-<div id="outline-container-orgf84d425" class="outline-3">
-<h3 id="orgf84d425">Big-O explained</h3>
-<div class="outline-text-3" id="text-orgf84d425">
+<div id="outline-container-org2a22730" class="outline-3">
+<h3 id="org2a22730">Big-O explained</h3>
+<div class="outline-text-3" id="text-org2a22730">
 <p>
 The first resource we can use where 'running time' is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
 </p>
@@ -535,7 +488,7 @@ The formal definition is:
 </p>
 
 <p>
-<b>f() function</b> is a cost function derived from a cost model. It's where you count up every constant operation and loop costs by analyzing source code. This is not always easy since what costs do you assign when the code triggers garbage collection or triggers memory allocation because an object has been created deep in some library code. 
+<b>f() function</b> is a cost function of time or resources derived from a cost model. It's where you count up every constant operation and loop costs by analyzing source. This is not always easy since what costs do you assign when the code triggers garbage collection or triggers memory allocation because an object has been created deep in some library code. 
 </p>
 
 <p>
@@ -543,301 +496,49 @@ The formal definition is:
 </p>
 
 <p>
-Why are constants hidden in big-O? If you read SICP their example is 16 and 8 both differ by a factor of 2 and 8 but we don't care which factor. In real life the constant factors do matter if they are hiding a lot of operations. A classic example of this is when Knuth was writing the Stanford GraphBase (contents are in Vol 4A of TAOCP) and his real-world testing of popular graph algorithms found that 'Fibonacci heaps' that were analyzed using a technique called amortized analysis weren't any better than Kruskal's old algorithm because the analysis was hiding large constant operations. One way to reduce constants is to do multiple rounds of a linear algorithm cleaning up the graph because O(n + n) or O(2n) is still O(n). 
+Why are constants hidden in big-O? If you read SICP their example is 16 and 8 both differ by a factor of 2 and 8 but we don't care which factor. In real life the constant factors do matter if they are hiding a lot of operations. A classic example of this is when Knuth was writing the Stanford GraphBase (contents are in Vol 4A of TAOCP) and his real-world testing of popular graph algorithms found that 'Fibonacci heaps' that were analyzed using a technique called amortized analysis weren't any better than Kruskal's old algorithm because the analysis was hiding large constant operations. One way to reduce constants is to do consecutive rounds of a linear algorithm such as cleaning up a graph removing cycles because O(n + n) or O(2n) is still O(n). 
 </p>
 
 <p>
-O(g(x)) represents an upper bound for all functions in the family g(x). It doesn't represent growth since f(x) = x<sup>2</sup> does not grow to be quadratic, f(x) already is quadratic, thus f() is in \(O(n^{2})\) or upper bounded by every quadratic function. A function n or f(n) is bounded by n, n<sup>2</sup> and n<sup>n</sup> that's why it's <i>an</i> upper bound not <i>the</i> upper bound as there's many upper bounds but we'd like the closest fitting bound.
-</p>
-
-<p>
-If the inputs are supposed to be 'near infinite' then n is used instead of x in f(n) and all algorithm analysis you are generally assuming some kind of infinite inputs but here in the USACO guide we can see that if the input is small then we can get away with some very bad runtimes even exponential.  
-</p>
-
-<p>
-There is many more like little-o (strictly less than), big-Omega (strictly greater than), or big-Theta \(\theta(n)\) which describes a tight lower and upper bound. For example a program that searches a single list for a specific element is going to be at least a lower bound of O(n) because it has to look at everything once and no more than O(n) in the worst case scenario where the item is not found and the entire list is exhausted so it is \(\theta(n)\). 
+Big-O doesn't represent growth since if f(x) = x<sup>2</sup> it does not grow to be quadratic, f(x) already is quadratic, thus f() is in \(O(n^{2})\) or upper bounded by every quadratic function. Typically in algorithm analysis the inputs are supposed to be 'near infinite' which is why n is used instead of x in f(n) to signal the difference in inputs but here in the USACO guide we can see that if the input is small then we can get away with some very bad runtimes even exponential.  
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org2e2f03b" class="outline-3">
-<h3 id="org2e2f03b">Time complexity</h3>
-<div class="outline-text-3" id="text-org2e2f03b">
+<div id="outline-container-org936633b" class="outline-3">
+<h3 id="org936633b">Problems</h3>
+<div class="outline-text-3" id="text-org936633b">
 <p>
-Skim through <a href="https://usaco.guide/bronze/time-comp">time complexity</a>. Sign up to <a href="https://joincpi.org/video-classes">here</a> where all the <a href="https://www.youtube.com/watch?v=lDEriEvhS48">videos</a> are. Watching the video he explains the 4 suggested resources:
+I'm only going to do the Bronze competition problems <a href="https://usaco.org/index.php?page=contests">here</a> from past contests. They include solutions and all the test data so can use any language you want. 
 </p>
 
 <p>
-First is 'IUSACO' 3-Algorithm Analysis <a href="https://darrenyao.com/usacobook/cpp.pdf#page=12">here</a>. It's only chapter 3 and 4 pages long. Explained in the video.
-</p>
-
-<p>
-Next is 'CPH' 2-Time Complexity <a href="https://usaco.guide/CPH.pdf#page=27">here</a> from the competitive programming handbook. This is already known to us from the intro courses so let's look at 2.4 <i>Maximum subarray sum</i>. If it doesn't make sense it means which sequence or combination of neighboring elements produces the greatest sum. Try to solve this yourself before reading their solution. Remember you can prep something with multiple linear consecutive runs since O(n + n) is O(2n) which is of course O(n) and in this problem try removing the negative first and last array element since why would you keep them. The solution they give is <a href="https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/">Kadane's Algorithm</a>.
-</p>
-
-<p>
-Next is 'PAPS' 5-Time Complexity <a href="https://usaco.guide/PAPS.pdf#page=99">here</a> and the wall clock (using time() in the shell) is again mentioned but we'll learn you can't rely on wall clock time. Insertion sort we already did in the intro to CS courses where we learned for small data insert can be a constant operation. Page 91 he substituted t<sub>i</sub> for i and since this is a sum where the counter starts at 0, it's going to sum 0 + 1 + 2&#x2026; up to n - 1 times and we already know a sum from 1 to n closed form is (n + 1)n/2 or here (n - 1)n/2 but we can see the dominating power is going to be n<sup>2</sup> and this is followed by an example how n<sup>2</sup> is both an upper bound of n<sup>2</sup> and n. The proof of the bound first he noted that if you multiply N &gt;= 1 you get N<sup>2</sup> &gt;= N and this fact is used in the inequality something we will see in depth later.
-</p>
-
-<p>
-The <a href="https://www.youtube.com/watch?v=zUUkiEllHG0">video</a> they suggest goes through how to find function f(x) by analyzing the source. @11:03 remember you multiply everything in the body of a loop by the number of times you loop. Without doing any of the analysis I can immediately tell this is n * c * n<sup>3</sup> or n<sup>4</sup> but this becomes less obvious when objects are initialized in some library you called. 
+Give a quick look through the USACO guide for bronze. If you've forgotten what n choose k is look it up on <a href="https://www.youtube.com/watch?v=9txb9FgLDNY">YouTube</a> but we probably won't need it for any of the bronze problems except that one example in the guide for backtracking. The only thing to know about this chapter is there are 2 problem solving strategies introduced: complete search (brute force) and greedy. Brute force is self-explanatory (try all possible solutions) and greedy strategy you likely remember from Dijkstra's shortest path algorithm taught in any introductory CS course where the algorithm always makes the 'best' choice locally. Start anywhere in the graph and always take the path that is the least weight.
 </p>
 </div>
-</div>
 
-<div id="outline-container-org67b7188" class="outline-3">
-<h3 id="org67b7188">Data structures</h3>
-<div class="outline-text-3" id="text-org67b7188">
+<div id="outline-container-orgc1d6d5d" class="outline-4">
+<h4 id="orgc1d6d5d">November 2011</h4>
+<div class="outline-text-4" id="text-orgc1d6d5d">
 <p>
-You can always first try and solve USACO bronze problems in your language of choice then translate the solution into optimized C++ when you think you have a solution and want to run it against the official testing. 
+I'm starting at the most recent <a href="https://usaco.org/index.php?page=nov11problems">contests</a>. Save all your solutions and we can test them ourselves to see how fast they run after. 
 </p>
 
 <p>
-Reading through the <a href="https://usaco.guide/bronze/intro-ds">intro to data structures</a> the writeup in USACO guide is all we will need for bronze problems but you may want to look through the slides of <a href="https://federico-busato.github.io/Modern-CPP-Programming/">Modern C++ Programming</a> by Federico Busato a senior developer at NVIDIA. USACO only allows up to C++17 features but he clearly labels what feature works with what version. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgbfcead1" class="outline-3">
-<h3 id="orgbfcead1">Simulation</h3>
-<div class="outline-text-3" id="text-orgbfcead1">
-</div>
-<div id="outline-container-org4e313dc" class="outline-4">
-<h4 id="org4e313dc">Shell game</h4>
-<div class="outline-text-4" id="text-org4e313dc">
-<p>
-The first problem is <a href="https://usaco.org/index.php?page=viewproblem2&amp;cpid=891">shell game</a>. You have to make an account on USACO.org to submit entries here: <a href="https://usaco.org/index.php">https://usaco.org/index.php</a>
-</p>
-
-<p>
-The sample input first line tells us how many times to loop input. Second line tells us shell 2 and 1 were swapped and the guess was 1. If the pebble was in 1 then the guess is incorrect as it swapped with 2. If the pebble was in 2 then the guess was correct. 
-</p>
-
-<p>
-Write out some examples of keeping track of the state for all 3 potential initial pebble positions.
-</p>
-
-<ul class="org-ul">
-<li>If pebble init 1 then 2, 3, 1</li>
-<li>If pebble init 2 then 1, 1, 3</li>
-<li>If pebble init 3 then 3, 2, 2</li>
-</ul>
-
-<p>
-We only have to update whenever swap a or swap b equals the current position of any of the 3 initial positions. Here's some scratch work I did
-</p>
-
-<pre class="example">
-Init swap array a[0] = 1, a[1] = 2, a[2] = 3
-Init guess array g[0] = 0, g[1] = 0, g[2] = 0 
-Loop array
- If swap1 = a[i] then a[i] = swap2
- If swap2 = a[i] then a[i] = swap1
- // after state change loop a again
- is guess = a[i]? increase g[i]
-Return max of g
-</pre>
-
-<p>
-This is where I know I'm probably not representing the optimal simulation because I have 2 if-statements and you always want to just do a single operation if you can not a pile of if's. I tried this solution and it worked all tests passed using 1.6mb of memory and 1ms execution time. 
-</p>
-
-<pre class="example">
-#include &lt;array&gt;
-#include &lt;cstdio&gt; // needed for i/o
-#include &lt;algorithm&gt; // needed for max
-
-int main() {
-  // get the first line of input
- freopen("shell.in", "r", stdin);
- int n;
- scanf("%d", &amp;n);
-
- std::array&lt;int, 3&gt; state = {1, 2, 3};
- std::array&lt;int, 3&gt; guess{};
-
- for (int i = 0; i &lt; n; i++) {
-     int a, b, g;
-     scanf("%d %d %d", &amp;a, &amp;b, &amp;g);
-  for (int s = 0; s &lt; 3; s++) {
-      if (a == state[s]) {state[s] = b;}
-      else if (b == state[s]) {state[s] = a;}}
-  for (int x = 0; x &lt; 3; x++) {
-      if (g == state[x]) {guess[x]++;}}}
-
- freopen("shell.out", "w", stdout);
- printf("%d\n", std::max({guess[0], guess[1], guess[2]}));}
-</pre>
-
-<p>
-Looking at their solution they accurately replicated the simulation while I hacked it. I have 2 nested loops but they only loop 3 times (constant) so my solution is n * c * c or nc which is O(n) as constants are ignored in Big-O. Their solution runs with 2.8mb memory and 2ms execution time so my hacked solution is faster for only 10 tests the server does. If I were to guess why I'm not simulating every swap only updating when the pebble is moved. 
-</p>
-
-<p>
-You only have to include the file in/out if the problem statement asks for a file otherwise stdout can be used.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgd895327" class="outline-4">
-<h4 id="orgd895327">Mixing milk</h4>
-<div class="outline-text-4" id="text-orgd895327">
-<p>
-Second <a href="https://usaco.org/index.php?page=viewproblem2&amp;cpid=855">problem</a> in USACO guide bronze. As usual write out examples to mimic the state transition but the problem statement has done that for us. 
-</p>
-
-<ul class="org-ul">
-<li>some kind of mod(3) index looping so when last bucket reached wraps around to first bucket again.</li>
-<li>the capacity bucket(next) - bucket(next) milk compared to the existing milk in bucket(n), take their min and adjust</li>
-</ul>
-
-<pre class="example">
-#include &lt;algorithm&gt;
-#include &lt;cstdio&gt;
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-
-int main() {
-    std::vector&lt;std::pair&lt;int, int&gt;&gt; v;
-    freopen("mixmilk.in", "r", stdin);
-
-	for (int i = 0; i &lt; 3; i++) {
-		std::pair&lt;int, int&gt; bi = std::make_pair(0,0);
-		std::cin &gt;&gt; bi.first &gt;&gt; bi.second; 
-		v.push_back(bi);
-	}
-	
-	for (int i = 0; i &lt; 100; i++) {
-		int n = i % 3;  
-		int next = (i+1) % 3;  
-		int fill = std::min(v[n].second, v[next].first - v[next].second);
-		v[n].second = v[n].second - fill;
-		v[next].second = v[next].second + fill;
-	}
-	freopen("mixmilk.out", "w", stdout);
-	std::cout &lt;&lt; v[0].second &lt;&lt; '\n' 
-	          &lt;&lt; v[1].second &lt;&lt; '\n'
-		  &lt;&lt; v[2].second;
-}
-</pre>
-
-<p>
-My solution is similar to theirs except I made a pair data structure and stuffed it in a vector, and I used 'magic numbers' that's when you don't assign a constant variable where it only has to be changed in one place and there's just some magic number without documentation in the code. My solution uses 3.3mb memory and executes 2ms. Their solution is 3.4mb of memory and 2ms execution so I somehow beat them again but these are utterly worthless micro optimizations.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org4a719eb" class="outline-4">
-<h4 id="org4a719eb">Stuck in a Rut</h4>
-<div class="outline-text-4" id="text-org4a719eb">
-<p>
-We may as well start with the hardest problem <a href="https://usaco.org/index.php?page=viewproblem2&amp;cpid=1061">Stuck in a Rut</a> and work backward. This <i>seems</i> like an easy problem if we can identify why 2 cows will intersect. If you write out some examples to find some patterns these 2 cows eventually meet:
-</p>
-
-<ul class="org-ul">
-<li>north 11,2</li>
-<li>east 10,4 
-<ul class="org-ul">
-<li>initial state: (northx &gt; eastx), (northy &lt; easty).</li>
-<li>meet in 2 or easty - northy</li>
-</ul></li>
-</ul>
-
-<p>
-The first 2 cows in the sample input meet but at the same time:
-</p>
-
-<ul class="org-ul">
-<li>north 5,3</li>
-<li>east 3,5
-<ul class="org-ul">
-<li>(northx &gt; eastx), (northy &lt; easty) and (northx = easty), (northy = eastx)</li>
-</ul></li>
-</ul>
-
-<p>
-First cow eventually crashes into something let's find out who
-</p>
-
-<ul class="org-ul">
-<li>east 3,5
-<ul class="org-ul">
-<li>second cow has to be moving northx &gt; 3 and northy &lt; 5</li>
-</ul></li>
-<li>north 11,2 or north 8,1
-<ul class="org-ul">
-<li>smaller northx hits the east 3,5 cow first</li>
-<li>meet in 5 or northx - eastx</li>
-</ul></li>
-</ul>
-
-<p>
-Second cow eventually intersects:
-</p>
-<ul class="org-ul">
-<li>north 5,3
-<ul class="org-ul">
-<li>other cow had to be moving eastx &lt; 5, and easty &gt; 3</li>
-</ul></li>
-<li>east 4,6 or east 3,5 (equal so discarded)
-<ul class="org-ul">
-<li>bigger eastx intersects first</li>
-<li>meet in 3 or easty - northy</li>
-</ul></li>
-</ul>
-
-<p>
-Compare all the north traveling cows compared to the east traveling cows, eliminating if (a,b = b,a), seeing if there is a pattern to the subtraction to find the exact meet, and whatever is left over test if it's movement is on the same y or x-axis, if not return infinity.  
-</p>
-
-<p>
-Try the rest of the simulation problems there shouldn't be any surprise math here or anything and if the input space is small (unlike here with a billion possible x,y points) then you can do a full simulation mimicking the problem statement exactly. 
-</p>
-
-<p>
-&#x2026; TODO I'm doing all 12 remaining problems
+<b>Logical Moos</b>
+&#x2026; cont TODO
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgef68473" class="outline-3">
-<h3 id="orgef68473">Complete Search TODO</h3>
-<div class="outline-text-3" id="text-orgef68473">
-<p>
-&#x2026; cont
-</p>
-</div>
-</div>
-</div>
 
-<div id="outline-container-orge8a85a3" class="outline-2">
-<h2 id="orge8a85a3">Algorithm Design</h2>
-<div class="outline-text-2" id="text-orge8a85a3">
+<div id="outline-container-org6392ae8" class="outline-3">
+<h3 id="org6392ae8">Algorithm design</h3>
+<div class="outline-text-3" id="text-org6392ae8">
 <p>
-This is an <i>optional</i> grad course in algorithm design that you can complete with USACO if you're interested in the current (2023) state of the art. We'll fill in background as needed think of this as casual research into theoretical CS. 
-</p>
-
-<ul class="org-ul">
-<li>CMU <a href="https://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15850-s23/www/oldindex.html">15-850</a> Advanced Algorithms (Spring 2023)
-<ul class="org-ul">
-<li>Recorded <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%2253c58248-7fd4-4f71-8774-af85013a570a%22">lectures</a> on Panopto</li>
-<li>Course notes are an unfinished <a href="https://www.cs.cmu.edu/~15850/notes/cmu850-f20.pdf">book</a></li>
-<li>Recommended <a href="https://www.cs.cmu.edu/~15750/policies.html#texts">resources</a> we'll use</li>
-</ul></li>
-</ul>
-
-<p>
-We're only going to learn the most basic prereqs.
-</p>
-
-<p>
-Watching <a href="https://youtu.be/J21ZvWWrWwg?si=yEEp92zBSze0WLAO">Graphs: The Basics</a> from CMU's 15-251. Slides from the 2015 version of the course are <a href="http://www.cs.cmu.edu/~arielpro/15251f15/schedule.html">here</a> which are very similar to what we are watching as there's sometimes errors in the recording where slides skip past too quickly. The Adjacency Matrix we haven't learned linear algebra yet but it's self-explanatory using his tiny graph of 4 nodes as a reference where rows are left to right. The lemma he walks through about connected components will come up in the 15-850 lectures. If it doesn't make sense see the slides for <i>Connectedness</i> where there is an 11 node graph in 3 disconnected components. They are called 'connected components' but the 3 components are individual graphs they are not connected to each other they are connected internally meaning they are pieces of a larger graph sliced up. If you have 3 components and you add an edge from one component to another you now have 2 components. If you want the notes and some exercises/solutions to what we just watched see this <a href="https://web.archive.org/web/20190426001152/http://www.cs.cmu.edu/~aada/courses/15251s18/www/notes.html">archive</a> from 2018.
-</p>
-
-<p>
-Now we attempt to complete <a href="https://www.cs.cmu.edu/~15850/hws/h0.pdf">homework 0</a> which is solvable by the first 15 lectures of the undergrad algorithms course 15-451. We won't do that course we'll research it. The lecture notes in one pdf are <a href="https://www.cs.cmu.edu/~15451-s24/notes.pdf">here</a>. The first problem seems like it's solvable by the Floyd-Warshall algorithm but I'll skim these from the beginning. TODO
+If you are curious how they write proofs of the solutions for the contest writeups, we can try CMU's undergrad algorithms course. The lecture notes in one pdf are <a href="https://www.cs.cmu.edu/~15451-s24/notes.pdf">here</a>. 
 </p>
 
 <p>
@@ -845,10 +546,11 @@ Now we attempt to complete <a href="https://www.cs.cmu.edu/~15850/hws/h0.pdf">ho
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org0882ac6" class="outline-2">
-<h2 id="org0882ac6">Software Design</h2>
-<div class="outline-text-2" id="text-org0882ac6">
+<div id="outline-container-org7cbfed7" class="outline-2">
+<h2 id="org7cbfed7">Software Design</h2>
+<div class="outline-text-2" id="text-org7cbfed7">
 <p>
 MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. It used to be called 6.170 before MIT renumbered every course recently. Universities always do ridiculous things every 3-5 years it's like some new dean comes in and demands oh we have to reinvent everything and buy all new (awful) edtech. 
 </p>
@@ -862,9 +564,9 @@ Click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">her
 </p>
 </div>
 
-<div id="outline-container-org36df12f" class="outline-3">
-<h3 id="org36df12f">Gitless</h3>
-<div class="outline-text-3" id="text-org36df12f">
+<div id="outline-container-orgf22f421" class="outline-3">
+<h3 id="orgf22f421">Gitless</h3>
+<div class="outline-text-3" id="text-orgf22f421">
 <p>
 Now we are going to take all the above introductions to conceptual design and rewrite the git interface to make it intuitive to use. We have to learn git anyway so may as well write a CLI (command line interface) or you could make it ridiculous and call it 'visual git' or something with DAG graphics.  
 </p>
@@ -884,23 +586,14 @@ Proceed to <a href="https://gitless.com/#research">gitless.com</a> and navigate 
 <p>
 .. cont TODO
 </p>
-</div>
-</div>
-</div>
 
-<div id="outline-container-orgebfbeb2" class="outline-2">
-<h2 id="orgebfbeb2">Languages TODO</h2>
-</div>
-<div id="outline-container-orgc656a3e" class="outline-2">
-<h2 id="orgc656a3e">Probability TODO</h2>
-</div>
-<div id="outline-container-org27ceae4" class="outline-2">
-<h2 id="org27ceae4">Advanced dbms TODO</h2>
-<div class="outline-text-2" id="text-org27ceae4">
+
+
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

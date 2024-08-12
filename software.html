@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-08-10 Sat 23:26 -->
+<!-- 2024-08-12 Mon 01:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -270,22 +270,21 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfae39d7">Start here</a>
+<li><a href="#org13c603f">Start here</a>
 <ul>
-<li><a href="#org856f2f5">Curriculum</a></li>
-<li><a href="#orgfe1ee42">Mentorships</a></li>
+<li><a href="#org73d3bb4">Curriculum</a></li>
 </ul>
 </li>
-<li><a href="#orgfa2807e">USACO</a>
+<li><a href="#org19d8bbf">USACO</a>
 <ul>
-<li><a href="#org37abe96">Big-O explained</a></li>
-<li><a href="#orgd8ab7de">Problem complexity</a></li>
-<li><a href="#org56b602d">2024 USACO season</a></li>
+<li><a href="#org01f1a32">Big-O explained</a></li>
+<li><a href="#orge27a135">Problem complexity</a></li>
+<li><a href="#org89bc197">Languages</a></li>
 </ul>
 </li>
-<li><a href="#org60f1be3">Software Design</a>
+<li><a href="#orgab1b309">Software Design</a>
 <ul>
-<li><a href="#orgb14ff78">Gitless</a></li>
+<li><a href="#org6946b2a">Gitless</a></li>
 </ul>
 </li>
 </ul>
@@ -293,9 +292,9 @@ for the JavaScript code in this tag.
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgfae39d7" class="outline-2">
-<h2 id="orgfae39d7">Start here</h2>
-<div class="outline-text-2" id="text-orgfae39d7">
+<div id="outline-container-org13c603f" class="outline-2">
+<h2 id="org13c603f">Start here</h2>
+<div class="outline-text-2" id="text-org13c603f">
 <p>
 I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
 </p>
@@ -307,29 +306,78 @@ I assume you are teaching yourself at the same time some kind of intro course yo
 </ul>
 
 <p>
-This is under construction as I have to work on it a few hours a day until it's finished. Some days I have time and others I don't, you should take this for fun and not worry if nothing makes sense right away it never does but in time you'll probably be better than me at this. 
+This is under construction as I have to work on it a few hours a day (from a phone, so spelling mistakes will frequently happen) until it's finished. Some days I have time and others I don't, you should take this for fun and not worry if nothing makes sense right away it never does but in time it will if you are persistant. 
 </p>
 
 <p>
-I am often in contact with recruiters in finance and ask them what exactly do you want for basic entry-level candidates. People in this work are writing trading optimizers to lower fees on trades, low-latency network software, and making models faster for quant researchers that process unthinkably huge amounts of proprietary data feeds.  The answer is always a solid grasp of algorithms, memory and concurrency models, CPU-architecture, operating systems and databases. If you show competency in most of the above then you can be taught everything else and you're in. Everything here was vetted by them as being desirable as a basic foundation for someone who doesn't have a degree: USACO training because they give you extra points for competitiveness of any kind (sports, gaming, anything), PLAI.org programming language memory models, queueing theory, and Andy Pavlo's CMU course which teaches how modern high performance applications are designed. Even if you don't care at all about being employed and are writing your own side projects you'll want to know about optimization to avoid paying massive amounts of resource costs.
+<b>Pitch</b>
 </p>
 
 <p>
-The interviews for these roles if you have solid credentials are often a single zoom call with a request to <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> for the sole purpose of seeing if you even bother asking questions to clarify the requirements or write examples of edge cases. This is to guage how careless you are as a developer because mistakes cost money and is also essentially the new fizz buzz filter everyone has adopted. After expect to be asked about your chosen language's memory model in detail and any jargon you use they will ask to define it on the spot to catch you bluffing. This is harder than it sounds because it's like an oral general exam in grad school where a committee tests you on the spot but if you pass you're in. 'Solid credentials' would be an extensive work history and a verified university degree.  
+I am often in contact with <a href="https://joveinternational.com/markets-coverage/">recruiters</a> in finance and ask them what exactly do you want for basic entry-level candidates and would you look at resumes without a degree. People in this work are writing trading optimizers to lower fees on trades, extreme low-latency network software, and making data pipelines and models faster for quant researchers that process unthinkably huge amounts of proprietary data feeds. The answer is always a solid grasp of algorithms, memory and concurrency models, CPU-architecture (entire execution pipeline), systems calls, databases, and knowledge how to work around languages with managed runtimes because not everything is C++. If you show above average competency in at least some of the above then you can be taught the rest and are considered a good hire as these candidates can't easily be found anymore. 
 </p>
 
 <p>
-However if you are a risk to them with questionable credentials like a new grad or self-taught with little work history then expect a longer <a href="https://www.youtube.com/watch?v=V8DGdPkBBxg">interview</a> with a collaborative design usually of a deceptively simple interface like a controller for a game. The task is then to optimize this design and justify each stage of optimization such as knowing about elementary queueing theory techniques to reduce wait times and amortized analysis of whatever queue data structure you come up with. They will ask can your code take better advantage of cache locality, if you wrote it using objects can you avoid calling into the object cache and missing then having to allocate a new object on the heap during a loop. How would you test this code, how would you review this code if someone gave it to you, would you feel confident putting this in production right now? Nothing impossible that you can't teach yourself with some practice. They want to see what you are like to work with and that you possess a motivation for learning. They also want to suss out if you're going to ghost them in a few months because this is a modern problem with all new hires they earn for a few months then quit to go become 'influencers'. 
+Everything here was vetted by them over a few conversations as being desirable for a basic foundation for someone who doesn't have a degree. These recruiters are everywhere like Jove Intl, <a href="https://oxfordknight.co.uk/jobs/">Oxford Knight</a>, Reload Search, and ex-employees who have quit to become highly paid one-man recruiting shops most of whom are the one's I've been running into at events and talking to. They liked USACO training because these fintech outfits give you extra points for competitiveness of any kind (sports, CTFs, anything), PLAI.org programming language memory models, queueing theory, and Andy Pavlo's CMU course which teaches how modern high performance applications are designed. 
 </p>
 
 <p>
-Campus recruiting is getting more monopolized by big tech or shady outfits that manipulate school guidelines by pressuring students with 2-week expiring offers (aka exploding offers) so it is a struggle to find any fresh grads qualified to do this kind of work. Professors sometimes act like recruiters now too receiving a form of commission setting up their students with companies further draining the hiring and internship pool. To get around this all these companies have some kind of community events they advertise on their websites where you can meet them and directly apply after a seminar talking about what they actually do and you don't always have to be a current student to attend. It also means we as self-taught developers with some kind of work history can weasel our way in through sheer determination. 
+Even if you don't care at all about being employed and are writing your own side projects you'll want to know this to avoid paying massive amounts of resource costs.
+</p>
+
+<p>
+<b>Selection</b>
+</p>
+
+<p>
+They told me they go over all resumes, there's no automated system. USACO training stands out, C++17/20/23 stands out, everything else they'll phone you and ask. You never sell yourself as a junior. Companies will hire anyone who knows how to sell themselves and can pass the technical competence filters. You always pretend to be employed writing software even if this means setting up a personal page declaring yourself a freelancer on Upwork and claiming 1 year experience since you probably have that anyway doing course assignments or side projects while learning. Candidates are always ranked, so you have to be better than everyone else who would automatically rank higher (degrees, work experience) which is possible through sheer determination because the hiring pool for entry level candidates who can both pass the interviews and are willing to stay on and become senior is very limited right now. 
+</p>
+
+<p>
+<b>Retention</b>
+</p>
+
+<p>
+Campus recruiting is getting more monopolized by big tech or shady outfits that manipulate school guidelines by pressuring students with 2-week expiring offers (aka exploding offers) so it is a struggle to find any of the good grads to do this kind of work. Professors sometimes act like recruiters now too receiving a form of commission setting up their students with companies further draining the hiring and internship pool. As a personal anecdote I've witnessed grads that were invested in heavily with signing bonuses, internships and training, totally ghost after working less than one year to become 'influencers' or start up some crypto scheme. Most don't want to race to entry and exit by tediously code profiling and tracing processes to shave a microsecond optimization but if you want to be the race car designer of software then you should try and get in as now is the best time.      
+</p>
+
+<p>
+<b>Interviews</b>   
+</p>
+
+<p>
+The interviews for these roles if you have been vouched for are often a single zoom call with a request to <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> for the sole purpose of seeing if you even bother asking questions to clarify the requirements or work through edge cases. This is to guage how careless you are as a developer because mistakes cost money and is also essentially the new fizz buzz filter everyone has adopted. After expect to be asked about your chosen language's memory model in detail and any jargon you use they will ask you to define it on the spot to catch you bluffing. This is harder than it sounds because it's like an oral general exam in grad school where a committee tests your knowledge on the spot but nobody with the kind of experience who would be given this interview style should fail this.
+</p>
+
+<p>
+However if you are a risk to them like a new grad then expect a longer <a href="https://www.youtube.com/watch?v=V8DGdPkBBxg">interview</a> with a collaborative design usually of a deceptively simple interface like a controller for movement in a game. The task is then to optimize this design and justify each stage of optimization such as knowing about elementary queueing theory techniques to reduce wait times and amortized analysis of whatever queue data structure you come up with. At any stage if you have a potential for a bug like not thinking through all the edge cases during optimization you're rejected. Code correctness and caution is heavily favored over adding complexity to squeeze out some meaningless constant factors. Another personal anecdote I've witnessed, these interview tasks are always designed as a trap to once again see how careless of a developer you are the problems I've seen have an obvious area of optimization to take that will open up some correctness problem if you aren't taking your time thinking through the whole problem space. If you wrote it using objects they'll ask about object cache misses during a loop where a new allocation on the heap is made and ruins performance. In the end they really just want to see what you are like to work with and that you have high standards in your work.
+</p>
+
+<p>
+<b>Mentors</b>
+</p>
+
+<p>
+Once you are in and survive long enough to develop a routine walk over to the department where all the money is being made and find a mentor to teach you by asking them to give you the work they don't like doing because you want to learn it all from scratch. All you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually want you to work with them once you have proven to be indispensible and transfer you internally with double the salary. If they get promoted you get promoted, if they go off and start a new company you are the first hire. This can be tricky because of signing multiple NDAs even between internal departments but if you are serious about wanting to learn they will tell management to make it happen. I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and my life would not be the same if I hadn't watched that throwaway clip at 3am because I always assumed there was no way I could ever do this kind of work.
+</p>
+
+<p>
+If you're not interested in finance there are a few companies that mentor junior developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and build them to senior developers. One is in NH called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. 
+</p>
+
+<p>
+If you contribute to open source projects they will teach you as well and you will pick up work for example while writing this workshop I tried out contributing to <a href="https://developer.blender.org/docs/">Blender</a> then made a LinkedIn profile claiming to be a self-taught student and C++ developer with a single small feature as my portfolio. Numerous local gaming companies tried to recruit me shortly after saying they would train and offering all kinds of signing bonuses. LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> I've only ever used it to harvest recruiter offers.
+</p>
+
+<p>
+Of course not all fintech outfits are worth working at, do your own research. Prefer the places where you aren't answering to a bunch of traders because then you have dozens of unofficial bosses who consider you in the way of their bonus if any systems go down. 
 </p>
 </div>
 
-<div id="outline-container-org856f2f5" class="outline-3">
-<h3 id="org856f2f5">Curriculum</h3>
-<div class="outline-text-3" id="text-org856f2f5">
+
+<div id="outline-container-org73d3bb4" class="outline-3">
+<h3 id="org73d3bb4">Curriculum</h3>
+<div class="outline-text-3" id="text-org73d3bb4">
 <ul class="org-ul">
 <li>The <a href="https://usaco.guide/">USACO guide</a> 
 <ul class="org-ul">
@@ -338,7 +386,7 @@ Campus recruiting is getting more monopolized by big tech or shady outfits that 
 </ul>
 
 <p>
-USACO training is excellent at preparing you for any kind of algorithmic test filtering companies may do and it's completely free. We can use the lecture notes <a href="https://www.cs.cmu.edu/~15451-s24/notes.pdf">here</a> to learn how to justify asymptotic bounds of algorithms we design.
+USACO training is excellent and it's completely free. We can use the lecture notes <a href="https://www.cs.cmu.edu/~15451-s24/notes.pdf">here</a> to learn how to justify asymptotic bounds of algorithms we design.
 </p>
 
 <ul class="org-ul">
@@ -362,7 +410,7 @@ MIT course and book on how to design software people want to use.
 </ul>
 
 <p>
-If you write enough software eventually you discover that almost everything is some kind of queue pattern. This is another workbook that's Q&amp;A style not a giant theory text. You don't have to do this but knowing probability helps with nondeterministic algorithm design. 
+If you write enough software eventually you discover that almost everything is some kind of queue pattern. This is another workbook that's Q&amp;A style not a giant theory text. 
 </p>
 
 <ul class="org-ul">
@@ -370,47 +418,18 @@ If you write enough software eventually you discover that almost everything is s
 </ul>
 
 <p>
-Here we learn kernel bypass methods for low latency networking, code profiling and optimization, hashing/join algorithms, search space complexity reduction, and modern distributed application architecture like microservices. We can also look at their AI tuning <a href="https://15799.courses.cs.cmu.edu/spring2022/">seminar</a> for relational dbms optimization knob tuning. Most of the assignments are finishing features on github for a teaching database with a rust written optimizer but there's nothing stopping you from using whatever language you prefer.   
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgfe1ee42" class="outline-3">
-<h3 id="orgfe1ee42">Mentorships</h3>
-<div class="outline-text-3" id="text-orgfe1ee42">
-<p>
-We need some kind of work experience. 
-</p>
-
-<p>
-You never sell yourself as a junior. Companies will hire anyone who knows how to sell themselves and can pass the simple technical competence filters. You always pretend to be employed in the industry even if this means setting up a personal page declaring yourself a freelancer on Upwork.  
-</p>
-
-<p>
-There are a few companies that prefer to hire on-site junior developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and mentor them to senior developers. One is in NH called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. 
-</p>
-
-<p>
-If you contribute to open source projects you will pick up work for example while writing this workshop I tried out contributing to <a href="https://developer.blender.org/docs/">Blender</a> then made a LinkedIn profile claiming to be a self-taught student and C++ developer with a single pull request writing a small feature as my portfolio. Numerous local gaming companies tried to recruit me shortly after saying they would train and offering all kinds of signing bonuses. LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> I've only ever used it to harvest recruiter offers.
-</p>
-
-<p>
-You can also approach whoever you think is the best local developer and simply ask for work to do. Open source software is easiest if not you contact someone in your community either through a meetup, hackathon, or any method and ask for tasks to do saying you want to learn it all from scratch. If you are remote they are reluctant to work with you but if you both live in the same city and can meet up once in a while that makes them trust you more. Once you are in all you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually start paying you once you have proven to be indispensible. Even better if they get promoted you get promoted. If they go off and start a new company you are the first hire. If they get hired at a top trading firm everyone says you have no chance of getting into guess who they will tell the hiring managers they should also hire. 
-</p>
-
-<p>
-I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and tried it out internally after being hired to write software. I started frequenting the area where all the money was being made by people with fancy degrees and asked for things to do until the work became sophisticated enough they wanted to move me in there with them. This can be tricky because of signing multiple NDAs even between internal departments but if you sell yourself to them that you are serious about being mentored they will tell management to make it happen.
+Here we learn kernel bypass methods for low latency networking, code profiling and optimization, hashing/join algorithms, search space complexity reduction, and modern distributed application architecture like microservices. We also learn CPU-arch, cache memory hierarchy, and operating systems. We can also look at their AI tuning <a href="https://15799.courses.cs.cmu.edu/spring2022/">seminar</a> for relational dbms optimization knob tuning. Most of the assignments are finishing features on github for a teaching database with a rust written optimizer but there's nothing stopping you from using whatever language you prefer.   
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-orgfa2807e" class="outline-2">
-<h2 id="orgfa2807e">USACO</h2>
-<div class="outline-text-2" id="text-orgfa2807e">
+<div id="outline-container-org19d8bbf" class="outline-2">
+<h2 id="org19d8bbf">USACO</h2>
+<div class="outline-text-2" id="text-org19d8bbf">
 <p>
-Let's do all the USACO contest problems using inquiry-based learning because that's exactly what you do in real life. If you took <a href="./accelerated.html">Accelerated Intro to CS</a> you have already seen almost every topic in the USACO guide and if you didn't it doesn't matter that's why there exists a guide.   
+I'm going to do all the USACO contest problems using inquiry-based learning because that's exactly what you do in real life. If you took <a href="./accelerated.html">Accelerated Intro to CS</a> you have already seen almost every topic in the USACO guide and if you didn't it doesn't matter that's why there exists a guide which we can look at while we solve a problem, so you learn the algorithm as you are using it.   
 </p>
 
 <p>
@@ -452,9 +471,9 @@ A TLE or time limit exceeded verdict shows how he would optimize to get accepted
 </p>
 </div>
 
-<div id="outline-container-org37abe96" class="outline-3">
-<h3 id="org37abe96">Big-O explained</h3>
-<div class="outline-text-3" id="text-org37abe96">
+<div id="outline-container-org01f1a32" class="outline-3">
+<h3 id="org01f1a32">Big-O explained</h3>
+<div class="outline-text-3" id="text-org01f1a32">
 <p>
 The USACO guide has a good introduction to big-O and a resource we can use where running time is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
 </p>
@@ -486,9 +505,9 @@ Big-O doesn't represent growth since if f(x) = x<sup>2</sup> it does not grow to
 </div>
 
 
-<div id="outline-container-orgd8ab7de" class="outline-3">
-<h3 id="orgd8ab7de">Problem complexity</h3>
-<div class="outline-text-3" id="text-orgd8ab7de">
+<div id="outline-container-orge27a135" class="outline-3">
+<h3 id="orge27a135">Problem complexity</h3>
+<div class="outline-text-3" id="text-orge27a135">
 <p>
 Before we start trying to solve problems watch <a href="https://courses.csail.mit.edu/6.5440/fall23/lectures/L01.html">this</a> Erik Demaine lecture and skip to 09:00. We want to know what polynomial time is, what NP means, what satisfiability means and this is a good enough ~30m crash course in complexity as these concepts come up all the time in algorithm literature. He tells us most decision problems can't be solved by an algorithm which ruins the AI superintelligence dystopia. When he translates Super Mario Bros to a 3SAT decision problem we can see that almost every algorithm you can think of can be transformed to a decision problem. You don't have to keep watching this but there's an interesting intro to constraint logic/graphs. Now you can explain to someone P=NP means all the nondeterministic polynomial time algorithms that always 'lucky guess' correctly or have a magic oracle can be solved by an algorithm in deterministic polynomial time which seems impossible. 
 </p>
@@ -499,15 +518,19 @@ The rest of this course I won't do here but the book he wrote that goes with the
 </div>
 </div>
 
-<div id="outline-container-org56b602d" class="outline-3">
-<h3 id="org56b602d">2024 USACO season</h3>
-<div class="outline-text-3" id="text-org56b602d">
+<div id="outline-container-org89bc197" class="outline-3">
+<h3 id="org89bc197">Languages</h3>
+<div class="outline-text-3" id="text-org89bc197">
 <p>
-I'm starting at the most recent <a href="https://usaco.org/index.php?page=open24results">contests</a>. Note we are given all the test inputs/outputs as a .zip and a fully worked out solution with a proof of the bounds. We can review the USACO guide, and these lecture notes <a href="https://www.cs.cmu.edu/~15451-s24/notes.pdf">here</a> as we go. 
+If you look at the archived <a href="https://usaco.org/index.php?page=open24results">contests</a> we are given all the test inputs/outputs as a .zip and a fully worked out solution with a proof of the bounds. This means <i>you can use any language you want</i> however I am going to do it all in C++ with Knuth's literate programming tool cweb because it mimics exactly how you would build something in a collaborative setting and after using it for a few problems it's kind of awesome and I finally get why Knuth shills this style of programming so much.  
 </p>
 
 <p>
-&#x2026; Logical Moos cont TODO
+Each problem we solve we can use a bit of the reading from <a href="https://jshun.csail.mit.edu/6506-s23/">6.506 Algorithm Engineering</a> on how exactly we would benchmark our programs and analyze their running time, esp helpful if you aren't using the online USACO judge to run your code and want to know how fast it truly is. 
+</p>
+
+<p>
+TODO 
 </p>
 </div>
 </div>
@@ -515,9 +538,9 @@ I'm starting at the most recent <a href="https://usaco.org/index.php?page=open24
 
 
 
-<div id="outline-container-org60f1be3" class="outline-2">
-<h2 id="org60f1be3">Software Design</h2>
-<div class="outline-text-2" id="text-org60f1be3">
+<div id="outline-container-orgab1b309" class="outline-2">
+<h2 id="orgab1b309">Software Design</h2>
+<div class="outline-text-2" id="text-orgab1b309">
 <p>
 MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. It used to be called 6.170 before MIT renumbered every course recently. Universities always do ridiculous things every 3-5 years it's like some new dean comes in and demands oh we have to reinvent everything and buy all new (awful) edtech. 
 </p>
@@ -531,9 +554,9 @@ Click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">her
 </p>
 </div>
 
-<div id="outline-container-orgb14ff78" class="outline-3">
-<h3 id="orgb14ff78">Gitless</h3>
-<div class="outline-text-3" id="text-orgb14ff78">
+<div id="outline-container-org6946b2a" class="outline-3">
+<h3 id="org6946b2a">Gitless</h3>
+<div class="outline-text-3" id="text-org6946b2a">
 <p>
 Now we are going to take all the above introductions to conceptual design and rewrite the git interface to make it intuitive to use. We have to learn git anyway so may as well write a CLI (command line interface) or you could make it ridiculous and call it 'visual git' or something with DAG graphics.  
 </p>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-09-04 Wed 23:34 -->
+<!-- 2024-09-12 Thu 07:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -270,28 +270,28 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge049a07">Start here</a>
+<li><a href="#orgca670ce">Start here</a>
 <ul>
-<li><a href="#orgb7a66d8">Why this exists</a></li>
-<li><a href="#org679e009">The work</a></li>
-<li><a href="#orga695608">Recruiters</a></li>
-<li><a href="#org33d7844">Selection</a></li>
-<li><a href="#orgcde9540">Campus recruiting</a></li>
-<li><a href="#org6dd9d74">Phone screens</a></li>
-<li><a href="#orga5d26e1">Find a mentor</a></li>
+<li><a href="#orga033d5e">Fintech recruiting in 2024</a></li>
+<li><a href="#org5c73bdc">The work</a></li>
+<li><a href="#org31fdfc0">Recruiters</a></li>
+<li><a href="#orgf7755ad">Selection</a></li>
+<li><a href="#orgf59b36b">Campus recruiting</a></li>
+<li><a href="#orgb8bac57">Phone screens</a></li>
+<li><a href="#org1fee85e">Find a mentor</a></li>
 </ul>
 </li>
-<li><a href="#org5a432e2">Curriculum</a></li>
-<li><a href="#orga8047bb">USACO</a>
+<li><a href="#org5cd01f8">Curriculum</a></li>
+<li><a href="#org4c0cb1f">Software Design</a>
 <ul>
-<li><a href="#orgc448ff5">Big-O explained</a></li>
-<li><a href="#org7c2af85">Problem complexity</a></li>
-<li><a href="#org71bdfc6">Languages</a></li>
+<li><a href="#org3f72da6">Gitless</a></li>
 </ul>
 </li>
-<li><a href="#orgf40ab85">Software Design</a>
+<li><a href="#orgac2ed6b">USACO</a>
 <ul>
-<li><a href="#org62cebdb">Gitless</a></li>
+<li><a href="#org3092843">Big-O explained</a></li>
+<li><a href="#orga0eaee5">Problem complexity</a></li>
+<li><a href="#orgdb29d63">Languages</a></li>
 </ul>
 </li>
 </ul>
@@ -299,9 +299,9 @@ for the JavaScript code in this tag.
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orge049a07" class="outline-2">
-<h2 id="orge049a07">Start here</h2>
-<div class="outline-text-2" id="text-orge049a07">
+<div id="outline-container-orgca670ce" class="outline-2">
+<h2 id="orgca670ce">Start here</h2>
+<div class="outline-text-2" id="text-orgca670ce">
 <p>
 I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
 </p>
@@ -311,106 +311,103 @@ I assume you are teaching yourself at the same time some kind of intro course yo
 <li><a href="https://functionalcs.github.io/curriculum/sicp.html">SICP</a></li>
 <li>anything</li>
 </ul>
+
+<p>
+This is a freelancing workshop if you only take the <i>Software Design</i> content or it's a C++ 'working in Fintech' workshop if you take the rest of the content. 
+</p>
 </div>
 
 
-<div id="outline-container-orgb7a66d8" class="outline-3">
-<h3 id="orgb7a66d8">Why this exists</h3>
-<div class="outline-text-3" id="text-orgb7a66d8">
+<div id="outline-container-orga033d5e" class="outline-3">
+<h3 id="orga033d5e">Fintech recruiting in 2024</h3>
+<div class="outline-text-3" id="text-orga033d5e">
 <p>
 I often meet up with software <a href="https://joveinternational.com/markets-coverage/">recruiters</a> in finance who tell me a tale of woe how much harder it's become to find candidates. I asked them what exactly do you want these days for basic new grad style candidates and would you look at resumes without a degree. The following curriculum is a result of these conversations which are ongoing as I've been toying with the idea <i>can I teach someone to do what we do here from scratch</i> so they don't have to spend $90k or w/e the total cost is now for undergrad at a university. I have no intention of creating a new filter or mandatory hoop people must jump through this is simply a collection of free materials to optionally take if you don't have a degree.   
 </p>
 
 <p>
-The recruiters told me if they could find a non-degree candidate that knows the entire CPU-arch execution pipeline and can answer any question about how an eviction from the cache might happen (like a hash collision) then they get a point. If they know a language and can explain how it works precisely including it's managed runtime if it has one then that's another point. If they have provable problem solving skills typically taught by competitive programming where given a seemingly impossible problem the candidate can at least work to a non-optimized solution without immediately giving up then that's another point. Finally if they can do all of the above with a very high standard of code quality then that is the perfect introductory candidate. 
+The recruiters told me if they could find a non-degree candidate that knows the entire CPU-arch execution pipeline and can answer any question about how an eviction from the cache might happen (like a hash collision) then they get a point. If they know a language and can explain how it works precisely including it's managed runtime if it has one then that's another point. If they have provable problem solving skills typically taught by competitive programming where given a seemingly impossible problem the candidate can at least work to a non-optimized solution without immediately giving up then that's another point. Finally if they can do all of the above with a very high standard of code quality then that is the perfect introductory candidate who can be taught anything else needed.
 </p>
 
 <p>
-There's many reasons why you'd want to work for <a href="https://gist.github.com/chrisaycock/8b7a37b1f97549517cb7789be5b06266">trading firms</a>. Valkyrie in Chicago will hire <a href="https://www.valkyrietrading.com/careers/junior-software-engineer/">juniors</a> explicitly for example but the rest will as well if you know the material here. My reasons are paid education. You get paid to go from technician to the Formula 1 race car engineer of software development. These outfits also thrive in volatility there's never any lay offs that I have seen (yet).  
+There's many reasons why you'd want to work for <a href="https://gist.github.com/chrisaycock/8b7a37b1f97549517cb7789be5b06266">trading firms</a>. Valkyrie in Chicago will hire <a href="https://www.valkyrietrading.com/careers/junior-software-engineer/">juniors</a> for example but the rest will as well if you know the material here. My reasons are paid education. You get paid to go from technician to the Formula 1 race car engineer of software development. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org679e009" class="outline-3">
-<h3 id="org679e009">The work</h3>
-<div class="outline-text-3" id="text-org679e009">
+<div id="outline-container-org5c73bdc" class="outline-3">
+<h3 id="org5c73bdc">The work</h3>
+<div class="outline-text-3" id="text-org5c73bdc">
 <p>
-Everything is bespoke from the server metal up where you are expected to know or quickly learn everything about L1/L2 cache and Intel features like Intel RDT (CAT,CMT) or Processor Trace. Not all the work is pure optimization these big funds now have large suites of custom client software and even roll their own internal email, code review software, everything is custom. There is constantly new software to write and rewrite from scratch when new hardware features are released. You typically start out where I started which was the proprietary data pipeline or top of the critical path where hundreds of paid data feeds are coming in as a massive end of trading day dump or coming in continuously that have to be cleaned of noise and parsed in the most efficient possible strategy because even increasing by a tiny optimization means the difference in millions of dollars. For example those 'no fee trading' consumer grade middle-man brokerages like Robinhood they are likely selling their entire order book to a major HFT firm that executes all the buy orders meaning book comes in with buy orders, trading optimizer must figure out how to buy the security for the lowest fees, then sell this security to the consumer within small fractions of a second. Of course whatever is being bought or sold on that consumer book is yet another data feed to add to whatever strategy the HFT is doing and they can predict what the book will be in an hour and have all those assets ready for sale. From the data dungeon you make your way to the tip of the critical path with experience.
+Everything is bespoke from the server metal up where you are expected to know or quickly learn everything about L1/L2 cache and Intel features like Intel RDT (CAT,CMT) or Processor Trace. Not all the work is pure optimization these big funds now have large suites of custom client software and even roll their own internal email, code review software, even the compiler is completely custom where I work. You typically start out working on customer trading software or at the beginning of the critical path where hundreds of paid data feeds are coming in as a massive end of trading day dump or coming in continuously that have to be parsed in the most efficient possible strategy. One example is those 'no fee trading' middle-man brokerages like Robinhood they are likely selling their entire order book to a major HFT firm meaning someone had to write the infrastructure for that order book to be parsed, be fed into a trading optimizer to find the lowest fee buy strategy then sell it back to Robinhood within microseconds. You are trained how to do this of course which is why selection is so competitive they need developers who can learn. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga695608" class="outline-3">
-<h3 id="orga695608">Recruiters</h3>
-<div class="outline-text-3" id="text-orga695608">
+<div id="outline-container-org31fdfc0" class="outline-3">
+<h3 id="org31fdfc0">Recruiters</h3>
+<div class="outline-text-3" id="text-org31fdfc0">
 <p>
-Jove Intl, <a href="https://oxfordknight.co.uk/jobs/">Oxford Knight</a>, Reload Search, and ex-employees who have quit to become highly paid one-man recruiting shops most of whom are the one's I've been talking to after running into them at bars after work and at events. They hire internationally for Chicago, NYC, London, Sydney, Hong Kong, Mumbai, Shanghai, Tokyo and now Singapore seems to be the location everyone is opening offices these days.  
+Jove Intl, <a href="https://oxfordknight.co.uk/jobs/">Oxford Knight</a>, Reload Search, and ex-employees who have quit to become highly paid one-man recruiting shops most of whom are the one's I've been talking to after running into them at bars after work and at events. They hire internationally for Chicago, NYC, Austin, London, Sydney, Hong Kong, Mumbai, Shanghai, Tokyo and now Singapore seems to be the location everyone is opening offices these days.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org33d7844" class="outline-3">
-<h3 id="org33d7844">Selection</h3>
-<div class="outline-text-3" id="text-org33d7844">
+<div id="outline-container-orgf7755ad" class="outline-3">
+<h3 id="orgf7755ad">Selection</h3>
+<div class="outline-text-3" id="text-orgf7755ad">
 <p>
-They told me they go over all resumes, there's no automated system. USACO training stands out, so-called modern C++ meaning C++17/20/23 stands out. You never sell yourself as a junior, companies will hire anyone who knows how to sell themselves and can pass the technical competence filters. You always pretend to be employed writing software even if this means setting up a personal page declaring yourself a freelancer on Upwork actively looking for contract work. Candidates are sometimes ranked, so you have to be better than everyone else who would automatically rank higher (degrees, work experience) which is possible through sheer determination because the hiring pool for entry level candidates who can both pass the interviews and are willing to stay on and become senior is very limited right now. Nobody I know of has a referral scheme in fact it's a risk handing out a referral so if you see some stranger offering a referral it's a scam. 
+They told me they go over all resumes, there's no automated ATS or applicant tracking system. USACO training stands out, so-called modern C++ meaning C++17/20/23 stands out but is not necessary as they will train you. You never sell yourself as a junior, companies will hire anyone who knows how to sell themselves and can pass the technical competence filters. You always pretend to be employed writing software even if this means setting up a personal page declaring yourself a freelancer on Upwork actively looking for contract work. Candidates are sometimes ranked, so you have to be better than everyone else who would automatically rank higher (degrees, work experience) which is possible through sheer determination because the hiring pool for entry level candidates who can both pass the interviews and are willing to stay on and become senior is very limited right now. Referals do exist but have consequences meaning you are personally vouching for someone so nobody is going to hand out a referral to a stranger online.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgcde9540" class="outline-3">
-<h3 id="orgcde9540">Campus recruiting</h3>
-<div class="outline-text-3" id="text-orgcde9540">
+<div id="outline-container-orgf59b36b" class="outline-3">
+<h3 id="orgf59b36b">Campus recruiting</h3>
+<div class="outline-text-3" id="text-orgf59b36b">
 <p>
-Getting more and more monopolized by big tech and big gov contractors that manipulate school guidelines by pressuring students with 2-week expiring offers (aka exploding offers) so it is a struggle to find any of the good grads to do this kind of work. Professors sometimes act like recruiters now too receiving a form of commission setting up their students with companies further draining the hiring and internship pool. The available quant dev type roles are limited and seem like they pay less than big tech when you forget you can invest your bonus in the high-yield investment fund too so that's another reason many new grads skip the world of finance. 
+Getting more and more monopolized by big tech and big gov contractors that manipulate school guidelines by pressuring students with 2-week expiring offers (aka exploding offers) so it is a struggle to find any of the good grads to do this kind of work. Professors sometimes act like recruiters now too receiving a form of commission setting up their students with companies further draining the hiring and internship pool. The available roles seem like they pay less than big tech when you forget you can invest your bonus in the high-yield investment fund too so that's another reason many new grads don't apply. 
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org6dd9d74" class="outline-3">
-<h3 id="org6dd9d74">Phone screens</h3>
-<div class="outline-text-3" id="text-org6dd9d74">
+<div id="outline-container-orgb8bac57" class="outline-3">
+<h3 id="orgb8bac57">Phone screens</h3>
+<div class="outline-text-3" id="text-orgb8bac57">
 <p>
 I don't know if they still do this but one Chicago company was notorious for firing off 3 problems to solve on Hackerrank seconds after you submitted an application. The phone screen is usually a recruiter asking are you legal to work and if not what credentials do you have because in some countries like the US you will need a reason for them to issue you a work visa for a job that can't be given to a local so a degree or equivalent work experience. They will of course dodge salary questions with the tried and true 'well I hire for x amount of countries so don't have that exact information right now' but in my experience they offer a range at least.   
 </p>
 
 <p>
-Now phone screen #2.
+If you have been vouched for, which is very common in the finance world, then you skip the second phone interview and come in for a casual meeting usually about whatever you previously built and they may ask you about details of the language you claim to be an expert in. Any jargon you use they will ask you to define on the spot to catch you bluffing. If for whatever reasons you're asked to write software it will be to <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> which is the new fizzbuzz filter everyone has adopted and tests how careless of a developer you are meaning you don't ask any questions about requirements and start writing code immediately. We were told if we were to personally vouch and refer candidates for an interview then our friends we vouched for could expect the above. There's of a course a catch, if we refer someone and they fail miserably meaning we are careless with referals, then we have to cover the cost of the interview which is thousands of dollars so you won't find anyone handing out referals to people they don't know. 
 </p>
 
 <p>
-If you have been vouched for, which is very common in the finance world, then your phone interview will be something simple such as <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> for the sole purpose of seeing if you even bother asking questions to clarify the requirements or work through edge cases. This is to guage how careless you are as a developer because mistakes cost money and atoi is essentially the new fizz buzz filter everyone has adopted. After expect to be asked about your chosen language's runtime in detail and any jargon you use they will ask you to define it on the spot to catch you bluffing. This is harder than it sounds because it's like an oral general exam in grad school where a committee tests your knowledge on the spot but nobody with the kind of experience who would be given this interview style should fail this. That's it you're in. Yes, it's actually that easy once you come vouched for because it's a small industry and everyone knows each other.
-</p>
-
-<p>
-However if you are an unknown therefore a risk to hire then expect a longer <a href="https://www.youtube.com/watch?v=V8DGdPkBBxg">interview</a> with a collaborative design. Code correctness and caution is heavily favored over adding complexity to squeeze out some meaningless optimization of constant factors. As a personal anecdote these interview tasks are often designed as a trap to once again see how careless of a developer you are the problems I've seen have an obvious area of optimization to take that will open up a bug somewhere else if you aren't taking your time thinking through the whole problem space. In the end they really just want to see what you are like to work with and that you have high standards. If you're unknown but they're still interested you'll be paid to come out for on-site 'culture fit' job shadowing too and multiple more rounds of interviews. 
+If not vouched for expect the second zoom/phone call to be a typical algorithm style <a href="https://www.youtube.com/watch?v=V8DGdPkBBxg">interview</a>. Code correctness and caution is heavily favored over adding complexity to squeeze out some meaningless optimization of constant factors. As a personal anecdote these interview tasks are often designed as a trap to once again see how careless of a developer you are the problems I've seen have an obvious area of optimization to take that will open a performance sink elsewhere if you aren't taking your time thinking through the whole original problem space. Prime example they will try and get you with is <a href="https://yihui.org/en/2018/06/cache-invalidation/">cache invalidation</a>. If they're still interested you'll be paid to come out for on-site 'culture fit' job shadowing and sometimes multiple more rounds of interviews but it depends on the country in Hong Kong I had a brief on-site meeting immediately followed by an employment contract offer. Hiring someone is an investment it will typically take 3 months for them to be productive and if you're being paid $200k/yr that's $50k they have spent hoping you will turn out to be a good hire so now you know why there is all these hoops to jump through. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga5d26e1" class="outline-3">
-<h3 id="orga5d26e1">Find a mentor</h3>
-<div class="outline-text-3" id="text-orga5d26e1">
+
+<div id="outline-container-org1fee85e" class="outline-3">
+<h3 id="org1fee85e">Find a mentor</h3>
+<div class="outline-text-3" id="text-org1fee85e">
 <p>
-Once you are in and survive long enough to develop a routine walk over to the department where all the money is being made and find a mentor to teach you by asking them to give you the work they don't like doing because you want to learn it all from scratch. All you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually want you to work with them once you have proven to be indispensible and insist you be transferred internally where you will double your salary. If they get promoted you get promoted, if they go off and start a new company you are the first hire. This can be tricky because of signing multiple NDAs even between internal departments but if you are serious about wanting to learn they will tell management to make it happen. I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and my life would not be the same if I hadn't watched that throwaway clip at 3am because I always assumed there was no way I could ever do this kind of work.
+Once you are in and develop a routine walk over to the department where all the money is being made and find a mentor to teach you by asking them to give you the work they don't like doing because you want to learn it all from scratch. All you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually want you to work with them once you have proven to be indispensible and insist you be transferred internally where you will double your salary. If they get promoted you get promoted, if they go off and start a new company you are the first hire. This can be tricky because of signing multiple NDAs even between internal departments but if you are serious about wanting to learn they will tell management to make it happen. I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and my life would not be the same if I hadn't watched that throwaway clip at 3am because I always assumed there was no way I could ever do this kind of work.
 </p>
 
 <p>
-If you're not interested in finance there are a few companies that mentor developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and build them to senior developers. One is in New Hampshire called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. 
-</p>
-
-<p>
-If you contribute to open source projects they will teach you as well and you will pick up work for example while writing this workshop I tried out contributing to <a href="https://developer.blender.org/docs/">Blender</a> then made a LinkedIn profile claiming to be a self-taught student and C++ developer with a single small feature as my portfolio. Numerous local gaming companies tried to recruit me shortly after saying they would train and offering all kinds of signing bonuses. LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> I've only ever used it to harvest recruiter offers. Of course not all fintech outfits are worth working at, do your own research.
+If you're not interested in finance there are a few companies that mentor developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and build them to senior developers. One is in New Hampshire called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> I've only ever used it to harvest recruiter offers. Of course not all fintech outfits are worth working at, do your own research on what kind of NDAs they may make you sign though the video game industry does the same anti-competitor working clause in all their employment contracts and everyone ignores them unless you make your own competing company then expect to be sued.
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org5a432e2" class="outline-2">
-<h2 id="org5a432e2">Curriculum</h2>
-<div class="outline-text-2" id="text-org5a432e2">
+<div id="outline-container-org5cd01f8" class="outline-2">
+<h2 id="org5cd01f8">Curriculum</h2>
+<div class="outline-text-2" id="text-org5cd01f8">
 <ul class="org-ul">
 <li>The <a href="https://usaco.guide/">USACO guide</a></li>
 </ul>
@@ -448,15 +445,85 @@ If you write enough software eventually you discover that almost everything is s
 </ul>
 
 <p>
-Here we learn kernel bypass methods for low latency networking, code profiling and optimization, hashing/join algorithms, search space complexity reduction, and modern distributed application architecture like microservices. We also learn cache memory hierarchy and systems. We can also look at their AI tuning <a href="https://15799.courses.cs.cmu.edu/spring2022/">seminar</a> for relational dbms optimization knob tuning. Most of the assignments are finishing features on github for a teaching database with a rust written optimizer but there's nothing stopping you from using whatever language you prefer.   
+Here we learn kernel bypass methods for low latency networking, multicore programming, hashing/join algorithms, search space complexity reduction, and modern distributed application architecture like microservices. We can also look at their AI tuning <a href="https://15799.courses.cs.cmu.edu/spring2022/">seminar</a> for relational dbms optimization knob tuning. Most of the assignments are finishing features in C++ for a teaching database with a Rust written optimizer but there's nothing stopping you from using whatever language you prefer. 
+</p>
+
+<p>
+We will learn everything we can about C++ <a href="https://github.com/dendibakh/perf-ninja?tab=readme-ov-file">profiling</a> and <a href="https://www.agner.org/optimize/">performance engineering</a> taking some material on cache architecture from ETH Zurich and some compiler lectures about garbage collected runtimes for other languages.  
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-orga8047bb" class="outline-2">
-<h2 id="orga8047bb">USACO</h2>
-<div class="outline-text-2" id="text-orga8047bb">
+<div id="outline-container-org4c0cb1f" class="outline-2">
+<h2 id="org4c0cb1f">Software Design</h2>
+<div class="outline-text-2" id="text-org4c0cb1f">
+<p>
+Here we will
+</p>
+<ul class="org-ul">
+<li>make a personal site</li>
+<li>start a software business</li>
+<li>freelance</li>
+</ul>
+
+<p>
+MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and the professor of that course wrote a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. The first thing we will use this course for is to make a static site for ourselves which will be our business card we hand out as freelancers. Since we don't have tons of work experience or credentials keep it as minimalist as possible while showing off skills we will develop from this course. See the recitation slides for <a href="https://61040-fa23.github.io/assets/recitation-notes/R1_slides.pdf">VitePress</a> which we'll go through completely after learning git.  
+</p>
+
+<p>
+Personal site examples
+</p>
+<ul class="org-ul">
+<li>This has <a href="https://www.strml.net/">potential</a> but intro before 'live coding' too long</li>
+<li><a href="https://jasonpien.com/">Student</a> example though again intro should be cut</li>
+<li><a href="https://512kb.club/">512kb club</a> lot's of good personal sites</li>
+<li><a href="https://kru.run/win/98">Win98</a> example</li>
+</ul>
+
+<p>
+First look at these <a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">slides</a> from 2023 titled <i>Diverge-Converge</i>. Page 8 click on his riffle.systems idea where a 'reactive database' is used to declaratively write entire websites even generating the html elements thus totally replacing how modern webdev is done because really all a web framework does is handle changing state and we've already learned how to best control state it's called a database management system. You can build a prototype of this yourself if interested after we take the advanced database content later in this workshop.
+</p>
+
+<p>
+Concepts are introduced, see this <a href="https://www.youtube.com/watch?v=WgOhtH3lugk&amp;list=PLY_nsiUEgM3nbxcO3_ONmKL-ZRhLKpfGV">YouTube video</a> from an AI talk at MIT where the professor of this course further explains what a concept is and how you would use them to get an LLM to develop an entire web app. Note that in their experiment they had to use 'a few hundred' prompts which then becomes your version history and I can only imagine the nightmare of trying to refactor a few hundred prompts but they made it easier with concepts. tl;dr AI will not be replacing webdev anytime soon.
+</p>
+
+<p>
+To watch more about concepts click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos. Watch the two lectures on concepts: <a href="https://drive.google.com/file/d/1lzAbrqk9LNLhGMLbsTuVgAm6p9_Do_Ux/view?usp=sharing">lecture 1</a> and <a href="https://drive.google.com/file/d/1AZ85ui0k2QpCKgfJZXUPSk-jdSi36MzP/view?usp=sharing">lecture 2</a>. Look at the recent <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">slides</a>. You have surely encountered badly designed software and this is a way to model your ideas as state machines then synch them together to compose an application that people can actually understand how to use. If you don't understand what you just looked at don't worry we'll be implementing it in full you will get it. 
+</p>
+</div>
+
+<div id="outline-container-org3f72da6" class="outline-3">
+<h3 id="org3f72da6">Gitless</h3>
+<div class="outline-text-3" id="text-org3f72da6">
+<p>
+We'll come back to this course after we learn git. There's a <a href="https://github.com/apps/desktop/">GUI</a> for git you don't have to use the command line interface.  
+</p>
+
+<p>
+Many companies today use a customized Mercurial fork or rewritten clone instead of git like Meta's rust written EdenFS and <a href="https://github.com/facebook/sapling">Sapling SCM</a> because git was originally developed to take advantage of linux file system optimizations ergo is conceptually attached to a file system while Mercurial can be easily adapted to be stuffed in a database, distributed or run on any OS. In a Mercurial style of version control, you probably don't care about individual commits so you don't even add comments to commits you instead care about entire branch development.     
+</p>
+
+<p>
+Let's learn what git actually is by watching MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i>. Lecture starts ~7m in. So far the data structure and model is trivial to understand if you did any intro course here such as <a href="./accelerated.html">CS19</a> learnings about DAGs. 
+</p>
+
+<p>
+Proceed to <a href="https://gitless.com/#research">gitless.com</a> and navigate to research or <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> page on MIT's software design group. You will find <a href="https://www.youtube.com/watch?v=31XZYMjg93o">this</a> talk about the problems with git design. The guy giving this talk was the PhD student of the prof we watched in the conceptual design lectures and now is a co-founder of <a href="https://www.getaleph.com/careers">Aleph</a> some fintech data startup (which is hiring, maybe you can impress him with your conceptual design skills).
+</p>
+
+<p>
+.. cont TODO
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgac2ed6b" class="outline-2">
+<h2 id="orgac2ed6b">USACO</h2>
+<div class="outline-text-2" id="text-orgac2ed6b">
 <p>
 I'm going to do all the USACO contest problems using inquiry-based learning because that's exactly what you do in real life. If you took <a href="./accelerated.html">Accelerated Intro to CS</a> you have already seen almost every topic in the USACO guide and if you didn't it doesn't matter that's why there exists a guide which we can look at while we solve a problem, so you learn the algorithm as you are using it. 
 </p>
@@ -501,9 +568,9 @@ A TLE or time limit exceeded verdict shows how he would optimize to get accepted
 </p>
 </div>
 
-<div id="outline-container-orgc448ff5" class="outline-3">
-<h3 id="orgc448ff5">Big-O explained</h3>
-<div class="outline-text-3" id="text-orgc448ff5">
+<div id="outline-container-org3092843" class="outline-3">
+<h3 id="org3092843">Big-O explained</h3>
+<div class="outline-text-3" id="text-org3092843">
 <p>
 The USACO guide has a good introduction to big-O and a resource we can use where running time is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
 </p>
@@ -535,9 +602,9 @@ Big-O doesn't represent growth since if f(x) = x<sup>2</sup> it does not grow to
 </div>
 
 
-<div id="outline-container-org7c2af85" class="outline-3">
-<h3 id="org7c2af85">Problem complexity</h3>
-<div class="outline-text-3" id="text-org7c2af85">
+<div id="outline-container-orga0eaee5" class="outline-3">
+<h3 id="orga0eaee5">Problem complexity</h3>
+<div class="outline-text-3" id="text-orga0eaee5">
 <p>
 Before we start trying to solve problems watch <a href="https://courses.csail.mit.edu/6.5440/fall23/lectures/L01.html">this</a> Erik Demaine lecture and skip to 09:00. We want to know what polynomial time is, what NP means, what satisfiability means and this is a good enough ~30m crash course in complexity as these concepts come up all the time in algorithm literature. He tells us most decision problems can't be solved by an algorithm which ruins the AI superintelligence dystopia. When he translates Super Mario Bros to a 3SAT decision problem we can see that almost every algorithm you can think of can be transformed to a decision problem. You don't have to keep watching this but there's an interesting intro to constraint logic/graphs. Now you can explain to someone P=NP means all the nondeterministic polynomial time algorithms that always 'lucky guess' correctly or have a magic oracle can be solved by an algorithm in deterministic polynomial time which seems impossible. 
 </p>
@@ -548,59 +615,15 @@ The rest of this course I won't do here but the book he wrote that goes with the
 </div>
 </div>
 
-<div id="outline-container-org71bdfc6" class="outline-3">
-<h3 id="org71bdfc6">Languages</h3>
-<div class="outline-text-3" id="text-org71bdfc6">
+<div id="outline-container-orgdb29d63" class="outline-3">
+<h3 id="orgdb29d63">Languages</h3>
+<div class="outline-text-3" id="text-orgdb29d63">
 <p>
 If you look at the archived <a href="https://usaco.org/index.php?page=open24results">contests</a> we are given all the test inputs/outputs as a .zip and a fully worked out solution with a proof of the bounds. This means <i>you can use any language you want</i> however I am going to do it all in C++ with Knuth's literate programming tool cweb because it mimics exactly how you would build something in a collaborative setting and after using it for a few problems it's kind of awesome and I finally get why Knuth shills this style of programming so much.  
 </p>
 
 <p>
 TODO 
-</p>
-</div>
-</div>
-</div>
-
-
-
-<div id="outline-container-orgf40ab85" class="outline-2">
-<h2 id="orgf40ab85">Software Design</h2>
-<div class="outline-text-2" id="text-orgf40ab85">
-<p>
-MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. It used to be called 6.170 before MIT renumbered every course recently. Universities always do ridiculous things every 3-5 years it's like some new dean comes in and demands oh we have to reinvent everything and buy all new (awful) edtech. 
-</p>
-
-<p>
-First look at these <a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">slides</a> from 2023 titled <i>Diverge-Converge</i> it briefly explains how you go from brainstorming features of something you want to build into concepts. 
-</p>
-
-<p>
-Click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos. They are all worth watching but we are interested in the two lectures on conceptual design. Watch <a href="https://drive.google.com/file/d/1lzAbrqk9LNLhGMLbsTuVgAm6p9_Do_Ux/view?usp=sharing">lecture 1</a> and <a href="https://drive.google.com/file/d/1AZ85ui0k2QpCKgfJZXUPSk-jdSi36MzP/view?usp=sharing">lecture 2</a>. Look at the recent <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">slides</a>. You have surely encountered badly designed software and this is a way to model your ideas as state machines then synch them together to compose an application that people can actually understand how to use. If you don't understand what you just looked at don't worry we'll be implementing it in full you will get it. 
-</p>
-</div>
-
-<div id="outline-container-org62cebdb" class="outline-3">
-<h3 id="org62cebdb">Gitless</h3>
-<div class="outline-text-3" id="text-org62cebdb">
-<p>
-Now we are going to take all the above introductions to conceptual design and rewrite the git interface to make it intuitive to use. We have to learn git anyway so may as well write a CLI (command line interface) or you could make it ridiculous and call it 'visual git' or something with DAG graphics.  
-</p>
-
-<p>
-Many companies today use a customized Mercurial fork or rewritten clone instead of git like Meta's rust written EdenFS and <a href="https://github.com/facebook/sapling">Sapling SCM</a> because git was originally developed to take advantage of linux file system optimizations ergo is conceptually attached to a file system while Mercurial can be easily adapted to be stuffed in a database, distributed or run on any OS. In a Mercurial style of version control, you probably don't care about individual commits so you don't even add comments to commits you instead care about entire branch development.     
-</p>
-
-<p>
-Let's learn what git actually is by watching MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i>. Lecture starts ~7m in. So far the data structure and model is trivial to understand if you did any intro course here such as <a href="./accelerated.html">CS19</a> learnings about DAGs. 
-</p>
-
-<p>
-Proceed to <a href="https://gitless.com/#research">gitless.com</a> and navigate to research or <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> page on MIT's software design group. You will find <a href="https://www.youtube.com/watch?v=31XZYMjg93o">this</a> talk about the problems with git design. The guy giving this talk was the PhD student of the prof we watched in the conceptual design lectures and now is a co-founder of <a href="https://www.getaleph.com/careers">Aleph</a> some fintech data startup (which is hiring, maybe you can impress him with your conceptual design skills).
-</p>
-
-<p>
-.. cont TODO
 </p>
 
 

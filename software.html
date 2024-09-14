@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-09-14 Sat 16:18 -->
+<!-- 2024-09-14 Sat 16:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -270,36 +270,18 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3eeece4">Start here</a>
+<li><a href="#org727e913">Start here</a></li>
+<li><a href="#org61aaf0d">Curriculum</a></li>
+<li><a href="#org6a2fe09">Software Design</a>
 <ul>
-<li>
-<ul>
-<li><a href="#org861bac8">Finance jobs</a></li>
-<li><a href="#orga039caf">The work</a></li>
-<li><a href="#orgabb8c35">Recruiters</a></li>
+<li><a href="#org138eee7">Gitless</a></li>
 </ul>
 </li>
-<li><a href="#org110e53a">Selection</a>
+<li><a href="#org2061859">USACO</a>
 <ul>
-<li><a href="#orgd0f8dfe">Campus recruiting</a></li>
-<li><a href="#orga8bff22">Phone screens</a></li>
-<li><a href="#org58f3414">Find a mentor</a></li>
-<li><a href="#org8972b3e">Other work</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org0e23848">Curriculum</a></li>
-<li><a href="#orge3b0eea">Software Design</a>
-<ul>
-<li><a href="#org7160bc2">Gitless</a></li>
-</ul>
-</li>
-<li><a href="#orgeb2862e">USACO</a>
-<ul>
-<li><a href="#org1db56f3">Big-O explained</a></li>
-<li><a href="#orge6bf501">Problem complexity</a></li>
-<li><a href="#org6f1ca99">Languages</a></li>
+<li><a href="#orgebcfa2a">Big-O explained</a></li>
+<li><a href="#orga89523d">Problem complexity</a></li>
+<li><a href="#orgb1e4f03">Languages</a></li>
 </ul>
 </li>
 </ul>
@@ -307,9 +289,9 @@ for the JavaScript code in this tag.
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org3eeece4" class="outline-2">
-<h2 id="org3eeece4">Start here</h2>
-<div class="outline-text-2" id="text-org3eeece4">
+<div id="outline-container-org727e913" class="outline-2">
+<h2 id="org727e913">Start here</h2>
+<div class="outline-text-2" id="text-org727e913">
 <p>
 I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
 </p>
@@ -326,9 +308,9 @@ This is a freelancing workshop if you only take the <i>Software Design</i> conte
 </div>
 
 
-<div id="outline-container-org861bac8" class="outline-4">
-<h4 id="org861bac8">Finance jobs</h4>
-<div class="outline-text-4" id="text-org861bac8">
+<div id="outline-container-org915b178" class="outline-4">
+<h4 id="org915b178">Finance jobs</h4>
+<div class="outline-text-4" id="text-org915b178">
 <p>
 I often meet up with software <a href="https://joveinternational.com/markets-coverage/">recruiters</a> in finance who tell me a tale of woe how much harder it's become to find candidates so I asked them what exactly do you want these days for a basic new grad style candidate and would they look at resumes without a degree. The following curriculum is a result of these conversations which are ongoing as I've been toying with the idea <i>can I teach someone to do what we do here from scratch</i> so they don't have to spend $90k or whatever the total cost is now for an undergrad at even a public university. I have no intention of creating a new filter or mandatory hoop people must jump through this is simply a collection of free materials to optionally take if you don't have a degree.    
 </p>
@@ -343,44 +325,45 @@ There's many reasons why you'd want to work for <a href="https://gist.github.com
 </div>
 </div>
 
-<div id="outline-container-orga039caf" class="outline-4">
-<h4 id="orga039caf">The work</h4>
-<div class="outline-text-4" id="text-orga039caf">
+<div id="outline-container-org4c31f15" class="outline-4">
+<h4 id="org4c31f15">The work</h4>
+<div class="outline-text-4" id="text-org4c31f15">
 <p>
 Imagine all software bespoke from the server metal up where you are expected to quickly learn everything about L1/L2 caches and Intel features like Intel RDT (CAT,CMT) or Processor Trace. Not all the work is pure optimization these big funds now have large suites of custom client software and even roll their own internal email, code review software, even the compiler is almost entirely custom where I work. SQL queries are done using a DSL, the provenance of data is tracked with custom software, tl;dr everything is made in-house so you are always reinventing something from scratch. You typically start out working at the beginning of the critical path where hundreds of paid data feeds are coming in continuously or as a massive end of trading day dump in sizes you thought could only be fictional. One example is those 'no fee trading' middle-man brokerages like Robinhood they are selling their entire order book to a major HFT firm meaning someone had to write the entire execution pipeline that order book to be processed within microseconds. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgabb8c35" class="outline-4">
-<h4 id="orgabb8c35">Recruiters</h4>
-<div class="outline-text-4" id="text-orgabb8c35">
+<div id="outline-container-orgdcf7721" class="outline-4">
+<h4 id="orgdcf7721">Recruiters</h4>
+<div class="outline-text-4" id="text-orgdcf7721">
 <p>
 Jove Intl, <a href="https://oxfordknight.co.uk/jobs/">Oxford Knight</a>, Reload Search, and ex-employees who have quit to become highly paid one-man recruiting shops most of whom are the one's I've been talking to after running into them at bars after work and at events. They hire internationally for Chicago, NYC, Austin, London, Sydney, Hong Kong, Mumbai, Shanghai, Tokyo and now Singapore seems to be the location everyone is opening offices these days. If you include certain keywords on your LinkedIn like C++ these independents will find you though yes I also think LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> I've only ever used it to harvest recruiter offers. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org110e53a" class="outline-3">
-<h3 id="org110e53a">Selection</h3>
-<div class="outline-text-3" id="text-org110e53a">
+<div id="outline-container-org9a0988e" class="outline-4">
+<h4 id="org9a0988e">Selection</h4>
+<div class="outline-text-4" id="text-org9a0988e">
 <p>
 They go over all resumes there's no automated ATS or applicant tracking system. USACO training stands out, so-called modern C++ meaning C++17/20/23 stands out but is not necessary as any firm will train you. You never sell yourself as a junior, companies will hire anyone who knows how to sell themselves and can pass the technical competence filters. You always pretend to be employed writing software even if this means setting up a personal page declaring yourself a freelancer on Upwork actively looking for contract work which is exactly what we'll do here. 
 </p>
 </div>
+</div>
 
-<div id="outline-container-orgd0f8dfe" class="outline-4">
-<h4 id="orgd0f8dfe">Campus recruiting</h4>
-<div class="outline-text-4" id="text-orgd0f8dfe">
+<div id="outline-container-orgef952e4" class="outline-4">
+<h4 id="orgef952e4">Campus recruiting</h4>
+<div class="outline-text-4" id="text-orgef952e4">
 <p>
 Getting more and more monopolized by big tech pressuring students with 2-week expiring offers (aka exploding offers) that are against campus hiring guidelines but they do it anyway. Professors sometimes act like recruiters now too receiving a form of commission setting up their students with companies further draining the hiring and internship pool. There is a lot of myths about working in finance too which prevents new grads applying but most of these are prop shops who invest only their own private funds where the profit is in identifying when a stock is priced lower than it should be then buying that stock to later make a profit once it inevitably rises. They call this 'fixing inefficiencies in the market' and it's much different than robber barons hedging bets against the success of companies like a small town mill to depress it's price then buying it cheap and holding a fire sale of all assets putting people out of work. You will know right away in the phone screen if you're being recruited to some kind of ghoulish fund like this but I've never seen them around.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga8bff22" class="outline-4">
-<h4 id="orga8bff22">Phone screens</h4>
-<div class="outline-text-4" id="text-orga8bff22">
+<div id="outline-container-orgfab7a20" class="outline-4">
+<h4 id="orgfab7a20">Phone screens</h4>
+<div class="outline-text-4" id="text-orgfab7a20">
 <p>
 I don't know if they still do this but one Chicago company was notorious for firing off 3 problems to solve on Hackerrank seconds after you submitted an application. The first phone screen is usually a recruiter asking are you legal to work and if not what credentials do you have because in some countries like the US you will need a reason for them to issue you a work visa for a job that can't be given to a local so a degree or equivalent work experience. If they want you they'll finesse these requirements if not try Asia. They will of course dodge salary questions with the tried and true 'well I hire for x amount of countries so don't have that exact information right now' but in my experience they offer a range at least.   
 </p>
@@ -396,30 +379,29 @@ If not vouched for expect the second zoom/phone call to be a typical algorithm s
 </div>
 
 
-<div id="outline-container-org58f3414" class="outline-4">
-<h4 id="org58f3414">Find a mentor</h4>
-<div class="outline-text-4" id="text-org58f3414">
+<div id="outline-container-org608ed43" class="outline-4">
+<h4 id="org608ed43">Find a mentor</h4>
+<div class="outline-text-4" id="text-org608ed43">
 <p>
 Once you are in and develop a routine walk over to the department where all the money is being made and find a mentor to teach you by asking them to give you the work they don't like doing because you want to learn it all from scratch. All you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually want you to work with them once you have proven to be indispensible. If they get promoted you get promoted, if they go off and start a new company you are the first hire. This can be tricky because of signing multiple NDAs even between internal departments but if you are serious about wanting to learn they will tell management to make it happen. I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and my life would not be the same if I hadn't watched that throwaway clip at 3am because I always assumed there was no way I could ever do this kind of work.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8972b3e" class="outline-4">
-<h4 id="org8972b3e">Other work</h4>
-<div class="outline-text-4" id="text-org8972b3e">
+<div id="outline-container-orgdf85aca" class="outline-4">
+<h4 id="orgdf85aca">Other work</h4>
+<div class="outline-text-4" id="text-orgdf85aca">
 <p>
 If you're not interested in finance there are a few companies that mentor developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and build them to senior developers. One is in New Hampshire called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. 
 </p>
 </div>
 </div>
 </div>
-</div>
 
 
-<div id="outline-container-org0e23848" class="outline-2">
-<h2 id="org0e23848">Curriculum</h2>
-<div class="outline-text-2" id="text-org0e23848">
+<div id="outline-container-org61aaf0d" class="outline-2">
+<h2 id="org61aaf0d">Curriculum</h2>
+<div class="outline-text-2" id="text-org61aaf0d">
 <ul class="org-ul">
 <li>The <a href="https://usaco.guide/">USACO guide</a></li>
 </ul>
@@ -467,9 +449,9 @@ We will learn everything we can about C++ <a href="https://github.com/dendibakh/
 </div>
 
 
-<div id="outline-container-orge3b0eea" class="outline-2">
-<h2 id="orge3b0eea">Software Design</h2>
-<div class="outline-text-2" id="text-orge3b0eea">
+<div id="outline-container-org6a2fe09" class="outline-2">
+<h2 id="org6a2fe09">Software Design</h2>
+<div class="outline-text-2" id="text-org6a2fe09">
 <p>
 MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and the professor of that course wrote a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. The first thing we will use this course for is to make a static site for ourselves which will be our business card we hand out as freelancers. See the recitation slides for <a href="https://61040-fa23.github.io/assets/recitation-notes/R1_slides.pdf">VitePress</a> which we'll go through completely after learning git.  
 </p>
@@ -501,9 +483,9 @@ Now we want to go through all the project steps <a href="https://61040-fa23.gith
 </p>
 </div>
 
-<div id="outline-container-org7160bc2" class="outline-3">
-<h3 id="org7160bc2">Gitless</h3>
-<div class="outline-text-3" id="text-org7160bc2">
+<div id="outline-container-org138eee7" class="outline-3">
+<h3 id="org138eee7">Gitless</h3>
+<div class="outline-text-3" id="text-org138eee7">
 <p>
 There's a <a href="https://github.com/apps/desktop/">GUI</a> for git you don't have to use the command line interface.  
 </p>
@@ -528,9 +510,9 @@ Proceed to <a href="https://gitless.com/#research">gitless.com</a> and navigate 
 </div>
 
 
-<div id="outline-container-orgeb2862e" class="outline-2">
-<h2 id="orgeb2862e">USACO</h2>
-<div class="outline-text-2" id="text-orgeb2862e">
+<div id="outline-container-org2061859" class="outline-2">
+<h2 id="org2061859">USACO</h2>
+<div class="outline-text-2" id="text-org2061859">
 <p>
 I'm going to do all the USACO contest problems using inquiry-based learning because that's exactly what you do in real life. If you took <a href="./accelerated.html">Accelerated Intro to CS</a> you have already seen almost every topic in the USACO guide and if you didn't it doesn't matter that's why there exists a guide which we can look at while we solve a problem, so you learn the algorithm as you are using it. 
 </p>
@@ -575,9 +557,9 @@ A TLE or time limit exceeded verdict shows how he would optimize to get accepted
 </p>
 </div>
 
-<div id="outline-container-org1db56f3" class="outline-3">
-<h3 id="org1db56f3">Big-O explained</h3>
-<div class="outline-text-3" id="text-org1db56f3">
+<div id="outline-container-orgebcfa2a" class="outline-3">
+<h3 id="orgebcfa2a">Big-O explained</h3>
+<div class="outline-text-3" id="text-orgebcfa2a">
 <p>
 The USACO guide has a good introduction to big-O and a resource we can use where running time is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
 </p>
@@ -609,9 +591,9 @@ Big-O doesn't represent growth since if f(x) = x<sup>2</sup> it does not grow to
 </div>
 
 
-<div id="outline-container-orge6bf501" class="outline-3">
-<h3 id="orge6bf501">Problem complexity</h3>
-<div class="outline-text-3" id="text-orge6bf501">
+<div id="outline-container-orga89523d" class="outline-3">
+<h3 id="orga89523d">Problem complexity</h3>
+<div class="outline-text-3" id="text-orga89523d">
 <p>
 Before we start trying to solve problems watch <a href="https://courses.csail.mit.edu/6.5440/fall23/lectures/L01.html">this</a> Erik Demaine lecture and skip to 09:00. We want to know what polynomial time is, what NP means, what satisfiability means and this is a good enough ~30m crash course in complexity as these concepts come up all the time in algorithm literature. He tells us most decision problems can't be solved by an algorithm which ruins the AI superintelligence dystopia. When he translates Super Mario Bros to a 3SAT decision problem we can see that almost every algorithm you can think of can be transformed to a decision problem. You don't have to keep watching this but there's an interesting intro to constraint logic/graphs. Now you can explain to someone P=NP means all the nondeterministic polynomial time algorithms that always 'lucky guess' correctly or have a magic oracle can be solved by an algorithm in deterministic polynomial time which seems impossible. 
 </p>
@@ -622,9 +604,9 @@ The rest of this course I won't do here but the book he wrote that goes with the
 </div>
 </div>
 
-<div id="outline-container-org6f1ca99" class="outline-3">
-<h3 id="org6f1ca99">Languages</h3>
-<div class="outline-text-3" id="text-org6f1ca99">
+<div id="outline-container-orgb1e4f03" class="outline-3">
+<h3 id="orgb1e4f03">Languages</h3>
+<div class="outline-text-3" id="text-orgb1e4f03">
 <p>
 If you look at the archived <a href="https://usaco.org/index.php?page=open24results">contests</a> we are given all the test inputs/outputs as a .zip and a fully worked out solution with a proof of the bounds. This means <i>you can use any language you want</i> however I am going to do it all in C++ with Knuth's literate programming tool cweb because it mimics exactly how you would build something in a collaborative setting and after using it for a few problems it's kind of awesome and I finally get why Knuth shills this style of programming so much.  
 </p>

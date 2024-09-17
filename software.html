@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-09-14 Sat 16:24 -->
+<!-- 2024-09-16 Mon 20:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -270,18 +270,19 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org727e913">Start here</a></li>
-<li><a href="#org61aaf0d">Curriculum</a></li>
-<li><a href="#org6a2fe09">Software Design</a>
+<li><a href="#org7151243">Start here</a></li>
+<li><a href="#orgb85802e">Curriculum</a></li>
+<li><a href="#org7506416">Software Design</a>
 <ul>
-<li><a href="#org138eee7">Gitless</a></li>
+<li><a href="#org5d0bae8">Version control</a></li>
+<li><a href="#org56572a0">Software freelancing strategies</a></li>
 </ul>
 </li>
-<li><a href="#org2061859">USACO</a>
+<li><a href="#orgf51ad02">USACO</a>
 <ul>
-<li><a href="#orgebcfa2a">Big-O explained</a></li>
-<li><a href="#orga89523d">Problem complexity</a></li>
-<li><a href="#orgb1e4f03">Languages</a></li>
+<li><a href="#org46481c2">Big-O explained</a></li>
+<li><a href="#org35e4f49">Problem complexity</a></li>
+<li><a href="#orgcd07f6f">Languages</a></li>
 </ul>
 </li>
 </ul>
@@ -289,9 +290,9 @@ for the JavaScript code in this tag.
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org727e913" class="outline-2">
-<h2 id="org727e913">Start here</h2>
-<div class="outline-text-2" id="text-org727e913">
+<div id="outline-container-org7151243" class="outline-2">
+<h2 id="org7151243">Start here</h2>
+<div class="outline-text-2" id="text-org7151243">
 <p>
 I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
 </p>
@@ -308,9 +309,9 @@ This is a freelancing workshop if you only take the <i>Software Design</i> conte
 </div>
 
 
-<div id="outline-container-org915b178" class="outline-4">
-<h4 id="org915b178">Finance jobs</h4>
-<div class="outline-text-4" id="text-org915b178">
+<div id="outline-container-orgded3101" class="outline-4">
+<h4 id="orgded3101">Finance jobs</h4>
+<div class="outline-text-4" id="text-orgded3101">
 <p>
 I often meet up with software <a href="https://joveinternational.com/markets-coverage/">recruiters</a> in finance who tell me a tale of woe how much harder it's become to find candidates so I asked them what exactly do you want these days for a basic new grad style candidate and would they look at resumes without a degree. The following curriculum is a result of these conversations which are ongoing as I've been toying with the idea <i>can I teach someone to do what we do here from scratch</i> so they don't have to spend $90k or whatever the total cost is now for an undergrad at even a public university. I have no intention of creating a new filter or mandatory hoop people must jump through this is simply a collection of free materials to optionally take if you don't have a degree.    
 </p>
@@ -325,45 +326,45 @@ There's many reasons why you'd want to work for <a href="https://gist.github.com
 </div>
 </div>
 
-<div id="outline-container-org4c31f15" class="outline-4">
-<h4 id="org4c31f15">The work</h4>
-<div class="outline-text-4" id="text-org4c31f15">
+<div id="outline-container-org02113cf" class="outline-4">
+<h4 id="org02113cf">The work</h4>
+<div class="outline-text-4" id="text-org02113cf">
 <p>
 Imagine all software bespoke from the server metal up where you are expected to quickly learn everything about L1/L2 caches and Intel features like Intel RDT (CAT,CMT) or Processor Trace. Not all the work is pure optimization these big funds now have large suites of custom client software and even roll their own internal email, code review software, even the compiler is almost entirely custom where I work. SQL queries are done using a DSL, the provenance of data is tracked with custom software, tl;dr everything is made in-house so you are always reinventing something from scratch. You typically start out working at the beginning of the critical path where hundreds of paid data feeds are coming in continuously or as a massive end of trading day dump in sizes you thought could only be fictional. One example is those 'no fee trading' middle-man brokerages like Robinhood they are selling their entire order book to a major HFT firm meaning someone had to write the entire execution pipeline that order book to be processed within microseconds. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdcf7721" class="outline-4">
-<h4 id="orgdcf7721">Recruiters</h4>
-<div class="outline-text-4" id="text-orgdcf7721">
+<div id="outline-container-org20d432f" class="outline-4">
+<h4 id="org20d432f">Recruiters</h4>
+<div class="outline-text-4" id="text-org20d432f">
 <p>
 Jove Intl, <a href="https://oxfordknight.co.uk/jobs/">Oxford Knight</a>, Reload Search, and ex-employees who have quit to become highly paid one-man recruiting shops most of whom are the one's I've been talking to after running into them at bars after work and at events. They hire internationally for Chicago, NYC, Austin, London, Sydney, Hong Kong, Mumbai, Shanghai, Tokyo and now Singapore seems to be the location everyone is opening offices these days. If you include certain keywords on your LinkedIn like C++ these independents will find you though yes I also think LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> I've only ever used it to harvest recruiter offers. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9a0988e" class="outline-4">
-<h4 id="org9a0988e">Selection</h4>
-<div class="outline-text-4" id="text-org9a0988e">
+<div id="outline-container-org074314f" class="outline-4">
+<h4 id="org074314f">Selection</h4>
+<div class="outline-text-4" id="text-org074314f">
 <p>
 They go over all resumes there's no automated ATS or applicant tracking system. USACO training stands out, so-called modern C++ meaning C++17/20/23 stands out but is not necessary as any firm will train you. You never sell yourself as a junior, companies will hire anyone who knows how to sell themselves and can pass the technical competence filters. You always pretend to be employed writing software even if this means setting up a personal page declaring yourself a freelancer on Upwork actively looking for contract work which is exactly what we'll do here. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgef952e4" class="outline-4">
-<h4 id="orgef952e4">Campus recruiting</h4>
-<div class="outline-text-4" id="text-orgef952e4">
+<div id="outline-container-org2d7a4fe" class="outline-4">
+<h4 id="org2d7a4fe">Campus recruiting</h4>
+<div class="outline-text-4" id="text-org2d7a4fe">
 <p>
 Getting more and more monopolized by big tech pressuring students with 2-week expiring offers (aka exploding offers) that are against campus hiring guidelines but they do it anyway. Professors sometimes act like recruiters now too receiving a form of commission setting up their students with companies further draining the hiring and internship pool. There is a lot of myths about working in finance too which prevents new grads applying but most of these are prop shops who invest only their own private funds where the profit is in identifying when a stock is priced lower than it should be then buying that stock to later make a profit once it inevitably rises. They call this 'fixing inefficiencies in the market' and it's much different than robber barons hedging bets against the success of companies like a small town mill to depress it's price then buying it cheap and holding a fire sale of all assets putting people out of work. You will know right away in the phone screen if you're being recruited to some kind of ghoulish fund like this but I've never seen them around.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfab7a20" class="outline-4">
-<h4 id="orgfab7a20">Phone screens</h4>
-<div class="outline-text-4" id="text-orgfab7a20">
+<div id="outline-container-org351cfa9" class="outline-4">
+<h4 id="org351cfa9">Phone screens</h4>
+<div class="outline-text-4" id="text-org351cfa9">
 <p>
 I don't know if they still do this but one Chicago company was notorious for firing off 3 problems to solve on Hackerrank seconds after you submitted an application. The first phone screen is usually a recruiter asking are you legal to work and if not what credentials do you have because in some countries like the US you will need a reason for them to issue you a work visa for a job that can't be given to a local so a degree or equivalent work experience. If they want you they'll finesse these requirements if not try Asia. They will of course dodge salary questions with the tried and true 'well I hire for x amount of countries so don't have that exact information right now' but in my experience they offer a range at least.   
 </p>
@@ -379,18 +380,18 @@ If not vouched for expect the second zoom/phone call to be a typical algorithm s
 </div>
 
 
-<div id="outline-container-org608ed43" class="outline-4">
-<h4 id="org608ed43">Find a mentor</h4>
-<div class="outline-text-4" id="text-org608ed43">
+<div id="outline-container-org06127cd" class="outline-4">
+<h4 id="org06127cd">Find a mentor</h4>
+<div class="outline-text-4" id="text-org06127cd">
 <p>
 Once you are in and develop a routine walk over to the department where all the money is being made and find a mentor to teach you by asking them to give you the work they don't like doing because you want to learn it all from scratch. All you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually want you to work with them once you have proven to be indispensible. If they get promoted you get promoted, if they go off and start a new company you are the first hire. This can be tricky because of signing multiple NDAs even between internal departments but if you are serious about wanting to learn they will tell management to make it happen. I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and my life would not be the same if I hadn't watched that throwaway clip at 3am because I always assumed there was no way I could ever do this kind of work.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdf85aca" class="outline-4">
-<h4 id="orgdf85aca">Other work</h4>
-<div class="outline-text-4" id="text-orgdf85aca">
+<div id="outline-container-org6c6d209" class="outline-4">
+<h4 id="org6c6d209">Other work</h4>
+<div class="outline-text-4" id="text-org6c6d209">
 <p>
 If you're not interested in finance there are a few companies that mentor developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and build them to senior developers. One is in New Hampshire called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. 
 </p>
@@ -399,9 +400,9 @@ If you're not interested in finance there are a few companies that mentor develo
 </div>
 
 
-<div id="outline-container-org61aaf0d" class="outline-2">
-<h2 id="org61aaf0d">Curriculum</h2>
-<div class="outline-text-2" id="text-org61aaf0d">
+<div id="outline-container-orgb85802e" class="outline-2">
+<h2 id="orgb85802e">Curriculum</h2>
+<div class="outline-text-2" id="text-orgb85802e">
 <ul class="org-ul">
 <li>The <a href="https://usaco.guide/">USACO guide</a></li>
 </ul>
@@ -427,11 +428,11 @@ MIT course and book on how to design software people want to use.
 </p>
 
 <ul class="org-ul">
-<li><a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">Queueing theory</a></li>
+<li><a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">Queueing theory</a> &amp; Probability</li>
 </ul>
 
 <p>
-If you write enough software eventually you discover that almost everything is some kind of queue pattern. This is another workbook that's Q&amp;A style not a giant theory text. 
+If you write enough software eventually you discover that almost everything is some kind of queue pattern. This is another workbook that's Q&amp;A style not a giant theory text.  
 </p>
 
 <ul class="org-ul">
@@ -449,15 +450,156 @@ We will learn everything we can about C++ <a href="https://github.com/dendibakh/
 </div>
 
 
-<div id="outline-container-org6a2fe09" class="outline-2">
-<h2 id="org6a2fe09">Software Design</h2>
-<div class="outline-text-2" id="text-org6a2fe09">
+<div id="outline-container-org7506416" class="outline-2">
+<h2 id="org7506416">Software Design</h2>
+<div class="outline-text-2" id="text-org7506416">
 <p>
-MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and the professor of that course wrote a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. The first thing we will use this course for is to make a static site for ourselves which will be our business card we hand out as freelancers. See the recitation slides for <a href="https://61040-fa23.github.io/assets/recitation-notes/R1_slides.pdf">VitePress</a> which we'll go through completely after learning git.  
+MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and the professor of that course wrote a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. This is how you design software on a piece of paper from beginning to end so when it comes time to actually code the app it essentially writes itself meaning you could try and use co-pilot or Chat-GPT to generate all the features though that would probably take longer screwing around with prompts than just coding it yourself. 
 </p>
 
 <p>
-Personal site examples
+See this <a href="https://www.youtube.com/watch?v=WgOhtH3lugk&amp;list=PLY_nsiUEgM3nbxcO3_ONmKL-ZRhLKpfGV">YouTube video</a> from an AI talk at MIT where the professor of this course further explains what a concept is using the same HN example and how you would use them to get an LLM to develop an entire web app. In their experiment they had to use 'a few hundred' prompts which then becomes your version history and I can only imagine the nightmare of trying to refactor a few hundred prompts but they made it easier with concepts. Languages like Standard ML/OCaml would make writing concepts simple as interfaces for a module.
+</p>
+
+<p>
+Slides:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">Diverge/Converge</a> describes designing a small app completely. Page 8 check out his riffle.systems idea where a 'reactive database' is used to declaratively write entire websites even generating the DOM elements thus totally replacing how modern webdev is done. I got stuck here and never left after reading these slides and have been toying with a prototype. Really all a web framework does is control changing state and we've already learned how to best control state it's called a database management system. If you want to build a prototype as well take the rest of this workshop! We cover both relational databases from scratch and a programming language book to write your own declarative language as recommended by the authors of the paper.</li>
+</ul>
+
+<p>
+In the tutorial for <a href="https://essenceofsoftware.com/tutorials/design-general/divergent-tactics/">divergent design</a> he used Chat-GPT to suggest additional features. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://61040-fa23.github.io/recitations/recitation-2">Wireframing</a> recitation, if you go on Upwork or other freelancing sites you will see many jobs looking for someone to take a figma design and turn it into a working app.</li>
+<li>More <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">Concepts</a> and at the end of these slides you have a complete draft of an application that is now trivial to code. To watch more about concepts click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos. Watch the two lectures on concepts: <a href="https://drive.google.com/file/d/1lzAbrqk9LNLhGMLbsTuVgAm6p9_Do_Ux/view?usp=sharing">lecture 1</a> and <a href="https://drive.google.com/file/d/1AZ85ui0k2QpCKgfJZXUPSk-jdSi36MzP/view?usp=sharing">lecture 2</a>. The author goes through each topic like what an operational principle is on his tutorial page <a href="https://essenceofsoftware.com/tutorials/">here</a> and completely explains how these are <a href="https://essenceofsoftware.com/tutorials/concept-basics/concept-as-machine/">state machines</a> and how to define the <a href="https://essenceofsoftware.com/tutorials/concept-basics/state/">state</a> of concepts.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L5.pdf">Design moves</a> how to unify or loosen concepts with many examples here like Zoom's screwy interface or Gmail labels.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L6.pdf">API design</a> what a RESTful API is.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L7.pdf">Data design</a> there are recorded lectures <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a> and we'll be learning relational databases and SQL in detail after this in a seperate course. The 'multiplicities' in the model diagrams you probably recognize from regex. NoSQL is introduced here which you never want to use if not writing a prototype as doing updates and inserts as JSON is a convoluted mess. People these days if their app is going to become something typically use PostgreSQL.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L10.pdf">Make things learnable</a> - anyone should be able to figure out your software without relying on documentation. Notable examples of software where you cannot do anything without extensive docs is Tailwind CSS, Git and Blender.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L11.pdf">Good UIX design</a></li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L13.pdf">Design innovation</a> what was novel about Zoom? Why did everyone use it instead of FaceTime, Meet, Microsoft Teams etc?</li>
+</ul>
+
+<p>
+There are more slides and recorded lectures <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a> about UIX design if you're interested but we got what we came for. Brainstorm ideas, converge them into separate interfaces on a piece of paper like they are independent microservices. Write out a dependency diagram by going back to the slides when designing your own app and looking at what they did. Go by the criteria: A 'uses' B only if A is simpler because it uses B and B is simpler because it doesn't need A. There is no useful subset containing A but not B. That means a legit dependency. Wait until you get paid to do this somewhere! Everyone breaks the above advice you have countless needless dependencies that make your life hell.   
+</p>
+
+<p>
+If you want to the recitations and assignments they're all open on the course GitHub <a href="https://github.com/61040-fa23">repository</a> and an example is written in <a href="https://61040-fa23.github.io/pages/concept-implementations.html">TypeScript</a> which is taught in <a href="http://web.mit.edu/6.102/www/sp23/">6.102</a> but I'm not going to bother since our interest here is learning conceptual design then you can use any language/framework you wish to build software. 
+</p>
+
+<p>
+The project writeups are extremely good, if you want to build something then try <a href="https://61040-fa23.github.io/assignments/assignment-p0-overview">following them</a>. You don't have to use Figma you can use a piece of paper to design your UI. 
+</p>
+</div>
+
+<div id="outline-container-org5d0bae8" class="outline-3">
+<h3 id="org5d0bae8">Version control</h3>
+<div class="outline-text-3" id="text-org5d0bae8">
+<p>
+The prof of this course with a grad student created <a href="https://gitless.com/#research">gitless.com</a> see <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> research page on MIT's software design group. Read how they audited the conceptual design of Git and found things like staging were confusing. 
+</p>
+
+<p>
+Many companies today use a customized Mercurial fork or rewritten clone instead of git like Meta's rust written EdenFS and <a href="https://github.com/facebook/sapling">Sapling SCM</a> because git was originally developed to take advantage of linux file system optimizations ergo is conceptually attached to that file system while Mercurial can be easily adapted to be stuffed in a database, distributed or run on any OS. In a Mercurial style of version control, you probably don't care about individual commits so you don't even add comments to commits you instead care about entire branch development. 
+</p>
+
+<p>
+For these reasons I don't think you should bother to use git at all unless someone is forcing you or fork gitless and maintain it yourself. Look up how easy and simple the Mercurial guide is for a <a href="https://www.mercurial-scm.org/guide#lone_developer">lone developer</a> why use anything else. If you must then try MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i> or read 'Git for Hackers' floating around. Open source development outside of FOSS you generally fork the project to your account on Github, commit changes there then make a 'Pull Request' or PR to the original repo asking if they will merge your changes. The FOSS way is different using Savannah for example here is a <a href="https://savannah.gnu.org/patch/?10210">patch</a> it's all done in plain text using a traditional mailing list style of attaching files and people vote on it. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org56572a0" class="outline-3">
+<h3 id="org56572a0">Software freelancing strategies</h3>
+<div class="outline-text-3" id="text-org56572a0">
+<p>
+Who needs software where you live? Restaurants, people cutting hair either out of their house or a shop, people wanting to sell something outside of shopify and all their fees, people wanting to rent their condo public spaces like they all have rooftops or even suites run by the strata that can be rented like AirBnB. Every service needs a booking or quote site such as painters, tailors or power washers or junk haulers. Is there a 'restaurant row' where you live meaning wall to wall bars and restaurants well they all they need staff what about a shift marketplace so freelance wait staff can move around and take extra shifts? There's always something people want and the current offers are largely pure shit if you look around wanting a monthly fee that enormous.
+</p>
+
+<p>
+My recommendation is be the local Zapier style developer and stitch together software people actually use instead of inventing an inferior product yourself like everyone else is doing. People are already using business software they prefer like Quickbooks for accounting or Zoho/Salesforce for CRM, or iCal/Google calendar for bookings. You now sew that all together into a product that only needs to be paid for once not a monthly fee. This is a money windfall because now you are the person they call when they want something custom and being 'the Zapier glue and stitch dev' you are exactly the kind of problem solving person they want. Now you are networked with real life businesses and that's the game. 
+</p>
+</div>
+
+<div id="outline-container-org144bc26" class="outline-4">
+<h4 id="org144bc26">Starting out</h4>
+<div class="outline-text-4" id="text-org144bc26">
+<p>
+One way is use Upwork projects and Fiver and whatever else you can find that allows you to sell a finished product. Now max abstract all these businesses using exactly what we just learned in conceptual design because what is the difference in technology needed for a local biz like a landscaper, tailor, dog walker, or any other service? Nothing they all take bookings and offer quotes. They need a web form where you upload pics or maybe a login scheme where prior customers who are already known can be assigned a rate and just book directly. Where does all this data need to go? iCal, CRM software API integration, credit card gateway like Stripe, put all that together and advertise it on Upwork but let people know you can do any custom work for $200/day to change the payment gateway to whatever they want. Then keep increasing your rates (see below). Now you're the Zapier d00d just gluing together stuff. Hell I would pay you for this myself I never have time anymore and would kill for a Zapier-like stitcher freelancer to simply combine a bunch of things I use without me having to do it myself and most importantly where I don't need to pay a monthly fee. tl;dr Everyone wants this they just don't know anybody who does it or where to find them.
+</p>
+
+<p>
+As an experiment because I'm a bit of a gonzo journalist that just <a href="http://www.infiltration.org/">infiltrates</a> everything I can I went to every meet I could book in my city for a single week, I even bought a membership at the fancy social club here which is largely real estate developers and various startup CEOs and diamond dealers. Just wandering around socializing I got dozens of leads and if I was a software mercenary I would have picked up a lot of work. Unfortunately I'm not a software merc but kind of thinking about it now that I've seen how easy it is. I never told anyone where I worked and software always came up anyway in conversations and everyone, <i>everyone</i>, wants to deal with someone they have actually met in person. 
+</p>
+
+<p>
+I also called people out of the blue from LinkedIn from various local companies and just told them hey I'm trying to find out about your work tell me everything about it and they did. I even met 3 of them for lunch which I paid for and was immediately given leads I'm honestly surprised how easy this is to do making me think I chose the wrong career I should quit and just be the guy who can make anything happen with software.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a7653b" class="outline-4">
+<h4 id="org9a7653b">Rates</h4>
+<div class="outline-text-4" id="text-org9a7653b">
+<p>
+You always bill daily not hourly. You always increase your rates if you have so many clients you can't accomodate them all then you're not charging enough of a daily rate. Sites like Upwork or whatever other freelancer job boards that are review based you have to bite the bullet and offer yourself for scraps at first just to get some kind of reputation then from there can charge whatever you want. Once I had rep I changed my rate to something ridiculous and get offers sent to me because I am offering to do the kind of optimization we will learn in the Andy Pavlo CMU course after this. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd3298ec" class="outline-4">
+<h4 id="orgd3298ec">Agencies</h4>
+<div class="outline-text-4" id="text-orgd3298ec">
+<p>
+Search for agencies and you will <a href="https://www.charleagency.com/">find</a> many of them. Agencies are often never hiring because they find people to work there by approaching the best in the business and asking them to join the agency. This is how architect agencies work, ad agencies, etc. Make an example site template if it's Shopify or full site demo of your skills and ask them to send you work to do for free because you want to learn. They will if your demo is impressive. They will hire you F/T too if the work you return is good. Most of ecommerce is still just Shopify and WooCommerce somehow. You may scoff of this but I did it after doing manual labor everyday and the feedback was priceless it was free mentorship/school. They eventually started paying me when one of their agency freelancers became flakey and that experience plus what I learned here led to me getting a paid position at a university research lab which was also something you cannot assign a price to because they gave me a letter of recommendation. If a professor personally vouches for you then the rest of your life is easy mode you can even screw up interviews and they won't care because there's a piece of paper assuring that you are worth working. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29cefdd" class="outline-4">
+<h4 id="org29cefdd">Kick the door down in an existing market and take everything</h4>
+<div class="outline-text-4" id="text-org29cefdd">
+<p>
+Another way I started out and still operate is I will go on software marketplaces like Shopify or wherever business app marketplace where software is sold and I read all the reviews to find out what paying customers hate about the product. I actually make a list of these complaints and then clone that software and incorporate all the features and fixes then contact those customers directly. I can do this because I'm using OCaml (in the past Lisp) and you write very little code like adding dozens of new checkout options is just a functor over a checkout module but my problem is I'm a one man show so I can't do 24/7 support like some of them offer but many times just adding the features and talking to customers directly led to success. I was banned for doing this because I was too young and did it way too aggressively but definitely find software people pay for you think you can clone yourself and see what the problems are. Adding forms to Shopify pages is a major issue nobody has fixed you could kick down that door and take everyone's money look at the reviews they're all awful. 
+</p>
+
+<p>
+My recommendation is clone something and hand out your phone number to everyone and tell them to call you. In the past I was like no way would I do that but after my infiltration into the sales world I'm so surprised how easy it is anything I do in the future I'm definitely asking the punters to phone me and tell me everything you want, I will implement it for free if you buy a subscription. Which of course is what ycombinator recommends and is the topic of the next section.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f2bb89" class="outline-4">
+<h4 id="org9f2bb89">Making a startup</h4>
+<div class="outline-text-4" id="text-org9f2bb89">
+<p>
+A real startup requires venture capital. Here's Peter Thiel giving a very good <a href="https://www.youtube.com/watch?v=3Fx5Q8xGU8k">crash course</a> in making a startup to Stanford students. Everything he says is true whatever market you are targeting you should be expecting to take that entire market or nobody will invest. Start small and monopolize something small. 
+</p>
+
+<p>
+Of course how do you monopolize? I researched the Ycombinator startup school so you don't have to. They tell you as a founder everyday you are only talking to customers. If you have 5 customers you talk to them everyday and ask them about their needs. If you have 50 you talk to them everyday. If you have no customers you phone everyone you can in your business and find out what they want and pass these features to your team of wagies and have them implement it. That is literally it there's no other magic or anything it's just talk to absolutely everybody who is paying for your service or may pay for it and build growth by listening to them and making a product that others will want because you listened. Here's an old article of Sam Altman of Open AI (now a monopoly too) talking about how Ycombinator's success is due to it being &#x2026; a <a href="https://www.inc.com/christine-lagorio/sam-altman-yc-monopoly.html">monopoly</a>. 
+</p>
+
+<p>
+Freelancing is of course different, you can get into the restaurant marketplace and carve a little niche but a startup is very different it's about going public with an initial public offering and cashing out all your shares once someone buys you. Who buys software companies? Salesforce. They are the most aggressive company right now buying up everyone if you have a vector dbms prototype they may buy it. Facebook or Meta or w/e their name is right now is still aggressive buying everyone. 
+</p>
+
+<p>
+To make a startup you have to present to investors and convince them that by giving you money they will get a windfall of cash down the road when it goes public or gets sold to Salesforce or Meta. This isn't impossible but it is like advanced bamboozling beyond my skills. I'm just a clownish <a href="https://www.youtube.com/watch?v=5U58lSO_bR8">street</a> guy and even I had success so I imagine the bar is not high for this.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgddfbef9" class="outline-4">
+<h4 id="orgddfbef9">Personal site</h4>
+<div class="outline-text-4" id="text-orgddfbef9">
+<p>
+Examples:
 </p>
 <ul class="org-ul">
 <li>This has <a href="https://www.strml.net/">potential</a> but intro before 'live coding' too long</li>
@@ -467,52 +609,20 @@ Personal site examples
 </ul>
 
 <p>
-Go through all the slides <a href="https://61040-fa23.github.io/schedule">here</a> though we don't have access to <i>Reactive Freameworks II</i> but we can read the diffs which we'll do after we learn git. These <a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">slides</a> titled <i>Diverge-Converge</i> talk about coming up with ideas. Page 8 click on his riffle.systems idea where a 'reactive database' is used to declaratively write entire websites even generating the DOM elements thus totally replacing how modern webdev is done. Really all a web framework does is handle changing state and we've already learned how to best control state it's called a database management system. You can build a prototype of this yourself if interested after we take the advanced database content later in this workshop.
-</p>
-
-<p>
-Concepts are introduced, see this <a href="https://www.youtube.com/watch?v=WgOhtH3lugk&amp;list=PLY_nsiUEgM3nbxcO3_ONmKL-ZRhLKpfGV">YouTube video</a> from an AI talk at MIT where the professor of this course further explains what a concept is and how you would use them to get an LLM to develop an entire web app. Note that in their experiment they had to use 'a few hundred' prompts which then becomes your version history and I can only imagine the nightmare of trying to refactor a few hundred prompts but they made it easier with concepts. tl;dr AI will not be replacing webdev anytime soon.
-</p>
-
-<p>
-To watch more about concepts click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos. Watch the two lectures on concepts: <a href="https://drive.google.com/file/d/1lzAbrqk9LNLhGMLbsTuVgAm6p9_Do_Ux/view?usp=sharing">lecture 1</a> and <a href="https://drive.google.com/file/d/1AZ85ui0k2QpCKgfJZXUPSk-jdSi36MzP/view?usp=sharing">lecture 2</a>. Look at the recent <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">slides</a>. You have surely encountered badly designed software and this is a way to model your ideas as state machines then synch them together to compose an application that people can actually understand how to use. 
-</p>
-
-<p>
-Now we want to go through all the project steps <a href="https://61040-fa23.github.io/assignments">here</a> and build something but first let's get version control out of the way. 
-</p>
-</div>
-
-<div id="outline-container-org138eee7" class="outline-3">
-<h3 id="org138eee7">Gitless</h3>
-<div class="outline-text-3" id="text-org138eee7">
-<p>
-There's a <a href="https://github.com/apps/desktop/">GUI</a> for git you don't have to use the command line interface.  
-</p>
-
-<p>
-Many companies today use a customized Mercurial fork or rewritten clone instead of git like Meta's rust written EdenFS and <a href="https://github.com/facebook/sapling">Sapling SCM</a> because git was originally developed to take advantage of linux file system optimizations ergo is conceptually attached to a file system while Mercurial can be easily adapted to be stuffed in a database, distributed or run on any OS. In a Mercurial style of version control, you probably don't care about individual commits so you don't even add comments to commits you instead care about entire branch development.     
-</p>
-
-<p>
-Let's learn what git actually is by watching MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i>. Lecture starts ~7m in. So far the data structure and model is trivial to understand if you did any intro course here such as <a href="./accelerated.html">CS19</a> learnings about DAGs. 
-</p>
-
-<p>
-Proceed to <a href="https://gitless.com/#research">gitless.com</a> and navigate to research or <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> page on MIT's software design group. You will find <a href="https://www.youtube.com/watch?v=31XZYMjg93o">this</a> talk about the problems with git design. The guy giving this talk was the PhD student of the prof we watched in the conceptual design lectures and now is a co-founder of <a href="https://www.getaleph.com/careers">Aleph</a> some fintech data startup (which is hiring, maybe you can impress him with your conceptual design skills).
-</p>
-
-<p>
-.. cont TODO
+If you have no resume just make it crazy advanced to show off your skills. 
 </p>
 </div>
 </div>
 </div>
+</div>
 
+<div id="outline-container-orgf51ad02" class="outline-2">
+<h2 id="orgf51ad02">USACO</h2>
+<div class="outline-text-2" id="text-orgf51ad02">
+<p>
+<b>I am rewriting all of this with a USACO champion next week</b> 
+</p>
 
-<div id="outline-container-org2061859" class="outline-2">
-<h2 id="org2061859">USACO</h2>
-<div class="outline-text-2" id="text-org2061859">
 <p>
 I'm going to do all the USACO contest problems using inquiry-based learning because that's exactly what you do in real life. If you took <a href="./accelerated.html">Accelerated Intro to CS</a> you have already seen almost every topic in the USACO guide and if you didn't it doesn't matter that's why there exists a guide which we can look at while we solve a problem, so you learn the algorithm as you are using it. 
 </p>
@@ -557,9 +667,9 @@ A TLE or time limit exceeded verdict shows how he would optimize to get accepted
 </p>
 </div>
 
-<div id="outline-container-orgebcfa2a" class="outline-3">
-<h3 id="orgebcfa2a">Big-O explained</h3>
-<div class="outline-text-3" id="text-orgebcfa2a">
+<div id="outline-container-org46481c2" class="outline-3">
+<h3 id="org46481c2">Big-O explained</h3>
+<div class="outline-text-3" id="text-org46481c2">
 <p>
 The USACO guide has a good introduction to big-O and a resource we can use where running time is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
 </p>
@@ -591,9 +701,9 @@ Big-O doesn't represent growth since if f(x) = x<sup>2</sup> it does not grow to
 </div>
 
 
-<div id="outline-container-orga89523d" class="outline-3">
-<h3 id="orga89523d">Problem complexity</h3>
-<div class="outline-text-3" id="text-orga89523d">
+<div id="outline-container-org35e4f49" class="outline-3">
+<h3 id="org35e4f49">Problem complexity</h3>
+<div class="outline-text-3" id="text-org35e4f49">
 <p>
 Before we start trying to solve problems watch <a href="https://courses.csail.mit.edu/6.5440/fall23/lectures/L01.html">this</a> Erik Demaine lecture and skip to 09:00. We want to know what polynomial time is, what NP means, what satisfiability means and this is a good enough ~30m crash course in complexity as these concepts come up all the time in algorithm literature. He tells us most decision problems can't be solved by an algorithm which ruins the AI superintelligence dystopia. When he translates Super Mario Bros to a 3SAT decision problem we can see that almost every algorithm you can think of can be transformed to a decision problem. You don't have to keep watching this but there's an interesting intro to constraint logic/graphs. Now you can explain to someone P=NP means all the nondeterministic polynomial time algorithms that always 'lucky guess' correctly or have a magic oracle can be solved by an algorithm in deterministic polynomial time which seems impossible. 
 </p>
@@ -604,9 +714,9 @@ The rest of this course I won't do here but the book he wrote that goes with the
 </div>
 </div>
 
-<div id="outline-container-orgb1e4f03" class="outline-3">
-<h3 id="orgb1e4f03">Languages</h3>
-<div class="outline-text-3" id="text-orgb1e4f03">
+<div id="outline-container-orgcd07f6f" class="outline-3">
+<h3 id="orgcd07f6f">Languages</h3>
+<div class="outline-text-3" id="text-orgcd07f6f">
 <p>
 If you look at the archived <a href="https://usaco.org/index.php?page=open24results">contests</a> we are given all the test inputs/outputs as a .zip and a fully worked out solution with a proof of the bounds. This means <i>you can use any language you want</i> however I am going to do it all in C++ with Knuth's literate programming tool cweb because it mimics exactly how you would build something in a collaborative setting and after using it for a few problems it's kind of awesome and I finally get why Knuth shills this style of programming so much.  
 </p>

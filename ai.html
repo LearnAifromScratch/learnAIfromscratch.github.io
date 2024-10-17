@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-16 Wed 20:21 -->
+<!-- 2024-10-16 Wed 20:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2024</title>
@@ -270,18 +270,18 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org757f6f2">Intro</a>
+<li><a href="#org743be41">Intro</a>
 <ul>
-<li><a href="#org00057a7">Limits of AI</a></li>
+<li><a href="#orge2f29c8">Limits of AI</a></li>
 </ul>
 </li>
-<li><a href="#org8b67a3b">PreReqs</a>
+<li><a href="#org624345d">PreReqs</a>
 <ul>
-<li><a href="#orged5a6d0">Basics of scalar calculus</a></li>
-<li><a href="#orgbafea7f">Basics of vector calculus</a></li>
-<li><a href="#orga3956ac">Matrix calculus</a></li>
-<li><a href="#orgb1b78bd">Probability &amp; Statistics</a></li>
-<li><a href="#orgca978c6">LADR (TODO)</a></li>
+<li><a href="#orgf9a09b1">Basics of scalar calculus</a></li>
+<li><a href="#org43ed757">Basics of vector calculus</a></li>
+<li><a href="#orgbbb1610">Matrix calculus</a></li>
+<li><a href="#orgec12d6d">Probability &amp; Statistics</a></li>
+<li><a href="#orge05f83a">LADR (TODO)</a></li>
 </ul>
 </li>
 </ul>
@@ -289,11 +289,11 @@ for the JavaScript code in this tag.
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org757f6f2" class="outline-2">
-<h2 id="org757f6f2">Intro</h2>
-<div class="outline-text-2" id="text-org757f6f2">
+<div id="outline-container-org743be41" class="outline-2">
+<h2 id="org743be41">Intro</h2>
+<div class="outline-text-2" id="text-org743be41">
 <p>
-AI models are almost affordable for us to play around with as the GPU bubble finally <a href="https://www.latent.space/p/gpu-bubble">crashed</a> but it's still prohibitively expensive to lease or own anything reliable GPU pods so in the meanwhile there's a new field called tranformer <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) we can try which is essentially reverse engineering transformer architecture like LLMs. 
+AI models are almost affordable for us to play around with as the GPU bubble finally <a href="https://www.latent.space/p/gpu-bubble">crashed</a> but it's still prohibitively expensive to lease or own anything reliable so in the meanwhile there's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) we can try which is essentially reverse engineering transformer architecture (LLMs) as these are all black boxes with emergent properties that would be nice to know before relying on them. 
 </p>
 
 <p>
@@ -301,9 +301,9 @@ Neel Nanda has helpfully produced a concrete <a href="https://www.neelnanda.io/m
 </p>
 </div>
 
-<div id="outline-container-org00057a7" class="outline-3">
-<h3 id="org00057a7">Limits of AI</h3>
-<div class="outline-text-3" id="text-org00057a7">
+<div id="outline-container-orge2f29c8" class="outline-3">
+<h3 id="orge2f29c8">Limits of AI</h3>
+<div class="outline-text-3" id="text-orge2f29c8">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -311,11 +311,11 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-org8b67a3b" class="outline-2">
-<h2 id="org8b67a3b">PreReqs</h2>
-<div class="outline-text-2" id="text-org8b67a3b">
+<div id="outline-container-org624345d" class="outline-2">
+<h2 id="org624345d">PreReqs</h2>
+<div class="outline-text-2" id="text-org624345d">
 <p>
-Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">guide</a> for prereqs, he suggests to learn the essentials of ML/Backpropagation and we have access to:
+Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">guide</a> for prereqs he suggests to learn the essentials of ML/Backpropagation and we have access to:
 </p>
 
 <ul class="org-ul">
@@ -325,13 +325,13 @@ Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/pr
 </ul>
 
 <p>
-I'll probably just audit CS 479 lectures as we only need the bare minimum requirements here all the hard work will come later tearing apart LLMs.
+I'll probably just audit CS 479 lectures to start then later try 10-414 as we only need the bare minimum requirements here all the hard work will come later tearing apart LLMs.
 </p>
 </div>
 
-<div id="outline-container-orged5a6d0" class="outline-3">
-<h3 id="orged5a6d0">Basics of scalar calculus</h3>
-<div class="outline-text-3" id="text-orged5a6d0">
+<div id="outline-container-orgf9a09b1" class="outline-3">
+<h3 id="orgf9a09b1">Basics of scalar calculus</h3>
+<div class="outline-text-3" id="text-orgf9a09b1">
 <p>
 The best crash course I know of is <a href="https://www.youtube.com/watch?v=zfHEkt-1sqo">this</a> video by Wildberger. 
 </p>
@@ -383,38 +383,38 @@ At the end of this he shows how indefinite integration of entire functions is th
 </div>
 </div>
 
-<div id="outline-container-orgbafea7f" class="outline-3">
-<h3 id="orgbafea7f">Basics of vector calculus</h3>
-<div class="outline-text-3" id="text-orgbafea7f">
+<div id="outline-container-org43ed757" class="outline-3">
+<h3 id="org43ed757">Basics of vector calculus</h3>
+<div class="outline-text-3" id="text-org43ed757">
 <p>
 OCW has a <a href="https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/">free course</a> we need to cherry pick the basics of vector spaces in 3D, chain rule, gradient and double integrals for probability. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga3956ac" class="outline-3">
-<h3 id="orga3956ac">Matrix calculus</h3>
-<div class="outline-text-3" id="text-orga3956ac">
+<div id="outline-container-orgbbb1610" class="outline-3">
+<h3 id="orgbbb1610">Matrix calculus</h3>
+<div class="outline-text-3" id="text-orgbbb1610">
 <p>
 We probably need to see a few lectures from MIT's <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> short course which is derivatives generalized to higher dimensions, 'matrix gradients' beyond column vectors, and Autodiff of computational graphs (a neural network is just a graph).
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb1b78bd" class="outline-3">
-<h3 id="orgb1b78bd">Probability &amp; Statistics</h3>
-<div class="outline-text-3" id="text-orgb1b78bd">
+<div id="outline-container-orgec12d6d" class="outline-3">
+<h3 id="orgec12d6d">Probability &amp; Statistics</h3>
+<div class="outline-text-3" id="text-orgec12d6d">
 <p>
 We need a few chapters from <a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">here</a> a Q&amp;A style workbook.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgca978c6" class="outline-3">
-<h3 id="orgca978c6">LADR (TODO)</h3>
-<div class="outline-text-3" id="text-orgca978c6">
+<div id="outline-container-orge05f83a" class="outline-3">
+<h3 id="orge05f83a">LADR (TODO)</h3>
+<div class="outline-text-3" id="text-orge05f83a">
 <p>
-Axler's free <a href="https://linear.axler.net/">book</a> which we can complete while continuing the <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">transformer</a> curriculum where the goal is to analyse a model up to GPT-2 in size by reverse engineering a trained model to re-derive its positional encoding mappings. Edelman's <a href="https://github.com/mitmath/1806/blob/spring20/summaries.md">version</a> of 18.06 uses Julia notebooks and is modernized throwing away echelon forms, free variables and pivots, and even representations of large matrices as tables of numbers. We can use it with Axler's book.   
+Axler's free <a href="https://linear.axler.net/">book</a> which we can complete while continuing the <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">transformer</a> curriculum where the goal is to analyse a model up to GPT-2 in size then reverse engineering a larger trained model to re-derive its positional encoding mappings. Edelman's <a href="https://github.com/mitmath/1806/blob/spring20/summaries.md">version</a> of 18.06 uses Julia notebooks and is modernized throwing away echelon forms, free variables and pivots, and even representations of large matrices as tables of numbers. We can use it with Axler's book.   
 </p>
 
 <hr />

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-06-24 Mon 17:32 -->
+<!-- 2024-10-16 Wed 20:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2024</title>
@@ -193,7 +193,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<style> body {background-color: #fafad2} </style>
+<style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -240,6 +240,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -248,32 +270,40 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1d2db31">Intro</a>
+<li><a href="#org757f6f2">Intro</a>
 <ul>
-<li><a href="#org146dd50">Limits of AI</a></li>
+<li><a href="#org00057a7">Limits of AI</a></li>
 </ul>
 </li>
-<li><a href="#orgf31c682">PreReqs</a></li>
-<li><a href="#org1946721">Transformer Mechanistic Interpretability TODO</a></li>
+<li><a href="#org8b67a3b">PreReqs</a>
+<ul>
+<li><a href="#orged5a6d0">Basics of scalar calculus</a></li>
+<li><a href="#orgbafea7f">Basics of vector calculus</a></li>
+<li><a href="#orga3956ac">Matrix calculus</a></li>
+<li><a href="#orgb1b78bd">Probability &amp; Statistics</a></li>
+<li><a href="#orgca978c6">LADR (TODO)</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
+<style>details summary { color: green; }</style>
 
-<div id="outline-container-org1d2db31" class="outline-2">
-<h2 id="org1d2db31">Intro</h2>
-<div class="outline-text-2" id="text-org1d2db31">
+<div id="outline-container-org757f6f2" class="outline-2">
+<h2 id="org757f6f2">Intro</h2>
+<div class="outline-text-2" id="text-org757f6f2">
 <p>
-The current state of AI is transformer architecture which have all been trained by self-supervised learning where they are now even creating their own optimized architecture by themselves and showing emergent properties meaning they posess abilities they weren't designed for. The whole point of AI was the model will one day build itself a better model and that day is today.
+AI models are almost affordable for us to play around with as the GPU bubble finally <a href="https://www.latent.space/p/gpu-bubble">crashed</a> but it's still prohibitively expensive to lease or own anything reliable GPU pods so in the meanwhile there's a new field called tranformer <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) we can try which is essentially reverse engineering transformer architecture like LLMs. 
 </p>
 
 <p>
-There's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> which is essentially reverse engineering AI. Neel Nanda has helpfully produced a concrete <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for this and even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> in this field through the ML Alignment &amp; Theory Scholars program so we may as well start there.
+Neel Nanda has helpfully produced a concrete <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for this and even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program so we may as well start there. 
 </p>
 </div>
 
-<div id="outline-container-org146dd50" class="outline-3">
-<h3 id="org146dd50">Limits of AI</h3>
-<div class="outline-text-3" id="text-org146dd50">
+<div id="outline-container-org00057a7" class="outline-3">
+<h3 id="org00057a7">Limits of AI</h3>
+<div class="outline-text-3" id="text-org00057a7">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -281,51 +311,117 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-orgf31c682" class="outline-2">
-<h2 id="orgf31c682">PreReqs</h2>
-<div class="outline-text-2" id="text-orgf31c682">
+<div id="outline-container-org8b67a3b" class="outline-2">
+<h2 id="org8b67a3b">PreReqs</h2>
+<div class="outline-text-2" id="text-org8b67a3b">
 <p>
-Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">guide</a> for prereqs he provides the material for transformer architecture but first we need to know the following:
+Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">guide</a> for prereqs, he suggests to learn the essentials of ML/Backpropagation and we have access to:
 </p>
 
 <ul class="org-ul">
-<li>Linear algebra</li>
-<li>Probability basics</li>
-<li>Multivariable calculus basics</li>
+<li><a href="https://jorchard.github.io/cs479.github.io/index.html">CS 479 Neural Networks</a> is an interesting Waterloo survey on neural networks from the perspective of theoretical neuroscience (Backpropagation, gradients/chain rule, basics of ML).</li>
+<li><a href="https://deeplearning.cs.cmu.edu/F24/index.html">11-785 Intro to Deep Learning</a> is CMU's premiere DL course that covers some new architectures.</li>
+<li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> is CMU's mostly open course about the libraries of PyTorch and TensorFlow.</li>
 </ul>
 
 <p>
-All these topics are covered by MIT's <a href="https://github.com/mitmath/18065">18.065 Matrix Methods</a> and MIT's <a href="http://introtodeeplearning.com/">Deep Learning</a> boot camp to fill in the geometry so we can visualize what we're doing. However that course assumes you've already had a multivariable calculus background, which means you had a scalar calculus background, and some kind of undergrad linear algebra introduction. 
+I'll probably just audit CS 479 lectures as we only need the bare minimum requirements here all the hard work will come later tearing apart LLMs.
+</p>
+</div>
+
+<div id="outline-container-orged5a6d0" class="outline-3">
+<h3 id="orged5a6d0">Basics of scalar calculus</h3>
+<div class="outline-text-3" id="text-orged5a6d0">
+<p>
+The best crash course I know of is <a href="https://www.youtube.com/watch?v=zfHEkt-1sqo">this</a> video by Wildberger. 
 </p>
 
 <p>
-We can get both by auditing Evan Chen's <a href="https://web.evanchen.cc/napkin.html">Napkin</a> which prefers to use the tools of graduate mathematics because undergrad math is a convoluted mess that nobody actually uses. For example the Riemann integral was obsoleted well over 100+ years ago but they hilariously make you take it in every undergrad course from Calc I to Analysis II even teaching you nonsense like 'improper integrals' which don't exist. The Lebesgue integral replaced it, then in the (1960s?) the Henstock-Kurzweil integral replaced the Lebesgue integral by generalizing it as a special case and the proofs for these things are simple once all the machinery of a measure space is set up. They're nothing like undergrad proofs. Probability is another mess that is absolutely trivial to understand once you have a measurable space and is a bunch of garbage when you don't. 
+@18:40 try your own examples of the derivative function plugging in common functions. Normally in symbolic calculus you have to finess with algebra rewrites until you eliminate h or get to a point where you can start replacing h with the limit 0. A derivative of a function always gives you a second function.
 </p>
 
 <p>
-Mechanistic Interpretability is all about spotting patterns at a high level while we peel off transformations (matrices) so we should begin with math that generalizes everything to it's behavior.
+Try the derivative of f(x) = x<sup>2</sup>
+\[\frac{(a + h)^2 - a^2}{h}\] 
+\[= \frac{(a + h)(a + h) - a^2}{h}\]
+\[= \frac{a^2 + 2ah + h^2 - a^2}{h}\]
+\[= \frac{2ah}{h} + \frac{h^2}{h}\]
+\[= 2a + h\]
+\[\lim_{h \to 0} 2a + 0\]
+\[f'(a) = 2a\]
 </p>
 
 <p>
-TODO
+Take the derivative of f(x) = 2x (higher-order derivative)
+</p>
+
+<p>
+\[\frac{2(a + h) - 2a}{h}\] 
+\[= \frac{2a + 2h- 2a}{h}\]
+\[= \frac{2h}{h}\]
+\[f''(a) = 2\]
+</p>
+
+<p>
+Take the derivative of f(x) = 2 or 2x<sup>0</sup>
+</p>
+
+<p>
+\[\frac{2(a + h)^0 - 2a^0}{h}\] 
+\[= \frac{2 - 2}{h}\]
+\[= \frac{0}{h}\]
+\[f'''(x) = 0\]
+</p>
+
+<p>
+This makes sense if we have a constant function f(x) = c producing a straight horizontal line that for every value f(x) outputs the same y then it's slope is 0. @25:24 note the simple chain rule if y = g(x) then finding the derivative of a composite function f(g(x)) using the chain rule is: f'(y) * g'(x) and if you're interested 3blue1brown has a visualization <a href="https://www.youtube.com/watch?v=YG15m2VwSjA">here</a> but we will see all this later in higher dimensions generalized. 
+</p>
+
+<p>
+At the end of this he shows how indefinite integration of entire functions is the undo method for derivatives and that's all you need to know about introductory calculus. When we come across positional encoding matrices (sine/cosine) while learning transformers we will pick that up there as needed. 
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-org1946721" class="outline-2">
-<h2 id="org1946721">Transformer Mechanistic Interpretability TODO</h2>
-<div class="outline-text-2" id="text-org1946721">
+<div id="outline-container-orgbafea7f" class="outline-3">
+<h3 id="orgbafea7f">Basics of vector calculus</h3>
+<div class="outline-text-3" id="text-orgbafea7f">
 <p>
-The <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">concrete steps</a> to get started reverse engineering GPT models. 
+OCW has a <a href="https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/">free course</a> we need to cherry pick the basics of vector spaces in 3D, chain rule, gradient and double integrals for probability. 
 </p>
+</div>
+</div>
 
+<div id="outline-container-orga3956ac" class="outline-3">
+<h3 id="orga3956ac">Matrix calculus</h3>
+<div class="outline-text-3" id="text-orga3956ac">
+<p>
+We probably need to see a few lectures from MIT's <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> short course which is derivatives generalized to higher dimensions, 'matrix gradients' beyond column vectors, and Autodiff of computational graphs (a neural network is just a graph).
+</p>
+</div>
+</div>
 
+<div id="outline-container-orgb1b78bd" class="outline-3">
+<h3 id="orgb1b78bd">Probability &amp; Statistics</h3>
+<div class="outline-text-3" id="text-orgb1b78bd">
+<p>
+We need a few chapters from <a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">here</a> a Q&amp;A style workbook.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca978c6" class="outline-3">
+<h3 id="orgca978c6">LADR (TODO)</h3>
+<div class="outline-text-3" id="text-orgca978c6">
+<p>
+Axler's free <a href="https://linear.axler.net/">book</a> which we can complete while continuing the <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">transformer</a> curriculum where the goal is to analyse a model up to GPT-2 in size by reverse engineering a trained model to re-derive its positional encoding mappings. Edelman's <a href="https://github.com/mitmath/1806/blob/spring20/summaries.md">version</a> of 18.06 uses Julia notebooks and is modernized throwing away echelon forms, free variables and pivots, and even representations of large matrices as tables of numbers. We can use it with Axler's book.   
+</p>
 
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-17 Thu 16:21 -->
+<!-- 2024-10-17 Thu 16:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Numbers and Sets</title>
+<title>Differential Equations</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="jbh" />
 <style type="text/css">
@@ -243,15 +243,14 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Numbers and Sets</h1>
+<h1 class="title">Differential Equations</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7f2e35f">Part 1A Michaelmas</a>
+<li><a href="#orgaa01c49">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#orga104320">Course</a></li>
-<li><a href="#orgf91825c">My strategy</a></li>
+<li><a href="#orga34a142">Course</a></li>
 </ul>
 </li>
 </ul>
@@ -259,87 +258,40 @@ for the JavaScript code in this tag.
 </div>
 <hr />
 
-<div id="outline-container-org7f2e35f" class="outline-2">
-<h2 id="org7f2e35f">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-org7f2e35f">
+<div id="outline-container-orgaa01c49" class="outline-2">
+<h2 id="orgaa01c49">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-orgaa01c49">
 <p>
 This is the first term of the <a href="./math.html">Mathematical Tripos</a> you should be taking this with the other first term courses at the same time as Cambridge designed it this way for a good reason. 
 </p>
+
+<p>
+Right now there is all kinds of physics-informed machine learning going on to numerically solve ODEs. We also will learn epidemic models and other dynamic systems should you want to work in quantitative finance or a research programmer in a medical lab. 
+</p>
 </div>
 
-
-<div id="outline-container-orga104320" class="outline-3">
-<h3 id="orga104320">Course</h3>
-<div class="outline-text-3" id="text-orga104320">
+<div id="outline-container-orga34a142" class="outline-3">
+<h3 id="orga34a142">Course</h3>
+<div class="outline-text-3" id="text-orga34a142">
 <ul class="org-ul">
-<li>Course <a href="https://zeramorphic.uk/maths.html">notes</a></li>
-<li>Example <a href="http://www.dpmms.cam.ac.uk/study/IA/Numbers%2BSets/">sheets</a></li>
-<li>Someone made an entire <a href="https://www.youtube.com/watch?v=yW6jjM1NPIo">video series</a> based on the course notes
+<li>Course notes are <a href="https://thirdsgames.co.uk/gh/maths-compiled/ia_de.html">here</a></li>
+<li>Similar to this <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> that contains some of the Boyce book and also has boundary value problems and matches better with 1B content we'll be doing later</li>
+<li>There is a problem <a href="https://stevenclontz.github.io/checkit-clontz-diff-eq/#/bank/">bank</a> with solutions too.</li>
+<li>The <a href="http://www.damtp.cam.ac.uk/user/examples/">sample sheets</a></li>
+<li>Sample lecture is <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> 
 <ul class="org-ul">
-<li>Fields medalist <a href="https://www.dpmms.cam.ac.uk/~wtg10/naspage.html">supplementary reading</a> and extra sheets</li>
+<li>A guy on YouTube made <a href="https://www.youtube.com/playlist?list=PLC0PGB2LK3Rhtgl_2PgWMgajLtSCmNn57">lectures</a> too for the course</li>
 </ul></li>
-</ul>
-</div>
-
-<div id="outline-container-org68471ff" class="outline-4">
-<h4 id="org68471ff">Supplementary reading</h4>
-<div class="outline-text-4" id="text-org68471ff">
-<p>
-The book list in the schedule usually the first few books cover only half the course and the last recommendations cover the rest. 
-</p>
-
-
-<p>
-Cambridge schedule recommendations: 
-</p>
-
-<ul class="org-ul">
-<li>R.B.J.T. Allenby Numbers and Proofs. Butterworth-Heinemann 1997</li>
-<li>R.P. Burn Numbers and Functions: steps into analysis. Cambridge University Press 2000</li>
-<li>H. Davenport The Higher Arithmetic. Cambridge University Press 1999</li>
-<li>A.G. Hamilton Numbers, sets and axioms: the apparatus of mathematics. Cambridge University Press1983</li>
-<li>C. Schumacher Chapter Zero: Fundamental Notions of Abstract Mathematics. Addison-Wesley 2001</li>
-<li>I. Stewart and D. Tall The Foundations of Mathematics. Oxford University Press 1977
-<ul class="org-ul">
-<li>Couldn't find a copy of this one only the watered down second edition</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgf91825c" class="outline-3">
-<h3 id="orgf91825c">My strategy</h3>
-<div class="outline-text-3" id="text-orgf91825c">
-<p>
-We're doing this by ourselves and shortly taking abstract algebra so we should try and see how much of this we can do in a proof assistant.  
-</p>
-
-<ul class="org-ul">
-<li><a href="https://hrmacbeth.github.io/math2001/">The Mechanics of Proof</a> written by a Cambridge Part III graduate using the Lean proof assistant. Covers 90% of the Cambridge course except infinite sets.</li>
-<li><a href="https://cs.uwaterloo.ca/~plragde/flaneries/LACI/">Logic and Computation Intertwined</a> by Prof Ragde of Waterloo. Learning logic by building a small proof assistant and teaches us more about Lean 4 and Agda/Coq proof assistant</li>
-<li><a href="https://users.mccme.ru/skopenko/">Algebra Via Problems</a> free English (and Russian) copy on Arkadiy Skopenkov's website or use libgen</li>
-<li>Course notes on infinite sets</li>
+<li>The <a href="https://book.sciml.ai/">SciML book</a> which teaches how to optimize ODEs and solve them, plus uses the Julia language which we will need to learn for the computational projects in Easter anyway.</li>
 </ul>
 
-<blockquote>
 <p>
-I find that maths proofs are often 80% trivial algebra, and 10% magic tricks that are only relevant to that specific problem, and 10% key ideas that are used again and again. - Tripos graduate <a href="https://www.neelnanda.io/blog/34-learning">Neel Nanda</a>
-</p>
-</blockquote>
-
-<p>
-This is why I'm going to do the Russian algebra problem book because if you're like me your algebra is an incomplete mess. It's almost entirely proofs anyway so fits the nature of this course. 
-</p>
-
-
-<p>
-&#x2026; TODO
+TODO
 </p>
 
 <hr />
 <p>
-<a href="./math.html">Home</a>
+<a href="./index.html">Home</a>
 </p>
 </div>
 </div>

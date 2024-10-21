@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-20 Sun 20:55 -->
+<!-- 2024-10-20 Sun 21:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2024</title>
@@ -248,18 +248,22 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org28971bf">Intro</a></li>
-<li><a href="#orgd34a120">PreReqs</a></li>
+<li><a href="#orgf539667">Intro</a></li>
+<li><a href="#org34c9df4">PreReqs</a>
+<ul>
+<li><a href="#org231b9bf">Scalar &amp; Vector Calculus</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org28971bf" class="outline-2">
-<h2 id="org28971bf">Intro</h2>
-<div class="outline-text-2" id="text-org28971bf">
+<div id="outline-container-orgf539667" class="outline-2">
+<h2 id="orgf539667">Intro</h2>
+<div class="outline-text-2" id="text-orgf539667">
 <p>
-There's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) which reverse engineers neural networks similar to how you'd reverse engineer a compiled program. Neural networks have different architectures like how there is different software architectures (x86, RISC, Java or Ethereum virtual machine). The most popular is transformer architecture for large language models like ChatGPT so we'll start there.
+There's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) which reverse engineers neural networks similar to how you'd reverse engineer a compiled program. Neural networks have different architectures just like there is different software architectures (x86, RISC, Java/Ethereum virtual machine). The most popular is transformer architecture for large language models like ChatGPT.
 </p>
 
 <p>
@@ -267,9 +271,9 @@ There's a new field called <a href="https://www.neelnanda.io/mechanistic-interpr
 </p>
 </div>
 
-<div id="outline-container-org351fb27" class="outline-4">
-<h4 id="org351fb27">Limits of AI</h4>
-<div class="outline-text-4" id="text-org351fb27">
+<div id="outline-container-org75f1b71" class="outline-4">
+<h4 id="org75f1b71">Limits of AI</h4>
+<div class="outline-text-4" id="text-org75f1b71">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -277,11 +281,11 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-orgd34a120" class="outline-2">
-<h2 id="orgd34a120">PreReqs</h2>
-<div class="outline-text-2" id="text-orgd34a120">
+<div id="outline-container-org34c9df4" class="outline-2">
+<h2 id="org34c9df4">PreReqs</h2>
+<div class="outline-text-2" id="text-org34c9df4">
 <p>
-Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">advice</a> for the prerequisite background:
+Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">prerequisite background</a> I plotted the fastest possible way to satisfy them:
 </p>
 
 <ul class="org-ul">
@@ -289,11 +293,11 @@ Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/pr
 </ul>
 
 <p>
-The julia calculus library has a <a href="https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/">guide</a> that is essentially a multivariable calculus course. Alan Edelman's <a href="https://computationalthinking.mit.edu/Fall24/">Computational Thinking</a> has some lectures teaching autodiff (derivatives using a compiler feature), random variables and basic statistics.    
+The julia calculus library has a <a href="https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/">guide</a> that is essentially a scalar, vector and differential calculus course. Alan Edelman's <a href="https://computationalthinking.mit.edu/Fall24/">Computational Thinking</a> has some lectures teaching autodiff (derivatives using a compiler feature), random variables and basic statistics.    
 </p>
 
 <p>
-Our goal is take just enough multivariable prereqs to understand MIT's <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> where derivatives and the chain rule are generalized to higher dimensions. It's an IAP course or 'independent activities period' where faculty can run a 4-week course. 
+Our goal is take just enough calculus prereqs to understand MIT's <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> where derivatives and the chain rule are generalized to higher dimensions. It's an IAP course or 'independent activities period' where faculty can run a 4-week course so not a long course. 
 </p>
 
 <ul class="org-ul">
@@ -313,19 +317,23 @@ Alan Edelman's modernized 18.06 is <a href="https://github.com/mitmath/1806/blob
 </p>
 
 <p>
-There's also <a href="https://deeplearning.cs.cmu.edu/F24/index.html">11-785 Intro to Deep Learning</a> that covers some new architectures. <a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> is about the libraries of PyTorch and TensorFlow and programming transformers from scratch. Neel Nanda will teach us everything about transformer architeceture after these prereqs.  
+There's also <a href="https://deeplearning.cs.cmu.edu/F24/index.html">11-785 Intro to Deep Learning</a> that covers some new architectures. <a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> is about the libraries of PyTorch and TensorFlow and programming it all from scratch. Neel Nanda will teach us everything about transformers after these prereqs.  
 </p>
+</div>
 
 
-
+<div id="outline-container-org231b9bf" class="outline-3">
+<h3 id="org231b9bf">Scalar &amp; Vector Calculus</h3>
+<div class="outline-text-3" id="text-org231b9bf">
 <p>
-.. TODO take the <a href="https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/">guide</a>
+.. TODO take the <a href="https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/">guide</a>.
 </p>
 
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

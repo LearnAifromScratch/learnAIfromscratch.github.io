@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-16 Wed 20:31 -->
+<!-- 2024-10-20 Sun 20:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2024</title>
@@ -240,28 +240,6 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -270,40 +248,28 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org743be41">Intro</a>
-<ul>
-<li><a href="#orge2f29c8">Limits of AI</a></li>
-</ul>
-</li>
-<li><a href="#org624345d">PreReqs</a>
-<ul>
-<li><a href="#orgf9a09b1">Basics of scalar calculus</a></li>
-<li><a href="#org43ed757">Basics of vector calculus</a></li>
-<li><a href="#orgbbb1610">Matrix calculus</a></li>
-<li><a href="#orgec12d6d">Probability &amp; Statistics</a></li>
-<li><a href="#orge05f83a">LADR (TODO)</a></li>
-</ul>
-</li>
+<li><a href="#org28971bf">Intro</a></li>
+<li><a href="#orgd34a120">PreReqs</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org743be41" class="outline-2">
-<h2 id="org743be41">Intro</h2>
-<div class="outline-text-2" id="text-org743be41">
+<div id="outline-container-org28971bf" class="outline-2">
+<h2 id="org28971bf">Intro</h2>
+<div class="outline-text-2" id="text-org28971bf">
 <p>
-AI models are almost affordable for us to play around with as the GPU bubble finally <a href="https://www.latent.space/p/gpu-bubble">crashed</a> but it's still prohibitively expensive to lease or own anything reliable so in the meanwhile there's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) we can try which is essentially reverse engineering transformer architecture (LLMs) as these are all black boxes with emergent properties that would be nice to know before relying on them. 
+There's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) which reverse engineers neural networks similar to how you'd reverse engineer a compiled program. Neural networks have different architectures like how there is different software architectures (x86, RISC, Java or Ethereum virtual machine). The most popular is transformer architecture for large language models like ChatGPT so we'll start there.
 </p>
 
 <p>
-Neel Nanda has helpfully produced a concrete <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for this and even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program so we may as well start there. 
+<a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a concrete <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for this and even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program. 
 </p>
 </div>
 
-<div id="outline-container-orge2f29c8" class="outline-3">
-<h3 id="orge2f29c8">Limits of AI</h3>
-<div class="outline-text-3" id="text-orge2f29c8">
+<div id="outline-container-org351fb27" class="outline-4">
+<h4 id="org351fb27">Limits of AI</h4>
+<div class="outline-text-4" id="text-org351fb27">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -311,117 +277,55 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-org624345d" class="outline-2">
-<h2 id="org624345d">PreReqs</h2>
-<div class="outline-text-2" id="text-org624345d">
+<div id="outline-container-orgd34a120" class="outline-2">
+<h2 id="orgd34a120">PreReqs</h2>
+<div class="outline-text-2" id="text-orgd34a120">
 <p>
-Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">guide</a> for prereqs he suggests to learn the essentials of ML/Backpropagation and we have access to:
+Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">advice</a> for the prerequisite background:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://jorchard.github.io/cs479.github.io/index.html">CS 479 Neural Networks</a> is an interesting Waterloo survey on neural networks from the perspective of theoretical neuroscience (Backpropagation, gradients/chain rule, basics of ML).</li>
-<li><a href="https://deeplearning.cs.cmu.edu/F24/index.html">11-785 Intro to Deep Learning</a> is CMU's premiere DL course that covers some new architectures.</li>
-<li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> is CMU's mostly open course about the libraries of PyTorch and TensorFlow.</li>
+<li>Derivatives, Gradients, Probability</li>
 </ul>
 
 <p>
-I'll probably just audit CS 479 lectures to start then later try 10-414 as we only need the bare minimum requirements here all the hard work will come later tearing apart LLMs.
-</p>
-</div>
-
-<div id="outline-container-orgf9a09b1" class="outline-3">
-<h3 id="orgf9a09b1">Basics of scalar calculus</h3>
-<div class="outline-text-3" id="text-orgf9a09b1">
-<p>
-The best crash course I know of is <a href="https://www.youtube.com/watch?v=zfHEkt-1sqo">this</a> video by Wildberger. 
+The julia calculus library has a <a href="https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/">guide</a> that is essentially a multivariable calculus course. Alan Edelman's <a href="https://computationalthinking.mit.edu/Fall24/">Computational Thinking</a> has some lectures teaching autodiff (derivatives using a compiler feature), random variables and basic statistics.    
 </p>
 
 <p>
-@18:40 try your own examples of the derivative function plugging in common functions. Normally in symbolic calculus you have to finess with algebra rewrites until you eliminate h or get to a point where you can start replacing h with the limit 0. A derivative of a function always gives you a second function.
+Our goal is take just enough multivariable prereqs to understand MIT's <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> where derivatives and the chain rule are generalized to higher dimensions. It's an IAP course or 'independent activities period' where faculty can run a 4-week course. 
+</p>
+
+<ul class="org-ul">
+<li>Linear Algebra</li>
+</ul>
+
+<p>
+Alan Edelman's modernized 18.06 is <a href="https://github.com/mitmath/1806/blob/spring19/summaries.md">here</a> and we can use Strang's new 6th edition book that contains chapters on the SVD. Edelman designed it to teach intuition and spot patterns and the assignments and solutions are available. This should give us enough background to try Axler's book (or Terence Tao's notes) as suggested by Neel. Another second course you may want to do is MIT's <a href="https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/">Matrix Methods</a> it covers basically everything neural network related including fourier analysis to understand superposition. 
+</p>
+
+<ul class="org-ul">
+<li>Neural Networks</li>
+</ul>
+
+<p>
+<a href="https://jorchard.github.io/cs479.github.io/index.html">CS 479 Neural Networks</a> is an interesting Waterloo survey on neural networks from the perspective of theoretical neuroscience (Backpropagation, gradients/chain rule, basics of ML).
 </p>
 
 <p>
-Try the derivative of f(x) = x<sup>2</sup>
-\[\frac{(a + h)^2 - a^2}{h}\] 
-\[= \frac{(a + h)(a + h) - a^2}{h}\]
-\[= \frac{a^2 + 2ah + h^2 - a^2}{h}\]
-\[= \frac{2ah}{h} + \frac{h^2}{h}\]
-\[= 2a + h\]
-\[\lim_{h \to 0} 2a + 0\]
-\[f'(a) = 2a\]
+There's also <a href="https://deeplearning.cs.cmu.edu/F24/index.html">11-785 Intro to Deep Learning</a> that covers some new architectures. <a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> is about the libraries of PyTorch and TensorFlow and programming transformers from scratch. Neel Nanda will teach us everything about transformer architeceture after these prereqs.  
 </p>
 
-<p>
-Take the derivative of f(x) = 2x (higher-order derivative)
-</p>
+
 
 <p>
-\[\frac{2(a + h) - 2a}{h}\] 
-\[= \frac{2a + 2h- 2a}{h}\]
-\[= \frac{2h}{h}\]
-\[f''(a) = 2\]
-</p>
-
-<p>
-Take the derivative of f(x) = 2 or 2x<sup>0</sup>
-</p>
-
-<p>
-\[\frac{2(a + h)^0 - 2a^0}{h}\] 
-\[= \frac{2 - 2}{h}\]
-\[= \frac{0}{h}\]
-\[f'''(x) = 0\]
-</p>
-
-<p>
-This makes sense if we have a constant function f(x) = c producing a straight horizontal line that for every value f(x) outputs the same y then it's slope is 0. @25:24 note the simple chain rule if y = g(x) then finding the derivative of a composite function f(g(x)) using the chain rule is: f'(y) * g'(x) and if you're interested 3blue1brown has a visualization <a href="https://www.youtube.com/watch?v=YG15m2VwSjA">here</a> but we will see all this later in higher dimensions generalized. 
-</p>
-
-<p>
-At the end of this he shows how indefinite integration of entire functions is the undo method for derivatives and that's all you need to know about introductory calculus. When we come across positional encoding matrices (sine/cosine) while learning transformers we will pick that up there as needed. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org43ed757" class="outline-3">
-<h3 id="org43ed757">Basics of vector calculus</h3>
-<div class="outline-text-3" id="text-org43ed757">
-<p>
-OCW has a <a href="https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/">free course</a> we need to cherry pick the basics of vector spaces in 3D, chain rule, gradient and double integrals for probability. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgbbb1610" class="outline-3">
-<h3 id="orgbbb1610">Matrix calculus</h3>
-<div class="outline-text-3" id="text-orgbbb1610">
-<p>
-We probably need to see a few lectures from MIT's <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> short course which is derivatives generalized to higher dimensions, 'matrix gradients' beyond column vectors, and Autodiff of computational graphs (a neural network is just a graph).
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgec12d6d" class="outline-3">
-<h3 id="orgec12d6d">Probability &amp; Statistics</h3>
-<div class="outline-text-3" id="text-orgec12d6d">
-<p>
-We need a few chapters from <a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">here</a> a Q&amp;A style workbook.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge05f83a" class="outline-3">
-<h3 id="orge05f83a">LADR (TODO)</h3>
-<div class="outline-text-3" id="text-orge05f83a">
-<p>
-Axler's free <a href="https://linear.axler.net/">book</a> which we can complete while continuing the <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">transformer</a> curriculum where the goal is to analyse a model up to GPT-2 in size then reverse engineering a larger trained model to re-derive its positional encoding mappings. Edelman's <a href="https://github.com/mitmath/1806/blob/spring20/summaries.md">version</a> of 18.06 uses Julia notebooks and is modernized throwing away echelon forms, free variables and pivots, and even representations of large matrices as tables of numbers. We can use it with Axler's book.   
+.. TODO take the <a href="https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/">guide</a>
 </p>
 
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>

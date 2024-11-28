@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-16 Wed 06:47 -->
+<!-- 2024-11-27 Wed 18:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -270,46 +270,54 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org680811d">Start here</a></li>
-<li><a href="#org799f486">Curriculum</a></li>
-<li><a href="#orgf92d86e">Software Design</a>
+<li><a href="#org5b3df16">Start here</a>
 <ul>
-<li><a href="#orge1b5c09">Version control</a></li>
+<li><a href="#org4534077">Motivation for creating this</a></li>
 </ul>
 </li>
-<li><a href="#orgc871d83">Freelancing</a>
+<li><a href="#orgb0dcbdf">Curriculum</a></li>
+<li><a href="#org80a0732">You are now a working developer</a>
 <ul>
-<li><a href="#org8156873">Starting out</a></li>
-<li><a href="#org9b585fe">Research</a></li>
-<li><a href="#org437452a">Design examples</a></li>
-<li><a href="#orgb05e4b2">Rates</a></li>
-<li><a href="#org1ecb81f">Agencies</a></li>
-<li><a href="#orge9c4221">Software Marketplaces</a></li>
-<li><a href="#org679745e">Startups</a></li>
+<li><a href="#orgcba9435">Your first job</a></li>
 </ul>
 </li>
-<li><a href="#orge3ed63f">USACO</a>
+<li><a href="#orgac253f4">Software Design</a>
 <ul>
-<li><a href="#org84b1099">Big-O explained</a></li>
-<li><a href="#org49693b9">Problem complexity</a></li>
-<li><a href="#orge7a66b1">Languages</a></li>
+<li><a href="#org3c109bd">Version control</a></li>
+<li><a href="#orga4ad425">Freelancing locally</a></li>
+<li><a href="#org5e5147e">What to charge</a></li>
+<li><a href="#org53dcf3d">Starting out</a></li>
+<li><a href="#org60adedc">Research</a></li>
+<li><a href="#org08822ff">Design examples</a></li>
+<li><a href="#orgc233061">Rates</a></li>
+<li><a href="#org128bbd4">Agencies</a></li>
+<li><a href="#org447afd5">Software Marketplaces</a></li>
+<li><a href="#org4b57bc2">Startups</a></li>
 </ul>
 </li>
+<li><a href="#orga376d06">USACO</a>
+<ul>
+<li><a href="#org1f6beaa">Big-O explained</a></li>
+<li><a href="#org2102833">Problem complexity</a></li>
+<li><a href="#org004588d">Languages</a></li>
+</ul>
+</li>
+<li><a href="#org89b43d1">15-721 Advanced Database Systems</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org680811d" class="outline-2">
-<h2 id="org680811d">Start here</h2>
-<div class="outline-text-2" id="text-org680811d">
+<div id="outline-container-org5b3df16" class="outline-2">
+<h2 id="org5b3df16">Start here</h2>
+<div class="outline-text-2" id="text-org5b3df16">
 <p>
-I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
+I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book/curriculum somebody recommended such as:
 </p>
 <ul class="org-ul">
 <li><a href="./accelerated.html">Accelerated Intro to CS</a> 
 <ul class="org-ul">
-<li>eventually everything here will be there too</li>
+<li>eventually (almost) everything here will be there too</li>
 </ul></li>
 <li><a href="https://functionalcs.github.io/curriculum/">Functional CS</a> 
 <ul class="org-ul">
@@ -322,27 +330,37 @@ I assume you are teaching yourself at the same time some kind of intro course yo
 </ul>
 
 <p>
-During work socials I run into recruiters in finance who tell me a tale of woe how much harder it has become to find good entry-level candidates from schools so I asked them what would a non-degree candidate need.  
+This workshop here is about getting paid as a software developer.
+</p>
+</div>
+
+<div id="outline-container-org4534077" class="outline-3">
+<h3 id="org4534077">Motivation for creating this</h3>
+<div class="outline-text-3" id="text-org4534077">
+<p>
+This is not a 'work in fintech' workshop but it was born from conversations I have with trading shop recruiters during work socials that I routinely run into who tell me a tale of woe how much harder it has become to find good entry-level candidates from schools so I asked them what would a non-degree candidate need.  
 </p>
 
 <p>
 Their optimal candidate: 
 </p>
 <ul class="org-ul">
-<li>knows about the CPU-arch execution pipeline and caches</li>
+<li>knows about the CPU-arch execution pipeline and cache architecture
+<ul class="org-ul">
+<li>what can cause a cache eviction</li>
+</ul></li>
 <li>knows how their chosen language's runtime works
 <ul class="org-ul">
-<li>memory allocation can happen without intentionally triggering it</li>
-<li>using free can be an expensive operation</li>
+<li>memory allocation can happen without intentionally triggering it (library code)</li>
+<li>using free can be an expensive operation (look how many lines of code it has)</li>
 </ul></li>
 <li>knows the standard algorithmic problem solving strategies
 <ul class="org-ul">
-<li>divide/conquer, dynamic programming</li>
+<li>divide/conquer, complete search, dynamic programming</li>
 </ul></li>
-<li>knows the basics of problem complexity taught in every undergrad</li>
-<li>knows or can learn probability for performance modeling</li>
+<li>knows at least the basics of probability or can teach themselves</li>
 <li>has a very high standard of code quality</li>
-<li>has written at least one multi-threaded application where network programming was involved</li>
+<li>is at least familiar with writing multicore code</li>
 <li>knows what they don't know        
 <ul class="org-ul">
 <li>usually caught in interviews when they catch the candidate bluffing and ask them to define on the spot any jargon being used</li>
@@ -350,93 +368,98 @@ Their optimal candidate:
 </ul>
 
 <p>
-If you satisfy at least some of the above characteristics then you are considered a great candidate because you can be trained to learn everything else including whatever customized tooling/compilers or languages these firms use.   
+If you satisfy at least some of the above characteristics then you are considered a great candidate because you can be trained to learn everything else including whatever customized tooling/compilers or languages these firms use.
+</p>
+
+<p>
+Translated to english this means you don't have to be an expert at whatever language is being advertised at these firms they all have an internal onboarding process that includes 3 months of training usually. 
 </p>
 </div>
 
-<div id="outline-container-orgaa00ee8" class="outline-4">
-<h4 id="orgaa00ee8">The work</h4>
-<div class="outline-text-4" id="text-orgaa00ee8">
+<div id="outline-container-org7e0c3cd" class="outline-4">
+<h4 id="org7e0c3cd">The work</h4>
+<div class="outline-text-4" id="text-org7e0c3cd">
 <p>
 There's many reasons why you'd want to work for <a href="https://gist.github.com/chrisaycock/8b7a37b1f97549517cb7789be5b06266">trading firms</a> and most of them like Valkyrie will hire <a href="https://www.valkyrietrading.com/careers/junior-software-engineer/">juniors</a>. 
 </p>
 
 <p>
-Everyday you are the race car engineer of software like how they will rebuild an engine and retune the car after each race to squeeze out more optimization that's what you do at many of these firms. There's also work in building high performance models and fancy consumer dashboards.  
+Everyday you are the race car engineer of software like how they will rebuild an engine and retune the car after each race to squeeze out more optimization that's what you do at many of these firms. There's also work in building high performance models and fancy client dashboards. It pays a lot of money too if you stick around.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgede3ff9" class="outline-4">
-<h4 id="orgede3ff9">Recruiters</h4>
-<div class="outline-text-4" id="text-orgede3ff9">
+<div id="outline-container-org27af017" class="outline-4">
+<h4 id="org27af017">Recruiters</h4>
+<div class="outline-text-4" id="text-org27af017">
 <p>
 Jove Intl, <a href="https://oxfordknight.co.uk/jobs/">Oxford Knight</a>, Reload Search, and ex-employees who have quit to become recruiters. They hire internationally for Chicago, NYC, Austin, London, Sydney, Hong Kong, Mumbai, Shanghai, Tokyo and now Singapore seems to be the location everyone is opening offices these days. LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> but works fine for harvesting recruiter offers.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org0535f44" class="outline-4">
-<h4 id="org0535f44">Selection</h4>
-<div class="outline-text-4" id="text-org0535f44">
+<div id="outline-container-org0e47ec5" class="outline-4">
+<h4 id="org0e47ec5">Selection</h4>
+<div class="outline-text-4" id="text-org0e47ec5">
 <p>
 I got to try their fancy recruiter tools and paid access to LinkedIn to see the minefield of bad candidates they have to filter. 
 </p>
 
 <p>
-They told me all resumes are reviewed manually there's no automated ATS or applicant tracking system. USACO training or competitive background in anything from sports to math stands out, so-called modern C++ meaning C++17/20/23 stands out but is not necessary as any firm will train you. You never sell yourself as a junior, companies will hire anyone who knows how to sell themselves and can pass the technical competence filters. You always pretend to be employed writing software even if this means setting up a personal page declaring yourself a freelancer on Upwork actively looking for contract work.  
+They told me all resumes are reviewed manually there's no automated ATS or applicant tracking system. USACO training or competitive background in anything from sports to math stands out, so-called modern C++ meaning C++17/20/23 stands out but is <b>not necessary</b> as any firm will train you. You never sell yourself as a junior, companies will hire anyone who knows how to sell themselves and can pass the technical competence filters. You always pretend to be employed writing software even if this means setting up a personal page declaring yourself a freelancer actively looking for contract work.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc35410c" class="outline-4">
-<h4 id="orgc35410c">Campus recruiting</h4>
-<div class="outline-text-4" id="text-orgc35410c">
+<div id="outline-container-org78410e5" class="outline-4">
+<h4 id="org78410e5">Campus recruiting</h4>
+<div class="outline-text-4" id="text-org78410e5">
 <p>
 Getting more and more monopolized by big tech corps pressuring students with 2-week expiring offers (aka exploding offers) that are against campus hiring guidelines but they do it anyway. Think about how much money is spent on campus engagement to find (highly paid) interns and they have to hope that intern comes back after graduating and many don't. This should tell you they really want to find junior candidates willing to stay to become senior staff so if they find you as a rough diamond in a sea of mediocre trash it's an easy investment for them.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8b092d9" class="outline-4">
-<h4 id="org8b092d9">Phone screens/on-site interviews</h4>
-<div class="outline-text-4" id="text-org8b092d9">
+<div id="outline-container-orgf5b1959" class="outline-4">
+<h4 id="orgf5b1959">Phone screens/on-site interviews</h4>
+<div class="outline-text-4" id="text-orgf5b1959">
 <p>
-I don't know if they still do this but one Chicago company was notorious for firing off 3 problems to solve on HackerRank seconds after you submitted an application. The first phone screen is usually a recruiter asking are you legal to work and if not what credentials do you have because in some countries like the US you will need a reason for them to issue you a work visa for a job that can't be given to a local so a degree or equivalent work experience. If they want you they'll finesse these requirements if not try Asia. 
+I don't know if they still do this but one Chicago company was notorious for firing off 3 problems to solve on HackerRank seconds after you submitted an application. The first phone screen is usually a recruiter asking are you legal to work and if not what credentials do you have because in some countries like the US you will need a reason for them to issue you a work visa for a job that can't be given to a local so a degree or equivalent work experience. If they want you they'll finesse these requirements if not try Asia (Shanghai, Singapore, Hong Kong). 
 </p>
 
 <p>
-The new fizzbuzz filter these days is to <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> and tests how careless of a developer you are meaning you don't ask any questions about requirements and start writing code immediately. You may be asked something like this as a screen. Here is another typical remote style <a href="https://www.youtube.com/watch?v=V8DGdPkBBxg">interview</a> screen which is the first of many, many more interviews. If you pass these screens you may be invited on-site meaning they will pay for you to come out there and job shadow for a week while being hammered with interviews everyday if it's a big US company however I've noticed in Asia the hiring process is much shorter.   
+The new fizzbuzz filter these days is to <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> and tests how careless of a developer you are meaning you don't ask any questions about requirements and start writing code immediately. You may be asked something like this as a screen. Here is a typical remote style <a href="https://www.youtube.com/watch?v=V8DGdPkBBxg">interview</a> screen which is the first of many, many more interviews. If you pass these screens you may be invited on-site meaning they will pay for you to come out there and job shadow for a day while being hammered with interviews one after another all day. Some large Silicon Valley companies may do this all week where I work it's a single day.     
 </p>
 
 <p>
-As a personal anecdote the on-site interviews after all the screens seem designed as a trap to once again see how careless of a developer you are. The problems I've seen have an obvious area of optimization to take advantage of to squeeze out some pointless constant factors but will open a potential bug or performance sink elsewhere if you aren't taking your time thinking through the whole original problem space. The bad candidate will pounce on that and show off their meaningless optimization while the good candidate will ask what happens if I do X, is it a good tradeoff for the risks involved? Prime example they will try and get you with is <a href="https://yihui.org/en/2018/06/cache-invalidation/">cache invalidation</a> and we will learn all about caches here so you won't be the one who invalidates the cache on their last day of on-site interview. 
+As a personal anecdote the on-site interviews after all the initial screens seem designed as a trap to once again see how careless of a developer you are. The problems I've seen have an obvious area of optimization to take advantage of to squeeze out some pointless constant factors but will open a potential bug or performance sink elsewhere if you aren't taking your time thinking through the whole original problem space. The bad candidate will pounce on that and show off their meaningless optimization while the good candidate will ask what happens if I do X, is it a good tradeoff for the risks involved? Prime example they will try and get you with is <a href="https://yihui.org/en/2018/06/cache-invalidation/">cache invalidation</a> and we will learn all about caches here so you won't be the one who invalidates the cache on their last day of on-site interview. 
 </p>
 
 <p>
-Hiring someone is an investment it will typically take 3 months for them to be productive and if you're being paid $200k/yr that's $50k they have spent hoping you will turn out to be a good hire so now you know why there is all these hoops to jump through. 
+Hiring someone is an investment it will typically take 3 months for them to be productive if they are a senior developer and even longer if they are brand new and if you're being paid $200k/yr that's $50k they have spent hoping you will turn out to be a good hire so now you know why there is all these hoops to jump through. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgcc5576f" class="outline-4">
-<h4 id="orgcc5576f">Find a mentor</h4>
-<div class="outline-text-4" id="text-orgcc5576f">
+<div id="outline-container-orgd6c6bf3" class="outline-4">
+<h4 id="orgd6c6bf3">Find a mentor</h4>
+<div class="outline-text-4" id="text-orgd6c6bf3">
 <p>
 Once you are in and develop a routine meaning you are no longer panicking try and walk over to the department where all the money is being made and find a mentor to teach you by asking them to give you the work they don't like doing because you want to learn it all from scratch. All you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually want you to work with them once you have proven to be indispensible. If they get promoted you get promoted, if they go off and start a new company you are the first hire. This can be tricky because of signing multiple NDAs even between internal departments but if you are serious about wanting to learn they will tell management to make it happen. I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and my life would not be the same if I hadn't watched that throwaway clip at 3am because I always assumed there was no way I could ever do this kind of work.
 </p>
 
 <p>
-If you're not interested in finance there are a few companies that mentor developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and build them to senior developers. One is in New Hampshire called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. I've never talked to any developers outside of FAANG that weren't interested in hiring good entry-level juniors even though they didn't advertise these positions. 
+If you're not interested in finance there are a few companies that mentor developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and build them to senior developers. One is in New Hampshire called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. 
 </p>
 </div>
 </div>
 </div>
+</div>
 
 
-<div id="outline-container-org799f486" class="outline-2">
-<h2 id="org799f486">Curriculum</h2>
-<div class="outline-text-2" id="text-org799f486">
+<div id="outline-container-orgb0dcbdf" class="outline-2">
+<h2 id="orgb0dcbdf">Curriculum</h2>
+<div class="outline-text-2" id="text-orgb0dcbdf">
 <ul class="org-ul">
 <li>The <a href="https://usaco.guide/">USACO guide</a></li>
 </ul>
@@ -483,12 +506,62 @@ We will learn about <a href="https://github.com/dendibakh/perf-ninja?tab=readme-
 </div>
 </div>
 
-
-<div id="outline-container-orgf92d86e" class="outline-2">
-<h2 id="orgf92d86e">Software Design</h2>
-<div class="outline-text-2" id="text-orgf92d86e">
+<div id="outline-container-org80a0732" class="outline-2">
+<h2 id="org80a0732">You are now a working developer</h2>
+<div class="outline-text-2" id="text-org80a0732">
 <p>
-MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and the professor of that course wrote a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. This is way to design software on a piece of paper so when it comes time to actually code the app it essentially writes itself.
+Your first task is to sign into Google Docs and select a resume template. You want the simplest template and if it has colors change them to black. There's a template there called Coral, good enough, select it as you do not want a summary or anything.
+</p>
+
+<p>
+In the skills section write the skills you want to have. You are now a 'full stack' developer who specializes in high performance applications. Go <a href="https://15721.courses.cs.cmu.edu/spring2024/schedule.html">here</a> and skip down to Lecture #17. There is lectures on Google Dremel/BigQuery, Databricks/Spark, Snowflake, DuckDB, Yellowbrick and Amazon Redshift. Add those to your skill field. Look at the <a href="https://www.cs.cmu.edu/~15721-f24/schedule.html">fall 2024</a> and add Confluent and Kafka too. We will be taking a programming language theory workbook that isn't very long and teaches the standard model of every industry language you can think of. In the skills section say you know the following languages: (your favorite language), Rust, TypeScript and Python it doesn't matter if you've never used them you will know how they work anyway. 
+</p>
+
+<p>
+In the experience section write you are a 'Freelance Software Engineer' because you are. Give yourself only 1-2 years of experience because you probably do have that experience if you did any introductory CS courses or hacked together some software on your own. In the bullet points write you architect and construct from scratch the internals of online analytical systems because we will learn this. Write you know how to bypass a kernel and have experience doing low-latency development because you can simply watch the lecture on that later. If there is a skill you wished you had and are in the process of gaining then write that here. If you had other jobs put them in here too but don't lie about working for a company.
+</p>
+
+<p>
+In the education section pick the closest school to you that isn't famous and say you have been going there for a year. Maybe you will go there, who cares. It can't be a famous school and you can't lie about having credentials like a degree as these are easy to check online for recruiters and hiring managers. You are going to school though and taking computer science however in this workshop. Below your education write 'USACO Competitive Programming Training' and write that you help complete the USACO guide and mentor other students because you will as we'll be taking it and there's a forum where you can mentor or submit solutions for the guide in other languages.
+</p>
+
+<p>
+You are now the perfect candidate you have enough experience you won't demand a million dollars to start and you are highly motivated/diamond in the rough as you have USACO training so have a competitive spirit. All these outfits look for someone exactly like this who can train themselves and has a spark of curiosity for solving seemingly impossible problems without giving up immediately. 
+</p>
+
+<p>
+It's too early yet but eventually when you get at least half way through this workshop you want to make a LinkedIn account and add the same thing there. You want to do the same thing <a href="https://www.ycombinator.com/jobs">here</a> making a profile and if you are an American then make a profile <a href="https://www.newfounding.com/talent">here</a> it is the 'right-wing' equivalent to ycombinator but there's interesting startup jobs there, who cares about politics they are superficial distractions and you need to eat. 
+</p>
+
+<p>
+I originally learned this from a turbo redneck I met once while I was a teenager working on the docks doing wire rope rigging. This is where you stab a metal spike into very thick wire rope and unravel it to make loops and press them so cranes can lift stuff on to cargo ships. Extremely dangerous, you'd be in the rain beside a ship and the spike would be under so much tension if you slipped it would rotate a thousand times and come out flying at your face. The guy training me said that every job he's ever had he lied about his experience like the time he claimed to be a professional diesel mechanic and was underneath the truck reading a repair manual as he went. He told me he would work late into the nights just teaching himself whatever trade he had managed to bamboozle himself into being employed. His whole life was faking it until he made it. He lied about rigging too but he researched as he went every task he was asked to do and never made the same mistake twice so became an honest expert in the world of twisting cables around into loops. At the time I didn't really get what he was trying to teach me which is just get the job first then learn while you are there because everyone else is doing the same. 
+</p>
+</div>
+
+<div id="outline-container-orgcba9435" class="outline-3">
+<h3 id="orgcba9435">Your first job</h3>
+<div class="outline-text-3" id="text-orgcba9435">
+<p>
+While you do this you should get paid to do code review. The easiest way for anyone on earth to do this is applying to those shady LLM prompt verification companies like <a href="https://www.dataannotation.tech/">Data Annotation Tech</a>. There's many of these, search around for more, and your task is to be paid hourly anywhere from $20-40/hr to evaluate the code that an LLM comes up with when given a prompt. These outfits are notorious for doing random firings or seizing your income so you must treat it for what it is which is paid training to analyze programs and move your pay out of there as fast as possible. If you are permanently banned by PayPal like I am for stupid reasons then use a friend/family don't ask them either just use whatever to get paid. If you take the programming language book (plai.org) then this will be simple for you as many of the LLM problems are with scope errors. Tell them you are a freelance software developer with 1-2yrs experience they won't care or even ask for a resume. I did the assessment and it's pretty easy using Python requests library and beautifulsoup to scrape and parse Google Sheets to print 2D characters but it could change with every applicant. If you did CS19 or any other intro course it will be trivial for you to complete. When you do this kind of work they only care how correct you are with grammar/spelling and finding code errors if you screw up once they typically just ghost you with no new projects to earn money and won't give a reason. If you're cool with realizing that they hire absolutely everyone, correctness is the only thing they care about, and they randomly fire 1/3 of freelancers every 3 months then try it out. 
+</p>
+
+<p>
+Look around for more of these like the companies that pay to complete someone's homework, often they post ads on UpWork and similar freelancing sites but you'll realize right away it's a class assignment. Remember when I wrote at the beginning the problems recruiters are having from schools this is one of the problems with students cheating at scale with Chat-GPTx or paying people to do their assignments.  
+</p>
+
+<p>
+When we're done here you can 'finesse' your resume to apply to 10x Management, Braintrust, TopTal, Unicorn, Bairesdev and these are actually legit though of course very flawed freelancing middlemen. All you need to do is pass the assessment and you're in so fake it until you make it. I infiltrated TopTal and found that AirBnB will hire you directly if you turn out to be a good developer and reminder the language doesn't matter at all you will learn here that all popular industry languages are the exact same with unimportant differences in syntax.   
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgac253f4" class="outline-2">
+<h2 id="orgac253f4">Software Design</h2>
+<div class="outline-text-2" id="text-orgac253f4">
+<p>
+MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and the professor of that course wrote a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. This is way to design software on a piece of paper so when it comes time to actually code the app it essentially writes itself. 
 </p>
 
 <p>
@@ -527,9 +600,9 @@ If you want to try the Vue3 recitations and assignments they're all open on the 
 </p>
 </div>
 
-<div id="outline-container-orge1b5c09" class="outline-3">
-<h3 id="orge1b5c09">Version control</h3>
-<div class="outline-text-3" id="text-orge1b5c09">
+<div id="outline-container-org3c109bd" class="outline-3">
+<h3 id="org3c109bd">Version control</h3>
+<div class="outline-text-3" id="text-org3c109bd">
 <p>
 The prof of this course with a grad student created <a href="https://gitless.com/#research">gitless.com</a> see <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> research page on MIT's software design group. Read how they audited the conceptual design of Git and found things like staging were confusing. 
 </p>
@@ -543,11 +616,10 @@ For these reasons I don't think you should bother to use git at all unless someo
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-orgc871d83" class="outline-2">
-<h2 id="orgc871d83">Freelancing</h2>
-<div class="outline-text-2" id="text-orgc871d83">
+<div id="outline-container-orga4ad425" class="outline-3">
+<h3 id="orga4ad425">Freelancing locally</h3>
+<div class="outline-text-3" id="text-orga4ad425">
 <p>
 Who needs software where you live? Restaurants, people cutting hair either out of their house or a storefront, people wanting to sell something to avoid Shopify fees, people wanting to rent their condo public spaces or guest suites, people wanting a dashboard of all sites they are selling on combined into one command center. Every service needs a booking or quote site such as painters, tailors or power washers or junk haulers. There's always something people want and the current offers for the service industry are largely pure shit. 
 </p>
@@ -556,10 +628,20 @@ Who needs software where you live? Restaurants, people cutting hair either out o
 My recommendation is to be the local Zapier style developer and stitch together software people actually use instead of inventing an inferior product yourself like everyone else is doing. People are already using business software they prefer like Quickbooks for accounting or Zoho/Salesforce for CRM, or iCal/Google calendar for bookings. You now sew that all together into a custom product for them. 
 </p>
 </div>
+</div>
 
-<div id="outline-container-org8156873" class="outline-3">
-<h3 id="org8156873">Starting out</h3>
-<div class="outline-text-3" id="text-org8156873">
+<div id="outline-container-org5e5147e" class="outline-3">
+<h3 id="org5e5147e">What to charge</h3>
+<div class="outline-text-3" id="text-org5e5147e">
+<p>
+Some guy on Hacker News made a contractor rates site: <a href="https://www.contractrates.fyi/">https://www.contractrates.fyi/</a> though charge whatever you want at first then keep upping your daily rate (never charge hourly if possible). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org53dcf3d" class="outline-3">
+<h3 id="org53dcf3d">Starting out</h3>
+<div class="outline-text-3" id="text-org53dcf3d">
 <p>
 I tried a local experiment where the goal was to ask people about their business and what problems they were having to see if software could help. You just let others talk about themselves. I ended up with dozens of leads and if I was a software mercenary I would have picked up a lot of work. Unfortunately I'm not a software merc but kind of thinking I should be now that I've seen how easy it is. Everyone wants to work with someone they've personally met not a stranger on a website and almost every conversation ended with 'do you know anyone who can do this' and them giving me their contacts. 
 </p>
@@ -570,17 +652,17 @@ I also called people out of the blue from LinkedIn from various local companies 
 </div>
 </div>
 
-<div id="outline-container-org9b585fe" class="outline-3">
-<h3 id="org9b585fe">Research</h3>
-<div class="outline-text-3" id="text-org9b585fe">
+<div id="outline-container-org60adedc" class="outline-3">
+<h3 id="org60adedc">Research</h3>
+<div class="outline-text-3" id="text-org60adedc">
 <p>
 Here's what I found out by just walking into places and meeting people. Every one of them had a problem with existing software they wanted to modify and they had <i>never</i> met anyone locally who could independently write software who wasn't some SaaS sales guy pushing an existing product.  
 </p>
 </div>
 
-<div id="outline-container-orgea7e721" class="outline-4">
-<h4 id="orgea7e721">Salons</h4>
-<div class="outline-text-4" id="text-orgea7e721">
+<div id="outline-container-org036b42d" class="outline-4">
+<h4 id="org036b42d">Salons</h4>
+<div class="outline-text-4" id="text-org036b42d">
 <p>
 An <a href="http://www.nailproject.com/">example</a> using a Brooklyn nail salon. Their website basically points to Instagram and solely consists of a form that means they will have to phone or text/email whoever books to correct any over bookings. This can all be automated easily and sync some iCal protocol. Every one of these businesses rents out chairs to independent freelancers so they needed a fast way to add/remove new names to the booking calendar as these freelancers move around all the time. Deposit for reservations they wanted too but nobody offers this.
 </p>
@@ -595,9 +677,9 @@ My own barber mainly took appointments by phone call or text message than had to
 </div>
 </div>
 
-<div id="outline-container-org651a4e4" class="outline-4">
-<h4 id="org651a4e4">Restaurants/Bars</h4>
-<div class="outline-text-4" id="text-org651a4e4">
+<div id="outline-container-org42d8fe5" class="outline-4">
+<h4 id="org42d8fe5">Restaurants/Bars</h4>
+<div class="outline-text-4" id="text-org42d8fe5">
 <p>
 Restaurants I found use at least 3-4 different software vendors. Every one prefers to handwrite tickets and have the wait staff manually enter it into an inventory and restaurant management system that uses a proven industry touch screen for high volume that's not some consumer grade junk like iPads. Problem here was there was only one touch screen so they had to take turns doing it as adding another would cost thousands in 'set up fees' to have a tech come do it. I didn't have much time so got the make/model of the screen, cables and inventory vendor which all had open APIs so you could if you wanted set up another screen. These inventory apps had a total monopoly over the entire city and would be impossible to compete with as everyone uses them by default since they offer one-click bill splitting, labour and scheduling, inventory, menu management and accounting which I found out has to be certified as there's a lot of tax fraud in restaurants so some regulator has to approve your software. We don't have to compete with that just interface with it.
 </p>
@@ -616,9 +698,9 @@ Not a single one I talked to had ever met a software guy in person and asked me 
 </div>
 </div>
 
-<div id="outline-container-org624adef" class="outline-4">
-<h4 id="org624adef">Retail</h4>
-<div class="outline-text-4" id="text-org624adef">
+<div id="outline-container-orgb0d1ca8" class="outline-4">
+<h4 id="orgb0d1ca8">Retail</h4>
+<div class="outline-text-4" id="text-orgb0d1ca8">
 <p>
 If you look at Huntsman suit tailors on Savile Row they have an interesting website where you can click <i>Made to Order</i> and customize almost everything. This was trivial to copy (make your own gfx to not rip them off and get sued) I simply used an AI to make outlines. I approached every tailor locally and every one said this is exactly what they wanted plus some kind of zoom/facetime way to book consultations. 
 </p>
@@ -630,45 +712,45 @@ Every else was either using Shopify or Etsy but having to pay some person they'v
 </div>
 </div>
 
-<div id="outline-container-org437452a" class="outline-3">
-<h3 id="org437452a">Design examples</h3>
-<div class="outline-text-3" id="text-org437452a">
+<div id="outline-container-org08822ff" class="outline-3">
+<h3 id="org08822ff">Design examples</h3>
+<div class="outline-text-3" id="text-org08822ff">
 <p>
-Look up whatever web design awards for 2024 and see what people are doing. It's always going to be Europe because you know why but anyway <a href="https://www.awwwards.com/">examples</a> let's review them. All of these use minor animation to show an incremental view as your scroll. Here is one <a href="https://www.evolutionaryscale.ai/">site</a> they nominated. 
+Look up whatever web design awards for 2024 and see what people are doing. It's always going to be Europe because you know why but anyway <a href="https://www.awwwards.com/">examples</a> let's review them. All of these use minor animation to show an incremental view as your scroll. Here is one <a href="https://www.evolutionaryscale.ai/">site</a> they nominated. Most of these sites I hate because you can't quickly scroll to the bottom there's a delay. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb05e4b2" class="outline-3">
-<h3 id="orgb05e4b2">Rates</h3>
-<div class="outline-text-3" id="text-orgb05e4b2">
+<div id="outline-container-orgc233061" class="outline-3">
+<h3 id="orgc233061">Rates</h3>
+<div class="outline-text-3" id="text-orgc233061">
 <p>
 You will want to bill daily not hourly. Keep increasing your rates too, if you have so many clients you can't accomodate them all then you're not charging enough of a daily rate. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1ecb81f" class="outline-3">
-<h3 id="org1ecb81f">Agencies</h3>
-<div class="outline-text-3" id="text-org1ecb81f">
+<div id="outline-container-org128bbd4" class="outline-3">
+<h3 id="org128bbd4">Agencies</h3>
+<div class="outline-text-3" id="text-org128bbd4">
 <p>
 Search for agencies and you will <a href="https://www.charleagency.com/">find</a> many of them. Agencies are often never hiring because they find people to work there by approaching the best in the business and asking them to join the agency. This is how architect agencies work, ad agencies, etc. There's probably agencies in your city they will be more receptive to meeting and working with you than some remote agency.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge9c4221" class="outline-3">
-<h3 id="orge9c4221">Software Marketplaces</h3>
-<div class="outline-text-3" id="text-orge9c4221">
+<div id="outline-container-org447afd5" class="outline-3">
+<h3 id="org447afd5">Software Marketplaces</h3>
+<div class="outline-text-3" id="text-org447afd5">
 <p>
 Try software marketplaces like Shopify or Gsuite and read all the reviews to find out what paying customers hate about a paid addon then make a better one. Notice how bad form creating software is in Shopify app marketplace that seems like something you could start selling right away and compete. If you start making money make sure you have 24/7 service and it's not a worthless chat app. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org679745e" class="outline-3">
-<h3 id="org679745e">Startups</h3>
-<div class="outline-text-3" id="text-org679745e">
+<div id="outline-container-org4b57bc2" class="outline-3">
+<h3 id="org4b57bc2">Startups</h3>
+<div class="outline-text-3" id="text-org4b57bc2">
 <p>
 A real startup requires venture capital. Here's Peter Thiel giving a very good <a href="https://www.youtube.com/watch?v=3Fx5Q8xGU8k">crash course</a> in making a startup to Stanford students. Start small and monopolize something small. Here's an old article of Sam Altman of Open AI (now a monopoly too) talking about how Y Combinator's success is due to it being &#x2026; a <a href="https://www.inc.com/christine-lagorio/sam-altman-yc-monopoly.html">monopoly</a>. 
 </p>
@@ -684,9 +766,9 @@ Who buys software companies? Salesforce. They seem the most aggressive company r
 </div>
 </div>
 
-<div id="outline-container-orge3ed63f" class="outline-2">
-<h2 id="orge3ed63f">USACO</h2>
-<div class="outline-text-2" id="text-orge3ed63f">
+<div id="outline-container-orga376d06" class="outline-2">
+<h2 id="orga376d06">USACO</h2>
+<div class="outline-text-2" id="text-orga376d06">
 <p>
 I'm going to do all the USACO contest problems using inquiry-based learning because that's exactly what you do in real life. If you took <a href="./accelerated.html">Accelerated Intro to CS</a> you have already seen almost every topic in the USACO guide and if you didn't it doesn't matter that's why there exists a guide which we can look at while we solve a problem, so you learn the algorithm as you are using it. 
 </p>
@@ -731,9 +813,9 @@ A TLE or time limit exceeded verdict shows how he would optimize to get accepted
 </p>
 </div>
 
-<div id="outline-container-org84b1099" class="outline-3">
-<h3 id="org84b1099">Big-O explained</h3>
-<div class="outline-text-3" id="text-org84b1099">
+<div id="outline-container-org1f6beaa" class="outline-3">
+<h3 id="org1f6beaa">Big-O explained</h3>
+<div class="outline-text-3" id="text-org1f6beaa">
 <p>
 The USACO guide has a good introduction to big-O and a resource we can use where running time is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
 </p>
@@ -765,37 +847,52 @@ Big-O doesn't represent growth since if f(x) = x<sup>2</sup> it does not grow to
 </div>
 
 
-<div id="outline-container-org49693b9" class="outline-3">
-<h3 id="org49693b9">Problem complexity</h3>
-<div class="outline-text-3" id="text-org49693b9">
+<div id="outline-container-org2102833" class="outline-3">
+<h3 id="org2102833">Problem complexity</h3>
+<div class="outline-text-3" id="text-org2102833">
 <p>
 Before we start trying to solve problems watch <a href="https://courses.csail.mit.edu/6.5440/fall23/lectures/L01.html">this</a> Erik Demaine lecture and skip to 09:00. We want to know what polynomial time is, what NP means, what satisfiability means and this is a good enough ~30m crash course in complexity as these concepts come up all the time in algorithm literature. He tells us most decision problems can't be solved by an algorithm which ruins the AI superintelligence dystopia. When he translates Super Mario Bros to a 3SAT decision problem we can see that almost every algorithm you can think of can be transformed to a decision problem. You don't have to keep watching this but there's an interesting intro to constraint logic/graphs. Now you can explain to someone P=NP means all the nondeterministic polynomial time algorithms that always 'lucky guess' correctly or have a magic oracle can be solved by an algorithm in deterministic polynomial time which seems impossible. 
 </p>
 
 <p>
-The rest of this course I won't do here but the book he wrote that goes with the lectures looks excellent covering topics in economics too.     
+The rest of this course I won't do here but the book he wrote that goes with the lectures looks excellent covering topics in economics too. This is here because I have seen candidates being presented with NP-hard decision problems and they are easy to recognize. You should still try and solve them but tell them you know decision problems are often not solvable by algorithms. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge7a66b1" class="outline-3">
-<h3 id="orge7a66b1">Languages</h3>
-<div class="outline-text-3" id="text-orge7a66b1">
+<div id="outline-container-org004588d" class="outline-3">
+<h3 id="org004588d">Languages</h3>
+<div class="outline-text-3" id="text-org004588d">
 <p>
-If you look at the archived <a href="https://usaco.org/index.php?page=open24results">contests</a> we are given all the test inputs/outputs as a .zip and a fully worked out solution with a proof of the bounds. This means <i>you can use any language you want</i> however I am going to do it all in C++ with Knuth's literate programming tool cweb because it mimics exactly how you would build something in a collaborative setting and after using it for a few problems it's kind of awesome and I finally get why Knuth shills this style of programming so much.  
+If you look at the archived <a href="https://usaco.org/index.php?page=open24results">contests</a> we are given all the test inputs/outputs as a .zip and a fully worked out solution with a proof of the bounds. This means/you can use any language you want like using Knuth's cweb or <i>Literate Programming</i> tool if you wanted. 
 </p>
 
 <p>
-TODO 
+We will do one of these problems every time we watch a lecture in the next module. There's nothing linear here pick what you want to master and do everything else at the same time. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org89b43d1" class="outline-2">
+<h2 id="org89b43d1">15-721 Advanced Database Systems</h2>
+<div class="outline-text-2" id="text-org89b43d1">
+<p>
+We are skipping to this first because it's the quickest way to get paid. 
 </p>
 
+<ul class="org-ul">
+<li><a href="https://15721.courses.cs.cmu.edu/spring2024/schedule.html">Full Course</a> with YouTube lectures.</li>
+</ul>
 
+<p>
+TODO
+</p>
 
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>

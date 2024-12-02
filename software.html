@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-01 Sun 18:22 -->
+<!-- 2024-12-01 Sun 19:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -202,47 +202,47 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org7d72130">Start here</a>
+<li><a href="#orgdde42e3">Start here</a>
 <ul>
-<li><a href="#org44110d5">Motivation for creating this</a></li>
+<li><a href="#org2a4d2ce">Motivation for creating this</a></li>
 </ul>
 </li>
-<li><a href="#orgd105b1f">Curriculum</a>
+<li><a href="#org4230bbb">Curriculum</a>
 <ul>
-<li><a href="#org1396726">Designing Software</a></li>
-<li><a href="#org2707791">Building Software</a></li>
-<li><a href="#org11fd127">Job Interviews</a></li>
+<li><a href="#orge8f6e34">Designing Software</a></li>
+<li><a href="#orgc12d642">Building Software</a></li>
+<li><a href="#org1776878">Job Interviews</a></li>
 </ul>
 </li>
-<li><a href="#orgd62886a">You are now a working developer</a>
+<li><a href="#orgf5ee5d1">You are now a working developer</a>
 <ul>
-<li><a href="#orga4a3174">Your first job</a></li>
-<li><a href="#org336b11e">Your second job</a></li>
+<li><a href="#orga2f8eb8">Your first job</a></li>
+<li><a href="#orgc11fccc">Your second job</a></li>
 </ul>
 </li>
-<li><a href="#org5128ffd">Software Design</a>
+<li><a href="#orgafd0baa">Software Design</a>
 <ul>
-<li><a href="#org94693c1">Version control</a></li>
-<li><a href="#orgd445fb7">Freelancing locally</a></li>
-<li><a href="#orgba6ecf5">What to charge</a></li>
-<li><a href="#org2ade70f">Starting out</a></li>
-<li><a href="#org557f66b">Research</a></li>
-<li><a href="#org2e856f9">Design examples</a></li>
-<li><a href="#org92379bd">Opportunity!</a></li>
-<li><a href="#org258186a">Design examples II</a></li>
-<li><a href="#orga91b7fc">Startups</a></li>
+<li><a href="#org93c6a53">Version control</a></li>
+<li><a href="#orga45fa00">Freelancing locally</a></li>
+<li><a href="#orgf87eb98">What to charge</a></li>
+<li><a href="#org1669b65">Starting out</a></li>
+<li><a href="#org5a17f80">Research</a></li>
+<li><a href="#org05740ab">Design examples</a></li>
+<li><a href="#orgbaf5e3e">Opportunity!</a></li>
+<li><a href="#orgd708148">Design examples II</a></li>
+<li><a href="#org74a8116">Startups</a></li>
 </ul>
 </li>
-<li><a href="#orgf3fb785">Building Software TODO</a></li>
-<li><a href="#orgaa3c8b6">Job Interviews TODO</a></li>
+<li><a href="#org9316dfe">Building Software TODO</a></li>
+<li><a href="#org58cccfa">Job Interviews TODO</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org7d72130" class="outline-2">
-<h2 id="org7d72130">Start here</h2>
-<div class="outline-text-2" id="text-org7d72130">
+<div id="outline-container-orgdde42e3" class="outline-2">
+<h2 id="orgdde42e3">Start here</h2>
+<div class="outline-text-2" id="text-orgdde42e3">
 <p>
 I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book/curriculum somebody recommended such as:
 </p>
@@ -266,9 +266,9 @@ This workshop here is about getting paid as a software developer.
 </p>
 </div>
 
-<div id="outline-container-org44110d5" class="outline-3">
-<h3 id="org44110d5">Motivation for creating this</h3>
-<div class="outline-text-3" id="text-org44110d5">
+<div id="outline-container-org2a4d2ce" class="outline-3">
+<h3 id="org2a4d2ce">Motivation for creating this</h3>
+<div class="outline-text-3" id="text-org2a4d2ce">
 <p>
 This is not a 'work in fintech' workshop but it was born from conversations I have with trading shop recruiters during work socials that I routinely run into who tell me a tale of woe how much harder it has become to find good entry-level candidates from schools so I asked them what would a non-degree candidate need.  
 </p>
@@ -287,7 +287,7 @@ Their optimal candidate:
 <li>memory allocation can happen deep inside library code you import</li>
 <li>using free can add complexity (look how many lines of code it has)</li>
 </ul></li>
-<li>knows the standard algorithmic problem solving strategies
+<li>knows the standard algorithmic problem-solving strategies
 <ul class="org-ul">
 <li>divide/decrease and conquer, transform and conquer, dynamic programming (min/max)</li>
 </ul></li>
@@ -298,40 +298,40 @@ Their optimal candidate:
 <li>is at least familiar with writing multicore code/concurrency</li>
 <li>knows what they don't know        
 <ul class="org-ul">
-<li>usually caught in interviews when they catch the candidate bluffing and ask them to define on the spot any jargon being used</li>
+<li>they catch the candidate bluffing during the interview and ask them to define on the spot any jargon used</li>
 </ul></li>
 </ul>
 
 <p>
-If you have high standards you only need to satisfy 40% of the rest of that list to be considered a great hire because you can be trained to learn everything else including whatever customized tooling/compilers or languages these firms use. Even if you were so slow that you barely finished the first technical question but it was completely correct 
+If you have high standards you only need to satisfy 40% of the rest of that list to be considered a great hire because you can be trained to learn everything else including whatever customized tooling/compilers or languages these firms use.  
 </p>
 </div>
 
-<div id="outline-container-org33a998c" class="outline-4">
-<h4 id="org33a998c">The work</h4>
-<div class="outline-text-4" id="text-org33a998c">
+<div id="outline-container-org05aa900" class="outline-4">
+<h4 id="org05aa900">The work</h4>
+<div class="outline-text-4" id="text-org05aa900">
 <p>
-There's many reasons why you'd want to work for <a href="https://gist.github.com/chrisaycock/8b7a37b1f97549517cb7789be5b06266">trading firms</a> (besides the money) and most of them like Valkyrie will hire <a href="https://www.valkyrietrading.com/careers/junior-software-engineer/">juniors</a>. 
+There are many reasons why you'd want to work for <a href="https://gist.github.com/chrisaycock/8b7a37b1f97549517cb7789be5b06266">trading firms</a> (besides the money) and most of them like Valkyrie will hire <a href="https://www.valkyrietrading.com/careers/junior-software-engineer/">juniors</a>. 
 </p>
 
 <p>
-Everyday you are the race car engineer of software like how they will rebuild an engine and retune the car after each race to squeeze out more optimization that's what you do at many of the fun firms. There's also work in building high performance math/AI models and fancy client dashboards. 
+Every day you are the race car engineer of software like how they will rebuild an engine and retune the car after each race to squeeze out more optimization that's what you do at many of the fun firms. There's also work in building high-performance math/AI models and fancy client dashboards. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org013eb5b" class="outline-4">
-<h4 id="org013eb5b">Recruiters</h4>
-<div class="outline-text-4" id="text-org013eb5b">
+<div id="outline-container-orgbf22891" class="outline-4">
+<h4 id="orgbf22891">Recruiters</h4>
+<div class="outline-text-4" id="text-orgbf22891">
 <p>
-Jove Intl, <a href="https://oxfordknight.co.uk/jobs/">Oxford Knight</a>, Reload Search, and ex-employees who have quit to become recruiters. They hire internationally for Chicago, NYC, Austin, London, Sydney, Hong Kong, Mumbai, Shanghai, Tokyo and now Singapore seems to be the location everyone is opening offices these days. LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> but works fine for harvesting recruiter offers.  
+Jove Intl, <a href="https://oxfordknight.co.uk/jobs/">Oxford Knight</a>, Reload Search, and ex-employees who have quit to become recruiters. They hire internationally for Chicago, NYC, Austin, London, Sydney, Hong Kong, Mumbai, Shanghai, Tokyo, and now Singapore seems to be the location everyone is opening offices these days. LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> but works fine for harvesting recruiter offers.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgeb8c786" class="outline-4">
-<h4 id="orgeb8c786">Selection</h4>
-<div class="outline-text-4" id="text-orgeb8c786">
+<div id="outline-container-org70b6bda" class="outline-4">
+<h4 id="org70b6bda">Selection</h4>
+<div class="outline-text-4" id="text-org70b6bda">
 <p>
 I got to try their fancy recruiter tools and paid access to LinkedIn to see the minefield of bad candidates they have to filter. 
 </p>
@@ -342,54 +342,54 @@ They told me all resumes are reviewed manually there's no automated ATS or appli
 </div>
 </div>
 
-<div id="outline-container-org57954e3" class="outline-4">
-<h4 id="org57954e3">Campus recruiting</h4>
-<div class="outline-text-4" id="text-org57954e3">
+<div id="outline-container-org940cafc" class="outline-4">
+<h4 id="org940cafc">Campus recruiting</h4>
+<div class="outline-text-4" id="text-org940cafc">
 <p>
-Getting more and more monopolized by big tech corps pressuring students with 2-week expiring offers (aka exploding offers) that are against campus hiring guidelines but they do it anyway. Think about how much money is spent on campus engagement to find (highly paid) interns and they have to hope that intern comes back after graduating and many don't. This should tell you they really want to find junior candidates willing to stay to become senior staff so if they find you as a rough diamond in a sea of mediocre trash it's an easy investment for them.   
+Getting more and more monopolized by big tech corps pressuring students with 2-week expiring offers (aka exploding offers) that are against campus hiring guidelines but they do it anyway. Think about how much money is spent on campus engagement to find (highly paid) interns and they have to hope the intern comes back after graduating and many don't. This should tell you how motivated they are to find junior candidates willing to stay to become senior staff so if they find you as a rough diamond in a sea of mediocre trash it's an easy investment for them.   
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6034462" class="outline-4">
-<h4 id="org6034462">Phone screens</h4>
-<div class="outline-text-4" id="text-org6034462">
+<div id="outline-container-orga10c6a2" class="outline-4">
+<h4 id="orga10c6a2">Phone screens</h4>
+<div class="outline-text-4" id="text-orga10c6a2">
 <p>
-I don't know if they still do this but one Chicago trading company was notorious for firing off 3 problems to solve on HackerRank seconds after you submitted an application. The 'phone screen' these days is usually Coderpad where they expect you to have a webcam and mic or test gorilla/codility/hackerrank where they also want to take pictures of you at random intervals to see if it's actually you doing the test as too many frauds have ruined it for everyone else. We'll learn all about Coderpad below. 
+I don't know if they still do this but one Chicago trading company was notorious for firing off 3 problems to solve on HackerRank immediately after applying online. The 'phone screen' these days is usually Coderpad where they expect you to have a webcam and mic or test gorilla/codility/hackerrank where they also want to take pictures of you at random intervals to see if it's actually you doing the test as too many frauds have ruined it for everyone else. We'll learn all about Coderpad below. 
 </p>
 
 <p>
-The new fizzbuzz filter is to <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> and tests how careless of a developer you are meaning you don't ask any questions about requirements and start writing code immediately. Here is a typical Coderpad style screening <a href="https://www.youtube.com/watch?v=V8DGdPkBBxg">interview</a> and there may be more than one of these because the amount of investment that goes into hiring someone new due to training aka 'onboarding' which I've been told by recruiters is typically 3 months. Imagine you are hiring developers and paying them $160k/year what would you do to ensure whoever you are paying ~$40k for 3 months of training turns out to be a good hire? This is why all these hoops exist we have to jump through but of the course the advantage is you can teach yourself for free these skills.
+The new fizzbuzz filter is to <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> and tests how careless of a developer you are meaning you don't ask any questions about requirements and start writing code immediately. Here is a typical Coderpad used screening <a href="https://www.youtube.com/watch?v=V8DGdPkBBxg">interview</a> and there may be more than one of these because the amount of investment that goes into hiring someone new due to training aka 'onboarding' which I've been told by recruiters is typically 3 months. Imagine you are hiring developers and paying them $160k/year what would you do to ensure whoever you are paying ~$40k for 3 months of training turns out to be a good hire? 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge64f114" class="outline-4">
-<h4 id="orge64f114">On-site</h4>
-<div class="outline-text-4" id="text-orge64f114">
+<div id="outline-container-orgf44080f" class="outline-4">
+<h4 id="orgf44080f">On-site</h4>
+<div class="outline-text-4" id="text-orgf44080f">
 <p>
 If you pass this then you are paid to fly out and do a 'super day' or sometimes multiple days that's where you do back-to-back interviews and job shadowing. You are often interviewing for every job in the company not just the one you applied for as they will see where you best fit so if they start asking you about math or fermi style problems they may think you are better placed in trading or even as a research assistant which is great news as the pay is much higher. 
 </p>
 
 <p>
-Each interview you are given either a deceptively simple problem to solve that is a trap (see below) or an impossible problem to solve where you are repeatedly asked to justify all reasoning then told why your reasoning is wrong. Don't worry everyone is told their reasoning is wrong you aren't failing the interview they are seeing how you react and the next task they give or future interview you should have adapted. They may ask you how long do you think it will take you to solve this and if you have a large confidence you can solve it they'll ask you how much would you bet that you can solve it if we gave you 100 poker chips. Never say you can solve it with 100% confidence and go all in. There will be someone eventually in these interviews who goes through your entire resume and tests you on everything there so if you wrote down you know Java they will ask you to describe in detail how the garbage collector works or the virtual machine. It's fine if you don't know but say you don't know don't start bluffing. 
+During each interview you are given either a deceptively simple problem to solve that is a trap (see below) or an impossible problem to solve where you are repeatedly asked to justify all reasoning and then told why your reasoning is wrong. Don't worry everyone is told their reasoning is wrong you aren't failing the interview they are seeing how you react and the next task they give or future interview you should have adapted. They may ask you how long you think it will take you to solve this and if you have a large confidence you can solve it they'll ask you how much would you bet that you can solve it if we gave you 100 poker chips. Never say you can solve it with 100% confidence and go all in. There will be someone eventually in these interviews who goes through your entire resume and tests you on everything there so if you write down that you know Java they will ask you to describe in detail how the garbage collector works or the virtual machine. It's fine if you don't know but say you don't know don't start bluffing. 
 </p>
 
 <p>
-The trap problems I've seen have an obvious area of optimization to take advantage of to squeeze out some pointless constant factors but will open a potential bug or performance sink elsewhere if you aren't taking your time thinking through the whole problem space and asking questions. The bad candidate will pounce on that and show off their meaningless optimization while the good candidate will ask what happens if I do X, is it a good tradeoff for the risks involved? Prime example they will try and get you with is <a href="https://yihui.org/en/2018/06/cache-invalidation/">cache invalidation</a> either as a mistake you made or asking you when is it a good practice for the cache to be invalidated in some program you're writing.
+The trap problems I've seen have an obvious area of optimization to take advantage of to squeeze out some pointless constant factors but will open a potential bug or performance sink elsewhere if you aren't taking your time thinking through the whole problem space and asking questions. The bad candidate will pounce on that and show off their meaningless optimization while the good candidate will ask what happens if I do X, is it a good tradeoff for the risks involved? An example they will try and get you with is <a href="https://yihui.org/en/2018/06/cache-invalidation/">cache invalidation</a> either as a mistake you made or asking you when is it a good practice for the cache to be invalidated in some program you're writing.
 </p>
 
 <p>
-Where do you learn how to justify your decisions? <a href="https://oyc.yale.edu/economics/econ-159">Game Theory</a>, a bag of analytical tools that teaches you about decision making. In fact the entire interview process could be considered a strategic, multi-round game. 
+Where do you learn how to justify your decisions? <a href="https://oyc.yale.edu/economics/econ-159">Game Theory</a> which is a bag of analytical tools that teaches you about decision-making. The entire interview process could be considered a strategic, multi-round game. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org71c4371" class="outline-4">
-<h4 id="org71c4371">Find a mentor</h4>
-<div class="outline-text-4" id="text-org71c4371">
+<div id="outline-container-orgc722fa8" class="outline-4">
+<h4 id="orgc722fa8">Find a mentor</h4>
+<div class="outline-text-4" id="text-orgc722fa8">
 <p>
-Once you are in and develop a routine meaning you are no longer panicking try and walk over to the department where all the money is being made and find a mentor to teach you by asking them to give you the work they don't like doing because you want to learn it all from scratch. All you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually want you to work with them once you have proven to be indispensible. If they get promoted you get promoted, if they go off and start a new company you are the first hire. This can be tricky because of signing multiple NDAs even between internal departments but if you are serious about wanting to learn they will tell management to make it happen. I actually took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and my life would not be the same if I hadn't watched that throwaway clip at 3am because I always assumed there was no way I could ever do this kind of work.
+Once you are in and develop a routine meaning you are no longer panicking try and walk over to the department where all the money is being made and find a mentor to teach you by asking them to give you the work they don't like doing because you want to learn it all from scratch. All you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually want you to work with them once you have proven to be indispensable. If they get promoted you get promoted, if they go off and start a new company you are the first hire. This can be tricky because of signing multiple NDAs even between internal departments but if you are serious about wanting to learn they will tell management to make it happen. I took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and my life would not be the same if I hadn't watched that throwaway clip at 3 in the morning because I always assumed there was no way I could ever do this kind of work.
 </p>
 
 <p>
@@ -401,13 +401,13 @@ If you're not interested in finance there are a few companies that mentor develo
 </div>
 
 
-<div id="outline-container-orgd105b1f" class="outline-2">
-<h2 id="orgd105b1f">Curriculum</h2>
-<div class="outline-text-2" id="text-orgd105b1f">
+<div id="outline-container-org4230bbb" class="outline-2">
+<h2 id="org4230bbb">Curriculum</h2>
+<div class="outline-text-2" id="text-org4230bbb">
 </div>
-<div id="outline-container-org1396726" class="outline-3">
-<h3 id="org1396726">Designing Software</h3>
-<div class="outline-text-3" id="text-org1396726">
+<div id="outline-container-orge8f6e34" class="outline-3">
+<h3 id="orge8f6e34">Designing Software</h3>
+<div class="outline-text-3" id="text-orge8f6e34">
 <ul class="org-ul">
 <li>MIT's <a href="https://61040-fa23.github.io/">6.1040 Software Design</a></li>
 </ul>
@@ -418,15 +418,15 @@ We audit this briefly to see how to design software people enjoy using and why c
 </div>
 </div>
 
-<div id="outline-container-org2707791" class="outline-3">
-<h3 id="org2707791">Building Software</h3>
-<div class="outline-text-3" id="text-org2707791">
+<div id="outline-container-orgc12d642" class="outline-3">
+<h3 id="orgc12d642">Building Software</h3>
+<div class="outline-text-3" id="text-orgc12d642">
 <ul class="org-ul">
 <li><a href="https://15721.courses.cs.cmu.edu/spring2024/">CMU 15-721</a> <i>Advanced Database Systems</i></li>
 </ul>
 
 <p>
-This is a course on how to build modern large-scale applications. We learn analytical databases and their internals from how s3 Amazon buckets work, how low-latency networking works, search space complexity reduction and designing microservices. If you look at <a href="https://15721.courses.cs.cmu.edu/spring2024/project-showcase.html">showcase</a> it's an example of what we'll be doing which is building out some critical part of the application either I/O, query optimizer, buffer pool manager, or whatever it is you want to build that is taught in the course. The prof Andy Pavlo teaches the features/tradeoffs you may want to consider then we write the code from scratch in your preferred language. We will learn about <a href="https://github.com/dendibakh/perf-ninja?tab=readme-ov-file">performance engineering</a>, basics of operating systems, and even some <a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">Queueing theory</a>.
+This is a course on how to build modern large-scale applications. We learn analytical databases and their internals from how s3 Amazon buckets work, how low-latency networking works, search space complexity reduction and designing microservices. If you look at <a href="https://15721.courses.cs.cmu.edu/spring2024/project-showcase.html">showcase</a> it's an example of what we'll be doing which is building out some critical part of the application either I/O, query optimizer, buffer pool manager, or whatever it is you want to build that is taught in the course. The prof Andy Pavlo teaches the features/tradeoffs you may want to consider then we write the code from scratch in your preferred language. We will learn about <a href="https://github.com/dendibakh/perf-ninja?tab=readme-ov-file">performance engineering</a>, the basics of operating systems, and even some <a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">Queueing theory</a>.
 </p>
 
 <p>
@@ -435,9 +435,9 @@ A database is a state managing system just like how React is a framework to mana
 </div>
 </div>
 
-<div id="outline-container-org11fd127" class="outline-3">
-<h3 id="org11fd127">Job Interviews</h3>
-<div class="outline-text-3" id="text-org11fd127">
+<div id="outline-container-org1776878" class="outline-3">
+<h3 id="org1776878">Job Interviews</h3>
+<div class="outline-text-3" id="text-org1776878">
 <p>
 Passing screenings, assessments, on-site interviews. 
 </p>
@@ -450,7 +450,7 @@ Passing screenings, assessments, on-site interviews.
 </ul>
 
 <p>
-USACO training is excellent and it's completely free. This is where we learn algorithmic problem solving strategies for seemingly impossible tasks. CodingGame is made by CoderPad and you almost certainly will have to use CoderPad for an interview screening.
+USACO training is excellent and it's completely free. This is where we learn algorithmic problem-solving strategies for seemingly impossible tasks. CodingGame is made by CoderPad and you almost certainly will have to use CoderPad for an interview screening.
 </p>
 
 <ul class="org-ul">
@@ -464,19 +464,19 @@ This is a workbook not a large theory text on the standard model of programming 
 </div>
 </div>
 
-<div id="outline-container-orgd62886a" class="outline-2">
-<h2 id="orgd62886a">You are now a working developer</h2>
-<div class="outline-text-2" id="text-orgd62886a">
+<div id="outline-container-orgf5ee5d1" class="outline-2">
+<h2 id="orgf5ee5d1">You are now a working developer</h2>
+<div class="outline-text-2" id="text-orgf5ee5d1">
 <p>
 Your first task is to sign into Google Docs and select a resume template. You want the simplest template and if it has colors change them to black. There's a template there called Coral, good enough, select it as you do not want a summary or anything.
 </p>
 
 <p>
-In the skills section write the skills you want to have. You are now a 'full stack' developer who specializes in high performance applications. Go <a href="https://15721.courses.cs.cmu.edu/spring2024/schedule.html">here</a> and skip down to Lecture #17. There is lectures on Google Dremel/BigQuery, Databricks/Spark, Snowflake, DuckDB, Yellowbrick and Amazon Redshift. Add those to your skill field so long as you actually plan to take those lectures. Look at the <a href="https://www.cs.cmu.edu/~15721-f24/schedule.html">fall 2024</a> semester and add Confluent and Kafka too. Write down you know Python because we will learn it for screenings and also write whatever your favorite language is. 
+In the skills section write the skills you want to have. You are now a 'full stack' developer who specializes in high performance applications. Go <a href="https://15721.courses.cs.cmu.edu/spring2024/schedule.html">here</a> and skip down to Lecture #17. There is lectures on Google Dremel/BigQuery, Databricks/Spark, Snowflake, DuckDB, Yellowbrick and Amazon Redshift. Add those to your skill field so long as you actually plan to take those lectures. Look at the <a href="https://www.cs.cmu.edu/~15721-f24/schedule.html">fall 2024</a> semester and add Confluent and Kafka too. Write you know Python because we will learn it for screenings and also write whatever your favorite language is. 
 </p>
 
 <p>
-In the experience section write you are a 'Freelance Software Engineer' because you are. Give yourself only 1-2 years of experience because you probably do have that experience if you did any introductory CS courses or hacked together some software on your own. In the bullet points write you architect and construct from scratch the internals of online analytical systems because you'll be doing this. Write you know about kernel-bypass methods for low-latency networking. If there is a skill you wished you had and are in the process of gaining then write that here. If you had other jobs put them in here too but don't lie about working for a company.
+In the experience section write you are a 'Freelance Software Engineer' because you are. Give yourself only 1-2 years of experience because you probably do have that experience if you did any introductory CS courses or hacked together some software on your own. In the bullet points write about how you can architect and construct from scratch the internals of online analytical systems because you'll be doing this. Write you know about kernel-bypass methods for low-latency networking. If there is a skill you wish you had and are in the process of gaining then write that here. If you had other jobs put them in here too but don't lie about working for a company.
 </p>
 
 <p>
@@ -484,7 +484,7 @@ In the education section write 'USACO Guide Competitive Programming Training' an
 </p>
 
 <p>
-After you build some software, or make a personal site, we can add those but you don't have to list your github on your resume as almost noone checks it anymore since there's no guarantee you didn't just copy everything there. 
+You don't have to list your GitHub on your resume as almost no one checks it anymore since there's no guarantee you didn't just copy everything there. 
 </p>
 
 <p>
@@ -492,19 +492,19 @@ You are now the perfect candidate you have enough experience you won't demand a 
 </p>
 
 <p>
-It's too early yet but eventually when you get at least half way through this workshop you want to make a LinkedIn account and add the same thing there for baiting recruiters. You want to do the same thing <a href="https://www.ycombinator.com/jobs">here</a> making a profile and if you are an American then make a profile <a href="https://www.newfounding.com/talent">here</a> it is the 'right-wing' equivalent to ycombinator but there's interesting startup jobs there, who cares about politics they are superficial distractions and you need to eat.
+It's too early yet but when you get at least halfway through this workshop you want to make a LinkedIn account and add the same thing there for baiting recruiters. Do the same thing <a href="https://www.ycombinator.com/jobs">here</a> making a profile and if you are an American then make a profile <a href="https://www.newfounding.com/talent">here</a> it is the 'right-wing' equivalent to ycombinator but there are interesting startup jobs inside and politics is a meaningless <a href="http://www.aaronsw.com/weblog/hatethenews">distraction</a> really.
 </p>
 
 <p>
-I originally learned this from a turbo redneck who dropped out of high school I met once while I was a teenager working on the docks doing wire rope rigging. This is where you stab a metal spike into very thick wire rope and unravel it to make loops and press them so cranes can lift stuff on to cargo ships. Extremely dangerous, you'd be in the rain beside a ship and the spike would be under so much tension if you slipped it would rotate a thousand times and come out flying at your face. The guy training me said that every job he's ever had he lied about his experience like the time he claimed to be a professional diesel mechanic and was underneath the truck reading a repair manual as he went. He told me he would work late into the nights just teaching himself whatever trade he had managed to bamboozle himself into being employed. His whole life was faking it until he made it.  
+I originally learned this from a turbo redneck who dropped out of high school I met once while I was a teenager working on the docks doing wire rope rigging. This is where you stab a metal spike into very thick wire rope, unravel it to make loops and press them so cranes can lift stuff on to cargo ships. Extremely dangerous, you'd be in the rain beside a ship and the spike would be under so much tension if you slipped it would rotate a thousand times and come out flying at your face. The guy training me said that every job he's ever had he lied about his experience like the time he claimed to be a professional diesel mechanic and was underneath the truck reading a repair manual as he went. He told me he would work late into the night just teaching himself whatever trade skills he had managed to fake until he made it.   
 </p>
 </div>
 
-<div id="outline-container-orga4a3174" class="outline-3">
-<h3 id="orga4a3174">Your first job</h3>
-<div class="outline-text-3" id="text-orga4a3174">
+<div id="outline-container-orga2f8eb8" class="outline-3">
+<h3 id="orga2f8eb8">Your first job</h3>
+<div class="outline-text-3" id="text-orga2f8eb8">
 <p>
-While you do this you should get paid to do code review. The easiest way for anyone on earth to do this is applying to those shady LLM prompt verification companies. Here's a few of them I personally tried but there's dozens more:
+While you do this you should get paid to do code review. The easiest way for anyone on earth to do this is by applying to those shady LLM prompt verification companies. Here are a few of them I tried but if you search there are dozens more:
 </p>
 
 <ul class="org-ul">
@@ -517,18 +517,18 @@ While you do this you should get paid to do code review. The easiest way for any
 </ul>
 
 <p>
-They pay hourly anywhere from $15-40/hr to evaluate the code that an LLM comes up with when given a prompt. These outfits are notorious for expecting 100% quality all of the time and if you make a single mistake expect to be ghosted. Some have unpaid training or seize your income if you don't transfer it out so you must treat it for what it is which is a side-gig to get paid doing code review not your primary source of income. Their platforms are filled with spyware watching if you cut + paste answers too quickly so you can't really judge 90% of the online reviews for these companies because the scammer when he's caught will run to the internet and scream the loudest.
+They pay hourly anywhere from $15-40/hr to evaluate the code that an LLM comes up with when given a prompt. These outfits are notorious for expecting 100% quality all of the time and if you make a single mistake expect to be ghosted. Some have unpaid training or seize your income if you don't transfer it out so you must treat it for what it is which is a side gig to get paid doing code review not your primary source of income. Their platforms are filled with spyware watching if you cut + paste answers too quickly therefore you can't really judge 90% of the online reviews for these companies because the scammer when he's caught will run to the internet and scream the loudest.
 </p>
 
 <p>
-Alignerr was the only one I found where you can do the code assessment tests without having to be monitored by webcam. They seem to only care about your writeup about the code explaining it like how an LLM would explain code. The assessments aren't difficult and you get an option of Python or JavaScript but there may be more assessments I only qualified for Python which was simply reversing a matrix (a 2D array or list) by sorting. There is a lot of scope errors in the multiple choice assessments but if you've done any kind of intro to CS course you'll easily pass these assessments. 
+Alignerr was the only one I found where you can do the code assessment tests without having to be monitored by webcam. They seem to only care about your writeup about the code explaining it like how an LLM would explain code. The assessments aren't difficult and you get an option of Python or JavaScript but there may be more assessments I only qualified for Python which was simply reversing a matrix (a 2D array or list) by sorting. There is a lot of scope errors in the multiple-choice assessments but if you've done any kind of intro to CS course you'll easily pass these assessments. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org336b11e" class="outline-3">
-<h3 id="org336b11e">Your second job</h3>
-<div class="outline-text-3" id="text-org336b11e">
+<div id="outline-container-orgc11fccc" class="outline-3">
+<h3 id="orgc11fccc">Your second job</h3>
+<div class="outline-text-3" id="text-orgc11fccc">
 <p>
 If you want to freelance contact designers (see design review below) and use the skills we will shortly learn for conceptual design. You will already have the entire webapp planned out now have them give life to the design and work with them in a partnership. You're now an agency. 
 </p>
@@ -544,15 +544,15 @@ If you finish the interview/building software content here you are now overquali
 </div>
 </div>
 
-<div id="outline-container-org5128ffd" class="outline-2">
-<h2 id="org5128ffd">Software Design</h2>
-<div class="outline-text-2" id="text-org5128ffd">
+<div id="outline-container-orgafd0baa" class="outline-2">
+<h2 id="orgafd0baa">Software Design</h2>
+<div class="outline-text-2" id="text-orgafd0baa">
 <p>
-MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and the professor of that course wrote a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. This is a way to design software on a piece of paper so when it comes time to actually code the app it essentially writes itself. We will also learn why some software succeeds and others failed. 
+MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and the professor of that course wrote a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. This is a way to design software on a piece of paper so that when it comes time to code the app it essentially writes itself. We will also learn why some software succeeds and others fail. 
 </p>
 
 <p>
-See this <a href="https://www.youtube.com/watch?v=WgOhtH3lugk&amp;list=PLY_nsiUEgM3nbxcO3_ONmKL-ZRhLKpfGV">YouTube video</a> where the professor of this course further explains what a concept is and how you would use a bunch of state machines to get an LLM to develop an entire web app. State in a concept means 'what it has to remember'. In their experiment they had to use 'a few hundred' prompts which then becomes your version history and I can only imagine the nightmare of trying to refactor those prompts. 
+See this <a href="https://www.youtube.com/watch?v=WgOhtH3lugk&amp;list=PLY_nsiUEgM3nbxcO3_ONmKL-ZRhLKpfGV">YouTube video</a> where the professor of this course further explains what a concept is and how you would use a bunch of state machines to get an LLM to develop an entire web app. State in a concept means 'what it has to remember'. In their experiment, they had to use 'a few hundred' prompts which then become your version history and I can only imagine the nightmare of trying to refactor those prompts. 
 </p>
 
 <p>
@@ -561,13 +561,13 @@ Audit through these slides first then see the <a href="https://essenceofsoftware
 
 <ul class="org-ul">
 <li><a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">Diverge/Converge</a> brainstorm ideas for your app then turn those ideas into concepts and work out the interface they will each need. In the tutorial for <a href="https://essenceofsoftware.com/tutorials/design-general/divergent-tactics/">divergent design</a> on the prof's personal site he used Chat-GPT to suggest additional features.</li>
-<li><a href="https://61040-fa23.github.io/recitations/recitation-2">Wireframing</a> recitation. If you go on Upwork or other freelancing sites you will see many jobs looking for someone to take a figma design and turn it into a working app. However we can use a piece of paper to wireframe or hire someone to use Figma after giving the conceptual design plans.</li>
-<li>To watch the lectures on concepts see <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', scroll to the very bottom of the materials list where there are 6 lecture videos.</li>
+<li><a href="https://61040-fa23.github.io/recitations/recitation-2">Wireframing</a> recitation. If you go on Upwork or other freelancing sites you will see many jobs looking for someone to take a figma design and turn it into a working app. We can use a piece of paper to wireframe or hire someone to use Figma after giving the conceptual design plans.</li>
+<li>To watch the lectures on concepts see <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos.</li>
 <li>More <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">Concepts</a> and at the end of these slides you have a complete draft of an application that is now trivial to code into an MVP or minimum viable product.</li>
 <li><a href="https://61040-fa23.github.io/assets/lecture-notes/L5.pdf">Design moves</a> how to unify or loosen concepts with many examples here like Zoom's screwy interface or Gmail labels.</li>
 <li><a href="https://61040-fa23.github.io/assets/lecture-notes/L6.pdf">API design</a> what a RESTful API is.</li>
 <li><a href="https://61040-fa23.github.io/assets/lecture-notes/L7.pdf">Data design</a> there are also recorded lectures <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>. NoSQL is introduced which you never want to use if not writing a temporary prototype as doing updates and inserts as JSON is a convoluted mess.</li>
-<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L10.pdf">Make things learnable</a> anyone should be able to figure out your software without overly relying on documentation. Notable examples of software where you cannot do anything without extensive docs is Tailwind CSS and Git.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L10.pdf">Make things learnable</a> anyone should be able to figure out your software without overly relying on documentation. Notable examples of software where you cannot do anything without extensive docs are Tailwind CSS and Git.</li>
 <li><a href="https://61040-fa23.github.io/assets/lecture-notes/L11.pdf">Good UIX design</a> basics.</li>
 <li><a href="https://61040-fa23.github.io/assets/lecture-notes/L13.pdf">Design innovation</a> what was novel about Zoom? Why did everyone use it instead of FaceTime, Meet, Microsoft Teams etc?</li>
 </ul>
@@ -589,14 +589,14 @@ Here's the quick rundown:
 <li>Use Chat-GPTx to come up with features you didn't think of</li>
 </ul></li>
 <li>Converge these ideas into reusable concepts</li>
-<li>Split concepts like in his examples where an expiring resource is it's own familiar concept and can be reused by other concepts</li>
+<li>Split concepts like in his examples where an expiring resource is a familiar concept and can be reused by other concepts</li>
 <li>Figure out what each concept needs to remember when it's used and what it consumes
 <ul class="org-ul">
 <li>List of Actions (state)</li>
 </ul></li>
 <li>Audit your concepts and see if there is an unwanted sync between them (loosen) or more needed sync (tighten).</li>
 <li>Write out a dependency diagram by going back to the slides and looking at what they did. Go by the criteria: A uses B only if A is simpler because it uses B and B is simpler because it doesn't need A. There is no useful subset containing A but not B. That means a legit dependency where A depends on B.</li>
-<li>Transform to a database schema how he did with concept-driven data models</li>
+<li>Transform to a database schema as he did with concept-driven data models</li>
 <li>Implement the concept in software here is a <a href="https://61040-fa23.github.io/pages/concept-implementations.html">TypeScript</a> example</li>
 </ul>
 
@@ -609,9 +609,9 @@ Check out his <a href="https://riffle.systems/essays/prelude/">riffle.systems</a
 </p>
 </div>
 
-<div id="outline-container-org94693c1" class="outline-3">
-<h3 id="org94693c1">Version control</h3>
-<div class="outline-text-3" id="text-org94693c1">
+<div id="outline-container-org93c6a53" class="outline-3">
+<h3 id="org93c6a53">Version control</h3>
+<div class="outline-text-3" id="text-org93c6a53">
 <p>
 The prof of this course with a grad student created <a href="https://gitless.com/#research">gitless.com</a> see <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> research page on MIT's software design group. Read how they audited the conceptual design of Git and found things like staging were confusing. 
 </p>
@@ -621,40 +621,40 @@ Many companies today use a customized Mercurial fork or rewritten clone instead 
 </p>
 
 <p>
-For these reasons I don't think you should bother to use git at all unless someone is forcing you. Look up how easy and simple the Mercurial guide is for a <a href="https://www.mercurial-scm.org/guide#lone_developer">lone developer</a> why use anything else. If you must then try MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i> or read 'Git for Hackers. Open source development outside of FOSS you generally fork the project to your account on Github, commit changes there then make a 'Pull Request' or PR to the original repo asking if they will merge your changes. The FOSS way is different using Savannah for example here is a <a href="https://savannah.gnu.org/patch/?10210">patch</a> it's all done in plain text using a traditional mailing list style of attaching files and people vote/review it. 
+For these reasons, I don't think you should bother to use git at all unless someone is forcing you. Look up how easy and simple the Mercurial guide is for a <a href="https://www.mercurial-scm.org/guide#lone_developer">lone developer</a>. If you must then try MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i> or read 'Git for Hackers. Open source development outside of FOSS you generally fork the project to your account on Github, commit changes there then make a 'Pull Request' or PR to the original repo asking if they will merge your changes. The FOSS way is different using Savannah for example here is a <a href="https://savannah.gnu.org/patch/?10210">patch</a> it's all done in plain text using a traditional mailing list style of attaching files and people vote/review it. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd445fb7" class="outline-3">
-<h3 id="orgd445fb7">Freelancing locally</h3>
-<div class="outline-text-3" id="text-orgd445fb7">
+<div id="outline-container-orga45fa00" class="outline-3">
+<h3 id="orga45fa00">Freelancing locally</h3>
+<div class="outline-text-3" id="text-orga45fa00">
 <p>
 Who needs software where you live? Restaurants, people cutting hair either out of their house or a storefront, people wanting to sell something to avoid Shopify fees, people wanting to rent their condo public spaces or guest suites, people wanting a dashboard of all sites they are selling on combined into one command center, so basically everyone with a business. Services need a booking or quote site such as painters, tailors or power washers or junk haulers. There's always something people want and the current offers for the service industry are largely pure shit. 
 </p>
 
 <p>
-My recommendation is to be the local Zapier style developer and stitch together software people actually use instead of inventing an inferior product yourself like everyone else is doing. People are already using business software they prefer like Quickbooks for accounting or Zoho/Salesforce for CRM, or iCal/Google calendar for bookings. You now sew that all together into a custom product for them. A good example is CRM software or customer relationship management. Every business has uses it and your software should be updating it something not a lot of turn-key solutions offer without paying hefty monthly fees. 
+My recommendation is to be the local Zapier style developer and stitch together software people actually use instead of inventing an inferior product yourself like everyone else is doing. People are already using business software they prefer like Quickbooks for accounting, Zoho/Salesforce for CRM, or iCal/Google calendar for bookings. You now sew that all together into a custom product for them. A good example is CRM software or customer relationship management. Every business has uses it and your software should be updating it something not a lot of turn-key solutions offer without paying hefty monthly fees. 
 </p>
 
 <p>
-#1 example I can think of is a centralized online ordering system for a restaurant. If you walk into one today you will see multiple tablets/laptops all provided by different delivery companies and it looks ridiculous when the employees try and manage them. Doordash/Uber and the rest all have an API you can create a single dashboard and elimate that row of tablets by the cash register they have to juggle. 
+#1 example I can think of is a centralized online ordering system for a restaurant. If you walk into one today you will see multiple tablets/laptops all provided by different delivery companies and it looks ridiculous when the employees try and manage them. Doordash/Uber and the rest all have an API you can create a single dashboard and eliminate that row of tablets by the cash register they have to juggle. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgba6ecf5" class="outline-3">
-<h3 id="orgba6ecf5">What to charge</h3>
-<div class="outline-text-3" id="text-orgba6ecf5">
+<div id="outline-container-orgf87eb98" class="outline-3">
+<h3 id="orgf87eb98">What to charge</h3>
+<div class="outline-text-3" id="text-orgf87eb98">
 <p>
 Some guy on Hacker News made a contractor rates site: <a href="https://www.contractrates.fyi/">https://www.contractrates.fyi/</a> though charge whatever you want at first then keep upping your daily rate (never charge hourly if possible). If you have too much work then your rate isn't high enough.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2ade70f" class="outline-3">
-<h3 id="org2ade70f">Starting out</h3>
-<div class="outline-text-3" id="text-org2ade70f">
+<div id="outline-container-org1669b65" class="outline-3">
+<h3 id="org1669b65">Starting out</h3>
+<div class="outline-text-3" id="text-org1669b65">
 <p>
 I tried a local experiment where the goal was to ask people about their business and what problems they were having to see if software could help. You just let others talk about themselves. I ended up with dozens of leads and if I was a software mercenary I would have picked up a lot of work. Unfortunately I'm not a software merc but kind of thinking I should be now that I've seen how easy it is. Everyone wants to work with someone they've personally met not a stranger on the internet. 
 </p>
@@ -665,67 +665,63 @@ I also called people out of the blue from LinkedIn from various local companies 
 </div>
 </div>
 
-<div id="outline-container-org557f66b" class="outline-3">
-<h3 id="org557f66b">Research</h3>
-<div class="outline-text-3" id="text-org557f66b">
+<div id="outline-container-org5a17f80" class="outline-3">
+<h3 id="org5a17f80">Research</h3>
+<div class="outline-text-3" id="text-org5a17f80">
 <p>
 Here's what I found out by walking into places and meeting people. Every one of them had a problem with existing software they wanted to modify and they had <i>never</i> met anyone locally who could independently write software who wasn't some SaaS sales guy pushing an existing product.  
 </p>
 </div>
 
-<div id="outline-container-orgf1dd9de" class="outline-4">
-<h4 id="orgf1dd9de">Salons</h4>
-<div class="outline-text-4" id="text-orgf1dd9de">
+<div id="outline-container-orge85f221" class="outline-4">
+<h4 id="orge85f221">Salons</h4>
+<div class="outline-text-4" id="text-orge85f221">
 <p>
-An <a href="http://www.nailproject.com/">example</a> using a nail salon. Their website basically points to Instagram and solely consists of a form that means they will have to phone or text/email whoever books to correct any over bookings. This can all be automated easily and sync some iCal protocol. Every one of these businesses rents out chairs to independent freelancers so they needed a fast way to add/remove new names to the booking calendar as these freelancers move around all the time. Deposit for appointment bookings they wanted too but nobody offers this. They wanted to offer gift cards too like someone can pay for a service and give it away but needed a way to know if said cards were legit if they started selling dozens of them, another software problem. 
+An <a href="http://www.nailproject.com/">example</a> using a nail salon. Their website points to Instagram and solely consists of a form that means they will have to phone or text/email whoever books to correct any overbookings. This can all be automated easily and sync some iCal protocol. Every one of these businesses rents out chairs to independent freelancers so they needed a fast way to add/remove new names to the booking calendar as these freelancers move around all the time. Deposit for appointment bookings they wanted too but nobody offers this. They wanted to offer gift cards too like someone can pay for a service and give it away but needed a way to know if said cards were legit if they started selling dozens of them, another software problem. 
 </p>
 
 <p>
-Many of these salons are now mixed use meaning some girl doing tattoos will be freelancing out of 'Clarissa's Nails' and while I was standing outside these places entering notes in my phone I had a few of their customers asking me if I've heard of 'Samantha's Tattoos' or whatever because it wasn't clear on any of their websites they were a shared business. There's another problem easily solved with custom software the full instructions can be put in the text or email when booking. 
-</p>
-
-<p>
-My own barber mainly took appointments by phone call/text than had to manually enter it into some shared iCal protocol scheme the shop maintained as a centralized accounting as all barbershops rent chairs. When he sells product the barbershop offers he has to manually enter this too again something that custom software can make easier but they've never met anyone who offered to write it.
+Many of these salons are now mixed-use meaning some girl doing tattoos will be freelancing out of 'Clarissa's Nails' and while I was standing outside these places entering notes in my phone I had a few of their customers asking me if I've heard of 'Samantha's Tattoos' or whatever because it wasn't clear on any of their websites they were a shared business. There's another problem easily solved with custom software the full instructions can be put in the text or email when booking. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga5e1ade" class="outline-4">
-<h4 id="orga5e1ade">Restaurants/Bars</h4>
-<div class="outline-text-4" id="text-orga5e1ade">
+<div id="outline-container-orge0fa63d" class="outline-4">
+<h4 id="orge0fa63d">Restaurants/Bars</h4>
+<div class="outline-text-4" id="text-orge0fa63d">
 <p>
-Restaurants I found use at least 3-4 different software vendors. Every one prefers to handwrite tickets and have the wait staff manually enter it into an inventory and restaurant management system that uses a proven industry touch screen for high volume that's not some consumer grade junk like iPads. This kind of software would be impossible to compete with as tax authorities have to certify them to avoid classic fraud where the restaurant pockets the sales tax by generating an internal bill showing less sales tax then generating the real bill the customer receives. We don't have to compete with that software we only have to figure out how to interface with it and they all had APIs open for developers to use. 
+Restaurants I found use at least 3-4 different software vendors. They all prefer handwritten order tickets then the wait staff manually use a restaurant management system with a touch screen to send the order to the kitchen. These are not consumer grade junk they have high-volume grade hardware. This kind of software would be impossible to compete with as tax authorities have to certify them to avoid classic fraud where the restaurant pockets the sales tax by generating an internal bill showing less sales tax then generating the real bill the customer receives. We don't have to compete with that software we only have to figure out how to interface with it and they all have APIs open for developers to use. 
 </p>
 
 <p>
-The second software they used was table reservations which we can compete with. They absolutely hated every option because of insanity level fees like 10-20% 'service charge' being added on which customers mistakenly thought was the tip but it was the scam fee for the online booking service. Prepaid reservations of any amount reduced no shows and only 1 online service they knew of offered it but charged way too much. 
+The second software they used was table reservations which we can compete with. They absolutely hated every option because of ripoff fees like 10-20% 'service charge' being added on which customers mistakenly thought was the tip but it was the scam fee for the online booking service. Prepaid reservations of any amount reduced no shows and only 1 online service they knew of offered it but charged way too much. 
 </p>
 
 <p>
-The third software they used was online orders/main website which usually just redirected to Uber or similar gig service for online orders. As noted before the #1 request was to centralize all these 3rd party order sites into a single dashboard. Another request was some kind of dashboard for reputation management and a way to capture and control reviews meaning if you had a bad review you get directed to management to correct and if it was a good review you are redirected to google reviews or elsewhere. There is schemes for capturing such as emailing them a yes/no question about the experience and if they click yes redirect to a public review site and if no redirect to contract the restaurant manager. I'm sure there's better techniques but I didn't look into it too much. 
+The third software they used was online orders/main website which usually just redirected to Uber or a similar gig service for online orders. As noted before the #1 request was to centralize all these 3rd party order sites into a single dashboard. Another request was some kind of dashboard for reputation management and a way to capture and control reviews meaning if you had a bad review you get directed to management to correct and if it was a good review you are redirected to google reviews or elsewhere. There are schemes for capturing such as emailing them a yes/no question about the experience and if they click yes redirect to a public review site and if no redirect to contract the restaurant manager. I'm sure there's better techniques but I didn't look into it too much. 
 </p>
 
 <p>
-Not a single retaurant I talked to had ever met a software guy in person and asked about how to automate ticket sales for special events, sell merch, automating volumes on TVs showing sports games so the commercials were muted or music played, lighting automation to bring up the lighting during breaks in games, asking me if customized POS is available (Stripe Terminal) to capture signatures so they don't have to dig them out for disputes months later and many other problems this was a gold mine of potential work I didn't expect.  
+Not a single restaurant I talked to had ever met a software guy in person and asked about how to automate ticket sales for special events, sell merch, automate volumes on TVs showing sports games so the commercials were muted or music played, lighting automation to bring up the lighting during breaks in games, asking me if customized POS is available (Stripe Terminal) to capture signatures so they don't have to dig them out for disputes months later and many other problems this was a gold mine of potential work I didn't expect.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8c0b28a" class="outline-4">
-<h4 id="org8c0b28a">Tailors</h4>
-<div class="outline-text-4" id="text-org8c0b28a">
+<div id="outline-container-org02b0963" class="outline-4">
+<h4 id="org02b0963">Tailors</h4>
+<div class="outline-text-4" id="text-org02b0963">
 <p>
-If you look at Huntsman suit tailors on Savile Row they have an interesting website where you can click <i>Made to Order</i> and customize almost everything. This feature was easy to write and I used an AI image generator to make the drawings. I approached some tailors locally and every one said this is exactly what they wanted plus some kind of zoom/facetime way to book consultations. 
+If you look at Huntsman suit tailors on Savile Row they have an interesting website where you can click <i>Made to Order</i> and customize almost everything. This feature was easy to write and I used an AI image generator to make the drawings. I approached some tailors locally and they said this is exactly what they wanted plus some kind of zoom/facetime way to book consultations. 
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2e856f9" class="outline-3">
-<h3 id="org2e856f9">Design examples</h3>
-<div class="outline-text-3" id="text-org2e856f9">
+<div id="outline-container-org05740ab" class="outline-3">
+<h3 id="org05740ab">Design examples</h3>
+<div class="outline-text-3" id="text-org05740ab">
 <p>
-There's many website award sites let's look at a few of them. Here are some <a href="https://www.awwwards.com/websites/nominees/">nominees</a> we can mercilessly review using our conceptual design skills we just learned. 
+Let's look at some website award sites. Here are some <a href="https://www.awwwards.com/websites/nominees/">nominees</a> we can mercilessly review using the conceptual design skills we just learned. 
 </p>
 
 <p>
@@ -737,19 +733,19 @@ You can use DevTools in FireFox/Chrome to see responsive mode (a phone/tablet sc
 </ul>
 
 <p>
-The purpose of this site is interior/exterior designers showcasing a portfolio. 
+The purpose of this site is a portfolio showcase for interior/exterior designers. 
 </p>
 
 <p>
-Intros are cancer but this one is short at least. You can click to dynamically change the layout (desktop view) a concept with no purpose at all. The drawings of staff look like wojaks. The 'About' page doesn't use a scroll bar or scroll concept indicating there is more to see, we'll see other sites do. The reel is laggy/broken on desktop I just got a white box that expanded to fill up my screen and only noticed it had content when I went back to it after. This reel should be on the landing page instead of the wojaks or simply their portfolio on the landing page. There is a useless FAQ for each designer with some answers not finished and it's not even a FAQ as I'm sure nobody is asking them what essential podcast we should be listening to.  
+Intros are cancer but this one is short at least. You can click to dynamically change the layout (desktop view) so a concept with no purpose. The drawings of staff look like wojaks. The 'About' page doesn't use a scroll bar or scroll concept indicating there is more to see, we'll see other sites do. The reel is laggy/broken on desktop I just got a white box that expanded to fill up my screen and only noticed it had content when I went back to it after. This reel should be on the landing page instead of the wojaks or simply their portfolio on the landing page. There is a useless FAQ for each designer with some answers not finished and it's not even a FAQ as I'm sure nobody is asking them what essential podcast we should be listening to.  
 </p>
 
 <p>
-Desktop view when you click on their portfolio of <a href="https://by-kin.com/work">work</a> you get an epilepsy triggering overly sensitive scroll that confusingly begins half way through their portfolio and bombards you with changing images. Terrible concept. Responsive mode uses a totally different concept so 2 concepts with same purpose. Look at the description <a href="https://by-kin.com/work/flint-glass-works">here</a>: "Paying homage to the buildings past as a glass works. Many furniture elements, coffee tables etc feature different coloured and types of glass. Creating an eclectic mix of materials." whoever wrote that doesn't speak English and there's no pictures of different types of colored glass so I guess nobody could be bothered to do any quality standards. Google reviews has much better pics of the full space and most people rave about the design in the reviews but none of that is shown in the portfolio. 
+Desktop view when you click on their portfolio of <a href="https://by-kin.com/work">work</a> you get an epilepsy triggering overly sensitive scroll that confusingly begins halfway through their portfolio and bombards you with changing images. Terrible concept. Responsive mode uses a totally different concept so 2 concepts, 1 purpose. Look at the description <a href="https://by-kin.com/work/flint-glass-works">here</a>: "Paying homage to the buildings past as a glass works. Many furniture elements, coffee tables etc feature different coloured and types of glass. Creating an eclectic mix of materials." whoever wrote that doesn't speak English and there are no pictures of different types of colored glass so I guess nobody could be bothered to do any quality standards. Google reviews have much better pics of the full space and most people rave about the design in the reviews but none of that is shown in the portfolio. 
 </p>
 
 <p>
-There's a journal which is not updated which tells me they had a limited contract with this developer and now that it's over nobody knows how to update the journal. This is the curse of all bespoke software and why most businesses prefer to simply have an Instagram or Facebook page because then at least they can update it themselves. A good developer would make this a permanent feature and easy for them to upload. The LinkedIn link is broken and I don't think these guys even have a group LinkedIn they are a collaboration of different freelance designers, another mistake. The contact page is pointless as the email address is already on the main menu here should be some kind of form for directing the communication and a phone number as I never trust any business that doesn't have one. 
+There's a journal with no recent updates which tells me they had a limited contract with this developer and now that it's over nobody knows how to update the journal. This is the curse of all bespoke software and why most businesses prefer to simply have an Instagram or Facebook page because then at least they can update it themselves. A good developer would make this a permanent feature and easy for them to upload. The LinkedIn link is broken and I don't think these guys even have a group LinkedIn they are a collaboration of different freelance designers, another mistake. The contact page should be some kind of form for directing the communication and a phone number as I never trust any business that doesn't have one. 
 </p>
 
 <p>
@@ -781,36 +777,36 @@ The purpose of this site is a trade catalog for bulk orders by architects and de
 </p>
 
 <p>
-The desktop view is guilty of the worse sin which is a scroll that keeps repeating itself for infinity whereas phone view is nicely done and we finally get a scroll bar, wow. I gave up reviewing the desktop version it's totally unusable and broken everywhere. On mobile view, the most critical part of the site 'About Monolith' is only accessible by scrolling the front page and is not in the Menu so we have Menu concept with no purpose. 'Monolith Trade' oddly redirects to a 3rd party <a href="https://www.typeform.com/pricing/">form</a> that only asks for an email, not sure why it exists. If you want to capture emails for mailchimp style advertising or other marketing you don't need this $50/month form.
+The desktop view is guilty of the worst internet crime which is a scroll that keeps repeating itself for infinity whereas the phone view is nicely done and we finally get a scroll bar, wow. I gave up reviewing the desktop version it's totally unusable and broken everywhere. On mobile view, the most critical part of the site 'About Monolith' is only accessible by scrolling the front page and is not in the menu so we have menu concept with no purpose. 'Monolith Trade' oddly redirects to a 3rd party <a href="https://www.typeform.com/pricing/">form</a> that only asks for an email, not sure why it exists. If you want to capture emails for mailchimp style advertising or other marketing you don't need this $50/month form.
 </p>
 </div>
 
-<div id="outline-container-org7c5e614" class="outline-4">
-<h4 id="org7c5e614">Review the Reviewers</h4>
-<div class="outline-text-4" id="text-org7c5e614">
+<div id="outline-container-orgc28e1bd" class="outline-4">
+<h4 id="orgc28e1bd">Review the Reviewers</h4>
+<div class="outline-text-4" id="text-orgc28e1bd">
 <p>
-Members of the award site can vote on and rate for other sites, let's review their reviews to find someone who is actually honest. The ratings for the Monolith site there is only one honest review with everyone else giving this a 8+/10 except for this <a href="https://vstefanova.com/">Bulgarian</a> developer. Looking at her site it's actually pretty good for one there's a real scroll bar. She clearly lays out the development process in the <a href="https://vstefanova.com/faq">FAQ</a> which I would promote to the front page and is an actual FAQ unlike that other site we reviewed earlier. The desktop view is not broken, a first! I would remove the hobbies as this should be for business not personal but this already has a better conceptual design than the last 3 sites we reviewed.
+Members of the award site can vote on and rate other sites. Let's review the reviewers to find someone who is actually honest as they seem to give every site too high a score in hopes when they post their own websites for nomination that they are returned the favor. The ratings for the Monolith site there is only one honest review with everyone else giving this a 8+/10 except for this <a href="https://vstefanova.com/">Bulgarian</a> developer. Looking at her site it's actually pretty good for one there's a real scroll bar. She clearly lays out the development process in the <a href="https://vstefanova.com/faq">FAQ</a> which I would promote to the front page and is an actual FAQ unlike the other site we reviewed earlier. The desktop view is not broken, a first! I would remove the hobbies as this should be for business not personal but this already has a better conceptual design than the last 3 sites we reviewed.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org92379bd" class="outline-3">
-<h3 id="org92379bd">Opportunity!</h3>
-<div class="outline-text-3" id="text-org92379bd">
+<div id="outline-container-orgbaf5e3e" class="outline-3">
+<h3 id="orgbaf5e3e">Opportunity!</h3>
+<div class="outline-text-3" id="text-orgbaf5e3e">
 <p>
 These website award sites are filled with freelancers and agencies most of them front end designers. You know how to properly design software and can build it from scratch. They can make it come to life with css and animations. Why not contact some of these people and show them your software skill portfolio?
 </p>
 
 <p>
-If you need an inexpensive or free hobby hosting then look at the deployments for <a href="https://neon.tech/docs/guides/integrations">Neon</a> which is a free tier serverless PostgreSQL dbms. If you need a domain then use <a href="https://porkbun.com/">porkbun</a> it comes with a Let's Encrypt SSL cert. However you can design client native dashboards or phone apps too why restrict yourself to only web apps. Most commmand HQ style dashboards run in a browser locally and still need css design.  
+If you need inexpensive or free hobby hosting then look at the deployments for <a href="https://neon.tech/docs/guides/integrations">Neon</a> which is a free tier serverless PostgreSQL dbms. If you need a domain then use <a href="https://porkbun.com/">porkbun</a> it comes with a Let's Encrypt SSL cert. You can design desktop dashboards or phone apps too why restrict yourself to only web apps. Most commmand HQ style dashboards run in a browser locally and still need css design.  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org258186a" class="outline-3">
-<h3 id="org258186a">Design examples II</h3>
-<div class="outline-text-3" id="text-org258186a">
+<div id="outline-container-orgd708148" class="outline-3">
+<h3 id="orgd708148">Design examples II</h3>
+<div class="outline-text-3" id="text-orgd708148">
 <p>
 Let's look at the <a href="https://www.cssdesignawards.com/">CSS Design Awards</a>.
 </p>
@@ -824,11 +820,11 @@ Warning! Some of these sites here like this bespoke <a href="https://www.christo
 </ul>
 
 <p>
-The purpose of this website is a portfolio for a wedding photography biz.
+The purpose of this website is a portfolio for a photography biz.
 </p>
 
 <p>
-The intro finally has a real purpose! It sets up the portfolio and displays that before anything else as all these kind of freelancer biz sites should. The desktop view cookie and privacy box is non-intrusive and well designed instead of those awful ones that take up half the screen. The scroll concept on the mobile view is well done and the desktop view has a real scroll bar. When you click on a portfolio entry the concept here of see more photos tells you the amount which was taught in the MIT course of adding information bits. Everything here has a clear purpose. The contact form is actually useful. The animations are useful and not overused like when activating the portfolio filter it rotates to open then rotates back to closed.
+The intro finally has a real purpose! It sets up the portfolio and displays that before anything else. The desktop view cookie and privacy box is non-intrusive and well designed instead of those awful ones that take up half the screen. The scroll concept on the mobile view is well done and the desktop view has a real scroll bar. When you click on a portfolio entry the concept here of see more photos tells you the amount which was taught in the MIT course about adding information bits. Everything here has a clear purpose. The contact form is actually useful. The animations are useful and not overused like when activating the portfolio filter it rotates to open and then rotates back to closed.
 </p>
 
 <ul class="org-ul">
@@ -845,9 +841,9 @@ Found a conceptual design misfit. If you click contact in the menu you don't get
 </div>
 </div>
 
-<div id="outline-container-orga91b7fc" class="outline-3">
-<h3 id="orga91b7fc">Startups</h3>
-<div class="outline-text-3" id="text-orga91b7fc">
+<div id="outline-container-org74a8116" class="outline-3">
+<h3 id="org74a8116">Startups</h3>
+<div class="outline-text-3" id="text-org74a8116">
 <p>
 A real startup requires venture capital. Here's Peter Thiel giving a very good <a href="https://www.youtube.com/watch?v=3Fx5Q8xGU8k">crash course</a> in making a startup to Stanford students. Start small and monopolize something small. Here's an old article of Sam Altman of Open AI (now a monopoly too) talking about how Y Combinator's success is due to it being &#x2026; a <a href="https://www.inc.com/christine-lagorio/sam-altman-yc-monopoly.html">monopoly</a>. 
 </p>
@@ -859,12 +855,12 @@ I researched the Y Combinator startup school so you don't have to and they tell 
 </div>
 </div>
 
-<div id="outline-container-orgf3fb785" class="outline-2">
-<h2 id="orgf3fb785">Building Software TODO</h2>
+<div id="outline-container-org9316dfe" class="outline-2">
+<h2 id="org9316dfe">Building Software TODO</h2>
 </div>
-<div id="outline-container-orgaa3c8b6" class="outline-2">
-<h2 id="orgaa3c8b6">Job Interviews TODO</h2>
-<div class="outline-text-2" id="text-orgaa3c8b6">
+<div id="outline-container-org58cccfa" class="outline-2">
+<h2 id="org58cccfa">Job Interviews TODO</h2>
+<div class="outline-text-2" id="text-org58cccfa">
 <hr />
 <p>
 <a href="./index.html">Home</a>

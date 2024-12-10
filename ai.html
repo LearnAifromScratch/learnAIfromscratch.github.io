@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-20 Sun 21:09 -->
+<!-- 2024-12-09 Mon 18:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2024</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="jbh" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,90 +191,43 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">AI in 2024</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf539667">Intro</a></li>
-<li><a href="#org34c9df4">PreReqs</a>
-<ul>
-<li><a href="#org231b9bf">Scalar &amp; Vector Calculus</a></li>
-</ul>
-</li>
+<li><a href="#orgfd0e960">Intro</a></li>
+<li><a href="#org3314d4f">PreReqs</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgf539667" class="outline-2">
-<h2 id="orgf539667">Intro</h2>
-<div class="outline-text-2" id="text-orgf539667">
+<div id="outline-container-orgfd0e960" class="outline-2">
+<h2 id="orgfd0e960">Intro</h2>
+<div class="outline-text-2" id="text-orgfd0e960">
 <p>
-There's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) which reverse engineers neural networks similar to how you'd reverse engineer a compiled program. Neural networks have different architectures just like there is different software architectures (x86, RISC, Java/Ethereum virtual machine). The most popular is transformer architecture for large language models like ChatGPT.
+There's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) which reverse engineers neural networks similar to how you'd reverse engineer a compiled program. Neural networks have different architectures just like there is different software architectures (x86, RISC, ARM). The most popular is transformer architecture for large language models like ChatGPT.
 </p>
 
 <p>
-<a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a concrete <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for this and even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program. 
+<a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a concrete <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for this and even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program.
+</p>
+
+<p>
+It requires knowing all there is to know about the internals of ML software so a side-effect is you can be a 'ML engineer', build your own <a href="https://hanlab.mit.edu/courses/2024-fall-65940">TinyML</a> or even get paid for bounties to work on GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a>.
 </p>
 </div>
 
-<div id="outline-container-org75f1b71" class="outline-4">
-<h4 id="org75f1b71">Limits of AI</h4>
-<div class="outline-text-4" id="text-org75f1b71">
+<div id="outline-container-org75c8f8d" class="outline-4">
+<h4 id="org75c8f8d">Limits of AI</h4>
+<div class="outline-text-4" id="text-org75c8f8d">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -281,9 +235,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-org34c9df4" class="outline-2">
-<h2 id="org34c9df4">PreReqs</h2>
-<div class="outline-text-2" id="text-org34c9df4">
+<div id="outline-container-org3314d4f" class="outline-2">
+<h2 id="org3314d4f">PreReqs</h2>
+<div class="outline-text-2" id="text-org3314d4f">
 <p>
 Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">prerequisite background</a> I plotted the fastest possible way to satisfy them:
 </p>
@@ -319,21 +273,16 @@ Alan Edelman's modernized 18.06 is <a href="https://github.com/mitmath/1806/blob
 <p>
 There's also <a href="https://deeplearning.cs.cmu.edu/F24/index.html">11-785 Intro to Deep Learning</a> that covers some new architectures. <a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> is about the libraries of PyTorch and TensorFlow and programming it all from scratch. Neel Nanda will teach us everything about transformers after these prereqs.  
 </p>
-</div>
 
 
-<div id="outline-container-org231b9bf" class="outline-3">
-<h3 id="org231b9bf">Scalar &amp; Vector Calculus</h3>
-<div class="outline-text-3" id="text-org231b9bf">
 <p>
-.. TODO take the <a href="https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/">guide</a>.
+TODO
 </p>
 
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>

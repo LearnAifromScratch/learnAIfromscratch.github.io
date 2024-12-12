@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-07-02 Tue 17:47 -->
+<!-- 2024-12-12 Thu 04:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Let's Read the Art of Computer Programming</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="jbh" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,125 +191,85 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
 
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Let's Read the Art of Computer Programming</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc3269f4">Intro</a>
+<li><a href="#org25fce8f">Intro</a>
 <ul>
-<li><a href="#orgbd91223">Get the book(s)</a></li>
-<li><a href="#org4eddf4f">The Bill Gates quote</a></li>
-<li><a href="#org586c233">MMIX/MIX</a></li>
-<li><a href="#org8f76214">Optimizing compilers are dead</a></li>
+<li><a href="#org8dacdf5">Get the book(s)</a></li>
+<li><a href="#org8a83262">The Bill Gates quote</a></li>
+<li><a href="#orga478b76">MMIX/MIX</a></li>
+<li><a href="#org8eb3b9b">Optimizing compilers are dead</a></li>
 </ul>
 </li>
-<li><a href="#orga6f64c5">Prereq: Assembly</a>
+<li><a href="#org4554112">Prereq: Assembly</a>
 <ul>
-<li><a href="#orgeffbb2a">New Orleans</a></li>
-<li><a href="#orgc0f1379">Sydney</a></li>
-<li><a href="#org42419c8">Hanoi</a></li>
-<li><a href="#org45ad6d8">Cusco</a></li>
-<li><a href="#orgebf851e">Reykjavik</a></li>
-<li><a href="#org1ae6cfc">Whitehorse</a></li>
-<li><a href="#org5be1a4a">Montevideo</a></li>
+<li><a href="#orge525046">New Orleans</a></li>
+<li><a href="#org78b1117">Sydney</a></li>
+<li><a href="#orgbc85407">Hanoi</a></li>
+<li><a href="#orge5532a1">Cusco</a></li>
+<li><a href="#org209fc6b">Reykjavik</a></li>
+<li><a href="#orgf76d342">Whitehorse</a></li>
+<li><a href="#org93a528d">Montevideo</a></li>
 </ul>
 </li>
-<li><a href="#orgcce7281">Prereq: Architecture</a></li>
-<li><a href="#org34c596e">Prereq: Calculus</a>
+<li><a href="#org0d01d50">Prereq: Architecture</a></li>
+<li><a href="#org71115c7">Prereq: Calculus</a>
 <ul>
-<li><a href="#orgd4c3b18">How to learn calculus</a></li>
-<li><a href="#org6d66678">Lax 1.1</a></li>
-<li><a href="#orgfcdc9b0">Lax 1.2</a></li>
-<li><a href="#org0a73960">Lax 1.3</a></li>
+<li><a href="#org37e0fdc">Crash course</a></li>
 </ul>
 </li>
-<li><a href="#orga82b738">1.1 Algorithms</a></li>
+<li><a href="#org47c1505">1.1 Algorithms</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgc3269f4" class="outline-2">
-<h2 id="orgc3269f4">Intro</h2>
-<div class="outline-text-2" id="text-orgc3269f4">
+<div id="outline-container-org25fce8f" class="outline-2">
+<h2 id="org25fce8f">Intro</h2>
+<div class="outline-text-2" id="text-org25fce8f">
 <p>
-I'm going to start with <i>Volume 1: Fundamental Algorithms</i> 3rd edition by Don Knuth and keep going. These books don't seem to be a reference much of the index for major results points to exercises and the content is often comparing two algorithms together. Kirchoff's law of electrical circuit theory is used to analyze program control flow where the number of times an instruction is executed must equal the number of times a program transfers to that instruction. Knuth dislikes jargon and everything is practical you won't find theoretically good on paper algorithms where inputs are jacked up to infinity that hide a huge constant of ops like when Knuth wrote <i>The Stanford GraphBase</i> <a href="https://www-cs-faculty.stanford.edu/~knuth/sgb.html">book</a> and discovered Kruskal's algorithm beats Fibonacci heaps. The algorithms from that book are all in volume 4. 
+I'm going to start with <i>Volume 1: Fundamental Algorithms</i> 3rd edition by Don Knuth and keep going. These are now the most relevant computer science books as industry has shifted to creating their own custom hardware and software stacks. Data is now so massive we can no longer move it around to be computed and the state-of-the-art architecture these days perform computation at the data. Knuth's MMIX (RISC architecture) he created for these books has a free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, then test running various algorithms on a custom config. This is exactly what you do when writing a prototype FPGA you plan to later manufacturer into a chip. 
 </p>
 
 <p>
@@ -316,19 +277,19 @@ The physical book itself is a representation of the careful work that has gone i
 </p>
 </div>
 
-<div id="outline-container-orgbd91223" class="outline-3">
-<h3 id="orgbd91223">Get the book(s)</h3>
-<div class="outline-text-3" id="text-orgbd91223">
+<div id="outline-container-org8dacdf5" class="outline-3">
+<h3 id="org8dacdf5">Get the book(s)</h3>
+<div class="outline-text-3" id="text-org8dacdf5">
 <p>
-See the <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site for details or where to get official pdf/copies. I'm using the 3rd edition look for the most recent printings that fix errata. If you can't buy them use <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> to get a pdf.
+See the <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site for details or where to get official pdf/copies. I'm using the 3rd edition look for the most recent printings that fix errata. If you can't buy them use <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> or Anna's Archive to get a pdf.
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org4eddf4f" class="outline-3">
-<h3 id="org4eddf4f">The Bill Gates quote</h3>
-<div class="outline-text-3" id="text-org4eddf4f">
+<div id="outline-container-org8a83262" class="outline-3">
+<h3 id="org8a83262">The Bill Gates quote</h3>
+<div class="outline-text-3" id="text-org8a83262">
 <p>
 Everybody talks about the famous old quote in the back of volume 1 by Gates: 'you should definitely send me a resume if you can read the whole thing'. I found a more recent quote from 2005:
 </p>
@@ -362,36 +323,36 @@ I'm not sure what the double-star problems are maybe the earlier editions had th
 </div>
 </div>
 
-<div id="outline-container-org586c233" class="outline-3">
-<h3 id="org586c233">MMIX/MIX</h3>
-<div class="outline-text-3" id="text-org586c233">
+<div id="outline-container-orga478b76" class="outline-3">
+<h3 id="orga478b76">MMIX/MIX</h3>
+<div class="outline-text-3" id="text-orga478b76">
 <p>
 Volumes 1-3 still contain the original MIX machine and there exists <a href="https://www.gnu.org/software/mdk/">GNU MDK</a> or <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">other software</a> to run MIXware meaning compile .mixal files to .mix and simulate running them either with mixvm, gmixvm GUI, or a scheme interpreter.
 </p>
 
 <p>
-There exists the <i>MMIX Supplement</i> by Martin Ruckert to replace the 1960s MIX architecture with MMIX (RISC) in volumes 1-3 which Knuth has announced on his book site he plans to someday replace. MMIX arch you can customize the hardware however you want using Knuth's free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, bus speeds, then test running various algorithms on that custom config. He documented that program with the book <i>MMIXware: A RISC Computer for the Third Millennium</i> and all the code is written in literate programming style so you can read the programs like you would any other book. MMIX software there is mixmasters <a href="http://mmix.cs.hm.edu/getstarted.html">version</a> or the 2017 sealed in time Knuth <a href="https://www-cs-faculty.stanford.edu/~knuth/programs/mmix.tar.gz">version</a> you compile from <a href="https://www-cs-faculty.stanford.edu/~knuth/cweb.html">c-web sources</a> that are extensively documented. 
+There exists the <i>MMIX Supplement</i> by Martin Ruckert to replace the 1960s MIX architecture with MMIX (RISC) in volumes 1-3 which Knuth has announced on his book site he plans to someday replace. This arch has MMIXware tools and documented their design with the book <i>MMIXware: A RISC Computer for the Third Millennium</i> and all the code is written in literate programming style so you can read the programs like you would any other book. MMIX software there is mixmasters <a href="http://mmix.cs.hm.edu/getstarted.html">version</a> or the 2017 sealed in time Knuth <a href="https://www-cs-faculty.stanford.edu/~knuth/programs/mmix.tar.gz">version</a> you compile from <a href="https://www-cs-faculty.stanford.edu/~knuth/cweb.html">c-web sources</a> that are extensively documented. 
 </p>
 
 <p>
-Knuth releases these updates called <a href="https://www-cs-faculty.stanford.edu/~knuth/mmix.html">fascicles</a> as drop in replacements for chapters and there's an MMIX replacement for most of 1.3.x but since the first 3 books have so much MIXAL content and I carry them around to read I'll switch to MMIX whenever we reach volume 4. 
+I was originally going to do this in the original MIX until Chapter 4 but urgency at my job to start writing customized hardware means I have to start with MMIX. We were always using FPGAs but now they have literally taken over because x86 can no longer scale due to many problems we'll learn about so if you can extract some program logic and manufacture that into a hardware accelerator it's cheaper than trying to scale x86. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8f76214" class="outline-3">
-<h3 id="org8f76214">Optimizing compilers are dead</h3>
-<div class="outline-text-3" id="text-org8f76214">
+<div id="outline-container-org8eb3b9b" class="outline-3">
+<h3 id="org8eb3b9b">Optimizing compilers are dead</h3>
+<div class="outline-text-3" id="text-org8eb3b9b">
 <p>
-A reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. 
+Another reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. 
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga6f64c5" class="outline-2">
-<h2 id="orga6f64c5">Prereq: Assembly</h2>
-<div class="outline-text-2" id="text-orga6f64c5">
+<div id="outline-container-org4554112" class="outline-2">
+<h2 id="org4554112">Prereq: Assembly</h2>
+<div class="outline-text-2" id="text-org4554112">
 <p>
 The preface says we should familiar enough with programming that we've written and tested a few programs, which means assembly/machine language programs. I assume you already know basic programming from somewhere else but not an assembly language. We can learn that doing microcorruption.com CTF and having a visual interface to step through all the code in the debugger to see what it does, see how registers are manipulated etc.
 </p>
@@ -404,7 +365,7 @@ Starting the tutorial on <a href="https://microcorruption.com/">microcorruption<
 At 35/74 in the tutorial this is how you read the memory dump:
 </p>
 
-<pre class="example">
+<pre class="example" id="orgda1e18e">
       0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
 4390: 52 45 02 00 9c 43 64 00 82 44 50 44 74 65 73 74
 </pre>
@@ -418,23 +379,23 @@ There's a <a href="https://microcorruption.com/public/manual.pdf">manual</a> for
 </p>
 </div>
 
-<div id="outline-container-orgeffbb2a" class="outline-3">
-<h3 id="orgeffbb2a">New Orleans</h3>
-<div class="outline-text-3" id="text-orgeffbb2a">
+<div id="outline-container-orge525046" class="outline-3">
+<h3 id="orge525046">New Orleans</h3>
+<div class="outline-text-3" id="text-orge525046">
 <p>
 The comparison instruction wants a 7 char password, the 'create password' sub-routine generates a 7 char password, try it just entering the 7 hex numbers in one password string, success.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc0f1379" class="outline-3">
-<h3 id="orgc0f1379">Sydney</h3>
-<div class="outline-text-3" id="text-orgc0f1379">
+<div id="outline-container-org78b1117" class="outline-3">
+<h3 id="org78b1117">Sydney</h3>
+<div class="outline-text-3" id="text-org78b1117">
 <p>
 Set breakpoint at most interesting function which looks like check password. Enter 'test' as text for password, then c to zip to the breakpoint. Pressing s and stepping, r15 is pointing to 439c where we see 7465 7374 or 'test'. Notice the instructions however:
 </p>
 
-<pre class="example">
+<pre class="example" id="org3378cf2">
 448a:  bf90 2b5d 0000   cmp 0x5d2b, 0x0(r15)
 4492:  bf90 7021 0200   cmp #0x2170, 0x2(r15)
 449a:  bf90 3256 0400   cmp #0x5632, 0x4(r15)
@@ -451,36 +412,36 @@ Note the actual code/instruction the machine uses is bf902b5d0000 or bf907021020
 </div>
 </div>
 
-<div id="outline-container-org42419c8" class="outline-3">
-<h3 id="org42419c8">Hanoi</h3>
-<div class="outline-text-3" id="text-org42419c8">
+<div id="outline-container-orgbc85407" class="outline-3">
+<h3 id="orgbc85407">Hanoi</h3>
+<div class="outline-text-3" id="text-orgbc85407">
 <p>
 Passwords must be between 8-16 chars so I entered a gigantic password and while stepping through the execution noticed it overflowed to the second memory location 2410. Ctrl-f the instructions for 2410 and there's a comparison there so I overflowed the hex password to 17 digits with that comparison at 2410. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org45ad6d8" class="outline-3">
-<h3 id="org45ad6d8">Cusco</h3>
-<div class="outline-text-3" id="text-org45ad6d8">
+<div id="outline-container-orge5532a1" class="outline-3">
+<h3 id="orge5532a1">Cusco</h3>
+<div class="outline-text-3" id="text-orge5532a1">
 <p>
 Entered another gigantic password, noticed it overflowed to where the program counter (the next instruction) is so overflowed it to change the pc to 'unlock door' instruction in little endian format.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgebf851e" class="outline-3">
-<h3 id="orgebf851e">Reykjavik</h3>
-<div class="outline-text-3" id="text-orgebf851e">
+<div id="outline-container-org209fc6b" class="outline-3">
+<h3 id="org209fc6b">Reykjavik</h3>
+<div class="outline-text-3" id="text-org209fc6b">
 <p>
 We can't see all the disassembly and have to step watching 'Current Instruction' box. Enter a single character password as a test and step until you see a cmp for the address in r4 offset by -0x24 or 36. Move back that amount in memory and you're at the password you just entered, so enter (little endian) whatever the cmp constant is. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1ae6cfc" class="outline-3">
-<h3 id="org1ae6cfc">Whitehorse</h3>
-<div class="outline-text-3" id="text-org1ae6cfc">
+<div id="outline-container-orgf76d342" class="outline-3">
+<h3 id="orgf76d342">Whitehorse</h3>
+<div class="outline-text-3" id="text-orgf76d342">
 <p>
 They took away the function to unlock the door, we have to read the <a href="https://microcorruption.com/public/manual.pdf">manual</a> about how the HSM 2 model works. In 3.1 <i>This enables the CPU to trigger software interrupt 0x7F to directly trigger the door lock to unlock</i> so we want to bamboozle this code to somehow run 0x7F. As usual start with a gigantic password and see where it is stored. Mine begins at memory location 347c. Looking at the conditional unlock door function I want to push 0x7f the unlock command instead of 0x7e the password comparison command, and then call that interrupt after.
 </p>
@@ -491,9 +452,9 @@ If you overflow your password you'll see in the 'current instruction' box it wil
 </div>
 </div>
 
-<div id="outline-container-org5be1a4a" class="outline-3">
-<h3 id="org5be1a4a">Montevideo</h3>
-<div class="outline-text-3" id="text-org5be1a4a">
+<div id="outline-container-org93a528d" class="outline-3">
+<h3 id="org93a528d">Montevideo</h3>
+<div class="outline-text-3" id="text-org93a528d">
 <p>
 Two new functions strcpy and memset. Memset appears to clear the password storage memory and strcpy removes all null bytes 00 out of our password entry so if we want to use 0x7f or 7f00 we have to steal some code to add/subtract or AND off some bits to avoid strcpy deleting our payload. I used 32 junk filler + 0244 + payload as a hex password after many trial and error getting the overflow to lineup after strcpy killed my 0044 address.
 </p>
@@ -505,39 +466,22 @@ You can play with instructions <a href="https://microcorruption.com/assembler">h
 </div>
 </div>
 
-<div id="outline-container-orgcce7281" class="outline-2">
-<h2 id="orgcce7281">Prereq: Architecture</h2>
-<div class="outline-text-2" id="text-orgcce7281">
+<div id="outline-container-org0d01d50" class="outline-2">
+<h2 id="org0d01d50">Prereq: Architecture</h2>
+<div class="outline-text-2" id="text-org0d01d50">
 <p>
-I'm going to crash course some lectures from MIT's 6.004 on RISC-V while reading the TAOCP chapter 1.3.1 on MIX which is a simple 1960s machine.
+<a href="https://people.inf.ethz.ch/omutlu/">Onur Mutlu</a> at ETH Zurich every year publishes free and open courses on computer architecture which covers state of the art techniques, hardware security and future architecture like RISC-V. We can view these as we work through the MMIX chapter. 
 </p>
 
 <p>
-First is <a href="https://www.youtube.com/watch?v=f8xfVVVWXNU">Binary Arithmetic</a>. We're only watching half the lecture but if you wanted to learn about adders that's how modern arrays are indexed in logarithmic time with carry save adders. So when you think about arrays being linear they're actually not it's a tree structure hidden from you by the hardware. Watch this lecture if you don't remember binary encoding or modular arithmetic.       
-</p>
-
-<p>
-Second is <a href="https://www.youtube.com/watch?v=hf0g3Ccfer8">Sequential Circuits</a>. A multiplexer or mutex is a combinational circuit that has n-inputs and based on the select signal it forwards the input to the output or leaves the output in its present state. Remember this. The ALU is all the arithmetic. Now you know feedback really just means a cycle assuming you took graphs in some intro course. D Latch is a mutiplexer, C input is the selector for the D input. If C input is 0 you selected to change the state of Q to D otherwise Q stays the same state as before. An inverter does what you think it does switching inputs from 0 to 1 or 1 to 0. We learn what a clock is, it's a D Latch circuit which can hold state combined with other D Latches in a 'flip flop' combination so that the C input is a periodic signal going up and down and all flip flops are connected to the same C signal or clock. There's some content on time constraints and other levels of detail we don't care about so you can skip this. Then finally the clock time is the upper bound on how long of a delay it takes to propagate all changes in that combinational circuit and again the details don't really matter to us just skim this content. Write enable is dropping another multiplexer in to a flip flop. @32:50 this is what we came here to know. A register is write enabled flip flops which is a bunch of combined multiplexers all with the same clock that initializes the state and can change state. We don't have to watch the rest of the lecture. 
-</p>
-
-<p>
-Third is <a href="https://www.youtube.com/watch?v=Q3B4uZ74p8Y">Programmable Machines</a>. Skip to Random-Access Memory. That exact same memory diagram is in 1.3.1 (fig 13 the MIX computer). The much simpler MIX arch doesn't use hex to access memory locations it uses 0 - 3999. @7m flip through 1.3.1 as you watch this, Mem[0x100c] in the slides is equivalent to CONTENTS(4108) if MIX had that many memory locations it could address. MIX is a typical von Neumann computer so this is exactly how it works, instructions are fetched from memory and evaluated using the registers to hold state and a 'location counter' (today called program counter) is updated to point to the next instruction in memory to load. The instruction definition wasn't very clear here but is in TAOCP. In figure 3 of 1.3.1 the instruction is 5 bytes, and C field or byte 5 is the opcode to run. F is a range selector, I selects one of the 6 index registers and then adds their contents to the address field before executing the instruction, the remaining two are the address and first field is a sign -/+. Now imagine a stream of these instructions (sign)(address)(modifiers)(opcode) being executed one at a time and a modern desktop/laptop can handle around 100m instructions per second. On a modern system you want to write your program using the principle of locality so when the CPU grabs instructions and holds them in cache that all the next instructions are contained in that grab or else execution has to stop and instructions fetched from slower memory like RAM which is called a cache miss. Volume 4a covers cache strides or hit patterns and cache oblivious algorithms.
-</p>
-
-<p>
-Stop second lecture before 18m (where she goes into RISC arch) and let's review chapter 1.3.1 of TAOCP. Bytes weren't the standard 255 when Knuth wrote this however he notes it won't matter since the programs don't depend on byte sizes. One byte in MIX holds 0 - 63 decimal numbers so it's 6 bits or 2<sup>5</sup> + 2<sup>4</sup> + 2<sup>3</sup> + 2<sup>2</sup> + 2<sup>1</sup> + 2<sup>0</sup> or 111 111 = 63 or 010 001 is 17. The word size in MIX is 5 bytes with an actual sign instead of two's complement where the first 0 or 1 is interpreted as pos/neg. This is because MIX is also a decimal computer which is wtf tier but we're in the world of wild compsci and not the conformity of texts from undergrad. The instruction format in figure 3 the 4th or F byte represents 8L + R so (1:3) field select is 8(1) + 3 or 11. The opcode is a number mapped to an operation so if C = 8 that means load into register A and there's a table figure here in this chapter and if you open the back cover you see the same table which lists all opcodes. 
-</p>
-
-<p>
-MIX has very basic peripherals for input like tape drives but this doesn't matter we use a turing machine tape drive abstraction for some complexity theory still anyway. Consider the 'tape' to be Amazon cloud s3 buckets and you have to remotely read them into memory somehow if you want a modern example. We can come back to this chapter and do all the exercises once we finish the prelims. 
+The undergrad course is <a href="https://safari.ethz.ch/digitaltechnik/spring2023/doku.php?id=schedule">Digital Design &amp; Computer Architecture</a> w/YouTube playlist <a href="https://www.youtube.com/playlist?list=PL5Q2soXY2Zi-EImKxYYY1SZuGiOAOBKaf">here</a> and it's pretty much essential casual viewing to understand how MMIX works. There's no physics or math background needed. These are live streamed lectures so contain breaks and aren't as long as the running time suggests. The graduate course is <a href="https://safari.ethz.ch/architecture/fall2024/doku.php?id=schedule">Computer Architecture</a> and the labs are exactly what MMIXware is: building a cache timing simulator where you can experiment with block size, associativity, change replacement policies, etc.  
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-org34c596e" class="outline-2">
-<h2 id="org34c596e">Prereq: Calculus</h2>
-<div class="outline-text-2" id="text-org34c596e">
+<div id="outline-container-org71115c7" class="outline-2">
+<h2 id="org71115c7">Prereq: Calculus</h2>
+<div class="outline-text-2" id="text-org71115c7">
 <p>
 In the preface 'a knowledge of basic calculus will suffice' is stated however basic calculus to Knuth probably means something like the following. Go to this <a href="http://www.jstor.org/stable/3026529">jstor</a> archive of an interview with Knuth and copy the DOI into <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to read the <a href="https://sci-hub.se/https://doi.org/10.2307/3026529">pdf</a>: 
 </p>
@@ -559,191 +503,55 @@ We should teach people things with an emphasis on how they were discovered. I've
 </blockquote>
 
 <p>
-You can see the exact version Knuth used on <a href="https://archive.org/details/calculusanalytic0000unse_h9r2/page/n5/mode/2up">archive.org</a> the 1950s version w/supplementary problems all in the back but the 1960s <a href="https://archive.org/details/calculusanalytic3rd00thom/page/n5/mode/2up">3rd edition</a> has the same content the publisher moved the supplementary problems to the end of each chapter labelled 'misc problems'. There's a version on <a href="http://libgen.rs/book/index.php?md5=2585132E896213194BC27C2F7A795D1B">libgen</a> (95MB size because HD scanned). Herb Gross lectures from MIT OCW that cover the same book are <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/">Single Variable Calculus</a>, <a href="https://ocw.mit.edu/courses/res-18-007-calculus-revisited-multivariable-calculus-fall-2011/">Multivariable Calculus</a>, <a href="https://ocw.mit.edu/courses/res-18-008-calculus-revisited-complex-variables-differential-equations-and-linear-algebra-fall-2011/">Complex Variables, Differential Eq, Linear Alg</a>. 
+You can see the exact version Knuth used on <a href="https://archive.org/details/calculusanalytic0000unse_h9r2/page/n5/mode/2up">archive.org</a> the 1950s version w/supplementary problems all in the back but the 1960s <a href="https://archive.org/details/calculusanalytic3rd00thom/page/n5/mode/2up">3rd edition</a> has the same content the publisher moved the supplementary problems to the end of each chapter labelled 'misc problems'. There's a version on <a href="http://libgen.rs/book/index.php?md5=2585132E896213194BC27C2F7A795D1B">libgen</a> (95MB size because HD scanned). Herb Gross lectures from MIT OCW that cover the same book are <a href="https://ocw.mit.edu/courses/res-18-006-calculus-revisited-single-variable-calculus-fall-2010/">Single Variable Calculus</a>, <a href="https://ocw.mit.edu/courses/res-18-007-calculus-revisited-multivariable-calculus-fall-2011/">Multivariable Calculus</a>, <a href="https://ocw.mit.edu/courses/res-18-008-calculus-revisited-complex-variables-differential-equations-and-linear-algebra-fall-2011/">Complex Variables, Differential Eq, Linear Alg</a>.
+</p>
+
+<p>
+Thomas' book is 900+ pages and took Knuth a year to complete with lectures and teaching assistants while he was at Case Tech. Since we are already doing countless problems in TAOCP including writing our own derivatives program in volume 1 we can begin with a crash course and pick it up later when needed.
 </p>
 </div>
 
-<div id="outline-container-orgd4c3b18" class="outline-3">
-<h3 id="orgd4c3b18">How to learn calculus</h3>
-<div class="outline-text-3" id="text-orgd4c3b18">
+<div id="outline-container-org37e0fdc" class="outline-3">
+<h3 id="org37e0fdc">Crash course</h3>
+<div class="outline-text-3" id="text-org37e0fdc">
 <p>
-Thomas' book is 900+ pages and took Knuth a year to complete with lectures and teaching assistants while he was at Case Tech. Since we are already doing hundreds of problems in TAOCP we really only need a single variable crash course that focuses on engineering instead of abstract real analysis. 
+I was going to go through Peter Lax's <i>Calculus with Applications</i> book here but we can actually learn calculus from TAOCP as we go. 
 </p>
-
-<p>
-There is a global survey of calculus education <a href="http://libgen.is/book/index.php?md5=DF1EDF1D2A43F2DC7BDE7DECA07F2040">here</a> the biggest problem students have is understanding that limits are an infinite process. It's so bad that in 2016 Arizona State profs were paid by the NSF to redo the curriculum so they came up with one that doesn't have limits at all called <a href="http://patthompson.net/ThompsonCalc/">Project DIRACC</a> it only contains the natural idea of a limit via exhaustive Archimedes style approximation (that doesn't end ergo infinite process) when accumulation (integration) is studied. They recommend Peter Lax's treatment of limits so that's what we'll do. 
-</p>
-
-<ul class="org-ul">
-<li>Obtain the book <a href="https://maa.org/press/maa-reviews/calculus-with-applications">Calculus with Applications</a> by Peter Lax/Terrell on library genesis. The errata for it is <a href="https://extras.springer.com/?query=978-1-4614-7945-1">here</a>.</li>
-<li>Obtain Evan Chen's <a href="https://web.evanchen.cc/napkin.html">Napkin</a> it's a crash course in metric spaces and topology both which will help us better see what is actually going on.</li>
-<li>Obtain the free book <a href="http://classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">The Calculus Integral</a> by Brain S Thomson it's kind of a radical theory of integration book that can be used to really understand what continuity actually is.</li>
-</ul>
-</div>
 </div>
 
-<div id="outline-container-org6d66678" class="outline-3">
-<h3 id="org6d66678">Lax 1.1</h3>
-<div class="outline-text-3" id="text-org6d66678">
+<div id="outline-container-org90c45b1" class="outline-4">
+<h4 id="org90c45b1">Derivatives</h4>
+<div class="outline-text-4" id="text-org90c45b1">
 <p>
-Limits are an algebra of inequalities so we start right away with inequalities. Eq (1.1) \(\epsilon\) is epsilon a variable traditionally used for something close to zero or in other words a very small displacement and is explained in chapter 1.3. Problem 1.8 we can solve right now it states for any numbers a and b, only one of those 3 conditions hold in b &lt;= a &lt;= b and since b can't be less than itself it must equal a. Figure 1.9 multiply each side by 1/4 and square root both sides. In the visual proof it's the side of a plus the short side of b squared or the area of a square which is side x side. 
+Watch <a href="https://www.youtube.com/watch?v=oGZK3yGF-6k">this</a> starting at 3:27. Enter into a calculator (3 + 0.00001)<sup>2</sup> and keep adding zeros like he did in the video. The f(x) input is 3 and dx = 0.00001 or whatever tiny amount. Notice eventually the output y = 6dx or dy/dx = 6. The derivative of f(3) = x<sup>2</sup> is 6. Try it for (3 + 0.00001)<sup>3</sup> you can do this for any continuous function keep adding a tiny addition to the input and look at the relationship of dy = dx.  
 </p>
 
 <p>
-Search <a href="https://www.youtube.com/watch?v=KlKYvbigBqs">YouTube</a> for any triangle inequality demonstration.
+If you skip the <a href="https://www.youtube.com/watch?v=oGZK3yGF-6k">video</a> to 9:03 and watch a few minutes (the rest is matrix calc we don't have to know) he shows what this all means as a linearization. Every change in the x-axis direction at that point x = 3 requires 6 times as many changes to return to the curve or y-axis. The quadratic f(x) = x<sup>2</sup> was linearized to f(x) = 2x as taking a derivative in scalar calculus always gives you a new function.
 </p>
 
 <p>
-Example 1.6 we want to prove any square with the same perimeter as a rectangle has a larger area. The perimeter of 11x1 rectangle is 2(11+1) = 24 and a square having the same perimeter would be (11+1)/2 or 6 each side = 24. Write this as the A-G inequality then square both sides to get rid of the square root and magically we have a proof that the area of any rectangle (Width x Length) is smaller than a square of same perimeter.    
-</p>
-
-<p>
-The proof for n = 4 in Eq (1.2) if a = mean and b = mean then sqrt(ab) &lt;= (a + b)/2 and substitute back in the values for a and b. 
-</p>
-
-<p>
-<b>Problems</b>
-Many of these are good and teach rewriting inequalities.
-</p>
-
-<p>
-Ex 1.7 I think derived by:
-</p>
-
-<ul class="org-ul">
-<li>\((\sqrt x - \sqrt y)(\sqrt x + \sqrt y) = x - y\)</li>
-<li>\((\sqrt x - \sqrt y) = \frac{1}{(\sqrt x + \sqrt y)} \cdot x - y\)</li>
-<li>\(\frac{1}{(\sqrt x + \sqrt y)} \cdot (x - y) \le \frac{1}{4} \cdot (x - y)\)</li>
-<li>\(\frac{1}{(\sqrt x + \sqrt y)} \le \frac{1}{4}\)</li>
-</ul>
-
-<p>
-Ex 1.12 is the triangle inequality chapter or example 1.5 in the book. 
-</p>
-
-<p>
-Ex 1.13 (b) if you add some indexing it's more clear:
-</p>
-
-<ul class="org-ul">
-<li>\(1_1 + 1_2 + 1_3 ... 1_{n-1} + x\) = n amount of total terms including x hence (x + n - 1)/n.</li>
-</ul>
-
-<p>
-Ex 1.14(c) we can see it's less <a href="https://www.desmos.com/calculator/4qijeq22gd">here</a> using a desmos graph. A possible <a href="https://math.stackexchange.com/a/4169356">strategy</a> notice if you take the geometrical mean of AH it equals G then the arithmetical mean of A + H will be greater. Ex (d) seems to be asking \(\frac{1}{2} \cdot \frac{2}{\frac{1}{R_1} + \frac{1}{R_2}}\)
-</p>
-
-<p>
-Ex 1.16(b) The solution on pg 476 is right under the distributed triangle inequality |a||b-b<sub>0</sub>| or 10(0.001) if it doesn't make sense right away.
-</p>
-
-<p>
-Ex 1.15 If a value has an exponent n and you take the n-th root you get the same value back again like \(\sqrt[3]{2^{3}}\) = 2 or \(\sqrt[n]{n^{n}}\) = n
-</p>
-
-<p>
-Ex 1.17 I tried this but doesn't seem correct:
-</p>
-
-<ul class="org-ul">
-<li>4m = (a + b + c + m)</li>
-<li>4m + 4m = (a + b + c + m) + (d + e + f + m)</li>
-<li>2m = h + g</li>
-<li>2m + 4m + 4m = (a + b + c + m) + (d + e + f + m) + g + h</li>
-<li>(abcdefghmm)<sup>1/10</sup> &lt;= m</li>
-<li>(abcdefghmm) &lt;= m<sup>10</sup></li>
-<li>(abcdefgh) &lt;= m<sup>8</sup> then 8th root both sides</li>
-</ul>
-
-<p>
-(b) (abcdemmm) &lt;= m<sup>8</sup> or (abcde) &lt;= m<sup>5</sup> and for the general case both times we increased m to show n like n+1 to show n in the book. 
-</p>
-
-<p>
-Ex 1.18 For (c) if you expand the definition of p(x) where it's a sum of squares into (ax + b)(ax + b) or a sum of multiple polynomials like a<sup>2</sup>x<sup>2</sup> + 2abx + b<sup>2</sup> then you can group all ax terms so you have (a<sub>1</sub><sup>2</sup> + a<sub>2</sub><sup>2</sup> + &#x2026;)x or (P)x, group 2abx so you have 2(ab<sub>1</sub> + ab<sub>2</sub> + &#x2026;)x or 2(Q)x etc. Then square root both sides of Q<sup>2</sup> &lt;= PR and you get the Cauchy-Schwarz inequality. A full explanation of (b) is in the book <i>The Cauchy-Schwarz Master Class</i> by J. Michael Steele. There is entire books written about manipulating and proving inequalities because they provide upper bounds for sums with real numbers. 
+That's basically it and there's a calculus toolkit how to do this for more complicated functions or objects like matrices we can look at when needed. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfcdc9b0" class="outline-3">
-<h3 id="orgfcdc9b0">Lax 1.2</h3>
-<div class="outline-text-3" id="text-orgfcdc9b0">
+
+<div id="outline-container-org5923a2c" class="outline-4">
+<h4 id="org5923a2c">Integral</h4>
+<div class="outline-text-4" id="text-org5923a2c">
 <p>
-Intervals are again talked about here because that's what calculus is a linear approximation using small intervals. If you look at a curved function and super zoom a point on the curve it appears to be a straight line because locally everything is linear if you choose a small enough interval. That line that appears to be straight is the tangent as we'll soon learn. 
-</p>
-
-<p>
-Lax defined a set S where every element squared is strictly less than 5.1 but because we are dealing with infinite sets with infinite decimal precision 5.099999&#x2026; there will always be some finer approximation of decimals who's square is less than 5.1 so the least upper bound is the limit or 5.1  
-</p>
-
-<p>
-The rounding exercises here I skipped because the entire second half of Vol 2 of TAOCP is all about rounding/floating point and trying to represent real numbers in computers. This is an ongoing problem in AI research trying to build efficient numerical libraries.  
-</p>
-</div>
-</div>
-
-<div id="outline-container-org0a73960" class="outline-3">
-<h3 id="org0a73960">Lax 1.3</h3>
-<div class="outline-text-3" id="text-org0a73960">
-<p>
-The Greek letter epsilon is finally defined. A sequence is a data-structure (a list) containing ordered elements that here are approximations to a number. For example the square root of 2 you can pretend is an algorithm attached to the real line producing an infinite stream of approximations that are stored in a list. This list has the properties that each new entry converges towards the number n who's square is 2 because every additional approximation creates a smaller epsilon or tolerance level between the last approximation. You index and operate on lists the same as programming recursively indexing earlier or inductively indexing future entries. The notation N \(\ge\) n if you watch <a href="https://www.youtube.com/watch?v=K4eAyn-oK4M">this</a> starting at 5:30 he draws a geometric intuition of what the limit definition is. 
-</p>
-
-<p>
-Example 1.11 5n + 5 is 5(n + 1) and now the denominator cancels if you're skimming this chapter. 
-</p>
-
-<p>
-The approximation of root 2 in 1.3a look at end chapter problem 1.28. If \(s_{n+1} \lt \frac{1}{2} \cdot s_n\) holds for each n then \(s_{n+1} \lt \frac{1}{2^{n}} \cdot s_1\) why is this true? Lax says to repeatedly apply this to the sequence:  
-</p>
-
-<ul class="org-ul">
-<li>\(s_{n+1} \lt \frac{1}{2} \cdot s_n\)</li>
-<li>\(s_{n+1} \lt \frac{1}{2}(\frac{1}{2} \cdot s_{n - 1})\)</li>
-<li>\(s_{n+1} \lt \frac{1}{2}(\frac{1}{2}(\frac{1}{2} \cdot s_{n - 2}))\) &#x2026;</li>
-</ul>
-
-
-<p>
-Theorem 1.9 is another proof where Lax looks at every digit and since this is an increasing sequence that is bounded eventually there is some index k where all the integer parts of the decimal are the same and all the decimal parts after this index k differ from the actual limit a by 10<sup>-k</sup> precision. 
-</p>
-
-<p>
-Theorem 1.10 another square root existence proof, subtract s<sup>2</sup> from both sides. 
-</p>
-
-<p>
-Theorem 1.11 so far proofs in this book are deceptively simple but you have to read them a few times to see how he sets it up often taking two similar sequences with similar limits and comparing them or producing the n+1 sequence term then manipulating the equality to end up in the form of a known limit we can use. 
-</p>
-
-<p>
-Example 1.19 divide the denominator 2n + 1 by the numerator n: \(\frac{1}{2 + \frac{1}{n}}\) and we already know from Example 1.8 the limit of 1/n is 0 so this limit is 1/2. The necessary conditions for convergence in Theorem 1.12 was the series had to have a limit of 0 so this is divergent. 
-</p>
-
-<p>
-Theorem 1.13 proof take the entire series and multiply it by (1 - x), you then have 1 minus the successor. To get back to s<sub>n</sub> divide the successor by the factor (1 - x). The rest of this chapter is a bunch of examples of series with and without absolute values that partially converge and the ratio test where you ratio the successor in a series and itself.   
-</p>
-
-
-
-<p>
-<b>Problems</b>
-</p>
-
-<p>
-Ex 1.25 hah, find all the definitions and theorems in this chapter and illustrate each with an example. 
-</p>
-
-<p>
-.. cont TODO
+TODO
 </p>
 </div>
 </div>
 </div>
+</div>
 
-<div id="outline-container-orga82b738" class="outline-2">
-<h2 id="orga82b738">1.1 Algorithms</h2>
-<div class="outline-text-2" id="text-orga82b738">
+
+<div id="outline-container-org47c1505" class="outline-2">
+<h2 id="org47c1505">1.1 Algorithms</h2>
+<div class="outline-text-2" id="text-org47c1505">
 <p>
 Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. 
 </p>
@@ -763,7 +571,7 @@ The 'quadruple' definition of what an algorithm is will make sense when you try 
 Let's try it using Knuth's example of m = 119 and n = 544 since the preface told us to try all these algorithms by hand.
 </p>
 
-<pre class="example">
+<pre class="example" id="orgb34ed3c">
 f(119, 544)  -&gt; f(119, 544, 0 ,1)
 f(119, 544, 0, 1) -&gt; f(119, 544, 119, 2) :divide m by n
 f(119, 544, 119, 2) -&gt; r is not 0 -&gt; f(119, 544, 119, 3)

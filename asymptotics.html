@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-13 Fri 02:48 -->
+<!-- 2024-12-13 Fri 03:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Minimum Calculus for Asymptotics</title>
@@ -234,21 +234,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgaa736b4">Exponential &amp; Logarithmic Functions</a></li>
-<li><a href="#orgbf4729b">Trig Functions</a></li>
-<li><a href="#orgbc6ae07">Limits</a></li>
-<li><a href="#org0094685">Derivatives</a></li>
-<li><a href="#org634ab61">OptimzationTODO</a></li>
-<li><a href="#orgec50428">Integrals</a></li>
-<li><a href="#org93450ce">Resources</a></li>
+<li><a href="#orgc947858">Exponential &amp; Logarithmic Functions</a></li>
+<li><a href="#org75ba1fe">Trig Functions</a></li>
+<li><a href="#orga22fae0">Limits</a></li>
+<li><a href="#org352fbb9">Derivatives</a></li>
+<li><a href="#org5360433">OptimzationTODO</a></li>
+<li><a href="#org4d2881e">Integrals</a></li>
+<li><a href="#orgce3144b">Resources</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgaa736b4" class="outline-2">
-<h2 id="orgaa736b4">Exponential &amp; Logarithmic Functions</h2>
-<div class="outline-text-2" id="text-orgaa736b4">
+<div id="outline-container-orgc947858" class="outline-2">
+<h2 id="orgc947858">Exponential &amp; Logarithmic Functions</h2>
+<div class="outline-text-2" id="text-orgc947858">
 <p>
 Explained <a href="https://www.youtube.com/watch?v=vQydKnPxOJY">here</a> (Clemson Math 1060 sec 1.3). These Clemson U lectures average ~20m and are just the right difficulty if you forgot high school like most people so gaps will be filled in and there's lot's of constructions instead of descriptive/abstract definitions. 
 </p>
@@ -269,20 +269,20 @@ A base e log or ln(x) is often used in computer science literature instead of ba
 </p>
 
 <p>
-Notice how a log is a linearization of an exponent. One example is if you log 2<sup>x</sup> then log(2<sup>x</sup>) = xlog(2) and you mapped a quadratic to a linear operation. 
+Notice how a log is a linearization of an exponent. One example is if you log 2<sup>x</sup> then log(2<sup>x</sup>) = xlog(2) and you mapped a quadratic to a linear space. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbf4729b" class="outline-2">
-<h2 id="orgbf4729b">Trig Functions</h2>
-<div class="outline-text-2" id="text-orgbf4729b">
+<div id="outline-container-org75ba1fe" class="outline-2">
+<h2 id="org75ba1fe">Trig Functions</h2>
+<div class="outline-text-2" id="text-org75ba1fe">
 <p>
 Examples are frequently done using trig functions in all literature for analysis/calculus.
 </p>
 
 <p>
-If you don't remember trig at all try <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a> (Math 1060 sec 1.4) review of Trig functions and their inverses. Skip through and remind yourself that sin<sup>-1</sup> is not 1/sin. Where do those square root x/y coords come from on the unit circle? Explained in the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a> (Brown University) which also has a YouTube <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">lecture</a>. Two right angle triangles (deg 30/60/90 and 45/45/90) need to be scaled down so the hypotenuse is 1 to fit on the unit circle. Lightly skim this just to see how it's all defined.
+If you don't remember trig at all try <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a> (Math 1060 sec 1.4) review of Trig functions and their inverses. Skip through and remind yourself that sin<sup>-1</sup> is not 1/sin. Where do those square root x/y coords come from on the unit circle? Explained in the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a> (Brown University) which also has a YouTube <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">lecture</a>. Two right angle triangles (deg 30/60/90 and 45/45/90) need to be scaled down so the hypotenuse is 1 to fit on the unit circle.
 </p>
 
 <p>
@@ -291,9 +291,9 @@ We have just seen another linearization. Watch a few minutes of <a href="https:/
 </div>
 </div>
 
-<div id="outline-container-orgbc6ae07" class="outline-2">
-<h2 id="orgbc6ae07">Limits</h2>
-<div class="outline-text-2" id="text-orgbc6ae07">
+<div id="outline-container-orga22fae0" class="outline-2">
+<h2 id="orga22fae0">Limits</h2>
+<div class="outline-text-2" id="text-orga22fae0">
 <p>
 Skim through these, if you want to do exercises pause the video before he works out an example and do it yourself. Limits will come up all the time. 
 </p>
@@ -303,25 +303,25 @@ Skim through these, if you want to do exercises pause the video before he works 
 <li><a href="https://www.youtube.com/watch?v=iQTwviLhQwU">Informal definition</a> (Math 1060 sec 2.2) using approximations from the left and right.</li>
 <li><a href="https://www.youtube.com/watch?v=h7dfq5aD6E4">Techniques I</a> (Math 1060 2.3.1) for computing limits.</li>
 <li><a href="https://www.youtube.com/watch?v=OBGalcQFwzI">Techniques II</a> (Math 1060 2.3.2) we mainly need the squeeze theorem @16m.</li>
-<li><a href="https://www.youtube.com/watch?v=vrd9Fqxoue0">Infinite Limits</a> (Math 1060 2.4) skim this quickly, the y-axis/output goes to infinity</li>
+<li><a href="https://www.youtube.com/watch?v=vrd9Fqxoue0">Infinite Limits</a> (Math 1060 2.4) if the y-axis/output goes to infinity</li>
 </ul>
 
 <p>
-We need limits where the inputs go to infinity for big-O  
+We need limits where the f(x) inputs go to infinity for big-O  
 </p>
 
 <ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=rmlrZzB1NEY">Limits at Infinity</a> (Math 1060 2.5) a polynomial is a way to model a function and get it's  it's properties like what is it's behavior at f(0) or f(x) = 0. All of our program cost functions are going to be a polynomial or a recurrence relation with a characteristic polynomial.</li>
+<li><a href="https://www.youtube.com/watch?v=rmlrZzB1NEY">Limits at Infinity</a> (Math 1060 2.5) a polynomial is a way to model a function and get all it's properties like what is the behavior at f(0) or f(x) = 0. Program cost functions are going to be a polynomial or a recurrence relation with a characteristic polynomial too.</li>
 <li><a href="https://www.youtube.com/watch?v=gQlGn8OjVI8">Continuity</a> (Math 1060 2.6) crash course on continuity on an interval.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0094685" class="outline-2">
-<h2 id="org0094685">Derivatives</h2>
-<div class="outline-text-2" id="text-org0094685">
+<div id="outline-container-org352fbb9" class="outline-2">
+<h2 id="org352fbb9">Derivatives</h2>
+<div class="outline-text-2" id="text-org352fbb9">
 <p>
-We mostly need integration, once you have an idea what derivatives are skip directly to Integrals. 
+We mostly need integration, once you have an idea what derivatives are skip directly to Integrals unless you need this for AI. 
 </p>
 
 <ul class="org-ul">
@@ -337,35 +337,38 @@ These are all optional but presented well, the whole course is worth doing if yo
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=UF6koNYWE1s">Product Rule</a> (Math 1060 3.4) (fg)' = f'g + fg' and (f/g)' = (f'g - fg')/g<sup>2</sup></li>
 <li><a href="https://www.youtube.com/watch?v=o7yV_wUKy9M">Trig Derivatives</a> (Math 1060 3.6) covers reciprocal limits too. Lightly skim this just so you know the derivative of sinx is cosx and that if you take the derivative of sinx 4x then it's a cycle that returns to sinx.</li>
-<li><a href="https://www.youtube.com/watch?v=xV2A2TO6A4I">Rates of Change</a> (Math 1060 3.6) Optional but explains real life calculus meaning economic cost function derivatives and physics how the derivative of f(time) = position gives you f(time) = velocity. You can undo the velocity derivative to go back to the position function using integration.</li>
+<li><a href="https://www.youtube.com/watch?v=xV2A2TO6A4I">Rates of Change</a> (Math 1060 3.6) explains real life calculus meaning economic cost function derivatives and physics how the derivative of f(time) = position gives you f(time) = velocity. You can undo the velocity derivative to go back to the position function using indefinite integration.</li>
 <li><a href="https://www.youtube.com/watch?v=hCuyU0edOcE">Chain Rule</a> (Math 1060 3.7) the derivative of function composition or f'(g)*g'</li>
 <li><a href="https://www.youtube.com/watch?v=RL0At1N-2FQ">Derivatives of Log/Exp</a> (Math 1060 3.8)</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org634ab61" class="outline-2">
-<h2 id="org634ab61">OptimzationTODO</h2>
-<div class="outline-text-2" id="text-org634ab61">
+<div id="outline-container-org5360433" class="outline-2">
+<h2 id="org5360433">OptimzationTODO</h2>
+<div class="outline-text-2" id="text-org5360433">
 <p>
 For algorithm design/AI
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgec50428" class="outline-2">
-<h2 id="orgec50428">Integrals</h2>
-<div class="outline-text-2" id="text-orgec50428">
+<div id="outline-container-org4d2881e" class="outline-2">
+<h2 id="org4d2881e">Integrals</h2>
+<div class="outline-text-2" id="text-org4d2881e">
 <p>
-TODO Spencer's book <i>Asymptopia</i> and some algorithms analysis/taocp/clrs proofs as examples.   
+TODO Spencer's book <i>Asymptopia</i> and some algorithms analysis/taocp/clrs proofs as examples.
+</p>
+
+<p>
+The best undergrad book I know of is <a href="http://classicalrealanalysis.info/com/documents/T-CalculusIntegral-AllChapters-Portrait.pdf">The Calculus Integral</a> written by <a href="http://people.math.sfu.ca/~thomson/backupindex.html">B.S Thomson</a> it has a rigorous continuity chapter and sets up graduate integrals like the 1960s Henstock-Kurzweil integral that generalizes the Lebesgue integral. This page is a crash course though so I will go through it <a href="./math.html">here</a>.
 </p>
 </div>
 </div>
 
-
-<div id="outline-container-org93450ce" class="outline-2">
-<h2 id="org93450ce">Resources</h2>
-<div class="outline-text-2" id="text-org93450ce">
+<div id="outline-container-orgce3144b" class="outline-2">
+<h2 id="orgce3144b">Resources</h2>
+<div class="outline-text-2" id="text-orgce3144b">
 <ul class="org-ul">
 <li>The Clemson University Math 1060 <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">course page</a> and list of <a href="https://speele.people.clemson.edu/MATH1060/">YouTube</a> videos they use the book <i>Calculus: Early Transcendentals</i> Briggs Et. al</li>
 </ul>

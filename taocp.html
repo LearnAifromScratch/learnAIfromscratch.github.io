@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-12 Thu 04:50 -->
+<!-- 2024-12-13 Fri 02:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Let's Read the Art of Computer Programming</title>
@@ -234,40 +234,40 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org25fce8f">Intro</a>
+<li><a href="#org9463bba">Intro</a>
 <ul>
-<li><a href="#org8dacdf5">Get the book(s)</a></li>
-<li><a href="#org8a83262">The Bill Gates quote</a></li>
-<li><a href="#orga478b76">MMIX/MIX</a></li>
-<li><a href="#org8eb3b9b">Optimizing compilers are dead</a></li>
+<li><a href="#org67b7916">Get the book(s)</a></li>
+<li><a href="#org60dd190">The Bill Gates quote</a></li>
+<li><a href="#org2113df1">MMIX/MIX</a></li>
+<li><a href="#org6577644">Optimizing compilers are dead</a></li>
 </ul>
 </li>
-<li><a href="#org4554112">Prereq: Assembly</a>
+<li><a href="#org691e9d1">Prereq: Assembly</a>
 <ul>
-<li><a href="#orge525046">New Orleans</a></li>
-<li><a href="#org78b1117">Sydney</a></li>
-<li><a href="#orgbc85407">Hanoi</a></li>
-<li><a href="#orge5532a1">Cusco</a></li>
-<li><a href="#org209fc6b">Reykjavik</a></li>
-<li><a href="#orgf76d342">Whitehorse</a></li>
-<li><a href="#org93a528d">Montevideo</a></li>
+<li><a href="#org7b2f081">New Orleans</a></li>
+<li><a href="#org4315dd5">Sydney</a></li>
+<li><a href="#org4afdd62">Hanoi</a></li>
+<li><a href="#orgc498d60">Cusco</a></li>
+<li><a href="#org96b8137">Reykjavik</a></li>
+<li><a href="#orgda3c273">Whitehorse</a></li>
+<li><a href="#org3435c14">Montevideo</a></li>
 </ul>
 </li>
-<li><a href="#org0d01d50">Prereq: Architecture</a></li>
-<li><a href="#org71115c7">Prereq: Calculus</a>
+<li><a href="#org57aa254">Prereq: Architecture</a></li>
+<li><a href="#org7086271">Prereq: Calculus</a>
 <ul>
-<li><a href="#org37e0fdc">Crash course</a></li>
+<li><a href="#orgc2079d3">Crash course</a></li>
 </ul>
 </li>
-<li><a href="#org47c1505">1.1 Algorithms</a></li>
+<li><a href="#org9bfb0fc">1.1 Algorithms</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org25fce8f" class="outline-2">
-<h2 id="org25fce8f">Intro</h2>
-<div class="outline-text-2" id="text-org25fce8f">
+<div id="outline-container-org9463bba" class="outline-2">
+<h2 id="org9463bba">Intro</h2>
+<div class="outline-text-2" id="text-org9463bba">
 <p>
 I'm going to start with <i>Volume 1: Fundamental Algorithms</i> 3rd edition by Don Knuth and keep going. These are now the most relevant computer science books as industry has shifted to creating their own custom hardware and software stacks. Data is now so massive we can no longer move it around to be computed and the state-of-the-art architecture these days perform computation at the data. Knuth's MMIX (RISC architecture) he created for these books has a free meta-simulator program which is a test bed to try out different chip configurations. You can change instruction throughput, pipeline configurations, branch prediction, cache sizes and associativity, then test running various algorithms on a custom config. This is exactly what you do when writing a prototype FPGA you plan to later manufacturer into a chip. 
 </p>
@@ -277,9 +277,9 @@ The physical book itself is a representation of the careful work that has gone i
 </p>
 </div>
 
-<div id="outline-container-org8dacdf5" class="outline-3">
-<h3 id="org8dacdf5">Get the book(s)</h3>
-<div class="outline-text-3" id="text-org8dacdf5">
+<div id="outline-container-org67b7916" class="outline-3">
+<h3 id="org67b7916">Get the book(s)</h3>
+<div class="outline-text-3" id="text-org67b7916">
 <p>
 See the <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a> site for details or where to get official pdf/copies. I'm using the 3rd edition look for the most recent printings that fix errata. If you can't buy them use <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> or Anna's Archive to get a pdf.
 </p>
@@ -287,9 +287,9 @@ See the <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">book</a>
 </div>
 
 
-<div id="outline-container-org8a83262" class="outline-3">
-<h3 id="org8a83262">The Bill Gates quote</h3>
-<div class="outline-text-3" id="text-org8a83262">
+<div id="outline-container-org60dd190" class="outline-3">
+<h3 id="org60dd190">The Bill Gates quote</h3>
+<div class="outline-text-3" id="text-org60dd190">
 <p>
 Everybody talks about the famous old quote in the back of volume 1 by Gates: 'you should definitely send me a resume if you can read the whole thing'. I found a more recent quote from 2005:
 </p>
@@ -323,9 +323,9 @@ I'm not sure what the double-star problems are maybe the earlier editions had th
 </div>
 </div>
 
-<div id="outline-container-orga478b76" class="outline-3">
-<h3 id="orga478b76">MMIX/MIX</h3>
-<div class="outline-text-3" id="text-orga478b76">
+<div id="outline-container-org2113df1" class="outline-3">
+<h3 id="org2113df1">MMIX/MIX</h3>
+<div class="outline-text-3" id="text-org2113df1">
 <p>
 Volumes 1-3 still contain the original MIX machine and there exists <a href="https://www.gnu.org/software/mdk/">GNU MDK</a> or <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">other software</a> to run MIXware meaning compile .mixal files to .mix and simulate running them either with mixvm, gmixvm GUI, or a scheme interpreter.
 </p>
@@ -340,9 +340,9 @@ I was originally going to do this in the original MIX until Chapter 4 but urgenc
 </div>
 </div>
 
-<div id="outline-container-org8eb3b9b" class="outline-3">
-<h3 id="org8eb3b9b">Optimizing compilers are dead</h3>
-<div class="outline-text-3" id="text-org8eb3b9b">
+<div id="outline-container-org6577644" class="outline-3">
+<h3 id="org6577644">Optimizing compilers are dead</h3>
+<div class="outline-text-3" id="text-org6577644">
 <p>
 Another reason to learn this material is given by DJ Bernstein's talk a few years ago about the death of optimizing compilers, see <a href="https://cr.yp.to/talks/2015.04.16/slides-djb-20150416-a4.pdf">these slides</a> where at the end Knuth describes how hand coded assembly will always be faster than the best optimizing compilers. 
 </p>
@@ -350,9 +350,9 @@ Another reason to learn this material is given by DJ Bernstein's talk a few year
 </div>
 </div>
 
-<div id="outline-container-org4554112" class="outline-2">
-<h2 id="org4554112">Prereq: Assembly</h2>
-<div class="outline-text-2" id="text-org4554112">
+<div id="outline-container-org691e9d1" class="outline-2">
+<h2 id="org691e9d1">Prereq: Assembly</h2>
+<div class="outline-text-2" id="text-org691e9d1">
 <p>
 The preface says we should familiar enough with programming that we've written and tested a few programs, which means assembly/machine language programs. I assume you already know basic programming from somewhere else but not an assembly language. We can learn that doing microcorruption.com CTF and having a visual interface to step through all the code in the debugger to see what it does, see how registers are manipulated etc.
 </p>
@@ -365,7 +365,7 @@ Starting the tutorial on <a href="https://microcorruption.com/">microcorruption<
 At 35/74 in the tutorial this is how you read the memory dump:
 </p>
 
-<pre class="example" id="orgda1e18e">
+<pre class="example" id="org601b838">
       0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
 4390: 52 45 02 00 9c 43 64 00 82 44 50 44 74 65 73 74
 </pre>
@@ -379,23 +379,23 @@ There's a <a href="https://microcorruption.com/public/manual.pdf">manual</a> for
 </p>
 </div>
 
-<div id="outline-container-orge525046" class="outline-3">
-<h3 id="orge525046">New Orleans</h3>
-<div class="outline-text-3" id="text-orge525046">
+<div id="outline-container-org7b2f081" class="outline-3">
+<h3 id="org7b2f081">New Orleans</h3>
+<div class="outline-text-3" id="text-org7b2f081">
 <p>
 The comparison instruction wants a 7 char password, the 'create password' sub-routine generates a 7 char password, try it just entering the 7 hex numbers in one password string, success.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org78b1117" class="outline-3">
-<h3 id="org78b1117">Sydney</h3>
-<div class="outline-text-3" id="text-org78b1117">
+<div id="outline-container-org4315dd5" class="outline-3">
+<h3 id="org4315dd5">Sydney</h3>
+<div class="outline-text-3" id="text-org4315dd5">
 <p>
 Set breakpoint at most interesting function which looks like check password. Enter 'test' as text for password, then c to zip to the breakpoint. Pressing s and stepping, r15 is pointing to 439c where we see 7465 7374 or 'test'. Notice the instructions however:
 </p>
 
-<pre class="example" id="org3378cf2">
+<pre class="example" id="orga2df6b5">
 448a:  bf90 2b5d 0000   cmp 0x5d2b, 0x0(r15)
 4492:  bf90 7021 0200   cmp #0x2170, 0x2(r15)
 449a:  bf90 3256 0400   cmp #0x5632, 0x4(r15)
@@ -412,36 +412,36 @@ Note the actual code/instruction the machine uses is bf902b5d0000 or bf907021020
 </div>
 </div>
 
-<div id="outline-container-orgbc85407" class="outline-3">
-<h3 id="orgbc85407">Hanoi</h3>
-<div class="outline-text-3" id="text-orgbc85407">
+<div id="outline-container-org4afdd62" class="outline-3">
+<h3 id="org4afdd62">Hanoi</h3>
+<div class="outline-text-3" id="text-org4afdd62">
 <p>
 Passwords must be between 8-16 chars so I entered a gigantic password and while stepping through the execution noticed it overflowed to the second memory location 2410. Ctrl-f the instructions for 2410 and there's a comparison there so I overflowed the hex password to 17 digits with that comparison at 2410. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge5532a1" class="outline-3">
-<h3 id="orge5532a1">Cusco</h3>
-<div class="outline-text-3" id="text-orge5532a1">
+<div id="outline-container-orgc498d60" class="outline-3">
+<h3 id="orgc498d60">Cusco</h3>
+<div class="outline-text-3" id="text-orgc498d60">
 <p>
 Entered another gigantic password, noticed it overflowed to where the program counter (the next instruction) is so overflowed it to change the pc to 'unlock door' instruction in little endian format.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org209fc6b" class="outline-3">
-<h3 id="org209fc6b">Reykjavik</h3>
-<div class="outline-text-3" id="text-org209fc6b">
+<div id="outline-container-org96b8137" class="outline-3">
+<h3 id="org96b8137">Reykjavik</h3>
+<div class="outline-text-3" id="text-org96b8137">
 <p>
 We can't see all the disassembly and have to step watching 'Current Instruction' box. Enter a single character password as a test and step until you see a cmp for the address in r4 offset by -0x24 or 36. Move back that amount in memory and you're at the password you just entered, so enter (little endian) whatever the cmp constant is. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf76d342" class="outline-3">
-<h3 id="orgf76d342">Whitehorse</h3>
-<div class="outline-text-3" id="text-orgf76d342">
+<div id="outline-container-orgda3c273" class="outline-3">
+<h3 id="orgda3c273">Whitehorse</h3>
+<div class="outline-text-3" id="text-orgda3c273">
 <p>
 They took away the function to unlock the door, we have to read the <a href="https://microcorruption.com/public/manual.pdf">manual</a> about how the HSM 2 model works. In 3.1 <i>This enables the CPU to trigger software interrupt 0x7F to directly trigger the door lock to unlock</i> so we want to bamboozle this code to somehow run 0x7F. As usual start with a gigantic password and see where it is stored. Mine begins at memory location 347c. Looking at the conditional unlock door function I want to push 0x7f the unlock command instead of 0x7e the password comparison command, and then call that interrupt after.
 </p>
@@ -452,9 +452,9 @@ If you overflow your password you'll see in the 'current instruction' box it wil
 </div>
 </div>
 
-<div id="outline-container-org93a528d" class="outline-3">
-<h3 id="org93a528d">Montevideo</h3>
-<div class="outline-text-3" id="text-org93a528d">
+<div id="outline-container-org3435c14" class="outline-3">
+<h3 id="org3435c14">Montevideo</h3>
+<div class="outline-text-3" id="text-org3435c14">
 <p>
 Two new functions strcpy and memset. Memset appears to clear the password storage memory and strcpy removes all null bytes 00 out of our password entry so if we want to use 0x7f or 7f00 we have to steal some code to add/subtract or AND off some bits to avoid strcpy deleting our payload. I used 32 junk filler + 0244 + payload as a hex password after many trial and error getting the overflow to lineup after strcpy killed my 0044 address.
 </p>
@@ -466,9 +466,9 @@ You can play with instructions <a href="https://microcorruption.com/assembler">h
 </div>
 </div>
 
-<div id="outline-container-org0d01d50" class="outline-2">
-<h2 id="org0d01d50">Prereq: Architecture</h2>
-<div class="outline-text-2" id="text-org0d01d50">
+<div id="outline-container-org57aa254" class="outline-2">
+<h2 id="org57aa254">Prereq: Architecture</h2>
+<div class="outline-text-2" id="text-org57aa254">
 <p>
 <a href="https://people.inf.ethz.ch/omutlu/">Onur Mutlu</a> at ETH Zurich every year publishes free and open courses on computer architecture which covers state of the art techniques, hardware security and future architecture like RISC-V. We can view these as we work through the MMIX chapter. 
 </p>
@@ -479,9 +479,9 @@ The undergrad course is <a href="https://safari.ethz.ch/digitaltechnik/spring202
 </div>
 </div>
 
-<div id="outline-container-org71115c7" class="outline-2">
-<h2 id="org71115c7">Prereq: Calculus</h2>
-<div class="outline-text-2" id="text-org71115c7">
+<div id="outline-container-org7086271" class="outline-2">
+<h2 id="org7086271">Prereq: Calculus</h2>
+<div class="outline-text-2" id="text-org7086271">
 <p>
 In the preface 'a knowledge of basic calculus will suffice' is stated however basic calculus to Knuth probably means something like the following. Go to this <a href="http://www.jstor.org/stable/3026529">jstor</a> archive of an interview with Knuth and copy the DOI into <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to read the <a href="https://sci-hub.se/https://doi.org/10.2307/3026529">pdf</a>: 
 </p>
@@ -511,47 +511,19 @@ Thomas' book is 900+ pages and took Knuth a year to complete with lectures and t
 </p>
 </div>
 
-<div id="outline-container-org37e0fdc" class="outline-3">
-<h3 id="org37e0fdc">Crash course</h3>
-<div class="outline-text-3" id="text-org37e0fdc">
+<div id="outline-container-orgc2079d3" class="outline-3">
+<h3 id="orgc2079d3">Crash course</h3>
+<div class="outline-text-3" id="text-orgc2079d3">
 <p>
-I was going to go through Peter Lax's <i>Calculus with Applications</i> book here but we can actually learn calculus from TAOCP as we go. 
-</p>
-</div>
-
-<div id="outline-container-org90c45b1" class="outline-4">
-<h4 id="org90c45b1">Derivatives</h4>
-<div class="outline-text-4" id="text-org90c45b1">
-<p>
-Watch <a href="https://www.youtube.com/watch?v=oGZK3yGF-6k">this</a> starting at 3:27. Enter into a calculator (3 + 0.00001)<sup>2</sup> and keep adding zeros like he did in the video. The f(x) input is 3 and dx = 0.00001 or whatever tiny amount. Notice eventually the output y = 6dx or dy/dx = 6. The derivative of f(3) = x<sup>2</sup> is 6. Try it for (3 + 0.00001)<sup>3</sup> you can do this for any continuous function keep adding a tiny addition to the input and look at the relationship of dy = dx.  
-</p>
-
-<p>
-If you skip the <a href="https://www.youtube.com/watch?v=oGZK3yGF-6k">video</a> to 9:03 and watch a few minutes (the rest is matrix calc we don't have to know) he shows what this all means as a linearization. Every change in the x-axis direction at that point x = 3 requires 6 times as many changes to return to the curve or y-axis. The quadratic f(x) = x<sup>2</sup> was linearized to f(x) = 2x as taking a derivative in scalar calculus always gives you a new function.
-</p>
-
-<p>
-That's basically it and there's a calculus toolkit how to do this for more complicated functions or objects like matrices we can look at when needed. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-org5923a2c" class="outline-4">
-<h4 id="org5923a2c">Integral</h4>
-<div class="outline-text-4" id="text-org5923a2c">
-<p>
-TODO
+I am making a calculus crash course for all workshop <a href="./asymptotics.html">here</a> the primary goal being integration to do asymptotics. Take what you need when it comes up.  
 </p>
 </div>
 </div>
 </div>
-</div>
 
-
-<div id="outline-container-org47c1505" class="outline-2">
-<h2 id="org47c1505">1.1 Algorithms</h2>
-<div class="outline-text-2" id="text-org47c1505">
+<div id="outline-container-org9bfb0fc" class="outline-2">
+<h2 id="org9bfb0fc">1.1 Algorithms</h2>
+<div class="outline-text-2" id="text-org9bfb0fc">
 <p>
 Whenever Knuth cites a reference/paper you can use <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> to get a copy. 
 </p>
@@ -571,7 +543,7 @@ The 'quadruple' definition of what an algorithm is will make sense when you try 
 Let's try it using Knuth's example of m = 119 and n = 544 since the preface told us to try all these algorithms by hand.
 </p>
 
-<pre class="example" id="orgb34ed3c">
+<pre class="example" id="org8fda49b">
 f(119, 544)  -&gt; f(119, 544, 0 ,1)
 f(119, 544, 0, 1) -&gt; f(119, 544, 119, 2) :divide m by n
 f(119, 544, 119, 2) -&gt; r is not 0 -&gt; f(119, 544, 119, 3)

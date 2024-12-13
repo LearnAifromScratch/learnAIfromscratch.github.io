@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-12-13 Fri 02:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Minimum Calculus for Asymptotics</title>
+<meta name="author" content="jbh" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Minimum Calculus for Asymptotics</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgaa736b4">Exponential &amp; Logarithmic Functions</a></li>
+<li><a href="#orgbf4729b">Trig Functions</a></li>
+<li><a href="#orgbc6ae07">Limits</a></li>
+<li><a href="#org0094685">Derivatives</a></li>
+<li><a href="#org634ab61">OptimzationTODO</a></li>
+<li><a href="#orgec50428">Integrals</a></li>
+<li><a href="#org93450ce">Resources</a></li>
+</ul>
+</div>
+</div>
+<style>details summary { color: green; }</style>
+
+<div id="outline-container-orgaa736b4" class="outline-2">
+<h2 id="orgaa736b4">Exponential &amp; Logarithmic Functions</h2>
+<div class="outline-text-2" id="text-orgaa736b4">
+<p>
+Explained <a href="https://www.youtube.com/watch?v=vQydKnPxOJY">here</a> (Clemson Math 1060 sec 1.3). These Clemson U lectures average ~20m and are just the right difficulty if you forgot high school like most people so gaps will be filled in and there's lot's of constructions instead of descriptive/abstract definitions. 
+</p>
+
+<p>
+Logarithmic inverses, why does \(\large b^{log_b{(x)}} = x\)?
+</p>
+
+<ul class="org-ul">
+<li>\(\large 2^{log_2{(1)}} = 2^0 = 1\)</li>
+<li>\(\large 2^{log_2{(2})} = 2^1 = 2\)</li>
+<li>\(\large 2^{log_2{(3})} \approx 2^{1.6} \approx 3\)</li>
+<li>\(\large 2^{log_2{(4})} = 2^2 = 4\)</li>
+</ul>
+
+<p>
+A base e log or ln(x) is often used in computer science literature instead of base 2 because \(\large log_{2}(x) = \frac{ln(x)}{ln(2)}\) meaning you are off only by a constant factor and now can enjoy all the nice properties e<sup>x</sup> and ln(x) have for doing quick approximations by hand. For small inputs where x<sup>2</sup> is evaluated smaller than x then e<sup>x</sup> can be approximated with 1 + x and ln(1 - x) can be approximated with -x. To see how e<sup>time</sup> = growth and ln(growth) = time then <a href="https://betterexplained.com/articles/demystifying-the-natural-logarithm-ln/">read this</a>. 
+</p>
+
+<p>
+Notice how a log is a linearization of an exponent. One example is if you log 2<sup>x</sup> then log(2<sup>x</sup>) = xlog(2) and you mapped a quadratic to a linear operation. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf4729b" class="outline-2">
+<h2 id="orgbf4729b">Trig Functions</h2>
+<div class="outline-text-2" id="text-orgbf4729b">
+<p>
+Examples are frequently done using trig functions in all literature for analysis/calculus.
+</p>
+
+<p>
+If you don't remember trig at all try <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a> (Math 1060 sec 1.4) review of Trig functions and their inverses. Skip through and remind yourself that sin<sup>-1</sup> is not 1/sin. Where do those square root x/y coords come from on the unit circle? Explained in the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a> (Brown University) which also has a YouTube <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">lecture</a>. Two right angle triangles (deg 30/60/90 and 45/45/90) need to be scaled down so the hypotenuse is 1 to fit on the unit circle. Lightly skim this just to see how it's all defined.
+</p>
+
+<p>
+We have just seen another linearization. Watch a few minutes of <a href="https://youtu.be/by0Gy1ZJ_hU?si=1TM8tv2c3TzE9xa_&amp;t=356">this</a> (Wildberger Rational Trig) starting @5:56 to see motion around a nonlinear curve being mapped to the linear motion of the two axis moving back and forth. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc6ae07" class="outline-2">
+<h2 id="orgbc6ae07">Limits</h2>
+<div class="outline-text-2" id="text-orgbc6ae07">
+<p>
+Skim through these, if you want to do exercises pause the video before he works out an example and do it yourself. Limits will come up all the time. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=3U0JTtjPEMM">Limits</a> (Math 1060 sec 2.1) introduction and secants/tangents.</li>
+<li><a href="https://www.youtube.com/watch?v=iQTwviLhQwU">Informal definition</a> (Math 1060 sec 2.2) using approximations from the left and right.</li>
+<li><a href="https://www.youtube.com/watch?v=h7dfq5aD6E4">Techniques I</a> (Math 1060 2.3.1) for computing limits.</li>
+<li><a href="https://www.youtube.com/watch?v=OBGalcQFwzI">Techniques II</a> (Math 1060 2.3.2) we mainly need the squeeze theorem @16m.</li>
+<li><a href="https://www.youtube.com/watch?v=vrd9Fqxoue0">Infinite Limits</a> (Math 1060 2.4) skim this quickly, the y-axis/output goes to infinity</li>
+</ul>
+
+<p>
+We need limits where the inputs go to infinity for big-O  
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=rmlrZzB1NEY">Limits at Infinity</a> (Math 1060 2.5) a polynomial is a way to model a function and get it's  it's properties like what is it's behavior at f(0) or f(x) = 0. All of our program cost functions are going to be a polynomial or a recurrence relation with a characteristic polynomial.</li>
+<li><a href="https://www.youtube.com/watch?v=gQlGn8OjVI8">Continuity</a> (Math 1060 2.6) crash course on continuity on an interval.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0094685" class="outline-2">
+<h2 id="org0094685">Derivatives</h2>
+<div class="outline-text-2" id="text-org0094685">
+<p>
+We mostly need integration, once you have an idea what derivatives are skip directly to Integrals. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=Bjgu3i310pw">Derivative</a> (Math 1060 3.1) shows the geometry of a derivative at a point.</li>
+<li><a href="https://www.youtube.com/watch?v=sGQGsxNNO8k">Derivative as a Function</a> (Math 1060 3.2.1) To see how the dy/dx Leibniz notation works watch <a href="https://youtu.be/oGZK3yGF-6k?si=1p5qJaH1tkjXh--w&amp;t=208">this</a> (MIT 18.06) starting at 3:27 for only a few minutes. The key relationship is dy = 6dx or dy/dx = 6 meaning you linearize x<sup>2</sup> to 2x.</li>
+<li><a href="https://www.youtube.com/watch?v=rdGXPvMw_X8">Derivative Rules</a> (Math 1060 3.3) the usual formulas, higher-order derivatives, e<sup>x</sup> is it's own derivative, and remark that differentiation is a linear operator.</li>
+</ul>
+
+<p>
+These are all optional but presented well, the whole course is worth doing if you wanted. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=UF6koNYWE1s">Product Rule</a> (Math 1060 3.4) (fg)' = f'g + fg' and (f/g)' = (f'g - fg')/g<sup>2</sup></li>
+<li><a href="https://www.youtube.com/watch?v=o7yV_wUKy9M">Trig Derivatives</a> (Math 1060 3.6) covers reciprocal limits too. Lightly skim this just so you know the derivative of sinx is cosx and that if you take the derivative of sinx 4x then it's a cycle that returns to sinx.</li>
+<li><a href="https://www.youtube.com/watch?v=xV2A2TO6A4I">Rates of Change</a> (Math 1060 3.6) Optional but explains real life calculus meaning economic cost function derivatives and physics how the derivative of f(time) = position gives you f(time) = velocity. You can undo the velocity derivative to go back to the position function using integration.</li>
+<li><a href="https://www.youtube.com/watch?v=hCuyU0edOcE">Chain Rule</a> (Math 1060 3.7) the derivative of function composition or f'(g)*g'</li>
+<li><a href="https://www.youtube.com/watch?v=RL0At1N-2FQ">Derivatives of Log/Exp</a> (Math 1060 3.8)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org634ab61" class="outline-2">
+<h2 id="org634ab61">OptimzationTODO</h2>
+<div class="outline-text-2" id="text-org634ab61">
+<p>
+For algorithm design/AI
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec50428" class="outline-2">
+<h2 id="orgec50428">Integrals</h2>
+<div class="outline-text-2" id="text-orgec50428">
+<p>
+TODO Spencer's book <i>Asymptopia</i> and some algorithms analysis/taocp/clrs proofs as examples.   
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org93450ce" class="outline-2">
+<h2 id="org93450ce">Resources</h2>
+<div class="outline-text-2" id="text-org93450ce">
+<ul class="org-ul">
+<li>The Clemson University Math 1060 <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">course page</a> and list of <a href="https://speele.people.clemson.edu/MATH1060/">YouTube</a> videos they use the book <i>Calculus: Early Transcendentals</i> Briggs Et. al</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

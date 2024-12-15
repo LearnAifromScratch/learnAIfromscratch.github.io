@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-15 Sun 02:00 -->
+<!-- 2024-12-15 Sun 02:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Asymptotics From Scratch</title>
@@ -234,25 +234,25 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9d99271">Exp &amp; Log Functions</a></li>
-<li><a href="#orgb7461ce">Trig Functions</a></li>
-<li><a href="#org26fca86">Limits</a></li>
-<li><a href="#orgfbbdbec">Derivatives</a></li>
-<li><a href="#org738cf83">Integrals</a></li>
-<li><a href="#orgbf24a91">Asymptotics</a>
+<li><a href="#orgcf42b06">Exp &amp; Log Functions</a></li>
+<li><a href="#orgb2709fc">Trig Functions</a></li>
+<li><a href="#org961e2dc">Limits</a></li>
+<li><a href="#org9b3c7e6">Derivatives</a></li>
+<li><a href="#org089b61b">Integrals</a></li>
+<li><a href="#org2075d3d">Asymptotics</a>
 <ul>
-<li><a href="#orga32f755">Big-O (and Friends) TODO</a></li>
+<li><a href="#org30e9d23">Big-O (and Friends) TODO</a></li>
 </ul>
 </li>
-<li><a href="#orgdf01d0e">Resources</a></li>
+<li><a href="#org8900334">Resources</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org9d99271" class="outline-2">
-<h2 id="org9d99271">Exp &amp; Log Functions</h2>
-<div class="outline-text-2" id="text-org9d99271">
+<div id="outline-container-orgcf42b06" class="outline-2">
+<h2 id="orgcf42b06">Exp &amp; Log Functions</h2>
+<div class="outline-text-2" id="text-orgcf42b06">
 <p>
 Explained <a href="https://www.youtube.com/watch?v=vQydKnPxOJY">here</a> (Clemson Math 1060 sec 1.3). These Clemson U lectures average ~20m and are just the right difficulty if you forgot high school like most people so gaps will be filled in and there's lot's of constructions instead of descriptive/abstract definitions. 
 </p>
@@ -273,14 +273,14 @@ A base e log or ln(x) is often used in computer science literature instead of ba
 </p>
 
 <p>
-Notice how a log is a linearization of an exponent. One example is if you log 2<sup>x</sup> then log(2<sup>x</sup>) = xlog(2) and you mapped a quadratic to a linear space. 
+Notice how a log is a linearization of an exponent, if you log 2<sup>x</sup> then log(2<sup>x</sup>) = xlog(2) and you mapped a quadratic to a linear space. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb7461ce" class="outline-2">
-<h2 id="orgb7461ce">Trig Functions</h2>
-<div class="outline-text-2" id="text-orgb7461ce">
+<div id="outline-container-orgb2709fc" class="outline-2">
+<h2 id="orgb2709fc">Trig Functions</h2>
+<div class="outline-text-2" id="text-orgb2709fc">
 <p>
 Examples are frequently done using trig functions in all literature for analysis/calculus so you may as well get this over with.
 </p>
@@ -295,9 +295,9 @@ We have just seen another linearization. Watch a few minutes of <a href="https:/
 </div>
 </div>
 
-<div id="outline-container-org26fca86" class="outline-2">
-<h2 id="org26fca86">Limits</h2>
-<div class="outline-text-2" id="text-org26fca86">
+<div id="outline-container-org961e2dc" class="outline-2">
+<h2 id="org961e2dc">Limits</h2>
+<div class="outline-text-2" id="text-org961e2dc">
 <p>
 Skim through these, if you want to do exercises pause the video before he works out an example and do it yourself. Limits will come up all the time. 
 </p>
@@ -311,53 +311,53 @@ Skim through these, if you want to do exercises pause the video before he works 
 </ul>
 </div>
 
-<div id="outline-container-orgf2412dd" class="outline-4">
-<h4 id="orgf2412dd">We need limits where f(x) inputs go to infinity</h4>
-<div class="outline-text-4" id="text-orgf2412dd">
+<div id="outline-container-org3fd0cb7" class="outline-4">
+<h4 id="org3fd0cb7">We need limits where f(x) inputs go to infinity</h4>
+<div class="outline-text-4" id="text-org3fd0cb7">
 <ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=rmlrZzB1NEY">Limits at Infinity</a> (Math 1060 2.5) a polynomial is a way to model a function and get all it's properties like what is the behavior at f(0) or f(x) = 0. Program cost functions are going to be a polynomial or a recurrence relation with a characteristic polynomial too.</li>
+<li><a href="https://www.youtube.com/watch?v=rmlrZzB1NEY">Limits at Infinity</a> (Math 1060 2.5) a polynomial is a way to model a function and get all it's properties like what is the behavior at f(0) or f(x) = 0. Algorithm cost functions are going to be a polynomial or a recurrence relation with a characteristic polynomial too.</li>
 <li><a href="https://www.youtube.com/watch?v=gQlGn8OjVI8">Continuity</a> crash course on continuity on an interval.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org06d88d6" class="outline-4">
-<h4 id="org06d88d6">We need LimSup and LimInf</h4>
-<div class="outline-text-4" id="text-org06d88d6">
+<div id="outline-container-org6d2f255" class="outline-4">
+<h4 id="org6d2f255">We need LimSup and LimInf</h4>
+<div class="outline-text-4" id="text-org6d2f255">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=1SguKALJji8">Sequences</a> (jp-g.de Real Analysis 2)</li>
 </ul>
 
 <p>
-The notation here for convergence, if a<sub>n</sub> represents the sequence 1/n then it is convergent if abs(limit - a<sub>n</sub>) &lt; every positive epsilon meaning as inputs continue on until the end of days they always get closer to the limit which here is zero. Epsilons are small displacelments/decimals like 0.0001 but notice here it says <i>every</i> epsilon because with infinity the process of inputting a bigger denominator to 1/n doesn't stop.      
+The notation here for convergence, if a<sub>n</sub> represents the sequence 1/n then it is convergent if abs(limit - a<sub>n</sub>) &lt; every positive epsilon meaning as inputs continue they always get closer to the limit which here is zero. Epsilons are small displacements/decimals like 0.0001 but notice here it says <i>every</i> epsilon because with infinity the process of inputting a bigger denominator to 1/n doesn't stop.      
 </p>
 
 <ul class="org-ul">
-<li><a href="https://youtu.be/xZ5vjdZzTUI?si=UtUt3iUrfy4kJ9zS">Accumulation Values</a> (jp-g.de Real Analysis 9) to set up LimSup/LimInf</li>
+<li><a href="https://youtu.be/xZ5vjdZzTUI?si=UtUt3iUrfy4kJ9zS">Accumulation Values</a> (jp-g.de Real Analysis 9)</li>
 <li><a href="https://www.youtube.com/watch?v=-y0v2V0-_8E">Limit Superior/Inferior</a> and <a href="https://www.youtube.com/watch?v=afDgCWY8DOY">Examples for Limsup/inf</a></li>
 </ul>
 
 <p>
-Imagine a function with inputs growing forever and every output is appended to a list. You can filter the list to take out whatever subsequence you wanted like all the evens or odd or any elements within a small epsilon displacement of each other meaning they are clustered together. LimSup goes to negative infinity if there is no supremum limit because it searches right to left or positive to negative. LimInf is positive infinity if no infimum limit found as it searches left to right from negative to positive.  
+Imagine a function with inputs growing forever and every output is appended to a list. You can filter the list to take out whatever subsequence you wanted like all the even/odd elements or any elements within a small epsilon displacement of each other meaning they are clustered together. LimSup goes to negative infinity if there is no supremum limit because it searches right to left or positive to negative. LimInf is positive infinity if no infimum limit found as it searches left to right from negative to positive.  
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgfbbdbec" class="outline-2">
-<h2 id="orgfbbdbec">Derivatives</h2>
-<div class="outline-text-2" id="text-orgfbbdbec">
+<div id="outline-container-org9b3c7e6" class="outline-2">
+<h2 id="org9b3c7e6">Derivatives</h2>
+<div class="outline-text-2" id="text-org9b3c7e6">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=Bjgu3i310pw">Derivative</a> (Math 1060 3.1) shows the geometry of a derivative at a point.</li>
-<li><a href="https://www.youtube.com/watch?v=sGQGsxNNO8k">Derivative as a Function</a>  To see how the dy/dx Leibniz notation works watch <a href="https://youtu.be/oGZK3yGF-6k?si=1p5qJaH1tkjXh--w&amp;t=208">this</a> (MIT 18.06) starting at 3:27 for only a few minutes. The key relationship is dy = 6dx or dy/dx = 6 meaning you linearize x<sup>2</sup> to 2x.</li>
+<li><a href="https://www.youtube.com/watch?v=sGQGsxNNO8k">Derivative as a Function</a> or x -&gt; x<sup>2</sup> derivative returns x -&gt; 2x for all 'points'/inputs</li>
 <li><a href="https://www.youtube.com/watch?v=rdGXPvMw_X8">Derivative Rules</a> the usual formulas, higher-order derivatives, e<sup>x</sup> is it's own derivative, and remark that differentiation is a linear operator.</li>
 <li><a href="https://www.youtube.com/watch?v=mnbuUndB8vk">L'Hopitals Rule I</a> and <a href="https://www.youtube.com/watch?v=-siZ4dMiCeI">II</a> is presented as the definition of big-O in some texts.</li>
 </ul>
 </div>
 
-<div id="outline-container-org1c6566b" class="outline-4">
-<h4 id="org1c6566b">Derivative rules to watch when needed.</h4>
-<div class="outline-text-4" id="text-org1c6566b">
+<div id="outline-container-org3ccb0f6" class="outline-4">
+<h4 id="org3ccb0f6">Derivative rules to watch when needed.</h4>
+<div class="outline-text-4" id="text-org3ccb0f6">
 <p>
 Once you learn asymptotics you can come back and apply it when finishing <a href="https://micromath.wordpress.com/2008/04/14/donald-knuth-calculus-via-o-notation/">calculus</a>.
 </p>
@@ -372,9 +372,9 @@ Once you learn asymptotics you can come back and apply it when finishing <a href
 </div>
 </div>
 
-<div id="outline-container-orgbca7008" class="outline-4">
-<h4 id="orgbca7008">Optimization to watch when needed.</h4>
-<div class="outline-text-4" id="text-orgbca7008">
+<div id="outline-container-orgeebe558" class="outline-4">
+<h4 id="orgeebe558">Optimization to watch when needed.</h4>
+<div class="outline-text-4" id="text-orgeebe558">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=caKCSTGCl4M">Max/Min</a> (Math 1060 4.1) of a function.</li>
 <li><a href="https://www.youtube.com/watch?v=3LKdFF1mR8I">Mean Value Theorem</a> the point of the MVT is to establish a function with a positive derivative on an open interval would have to be increasing.</li>
@@ -385,9 +385,9 @@ Once you learn asymptotics you can come back and apply it when finishing <a href
 </div>
 </div>
 
-<div id="outline-container-org738cf83" class="outline-2">
-<h2 id="org738cf83">Integrals</h2>
-<div class="outline-text-2" id="text-org738cf83">
+<div id="outline-container-org089b61b" class="outline-2">
+<h2 id="org089b61b">Integrals</h2>
+<div class="outline-text-2" id="text-org089b61b">
 <p>
 This is what we really need. 
 </p>
@@ -401,9 +401,9 @@ This is what we really need.
 </ul>
 </div>
 
-<div id="outline-container-orgff7ea17" class="outline-4">
-<h4 id="orgff7ea17">Watch when needed.</h4>
-<div class="outline-text-4" id="text-orgff7ea17">
+<div id="outline-container-orgd9cff78" class="outline-4">
+<h4 id="orgd9cff78">Watch when needed.</h4>
+<div class="outline-text-4" id="text-orgd9cff78">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=he94PGxauVA">Mean Value Theorem</a> for integrals.</li>
 <li><a href="https://www.youtube.com/watch?v=JVC82ZDPGBY">Substitution Method Part I</a>, <a href="https://www.youtube.com/watch?v=2P3rBEUMutc">II</a> and <a href="https://www.youtube.com/watch?v=K90rWE8DBpU">III</a></li>
@@ -415,21 +415,17 @@ That's it!
 </div>
 </div>
 </div>
-<div id="outline-container-orgbf24a91" class="outline-2">
-<h2 id="orgbf24a91">Asymptotics</h2>
-<div class="outline-text-2" id="text-orgbf24a91">
+<div id="outline-container-org2075d3d" class="outline-2">
+<h2 id="org2075d3d">Asymptotics</h2>
+<div class="outline-text-2" id="text-org2075d3d">
 <p>
-<a href="https://bookstore.ams.org/stml-71">Buy</a>, <a href="https://search.worldcat.org/">borrow</a> or <a href="https://annas-archive.org/">download</a> <i>Asymptopia</i> by Joel Spencer.
-</p>
-
-<p>
-The algorithm for this is to watch the lecture, pause, work through the book at the same time, repeat. There's a lecture for every chapter in the book some of these will be from an advanced algorithms <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15850-s23/www/oldindex.html">course</a> (log*, central limit theorem) to <a href="https://aofa.cs.princeton.edu/40asymptotic/">practice</a> yet more asymptotics.    
+<a href="https://bookstore.ams.org/stml-71">Buy</a>, <a href="https://search.worldcat.org/">borrow</a> or <a href="https://annas-archive.org/">download</a> <i>Asymptopia</i> by Joel Spencer. 
 </p>
 </div>
 
-<div id="outline-container-orga32f755" class="outline-3">
-<h3 id="orga32f755">Big-O (and Friends) TODO</h3>
-<div class="outline-text-3" id="text-orga32f755">
+<div id="outline-container-org30e9d23" class="outline-3">
+<h3 id="org30e9d23">Big-O (and Friends) TODO</h3>
+<div class="outline-text-3" id="text-org30e9d23">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=_gKb855_3bk&amp;list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX&amp;index=5">Big-O and Friends</a> (CS Theory Toolkit 2a) from chapter 2 of <i>Asymptopia</i>.</li>
 </ul>
@@ -437,16 +433,28 @@ The algorithm for this is to watch the lecture, pause, work through the book at 
 </div>
 </div>
 
-<div id="outline-container-orgdf01d0e" class="outline-2">
-<h2 id="orgdf01d0e">Resources</h2>
-<div class="outline-text-2" id="text-orgdf01d0e">
+<div id="outline-container-org8900334" class="outline-2">
+<h2 id="org8900334">Resources</h2>
+<div class="outline-text-2" id="text-org8900334">
 <ul class="org-ul">
 <li>Clemson University Math 1060 <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">course page</a> and list of <a href="https://speele.people.clemson.edu/MATH1060/archived/FA24_final_table.html">lectures</a> they use the book <i>Calculus: Early Transcendentals</i> Briggs Et. al</li>
+</ul>
 
+
+
+<ul class="org-ul">
 <li>Dan Katz <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig</a> and <a href="http://www.math.brown.edu/dkatz/vectorbootcamp/">Vector</a> boot camp.</li>
+</ul>
 
+
+
+<ul class="org-ul">
 <li>Julian Grossmann <a href="https://jp-g.de/">personal site</a> and <a href="https://www.youtube.com/@brightsideofmaths/playlists">YouTube</a> playlist of Real Analysis. Look at his <a href="https://thebrightsideofmathematics.com/tools/">setup</a> you don't need expensive tools to make a YouTube video.</li>
+</ul>
 
+
+
+<ul class="org-ul">
 <li>Real Analysis books: (free) <a href="http://classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">here</a> the elementary and graduate book contains hints to all proofs and was written by active researchers so they tell you why the theorems matter and which don't matter like Rolle's Theorem or the Riemann integral. Andy Bruckner is 91 years old and <a href="https://www.researchgate.net/profile/Andrew-Bruckner-3">still publishing papers</a>.</li>
 </ul>
 </div>

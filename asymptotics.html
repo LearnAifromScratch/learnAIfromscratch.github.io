@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-13 Fri 03:08 -->
+<!-- 2024-12-15 Sun 00:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Minimum Calculus for Asymptotics</title>
+<title>Asymptotics From Scratch</title>
 <meta name="author" content="jbh" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -229,26 +229,26 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Minimum Calculus for Asymptotics</h1>
+<h1 class="title">Asymptotics From Scratch</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc947858">Exponential &amp; Logarithmic Functions</a></li>
-<li><a href="#org75ba1fe">Trig Functions</a></li>
-<li><a href="#orga22fae0">Limits</a></li>
-<li><a href="#org352fbb9">Derivatives</a></li>
-<li><a href="#org5360433">OptimzationTODO</a></li>
-<li><a href="#org4d2881e">Integrals</a></li>
-<li><a href="#orgce3144b">Resources</a></li>
+<li><a href="#orgd1d3407">Exponential &amp; Logarithmic Functions</a></li>
+<li><a href="#org0c41174">Trig Functions</a></li>
+<li><a href="#org8e10996">Limits</a></li>
+<li><a href="#org6831ce7">Derivatives</a></li>
+<li><a href="#org09ac781">Integrals</a></li>
+<li><a href="#orgdde91c7">Asymptotics</a></li>
+<li><a href="#org3ea3019">Resources</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgc947858" class="outline-2">
-<h2 id="orgc947858">Exponential &amp; Logarithmic Functions</h2>
-<div class="outline-text-2" id="text-orgc947858">
+<div id="outline-container-orgd1d3407" class="outline-2">
+<h2 id="orgd1d3407">Exponential &amp; Logarithmic Functions</h2>
+<div class="outline-text-2" id="text-orgd1d3407">
 <p>
 Explained <a href="https://www.youtube.com/watch?v=vQydKnPxOJY">here</a> (Clemson Math 1060 sec 1.3). These Clemson U lectures average ~20m and are just the right difficulty if you forgot high school like most people so gaps will be filled in and there's lot's of constructions instead of descriptive/abstract definitions. 
 </p>
@@ -274,15 +274,15 @@ Notice how a log is a linearization of an exponent. One example is if you log 2<
 </div>
 </div>
 
-<div id="outline-container-org75ba1fe" class="outline-2">
-<h2 id="org75ba1fe">Trig Functions</h2>
-<div class="outline-text-2" id="text-org75ba1fe">
+<div id="outline-container-org0c41174" class="outline-2">
+<h2 id="org0c41174">Trig Functions</h2>
+<div class="outline-text-2" id="text-org0c41174">
 <p>
-Examples are frequently done using trig functions in all literature for analysis/calculus.
+Examples are frequently done using trig functions in all literature for analysis/calculus so you may as well get this over with.
 </p>
 
 <p>
-If you don't remember trig at all try <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a> (Math 1060 sec 1.4) review of Trig functions and their inverses. Skip through and remind yourself that sin<sup>-1</sup> is not 1/sin. Where do those square root x/y coords come from on the unit circle? Explained in the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a> (Brown University) which also has a YouTube <a href="https://www.youtube.com/watch?v=8qvZ8-9IxiI">lecture</a>. Two right angle triangles (deg 30/60/90 and 45/45/90) need to be scaled down so the hypotenuse is 1 to fit on the unit circle.
+If you don't remember trig at all try <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a> (Math 1060 sec 1.4) review of Trig functions and their inverses. Skip through and remind yourself that sin<sup>-1</sup> is not 1/sin. Where do those square root x/y coords come from on the unit circle? Explained in the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a> (Brown University). Two right angle triangles (deg 30/60/90 and 45/45/90) need to be scaled down so the hypotenuse is 1 to fit on the unit circle.
 </p>
 
 <p>
@@ -291,86 +291,133 @@ We have just seen another linearization. Watch a few minutes of <a href="https:/
 </div>
 </div>
 
-<div id="outline-container-orga22fae0" class="outline-2">
-<h2 id="orga22fae0">Limits</h2>
-<div class="outline-text-2" id="text-orga22fae0">
+<div id="outline-container-org8e10996" class="outline-2">
+<h2 id="org8e10996">Limits</h2>
+<div class="outline-text-2" id="text-org8e10996">
 <p>
 Skim through these, if you want to do exercises pause the video before he works out an example and do it yourself. Limits will come up all the time. 
 </p>
 
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=3U0JTtjPEMM">Limits</a> (Math 1060 sec 2.1) introduction and secants/tangents.</li>
-<li><a href="https://www.youtube.com/watch?v=iQTwviLhQwU">Informal definition</a> (Math 1060 sec 2.2) using approximations from the left and right.</li>
-<li><a href="https://www.youtube.com/watch?v=h7dfq5aD6E4">Techniques I</a> (Math 1060 2.3.1) for computing limits.</li>
-<li><a href="https://www.youtube.com/watch?v=OBGalcQFwzI">Techniques II</a> (Math 1060 2.3.2) we mainly need the squeeze theorem @16m.</li>
-<li><a href="https://www.youtube.com/watch?v=vrd9Fqxoue0">Infinite Limits</a> (Math 1060 2.4) if the y-axis/output goes to infinity</li>
+<li><a href="https://www.youtube.com/watch?v=iQTwviLhQwU">Informal definition</a> using approximations from the left and right.</li>
+<li><a href="https://www.youtube.com/watch?v=h7dfq5aD6E4">Techniques I</a> for computing limits.</li>
+<li><a href="https://www.youtube.com/watch?v=OBGalcQFwzI">Techniques II</a> we mainly need the squeeze theorem @16m.</li>
+<li><a href="https://www.youtube.com/watch?v=vrd9Fqxoue0">Infinite Limits</a> if the y-axis/output goes to infinity</li>
 </ul>
+</div>
 
-<p>
-We need limits where the f(x) inputs go to infinity for big-O  
-</p>
-
+<div id="outline-container-orge150f2a" class="outline-4">
+<h4 id="orge150f2a">We need limits where f(x) inputs go to infinity</h4>
+<div class="outline-text-4" id="text-orge150f2a">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=rmlrZzB1NEY">Limits at Infinity</a> (Math 1060 2.5) a polynomial is a way to model a function and get all it's properties like what is the behavior at f(0) or f(x) = 0. Program cost functions are going to be a polynomial or a recurrence relation with a characteristic polynomial too.</li>
-<li><a href="https://www.youtube.com/watch?v=gQlGn8OjVI8">Continuity</a> (Math 1060 2.6) crash course on continuity on an interval.</li>
+<li><a href="https://www.youtube.com/watch?v=gQlGn8OjVI8">Continuity</a> crash course on continuity on an interval.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org352fbb9" class="outline-2">
-<h2 id="org352fbb9">Derivatives</h2>
-<div class="outline-text-2" id="text-org352fbb9">
-<p>
-We mostly need integration, once you have an idea what derivatives are skip directly to Integrals unless you need this for AI. 
-</p>
+<div id="outline-container-orgd6a5087" class="outline-4">
+<h4 id="orgd6a5087">We need Limsup and Liminf</h4>
+<div class="outline-text-4" id="text-orgd6a5087">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=1SguKALJji8">Sequences</a> (jp-g.de Real Analysis 2) the notation here for convergence, if a<sub>n</sub> represents the sequence 1/n then it is convergent if abs(limit - a<sub>n</sub>) &lt; every epsilon. If you choose any arbitrarily small epsilon there is always an input to 1/n such as 1/trillion smaller than whatever epsilon you can possibly choose.</li>
+<li><a href="https://youtu.be/xZ5vjdZzTUI?si=UtUt3iUrfy4kJ9zS">Accumulation Values</a> (jp-g.de Real Analysis 9) to set up Limsup/inf</li>
+<li><a href="https://www.youtube.com/watch?v=-y0v2V0-_8E">Limit Superior/Inferior</a> and <a href="https://www.youtube.com/watch?v=afDgCWY8DOY">Examples for Limsup/inf</a> imagine a function with inputs growing to infinity where every output is appended to a list. You can filter the list to take out whatever subsequence you wanted like all the evens or odd or whatever accumulated closely around an element(s). Limsup goes to negative infinity if there is no supremum limit because it searches (right to left) positive to negative and Liminf is positive infinity if no infimum limit found as it searches (left to right) negative to positive.</li>
+</ul>
+</div>
+</div>
+</div>
 
+<div id="outline-container-org6831ce7" class="outline-2">
+<h2 id="org6831ce7">Derivatives</h2>
+<div class="outline-text-2" id="text-org6831ce7">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=Bjgu3i310pw">Derivative</a> (Math 1060 3.1) shows the geometry of a derivative at a point.</li>
-<li><a href="https://www.youtube.com/watch?v=sGQGsxNNO8k">Derivative as a Function</a> (Math 1060 3.2.1) To see how the dy/dx Leibniz notation works watch <a href="https://youtu.be/oGZK3yGF-6k?si=1p5qJaH1tkjXh--w&amp;t=208">this</a> (MIT 18.06) starting at 3:27 for only a few minutes. The key relationship is dy = 6dx or dy/dx = 6 meaning you linearize x<sup>2</sup> to 2x.</li>
-<li><a href="https://www.youtube.com/watch?v=rdGXPvMw_X8">Derivative Rules</a> (Math 1060 3.3) the usual formulas, higher-order derivatives, e<sup>x</sup> is it's own derivative, and remark that differentiation is a linear operator.</li>
+<li><a href="https://www.youtube.com/watch?v=sGQGsxNNO8k">Derivative as a Function</a>  To see how the dy/dx Leibniz notation works watch <a href="https://youtu.be/oGZK3yGF-6k?si=1p5qJaH1tkjXh--w&amp;t=208">this</a> (MIT 18.06) starting at 3:27 for only a few minutes. The key relationship is dy = 6dx or dy/dx = 6 meaning you linearize x<sup>2</sup> to 2x.</li>
+<li><a href="https://www.youtube.com/watch?v=rdGXPvMw_X8">Derivative Rules</a> the usual formulas, higher-order derivatives, e<sup>x</sup> is it's own derivative, and remark that differentiation is a linear operator.</li>
+<li><a href="https://www.youtube.com/watch?v=mnbuUndB8vk">L'Hopitals Rule I</a> and <a href="https://www.youtube.com/watch?v=-siZ4dMiCeI">II</a> is presented as the definition of big-O in some texts.</li>
 </ul>
+</div>
 
-<p>
-These are all optional but presented well, the whole course is worth doing if you wanted. 
-</p>
-
+<div id="outline-container-org2f48472" class="outline-4">
+<h4 id="org2f48472">Derivative rules to watch when needed.</h4>
+<div class="outline-text-4" id="text-org2f48472">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=UF6koNYWE1s">Product Rule</a> (Math 1060 3.4) (fg)' = f'g + fg' and (f/g)' = (f'g - fg')/g<sup>2</sup></li>
-<li><a href="https://www.youtube.com/watch?v=o7yV_wUKy9M">Trig Derivatives</a> (Math 1060 3.6) covers reciprocal limits too. Lightly skim this just so you know the derivative of sinx is cosx and that if you take the derivative of sinx 4x then it's a cycle that returns to sinx.</li>
-<li><a href="https://www.youtube.com/watch?v=xV2A2TO6A4I">Rates of Change</a> (Math 1060 3.6) explains real life calculus meaning economic cost function derivatives and physics how the derivative of f(time) = position gives you f(time) = velocity. You can undo the velocity derivative to go back to the position function using indefinite integration.</li>
-<li><a href="https://www.youtube.com/watch?v=hCuyU0edOcE">Chain Rule</a> (Math 1060 3.7) the derivative of function composition or f'(g)*g'</li>
-<li><a href="https://www.youtube.com/watch?v=RL0At1N-2FQ">Derivatives of Log/Exp</a> (Math 1060 3.8)</li>
+<li><a href="https://www.youtube.com/watch?v=o7yV_wUKy9M">Trig Derivatives</a> covers reciprocal limits too. Lightly skim this just so you know the derivative of sinx is cosx and that if you take the derivative of sinx 4x then it's a cycle that returns to sinx.</li>
+<li><a href="https://www.youtube.com/watch?v=xV2A2TO6A4I">Rates of Change</a> explains real life calculus meaning economic cost function derivatives and physics how the derivative of f(time) = position gives you f(time) = velocity. You can undo the velocity derivative to go back to the position function using indefinite integration.</li>
+<li><a href="https://www.youtube.com/watch?v=hCuyU0edOcE">Chain Rule</a> the derivative of function composition or f'(g)*g'</li>
+<li><a href="https://www.youtube.com/watch?v=RL0At1N-2FQ">Derivatives of Log/Exp</a> the derivative of e<sup>x</sup> or exp(x) is itself.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5360433" class="outline-2">
-<h2 id="org5360433">OptimzationTODO</h2>
-<div class="outline-text-2" id="text-org5360433">
-<p>
-For algorithm design/AI
-</p>
-</div>
-</div>
-
-<div id="outline-container-org4d2881e" class="outline-2">
-<h2 id="org4d2881e">Integrals</h2>
-<div class="outline-text-2" id="text-org4d2881e">
-<p>
-TODO Spencer's book <i>Asymptopia</i> and some algorithms analysis/taocp/clrs proofs as examples.
-</p>
-
-<p>
-The best undergrad book I know of is <a href="http://classicalrealanalysis.info/com/documents/T-CalculusIntegral-AllChapters-Portrait.pdf">The Calculus Integral</a> written by <a href="http://people.math.sfu.ca/~thomson/backupindex.html">B.S Thomson</a> it has a rigorous continuity chapter and sets up graduate integrals like the 1960s Henstock-Kurzweil integral that generalizes the Lebesgue integral. This page is a crash course though so I will go through it <a href="./math.html">here</a>.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgce3144b" class="outline-2">
-<h2 id="orgce3144b">Resources</h2>
-<div class="outline-text-2" id="text-orgce3144b">
+<div id="outline-container-org72e3671" class="outline-4">
+<h4 id="org72e3671">Optimization to watch when needed.</h4>
+<div class="outline-text-4" id="text-org72e3671">
 <ul class="org-ul">
-<li>The Clemson University Math 1060 <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">course page</a> and list of <a href="https://speele.people.clemson.edu/MATH1060/">YouTube</a> videos they use the book <i>Calculus: Early Transcendentals</i> Briggs Et. al</li>
+<li><a href="https://www.youtube.com/watch?v=caKCSTGCl4M">Max/Min</a> (Math 1060 4.1) of a function.</li>
+<li><a href="https://www.youtube.com/watch?v=3LKdFF1mR8I">Mean Value Theorem</a> the point of the MVT is to establish a function with a positive derivative on an open interval would have to be increasing.</li>
+<li><a href="https://www.youtube.com/watch?v=kHWjjpBiMs0">What Derivatives Tell Us</a> about being +/- around a point then a local max/min</li>
+<li><a href="https://www.youtube.com/watch?v=6kvCO2gHJZQ">Applied Optimization I</a> and <a href="https://www.youtube.com/watch?v=4qKG6XRVwe8">II</a> examples.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org09ac781" class="outline-2">
+<h2 id="org09ac781">Integrals</h2>
+<div class="outline-text-2" id="text-org09ac781">
+<p>
+This is what we really need. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=CsutkSfozH8">Linear Approximation</a> and <a href="https://www.youtube.com/watch?v=hTjUvyBq8gA">Differentials</a> (Math 1060 4.6) dy = f'(c)dx or dy/dx = f'(point).</li>
+<li><a href="https://www.youtube.com/watch?v=HTa7jTU-72A">Indefinite integrals I</a> and <a href="https://www.youtube.com/watch?v=HTa7jTU-72A">II</a> the undo method for derivatives.</li>
+<li><a href="https://www.youtube.com/watch?v=lzCZLod2Z4I">Area Approximations</a> to set up the definite integral abstraction.</li>
+<li><a href="https://www.youtube.com/watch?v=pBXUUhb6YtU">Riemann Sums</a> and <a href="https://www.youtube.com/watch?v=o3sjROzOb3k">Definite Integral</a> constructions.</li>
+<li><a href="https://www.youtube.com/watch?v=FOgejRi7sNQ">Theorem of Calculus I</a> and <a href="https://www.youtube.com/watch?v=ntJmb8o9sOw">II</a> if you know 2x is the derivative of x<sup>2</sup> then b<sup>2</sup> - a<sup>2</sup> = the integral from a to b of 2x.</li>
+</ul>
+</div>
+
+<div id="outline-container-org2c63e2d" class="outline-4">
+<h4 id="org2c63e2d">Watch when needed.</h4>
+<div class="outline-text-4" id="text-org2c63e2d">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=he94PGxauVA">Mean Value Theorem</a> for integrals.</li>
+<li><a href="https://www.youtube.com/watch?v=JVC82ZDPGBY">Substitution Method Part I</a>, <a href="https://www.youtube.com/watch?v=2P3rBEUMutc">II</a> and <a href="https://www.youtube.com/watch?v=K90rWE8DBpU">III</a></li>
+</ul>
+
+<p>
+TThe best undergrad calculus book I know of is <a href="http://classicalrealanalysis.info/com/documents/T-CalculusIntegral-AllChapters-Portrait.pdf">The Calculus Integral</a> written by <a href="http://people.math.sfu.ca/~thomson/backupindex.html">B.S Thomson</a> which starts with the Newton integral of F(b) - F(a) and sets up graduate integrals like the 1960s Henstock-Kurzweil integral that generalizes the Lebesgue integral. You could use these Clemson Math 1060 lectures to go through it.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdde91c7" class="outline-2">
+<h2 id="orgdde91c7">Asymptotics</h2>
+<div class="outline-text-2" id="text-orgdde91c7">
+<p>
+TODO 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org3ea3019" class="outline-2">
+<h2 id="org3ea3019">Resources</h2>
+<div class="outline-text-2" id="text-org3ea3019">
+<ul class="org-ul">
+<li>Clemson University Math 1060 <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">course page</a> and list of <a href="https://speele.people.clemson.edu/MATH1060/archived/FA24_final_table.html">lectures</a> they use the book <i>Calculus: Early Transcendentals</i> Briggs Et. al</li>
+
+<li>Dan Katz <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig</a> and <a href="http://www.math.brown.edu/dkatz/vectorbootcamp/">Vector</a> boot camp.</li>
+
+<li>Julian Grossmann <a href="https://jp-g.de/">personal site</a> and <a href="https://www.youtube.com/@brightsideofmaths/playlists">YouTube</a> playlist of Real Analysis. Look at his <a href="https://thebrightsideofmathematics.com/tools/">setup</a> you don't need expensive tools to make a YouTube video.</li>
+
+<li>Real Analysis books the best are the one's (free) <a href="http://classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">here</a> the elementary and graduate book contains hints to all proofs and was written by active researchers so they tell you why the theorems matter and which don't matter like Rolle's Theorem or the Riemann integral. Andy Bruckner is 91 years old and <a href="https://www.researchgate.net/profile/Andrew-Bruckner-3">still publishing papers</a>.</li>
 </ul>
 </div>
 </div>

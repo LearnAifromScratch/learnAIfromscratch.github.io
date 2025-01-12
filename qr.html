@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-01-12 Sun 02:00 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quant Research</title>
+<meta name="author" content="jbh" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Quant Research</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgbf01755">Just the basics</a>
+<ul>
+<li><a href="#org0a1ab9c">What does a QR do?</a></li>
+<li><a href="#orgfb707da">What does an 'assistant' QR do?</a></li>
+<li><a href="#org9fdfa57">Is this even possible?</a></li>
+</ul>
+</li>
+<li><a href="#orgee6e874">What are the basics?</a></li>
+<li><a href="#org9af036c">Game Theoretic Probability</a></li>
+</ul>
+</div>
+</div>
+<style>details summary { color: green; }</style>
+
+<div id="outline-container-orgbf01755" class="outline-2">
+<h2 id="orgbf01755">Just the basics</h2>
+<div class="outline-text-2" id="text-orgbf01755">
+<p>
+Usually no trading company will hire QRs directly unless they have pedigree meaning they have previous industry experience or they come from a fancy school. You can however move internally from the 'back office' where you are writing network code to the 'front office' and get into QR if you know the basics. 
+</p>
+</div>
+
+<div id="outline-container-org0a1ab9c" class="outline-3">
+<h3 id="org0a1ab9c">What does a QR do?</h3>
+<div class="outline-text-3" id="text-org0a1ab9c">
+<p>
+A good breakdown is <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">here</a> and the same author's <a href="http://isomorphisms.sdf.org/maxdama.pdf">PDF</a> floating around from 2011 on algorithmic trading that he was forced to abandon upon signing NDAs to work where he is now. A successful and experienced QR is essentially a research scientist who has mastered the art of data analysis such as eliminating bias and can find a signal in a bunch of noise. To me it seems most of their time is spent explaining their strategy for example they have some specific domain knowledge, find a signal, and now have to explain and replicate it so others can adapt or sign off on it. 
+</p>
+
+<p>
+While they are explaining there's a ton of other work to do that's where you come in as the assistant. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb707da" class="outline-3">
+<h3 id="orgfb707da">What does an 'assistant' QR do?</h3>
+<div class="outline-text-3" id="text-orgfb707da">
+<p>
+You can easily spot the shit work from the above blog <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">post</a> that a professional scientist making 7 figures would love to pawn off on some eager trainee. Even if there is a small army of teams set up for the QR department there is always something tedious they would rather pay someone else to do for them.
+</p>
+
+<p>
+Shit work to them is basically anything that isn't directly involved in finding alpha. Maintenance of the research infrastructure is shit work and especially any kind of software writing and there's always software to write such as monitoring software, trading data capturing and archiving, having to extract some procedure out of a library and rewrite it to be faster, creating and automating all the graphs and visuals for end of day review, preparing all the regulatory compliance and internal reports, there is a continuous stream of work they would love for you to come around and do for them.    
+</p>
+
+<p>
+Why would you offer to do this? Because then they have time to show you the magic.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fdfa57" class="outline-3">
+<h3 id="org9fdfa57">Is this even possible?</h3>
+<div class="outline-text-3" id="text-org9fdfa57">
+<p>
+If they want you around they will ask management to sign off and then you are presented with some additional non-disclosure agreements. Even in QR everything is compartmentalized it seems nobody ever has the keys to everything so if it's a big company they'll be willing. I did this for free at first in my own time outside of writing back office tier software because it was the only way I could get in.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee6e874" class="outline-2">
+<h2 id="orgee6e874">What are the basics?</h2>
+<div class="outline-text-2" id="text-orgee6e874">
+<p>
+I assume you can program so all you need is data analysis on noisy but sort-of structured data.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">Probability</a></li>
+<li><a href="https://www.stat.cmu.edu/~cshalizi/TALR/">Modern Regression</a></li>
+<li>maybe <a href="https://oyc.yale.edu/economics/econ-159?qt-course=2#qt-course">Intro to Game Theory</a> though you'll learn this on the job
+<ul class="org-ul">
+<li>or read <i>The mathematics of poker</i> by Chen/Ankenman</li>
+</ul></li>
+</ul>
+
+<p>
+Of course to learn probability you need to know the basics of multivariable calculus and MIT has a free course on OpenCourseWare or skim Khan Academy where 3blue1brown was the guy who made their videos for multivariable calc. Any linear algebra not covered in vector calc or data analysis materials it's just applied <a href="https://web.stanford.edu/~boyd/vmls/">VMLS</a> 'least squares'. All of this can be done in R, Matlab, Python or Julia. There is a <a href="https://julialang.org/learning/books/">ton of books</a> all of them free documenting the various Julia data analysis/statistics libraries.
+</p>
+
+<p>
+There is no need to learn anything more than this to start moving yourself into QR at a typical big trading firm where they prioritize analyzing 100+ proprietary vendor data feeds so Jane Street, Optiver, HRT, Rentech, Citadel, etc. By moving I mean you're already working there in some other role you're not applying as an unknown to be the head research scientist or anything.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9af036c" class="outline-2">
+<h2 id="org9af036c">Game Theoretic Probability</h2>
+<div class="outline-text-2" id="text-org9af036c">
+<p>
+I'm personally interested in <a href="https://probabilityandfinance.com/">Game-Theoretic Probability</a> where essentially all concepts of randomness are thrown out. Probabilities are now forecasts and statistical models are tested with betting and non-stochastic. Everything is much simpler as it's now deterministic and doesn't require measure theory as a foundation. If you've ever been highly skeptical of stock markets being supposedly stochastic then you'll probably want to take this but it's advanced math we have to take graduate analysis to understand at first. 
+</p>
+
+<p>
+TODO
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

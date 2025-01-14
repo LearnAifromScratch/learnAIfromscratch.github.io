@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-12 Sun 21:17 -->
+<!-- 2025-01-13 Mon 19:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Quant Research</title>
@@ -202,59 +202,60 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org50feb32">Just the basics</a>
+<li><a href="#orgf415615">Just the basics</a>
 <ul>
-<li><a href="#org7e75146">What does a QR do?</a></li>
-<li><a href="#org1bf98f3">What does an 'assistant' QR do?</a></li>
-<li><a href="#orgd31b0b1">Software eng vs QR developer</a></li>
-<li><a href="#org54c32c9">Is this even possible?</a></li>
+<li><a href="#orgbc235f1">What does a QR do?</a></li>
+<li><a href="#org1c3d50d">What does an 'assistant' QR do?</a></li>
+<li><a href="#orgb0d7d75">Is this even possible?</a></li>
 </ul>
 </li>
-<li><a href="#org06b0edf">What are the basics?</a></li>
-<li><a href="#org3d089d3">Game Theoretic Probability</a></li>
+<li><a href="#orgdc23126">What are the basics?</a></li>
+<li><a href="#org66b3772">Game Theoretic Probability</a>
+<ul>
+<li><a href="#orgf81e6a4">Real Analysis</a></li>
+<li><a href="#org32052af">MIRA Supplement</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org50feb32" class="outline-2">
-<h2 id="org50feb32">Just the basics</h2>
-<div class="outline-text-2" id="text-org50feb32">
+<div id="outline-container-orgf415615" class="outline-2">
+<h2 id="orgf415615">Just the basics</h2>
+<div class="outline-text-2" id="text-orgf415615">
 <p>
-Usually no trading company will hire new QRs directly unless they have pedigree meaning they come from a famous school. You can however move internally from the 'back office' where you are doing shit work to the 'front office' and perform more shit work (at first) to get into QR if you know the basics.
-</p>
-
-<p>
-This is about getting into fintech doing anything like mopping the floors or writing boilerplate code then kicking down the door of QR and doing something everyone said would be impossible for you to do. 
+Usually no trading company will hire new QRs directly unless they have pedigree meaning they come from a famous school. You can however move internally from the 'back office' where you are doing shit work to the 'front office' and perform more shit work (at first) to get into QR if you know the basics of probability and data analysis. 
 </p>
 </div>
 
-<div id="outline-container-org7e75146" class="outline-3">
-<h3 id="org7e75146">What does a QR do?</h3>
-<div class="outline-text-3" id="text-org7e75146">
+
+<div id="outline-container-orgbc235f1" class="outline-3">
+<h3 id="orgbc235f1">What does a QR do?</h3>
+<div class="outline-text-3" id="text-orgbc235f1">
 <p>
-A good breakdown is <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">here</a> and the same author's <a href="http://isomorphisms.sdf.org/maxdama.pdf">PDF</a> floating around from 2011 on algorithmic trading that he was forced to abandon upon signing NDAs to work where he is now. I am also prohibited from writing pretty much anything about it (I'm not a QR I'm just a lackey assistant who levels up when I can) but I can say a good QR is an experimental scientist who is part Sherlock Holmes, Isaac Newton, and a vegas magician who has mastered the art of data analysis such as minimizing all sources of bias and can find a signal in a bunch of noise. They are also salesmen (see below about explaining/presenting strategies). They are also responsible for optimizing the entire trading platform and strategy to reduce fees a source of giga bonuses but all of them only care about alpha.
+A good breakdown is <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">here</a> and the same author's <a href="http://isomorphisms.sdf.org/maxdama.pdf">PDF</a> floating around from 2011 on algorithmic trading that he was forced to abandon upon signing NDAs to work where he is now. A good QR is an experimental scientist who has mastered the art of data analysis such as minimizing all sources of bias and can find a signal in a bunch of noise. This is all learned on the job. They are also salesmen (see below about explaining/presenting strategies). They are also responsible for optimizing the entire trading platform to reduce fees.
 </p>
 
 <p>
-What I can say is it seems most of their time is spent explaining strategy for example they have some specific domain knowledge, use it to find a signal or optimization, and now have to explain and replicate it so others can adapt or sign off on it. The longer the strategy the more planning and meetings.
+I have witnessed most of their time is spent explaining strategy for example they have some specific domain knowledge, use it to find a signal or optimization, and now have to explain and replicate it so others can adapt or sign off on it. The longer the strategy the more planning and meetings.
 </p>
 
 <p>
-While they are spending time explaining there's a ton of other work to do that's where you come in as the assistant or junior/trainee. 
+While they are spending time explaining there's a ton of other work to do that's where you come in as the lackey assistant or junior/trainee. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1bf98f3" class="outline-3">
-<h3 id="org1bf98f3">What does an 'assistant' QR do?</h3>
-<div class="outline-text-3" id="text-org1bf98f3">
+<div id="outline-container-org1c3d50d" class="outline-3">
+<h3 id="org1c3d50d">What does an 'assistant' QR do?</h3>
+<div class="outline-text-3" id="text-org1c3d50d">
 <p>
 You can easily spot the shit work from the above blog <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">post</a> that a professional scientist making 7 figures would love to pawn off on some eager trainee. Even if there is a small army of teams set up for the QR department there is always something tedious they would rather pay someone else to do for them.
 </p>
 
 <p>
-Shit work to them is basically anything that isn't directly involved in finding alpha. Maintenance of the research infrastructure is shit work and especially any kind of software writing and there's always software to write such as monitoring software, trading data capturing and archiving, having to extract some procedure out of a library and rewrite it to be faster, creating and automating all the graphs and visuals for end of day review, wrangling all the new data pipelines to study, preparing all the regulatory compliance and internal reports, there is a continuous stream of side work they would love for you to come around and do for them.    
+Shit work to them is basically anything that isn't directly involved in finding alpha. Maintenance of the research infrastructure is shit work and especially any kind of software writing and there's always a ton of software to write, visualizations to create or reports to file.     
 </p>
 
 <p>
@@ -263,34 +264,25 @@ Why would you offer to do this? Because then they have time to show you the magi
 </div>
 </div>
 
-<div id="outline-container-orgd31b0b1" class="outline-3">
-<h3 id="orgd31b0b1">Software eng vs QR developer</h3>
-<div class="outline-text-3" id="text-orgd31b0b1">
+<div id="outline-container-orgb0d7d75" class="outline-3">
+<h3 id="orgb0d7d75">Is this even possible?</h3>
+<div class="outline-text-3" id="text-orgb0d7d75">
 <p>
-The difference between corporate software eng and being a 'quant researcher/developer' is night and day in the corporate engineering sector it's all meetings and careful planning, very slow and careful work. In the fly by the seat of your pants world of QR, you are needing to rewrite the entire trading strategy from scratch in a single night and it's all pure hacks and wildly fun as you watch your hacks achieve those weights in the market and paying you way more than you'd ever make in the software ghetto. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org54c32c9" class="outline-3">
-<h3 id="org54c32c9">Is this even possible?</h3>
-<div class="outline-text-3" id="text-org54c32c9">
-<p>
-If you sell yourself and they want you around they will ask management to sign off and then you are presented with some additional non-disclosure agreements. Even in QR everything is compartmentalized it seems nobody ever has the keys to everything so if it's a big company they'll be willing. I did this for free at first in my own time outside of writing software because it was the only way I could get in.
+I did it. If you sell yourself and they want you around they will ask management to sign off and then you are presented with some additional non-disclosure agreements. Even in QR everything is compartmentalized it seems nobody ever has the keys to everything so if it's a big company they'll be willing. 
 </p>
 
 <p>
-The need for more researchers is never ending and where I work goes to enormous lengths to try and convince smart people to do this work by throwing massive sums of money at them. 
+The need for more researchers is never ending and where I work goes to enormous lengths to try and convince smart students to do this work by throwing massive sums of money at them. 
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org06b0edf" class="outline-2">
-<h2 id="org06b0edf">What are the basics?</h2>
-<div class="outline-text-2" id="text-org06b0edf">
+<div id="outline-container-orgdc23126" class="outline-2">
+<h2 id="orgdc23126">What are the basics?</h2>
+<div class="outline-text-2" id="text-orgdc23126">
 <p>
-I assume you can program so all you need is data analysis on noisy but semi-structured data meaning it's s-expressions, JSON, Apache Parquet column-oriented files or a network packet with fields. 
+I assume you can program so all you need is the basics of data analysis on noisy but semi-structured data meaning JSON, Apache Parquet column-oriented files, etc. 
 </p>
 
 <ul class="org-ul">
@@ -311,56 +303,67 @@ I assume you can program so all you need is data analysis on noisy but semi-stru
 </ul>
 
 <p>
-The QRs you choose to learn from will have their own preferred models and sometimes these are physics heat models or they have a compsci/stats degree and are using graphical models or they have a biology background and are using some strange Riemannian geometric model to minimize dimensions. It makes no sense at all to prepare for all these until you find out what your chosen team is actually doing and then you can learn from them directly.
-</p>
-
-<p>
-Machine learning is a seperate department and Transformer models are used for things you wouldn't expect like predicting <i>40 septillion</i> floating point operations so you don't have to use processor resources to calculate them or estimate network packet responses. Anything to speed up data analysis or the trading optimizer is being worked on by highly specialized research teams. It's better to learn ML from them directly and if you have a probability and basic statistical learning background taught in any data analysis/regression book it will be trivial to pick up because you'll be using it at the same time you are learning.     
+Transformer models are used for things you wouldn't expect like predicting <i>40 septillion</i> floating point operations so trades or researchers don't have to use computational resources to calculate them. Anything to speed up data analysis or the trading optimizer is being worked on by highly specialized research teams. It's better to learn ML from them directly and if you have a probability and basic statistical learning background taught in any data analysis/regression book it will be trivial to pick up because you'll be using it at the same time you are learning.     
 </p>
 </div>
 
-<div id="outline-container-org5b04d3c" class="outline-4">
-<h4 id="org5b04d3c">Basics of the basics</h4>
-<div class="outline-text-4" id="text-org5b04d3c">
+<div id="outline-container-org19988df" class="outline-4">
+<h4 id="org19988df">Basics of the basics</h4>
+<div class="outline-text-4" id="text-org19988df">
 <p>
-Any linear/matrix algebra not covered in vector calc or data analysis is applied <a href="https://web.stanford.edu/~boyd/vmls/">VMLS</a> type 'least squares'.
+Any linear/matrix algebra not covered in vector calc or data analysis is applied <a href="https://web.stanford.edu/~boyd/vmls/">VMLS</a> type 'least squares'. Really all you need is Taylor-series expansion, knowing what a derivative is, double integrals, and changing the order of integration to take that probability book.  
 </p>
 
-<ul class="org-ul">
-<li>G.H. Hardy <i>A Course of Pure Mathematics</i> is calculus constructed from number theory and you never forget what you learned. It's also <a href="https://www.gutenberg.org/ebooks/38769">free</a> in the public domain. Terminology like continuous variables is explained here and logarithmic models.</li>
-<li>Some of Khan Academy's multivariable calc because 3blue1brown did many of the videos for it. Double integrals, changing the order of integration, that's good enough for starting probability.</li>
-</ul>
-
 <p>
-I assume you can teach yourself all of the above and there's no need to go through it here instead I will do something completely different you may wish to take if you are some kind of freelance quant who is interested in all those prediction markets, sports betting, foolish crypto speculation or other kinds of martingaling (gambling).
+I assume you can teach yourself all of the above and there's no need to go through it here instead I will do something completely different you may wish to take if you want to learn probability w/measure, are some kind of freelance quant who is interested in all those prediction markets, sports betting, foolish crypto speculation or other kinds of risky martingaling (gambling).
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org3d089d3" class="outline-2">
-<h2 id="org3d089d3">Game Theoretic Probability</h2>
-<div class="outline-text-2" id="text-org3d089d3">
+<div id="outline-container-org66b3772" class="outline-2">
+<h2 id="org66b3772">Game Theoretic Probability</h2>
+<div class="outline-text-2" id="text-org66b3772">
 <p>
-I'm personally interested in <a href="https://probabilityandfinance.com/">Game-Theoretic Probability</a> where essentially all concepts of randomness are thrown out. Probabilities are now forecasts and statistical models are tested with betting and non-stochastic. Everything is much simpler as it's now deterministic and doesn't require measure theory as a foundation. If you've ever been highly skeptical of stock markets being supposedly stochastic instead of a game played by multiple participants then you'll probably want to take this but it's advanced math we have to take graduate analysis to understand it.
+I'm personally interested in <a href="https://probabilityandfinance.com/">Game-Theoretic Probability</a> where essentially all concepts of randomness are thrown out. Probabilities are now forecasts and statistical models are tested with betting and non-stochastic. If you've ever been highly skeptical of stock markets being supposedly stochastic instead of a game played by multiple participants then you'll probably want to take this.
+</p>
+
+<p>
+However we have to learn 21st century math first. 
 </p>
 </div>
 
-<div id="outline-container-org87db756" class="outline-4">
-<h4 id="org87db756">Real Analysis</h4>
-<div class="outline-text-4" id="text-org87db756">
+<div id="outline-container-orgf81e6a4" class="outline-3">
+<h3 id="orgf81e6a4">Real Analysis</h3>
+<div class="outline-text-3" id="text-orgf81e6a4">
 <p>
-There are a number of amazing analysis texts floating around. The free books <a href="http://www.classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">here</a> are 'DRIPPED' meaning the Riemann integral has been dropped and very thorough presentations I've never seen elsewhere are given like all the interpretations of a derivative, all the tests for continuity, all the definitions of a limit, etc. These texts were written by Professor Emeritus Andrew Bruckner and his wife Judith who are still <a href="https://www.researchgate.net/profile/Andrew-Bruckner-3">active researchers</a> despite being 90 years old and <a href="https://www.researchgate.net/profile/Brian-Thomson-2">Brian S. Thomson</a> who argues we should modernize the curriculum like dropping Rolle's Theorem. His two books <i>The Calculus Integral</i> and <i>Theory of the Integral</i> are definitely the two best math books I've seen and he tells the reader which 19th century theorems taught in undergrad can be skipped as they are promptly replaced in 21st century graduate instruction.    
+The free books <a href="http://www.classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">here</a> are 'DRIPPED' meaning the Riemann integral has been dropped and replaced by a simple teaching integral and these books contain very thorough presentations I've never seen elsewhere such as all the interpretations of a derivative, all the tests for continuity, all the definitions of a limit, etc. These texts were written by Professor Emeritus Andrew Bruckner and his wife Judith who are still <a href="https://www.researchgate.net/profile/Andrew-Bruckner-3">active researchers</a> despite being 90 years old and <a href="https://www.researchgate.net/profile/Brian-Thomson-2">Brian S. Thomson</a> who argues we should modernize the curriculum from the 19th century like dropping both the Riemann integral and unnecessary setups like Rolle's Theorem.
 </p>
 
 <p>
-If you are interested in statistics and probability without the transparent nonsense of randomness and obvious lies such as 'independent and identically distributed' then we can begin a curious and possibly foolhardy jump straight into graduate analysis as I will use both <a href="http://www.classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">Real Analysis</a> by Bruckner and Thomson, <a href="https://measure.axler.net/">Measure, Integration, &amp; Real Analysis</a> by Axler and some functional analysis <a href="https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/video_galleries/lecture-videos/">lectures</a> from MIT to learn 21st century mathematics. If you don't care at all about game-theoretic statistics and want to learn probability as defined by measure theory this is your chance too. If you have only a highschool education, who cares, just try it first. This math is nothing like undergrad anyway. 
+I will now attempt to learn measure theory using the free books <a href="http://www.classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">Real Analysis</a> [RA] by Bruckner and Thomson and <a href="https://measure.axler.net/">Measure, Integration, &amp; Real Analysis</a> [MIRA] by Axler. We have YouTube and some functional analysis <a href="https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/video_galleries/lecture-videos/">lectures</a> from MIT to help us. If you don't care at all about game-theoretic foundations and want to learn probability as defined by measure theory this is your chance too. If you have only a highschool education, who cares, just try it first. This math is nothing like undergrad anyway.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org32052af" class="outline-3">
+<h3 id="org32052af">MIRA Supplement</h3>
+<div class="outline-text-3" id="text-org32052af">
+<p>
+Axler says we are supposed to be familiar with everything in this <a href="https://measure.axler.net/SupplementMIRA.pdf">supplement</a>. If you've never seen set notation look it up on YouTube. 
+</p>
+
+<p>
+Lightly review this material then refer to it later as it comes up. Any proof he shows is usually an example of the strategy to prove all the rest of that topic. For example use proof 0.2 to prove 0.3 we want an additive inverse so that a + (-a) = 0 so 1a + -1a = a(1 - 1) = a0 = 0. Since that is true, then (-1)a must be the additive inverse of a or -a.
+</p>
+
+<p>
+Here is a visiual explanation of the <a href="https://www.youtube.com/watch?v=8Cyvdv7Sm2s">Supremum and Infimum</a>. 
 </p>
 
 <p>
 TODO
 </p>
-
 <hr />
 <p>
 <a href="./software.html">Home</a>

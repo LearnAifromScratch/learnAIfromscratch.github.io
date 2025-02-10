@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-15 Sun 02:20 -->
+<!-- 2025-02-09 Sun 21:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Asymptotics From Scratch</title>
@@ -234,25 +234,25 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgcf42b06">Exp &amp; Log Functions</a></li>
-<li><a href="#orgb2709fc">Trig Functions</a></li>
-<li><a href="#org961e2dc">Limits</a></li>
-<li><a href="#org9b3c7e6">Derivatives</a></li>
-<li><a href="#org089b61b">Integrals</a></li>
-<li><a href="#org2075d3d">Asymptotics</a>
+<li><a href="#orge68e790">Exp &amp; Log Functions</a></li>
+<li><a href="#orgfc44c31">Trig Functions</a></li>
+<li><a href="#org86b7542">Limits</a></li>
+<li><a href="#orgdb7bb2d">Derivatives</a></li>
+<li><a href="#org3c25cca">Integrals</a></li>
+<li><a href="#orgf2698d8">Asymptotics</a>
 <ul>
-<li><a href="#org30e9d23">Big-O (and Friends) TODO</a></li>
+<li><a href="#org96720b7">Big-O (and Friends)</a></li>
 </ul>
 </li>
-<li><a href="#org8900334">Resources</a></li>
+<li><a href="#org05a2f68">Resources</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgcf42b06" class="outline-2">
-<h2 id="orgcf42b06">Exp &amp; Log Functions</h2>
-<div class="outline-text-2" id="text-orgcf42b06">
+<div id="outline-container-orge68e790" class="outline-2">
+<h2 id="orge68e790">Exp &amp; Log Functions</h2>
+<div class="outline-text-2" id="text-orge68e790">
 <p>
 Explained <a href="https://www.youtube.com/watch?v=vQydKnPxOJY">here</a> (Clemson Math 1060 sec 1.3). These Clemson U lectures average ~20m and are just the right difficulty if you forgot high school like most people so gaps will be filled in and there's lot's of constructions instead of descriptive/abstract definitions. 
 </p>
@@ -269,7 +269,7 @@ Logarithmic inverses, why does \(\large b^{log_b{(x)}} = x\)?
 </ul>
 
 <p>
-A base e log or ln(x) is often used in computer science literature instead of base 2 because \(\large log_{2}(x) = \frac{ln(x)}{ln(2)}\) meaning you are off only by a constant factor and now can enjoy all the nice properties e<sup>x</sup> and ln(x) have for doing quick approximations by hand. For small inputs where x<sup>2</sup> is evaluated smaller than x then e<sup>x</sup> can be approximated with 1 + x and ln(1 - x) can be approximated with -x. To see how e<sup>time</sup> = growth and ln(growth) = time then <a href="https://betterexplained.com/articles/demystifying-the-natural-logarithm-ln/">read this</a>. 
+A base e log or ln(x) is often used in computer science literature instead of base 2 because \(\large log_{2}(x) = \frac{ln(x)}{ln(2)}\) meaning you are off only by a constant factor and now can enjoy all the nice properties e<sup>x</sup> and ln(x) have for doing quick approximations by hand. For small inputs where x<sup>2</sup> is evaluated smaller than x then e<sup>x</sup> can be approximated with 1 + x and ln(1 + x) can be approximated with x. To see how e<sup>time</sup> = growth and ln(growth) = time then <a href="https://betterexplained.com/articles/demystifying-the-natural-logarithm-ln/">read this</a>. 
 </p>
 
 <p>
@@ -278,9 +278,9 @@ Notice how a log is a linearization of an exponent, if you log 2<sup>x</sup> the
 </div>
 </div>
 
-<div id="outline-container-orgb2709fc" class="outline-2">
-<h2 id="orgb2709fc">Trig Functions</h2>
-<div class="outline-text-2" id="text-orgb2709fc">
+<div id="outline-container-orgfc44c31" class="outline-2">
+<h2 id="orgfc44c31">Trig Functions</h2>
+<div class="outline-text-2" id="text-orgfc44c31">
 <p>
 Examples are frequently done using trig functions in all literature for analysis/calculus so you may as well get this over with.
 </p>
@@ -295,9 +295,9 @@ We have just seen another linearization. Watch a few minutes of <a href="https:/
 </div>
 </div>
 
-<div id="outline-container-org961e2dc" class="outline-2">
-<h2 id="org961e2dc">Limits</h2>
-<div class="outline-text-2" id="text-org961e2dc">
+<div id="outline-container-org86b7542" class="outline-2">
+<h2 id="org86b7542">Limits</h2>
+<div class="outline-text-2" id="text-org86b7542">
 <p>
 Skim through these, if you want to do exercises pause the video before he works out an example and do it yourself. Limits will come up all the time. 
 </p>
@@ -311,9 +311,9 @@ Skim through these, if you want to do exercises pause the video before he works 
 </ul>
 </div>
 
-<div id="outline-container-org3fd0cb7" class="outline-4">
-<h4 id="org3fd0cb7">We need limits where f(x) inputs go to infinity</h4>
-<div class="outline-text-4" id="text-org3fd0cb7">
+<div id="outline-container-orgd90e57e" class="outline-4">
+<h4 id="orgd90e57e">We need limits where f(x) inputs go to infinity</h4>
+<div class="outline-text-4" id="text-orgd90e57e">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=rmlrZzB1NEY">Limits at Infinity</a> (Math 1060 2.5) a polynomial is a way to model a function and get all it's properties like what is the behavior at f(0) or f(x) = 0. Algorithm cost functions are going to be a polynomial or a recurrence relation with a characteristic polynomial too.</li>
 <li><a href="https://www.youtube.com/watch?v=gQlGn8OjVI8">Continuity</a> crash course on continuity on an interval.</li>
@@ -321,9 +321,9 @@ Skim through these, if you want to do exercises pause the video before he works 
 </div>
 </div>
 
-<div id="outline-container-org6d2f255" class="outline-4">
-<h4 id="org6d2f255">We need LimSup and LimInf</h4>
-<div class="outline-text-4" id="text-org6d2f255">
+<div id="outline-container-orgb919162" class="outline-4">
+<h4 id="orgb919162">We need LimSup and LimInf</h4>
+<div class="outline-text-4" id="text-orgb919162">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=1SguKALJji8">Sequences</a> (jp-g.de Real Analysis 2)</li>
 </ul>
@@ -344,20 +344,21 @@ Imagine a function with inputs growing forever and every output is appended to a
 </div>
 </div>
 
-<div id="outline-container-org9b3c7e6" class="outline-2">
-<h2 id="org9b3c7e6">Derivatives</h2>
-<div class="outline-text-2" id="text-org9b3c7e6">
+<div id="outline-container-orgdb7bb2d" class="outline-2">
+<h2 id="orgdb7bb2d">Derivatives</h2>
+<div class="outline-text-2" id="text-orgdb7bb2d">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=Bjgu3i310pw">Derivative</a> (Math 1060 3.1) shows the geometry of a derivative at a point.</li>
 <li><a href="https://www.youtube.com/watch?v=sGQGsxNNO8k">Derivative as a Function</a> or x -&gt; x<sup>2</sup> derivative returns x -&gt; 2x for all 'points'/inputs</li>
 <li><a href="https://www.youtube.com/watch?v=rdGXPvMw_X8">Derivative Rules</a> the usual formulas, higher-order derivatives, e<sup>x</sup> is it's own derivative, and remark that differentiation is a linear operator.</li>
-<li><a href="https://www.youtube.com/watch?v=mnbuUndB8vk">L'Hopitals Rule I</a> and <a href="https://www.youtube.com/watch?v=-siZ4dMiCeI">II</a> is presented as the definition of big-O in some texts.</li>
+<li><a href="https://www.youtube.com/watch?v=mnbuUndB8vk">L'Hopital's Rule I</a> and <a href="https://www.youtube.com/watch?v=-siZ4dMiCeI">II</a> is very similar to the definition of big-O.</li>
 </ul>
 </div>
 
-<div id="outline-container-org3ccb0f6" class="outline-4">
-<h4 id="org3ccb0f6">Derivative rules to watch when needed.</h4>
-<div class="outline-text-4" id="text-org3ccb0f6">
+
+<div id="outline-container-org3333574" class="outline-4">
+<h4 id="org3333574">Derivative rules to watch when needed.</h4>
+<div class="outline-text-4" id="text-org3333574">
 <p>
 Once you learn asymptotics you can come back and apply it when finishing <a href="https://micromath.wordpress.com/2008/04/14/donald-knuth-calculus-via-o-notation/">calculus</a>.
 </p>
@@ -372,24 +373,25 @@ Once you learn asymptotics you can come back and apply it when finishing <a href
 </div>
 </div>
 
-<div id="outline-container-orgeebe558" class="outline-4">
-<h4 id="orgeebe558">Optimization to watch when needed.</h4>
-<div class="outline-text-4" id="text-orgeebe558">
+<div id="outline-container-org0588868" class="outline-4">
+<h4 id="org0588868">Optimization to watch when needed.</h4>
+<div class="outline-text-4" id="text-org0588868">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=caKCSTGCl4M">Max/Min</a> (Math 1060 4.1) of a function.</li>
 <li><a href="https://www.youtube.com/watch?v=3LKdFF1mR8I">Mean Value Theorem</a> the point of the MVT is to establish a function with a positive derivative on an open interval would have to be increasing.</li>
 <li><a href="https://www.youtube.com/watch?v=kHWjjpBiMs0">What Derivatives Tell Us</a> about being +/- around a point then a local max/min</li>
+<li><a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor Series</a> (Essence of Calculus 11) now you know why polynomials exist and where factorial numbers can be generated.</li>
 <li><a href="https://www.youtube.com/watch?v=6kvCO2gHJZQ">Applied Optimization I</a> and <a href="https://www.youtube.com/watch?v=4qKG6XRVwe8">II</a> examples.</li>
 </ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org089b61b" class="outline-2">
-<h2 id="org089b61b">Integrals</h2>
-<div class="outline-text-2" id="text-org089b61b">
+<div id="outline-container-org3c25cca" class="outline-2">
+<h2 id="org3c25cca">Integrals</h2>
+<div class="outline-text-2" id="text-org3c25cca">
 <p>
-This is what we really need. 
+I've only ever used the 'theorem of calculus' where integrals are the inverse operator of derivatives. 
 </p>
 
 <ul class="org-ul">
@@ -401,9 +403,9 @@ This is what we really need.
 </ul>
 </div>
 
-<div id="outline-container-orgd9cff78" class="outline-4">
-<h4 id="orgd9cff78">Watch when needed.</h4>
-<div class="outline-text-4" id="text-orgd9cff78">
+<div id="outline-container-org1208dab" class="outline-4">
+<h4 id="org1208dab">Watch when needed.</h4>
+<div class="outline-text-4" id="text-org1208dab">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=he94PGxauVA">Mean Value Theorem</a> for integrals.</li>
 <li><a href="https://www.youtube.com/watch?v=JVC82ZDPGBY">Substitution Method Part I</a>, <a href="https://www.youtube.com/watch?v=2P3rBEUMutc">II</a> and <a href="https://www.youtube.com/watch?v=K90rWE8DBpU">III</a></li>
@@ -415,29 +417,58 @@ That's it!
 </div>
 </div>
 </div>
-<div id="outline-container-org2075d3d" class="outline-2">
-<h2 id="org2075d3d">Asymptotics</h2>
-<div class="outline-text-2" id="text-org2075d3d">
+
+<div id="outline-container-orgf2698d8" class="outline-2">
+<h2 id="orgf2698d8">Asymptotics</h2>
+<div class="outline-text-2" id="text-orgf2698d8">
 <p>
 <a href="https://bookstore.ams.org/stml-71">Buy</a>, <a href="https://search.worldcat.org/">borrow</a> or <a href="https://annas-archive.org/">download</a> <i>Asymptopia</i> by Joel Spencer. 
 </p>
 </div>
 
-<div id="outline-container-org30e9d23" class="outline-3">
-<h3 id="org30e9d23">Big-O (and Friends) TODO</h3>
-<div class="outline-text-3" id="text-org30e9d23">
+<div id="outline-container-org96720b7" class="outline-3">
+<h3 id="org96720b7">Big-O (and Friends)</h3>
+<div class="outline-text-3" id="text-org96720b7">
 <ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=_gKb855_3bk&amp;list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX&amp;index=5">Big-O and Friends</a> (CS Theory Toolkit 2a) from chapter 2 of <i>Asymptopia</i>.</li>
+<li><a href="https://www.youtube.com/watch?v=_gKb855_3bk&amp;list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX&amp;index=5">Big-O and Friends</a> (CS Theory Toolkit 2a)</li>
 </ul>
+
+<p>
+Watching lecture 2a, now you know why f(x) is replaced with f(n). He took the additive approximation error and factored it out to be a multiplicative approximation error tending towards 1. If you did that for a paper a reader can turn it back to an additive error by distributing or apply a log: log(ab) = log(a) + log(b).
+</p>
+
+<ul class="org-ul">
+<li><a href="https://youtu.be/Ao6aXSyJ6Gk">Harmonic Numbers Asymptotics</a></li>
+</ul>
+
+<p>
+Now we get to see how this works in practice as he estimates bounds. He took out the function for the harmonic series 1/n and the leading term of the sum 1, integrated it which is 1 + ln(n), tighly bounded H<sub>n</sub> from both sides, then rewrote everything via distributive rule to show H<sub>n</sub> is asymptotic to ln(n) or f(x)/g(x) ~ 1 meaning H/ln(n) are the same functions.
+</p>
+
+<ul class="org-ul">
+<li>ln(1 + x) is basically x for -1 &lt;= x &lt;= 1</li>
+<li>e<sup>x</sup> is basically 1 + x for -1 &lt;= x &lt;= 1 
+<ul class="org-ul">
+<li>1/1-x is 1/e<sup>-x</sup></li>
+</ul></li>
+</ul>
+
+<p>
+Start with Chapter 2 <i>Big Oh, Little Oh, and All That</i> from Spencer's book. Def 2.1 explains what the g(n) is in big-O. A function in 'standard form' and a constant power of n is n<sup>1</sup>
+</p>
+
+<p>
+TODO
+</p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org8900334" class="outline-2">
-<h2 id="org8900334">Resources</h2>
-<div class="outline-text-2" id="text-org8900334">
+<div id="outline-container-org05a2f68" class="outline-2">
+<h2 id="org05a2f68">Resources</h2>
+<div class="outline-text-2" id="text-org05a2f68">
 <ul class="org-ul">
-<li>Clemson University Math 1060 <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">course page</a> and list of <a href="https://speele.people.clemson.edu/MATH1060/archived/FA24_final_table.html">lectures</a> they use the book <i>Calculus: Early Transcendentals</i> Briggs Et. al</li>
+<li>Clemson University Math 1060 <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">course page</a> and list of <a href="https://speele.people.clemson.edu/MATH1060/archived/FA24_final_table.html">lectures</a> they use the book <i>Calculus: Early Transcendentals</i> Briggs Et. al. You could use the modern book <a href="http://classicalrealanalysis.info/com/documents/T-CalculusIntegral-AllChapters-Portrait.pdf">The Calculus Integral</a> B.S. Thomson which sets the reader up for learning measure theory.</li>
 </ul>
 
 

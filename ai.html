@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-13 Thu 23:29 -->
+<!-- 2025-02-13 Thu 23:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2025</title>
@@ -202,10 +202,10 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org51c4fc4">Intro</a></li>
-<li><a href="#orgc0f9eda">Curriculum</a>
+<li><a href="#orgca94050">Intro</a></li>
+<li><a href="#org602d063">Curriculum</a>
 <ul>
-<li><a href="#orgd5ed11a">PreReq: Linear Algebra</a></li>
+<li><a href="#org4c31ccf">PreReq: Linear Algebra</a></li>
 </ul>
 </li>
 </ul>
@@ -213,9 +213,9 @@
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org51c4fc4" class="outline-2">
-<h2 id="org51c4fc4">Intro</h2>
-<div class="outline-text-2" id="text-org51c4fc4">
+<div id="outline-container-orgca94050" class="outline-2">
+<h2 id="orgca94050">Intro</h2>
+<div class="outline-text-2" id="text-orgca94050">
 <p>
 We will learn the 'full stack' of modern deep learning systems by building our own library from scratch in your language of choice. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most famous currently is transformer architecture for large language models like ChatGPT. We'll learn how to reverse engineer these models. When you are finished you can get paid for bounties to work on GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a>.
 </p>
@@ -225,22 +225,22 @@ We will learn the 'full stack' of modern deep learning systems by building our o
 </p>
 </div>
 
-<div id="outline-container-org005bda3" class="outline-4">
-<h4 id="org005bda3">Many iterations of this</h4>
-<div class="outline-text-4" id="text-org005bda3">
+<div id="outline-container-org2070b39" class="outline-4">
+<h4 id="org2070b39">Many iterations of this</h4>
+<div class="outline-text-4" id="text-org2070b39">
 <p>
-I nuked this curriculum and stalled it dozens of times for the simple reason I went to work at a place that does this professionally and what we were doing then needed so many resources I thought it was a waste of time to teach it. 
+I nuked this curriculum and stalled it dozens of times for the simple reason I went to work at a place that does this professionally and what we were doing then needed so many resources I thought it was a waste of time to teach it. Not anymore as the GPU bubble finally popped letting us plebs access to hardware. 
 </p>
 
 <p>
-I learned from taking Waterloo's CS485 <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">here</a> it is the best course for machine learning you will ever take and goes through the entire mathematical model assuming you have zero background by the Israeli author of <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">Understanding Machine Learning</a>. The theory of learning will not change. CMU still uses this book in their PhD track course ML <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">course</a>.
+I learned from taking Waterloo's CS485 <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">here</a> it is the best course for machine learning you will ever take and goes through the entire mathematical model assuming you have zero background by the Israeli author of <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">Understanding Machine Learning</a>. The theory of learning will not change. CMU still uses this book in their PhD track ML <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">course</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga0fcf41" class="outline-4">
-<h4 id="orga0fcf41">Limits of AI</h4>
-<div class="outline-text-4" id="text-orga0fcf41">
+<div id="outline-container-orga0cbae7" class="outline-4">
+<h4 id="orga0cbae7">Limits of AI</h4>
+<div class="outline-text-4" id="text-orga0cbae7">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -248,9 +248,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-orgc0f9eda" class="outline-2">
-<h2 id="orgc0f9eda">Curriculum</h2>
-<div class="outline-text-2" id="text-orgc0f9eda">
+<div id="outline-container-org602d063" class="outline-2">
+<h2 id="org602d063">Curriculum</h2>
+<div class="outline-text-2" id="text-org602d063">
 <ul class="org-ul">
 <li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> (CMU)
 <ul class="org-ul">
@@ -273,9 +273,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </ul>
 </div>
 
-<div id="outline-container-orgd5ed11a" class="outline-3">
-<h3 id="orgd5ed11a">PreReq: Linear Algebra</h3>
-<div class="outline-text-3" id="text-orgd5ed11a">
+<div id="outline-container-org4c31ccf" class="outline-3">
+<h3 id="org4c31ccf">PreReq: Linear Algebra</h3>
+<div class="outline-text-3" id="text-org4c31ccf">
 <p>
 There is no shortage of excellent linear algebra courses. 
 </p>

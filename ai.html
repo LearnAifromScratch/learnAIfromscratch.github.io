@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-09 Mon 18:29 -->
+<!-- 2025-02-13 Thu 23:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI in 2024</title>
+<title>AI in 2025</title>
 <meta name="author" content="jbh" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -197,92 +197,184 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">AI in 2024</h1>
+<h1 class="title">AI in 2025</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgfd0e960">Intro</a></li>
-<li><a href="#org3314d4f">PreReqs</a></li>
+<li><a href="#org51c4fc4">Intro</a></li>
+<li><a href="#orgc0f9eda">Curriculum</a>
+<ul>
+<li><a href="#orgd5ed11a">PreReq: Linear Algebra</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgfd0e960" class="outline-2">
-<h2 id="orgfd0e960">Intro</h2>
-<div class="outline-text-2" id="text-orgfd0e960">
+<div id="outline-container-org51c4fc4" class="outline-2">
+<h2 id="org51c4fc4">Intro</h2>
+<div class="outline-text-2" id="text-org51c4fc4">
 <p>
-There's a new field called <a href="https://www.neelnanda.io/mechanistic-interpretability/glossary">Mechanistic Interpretability</a> (MI) which reverse engineers neural networks similar to how you'd reverse engineer a compiled program. Neural networks have different architectures just like there is different software architectures (x86, RISC, ARM). The most popular is transformer architecture for large language models like ChatGPT.
+We will learn the 'full stack' of modern deep learning systems by building our own library from scratch in your language of choice. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most famous currently is transformer architecture for large language models like ChatGPT. We'll learn how to reverse engineer these models. When you are finished you can get paid for bounties to work on GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a>.
 </p>
 
 <p>
-<a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a concrete <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for this and even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program.
-</p>
-
-<p>
-It requires knowing all there is to know about the internals of ML software so a side-effect is you can be a 'ML engineer', build your own <a href="https://hanlab.mit.edu/courses/2024-fall-65940">TinyML</a> or even get paid for bounties to work on GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a>.
+<a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a suggested <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for reverse engineering transformers which we'll do. He even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program.
 </p>
 </div>
 
-<div id="outline-container-org75c8f8d" class="outline-4">
-<h4 id="org75c8f8d">Limits of AI</h4>
-<div class="outline-text-4" id="text-org75c8f8d">
+<div id="outline-container-org005bda3" class="outline-4">
+<h4 id="org005bda3">Many iterations of this</h4>
+<div class="outline-text-4" id="text-org005bda3">
 <p>
-Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
+I nuked this curriculum and stalled it dozens of times for the simple reason I went to work at a place that does this professionally and what we were doing then needed so many resources I thought it was a waste of time to teach it. 
+</p>
+
+<p>
+I learned from taking Waterloo's CS485 <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">here</a> it is the best course for machine learning you will ever take and goes through the entire mathematical model assuming you have zero background by the Israeli author of <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">Understanding Machine Learning</a>. The theory of learning will not change. CMU still uses this book in their PhD track course ML <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">course</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0fcf41" class="outline-4">
+<h4 id="orga0fcf41">Limits of AI</h4>
+<div class="outline-text-4" id="text-orga0fcf41">
+<p>
+Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org3314d4f" class="outline-2">
-<h2 id="org3314d4f">PreReqs</h2>
-<div class="outline-text-2" id="text-org3314d4f">
+<div id="outline-container-orgc0f9eda" class="outline-2">
+<h2 id="orgc0f9eda">Curriculum</h2>
+<div class="outline-text-2" id="text-orgc0f9eda">
+<ul class="org-ul">
+<li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> (CMU)
+<ul class="org-ul">
+<li>Use any language you want</li>
+</ul></li>
+<li><a href="https://jorchard.github.io/cs479.github.io/index.html">CS 479 Neural Networks</a> (Waterloo)
+<ul class="org-ul">
+<li>Survey on neural networks from the perspective of theoretical neuroscience</li>
+<li>Intuition building while hacking through 10-414</li>
+</ul></li>
+<li><a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">Mechanistic Interpretability</a> (Google DeepMind)
+<ul class="org-ul">
+<li>Neel's curriculum on reversing a trained neural network</li>
+</ul></li>
+<li><a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> (MIT)
+<ul class="org-ul">
+<li>All the calculus we need generalized to higher dimensions</li>
+<li>IAP course or 'Independent Activities Period' where faculty can run a 4-week course</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-orgd5ed11a" class="outline-3">
+<h3 id="orgd5ed11a">PreReq: Linear Algebra</h3>
+<div class="outline-text-3" id="text-orgd5ed11a">
 <p>
-Looking at his <a href="https://www.neelnanda.io/mechanistic-interpretability/prereqs">prerequisite background</a> I plotted the fastest possible way to satisfy them:
+There is no shortage of excellent linear algebra courses. 
 </p>
 
 <ul class="org-ul">
-<li>Derivatives, Gradients, Probability</li>
+<li><a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">Coding the Matrix</a> (Brown)
+<ul class="org-ul">
+<li>All the recorded lectures are open to anyone</li>
+<li>Programmed w/Python and has a (nonfree) <a href="https://codingthematrix.com/">book</a></li>
+<li>Includes auto-grading!</li>
+</ul></li>
 </ul>
 
 <p>
-The julia calculus library has a <a href="https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/">guide</a> that is essentially a scalar, vector and differential calculus course. Alan Edelman's <a href="https://computationalthinking.mit.edu/Fall24/">Computational Thinking</a> has some lectures teaching autodiff (derivatives using a compiler feature), random variables and basic statistics.    
-</p>
-
-<p>
-Our goal is take just enough calculus prereqs to understand MIT's <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> where derivatives and the chain rule are generalized to higher dimensions. It's an IAP course or 'independent activities period' where faculty can run a 4-week course so not a long course. 
+Created by Philip Klein a name you will recognize if you take any algorithms course. He uses the complex field mostly to illustrate how linear transformations (mappings) work. The SVD is covered which we'll need. The book is at least cheap ($35) and worth buying or you can use Anna's Archive or whatever the latest Library Genesis domain is to get a pdf but it will likely be missing a lot of graphical content. 
 </p>
 
 <ul class="org-ul">
-<li>Linear Algebra</li>
+<li><a href="https://github.com/mitmath/1806/blob/spring20/summaries.md">Modernized 18.06</a> (MIT)
+<ul class="org-ul">
+<li>Alan Edelman's course that teaches intuition</li>
+<li>No pivots, no echelon forms, no free variables, no hand computation</li>
+<li>Treats the SVD as it's own independent thing not some Eigenwhatever</li>
+<li>Almost entirely programmed</li>
+<li>Lectures got locked up by MIT logins but were once open</li>
+<li>All other materials like solutions to homework is open</li>
+</ul></li>
 </ul>
 
 <p>
-Alan Edelman's modernized 18.06 is <a href="https://github.com/mitmath/1806/blob/spring19/summaries.md">here</a> and we can use Strang's new 6th edition book that contains chapters on the SVD. Edelman designed it to teach intuition and spot patterns and the assignments and solutions are available. This should give us enough background to try Axler's book (or Terence Tao's notes) as suggested by Neel. Another second course you may want to do is MIT's <a href="https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/">Matrix Methods</a> it covers basically everything neural network related including fourier analysis to understand superposition. 
+Strang had a stranglehold on MIT's linear algebra curriculum for decades and Edelman came along and shredded it. Now that Strang is retired maybe we'll see the new 18.06 lectures soon. I simply can't follow any book or lecture by Strang it's just disjointed rambling to me.
 </p>
 
 <ul class="org-ul">
-<li>Neural Networks</li>
+<li><a href="https://linear.axler.net/">Linear Algebra Done Right</a> - Sheldon Axler
+<ul class="org-ul">
+<li>New completely free 4th version</li>
+<li>He upgraded his cat too that was always in the about author pic</li>
+<li>Abstract treatment which we need but is considered a 'second course'</li>
+<li>Contains some calculus</li>
+<li>Seems designed to prepare students for functional analysis</li>
+</ul></li>
 </ul>
 
 <p>
-<a href="https://jorchard.github.io/cs479.github.io/index.html">CS 479 Neural Networks</a> is an interesting Waterloo survey on neural networks from the perspective of theoretical neuroscience (Backpropagation, gradients/chain rule, basics of ML).
+Everyone will tell you to read this. It's great and the proofs are not difficult the way he writes them are clear and intuitive. He doesn't explain what is going on though at all. Not even a tiny bit. Every mathematician will tell you that how you learn is to figure it out yourself and piece it all together seeing that function composition is non-associative just like matrix multiplication ergo a matrix is some kind of encoding of a function (mapping). This seems to be designed as a university text so if you're teaching yourself without TA's and lectures you may miss a lot of things he considers obvious because he's a leading mathematician and just assumes you already know because everyone reading this will have already done many months of vector calculus.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://terrytao.wordpress.com/wp-content/uploads/2016/12/linear-algebra-notes.pdf">Terence Tao's Notes</a> for <a href="https://www.math.ucla.edu/~tao/resource/general/115a.3.02f/">Math 115A</a>
+<ul class="org-ul">
+<li>The best from scratch linear algebra notes anywhere</li>
+</ul></li>
+</ul>
+
+
+<p>
+These notes were his lectures to accompany the book by Friedberg, Insel and Spence. CMU uses the David Lay book. A lot of other universities like Stanford use <a href="https://web.stanford.edu/~boyd/vmls/">VMLS</a> (free). VMLS also has a Julia language companion.
+</p>
+
+
+<ul class="org-ul">
+<li><a href="http://www.math.clemson.edu/~macaule/classes/s21_math8530/">Math 8530</a> Graduate Linear Algebra (Clemson)
+<ul class="org-ul">
+<li>Theory of vector spaces not abstract modules</li>
+<li>Loosely follows Peter Lax's book chapters 1-9 and Halmos' book on finite-dimensional vector spaces
+<ul class="org-ul">
+<li>Edelman took this in highschool</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>
+We could take this. It's highly abstract but not impossibly abstract like replacing scalars in a vector space with entire rings like module theory. Peter Lax when he wrote this book was the foremost expert on computational partial differential equations. PDEs are now being 'solved' by neural networks so there is a largely quiet scientific field going right now where physics informed machine learning injects physics knowledge of a complex system to neural networks to supercharge semi-supervised learning. This is where all the early revolutionary AI will come from when we can accelerate training.   
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=ndWqKOJ9DgQ">Geometric Linear Algebra</a> NJ Wildberger
+<ul class="org-ul">
+<li>Tells you what is actually going on</li>
+<li>Functionals are covered which we'll need for Matrix calculus</li>
+</ul></li>
+</ul>
+
+<p>
+Ever since I watched most of these I can now visualize mappings and projections in my head easily so I'm going to go through most of the playlist here as it's the only material I know of which builds it all from scratch. We only need an intuitive understanding of linear algebra in order to take MIT's Matrix Calculus.
 </p>
 
 <p>
-There's also <a href="https://deeplearning.cs.cmu.edu/F24/index.html">11-785 Intro to Deep Learning</a> that covers some new architectures. <a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> is about the libraries of PyTorch and TensorFlow and programming it all from scratch. Neel Nanda will teach us everything about transformers after these prereqs.  
+TODO 
 </p>
 
 
-<p>
-TODO
-</p>
 
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

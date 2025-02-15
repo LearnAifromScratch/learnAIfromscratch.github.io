@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-14 Fri 23:48 -->
+<!-- 2025-02-15 Sat 00:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2025</title>
@@ -202,11 +202,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5c8c706">Intro</a></li>
-<li><a href="#orge599165">Curriculum</a>
+<li><a href="#org41afa46">Intro</a></li>
+<li><a href="#orga2f1d47">Curriculum</a>
 <ul>
-<li><a href="#org5ca7617">Linear Algebra options</a></li>
-<li><a href="#orgfbfad6e">Linear Algebra resources I'll do here</a></li>
+<li><a href="#org45e17a0">Linear Algebra options</a></li>
+<li><a href="#org6726daa">Linear Algebra resources I'll do here</a></li>
 </ul>
 </li>
 </ul>
@@ -214,9 +214,9 @@
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org5c8c706" class="outline-2">
-<h2 id="org5c8c706">Intro</h2>
-<div class="outline-text-2" id="text-org5c8c706">
+<div id="outline-container-org41afa46" class="outline-2">
+<h2 id="org41afa46">Intro</h2>
+<div class="outline-text-2" id="text-org41afa46">
 <p>
 We will learn the 'full stack' of modern deep learning systems by building our own library from scratch in your language of choice. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most famous currently is transformer architecture for large language models like ChatGPT. We'll learn how to reverse engineer these models. When you are finished you can get paid for bounties to work on GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a>.
 </p>
@@ -226,9 +226,9 @@ We will learn the 'full stack' of modern deep learning systems by building our o
 </p>
 </div>
 
-<div id="outline-container-org7d20e52" class="outline-4">
-<h4 id="org7d20e52">Many iterations of this</h4>
-<div class="outline-text-4" id="text-org7d20e52">
+<div id="outline-container-org555e925" class="outline-4">
+<h4 id="org555e925">Many iterations of this</h4>
+<div class="outline-text-4" id="text-org555e925">
 <p>
 I nuked this curriculum and stalled it dozens of times for the simple reason I went to work at a place that does this professionally and what we were doing then needed so many resources I thought it was a waste of time to teach it. Not anymore as the GPU bubble finally popped letting us plebs access to hardware. 
 </p>
@@ -239,9 +239,9 @@ I learned from taking Waterloo's CS485 <a href="https://www.youtube.com/playlist
 </div>
 </div>
 
-<div id="outline-container-org4bff781" class="outline-4">
-<h4 id="org4bff781">Limits of AI</h4>
-<div class="outline-text-4" id="text-org4bff781">
+<div id="outline-container-org6bf09e7" class="outline-4">
+<h4 id="org6bf09e7">Limits of AI</h4>
+<div class="outline-text-4" id="text-org6bf09e7">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -249,9 +249,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-orge599165" class="outline-2">
-<h2 id="orge599165">Curriculum</h2>
-<div class="outline-text-2" id="text-orge599165">
+<div id="outline-container-orga2f1d47" class="outline-2">
+<h2 id="orga2f1d47">Curriculum</h2>
+<div class="outline-text-2" id="text-orga2f1d47">
 <ul class="org-ul">
 <li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> (CMU)
 <ul class="org-ul">
@@ -274,9 +274,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </ul>
 </div>
 
-<div id="outline-container-org5ca7617" class="outline-3">
-<h3 id="org5ca7617">Linear Algebra options</h3>
-<div class="outline-text-3" id="text-org5ca7617">
+<div id="outline-container-org45e17a0" class="outline-3">
+<h3 id="org45e17a0">Linear Algebra options</h3>
+<div class="outline-text-3" id="text-org45e17a0">
 <p>
 There is no shortage of excellent linear algebra courses. These are only what I have reviewed there's tons more if you don't want to do them. 
 </p>
@@ -285,8 +285,10 @@ There is no shortage of excellent linear algebra courses. These are only what I 
 <li><a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">Coding the Matrix</a> (Brown)
 <ul class="org-ul">
 <li>All the recorded lectures are open to anyone</li>
-<li>Programmed w/Python and has a (nonfree) <a href="https://codingthematrix.com/">book</a></li>
-<li>Includes auto-grading!</li>
+<li>Programmed w/Python and has a (nonfree) <a href="https://codingthematrix.com/">book</a>
+<ul class="org-ul">
+<li>I hate Python and did this book in OCaml and it worked out fine</li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -375,9 +377,9 @@ Have you ever wanted to redo everything from scratch using linear algebra? There
 </div>
 </div>
 
-<div id="outline-container-orgfbfad6e" class="outline-3">
-<h3 id="orgfbfad6e">Linear Algebra resources I'll do here</h3>
-<div class="outline-text-3" id="text-orgfbfad6e">
+<div id="outline-container-org6726daa" class="outline-3">
+<h3 id="org6726daa">Linear Algebra resources I'll do here</h3>
+<div class="outline-text-3" id="text-org6726daa">
 <ul class="org-ul">
 <li>Axler's latest <a href="https://linear.axler.net/">book</a>
 <ul class="org-ul">
@@ -394,7 +396,7 @@ Watching Poh-Shen Loh explain why Matrix multiplication works is amazing. He's d
 </p>
 
 <p>
-We can do this while we do CMU's hacker course on rewriting PyTorch in our language of choice because I personally hate Python like you wouldn't believe from it's stupid amateur scope to it's garbage concrete syntax and would rather abandon my entire career than write a single line of Python. You would think this would sink me as a career professional but I targeted companies where I would never have to write a single line of Python and it paid off for me too I went full martingaling on codebux just like Poh-Shen Loh gambled it all.  
+We can do this while we do CMU's hacker course on rewriting PyTorch in our language of choice because I personally hate Python like you wouldn't believe because of it's clown amateur scope and other reasons you don't care about. I would rather abandon my entire career than write a single line of Python so I never try and inflict that on anons. You would think this would sink me as a career professional who works with ML everyday but I never compromised and targeted companies where it didn't matter. My fanaticism paid off I went full martingaling on codebux just like Poh-Shen Loh gambled it all. This is why I try and push language independent resources whenever I find them. Yes I'm fully aware it's all the same thing but imperative programming is work to me like doing manual labor. Functional programming in Lisp or Standard ML is not labor to me. I still do manual labor! Like everyday I'm still a labor pleb and never gave up my working class gig (union pension). Anyway that is my rant and now you know my bias so take it into account while you do this workshop.  
 </p>
 
 <p>

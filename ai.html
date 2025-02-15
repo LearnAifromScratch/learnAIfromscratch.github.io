@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-13 Thu 23:37 -->
+<!-- 2025-02-14 Fri 23:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2025</title>
@@ -202,10 +202,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgca94050">Intro</a></li>
-<li><a href="#org602d063">Curriculum</a>
+<li><a href="#org5c8c706">Intro</a></li>
+<li><a href="#orge599165">Curriculum</a>
 <ul>
-<li><a href="#org4c31ccf">PreReq: Linear Algebra</a></li>
+<li><a href="#org5ca7617">Linear Algebra options</a></li>
+<li><a href="#orgfbfad6e">Linear Algebra resources I'll do here</a></li>
 </ul>
 </li>
 </ul>
@@ -213,9 +214,9 @@
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgca94050" class="outline-2">
-<h2 id="orgca94050">Intro</h2>
-<div class="outline-text-2" id="text-orgca94050">
+<div id="outline-container-org5c8c706" class="outline-2">
+<h2 id="org5c8c706">Intro</h2>
+<div class="outline-text-2" id="text-org5c8c706">
 <p>
 We will learn the 'full stack' of modern deep learning systems by building our own library from scratch in your language of choice. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most famous currently is transformer architecture for large language models like ChatGPT. We'll learn how to reverse engineer these models. When you are finished you can get paid for bounties to work on GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a>.
 </p>
@@ -225,9 +226,9 @@ We will learn the 'full stack' of modern deep learning systems by building our o
 </p>
 </div>
 
-<div id="outline-container-org2070b39" class="outline-4">
-<h4 id="org2070b39">Many iterations of this</h4>
-<div class="outline-text-4" id="text-org2070b39">
+<div id="outline-container-org7d20e52" class="outline-4">
+<h4 id="org7d20e52">Many iterations of this</h4>
+<div class="outline-text-4" id="text-org7d20e52">
 <p>
 I nuked this curriculum and stalled it dozens of times for the simple reason I went to work at a place that does this professionally and what we were doing then needed so many resources I thought it was a waste of time to teach it. Not anymore as the GPU bubble finally popped letting us plebs access to hardware. 
 </p>
@@ -238,9 +239,9 @@ I learned from taking Waterloo's CS485 <a href="https://www.youtube.com/playlist
 </div>
 </div>
 
-<div id="outline-container-orga0cbae7" class="outline-4">
-<h4 id="orga0cbae7">Limits of AI</h4>
-<div class="outline-text-4" id="text-orga0cbae7">
+<div id="outline-container-org4bff781" class="outline-4">
+<h4 id="org4bff781">Limits of AI</h4>
+<div class="outline-text-4" id="text-org4bff781">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -248,9 +249,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-org602d063" class="outline-2">
-<h2 id="org602d063">Curriculum</h2>
-<div class="outline-text-2" id="text-org602d063">
+<div id="outline-container-orge599165" class="outline-2">
+<h2 id="orge599165">Curriculum</h2>
+<div class="outline-text-2" id="text-orge599165">
 <ul class="org-ul">
 <li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> (CMU)
 <ul class="org-ul">
@@ -273,11 +274,11 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </ul>
 </div>
 
-<div id="outline-container-org4c31ccf" class="outline-3">
-<h3 id="org4c31ccf">PreReq: Linear Algebra</h3>
-<div class="outline-text-3" id="text-org4c31ccf">
+<div id="outline-container-org5ca7617" class="outline-3">
+<h3 id="org5ca7617">Linear Algebra options</h3>
+<div class="outline-text-3" id="text-org5ca7617">
 <p>
-There is no shortage of excellent linear algebra courses. 
+There is no shortage of excellent linear algebra courses. These are only what I have reviewed there's tons more if you don't want to do them. 
 </p>
 
 <ul class="org-ul">
@@ -290,7 +291,7 @@ There is no shortage of excellent linear algebra courses.
 </ul>
 
 <p>
-Created by Philip Klein a name you will recognize if you take any algorithms course. He uses the complex field mostly to illustrate how linear transformations (mappings) work. The SVD is covered which we'll need. The book is at least cheap ($35) and worth buying or you can use Anna's Archive or whatever the latest Library Genesis domain is to get a pdf but it will likely be missing a lot of graphical content. 
+Created by Philip Klein a name you will recognize if you take any algorithms course. He uses the complex field mostly to illustrate how linear transformations (mappings) work. The SVD is covered which we'll need. The book is at least cheap ($35) and worth buying or you can use Anna's Archive or whatever the latest Library Genesis domain is to get a pdf but it will likely be missing a lot of graphical content. This is a very good course for anyone interested in game graphics or taking an algorithms design course and wants to manipulate graphs using linear algebra. If you hate everything else here then do this you'll be fine.  
 </p>
 
 <ul class="org-ul">
@@ -301,12 +302,12 @@ Created by Philip Klein a name you will recognize if you take any algorithms cou
 <li>Treats the SVD as it's own independent thing not some Eigenwhatever</li>
 <li>Almost entirely programmed</li>
 <li>Lectures got locked up by MIT logins but were once open</li>
-<li>All other materials like solutions to homework is open</li>
+<li>All other materials like solutions to homework/recitations are open</li>
 </ul></li>
 </ul>
 
 <p>
-Strang had a stranglehold on MIT's linear algebra curriculum for decades and Edelman came along and shredded it. Now that Strang is retired maybe we'll see the new 18.06 lectures soon. I simply can't follow any book or lecture by Strang it's just disjointed rambling to me.
+Strang had a stranglehold on MIT's linear algebra curriculum for decades and Edelman came along and shredded it. Now that Strang is retired maybe we'll see the new 18.06 lectures soon. I simply can't follow any book or lecture by Strang it's just disjointed rambling to me.  
 </p>
 
 <ul class="org-ul">
@@ -314,14 +315,15 @@ Strang had a stranglehold on MIT's linear algebra curriculum for decades and Ede
 <ul class="org-ul">
 <li>New completely free 4th version</li>
 <li>He upgraded his cat too that was always in the about author pic</li>
-<li>Abstract treatment which we need but is considered a 'second course'</li>
+<li>Abstract treatment which we need but is considered a second course</li>
 <li>Contains some calculus</li>
-<li>Seems designed to prepare students for functional analysis</li>
+<li>Seems designed to prepare students for functional analysis (and ML)</li>
 </ul></li>
 </ul>
 
+
 <p>
-Everyone will tell you to read this. It's great and the proofs are not difficult the way he writes them are clear and intuitive. He doesn't explain what is going on though at all. Not even a tiny bit. Every mathematician will tell you that how you learn is to figure it out yourself and piece it all together seeing that function composition is non-associative just like matrix multiplication ergo a matrix is some kind of encoding of a function (mapping). This seems to be designed as a university text so if you're teaching yourself without TA's and lectures you may miss a lot of things he considers obvious because he's a leading mathematician and just assumes you already know because everyone reading this will have already done many months of vector calculus.
+Everyone will tell you to read this and we probably have to do this because we need the abstract higher dimensional theory. He banishes determinants for a good reason all laid out in a paper you can find on arxiv. It's great and the proofs are not difficult the way he writes them are clear and intuitive. He doesn't explain what is going on though at all though there is some short YouTube geometry examples he made for the book but then again this is a 'second course' so he doesn't need to. Every mathematician will tell you that is how you learn meaning figure it out yourself and piece it all together seeing that function composition is non-associative just like matrix multiplication ergo a matrix is some kind of encoding of a function (mapping).  
 </p>
 
 <ul class="org-ul">
@@ -331,9 +333,8 @@ Everyone will tell you to read this. It's great and the proofs are not difficult
 </ul></li>
 </ul>
 
-
 <p>
-These notes were his lectures to accompany the book by Friedberg, Insel and Spence. CMU uses the David Lay book. A lot of other universities like Stanford use <a href="https://web.stanford.edu/~boyd/vmls/">VMLS</a> (free). VMLS also has a Julia language companion.
+These notes were his lectures to accompany the book by Friedberg, Insel and Spence. CMU uses the David Lay book. A lot of other universities like Stanford use <a href="https://web.stanford.edu/~boyd/vmls/">VMLS</a> (free). VMLS also has a Julia language companion. 
 </p>
 
 
@@ -349,7 +350,7 @@ These notes were his lectures to accompany the book by Friedberg, Insel and Spen
 </ul>
 
 <p>
-We could take this. It's highly abstract but not impossibly abstract like replacing scalars in a vector space with entire rings like module theory. Peter Lax when he wrote this book was the foremost expert on computational partial differential equations. PDEs are now being 'solved' by neural networks so there is a largely quiet scientific field going right now where physics informed machine learning injects physics knowledge of a complex system to neural networks to supercharge semi-supervised learning. This is where all the early revolutionary AI will come from when we can accelerate training.   
+We could take this. It's highly abstract but not impossibly abstract like replacing scalars in a vector space with entire rings like module theory. Peter Lax when he wrote this book was the foremost expert on computational partial differential equations. PDEs are now being 'solved' by neural networks so there is a quiet scientific field going right now where physics informed machine learning injects physics knowledge to neural networks to supercharge semi-supervised learning. This is where all the early revolutionary AI will come from when we can accelerate training.   
 </p>
 
 <ul class="org-ul">
@@ -361,14 +362,44 @@ We could take this. It's highly abstract but not impossibly abstract like replac
 </ul>
 
 <p>
-Ever since I watched most of these I can now visualize mappings and projections in my head easily so I'm going to go through most of the playlist here as it's the only material I know of which builds it all from scratch. We only need an intuitive understanding of linear algebra in order to take MIT's Matrix Calculus.
+We will do this but with one of the above resources. It somehow manages to be extremely concrete while being extemely abstract which is what we want.    
+</p>
+
+<ul class="org-ul">
+<li><a href="http://matrixeditions.com/5thUnifiedApproach.html">Hubbard &amp; Hubbard</a> book on unified algebra</li>
+</ul>
+
+<p>
+Have you ever wanted to redo everything from scratch using linear algebra? There's a book for that. It's like redoing highschool to undergrad but with linear algebra. It's 800+ pages. My only beef with this book is it pretends the Riemann integral is anything except a waste of time. Don't get me wrong Riemann sums can be useful in some situations but the integral we are taught in highschool and undergrad is a joke. Riemann scribbled his integral on a napkin as a temporary fix over 100+ years ago and you should not waste you time learning it. No ML paper will use it anyway it will all be Lebesgue measure or spaces (hopefully). If they don't it will be a convoluted mess you have to interpret with bastardized notation as they try and get around all the Riemann shortcomings. Imagine you took multiple semesters of calculus and analysis in undergrad only to be told on your first day of grad instruction all that shit is tossed out and there is no refunds.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbfad6e" class="outline-3">
+<h3 id="orgfbfad6e">Linear Algebra resources I'll do here</h3>
+<div class="outline-text-3" id="text-orgfbfad6e">
+<ul class="org-ul">
+<li>Axler's latest <a href="https://linear.axler.net/">book</a>
+<ul class="org-ul">
+<li>We have no choice but to take this for higher-dimensional ML</li>
+</ul></li>
+<li>Wldberger's intuitive <a href="https://www.youtube.com/watch?v=yAb12PWrhV0">lectures</a> to figure out Axler</li>
+<li>Poh-Shen Loh's <a href="https://www.youtube.com/watch?v=5__JFBncHAA">Matrices</a> Teacher Professional Development</li>
+<li>Poh-Shen Loh's <a href="https://www.youtube.com/watch?v=KfiCOUIvjE8">Determinant</a> Teacher Professional Development</li>
+<li>Poh-Shen Loh's <a href="https://www.youtube.com/watch?v=uWU0j98jBRo">Putnam Seminar</a> on Linear Algebra</li>
+</ul>
+
+<p>
+Watching Poh-Shen Loh explain why Matrix multiplication works is amazing. He's definitely my favorite mathematican because he was just a regular guy who failed linear algebra the first time he took it then went on to become to coach of the US olympiad team after thinking they were going to toss him his second year. He survived by going for broke and martingaling on cruise control (making heavy bets to get yourself out of a debt hole) where he decided to prove everything in the olympiad seminar himself in the most creative way possible a huge gamble that paid off.
 </p>
 
 <p>
-TODO 
+We can do this while we do CMU's hacker course on rewriting PyTorch in our language of choice because I personally hate Python like you wouldn't believe from it's stupid amateur scope to it's garbage concrete syntax and would rather abandon my entire career than write a single line of Python. You would think this would sink me as a career professional but I targeted companies where I would never have to write a single line of Python and it paid off for me too I went full martingaling on codebux just like Poh-Shen Loh gambled it all.  
 </p>
 
-
+<p>
+TODO
+</p>
 
 <hr />
 <p>

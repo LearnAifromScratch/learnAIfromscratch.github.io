@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-15 Sat 19:33 -->
+<!-- 2025-02-15 Sat 21:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2025</title>
@@ -202,34 +202,40 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org80405bf">Intro</a></li>
-<li><a href="#org5ec36c5">Curriculum</a>
+<li><a href="#orge089144">Intro</a></li>
+<li><a href="#orgd9d8105">Curriculum</a>
 <ul>
-<li><a href="#orgaef5c85">Linear Algebra options</a></li>
-<li><a href="#org7a35a27">Linear Algebra resources I'll do here</a></li>
-<li><a href="#orgc526dbe">Day 1 Neuralscience Intro</a></li>
+<li><a href="#org61604e1">Linear Algebra options</a></li>
+<li><a href="#org6a50ba0">Linear Algebra resources I'll do here</a></li>
+<li><a href="#org14c5557">Calculus resources I'll do here</a></li>
 </ul>
 </li>
+<li><a href="#org0b63045">Day 1 Neuroscience Models</a></li>
+<li><a href="#orgb522bfa">Day 2 Applied Calculus</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org80405bf" class="outline-2">
-<h2 id="org80405bf">Intro</h2>
-<div class="outline-text-2" id="text-org80405bf">
+<div id="outline-container-orge089144" class="outline-2">
+<h2 id="orge089144">Intro</h2>
+<div class="outline-text-2" id="text-orge089144">
 <p>
 We will learn the 'full stack' of modern deep learning systems by building our own library from scratch in your language of choice. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most popular currently is transformer architecture for large language models like ChatGPT. We'll learn how to reverse engineer these models. 
 </p>
 
 <p>
-<a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a suggested <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for reverse engineering transformers. He even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program or you can claim bounties for GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a> as a freelancer. 
+<a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a suggested <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for reverse engineering transformers. He even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program or you can claim bounties for GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a> as a freelancer.
+</p>
+
+<p>
+I broke this up into days to see how long it will take and they simply represent a block of time in a single day where I worked on something here. You don't have to do this consecutively everyday.
 </p>
 </div>
 
-<div id="outline-container-org30de0c9" class="outline-4">
-<h4 id="org30de0c9">Many iterations of this</h4>
-<div class="outline-text-4" id="text-org30de0c9">
+<div id="outline-container-orgc8d6c34" class="outline-4">
+<h4 id="orgc8d6c34">Many iterations of this</h4>
+<div class="outline-text-4" id="text-orgc8d6c34">
 <p>
 I nuked this curriculum and stalled it dozens of times for the simple reason it was too expensive to get into but now the GPU bubble finally popped letting us plebs access to hardware to train our own models.  
 </p>
@@ -240,9 +246,9 @@ I learned the theory from taking Waterloo's CS485 <a href="https://www.youtube.c
 </div>
 </div>
 
-<div id="outline-container-orgd5fd08b" class="outline-4">
-<h4 id="orgd5fd08b">Limits of AI</h4>
-<div class="outline-text-4" id="text-orgd5fd08b">
+<div id="outline-container-orgd61d747" class="outline-4">
+<h4 id="orgd61d747">Limits of AI</h4>
+<div class="outline-text-4" id="text-orgd61d747">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -250,9 +256,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-org5ec36c5" class="outline-2">
-<h2 id="org5ec36c5">Curriculum</h2>
-<div class="outline-text-2" id="text-org5ec36c5">
+<div id="outline-container-orgd9d8105" class="outline-2">
+<h2 id="orgd9d8105">Curriculum</h2>
+<div class="outline-text-2" id="text-orgd9d8105">
 <ul class="org-ul">
 <li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> (CMU)
 <ul class="org-ul">
@@ -275,9 +281,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </ul>
 </div>
 
-<div id="outline-container-orgaef5c85" class="outline-3">
-<h3 id="orgaef5c85">Linear Algebra options</h3>
-<div class="outline-text-3" id="text-orgaef5c85">
+<div id="outline-container-org61604e1" class="outline-3">
+<h3 id="org61604e1">Linear Algebra options</h3>
+<div class="outline-text-3" id="text-org61604e1">
 <p>
 There is no shortage of excellent linear algebra courses. These are only what I have reviewed there's tons more if you don't want to do them. 
 </p>
@@ -378,15 +384,22 @@ Have you ever wanted to redo everything from scratch using linear algebra? There
 </div>
 </div>
 
-<div id="outline-container-org7a35a27" class="outline-3">
-<h3 id="org7a35a27">Linear Algebra resources I'll do here</h3>
-<div class="outline-text-3" id="text-org7a35a27">
+<div id="outline-container-org6a50ba0" class="outline-3">
+<h3 id="org6a50ba0">Linear Algebra resources I'll do here</h3>
+<div class="outline-text-3" id="text-org6a50ba0">
 <ul class="org-ul">
 <li>Axler's latest <a href="https://linear.axler.net/">book</a>
 <ul class="org-ul">
 <li>We have no choice but to take this for higher-dimensional ML</li>
 </ul></li>
-<li>Wldberger's intuitive <a href="https://www.youtube.com/watch?v=yAb12PWrhV0">lectures</a> to figure out Axler</li>
+</ul>
+
+<p>
+These are optional you can pick something else to gain intuition    
+</p>
+
+<ul class="org-ul">
+<li>Wildberger's intuitive <a href="https://www.youtube.com/watch?v=yAb12PWrhV0">lectures</a> to figure out Axler</li>
 <li>Poh-Shen Loh's <a href="https://www.youtube.com/watch?v=5__JFBncHAA">Matrices</a> Teacher Professional Development</li>
 <li>Poh-Shen Loh's <a href="https://www.youtube.com/watch?v=KfiCOUIvjE8">Determinant</a> Teacher Professional Development</li>
 <li>Poh-Shen Loh's <a href="https://www.youtube.com/watch?v=uWU0j98jBRo">Putnam Seminar</a> on Linear Algebra</li>
@@ -398,33 +411,78 @@ Watching Poh-Shen Loh explain why Matrix multiplication works is amazing. He's d
 </div>
 </div>
 
-<div id="outline-container-orgc526dbe" class="outline-3">
-<h3 id="orgc526dbe">Day 1 Neuralscience Intro</h3>
-<div class="outline-text-3" id="text-orgc526dbe">
+<div id="outline-container-org14c5557" class="outline-3">
+<h3 id="org14c5557">Calculus resources I'll do here</h3>
+<div class="outline-text-3" id="text-org14c5557">
 <p>
-I broke this up into days to see how long this will take.
+We need to know basic applied math modeling. We could take MIT's calculus sequence on Open CourseWare but that will take at least 6 months and assumes you are an MIT student so already have the prerequisite highschool background. 
 </p>
 
 <ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=uBHW5Rs7qsA&amp;feature=youtu.be">What is a Neuron</a> (26m) video 
+<li><a href="https://global.oup.com/academic/product/mathematical-modeling-and-applied-calculus-9780198824725">Mathematical Modeling and Applied Calculus</a> by Kilty &amp; McAllister
+<ul class="org-ul">
+<li>Use Anna's Archive or lastest Library Genesis domain to get a pdf</li>
+<li>Partial derivatives, vectors, it's all here</li>
+</ul></li>
+</ul>
+
+<p>
+The Matrix calculus seminar we take will fill in the rest.   
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org0b63045" class="outline-2">
+<h2 id="org0b63045">Day 1 Neuroscience Models</h2>
+<div class="outline-text-2" id="text-org0b63045">
+<p>
+This is 'learn AI from scratch' so that's what we're going to do starting with brain models. I'm including this here in the beginning so we can see what kind of math models we need to teach ourselves. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=uBHW5Rs7qsA&amp;feature=youtu.be">What is a Neuron</a> (26m) from <a href="https://jorchard.github.io/cs479.github.io/index.html">CS479</a>.
 <ul class="org-ul">
 <li>Hodgkin-Huxley Neuron Model</li>
 </ul></li>
 </ul>
 
 <p>
-If we're going to model a brain with a neural network we should see how it works in the real world.     
+If we're going to model a brain with a neural network we should see how it works in the real world. @6:39 his example of an action potential using a water bucket being filled and dumped is exactly the same intuition of a potential function in a data structures analysis course used for amortized analysis. A dynamic array once filled up to a certain percentage needs to perform a costly action of doubling itself to enable more free space. You take the infrequent cost of doubling and average it over many read/writes to come up with an individual cost of all array operations. There's some differential equations here but he draws out what they mean, we don't have to know them we just need to know this is a non-linear model and everything to do with neurons is electrical. Hz (hertz) is spikes per second. 
+</p>
+
+<p>
+You can access all these notebooks he's using for the demo <a href="https://github.com/jorchard/cs479.github.io/tree/master/demos">here</a> if interested.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=0FF1Y8triwE&amp;feature=youtu.be">Simpler Neuron Models</a> (28m) from <a href="https://jorchard.github.io/cs479.github.io/lectures.html">CS479</a>.</li>
+</ul>
+
+<p>
+I don't have a physics background either but he's explaining the dynamics of a membrane well enough we can get the gist of what's going on. The difference between this first model and the previous Hodgkin-Huxley model is we are no longer modeling the spikes only the action potential for a spike to occur and a reset. Reduces complexity. @18:44 even simpler models. These Sigmoidal models are covered in the calculus book we'll do shortly after this. @22:20 ReLU and SoftMax are introduced. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb522bfa" class="outline-2">
+<h2 id="orgb522bfa">Day 2 Applied Calculus</h2>
+<div class="outline-text-2" id="text-orgb522bfa">
+<p>
+As mentioned above obtain the book <i>Mathematical Modeling and Applied Calculus</i> by Joel Kilty and Alex McAllister from <a href="https://annas-archive.org/">Anna's Archive</a> or a working <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> domain. All the simplified neuron models we just watched in the CS479 lectures are in this book.
 </p>
 
 <p>
 TODO
 </p>
 
+
+
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>

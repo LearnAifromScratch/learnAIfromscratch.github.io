@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-15 Sat 22:09 -->
+<!-- 2025-02-16 Sun 01:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Differential Equations</title>
@@ -194,6 +194,38 @@
   .org-svg { }
 </style>
 <style> body {background-color: #fafad2;  max-width: 62.5rem; padding: 1rem; margin: auto;} img {width: 60%; height: auto;} figure {text-align: center;} .video {aspect-ratio: 16 / 9; width: 100% </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -202,41 +234,219 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga23902d">Part 1A Michaelmas</a>
+<li><a href="#orgd70fb7b">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#org3f8c42d">Course</a></li>
+<li><a href="#org6853bc3">Course</a></li>
 </ul>
 </li>
+<li><a href="#orgaed5e8e">Calculus crash course</a>
+<ul>
+<li><a href="#org605588f">Exp and Log functions</a></li>
+<li><a href="#orgfbd63bd">Trig Functions</a></li>
+<li><a href="#org18c52d3">Limits</a></li>
+<li><a href="#orgea72685">Derivatives</a></li>
+<li><a href="#org4231e00">Integrals</a></li>
+</ul>
+</li>
+<li><a href="#org7d68c8d">Cambridge Lecture 1</a></li>
 </ul>
 </div>
 </div>
 <hr />
 
-<div id="outline-container-orga23902d" class="outline-2">
-<h2 id="orga23902d">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-orga23902d">
+<div id="outline-container-orgd70fb7b" class="outline-2">
+<h2 id="orgd70fb7b">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-orgd70fb7b">
 <p>
 This is the first term of the <a href="./math.html">Mathematical Tripos</a> you should be taking this with the other first term courses at the same time as Cambridge designed it this way for a good reason. 
 </p>
 </div>
 
-<div id="outline-container-org3f8c42d" class="outline-3">
-<h3 id="org3f8c42d">Course</h3>
-<div class="outline-text-3" id="text-org3f8c42d">
+<div id="outline-container-org6853bc3" class="outline-3">
+<h3 id="org6853bc3">Course</h3>
+<div class="outline-text-3" id="text-org6853bc3">
+<p>
+Differential Equations are pretty awesome you can model all kinds of mind blowing complex systems using them. 
+</p>
+
 <ul class="org-ul">
-<li>Course notes are <a href="https://thirdsgames.co.uk/gh/maths-compiled/ia_de.html">here</a></li>
-<li>Similar to this <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> that contains some of the Boyce book and also has boundary value problems and matches better with 1B content we'll be doing later</li>
+<li>Course notes are <a href="https://thirdsgames.co.uk/gh/maths-compiled/ia_de.html">here</a>
+<ul class="org-ul">
+<li>A guy on YouTube made <a href="https://www.youtube.com/playlist?list=PLC0PGB2LK3Rhtgl_2PgWMgajLtSCmNn57">lectures</a> for the course based on the notes</li>
+</ul></li>
+<li>This <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> that contains some of the Boyce book and also has boundary value problems and matches better with 1B content we'll be doing later</li>
 <li>There is a problem <a href="https://stevenclontz.github.io/checkit-clontz-diff-eq/#/bank/">bank</a> with solutions</li>
 <li>The <a href="http://www.damtp.cam.ac.uk/user/examples/">sample sheets</a></li>
-<li>Sample lecture is <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> 
+<li><a href="https://book.sciml.ai/">SciML book</a> which teaches how to optimize ODEs and solve them, plus uses the Julia language which we will need to learn for the computational projects in Easter anyway.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaed5e8e" class="outline-2">
+<h2 id="orgaed5e8e">Calculus crash course</h2>
+<div class="outline-text-2" id="text-orgaed5e8e">
+<p>
+We completely skipped scalar calculus (single variable) in the prereqs so here is a crash course.
+</p>
+
+<p>
+Next term we learn Real Analysis anyway so everything here will be rigorously learned eventually. 
+</p>
+</div>
+
+<div id="outline-container-org605588f" class="outline-3">
+<h3 id="org605588f">Exp and Log functions</h3>
+<div class="outline-text-3" id="text-org605588f">
+<p>
+Explained <a href="https://www.youtube.com/watch?v=vQydKnPxOJY">here</a> (Clemson Math 1060 sec 1.3). These Clemson U lectures average ~20m and are just the right difficulty if you forgot high school like most people so gaps will be filled in and there's lot's of constructions instead of descriptive/abstract definitions. 
+</p>
+
+<p>
+Logarithmic inverses, why does \(\large b^{log_b{(x)}} = x\)?
+</p>
+
 <ul class="org-ul">
-<li>A guy on YouTube made <a href="https://www.youtube.com/playlist?list=PLC0PGB2LK3Rhtgl_2PgWMgajLtSCmNn57">lectures</a> for the course</li>
-</ul></li>
-<li>The <a href="https://book.sciml.ai/">SciML book</a> which teaches how to optimize ODEs and solve them, plus uses the Julia language which we will need to learn for the computational projects in Easter anyway.</li>
+<li>\(\large 2^{log_2{(1)}} = 2^0 = 1\)</li>
+<li>\(\large 2^{log_2{(2})} = 2^1 = 2\)</li>
+<li>\(\large 2^{log_2{(3})} \approx 2^{1.6} \approx 3\)</li>
+<li>\(\large 2^{log_2{(4})} = 2^2 = 4\)</li>
 </ul>
 
 <p>
-We have access to the first Cambridge lecture <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> where he covers a review of calculus we're supposed to know. We completely skipped calculus in the prereqs and since I'm already doing calculus in many other workshops I'll copy what I've done here, it's not like we don't have 8 months to finish this course before exams in Easter.
+A base e log or ln(x) is often used instead of base 2 because \(\large log_{2}(x) = \frac{ln(x)}{ln(2)}\) meaning you are off only by a constant factor and now can enjoy all the nice properties e<sup>x</sup> and ln(x) have for doing quick approximations by hand. For small inputs where x<sup>2</sup> is evaluated smaller than x then e<sup>x</sup> can be approximated with 1 + x and ln(1 + x) can be approximated with x. To see how e<sup>time</sup> = growth and ln(growth) = time then <a href="https://betterexplained.com/articles/demystifying-the-natural-logarithm-ln/">read this</a>. 
+</p>
+
+<p>
+Notice how a log is a linearization of an exponent, if you log 2<sup>x</sup> then log(2<sup>x</sup>) = xlog(2) and you mapped a quadratic to a linear space. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfbd63bd" class="outline-3">
+<h3 id="orgfbd63bd">Trig Functions</h3>
+<div class="outline-text-3" id="text-orgfbd63bd">
+<p>
+If you don't remember trig at all try <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a> (Math 1060 sec 1.4) review of Trig functions and their inverses. Skip through and remind yourself that sin<sup>-1</sup> is not 1/sin. Where do those square root x/y coords come from on the unit circle? Explained in the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a> (Brown University). Two right angle triangles (deg 30/60/90 and 45/45/90) need to be scaled down so the hypotenuse is 1 to fit on the unit circle.
+</p>
+
+<p>
+We have just seen another linearization. Watch a few minutes of <a href="https://youtu.be/by0Gy1ZJ_hU?si=1TM8tv2c3TzE9xa_&amp;t=356">this</a> (Wildberger Rational Trig) starting @5:56 to see motion around a nonlinear curve being mapped to the linear motion of the two axis moving back and forth. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18c52d3" class="outline-3">
+<h3 id="org18c52d3">Limits</h3>
+<div class="outline-text-3" id="text-org18c52d3">
+<p>
+Skim through these, if you want to do exercises pause the video before he works out an example and do it yourself.  
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=3U0JTtjPEMM">Limits</a> (Math 1060 sec 2.1) introduction and secants/tangents.</li>
+<li><a href="https://www.youtube.com/watch?v=iQTwviLhQwU">Informal definition</a> using approximations from the left and right.</li>
+<li><a href="https://www.youtube.com/watch?v=h7dfq5aD6E4">Techniques I</a> for computing limits.</li>
+<li><a href="https://www.youtube.com/watch?v=OBGalcQFwzI">Techniques II</a> we mainly need the squeeze theorem @16m.</li>
+<li><a href="https://www.youtube.com/watch?v=vrd9Fqxoue0">Infinite Limits</a> if the y-axis/output goes to infinity.</li>
+<li><a href="https://www.youtube.com/watch?v=rmlrZzB1NEY">Limits at Infinity</a> (Math 1060 2.5)</li>
+<li><a href="https://www.youtube.com/watch?v=gQlGn8OjVI8">Continuity</a> crash course on continuity on an interval.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgea72685" class="outline-3">
+<h3 id="orgea72685">Derivatives</h3>
+<div class="outline-text-3" id="text-orgea72685">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=Bjgu3i310pw">Derivative</a> (Math 1060 3.1) shows the geometry of a derivative at a point.</li>
+<li><a href="https://www.youtube.com/watch?v=sGQGsxNNO8k">Derivative as a Function</a> or x -&gt; x<sup>2</sup> derivative returns x -&gt; 2x for all 'points'/inputs</li>
+<li><a href="https://www.youtube.com/watch?v=rdGXPvMw_X8">Derivative Rules</a> the usual formulas, higher-order derivatives, e<sup>x</sup> is it's own derivative, and remark that differentiation is a linear operator.</li>
+<li><a href="https://www.youtube.com/watch?v=mnbuUndB8vk">L'Hopital's Rule I</a> and <a href="https://www.youtube.com/watch?v=-siZ4dMiCeI">II</a> is very similar to the definition of big-O.</li>
+</ul>
+</div>
+
+<div id="outline-container-org9beaa82" class="outline-4">
+<h4 id="org9beaa82">Watch when needed</h4>
+<div class="outline-text-4" id="text-org9beaa82">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=UF6koNYWE1s">Product Rule</a> (Math 1060 3.4) (fg)' = f'g + fg' and (f/g)' = (f'g - fg')/g<sup>2</sup></li>
+<li><a href="https://www.youtube.com/watch?v=o7yV_wUKy9M">Trig Derivatives</a> covers reciprocal limits too. Lightly skim this just so you know the derivative of sinx is cosx and that if you take the derivative of sinx 4x then it's a cycle that returns to sinx.</li>
+<li><a href="https://www.youtube.com/watch?v=xV2A2TO6A4I">Rates of Change</a> explains real life calculus meaning economic cost function derivatives and physics how the derivative of f(time) = position gives you f(time) = velocity. You can undo the velocity derivative to go back to the position function using indefinite integration.</li>
+<li><a href="https://www.youtube.com/watch?v=hCuyU0edOcE">Chain Rule</a> the derivative of function composition or f'(g)*g'</li>
+<li><a href="https://www.youtube.com/watch?v=RL0At1N-2FQ">Derivatives of Log/Exp</a> the derivative of e<sup>x</sup> or exp(x) is itself.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb84717a" class="outline-4">
+<h4 id="orgb84717a">Optimization to watch when needed.</h4>
+<div class="outline-text-4" id="text-orgb84717a">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=caKCSTGCl4M">Max/Min</a> (Math 1060 4.1) of a function.</li>
+<li><a href="https://www.youtube.com/watch?v=3LKdFF1mR8I">Mean Value Theorem</a> the point of the MVT is to establish a function with a positive derivative on an open interval would have to be increasing.</li>
+<li><a href="https://www.youtube.com/watch?v=kHWjjpBiMs0">What Derivatives Tell Us</a> about being +/- around a point then a local max/min</li>
+<li><a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor Series</a> (Essence of Calculus 11) now you know why polynomials exist and where factorial numbers can be generated.</li>
+<li><a href="https://www.youtube.com/watch?v=6kvCO2gHJZQ">Applied Optimization I</a> and <a href="https://www.youtube.com/watch?v=4qKG6XRVwe8">II</a> examples.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4231e00" class="outline-3">
+<h3 id="org4231e00">Integrals</h3>
+<div class="outline-text-3" id="text-org4231e00">
+<p>
+There are many integrals the Riemann integral is the 'teaching integral' they force undergrads to learn but upon grad instruction is promptly tossed.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=CsutkSfozH8">Linear Approximation</a> and <a href="https://www.youtube.com/watch?v=hTjUvyBq8gA">Differentials</a> (Math 1060 4.6) dy = f'(c)dx or dy/dx = f'(point).</li>
+<li><a href="https://www.youtube.com/watch?v=HTa7jTU-72A">Indefinite integrals I</a> and <a href="https://www.youtube.com/watch?v=HTa7jTU-72A">II</a> the undo method for derivatives.</li>
+<li><a href="https://www.youtube.com/watch?v=lzCZLod2Z4I">Area Approximations</a> to set up the definite integral abstraction.</li>
+<li><a href="https://www.youtube.com/watch?v=pBXUUhb6YtU">Riemann Sums</a> and <a href="https://www.youtube.com/watch?v=o3sjROzOb3k">Definite Integral</a> constructions.</li>
+<li><a href="https://www.youtube.com/watch?v=FOgejRi7sNQ">Theorem of Calculus I</a> and <a href="https://www.youtube.com/watch?v=ntJmb8o9sOw">II</a> if you know 2x is the derivative of x<sup>2</sup> then b<sup>2</sup> - a<sup>2</sup> = the integral from a to b of 2x.</li>
+</ul>
+</div>
+
+<div id="outline-container-orge66ce3e" class="outline-4">
+<h4 id="orge66ce3e">Watch when needed.</h4>
+<div class="outline-text-4" id="text-orge66ce3e">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=he94PGxauVA">Mean Value Theorem</a> for integrals.</li>
+<li><a href="https://www.youtube.com/watch?v=JVC82ZDPGBY">Substitution Method Part I</a>, <a href="https://www.youtube.com/watch?v=2P3rBEUMutc">II</a> and <a href="https://www.youtube.com/watch?v=K90rWE8DBpU">III</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7d68c8d" class="outline-2">
+<h2 id="org7d68c8d">Cambridge Lecture 1</h2>
+<div class="outline-text-2" id="text-org7d68c8d">
+<p>
+We have access to the first Cambridge lecture <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> where he covers a review of calculus we're supposed to know. I had to use the pop-out button on Youtube and enlarge the screen with max rez to see what he's writing as it's small in the beginning.
+</p>
+
+<p>
+First definition we already know: the limit of f(a + h) - f(a) divided by h as h gets closer to 0. 'x naught' is x<sub>0</sub> notation meaning the same thing as f(a) where a is supposed to be a specific point/input. We just learned the <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">LH and RH limits</a>.
+</p>
+
+<p>
+Lets go through the f(x) = |x| example. Plug that into the derivative equation for f(0) = |0| we get (|0 + h| - |0|)/h or |h|/h. However h is negative because it's approaching 'negative 0' from the left side where all the x values are negative so it's h/-h or -1.
+</p>
+
+<p>
+Next is Big-O which you probably already know if you did any other workshop here like intro to computer science. Try an example for little-o where f(x) = x and g(x) = x<sup>2</sup> so f(x)/g(x) is x/x<sup>2</sup> = 1/x and if you crank inputs to x to infinity or as he says to some point x<sub>0</sub> like f(1000) then the limit of 1/1000 is 0.
+</p>
+
+<p>
+Try an example for big-O where f(x) = x and g(x) = x then f(x)/Mg(x) where M is some constant is x/Mx = M or their ratio differs by a constant M meaning g(x) bounds f(x) by a constant factor. He remarks the notation O(g(x)) means an entire class and g(x) is a function you pick to bound f(x) so the function O(g(x) = x) represents all linear functions, x<sup>2</sup> all quadratic functions, etc. The extension to infinity x &gt; X means some input to f(x) and g(x) past a threshold input. If f(x) = x + 5, m = 1, and g(x) = x<sup>2</sup> then for x &gt; 3 f(x) &lt;= Mg(x) so f(x) is in O(x<sup>2</sup>) though that is a loose upper bound when the constant M can be juked to show x is within linear g(x). Notice the definition allows us to set the constant M to any value we want and is solely included to eliminate constants from big-O notation. If f(x) = 1000x and g(x) = x then f(x) is in O(x) you don't write O(1000x) as any arbitrary constant is included in the definition. We can also use big/little-O to show a function is bounded by a constant such as f(x) is in O(1) or O(epsilon) to represent some tiny constant. 
+</p>
+
+<p>
+Example 3 if f(x) = x<sup>2</sup> then plugging it into the derivative equation: (x + h)<sup>2</sup> - x<sup>2</sup> divided by h is x<sup>2</sup> + 2xh + h<sup>2</sup> - x<sup>2</sup> or (2xh + h<sup>2</sup>)/h which is 2x. Since h is tending towards 0, before we take the limit we know the remainder term h<sup>2</sup> is going to be so small it will approach 0 before we take the limit of h to zero so this is 2xh/h + o(h). Try examples if h = .00001 then check what .00001<sup>2</sup> is.
 </p>
 
 <p>
@@ -245,9 +455,8 @@ TODO
 
 <hr />
 <p>
-<a href="./index.html">Home</a>
+<a href="./math.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>

@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-17 Thu 16:38 -->
+<!-- 2025-02-15 Sat 22:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Differential Equations</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="jbh" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,67 +191,20 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <style> body {background-color: #fafad2;  max-width: 62.5rem; padding: 1rem; margin: auto;} img {width: 60%; height: auto;} figure {text-align: center;} .video {aspect-ratio: 16 / 9; width: 100% </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Differential Equations</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgaa01c49">Part 1A Michaelmas</a>
+<li><a href="#orga23902d">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#orga34a142">Course</a></li>
+<li><a href="#org3f8c42d">Course</a></li>
 </ul>
 </li>
 </ul>
@@ -258,32 +212,32 @@ for the JavaScript code in this tag.
 </div>
 <hr />
 
-<div id="outline-container-orgaa01c49" class="outline-2">
-<h2 id="orgaa01c49">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-orgaa01c49">
+<div id="outline-container-orga23902d" class="outline-2">
+<h2 id="orga23902d">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-orga23902d">
 <p>
 This is the first term of the <a href="./math.html">Mathematical Tripos</a> you should be taking this with the other first term courses at the same time as Cambridge designed it this way for a good reason. 
 </p>
-
-<p>
-Right now there is all kinds of physics-informed machine learning going on to numerically solve ODEs. We also will learn epidemic models and other dynamic systems should you want to work in quantitative finance or a research programmer in a medical lab. 
-</p>
 </div>
 
-<div id="outline-container-orga34a142" class="outline-3">
-<h3 id="orga34a142">Course</h3>
-<div class="outline-text-3" id="text-orga34a142">
+<div id="outline-container-org3f8c42d" class="outline-3">
+<h3 id="org3f8c42d">Course</h3>
+<div class="outline-text-3" id="text-org3f8c42d">
 <ul class="org-ul">
 <li>Course notes are <a href="https://thirdsgames.co.uk/gh/maths-compiled/ia_de.html">here</a></li>
 <li>Similar to this <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> that contains some of the Boyce book and also has boundary value problems and matches better with 1B content we'll be doing later</li>
-<li>There is a problem <a href="https://stevenclontz.github.io/checkit-clontz-diff-eq/#/bank/">bank</a> with solutions too.</li>
+<li>There is a problem <a href="https://stevenclontz.github.io/checkit-clontz-diff-eq/#/bank/">bank</a> with solutions</li>
 <li>The <a href="http://www.damtp.cam.ac.uk/user/examples/">sample sheets</a></li>
 <li>Sample lecture is <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> 
 <ul class="org-ul">
-<li>A guy on YouTube made <a href="https://www.youtube.com/playlist?list=PLC0PGB2LK3Rhtgl_2PgWMgajLtSCmNn57">lectures</a> too for the course</li>
+<li>A guy on YouTube made <a href="https://www.youtube.com/playlist?list=PLC0PGB2LK3Rhtgl_2PgWMgajLtSCmNn57">lectures</a> for the course</li>
 </ul></li>
 <li>The <a href="https://book.sciml.ai/">SciML book</a> which teaches how to optimize ODEs and solve them, plus uses the Julia language which we will need to learn for the computational projects in Easter anyway.</li>
 </ul>
+
+<p>
+We have access to the first Cambridge lecture <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> where he covers a review of calculus we're supposed to know. We completely skipped calculus in the prereqs and since I'm already doing calculus in many other workshops I'll copy what I've done here, it's not like we don't have 8 months to finish this course before exams in Easter.
+</p>
 
 <p>
 TODO

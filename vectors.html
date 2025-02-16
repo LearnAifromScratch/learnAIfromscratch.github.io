@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-17 Thu 16:28 -->
+<!-- 2025-02-15 Sat 22:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vectors &amp; Matrices</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="jbh" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,67 +191,20 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <style> body {background-color: #fafad2;  max-width: 62.5rem; padding: 1rem; margin: auto;} img {width: 60%; height: auto;} figure {text-align: center;} .video {aspect-ratio: 16 / 9; width: 100% </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Vectors &amp; Matrices</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga230f6e">Part 1A Michaelmas</a>
+<li><a href="#orga81e787">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#orge84c9b7">Course</a></li>
+<li><a href="#org458cc1e">Course</a></li>
 </ul>
 </li>
 </ul>
@@ -258,25 +212,26 @@ for the JavaScript code in this tag.
 </div>
 <hr />
 
-<div id="outline-container-orga230f6e" class="outline-2">
-<h2 id="orga230f6e">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-orga230f6e">
+<div id="outline-container-orga81e787" class="outline-2">
+<h2 id="orga81e787">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-orga81e787">
 <p>
 This is the first term of the Cambridge Mathematical Tripos which I assume you found <a href="./math.html">here</a>. You should take all the courses at the same time they compliment each other and Cambridge set it up this way for a good reason. 
 </p>
+</div>
 
+
+
+<div id="outline-container-org458cc1e" class="outline-3">
+<h3 id="org458cc1e">Course</h3>
+<div class="outline-text-3" id="text-org458cc1e">
 <p>
 The recommended book that covers all topics is <i>Algebra and Geometry</i> by Alan Beardon which we're already reading for <a href="./groups.html">Groups</a>. 
 </p>
-</div>
 
-<div id="outline-container-orge84c9b7" class="outline-3">
-<h3 id="orge84c9b7">Course</h3>
-<div class="outline-text-3" id="text-orge84c9b7">
 <ul class="org-ul">
 <li>Official notes are <a href="https://www.damtp.cam.ac.uk/user/sjc1/teaching/VandM/notes.pdf">here</a> and the course hasn't changed that much or choose any of these <a href="https://www.maths.cam.ac.uk/undergrad/studentreps/tripos-specific-resources">notes</a>.</li>
 <li>Wildberger has a <a href="https://www.youtube.com/playlist?list=PLIljB45xT85BhzJ-oWNug1YtUjfWp1qAp">playlist</a> of 'geometric algebra' covering the same topics as the course notes including the complex numbers and relativity content. Years ago Groups, Vectors and Matrices, was a single course called Algebra and Geometry Part I and II with 48 lectures so these extra lectures are nothing.</li>
-<li>Sheldon Axler's <a href="https://linear.axler.net/">Linear Algebra Done Right</a> 4th edition book (now free).</li>
 </ul>
 
 <p>
@@ -285,7 +240,8 @@ TODO
 
 <hr />
 <p>
-<a href="./index.html">Home</a></p>
+<a href="./index.html">Home</a>
+</p>
 </div>
 </div>
 </div>

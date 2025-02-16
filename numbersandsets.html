@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-18 Fri 07:31 -->
+<!-- 2025-02-15 Sat 21:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Numbers and Sets</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="jbh" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,68 +191,21 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <style> body {background-color: #fafad2;  max-width: 62.5rem; padding: 1rem; margin: auto;} img {width: 60%; height: auto;} figure {text-align: center;} .video {aspect-ratio: 16 / 9; width: 100% </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Numbers and Sets</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org26a60cb">Part 1A Michaelmas</a>
+<li><a href="#org3b4ea4a">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#org6bd8f9b">Course</a></li>
-<li><a href="#orgccd9cbc">My strategy</a></li>
+<li><a href="#orgbae885b">Course</a></li>
+<li><a href="#orga0c4ac5">My strategy</a></li>
 </ul>
 </li>
 </ul>
@@ -259,18 +213,18 @@ for the JavaScript code in this tag.
 </div>
 <hr />
 
-<div id="outline-container-org26a60cb" class="outline-2">
-<h2 id="org26a60cb">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-org26a60cb">
+<div id="outline-container-org3b4ea4a" class="outline-2">
+<h2 id="org3b4ea4a">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-org3b4ea4a">
 <p>
 This is the first term of the <a href="./math.html">Mathematical Tripos</a> you should be taking this with the other first term courses at the same time as Cambridge designed it this way for a good reason. 
 </p>
 </div>
 
 
-<div id="outline-container-org6bd8f9b" class="outline-3">
-<h3 id="org6bd8f9b">Course</h3>
-<div class="outline-text-3" id="text-org6bd8f9b">
+<div id="outline-container-orgbae885b" class="outline-3">
+<h3 id="orgbae885b">Course</h3>
+<div class="outline-text-3" id="text-orgbae885b">
 <ul class="org-ul">
 <li>Course <a href="https://zeramorphic.uk/maths.html">notes</a></li>
 <li>Example <a href="http://www.dpmms.cam.ac.uk/study/IA/Numbers%2BSets/">sheets</a></li>
@@ -281,9 +235,9 @@ This is the first term of the <a href="./math.html">Mathematical Tripos</a> you 
 </ul>
 </div>
 
-<div id="outline-container-org28a1f70" class="outline-4">
-<h4 id="org28a1f70">Supplementary reading</h4>
-<div class="outline-text-4" id="text-org28a1f70">
+<div id="outline-container-org79e5355" class="outline-4">
+<h4 id="org79e5355">Supplementary reading</h4>
+<div class="outline-text-4" id="text-org79e5355">
 <p>
 The book list in the schedule usually the first few books cover only half the course and the last recommendations cover the rest. 
 </p>
@@ -308,18 +262,17 @@ Cambridge schedule recommendations:
 </div>
 </div>
 
-<div id="outline-container-orgccd9cbc" class="outline-3">
-<h3 id="orgccd9cbc">My strategy</h3>
-<div class="outline-text-3" id="text-orgccd9cbc">
+<div id="outline-container-orga0c4ac5" class="outline-3">
+<h3 id="orga0c4ac5">My strategy</h3>
+<div class="outline-text-3" id="text-orga0c4ac5">
 <p>
-We're doing this by ourselves and shortly taking abstract algebra so we should try and see how much of this we can do in a proof assistant.  
+I'm already doing this in the functional CS intro workshop so will copy that here. We need to fill all the blanks in our algebra background too as a real Cambridge student would be 1% tier of top students worldwide.   
 </p>
 
 <ul class="org-ul">
 <li><a href="https://hrmacbeth.github.io/math2001/">The Mechanics of Proof</a> written by a Cambridge Part III graduate using the Lean proof assistant. Covers 90% of the Cambridge course except infinite sets.</li>
-<li><a href="https://cs.uwaterloo.ca/~plragde/flaneries/LACI/">Logic and Computation Intertwined</a> by Prof Ragde of Waterloo. Learning logic by building a small proof assistant making sense of how Lean/Agda/Coq proof assistants work.</li>
 <li><a href="https://users.mccme.ru/skopenko/">Algebra Via Problems</a> free English (and Russian) copy on Arkadiy Skopenkov's website or use libgen</li>
-<li>Course notes on infinite sets</li>
+<li>One of the books recommended by Cambridge that includes infinite sets</li>
 </ul>
 
 <blockquote>
@@ -329,12 +282,7 @@ We're doing this by ourselves and shortly taking abstract algebra so we should t
 </blockquote>
 
 <p>
-This is why I'm going to do the Russian algebra problem book because if you're like me your algebra is an incomplete mess. It's almost entirely proofs anyway so fits the nature of this course. 
-</p>
-
-
-<p>
-&#x2026; TODO
+TODO
 </p>
 
 <hr />

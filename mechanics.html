@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-18 Fri 07:38 -->
+<!-- 2025-02-15 Sat 22:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mechanics</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="jbh" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,69 +191,21 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <style> body {background-color: #fafad2;  max-width: 62.5rem; padding: 1rem; margin: auto;} img {width: 60%; height: auto;} figure {text-align: center;} .video {aspect-ratio: 16 / 9; width: 100% </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Mechanics</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1a30305">Part 1A Michaelmas</a>
+<li><a href="#org7b3c2ee">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#orgc02d8db">Course</a></li>
-<li><a href="#orgf065d14">Books</a></li>
-<li><a href="#orgbebed6d">Calculus</a></li>
+<li><a href="#org1588e57">Course</a></li>
+<li><a href="#org0f81e3f">Books</a></li>
 </ul>
 </li>
 </ul>
@@ -260,17 +213,17 @@ for the JavaScript code in this tag.
 </div>
 <hr />
 
-<div id="outline-container-org1a30305" class="outline-2">
-<h2 id="org1a30305">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-org1a30305">
+<div id="outline-container-org7b3c2ee" class="outline-2">
+<h2 id="org7b3c2ee">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-org7b3c2ee">
 <p>
 This is the first term of the <a href="./math.html">Mathematical Tripos</a> which is a crash course in Mechanics which means it's also a course in trig and calculus. This is the material all Tripos freshmen would know from highschool before admission.  
 </p>
 </div>
 
-<div id="outline-container-orgc02d8db" class="outline-3">
-<h3 id="orgc02d8db">Course</h3>
-<div class="outline-text-3" id="text-orgc02d8db">
+<div id="outline-container-org1588e57" class="outline-3">
+<h3 id="org1588e57">Course</h3>
+<div class="outline-text-3" id="text-org1588e57">
 <ul class="org-ul">
 <li>Lectures notes and example sheets are <a href="https://www.damtp.cam.ac.uk/user/po242/mechanics.html">here</a>
 <ul class="org-ul">
@@ -280,36 +233,20 @@ This is the first term of the <a href="./math.html">Mathematical Tripos</a> whic
 </div>
 </div>
 
-<div id="outline-container-orgf065d14" class="outline-3">
-<h3 id="orgf065d14">Books</h3>
-<div class="outline-text-3" id="text-orgf065d14">
+<div id="outline-container-org0f81e3f" class="outline-3">
+<h3 id="org0f81e3f">Books</h3>
+<div class="outline-text-3" id="text-org0f81e3f">
 <ul class="org-ul">
 <li>P. J. O’Donnell Essential Dynamics and Relativity. CRC Press, 2014</li>
 <li>J. Hebborn and J. Littlewood Mechanics 1, 2 &amp; 3 (Edexel). Heinemann, 2000</li>
-<li>L. Bostock and F. S. Chandler Applied Mathematics, Vols. 1 &amp; Vol. 2. ST(P) Ltd., 1986 (out of print)</li>
-</ul>
-</div>
-</div>
-
-
-<div id="outline-container-orgbebed6d" class="outline-3">
-<h3 id="orgbebed6d">Calculus</h3>
-<div class="outline-text-3" id="text-orgbebed6d">
-<p>
-If you know calculus you can skip this but it will help set us up to learn Axler's graduate analysis book next term. 
-</p>
-
-<p>
-The best book that covers trig series to continuity to convergence is David Bressoud's <a href="https://www.davidbressoud.org/books-videos">A Radical Approach to Real Analysis</a>. It teaches modern analysis as it was invented and fits well with Mechanics. 
-</p>
-
-<p>
-The other undergrad calculus text I consider worth doing is <a href="http://classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">The Calculus Integral</a> by Brian S. Thomson. It's a free <a href="http://classicalrealanalysis.info/com/documents/T-CalculusIntegral-AllChapters-Portrait.pdf">PDF</a>. It is modernized and designed for a student going on to measure theory (that's us). When you get to grad school you discover that you spent hours and hours in undergrad calculus and analysis courses learning an integration method which was discarded over 100+ years ago. Then you find out the replacement was already replaced in the 1960s too. 
+<li><p>
+L. Bostock and F. S. Chandler Applied Mathematics, Vols. 1 &amp; Vol. 2. ST(P) Ltd., 1986 (out of print)
 </p>
 
 <p>
 TODO
-</p>
+</p></li>
+</ul>
 
 <hr />
 <p>

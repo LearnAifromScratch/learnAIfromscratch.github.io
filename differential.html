@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-16 Sun 12:51 -->
+<!-- 2025-02-17 Mon 09:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Differential Equations</title>
@@ -234,37 +234,41 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga2f67be">Part 1A Michaelmas</a>
+<li><a href="#orgdeeec42">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#orge853438">Course</a></li>
+<li><a href="#orgdd11e07">Course</a></li>
 </ul>
 </li>
-<li><a href="#org18b5aa9">Calculus crash course</a>
+<li><a href="#org8047ca2">Calculus crash course</a>
 <ul>
-<li><a href="#orgba05eb8">Exp and Log functions</a></li>
-<li><a href="#org41a06c8">Trig Functions</a></li>
-<li><a href="#orgf9c7cd0">Limits</a></li>
-<li><a href="#org1b921d6">Derivatives</a></li>
-<li><a href="#org4995321">Integrals</a></li>
+<li><a href="#orgbc8b8ce">Exp and Log functions</a></li>
+<li><a href="#org1413bc7">Trig Functions</a></li>
+<li><a href="#org622df1e">Limits</a></li>
+<li><a href="#org2831dcc">Derivatives</a></li>
+<li><a href="#org88c02c5">Integrals</a></li>
 </ul>
 </li>
-<li><a href="#orgda151f4">Cambridge Lecture 1</a></li>
+<li><a href="#orgb0e6bc4">Cambridge Lecture 1</a>
+<ul>
+<li><a href="#org7e4a2aa">Notes</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <hr />
 
-<div id="outline-container-orga2f67be" class="outline-2">
-<h2 id="orga2f67be">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-orga2f67be">
+<div id="outline-container-orgdeeec42" class="outline-2">
+<h2 id="orgdeeec42">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-orgdeeec42">
 <p>
 This is the first term of the <a href="./math.html">Mathematical Tripos</a> you should be taking this with the other first term courses at the same time as Cambridge designed it this way for a good reason.
 </p>
 </div>
 
-<div id="outline-container-orge853438" class="outline-3">
-<h3 id="orge853438">Course</h3>
-<div class="outline-text-3" id="text-orge853438">
+<div id="outline-container-orgdd11e07" class="outline-3">
+<h3 id="orgdd11e07">Course</h3>
+<div class="outline-text-3" id="text-orgdd11e07">
 <ul class="org-ul">
 <li>Course notes are <a href="https://zb260.user.srcf.net/notes/">here</a> or <a href="http://dec41.user.srcf.net/notes/">here</a>
 <ul class="org-ul">
@@ -278,13 +282,13 @@ This is the first term of the <a href="./math.html">Mathematical Tripos</a> you 
 </ul>
 
 <p>
-The above <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> covers basically everything in the recommended reading then we can use the <a href="https://book.sciml.ai/">SciML book</a> lectures to fill in the discrete content and learn Julia for the computational projects we'll have to do later. 
+The above <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> covers basically everything in the recommended reading then we can use the <a href="https://book.sciml.ai/">SciML book</a> lectures to fill in the discrete content like recurrence relations/difference equations and learn Julia for the computational projects we'll have to do later. 
 </p>
 </div>
 
-<div id="outline-container-orgf045527" class="outline-4">
-<h4 id="orgf045527">Appropriate books</h4>
-<div class="outline-text-4" id="text-orgf045527">
+<div id="outline-container-org64b1718" class="outline-4">
+<h4 id="org64b1718">Appropriate books</h4>
+<div class="outline-text-4" id="text-org64b1718">
 <ul class="org-ul">
 <li>J. Robinson An introduction to Differential Equations. Cambridge University Press, 2004</li>
 <li>W.E. Boyce and R.C. DiPrima Elementary Differential Equations and Boundary-Value Problems. Wiley, 2004</li>
@@ -296,17 +300,18 @@ The above <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">f
 </div>
 </div>
 
-<div id="outline-container-org18b5aa9" class="outline-2">
-<h2 id="org18b5aa9">Calculus crash course</h2>
-<div class="outline-text-2" id="text-org18b5aa9">
+
+<div id="outline-container-org8047ca2" class="outline-2">
+<h2 id="org8047ca2">Calculus crash course</h2>
+<div class="outline-text-2" id="text-org8047ca2">
 <p>
 We completely skipped scalar calculus (single variable) in the prereqs so here is a crash course. Next term we learn Real Analysis anyway so everything here will be rigorously learned eventually. 
 </p>
 </div>
 
-<div id="outline-container-orgba05eb8" class="outline-3">
-<h3 id="orgba05eb8">Exp and Log functions</h3>
-<div class="outline-text-3" id="text-orgba05eb8">
+<div id="outline-container-orgbc8b8ce" class="outline-3">
+<h3 id="orgbc8b8ce">Exp and Log functions</h3>
+<div class="outline-text-3" id="text-orgbc8b8ce">
 <p>
 Explained <a href="https://www.youtube.com/watch?v=vQydKnPxOJY">here</a> (Clemson Math 1060 sec 1.3). These Clemson U lectures average ~20m and are just the right difficulty if you forgot high school like most people so gaps will be filled in and there's lot's of constructions instead of descriptive/abstract definitions. 
 </p>
@@ -332,9 +337,9 @@ Notice how a log is a linearization of an exponent, if you log 2<sup>x</sup> the
 </div>
 </div>
 
-<div id="outline-container-org41a06c8" class="outline-3">
-<h3 id="org41a06c8">Trig Functions</h3>
-<div class="outline-text-3" id="text-org41a06c8">
+<div id="outline-container-org1413bc7" class="outline-3">
+<h3 id="org1413bc7">Trig Functions</h3>
+<div class="outline-text-3" id="text-org1413bc7">
 <p>
 If you don't remember trig at all try <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a> (Math 1060 sec 1.4) review of Trig functions and their inverses. Skip through and remind yourself that sin<sup>-1</sup> is not 1/sin. Where do those square root x/y coords come from on the unit circle? Explained in the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a> (Brown University). Two right angle triangles (deg 30/60/90 and 45/45/90) need to be scaled down so the hypotenuse is 1 to fit on the unit circle.
 </p>
@@ -345,9 +350,9 @@ We have just seen another linearization. Watch a few minutes of <a href="https:/
 </div>
 </div>
 
-<div id="outline-container-orgf9c7cd0" class="outline-3">
-<h3 id="orgf9c7cd0">Limits</h3>
-<div class="outline-text-3" id="text-orgf9c7cd0">
+<div id="outline-container-org622df1e" class="outline-3">
+<h3 id="org622df1e">Limits</h3>
+<div class="outline-text-3" id="text-org622df1e">
 <p>
 Skim through these, if you want to do exercises pause the video before he works out an example and do it yourself.  
 </p>
@@ -365,9 +370,9 @@ Skim through these, if you want to do exercises pause the video before he works 
 </div>
 
 
-<div id="outline-container-org1b921d6" class="outline-3">
-<h3 id="org1b921d6">Derivatives</h3>
-<div class="outline-text-3" id="text-org1b921d6">
+<div id="outline-container-org2831dcc" class="outline-3">
+<h3 id="org2831dcc">Derivatives</h3>
+<div class="outline-text-3" id="text-org2831dcc">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=Bjgu3i310pw">Derivative</a> (Math 1060 3.1) shows the geometry of a derivative at a point.</li>
 <li><a href="https://www.youtube.com/watch?v=sGQGsxNNO8k">Derivative as a Function</a> or x -&gt; x<sup>2</sup> derivative returns x -&gt; 2x for all 'points'/inputs</li>
@@ -376,9 +381,9 @@ Skim through these, if you want to do exercises pause the video before he works 
 </ul>
 </div>
 
-<div id="outline-container-org424186e" class="outline-4">
-<h4 id="org424186e">Watch when needed</h4>
-<div class="outline-text-4" id="text-org424186e">
+<div id="outline-container-orgfc08d77" class="outline-4">
+<h4 id="orgfc08d77">Watch when needed</h4>
+<div class="outline-text-4" id="text-orgfc08d77">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=UF6koNYWE1s">Product Rule</a> (Math 1060 3.4) (fg)' = f'g + fg' and (f/g)' = (f'g - fg')/g<sup>2</sup></li>
 <li><a href="https://www.youtube.com/watch?v=o7yV_wUKy9M">Trig Derivatives</a> covers reciprocal limits too. Lightly skim this just so you know the derivative of sinx is cosx and that if you take the derivative of sinx 4x then it's a cycle that returns to sinx.</li>
@@ -389,9 +394,9 @@ Skim through these, if you want to do exercises pause the video before he works 
 </div>
 </div>
 
-<div id="outline-container-org9eab0ed" class="outline-4">
-<h4 id="org9eab0ed">Optimization to watch when needed.</h4>
-<div class="outline-text-4" id="text-org9eab0ed">
+<div id="outline-container-orgdff3068" class="outline-4">
+<h4 id="orgdff3068">Optimization to watch when needed.</h4>
+<div class="outline-text-4" id="text-orgdff3068">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=caKCSTGCl4M">Max/Min</a> (Math 1060 4.1) of a function.</li>
 <li><a href="https://www.youtube.com/watch?v=3LKdFF1mR8I">Mean Value Theorem</a> the point of the MVT is to establish a function with a positive derivative on an open interval would have to be increasing.</li>
@@ -403,9 +408,9 @@ Skim through these, if you want to do exercises pause the video before he works 
 </div>
 </div>
 
-<div id="outline-container-org4995321" class="outline-3">
-<h3 id="org4995321">Integrals</h3>
-<div class="outline-text-3" id="text-org4995321">
+<div id="outline-container-org88c02c5" class="outline-3">
+<h3 id="org88c02c5">Integrals</h3>
+<div class="outline-text-3" id="text-org88c02c5">
 <p>
 In the first sample sheet we drill integrals you could wait until then to watch these while working through the practice problems. 
 </p>
@@ -423,15 +428,15 @@ In the first sample sheet we drill integrals you could wait until then to watch 
 </div>
 </div>
 
-<div id="outline-container-orgda151f4" class="outline-2">
-<h2 id="orgda151f4">Cambridge Lecture 1</h2>
-<div class="outline-text-2" id="text-orgda151f4">
+<div id="outline-container-orgb0e6bc4" class="outline-2">
+<h2 id="orgb0e6bc4">Cambridge Lecture 1</h2>
+<div class="outline-text-2" id="text-orgb0e6bc4">
 <p>
-We have access to the first Cambridge lecture <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> where he covers a review of calculus we're supposed to know. I had to use the pop-out button on Youtube and enlarge the screen with max rez to see what he's writing as it's small in the beginning.
+We have access to the first Cambridge lecture <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> where he covers a review of calculus we're supposed to know. We only need to know limits, the derivative and <a href="https://www.youtube.com/watch?v=hTjUvyBq8gA">differentials</a>. Later we go through all the notes as they define calculus from scratch in this course.  
 </p>
 
 <p>
-First definition we already know: the limit of the ratio f(a + h) - f(a) over h as h gets closer to 0. 'x naught' is x<sub>0</sub> notation meaning the same thing as f(a) where a is supposed to be a specific point/input. We just learned the <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">LH and RH limits</a>.
+First definition we already know: the limit of the ratio f(a + h) - f(a) over h as h gets closer to 0 is the derivative. 'x naught' is x<sub>0</sub> notation meaning the same as f(a) where 'a' is supposed to be a specific point/input. Here are the <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">LH and RH limits</a>.
 </p>
 
 <p>
@@ -462,13 +467,25 @@ Since h is tending towards 0, before we take the limit we know the remainder ter
 </p>
 
 <p>
-TODO
+Some rules are introduced we already know like chain/product rules. He says to look over the notes and see how big-O is used in the proofs.
+</p>
+</div>
+
+<div id="outline-container-org7e4a2aa" class="outline-3">
+<h3 id="org7e4a2aa">Notes</h3>
+<div class="outline-text-3" id="text-org7e4a2aa">
+<p>
+The notes are <a href="http://dec41.user.srcf.net/h/IA_M/differential_equations/">here</a> let's combine these with the first sample sheet on integrals to learn up to partial derivatives then we can start our <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">course</a>.
 </p>
 
+<p>
+TODO
+</p>
 <hr />
 <p>
 <a href="./math.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

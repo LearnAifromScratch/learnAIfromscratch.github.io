@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-23 Sun 23:19 -->
+<!-- 2025-02-23 Sun 23:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Quant Trading &amp; Research</title>
@@ -202,41 +202,45 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0fa9803">Quant Research</a>
+<li><a href="#orgb202c56">Quant Research</a>
 <ul>
-<li><a href="#orgd7dd8da">What does a QR do?</a></li>
-<li><a href="#orgf1c99e8">What does an 'assistant' QR do?</a></li>
+<li><a href="#org08f0cc3">What does a QR do?</a></li>
+<li><a href="#org7b8e992">What does an 'assistant' QR do?</a></li>
 </ul>
 </li>
-<li><a href="#org854e890">What are the basics?</a>
+<li><a href="#org18511d1">What are the basics?</a>
 <ul>
-<li><a href="#org8797a77">Game Theoretic Probability</a></li>
+<li><a href="#org7e08546">Game Theoretic Probability</a></li>
 </ul>
 </li>
-<li><a href="#orgb239659">Probability</a></li>
+<li><a href="#orgf9de2bf">Probability</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org0fa9803" class="outline-2">
-<h2 id="org0fa9803">Quant Research</h2>
-<div class="outline-text-2" id="text-org0fa9803">
+<div id="outline-container-orgb202c56" class="outline-2">
+<h2 id="orgb202c56">Quant Research</h2>
+<div class="outline-text-2" id="text-orgb202c56">
 <p>
 Usually no trading company will hire new QRs directly to the front-office buy side unless they have pedigree meaning they come from a famous school. You can however move internally from the back office where you are doing shit work in tech to the front office and perform more shit work (at first) to get into QR if you know the basics of data analysis. 
 </p>
 </div>
 
 
-<div id="outline-container-orgd7dd8da" class="outline-3">
-<h3 id="orgd7dd8da">What does a QR do?</h3>
-<div class="outline-text-3" id="text-orgd7dd8da">
+<div id="outline-container-org08f0cc3" class="outline-3">
+<h3 id="org08f0cc3">What does a QR do?</h3>
+<div class="outline-text-3" id="text-org08f0cc3">
 <p>
-A good breakdown of quantitative trading is <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">here</a> and the same author's <a href="http://isomorphisms.sdf.org/maxdama.pdf">PDF</a> floating around from 2011 on algorithmic trading that he was forced to abandon upon signing NDAs to work where he is now. A major firm will have 100+ data feeds and needs a small army of QRs to encode that data in a signal and fit a linear approximation of the relationship between the signal and predicted returns. You do not need a PhD to do parameter optimization, reconciliation, run simulations, or to find creative ways to model data and fit a signal to a linear relationship using regression.     
+A good breakdown of quantitative trading is <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">here</a> and the same author's <a href="http://isomorphisms.sdf.org/maxdama.pdf">PDF</a> floating around from 2011 on algorithmic trading that he was forced to abandon upon signing NDAs. Note that he doesn't agree anymore with his old notes they should just be a casual read and none of the recommendations for mental math or anything else followed.
 </p>
 
 <p>
-I have witnessed most of their time is spent explaining strategy for example they have some specific domain knowledge, use it to model a signal and now have to explain it so others can adapt or sign off on it. The longer the strategy the more planning and meetings.
+A major firm will have 100+ data feeds and needs a small army of QRs to encode that data in a signal and fit a linear approximation of the relationship between the signal and predicted returns. You do not need a PhD to do parameter optimization, reconciliation, run simulations, or to find creative ways to model data and fit a signal to a linear relationship using regression.     
+</p>
+
+<p>
+I have witnessed most of their time is spent explaining to others whatever signal they've tested and converted to returns so they can adapt to this strategy or sign off on it. It's very careful research and the longer the strategy the more planning and meetings.
 </p>
 
 <p>
@@ -245,9 +249,9 @@ While they are spending time explaining there's a ton of other work to do that's
 </div>
 </div>
 
-<div id="outline-container-orgf1c99e8" class="outline-3">
-<h3 id="orgf1c99e8">What does an 'assistant' QR do?</h3>
-<div class="outline-text-3" id="text-orgf1c99e8">
+<div id="outline-container-org7b8e992" class="outline-3">
+<h3 id="org7b8e992">What does an 'assistant' QR do?</h3>
+<div class="outline-text-3" id="text-org7b8e992">
 <p>
 You can easily spot the shit work from the above blog <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">post</a> that a professional researcher making 7 figures would love to dump on some eager trainee. Even if there is a small army of teams set up for the QR department there is always something tedious they would rather someone else to do for them like maintenance of the research infrastructure or reconciliation tasks end of day if you can be trusted with that work.
 </p>
@@ -257,7 +261,7 @@ Why would you offer to do this? Because then they have time to show you the magi
 </p>
 
 <p>
-If you sell yourself and they want you around they will ask management to sign off and then you are presented with some additional non-disclosure agreements. Even in QR everything is compartmentalized it seems nobody ever has the keys to everything so if it's a big company they'll be willing. 
+If you sell yourself as a this portal where increasingly complex work can be given and you always return it using high attention to detail they will want you around and ask management to sign off and then you are presented with some additional non-disclosure agreements and moved into their office. 
 </p>
 
 <p>
@@ -267,9 +271,9 @@ The need for more researchers is never ending and where I work goes to enormous 
 </div>
 </div>
 
-<div id="outline-container-org854e890" class="outline-2">
-<h2 id="org854e890">What are the basics?</h2>
-<div class="outline-text-2" id="text-org854e890">
+<div id="outline-container-org18511d1" class="outline-2">
+<h2 id="org18511d1">What are the basics?</h2>
+<div class="outline-text-2" id="text-org18511d1">
 <p>
 I assume you can program so all you need is the basics of data analysis on noisy but semi-structured data meaning S-expressions, JSON, Apache Parquet column-oriented files, etc. 
 </p>
@@ -284,7 +288,7 @@ I assume you can program so all you need is the basics of data analysis on noisy
 <ul class="org-ul">
 <li>uses R but Julia/Matlab/Python exists too use whatever you want</li>
 </ul></li>
-<li><a href="https://oyc.yale.edu/economics/econ-159?qt-course=2#qt-course">Intro to Game Theory</a> 
+<li><a href="https://oyc.yale.edu/economics/econ-159?qt-course=2#qt-course">Intro to Game Theory</a> (optional)
 <ul class="org-ul">
 <li>helps to understand QR lingo and strategies</li>
 <li>or try <i>The Mathematics of Poker</i> by Chen/Ankenman</li>
@@ -300,9 +304,9 @@ Transformer models (LLMs) are used for things you wouldn't expect like predictin
 </p>
 </div>
 
-<div id="outline-container-org8797a77" class="outline-3">
-<h3 id="org8797a77">Game Theoretic Probability</h3>
-<div class="outline-text-3" id="text-org8797a77">
+<div id="outline-container-org7e08546" class="outline-3">
+<h3 id="org7e08546">Game Theoretic Probability</h3>
+<div class="outline-text-3" id="text-org7e08546">
 <p>
 I'm personally interested in <a href="https://probabilityandfinance.com/">Game-Theoretic Probability</a> where essentially all concepts of randomness are thrown out. Probabilities are now forecasts and statistical models are tested with betting and non-stochastic. If you've ever been highly skeptical of stock markets being supposedly stochastic instead of a game played by multiple participants then you'll probably want to take this too.
 </p>
@@ -314,9 +318,9 @@ One of the authors Glenn Shafer designed a simple <a href="https://www.youtube.c
 </div>
 </div>
 
-<div id="outline-container-orgb239659" class="outline-2">
-<h2 id="orgb239659">Probability</h2>
-<div class="outline-text-2" id="text-orgb239659">
+<div id="outline-container-orgf9de2bf" class="outline-2">
+<h2 id="orgf9de2bf">Probability</h2>
+<div class="outline-text-2" id="text-orgf9de2bf">
 <p>
 What we should do is work through <a href="https://classicalrealanalysis.info/com/documents/BBT-AlllChapters-Landscape.pdf">Real Analysis</a> by Bruckner/Thomson while reading <i>Mathematical Methods of Statistics</i> by Cramer. If you want to do that then try the <a href="./math.html">Tripos</a>. 
 </p>

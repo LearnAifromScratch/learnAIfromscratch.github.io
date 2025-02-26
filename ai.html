@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-15 Sat 21:40 -->
+<!-- 2025-02-25 Tue 20:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2025</title>
@@ -202,24 +202,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf22233c">Intro</a></li>
-<li><a href="#orgfeae039">Curriculum</a>
+<li><a href="#orgcd2366a">Intro</a></li>
+<li><a href="#org6df95cb">Curriculum</a>
 <ul>
-<li><a href="#org3c23497">Linear Algebra options</a></li>
-<li><a href="#orgb90835b">Linear Algebra resources I'll do here</a></li>
-<li><a href="#org704bb54">Calculus resources I'll do here</a></li>
+<li><a href="#org325bd56">Linear Algebra options</a></li>
+<li><a href="#org56fdd44">Linear Algebra resources I'll do here</a></li>
+<li><a href="#org4a6ae08">Calculus resources I'll do here</a></li>
 </ul>
 </li>
-<li><a href="#orge72b1c6">Day 1 Neuroscience Models</a></li>
-<li><a href="#org61fe95f">Day 2 Applied Calculus</a></li>
+<li><a href="#org67df801">Day 1 Neuroscience Models</a></li>
+<li><a href="#org7eee965">Day 2 Applied Calculus</a>
+<ul>
+<li><a href="#org8e32b0d">1.1 Functions</a></li>
+<li><a href="#org3ed9e81">1.2 Multivariable Functions</a></li>
+<li><a href="#org151f19e">1.3 Linear Functions</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-orgf22233c" class="outline-2">
-<h2 id="orgf22233c">Intro</h2>
-<div class="outline-text-2" id="text-orgf22233c">
+<div id="outline-container-orgcd2366a" class="outline-2">
+<h2 id="orgcd2366a">Intro</h2>
+<div class="outline-text-2" id="text-orgcd2366a">
 <p>
 We will learn the 'full stack' of modern deep learning systems by building our own library from scratch in your language of choice. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most popular currently is transformer architecture for large language models like ChatGPT. We'll learn how to reverse engineer these models. 
 </p>
@@ -233,9 +239,9 @@ I broke this up into days to see how long it will take and they simply represent
 </p>
 </div>
 
-<div id="outline-container-org5c7c299" class="outline-4">
-<h4 id="org5c7c299">Many iterations of this</h4>
-<div class="outline-text-4" id="text-org5c7c299">
+<div id="outline-container-org50507c6" class="outline-4">
+<h4 id="org50507c6">Many iterations of this</h4>
+<div class="outline-text-4" id="text-org50507c6">
 <p>
 I nuked this curriculum and stalled it dozens of times for the simple reason it was too expensive to get into but now the GPU bubble finally popped letting us plebs access to hardware to train our own models.  
 </p>
@@ -246,9 +252,9 @@ I learned the theory from taking Waterloo's CS485 <a href="https://www.youtube.c
 </div>
 </div>
 
-<div id="outline-container-orgfcf8113" class="outline-4">
-<h4 id="orgfcf8113">Limits of AI</h4>
-<div class="outline-text-4" id="text-orgfcf8113">
+<div id="outline-container-orgea2bc17" class="outline-4">
+<h4 id="orgea2bc17">Limits of AI</h4>
+<div class="outline-text-4" id="text-orgea2bc17">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -256,9 +262,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-orgfeae039" class="outline-2">
-<h2 id="orgfeae039">Curriculum</h2>
-<div class="outline-text-2" id="text-orgfeae039">
+<div id="outline-container-org6df95cb" class="outline-2">
+<h2 id="org6df95cb">Curriculum</h2>
+<div class="outline-text-2" id="text-org6df95cb">
 <ul class="org-ul">
 <li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> (CMU)
 <ul class="org-ul">
@@ -281,9 +287,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </ul>
 </div>
 
-<div id="outline-container-org3c23497" class="outline-3">
-<h3 id="org3c23497">Linear Algebra options</h3>
-<div class="outline-text-3" id="text-org3c23497">
+<div id="outline-container-org325bd56" class="outline-3">
+<h3 id="org325bd56">Linear Algebra options</h3>
+<div class="outline-text-3" id="text-org325bd56">
 <p>
 There is no shortage of excellent linear algebra courses. These are only what I have reviewed there's tons more if you don't want to do them. 
 </p>
@@ -384,9 +390,9 @@ Have you ever wanted to redo everything from scratch using linear algebra? There
 </div>
 </div>
 
-<div id="outline-container-orgb90835b" class="outline-3">
-<h3 id="orgb90835b">Linear Algebra resources I'll do here</h3>
-<div class="outline-text-3" id="text-orgb90835b">
+<div id="outline-container-org56fdd44" class="outline-3">
+<h3 id="org56fdd44">Linear Algebra resources I'll do here</h3>
+<div class="outline-text-3" id="text-org56fdd44">
 <ul class="org-ul">
 <li>Axler's latest <a href="https://linear.axler.net/">book</a>
 <ul class="org-ul">
@@ -411,9 +417,9 @@ Watching Poh-Shen Loh explain why Matrix multiplication works is amazing. He's d
 </div>
 </div>
 
-<div id="outline-container-org704bb54" class="outline-3">
-<h3 id="org704bb54">Calculus resources I'll do here</h3>
-<div class="outline-text-3" id="text-org704bb54">
+<div id="outline-container-org4a6ae08" class="outline-3">
+<h3 id="org4a6ae08">Calculus resources I'll do here</h3>
+<div class="outline-text-3" id="text-org4a6ae08">
 <p>
 We need to know basic applied math modeling. We could take MIT's calculus sequence on Open CourseWare but that will take at least 6 months and assumes you are an MIT student so already have the prerequisite highschool background. 
 </p>
@@ -435,9 +441,9 @@ The Matrix calculus seminar we take will fill in the rest.
 </div>
 
 
-<div id="outline-container-orge72b1c6" class="outline-2">
-<h2 id="orge72b1c6">Day 1 Neuroscience Models</h2>
-<div class="outline-text-2" id="text-orge72b1c6">
+<div id="outline-container-org67df801" class="outline-2">
+<h2 id="org67df801">Day 1 Neuroscience Models</h2>
+<div class="outline-text-2" id="text-org67df801">
 <p>
 This is 'learn AI from scratch' so that's what we're going to do starting with brain models. I'm including this here in the beginning so we can see what kind of math models we need to teach ourselves. 
 </p>
@@ -467,23 +473,52 @@ I don't have a physics background either but he's explaining the dynamics of a m
 </div>
 </div>
 
-<div id="outline-container-org61fe95f" class="outline-2">
-<h2 id="org61fe95f">Day 2 Applied Calculus</h2>
-<div class="outline-text-2" id="text-org61fe95f">
+<div id="outline-container-org7eee965" class="outline-2">
+<h2 id="org7eee965">Day 2 Applied Calculus</h2>
+<div class="outline-text-2" id="text-org7eee965">
 <p>
 As mentioned above obtain the book <i>Mathematical Modeling and Applied Calculus</i> by Joel Kilty and Alex McAllister either buy it, borrow it, or download it from <a href="https://annas-archive.org/">Anna's Archive</a> or a working <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> domain. All the simplified neuron models we just watched in the CS479 lectures are in this book and there's an RStudio <a href="https://cran.r-project.org/web/packages/MMAC/index.html">package</a> to do the exercises with. You can also directly interface with any R library using <a href="https://cran.r-project.org/web/packages/JuliaCall/readme/README.html">JuliaCall</a>. 
+</p>
+</div>
+
+<div id="outline-container-org8e32b0d" class="outline-3">
+<h3 id="org8e32b0d">1.1 Functions</h3>
+<div class="outline-text-3" id="text-org8e32b0d">
+<p>
+It seems everyone already changed the name of a range to co-domain since this was written. If you look at page 770 <i>Appendix C</i> the instructions how to install RStudio and the book packages are there. Took me about 20 minutes using an Ubuntu VM as the 'mosaic' package does a bunch of c++ compilations. I had to manually install libudunits2-dev and libgdal-dev to get the R package 'mosaicCalc' to install. Project <a href="https://dtkaplan.github.io/SM2-bookdown/">mosaic</a> now has their own calculus book but the one we are doing is more advanced so we'll keep doing it.
+</p>
+
+<p>
+Once you get RStudio working and import/require the libraries all the plotFun commands work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ed9e81" class="outline-3">
+<h3 id="org3ed9e81">1.2 Multivariable Functions</h3>
+<div class="outline-text-3" id="text-org3ed9e81">
+<p>
+3blue1brown got his start making Khan Academy videos and here is his <a href="https://youtu.be/WsZj5Rb6do8?si=7LHO8h0V0DA6uNYJ">video</a> explaining a contour plot. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org151f19e" class="outline-3">
+<h3 id="org151f19e">1.3 Linear Functions</h3>
+<div class="outline-text-3" id="text-org151f19e">
+<p>
+The book will now describe everything in terms of a model with parameters.
 </p>
 
 <p>
 TODO
 </p>
 
-
-
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

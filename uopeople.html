@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-16 Sun 20:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The UoPeople CompSci Curriculum Guide</title>
+<meta name="author" content="jbh" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">The UoPeople CompSci Curriculum Guide</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1366a49">1. Introduction</a>
+<ul>
+<li><a href="#org33afcb7">1.1. Accreditation</a></li>
+<li><a href="#orgd31cf42">1.2. Fees</a></li>
+<li><a href="#org15c1823">1.3. Proctors</a></li>
+<li><a href="#orgd8ea1c9">1.4. Requirements</a></li>
+<li><a href="#org0341229">1.5. Semesters</a></li>
+<li><a href="#org9db4600">1.6. How it works</a></li>
+<li><a href="#org981cf37">1.7. The platform</a></li>
+<li><a href="#org109c6a8">1.8. Peer review</a></li>
+<li><a href="#org287bcd6">1.9. Supplementary courses</a></li>
+</ul>
+</li>
+<li><a href="#org5371e4a">2. General Ed req</a>
+<ul>
+<li><a href="#org659bf25">2.1. UNIV 1001</a></li>
+<li><a href="#org3141444">2.2. POLS 1503: Globalization</a>
+<ul>
+<li><a href="#orgb6b664e">2.2.1. Studying</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgca93a6b">3. Math Courses</a>
+<ul>
+<li><a href="#orgd9447aa">3.1. Math 1201 College Algebra</a></li>
+<li><a href="#org23e2bfb">3.2. Math 1211 Calculus</a></li>
+<li><a href="#org78fd443">3.3. Math 1302 Discrete Mathematics</a></li>
+<li><a href="#org76480c4">3.4. Math 1280 Intro to Statistics</a></li>
+</ul>
+</li>
+<li><a href="#orgd8a5407">4. Computer Science Courses</a>
+<ul>
+<li><a href="#orgab43ab5">4.1. CS 1101 Programming Fundamentals</a></li>
+<li><a href="#org4df2f31">4.2. CS 1102</a></li>
+<li><a href="#org9e21064">4.3. CS: 1104 Computer Systems</a></li>
+<li><a href="#orgf70647e">4.4. CS 1105 Computer Arch</a></li>
+<li><a href="#orgfd79c52">4.5. CS 2203: Databases 1</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1366a49" class="outline-2">
+<h2 id="org1366a49"><span class="section-number-2">1.</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This guide is for the <a href="https://www.uopeople.edu/programs/cs/degrees/computer-science-bachelor-degree/">University of the People(UoPeople)</a> BSc in Computer Science because one doesn't exist and their website is slightly confusing. It offers a 'tuition free', fully online, regionally accredited Associates (2 years) and Bachelors (4 years) degrees to anybody in the world.
+</p>
+
+<p>
+They also offer a BSBA or Bachelor of Science in Business Admin entirely in Arabic then you could take one of the analytical database courses here to do 'ETL' or extracting data, transforming it and loading it into business intelligence systems like Snowflake or Databricks for analysis. 
+</p>
+
+<p>
+I took about 2 terms out of curiosity then dropped out because they didn't have legit accreditation at the time but now that they do I'm going to re-enroll and make a full TA guide for it here so you totally destroy the curriculum and hopefully can get into <a href="https://www.uopeople.edu/about/partners/academic-partnerships/new-york-university/">NYU Abu Dhabi</a> or <a href="https://catalog.uopeople.edu/ug_term1_item/undergraduate-admissions/uopeople-partnerships-nomination-process">other universities</a> and claim that sweet financial aid.  
+</p>
+</div>
+
+<div id="outline-container-org33afcb7" class="outline-3">
+<h3 id="org33afcb7"><span class="section-number-3">1.1.</span> Accreditation</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+In 2025 they received USA regional <a href="https://www.wscuc.org/institutions/university-of-the-people/">accreditation</a> so I would expect the fees to go up soon. This accreditation means you have the same piece of paper of any state school in the US and can use it for an online MSc like Georgia Tech or Johns Hopkins or anywhere else. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd31cf42" class="outline-3">
+<h3 id="orgd31cf42"><span class="section-number-3">1.2.</span> Fees</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The application fee and exam fees are based on your country's GDP and slightly discounted if you're living in the poorest regions otherwise the exam fees presently are $140 USD each and the full CompSci BSc requires 40 exams some of which require proctors (another fee). You pay as you go and the final cost will be around $5600 plus whatever proctor fees unless you get financial aid or scholarship.
+</p>
+
+<p>
+A regular state or commonwealth university is lowest bound $40k for tuition alone not including all the other fees. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15c1823" class="outline-3">
+<h3 id="org15c1823"><span class="section-number-3">1.3.</span> Proctors</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+An exam proctor or invigilator is someone you ask or pay to watch you taking an exam. The definition of who can be a proctor is pretty loose in their guidelines. If you know anyone in your country with some kind of recognized profession like a notary or librarian you can ask them to watch you for free otherwise ProctorU and many online services exist. Local universities typically charge $40-60 for this and are easier than screwing around with ProctorU tech. Maybe 6 or so courses are proctored but this can always change. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8ea1c9" class="outline-3">
+<h3 id="orgd8ea1c9"><span class="section-number-3">1.4.</span> Requirements</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+The only requirements for the CompSci BSc is proof of high school graduation (diploma or GED) and the ability to read and write English. I sent a photo of my highschool diploma that I was surprised to find buried in some storage box while visiting my parents. If you apply from a country that doesn't use English as an official language it's likely they will force you to take an extra English course, which you can appeal after being accepted.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0341229" class="outline-3">
+<h3 id="org0341229"><span class="section-number-3">1.5.</span> Semesters</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+There are 5 <a href="https://www.uopeople.edu/become-student/academic-calendar/">terms</a> per year. P/T studies is 1 course per term and F/T is 2 courses per term, depending on your academic standing you can register for more. Most courses are 3 credits, consist of 8 weeks of lessons/assignments/quizzes, and the 9th week is the final exam. You can also apply for a leave of absence to take a term or more off.
+</p>
+
+<p>
+This means you can finish a BSc in 2 years if you take a F/T course load but some of the courses require an enormous amount of work you may wish to start P/T like I did and switch to F/T later.   
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9db4600" class="outline-3">
+<h3 id="org9db4600"><span class="section-number-3">1.6.</span> How it works</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+There are no live lectures which is great that means you can finish these courses on your own schedule and work F/T during the day.
+</p>
+
+<p>
+The 8 weeks look exactly like this:
+</p>
+
+<ul class="org-ul">
+<li>read the online learning guide notes</li>
+<li>read assigned chapters of a book</li>
+<li>do assignments
+<ul class="org-ul">
+<li>usually 'discussion assignment' writing a detailed summary</li>
+</ul></li>
+<li>peer grading (see below)</li>
+<li>take self quiz</li>
+<li>take graded quiz</li>
+</ul>
+
+<p>
+Week 9 you write the exam which can be anywhere from 1-2hrs. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org981cf37" class="outline-3">
+<h3 id="org981cf37"><span class="section-number-3">1.7.</span> The platform</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+All the materials are free and can be downloaded for offline work. They use some edtech CMS <a href="https://moodle.org/Moodle">Moodle</a> which many other schools like ETH Zurich use. There is a course discussion forum plus <a href="https://www.yammer.com/">Yammer</a> which is some proprietary Microsoft app that is a mix between Facebook and Slack that I only ever used to have my assignments fixed from the bad peer grading. Most of the program assignments you upload the source .py or .java files and the output as a .doc for grading so you will need Open Office or something similar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org109c6a8" class="outline-3">
+<h3 id="org109c6a8"><span class="section-number-3">1.8.</span> Peer review</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+This is a global school so you have to spell out what you are doing with almost too much documentation. Expect the person reading/reviewing your work speaks no English at all and you should do fine. Whenever I had a bad peer grade I appealed to the instructor who reversed it but I have heard from other students that sometimes they don't bother.
+</p>
+
+<p>
+This means the key to success at this school to graduate with a 4+ GPA is to finesse the peer reviewed assignments by assuming whoever is grading you needs total hand holding and to keep the work within the parameters of the material for example I wrote a bunch of assignments in recursive code that nobody understood so they gave me a poor review.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org287bcd6" class="outline-3">
+<h3 id="org287bcd6"><span class="section-number-3">1.9.</span> Supplementary courses</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+I will inject some optional side projects I'm already doing elsewhere like the USACO guide and Andy Pavlo's new open <a href="https://15799.courses.cs.cmu.edu/spring2025/">course</a> on building an optimizer if time permits but the UoPeople curriclum is fine if you are curious and really dig into it and treat is seriously.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5371e4a" class="outline-2">
+<h2 id="org5371e4a"><span class="section-number-2">2.</span> General Ed req</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+All universities make you take a few humanities style courses. I will add some optional supplementary material here too as I go for example we can learn <a href="https://www.youtube.com/watch?v=BMfnw6oBq9w">Latin</a> which is a hack to get better at English. We can supplement with some spicy right philosophers such as <a href="https://youtu.be/wqGIz6cCRJc?si=NtCy5Wf4nYFjzSXX">Evola</a> and his whole aristocratic idea of riding the <a href="https://youtu.be/Gvg2uaSbWPE?si=oehS1qnDlA9uWl_m">tiger</a> of modernity. We can also learn spicy left philosphers and their analyzing of <a href="https://archive.org/details/the-perverts-guide-to-ideology-2012-hd">ideology</a>. Aristotle's Categories is also broken down completely both in Catholic doctrine, Islamic Hadiths and Jewish Talmudic logic another part of the 'belief curriculum' that UoPeople offers that we can take.   
+</p>
+</div>
+
+<div id="outline-container-org659bf25" class="outline-3">
+<h3 id="org659bf25"><span class="section-number-3">2.1.</span> UNIV 1001</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+This is a mandatory course you take about the perils of cheating, how to organize your time and how to study. Many students cut+paste their assignments and were banned in the courses I took don't be one of those students.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3141444" class="outline-3">
+<h3 id="org3141444"><span class="section-number-3">2.2.</span> POLS 1503: Globalization</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+This is a straight forward course, do the quizzes and you'll have no problems.  
+</p>
+
+<ul class="org-ul">
+<li>Combine with critical arguments against globalist ideology like <a href="https://press.princeton.edu/titles/10185.html">1177 B.C.: The Year Civilization Collapsed</a> by Eric Cline.</li>
+</ul>
+</div>
+
+<div id="outline-container-orgb6b664e" class="outline-4">
+<h4 id="orgb6b664e"><span class="section-number-4">2.2.1.</span> Studying</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+Some good advice is <a href="https://calnewport.com/anatomy-of-an-a-a-look-inside-the-process-of-one-of-the-worlds-most-efficient-studiers/">here</a> and skip to the heading <i>Part One – Learn Concepts by Analogy</i>. Make a 'notes compression' of all essential topics. Break everything down and ask why is it all defined this way, come up with a metaphor that fits the pattern, attempt to teach it to an invisible class yourself.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgca93a6b" class="outline-2">
+<h2 id="orgca93a6b"><span class="section-number-2">3.</span> Math Courses</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+I haven't taken these yet. 
+</p>
+</div>
+
+<div id="outline-container-orgd9447aa" class="outline-3">
+<h3 id="orgd9447aa"><span class="section-number-3">3.1.</span> Math 1201 College Algebra</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Syllabus <a href="https://my.uopeople.edu/mod/book/view.php?id=45606&amp;chapterid=37628">here</a>. Could be combined with Arkadiy Skopenkov's <i>Algebra Through Problems</i> <a href="http://www.mccme.ru/circles/oim/algebra_eng.pdf">here</a> and then focus on the trig identity drilling in the assigned book because you know that will be on the exam they always love using trig problems. From google research this is a hard course with 40 pages of reading assigned per week and a ton of problems to do but will payoff later.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23e2bfb" class="outline-3">
+<h3 id="org23e2bfb"><span class="section-number-3">3.2.</span> Math 1211 Calculus</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Syllabus <a href="https://my.uopeople.edu/mod/book/view.php?id=45606&amp;chapterid=115902">here</a>. Uses OpenStax text which you could combine with <a href="./asymptotics.html">asymptotics</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org78fd443" class="outline-3">
+<h3 id="org78fd443"><span class="section-number-3">3.3.</span> Math 1302 Discrete Mathematics</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Syllabus <a href="https://my.uopeople.edu/mod/book/view.php?id=45606&amp;chapterid=46510">here</a>. Poh-Shen Loh <a href="https://www.youtube.com/watch?v=0K540qqyJJU&amp;list=PLgTkKBA6LRqYuuQ-LboerRblBoD_q_eUM">uploaded</a> his CMU combinatorics course to YouTube it is vastly more advanced but watching just a few of these lectures helps you understand how to do these problems. You could also do some of <a href="./taocp.html">taocp</a>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org76480c4" class="outline-3">
+<h3 id="org76480c4"><span class="section-number-3">3.4.</span> Math 1280 Intro to Statistics</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Syllabus <a href="https://my.uopeople.edu/mod/book/view.php?id=45606&amp;chapterid=37629">here</a> and there's many free <a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">workbooks</a> on probability/stats and <a href="https://www.youtube.com/watch?v=r9S2fMQiP2E">lectures</a> on the central limit theorem. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd8a5407" class="outline-2">
+<h2 id="orgd8a5407"><span class="section-number-2">4.</span> Computer Science Courses</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+I have taken these.
+</p>
+</div>
+
+<div id="outline-container-orgab43ab5" class="outline-3">
+<h3 id="orgab43ab5"><span class="section-number-3">4.1.</span> CS 1101 Programming Fundamentals</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+8 week course that follows the first 12 chapters of the book <i>How to Think Like a Computer Scientist</i> by Allen B. Downey.
+</p>
+
+<p>
+Practice:
+</p>
+<ul class="org-ul">
+<li><a href="https://horstmann.com/codecheck/python-questions.html">CodeCheck</a> Python exercises</li>
+<li><a href="https://www.cs.cmu.edu/~15110/practice.html#ta">TA-Generated Problems</a> from CMU's 15-110 similar to the Downey book</li>
+<li><a href="https://www.cs.cmu.edu/~112-f22/schedule.html">15-112</a> which has much more difficult assignments. Click on each topic, there are short video lectures.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4df2f31" class="outline-3">
+<h3 id="org4df2f31"><span class="section-number-3">4.2.</span> CS 1102</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Uses this <a href="https://math.hws.edu/javanotes/">book</a>.
+</p>
+
+<p>
+This is as far as I got so far in the UoPeople curriculum until they approve my re-registration.  
+</p>
+
+<p>
+Practice:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.codingame.com/training">CodinGame</a> easy and medium puzzles you can do in Java.</li>
+<li><a href="https://web.mit.edu/6.031/www/sp21/">6.031</a> MIT's 2021 version which still used Java (now TypeScript).
+<ul class="org-ul">
+<li>Assignments on <a href="https://ocw.mit.edu/courses/6-005-software-construction-spring-2016/pages/problem-sets/">OCW</a></li>
+</ul></li>
+</ul>
+
+<p>
+If for curiosity reasons you'd like to see how all this really works then try <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FICS/">A Functional Intro to CS</a>.    
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e21064" class="outline-3">
+<h3 id="org9e21064"><span class="section-number-3">4.3.</span> CS: 1104 Computer Systems</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+This is the Nand2tetris course <a href="https://www.nand2tetris.org/">here</a>. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf70647e" class="outline-3">
+<h3 id="orgf70647e"><span class="section-number-3">4.4.</span> CS 1105 Computer Arch</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+ETH Zurich has a complete course for this I would recommend doing at the same time with <a href="https://www.youtube.com/playlist?list=PL5Q2soXY2Zi9Eo29LMgKVcaydS7V1zZW3">YouTube</a> lectures
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfd79c52" class="outline-3">
+<h3 id="orgfd79c52"><span class="section-number-3">4.5.</span> CS 2203: Databases 1</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Fundamentals of database modeling and design, relational theory/SQL. You would obviously take CMU's completely open <a href="https://15445.courses.cs.cmu.edu/fall2024/schedule.html">15-445</a> relational dbms course at the same time.  
+</p>
+
+<p>
+TODO I have to wait to be re-enrolled.
+</p>
+
+<hr />
+<p>
+<a href="./index.html">Home</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: jbh</p>
+<p class="date">Created: 2025-03-16 Sun 20:46</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

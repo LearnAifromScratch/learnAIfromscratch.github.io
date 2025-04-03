@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-06-03 Mon 19:50 -->
+<!-- 2025-04-02 Wed 22:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="jbh" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,115 +191,73 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Software Development</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org34dc186">Start here</a>
+<li><a href="#org6c190d9">Start here</a>
 <ul>
-<li><a href="#org0afbd02">Curriculum</a></li>
-<li><a href="#orgfcc271d">Strategy</a></li>
-<li><a href="#orgf39e29b">Make a fake startup</a></li>
-<li><a href="#orgcc6f8de">Contribute to FSF</a></li>
+<li><a href="#org10ee81a">Motivation</a></li>
 </ul>
 </li>
-<li><a href="#org88cd33a">Software Design</a>
+<li><a href="#org95f3324">Curriculum</a>
 <ul>
-<li><a href="#org16f9cac">Gitless</a></li>
+<li><a href="#org9112463">Designing Software</a></li>
+<li><a href="#org2598854">Optimized Local Software</a></li>
+<li><a href="#orgaa00b56">Optimized Distributed Software</a></li>
+<li><a href="#orgc8d01c0">Algorithmic Problem Solving</a></li>
 </ul>
 </li>
-<li><a href="#org5deb94a">USACO guide</a>
+<li><a href="#org8957ebc">Congrats you are now a developer</a></li>
+<li><a href="#org3289fc7">Software Design</a>
 <ul>
-<li><a href="#org965c8c5">'Fast' languages</a></li>
-<li><a href="#org0ed2524">Input/Output</a>
-<ul>
-<li><a href="#org4a25671">Real competitive programming</a></li>
+<li><a href="#org49826c7">Version control</a></li>
+<li><a href="#org081946a">OSS contributing</a></li>
 </ul>
 </li>
+<li><a href="#org240611d">Freelancing locally</a>
+<ul>
+<li><a href="#org2723c81">What to charge</a></li>
+<li><a href="#orgb62eead">Research</a></li>
+<li><a href="#orge5e362f">Design examples</a></li>
+<li><a href="#orgb563426">Design examples II</a></li>
+<li><a href="#org2a3508d">Design examples III (Vape Store)</a></li>
+<li><a href="#org12b3d2e">Marketplace case study</a></li>
+<li><a href="#org3795b75">Marketplace strategy</a></li>
+<li><a href="#orgc33822f">Startups</a></li>
+<li><a href="#org5c42bd7">Getting good at writing software</a></li>
+<li><a href="#org70e1d7b">Licenses</a></li>
 </ul>
 </li>
-<li><a href="#orgc60d9a3">USACO bronze</a>
+<li><a href="#orgd3472c3">Modern Architecture</a>
 <ul>
-<li><a href="#orgcf67922">C++ versions</a></li>
-<li><a href="#org325d26a">Big-O explained</a></li>
-<li><a href="#org470a93d">Time complexity</a></li>
-<li><a href="#org3e79ff5">Asymptotics</a></li>
+<li><a href="#org3a57c24">Digital Design and Computer Architecture (DDCA)</a></li>
+</ul>
+</li>
+<li><a href="#orgcdb7f6d">Optimized Local Software (15-445 Relational DBMS)</a>
+<ul>
+<li><a href="#org8ff761f">Lecture 00</a></li>
+<li><a href="#org94c0d36">Lecture 1</a></li>
+</ul>
+</li>
+<li><a href="#org6541549">Optimized Distirbuted Software (15-721 Advanced DBMS)</a>
+<ul>
+<li><a href="#org57ed8aa">Lecture 0</a></li>
+<li><a href="#org9dd3f70">Lecture 1</a></li>
+<li><a href="#org646a955">Lecture 3</a></li>
+</ul>
+</li>
+<li><a href="#org85dfe4f">Algorithmic Problem Solving (USACO)</a>
+<ul>
+<li><a href="#orgb4ac12e">Languages</a></li>
+<li><a href="#orgb880387">USACO problems</a></li>
 </ul>
 </li>
 </ul>
@@ -306,418 +265,962 @@ for the JavaScript code in this tag.
 </div>
 <style>details summary { color: green; }</style>
 
-<div id="outline-container-org34dc186" class="outline-2">
-<h2 id="org34dc186">Start here</h2>
-<div class="outline-text-2" id="text-org34dc186">
+<div id="outline-container-org6c190d9" class="outline-2">
+<h2 id="org6c190d9">Start here</h2>
+<div class="outline-text-2" id="text-org6c190d9">
 <p>
-I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book somebody recommended such as:
+I assume you are teaching yourself at the same time some kind of intro course you found on YouTube or a book/curriculum somebody recommended such as:
 </p>
 <ul class="org-ul">
-<li><a href="./accelerated.html">Accelerated Intro to CS</a></li>
-<li><a href="https://functionalcs.github.io/curriculum/">Functional CS</a></li>
-<li><a href="https://functionalcs.github.io/curriculum/sicp.html">SICP</a></li>
-<li>anything</li>
-</ul>
-
-<p>
-This exists to solve two problems. 
-</p>
-
-<p>
-The first is finding a job or freelance gig doing $THING you like which <i>seems</i> like it's next to impossible these days. How to bridge the gap from toiling by yourself in obscurity to getting paid. 
-</p>
-
-<p>
-The second problem is recruiters always ask me where to find candidates for fintech type roles. I pressed them on what exactly they look for in 2024 then found free resources that taught as close to the requirements as possible. Everything here was vetted by them as being desireable as a basic foundation then the character of the candidate is the determining factor not their credentials. What they want is someone with the ability to figure out things themselves, who can program applications requiring high throughput with an in-depth knowledge of at least one language and can describe in detail how it's memory abstraction works to tune or work around it's managed runtime. If you possess the above then you can be taught everything else.  
-</p>
-
-<p>
-These kinds of roles used to require a degree from an elite school but today campus recruiting is monopolized by big tech and government crony contractors that manipulate school guidelines by pressuring students with 2 week expiring offers and paying the school to lock out all competition so it's a struggle to find anyone qualified to do this kind of work. Even if you want nothing to do with fintech we are learning to be apprentice race car engineers but for application development the same skills here translate to anywhere.
-</p>
-</div>
-
-
-<div id="outline-container-org0afbd02" class="outline-3">
-<h3 id="org0afbd02">Curriculum</h3>
-<div class="outline-text-3" id="text-org0afbd02">
-<p>
-In addition to some wild software building we will study:
-</p>
-
+<li><a href="./accelerated.html">Accelerated Intro to CS</a> 
 <ul class="org-ul">
-<li>The <a href="https://usaco.guide/">USACO guide</a> 
-<ul class="org-ul">
-<li>w/ optional <a href="https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/pages/assignments/">data structures</a>, <a href="http://www.cs.cmu.edu/~15850/">algorithm design</a> and <a href="https://people.csail.mit.edu/jshun/6506-s23/">algorithm engineering</a></li>
+<li>two compsci semesters compressed into one</li>
 </ul></li>
-<li>A workbook on <a href="https://www.plai.org/">languages</a></li>
-<li><a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">Queueing theory</a> and probability models</li>
-<li><a href="https://15721.courses.cs.cmu.edu/spring2024/">Advanced DBMS (OLAP)</a> state of the art analytics
+<li><a href="https://functionalcs.github.io/curriculum/">Functional CS</a> 
 <ul class="org-ul">
-<li>Here we learn kernel bypass methods for low latency networking, code profiling and optimization, everything we can about modern distributed application architecture</li>
+<li>the math model of programming (category/type theory)</li>
+</ul></li>
+<li><a href="https://functionalcs.github.io/curriculum/sicp.html">SICP</a>  
+<ul class="org-ul">
+<li>w/Sussman's new book on programming adaptive systems similar to biology</li>
+</ul></li>
+</ul>
+<ul class="org-ul">
+<li><a href="./uopeople.html">UoPeople</a>
+<ul class="org-ul">
+<li>BSc remote degree</li>
 </ul></li>
 </ul>
 </div>
-</div>
 
-<div id="outline-container-orgfcc271d" class="outline-3">
-<h3 id="orgfcc271d">Strategy</h3>
-<div class="outline-text-3" id="text-orgfcc271d">
+<div id="outline-container-org10ee81a" class="outline-3">
+<h3 id="org10ee81a">Motivation</h3>
+<div class="outline-text-3" id="text-org10ee81a">
 <p>
-Find a mentor. There is someone somewhere doing what you want to do and making a lot of money doing it and your task is to do enough material here to reach a level where you can get in with them somehow and absorb everything. Once you are in all you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life. If they get promoted, you get promoted. If they found a company, you are the first hire. If they get hired at a top tier trading firm everyone says you have no chance of getting into guess who they will tell the hiring managers they should also hire. 
+This is not a 'work in financial tech' workshop but it was born from conversations I have with trading shop recruiters during work socials that I routinely run into who tell me a tale of woe how much harder it has become to find good entry-level candidates from schools so I asked them what would a non-degree candidate need.  
 </p>
 
 <p>
-You approach this person and sell yourself telling them you are available if they have some work to offload because you want to learn it all from the ground up. There is always something to do and your goal is to be this magic portal where work they despise doing can be dumped and it returns as per specifications they gave you then there's time for them to show you things. You make your way up to highly sophisticated work until you end up being essential because it's a mutually beneficial relationship. I actually took all the above advice from a <a href="https://www.youtube.com/@mdeoldadvicebitsonly-fanch2934/videos">comedian</a> many years ago and it worked. In finance this can be tricky because of signing multiple NDAs even between employees but if you sell yourself to them that you are serious about being mentored they will tell management to make it happen. 
-</p>
-
-<p>
-Easiest way to meet a mentor is get the lowest job you can at a place where there's experts making the place money and then approach them asking for work to do on top of whatever else you're doing. After a few months of this if any work comes up in their department you're the one they want to move in. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgf39e29b" class="outline-3">
-<h3 id="orgf39e29b">Make a fake startup</h3>
-<div class="outline-text-3" id="text-orgf39e29b">
-<p>
-Buy a domain for $20, design and deploy a basic startup website. Here's a typical <a href="https://www.apriora.ai/">example</a> (a startup to detect applicants using GPT). Look around existing sites note how they are all the same as you scroll it loads whatever biz graphics and there's usually just a 'sign up here to be notified when&#x2026;' page. Never mention any other company names, keep it as vague as possible with just a team and careers page. 
-</p>
-
-<p>
-<i>This is where you worked for 1.5 years</i>. 
-</p>
-
-<p>
-Do not give yourself a ridiculous title. You are a full stack developer and spent your time there building features in the language/framework you currently know and are targeting employment in. Make an email sig and use you@domain.com for communications. Nobody will ever contact your fake startup but if they do don't reply. Will they see the domain is only x minutes old? Will they find out the company is fake? Who cares, you will be vetted through their interview process anyway. If anyone asks why you are leaving "I am seeking new challenges".
-</p>
-
-<p>
-All new hires are generally expected to take 3 months until they become productive and everyone else you work with is faking it until they make it so don't worry. Every year MIT has a competition called <a href="https://weblab.mit.edu/schedule/">web lab</a> where you learn the basics of Git, HTML/CSS, JS, Svelte CSS, React, Node and everything else you need to slap up a simple website. All the lectures are on YouTube and all assignments free on GitHub. These <a href="https://61040-fa23.github.io/schedule">slides</a> are also very good explaining what an API is, how to use VitePress (static site generator using Vue.js), how HTML/CSS work, etc.
-</p>
-
-<p>
-There's no reason you can't do this yourself if you did any intro course here. Hosting for this try fly.io it's 'serverless' and has a generous free option with well written documentation but anything will do for your fake startup and fake work experience. 
-</p>
-
-<p>
-To be honest you already have 1-2 years experience if you did any of the (difficult) intro to CS workshops here like the 2 semesters in 1 Brown university course CS19. 
-</p>
-</div>
-</div>
-
-
-<div id="outline-container-orgcc6f8de" class="outline-3">
-<h3 id="orgcc6f8de">Contribute to FSF</h3>
-<div class="outline-text-3" id="text-orgcc6f8de">
-<p>
-You will best be able to pull this off if you actually can commit code somewhere and receive feedback. I recommend only ever contributing to 'free software' as in GNU or <a href="https://www.fsf.org/">Free Software Foundation</a> projects. OSS or 'open source' is a scam where they use you for free labor and then make money from your work whereas FSF your code will live for decades and nobody can wrap it in some license locking out new features like how Apple screwed over the OpenBSD pf firewall devs. Read Steven Levy's classic book and skip to the chapter 'The Last of the True Hackers'. 
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org88cd33a" class="outline-2">
-<h2 id="org88cd33a">Software Design</h2>
-<div class="outline-text-2" id="text-org88cd33a">
-<p>
-MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. It used to be called 6.170 before MIT renumbered every course recently. Universities always do ridiculous things every 5 years it's like some new dean comes in and demands oh we have to reinvent everything and buy all new (awful) edtech. This is why you should never feel like you don't belong here because they definitely don't and they're being paid outrageous money to screw up everything.  
-</p>
-
-<p>
-First look at these <a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">slides</a> from 2023 titled <i>Diverge-Converge</i> it briefly explains how you go from brainstorming features of something you want to build into concepts. 
-</p>
-
-<p>
-Click <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos. They are all worth watching but we are interested in the two lectures on conceptual design. Watch <a href="https://drive.google.com/file/d/1lzAbrqk9LNLhGMLbsTuVgAm6p9_Do_Ux/view?usp=sharing">lecture 1</a> and <a href="https://drive.google.com/file/d/1AZ85ui0k2QpCKgfJZXUPSk-jdSi36MzP/view?usp=sharing">lecture 2</a>. Look at the recent <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">slides</a>. You have surely encountered badly designed software and this is a way to model your ideas as state machines then synch them together to compose an application that people can actually understand how to use. 
-</p>
-
-<p>
-If you don't understand what you just looked at don't worry we'll be implementing it in full you will get it. 
-</p>
-</div>
-
-<div id="outline-container-org16f9cac" class="outline-3">
-<h3 id="org16f9cac">Gitless</h3>
-<div class="outline-text-3" id="text-org16f9cac">
-<p>
-Now we are going to take all the above introductions to conceptual design and rewrite the git interface to make it intuitive to use. We have to learn git anyway so may as well write a CLI (command line interface) or you could make it ridiculous and call it 'visual git' or something with DAG graphics.  
-</p>
-
-<p>
-Many companies today use a customized Mercurial fork or rewritten clone instead of git like Meta's rust written EdenFS and <a href="https://github.com/facebook/sapling">Sapling SCM</a> because git was originally developed to take advantage of linux file system optimizations ergo is conceptually attatched to a file system while Mercurial can be easily adapted to be stuffed in a database, distributed or run on any OS. In a mercurial style of version control you probably don't care about individual commits so you don't even add comments to commits you instead care about entire branch development.     
-</p>
-
-<p>
-Let's learn what git actually is by watching MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i>. Lecture starts ~7m in. So far the data structure and model is trivial to understand if you did any intro course here such as <a href="./accelerated.html">CS19</a> where it's file system assignment was almost identical to this. 
-</p>
-
-<p>
-Proceed to <a href="https://gitless.com/#research">gitless.com</a> and navigate to research or <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> page on MIT's software design group. You will finds <a href="https://www.youtube.com/watch?v=31XZYMjg93o">this</a> talk about the problems with git design. The guy giving this talk was the PhD student of the prof we watched in the conceptual design lectures and now is a co-founder of <a href="https://www.getaleph.com/careers">Aleph</a> some fintech data startup (which is hiring, maybe you can impress him with your conceptual design skills). Watching this talk TODO
-</p>
-
-<p>
-.. cont
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org5deb94a" class="outline-2">
-<h2 id="org5deb94a">USACO guide</h2>
-<div class="outline-text-2" id="text-org5deb94a">
-<p>
-In competitive programming you submit source code as a solution to a problem and the online judge compiles and runs your code against (often 'secret') tests. There is a huge list of online judges available like Kattis, SPOJ, Timus, Aizu, and more <a href="https://usaco.guide/general/olympiads?lang=cpp">worldwide</a>. 
-</p>
-
-<p>
-First task is to choose one of these <a href="https://open.kattis.com/languages">languages</a>. We'll learn C++ for USACO so pick something else here that you want to use. List all the problems by <a href="https://open.kattis.com/problems?order=difficulty_data">easiest</a> and start with the very first one 'Velkomin!'. You get unlimited submissions to the Kattis judge. 
-</p>
-
-<p>
-The point of doing this is to learn algorithm design which really is 'system design' or 'platform engineering' or 'high throughput data pipelines' it's all the same there's some complex things that need to be optimized as much as possible. This is the bare minimum you need to step to some mentor somewhere and solve their problem like their trading data they use for training has some crazy garbage where data was included after trades ended that day but aren't accurately timestamped like there's a timestamp discrepancy in numerous feeds so you need a fast way to complete search and label over 100 terabytes of data discarding everything that should not be included in the training set. Now imagine 80+ of these data pipelines all dumping terabytes on you every minute so your algorithm needs to be as modular as possible so you can abstract it over any kind of noisy data and it needs to run automatically 24/7 as data comes firing in all hours globally. The faster you do this the more money everyone you work with (including you) makes because you are a race car programmer now and this data is the pit stop between trades where the first wins. 
-</p>
-
-<p>
-This is why we are learning this.   
-</p>
-</div>
-
-<div id="outline-container-org965c8c5" class="outline-3">
-<h3 id="org965c8c5">'Fast' languages</h3>
-<div class="outline-text-3" id="text-org965c8c5">
-<p>
-There is no such thing as an interpreted language there is only languages which don't have a good compiler. C++ is only as fast as there is memory allocations in the code so while you may have heard it's the 'fastest' it's not if you don't know what you're doing in fact most in the wild C++ code is junk that runs just as slow as whatever you can think of. We used to be taught static arrays were the best possible data structures but they rely on magic hardware adders which is useless for parallel computing which we are now doing for absolutely everything where I am anyway so the preferred structure is trees now. 
-</p>
-
-<p>
-Being fast means you have an intimate relationship with how your preferred language works collecting garbage or allocating memory and objects so we need to learn how this works and thankfully there is a guide for this called plai.org in other words choose the language you best like and never choose something someone claims is 'fast' because you can probably tune your preferred language to obliterate most C++. Common Lisp you can go right down to the compiler and generate assembly (same with Julia, SML, OCaml) so sky is the limit.     
-</p>
-</div>
-</div>
-
-<div id="outline-container-org0ed2524" class="outline-3">
-<h3 id="org0ed2524">Input/Output</h3>
-<div class="outline-text-3" id="text-org0ed2524">
-<p>
-Read the book or online documemtation of the language you chose or use the USACO <a href="https://usaco.guide/general/input-output">guide</a> first chapter to teach yourself how input/output works in C/C++/Java/Python. There's the USACO <a href="https://ide.usaco.guide/">online IDE</a> too if you want.
-</p>
-
-<p>
-The problem <a href="https://open.kattis.com/problems/qaly">qaly</a> is an example of how to take multiple lines of input. Many of these problems the first input will be how much more input to expect which you can then loop on:
-</p>
-
-<pre class="example">
-#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int tt;  
-    double sum = 0;  
-    cin &gt;&gt; tt;   // pipe first stdin to tt
-    while (tt--) {  // false when input empty 
-        double a, b;  // each loop declare these 2 new assignables
-        cin &gt;&gt; a &gt;&gt; b; // take 2 more inputs
-        sum = sum + (a * b);  // accumulator
-        }
-    cout &lt;&lt; sum;  // pipe sum to stdout
-}
-</pre>
-
-<p>
-Finish up to 1.4 Easy problems on Kattis or until you get how I/O works in your language.  
-</p>
-</div>
-
-<div id="outline-container-org4a25671" class="outline-4">
-<h4 id="org4a25671">Real competitive programming</h4>
-<div class="outline-text-4" id="text-org4a25671">
-<p>
-Here is Gennady Korotkevich aka tourist <a href="https://youtu.be/97tieEKfvBs">practicing</a> on codeforces and explaining what he's doing, though he didn't start with C++ he used to win the IOI with Pascal in high school then switched later for the ICPC. The first thing to notice is he's using a basic text editor and minimalist shell that looks like <a href="https://mingw.osdn.io/">MinGW</a> and a <a href="https://www.farmanager.com/screenshots.php?l=en">file manager</a> where he manually submits through the codeforces website UI. He prepares individual directories named after the problem, then always makes a sol.cpp file in that directory so he doesn't have to change a macro he's written to compile the solution from the shell.
-</p>
-
-<p>
-His C++ template:
-</p>
-<pre class="example">
-// include every C++ std library and bits library
-// doesn't work on all platforms
-#include &lt;bits/stdc++.h&gt;
-
-// use std namespace to avoid having to write std::cin or std::cout
-// in other words bringing into scope all C++ std libraries 
-using namespace std;
-
-int main() {
-// turn off default cout flush 
- ios::synch_with_stdio(false);
- cin.tie(0)
-</pre>
-
-<p>
-std::cin is synchronized to std::cout and performs default buffer flushing operations so to save some runtime he disables this sync. His compiler flags he explains in one of these recorded streams, or you can figure out yourself as you go, most of them are to make compiler messages extra verbose for debugging. Note you would never write software outside of competitive programming like this because he has opened a gigantic scope.  
-</p>
-
-<p>
-You don't have to watch the entire 2hr vid, the last problem seems like the most informative. He begins most problems by writing himself examples as comments. He copies the problem input test cases into a text file 'in1' then pipes it into his compiled program "sol.exe &lt; in1" from the shell as stdin (standard input). He writes multiple submissions to compare their runtime/memory usage. He looks for some kind of mathematical structure in the formulas given in the problem writeup. After submission he looks up the solutions and compares them to his own.    
-</p>
-
-<p>
-A time limit exceeded verdict shows how he would optimize to get accepted verdict also trolling the stream by making all the variable names to single letters claiming it will speed up the program. The judging server ran his program faster than his own laptop, something to remember if debugging and believing your solution still isn't optimized enough, resubmit anyway as you get unlimited submissions. 
-</p>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgc60d9a3" class="outline-2">
-<h2 id="orgc60d9a3">USACO bronze</h2>
-<div class="outline-text-2" id="text-orgc60d9a3">
-<p>
-We are now <a href="https://usaco.guide/bronze/">bronze level</a>. There's a set of videos for bronze free <a href="https://joincpi.org/video-classes">here</a>.  
-</p>
-
-<p>
-USACO online judge only accepts C/C++, Java or Python but you can also learn from the guide then practice on Kattis using <a href="https://cpbook.net/methodstosolve">Methods to Solve</a> or the translation of e-maxx <a href="https://cp-algorithms.com/index.html">here</a> then you can use any language you want from Haskell to APL. 
-</p>
-</div>
-
-<div id="outline-container-orgcf67922" class="outline-3">
-<h3 id="orgcf67922">C++ versions</h3>
-<div class="outline-text-3" id="text-orgcf67922">
-<p>
-C++ has versions C++98/03/11/14/17/20/23 these all represent years there was a new standard but that doesn't mean everyone implements the entire standard in their compiler. The current state of C++20/23 or 'modern' C++ is you can kind of do functional programming with it. Options, lambdas, higher-order functions, monads and more all now exist in the definition depending which compiler you use. Google has <a href="https://github.com/carbon-language/carbon-lang/blob/trunk/docs/project/difficulties_improving_cpp.md">rage quit</a> C++ and is writing their own replacement called <a href="https://github.com/carbon-language/carbon-lang">Carbon</a> and as a result clang/llvm has not even implemented the entire C++20 spec and probably never will which is why you should put efforts into free software compilers and not trust any company. If you want to use C++20/23 in some project you have to use GNU gcc or Microsoft msvc.  
-</p>
-
-<p>
-Competitive programming typically only accepts C++11/14/17, Python3 and Java and Kotlin unless you do exotic competitive programming like the ICFP. Most of our time in USACO will be creating static arrays and using the <a href="https://en.wikipedia.org/wiki/Standard_Template_Library">standard template library</a>. The STL to me seems like a big hack to make C++ a <a href="https://en.wikipedia.org/wiki/Generic_programming">generic programming</a> language a concept invented by ML in 1973. If you took the Standard ML course listed in the intro to this workshop then generic programming is simply polymorphism or 'a types. If you took the accelerated intro course then generic programming is the same as 'type variables' in other words a function who's type is determined by whatever parameters you give it:
-</p>
-
-<pre class="example">
-# a generic maximum function of any type T
-
-fun my-max&lt;T&gt;(a :: T, b :: T)-&gt; T:
-  if (a &gt; b):
-    a
-    # if not(a &gt; b) then a == b or a &lt; b   
-  else:
-    b
-  end
-where:
-  my-max(2, 3) is 3
-  # a is unicode 97, b is 98
-  my-max("a", "b") is "b"
-end
-</pre>
-</div>
-</div>
-
-<div id="outline-container-org325d26a" class="outline-3">
-<h3 id="org325d26a">Big-O explained</h3>
-<div class="outline-text-3" id="text-org325d26a">
-<p>
-The first resource we can use where 'running time' is actually explained is the beginning chapters of <a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/Tools_and_Techniques.html#%28part._.Order_notation_and_its_discontents%29">Functional Data Structures</a> by Prof Ragde at Waterloo try reading the first few chapters up to 2.2.
-</p>
-
-<p>
-The formal definition is:
-</p>
-
-<p>
-\(f(x) \le c\cdot g(x)\) for all inputs \(x \ge x_0\) as x goes to infinity. If that inequality holds then f(x) is in O(g(x)).
-</p>
-
-<p>
-Full explanation:
+Their optimal candidate: 
 </p>
 <ul class="org-ul">
-<li>x floating around by itself or f(x) = x or y = x represent the same thing.</li>
-<li>the big-O definition doesn't care if c = 1 or c = 1 trillion.</li>
-<li>if inputs 'go to infinity' traditionally you write n instead of x.</li>
-<li>x<sub>0</sub> means some specific input of x or threshold. 
+<li>has a very high standard of quality</li>
+<li>knows about the CPU execution pipeline/cache memory hierarchy</li>
+<li>knows their chosen language and can explain it's runtime</li>
+<li>knows the standard undergrad data structures and problem-solving strategies</li>
+<li>is at least familiar with writing multicore code or can learn</li>
+<li>knows what they don't know        
 <ul class="org-ul">
-<li>can be the first input or the trillionth input the big-O definition doesn't care.</li>
-<li>all inputs are positive as it would make no sense to model negative input.</li>
-</ul></li>
-<li>f(x) is a cost function.</li>
-<li>g(x) is chosen from a list of existing math functions, see below.</li>
-</ul>
-
-<p>
-Toy example: Suppose a program consists of 2 constant operations followed by a single loop with 10 constant operations in the loop body. In the RAM model this is f(x) = 10x + 2
-</p>
-
-<ul class="org-ul">
-<li>f(n) = 10n + 2
-<ul class="org-ul">
-<li>n because f(x) 'goes to infinity'</li>
-</ul></li>
-<li>10n + 2 &lt;= cn 
-<ul class="org-ul">
-<li>true if c = 11 for all inputs x &gt;= 2</li>
-<li>also true if c = 12, a thousand, a billion</li>
+<li>they catch the candidate bluffing during the interview and ask them to define on the spot any jargon used</li>
 </ul></li>
 </ul>
 
 <p>
-<b>f() function</b> is a cost function derived from a cost model. It's where you count up every constant operation and loop costs by analyzing source code. This is not always easy since what costs do you assign when the code triggers garbage collection or something triggers memory allocation because an object has been created deep in some library code or for functions that can consume other functions as inputs. 
+These places train everything else including whatever customized tooling/compilers or languages they use. 
+</p>
+</div>
+
+<div id="outline-container-org311ea60" class="outline-4">
+<h4 id="org311ea60">The work</h4>
+<div class="outline-text-4" id="text-org311ea60">
+<p>
+There are many reasons why you'd want to work for <a href="https://gist.github.com/chrisaycock/8b7a37b1f97549517cb7789be5b06266">trading firms</a> (besides the money) and most of them like Valkyrie will hire <a href="https://www.valkyrietrading.com/careers/junior-software-engineer/">juniors</a>. 
 </p>
 
 <p>
-<b>The g() function</b> is chosen from a list of math functions that represent a 'family of functions'. A family means all functions that are linear, all functions that are quadratic, all functions that are linearithmic etc. It actually is a specific list as we'll soon see. 
+Every day you are the race car engineer of software similar to how they will rebuild an engine and retune the car after each race to squeeze out more optimization that's what you do at many of the fun firms. There's also work in building high-performance math/AI models and fancy client dashboards or FPGAs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga8c459d" class="outline-4">
+<h4 id="orga8c459d">Recruiters</h4>
+<div class="outline-text-4" id="text-orga8c459d">
+<p>
+Jove Intl, <a href="https://oxfordknight.co.uk/jobs/">Oxford Knight</a>, Reload Search, and ex-employees who have quit to become recruiters. They hire internationally for Chicago, NYC, Austin, London, Sydney, Hong Kong, Mumbai, Shanghai, Tokyo, and now Singapore seems to be the location everyone is opening offices these days. LinkedIn is <a href="https://www.youtube.com/watch?v=2S3Hg191Eu0">trash</a> but works fine for harvesting recruiter offers.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d2fd5d" class="outline-4">
+<h4 id="org3d2fd5d">Selection</h4>
+<div class="outline-text-4" id="text-org3d2fd5d">
+<p>
+I got to try their fancy recruiter tools to see the minefield of bad candidates they have to filter. 
 </p>
 
 <p>
-Why are constants hidden in big-O? If you read SICP their example is 16 and 8 both differ by a factor of 2 and 8 but we don't care which factor. In real life however you will never have infinite inputs so the constant factors do actually matter if they are very large hiding a lot of operations. 
+They told me all resumes are reviewed manually there's no automated ATS or applicant tracking system. USACO training or competitive background in anything from sports to math stands out because everything in finance is hyper competitive and it shows you have some kind of drive and can teach yourself. Experience in 'modern C++' meaning C++20/23 stands out but any firm will train you so long as you already know at least one language well. You never advertise yourself as a junior, companies will hire anyone who knows how to sell themselves and can pass the competence filters.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc687f81" class="outline-4">
+<h4 id="orgc687f81">Campus recruiting</h4>
+<div class="outline-text-4" id="text-orgc687f81">
+<p>
+Getting more and more monopolized by big tech corps pressuring students with 2-week expiring offers (aka exploding offers) that are against campus hiring guidelines but they do it anyway. Think about how much money is spent on campus engagement to find (highly paid) interns and they have to hope the intern comes back after graduating and many don't. This should tell you how motivated they are to find junior candidates willing to stay to become senior staff so if they find you as a rough diamond in a sea of mediocre candidates it's an easy investment for them.   
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdef6453" class="outline-4">
+<h4 id="orgdef6453">Phone screens</h4>
+<div class="outline-text-4" id="text-orgdef6453">
+<p>
+I don't know if they still do this but one Chicago trading company was notorious for firing off 3 problems to solve on HackerRank immediately after applying online. Some I found also ask you to submit code for a problem they define on the careers page at the same time as your application. 
 </p>
 
 <p>
-O(g(x)) represents an upper bound for all functions in the family g(x). It doesn't represent growth since f(n) = n<sup>2</sup> does not grow to be quadratic, f() already is quadratic, thus f() is in \(O(n^{2})\) or upper bounded by every quadratic function. The function n is bounded by n, n<sup>2</sup> and n<sup>n</sup> that's why it's <i>an</i> upper bound not <i>the</i> upper bound as there's many upper bounds but you obviously want the closest fitting bound.
+The new fizzbuzz filter is to <a href="https://www.interviewbit.com/problems/atoi/">implement atoi</a> and tests how careless of a developer you are meaning you don't ask any questions about requirements and start writing code immediately. Here is a typical screening <a href="https://www.youtube.com/watch?v=V8DGdPkBBxg">interview</a> using Coderpad. There may be more than one of these because the amount of investment that goes into hiring someone new due to training aka onboarding which I've been told by recruiters is typically 3 months. Imagine you are hiring developers and paying them $160k/year or more what would you look for to ensure whoever you are paying ~$40k for 3 months of training turns out to be a good hire? 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcf7cce" class="outline-4">
+<h4 id="orgbcf7cce">On-site</h4>
+<div class="outline-text-4" id="text-orgbcf7cce">
+<p>
+If you pass the phone screens/remote interviews then you are paid to fly out and do a 'super day' or sometimes multiple days that's where you do back-to-back interviews and job shadowing. You are often interviewing for every job in the company not just the one you applied for as they will see where you best fit so if they start asking you about math or fermi style problems they may think you are better placed in trading or even in the research dept which is great news as the bonuses are much higher. 
 </p>
 
 <p>
-Big-O is in a hierarchy of asymptotics there's many more like little-o (strictly less than), big-Omega (strictly greater than), or big-Theta which describes a lower bound and an upper bound. For example an algorithm that searches a list is going to be at least a lower bound of O(n) because it has to look at everything once and upper bounded by O(n) so it is \(\theta(n)\). 
+During each interview you are given either a deceptively simple problem to solve that is a trap (see below) or an impossible problem to solve where you are repeatedly asked to justify all reasoning and then told why your reasoning is wrong. Don't worry everyone is told their reasoning is wrong you aren't failing the interview they are seeing how you react and if you pick up on their advice and change your thinking in future interviews. They may ask you how long you think it will take you to solve a problem and if you have a large confidence you can solve it they'll ask you how much would you bet that you can solve it if we gave you 100 poker chips. Never say you can solve it with 100% confidence and go all in with your bet. There will be someone eventually in these interviews who goes through your entire resume and tests you on everything there so if you write down that you know Java they will ask you to describe in detail how the language works. It's fine if you don't know but <i>say you don't know</i> don't start bluffing because it will go very bad when they insist you define everything on the spot. 
+</p>
+
+<p>
+The trap problems I've seen have an obvious area of micro optimization to take advantage of but will open a potential bug or performance sink elsewhere if you aren't taking your time thinking through the whole problem space and asking questions. The bad candidate will pounce on that and show off their meaningless optimization while the good candidate will ask what happens if I do X, is it a good tradeoff? Are there risks? An example they will try and get you with is <a href="https://yihui.org/en/2018/06/cache-invalidation/">cache invalidation</a> where the data you are caching is being updated from multiple sources of your application and you didn't think through the problem to consider this happening. Again, this is merely rushing through solutions and not taking your time it's better to be glacier slow and produce correct code than it is to confidently produce garbage with critical errors. 
+</p>
+
+<p>
+Where do you learn how to justify your decisions? <a href="https://oyc.yale.edu/economics/econ-159">Game Theory</a> which is a bag of analytical tools that teaches you about decision-making. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1b1685" class="outline-4">
+<h4 id="orga1b1685">Find a mentor</h4>
+<div class="outline-text-4" id="text-orga1b1685">
+<p>
+Once you are in and develop a routine, meaning you are no longer panicking, try and walk over to the department where all the money is being made and find a mentor to teach you by asking them to give you the work they don't like doing because you want to learn it all from scratch. All you have to do is be the reliable person they turn to whenever some (tedious at first) work needs to be done and if this work over time becomes increasingly more skilled then you have found the right mentor and you are set for life because they will eventually want you to work with them once you have proven to be indispensable. If they get promoted you get promoted, if they go off and start a new company you are the first hire. This can be tricky because of signing multiple NDAs even between internal departments but if you are serious about wanting to learn they will tell management to make it happen. I took all the above advice from a <a href="https://www.youtube.com/watch?v=tOdTSqvQKF0">comedian</a> many years ago and my life would not be the same if I hadn't watched that throwaway clip at 3 in the morning because I always assumed there was no way I could ever do this kind of work.
+</p>
+
+<p>
+If you're not interested in finance many other companies mentor developers sometimes even <a href="https://simonsarris.com/p/growing-software-developers">direct</a> from local high schools and build them to senior developers. One is in New Hampshire called <a href="https://nwoods.com/careers.html">Northwoods Software</a>. If you live in Egypt, Georgia, North Macedonia, Albania, Latvia, or Bosnia you can work remotely for <a href="https://scandiweb.com/dev-tech-departement">Scandiweb</a> (Latvia). The pay is only 500-600 Euros per month but you don't know anything yet so are being paid for direct mentorship to become a senior developer. 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org95f3324" class="outline-2">
+<h2 id="org95f3324">Curriculum</h2>
+<div class="outline-text-2" id="text-org95f3324">
+</div>
+<div id="outline-container-org9112463" class="outline-3">
+<h3 id="org9112463">Designing Software</h3>
+<div class="outline-text-3" id="text-org9112463">
+<ul class="org-ul">
+<li>MIT <a href="https://61040-fa23.github.io/">6.1040 Software Design</a></li>
+</ul>
+
+<p>
+We audit this briefly to see how to design software people enjoy using and why certain software is successful and others failed. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2598854" class="outline-3">
+<h3 id="org2598854">Optimized Local Software</h3>
+<div class="outline-text-3" id="text-org2598854">
+<ul class="org-ul">
+<li>CMU <a href="https://15445.courses.cs.cmu.edu/fall2024/">15-445</a> <i>Database Systems</i></li>
+</ul>
+
+<p>
+This course teaches how to design and build a highly optimized state management system or in other words how to write any multicore server/desktop application, a website, a trading dashboard, etc. Every application is basically a thin layer around a database system. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa00b56" class="outline-3">
+<h3 id="orgaa00b56">Optimized Distributed Software</h3>
+<div class="outline-text-3" id="text-orgaa00b56">
+<ul class="org-ul">
+<li><a href="https://15721.courses.cs.cmu.edu/spring2024/">CMU 15-721</a> <i>Advanced Database Systems</i></li>
+</ul>
+
+<p>
+How to build modern distributed applications. We learn analytical databases and their internals from how s3 Amazon buckets work, how low-latency networking works, search space complexity reduction and designing microservices. We will learn about <a href="https://github.com/dendibakh/perf-ninja?tab=readme-ov-file">performance engineering</a> too.
+</p>
+
+<p>
+We have an opportunity to finish this course by studying some <a href="https://15799.courses.cs.cmu.edu/spring2025/">Query Optimization</a> one of the hardest software problems how do you take what someone wants and produce the most efficient representation of it through transforming the problem and parallelization. We also learn real world cost models. 
+</p>
+</div>
+
+<div id="outline-container-org9af3bdc" class="outline-4">
+<h4 id="org9af3bdc">Modern Architecture</h4>
+<div class="outline-text-4" id="text-org9af3bdc">
+<ul class="org-ul">
+<li>ETH Zurich <a href="https://safari.ethz.ch/digitaltechnik/spring2023/doku.php?id=start">DDCA</a> <i>Digital Design &amp; Computer Architecture</i></li>
+</ul>
+
+<p>
+Unusual hardware architecture course with YouTube lectures covering all the current security problems in CPU cores, DDRx and flash memory storage. You can learn how to program FPGAs if you choose to do any of the assignments but I will only audit some certain lectures on the memory hierarchy. Everything in this course directly relates to the advanced dbms course because there they try by any means to do computation where the data is stored and here they show how modern architecture is being produced with memory chip CPUs.     
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc8d01c0" class="outline-3">
+<h3 id="orgc8d01c0">Algorithmic Problem Solving</h3>
+<div class="outline-text-3" id="text-orgc8d01c0">
+<ul class="org-ul">
+<li>The <a href="https://usaco.guide/">USACO guide</a> &amp; <a href="https://www.codingame.com/start/">CodingGame</a></li>
+</ul>
+
+<p>
+USACO training is excellent and it's completely free. This is where we learn how to solve seemingly impossible tasks. 
+</p>
+</div>
+
+<div id="outline-container-orgf7ac9c8" class="outline-4">
+<h4 id="orgf7ac9c8">Quant Research 'assistant'</h4>
+<div class="outline-text-4" id="text-orgf7ac9c8">
+<p>
+You can move internally into QR and since you can program you're already 50% qualified so to be a useful trainee all you need is competency in basic data analysis which we will learn on a seperate site <a href="./qr.html">here</a>. 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8957ebc" class="outline-2">
+<h2 id="org8957ebc">Congrats you are now a developer</h2>
+<div class="outline-text-2" id="text-org8957ebc">
+<p>
+Let me tell you the days of <a href="https://www.youtube.com/watch?v=LANHWwEjOAU&amp;list=PL4CA33FD3350985EC&amp;index=1">high adventure</a> begin now. Your first task is to sign into either Creddle.io or Google Docs and select a resume template. You want the simplest template and if it has colors change them to black. You don't want a summary or anything. 
+</p>
+
+<p>
+You are now software developer who specializes in high performance applications. Do not call yourself 'junior' or 'intermediate' or anything just 'software developer'. Give yourself 1-2 years of freelance experience because you probably do have that experience if you did any introductory CS courses or hacked together some software on your own.
+</p>
+
+<p>
+If there is a skill you wish you had and are in the process of gaining then write that here.
+</p>
+
+<p>
+In the education section write 'USACO Guide Competitive Programming' and write that you help complete the USACO guide and mentor other students because you will as we'll be taking it and there's a forum where you can mentor or submit solutions for the guide in other languages. Don't lie about having a degree this is easy to check. You don't have to list your GitHub on your resume as there's no guarantee you didn't just copy everything there or generate it with ChatGPT but some places still will look at it. 
+</p>
+
+<p>
+You are now the perfect candidate, you can teach yourself, you won't demand an enormous salary to start and you have a competitive spirit from USACO. You will eventually get the enormous salary and bonuses and at that point you no longer need to interview as everyone will know who you are and can hop to a different company if you want. Only unknowns and high risk hires need to be heavily interviewed everyone else is vouched in finance.  
+</p>
+
+<p>
+Contact the above recruiters or <a href="https://dandkim.com/the-better-way-to-get-an-interview/">read this</a> how he targeted companies he wanted to work at and fished for referrals. Some places offer a bonus to employees if their referral is hired though where I am bills whoever handed out the referral the total cost of interviewing if the referral fails so don't be discouraged if they tell you nope can't do it. Here is <a href="https://dandkim.com/category/interview-stories/">walkthru</a> of what you should expect if applying to giant tech companies.
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org470a93d" class="outline-3">
-<h3 id="org470a93d">Time complexity</h3>
-<div class="outline-text-3" id="text-org470a93d">
+<div id="outline-container-org3289fc7" class="outline-2">
+<h2 id="org3289fc7">Software Design</h2>
+<div class="outline-text-2" id="text-org3289fc7">
 <p>
-Skim through <a href="https://usaco.guide/bronze/time-comp">time complexity</a>. Sign up to <a href="https://joincpi.org/video-classes">here</a> where all the <a href="https://www.youtube.com/watch?v=lDEriEvhS48">videos</a> are. Watching the video he explains the 4 suggested resources:
+MIT has a course <a href="https://61040-fa23.github.io/">6.1040 Software Design</a> and the professor of that course wrote a <a href="https://essenceofsoftware.com/">book</a> <i>The Essence of Software</i>. This is a way to design software on a piece of paper so that when it comes time to code the app it essentially writes itself. We will also learn why some software became successful.  
 </p>
 
 <p>
-First is 'IUSACO' 3-Algorithm Analysis <a href="https://darrenyao.com/usacobook/cpp.pdf#page=12">here</a>. It's only chapter 3 and 4 pages long. Explained in the video.
+See this <a href="https://www.youtube.com/watch?v=WgOhtH3lugk&amp;list=PLY_nsiUEgM3nbxcO3_ONmKL-ZRhLKpfGV">video</a> where the professor of this course further explains what a concept is and how you would use a bunch of state machines to get an LLM to develop an entire web app. State in a concept means 'what it has to remember'.
 </p>
 
 <p>
-Next is 'CPH' 2-Time Complexity <a href="https://usaco.guide/CPH.pdf#page=27">here</a> from the competitive programming handbook. This is already known to us from the intro courses so let's look at 2.4 <i>Maximum subarray sum</i>. If it doesn't make sense it means which sequence or combination of neighboring elements produces the greatest sum. Try to solve this yourself before reading their solution. Remember you can prep something with multiple linear consecutive runs since O(n + n) is O(2n) which is of course O(n) and in this problem try removing the negative first and last array element since why would you keep them. The solution they give is <a href="https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/">Kadane's Algorithm</a>.
+Audit through these slides first then see the <a href="https://essenceofsoftware.com/tutorials/">tutorials</a> and case studies on his book website when you are planning on building something from scratch:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L3.pdf">Diverge/Converge</a> brainstorm ideas for what you want to make then turn those ideas into concepts and work out the interface they will each need. In the tutorial for <a href="https://essenceofsoftware.com/tutorials/design-general/divergent-tactics/">divergent design</a> on the prof's personal site he used Chat-GPT to suggest additional features.</li>
+<li><a href="https://61040-fa23.github.io/recitations/recitation-2">Wireframing</a> recitation. If you go on Upwork or other freelancing sites you will see many jobs looking for someone to take a figma design and turn it into a working app. We can use a piece of paper to wireframe or hire someone to use Figma after giving the conceptual design plans.</li>
+<li>(Optional) Watch the lectures on concepts see <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>, skip the 'message of the day', and scroll to the very bottom of the materials list where there are 6 lecture videos.</li>
+<li>More <a href="https://61040-fa23.github.io/assets/lecture-notes/L4.pdf">Concepts</a> and at the end of these slides you have a complete draft of an application that is now trivial to code into a minimum viable product (MVP).</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L5.pdf">Design moves</a> how to unify or loosen concepts with many examples here like Zoom's screwy interface or Gmail labels.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L6.pdf">API design</a> what a RESTful API is.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L7.pdf">Data design</a> there are also recorded lectures <a href="https://stellar.mit.edu/S/course/6/fa18/6.170/materials.html">here</a>. NoSQL is introduced which you never want to use if not writing a temporary prototype as doing updates and inserts as JSON is a convoluted mess.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L10.pdf">Make things learnable</a> anyone should be able to figure out your software without overly relying on documentation.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L11.pdf">Good UIX design</a> basics.</li>
+<li><a href="https://61040-fa23.github.io/assets/lecture-notes/L13.pdf">Design innovation</a> what was novel about Zoom? Why did everyone use it instead of FaceTime, Meet, Microsoft Teams etc?</li>
+</ul>
+
+<p>
+It's worth reviewing the slides on ethical software where they show an example of someone who made a traffic routing map that ended up sending an army of jackasses speeding through some small residential neighborhood. 
 </p>
 
 <p>
-Next is 'PAPS' 5-Time Complexity <a href="https://usaco.guide/PAPS.pdf#page=99">here</a> and the wall clock (using time() in the shell) is again mentioned but we'll learn you can't rely on wall clock time. Insertion sort we already did in the intro to CS courses where we learned for small data insert can be a constant operation. Page 91 he substituted t<sub>i</sub> for i and since this is a sum where the counter starts at 0, it's going to sum 0 + 1 + 2&#x2026; up to n - 1 times and we already know a sum from 1 to n closed form is (n + 1)n/2 or here (n - 1)n/2 but we can see the dominating power is going to be n<sup>2</sup> and this is followed by an example how n<sup>2</sup> is both an upper bound of n<sup>2</sup> and n. The proof of the bound first he noted that if you multiply N &gt;= 1 you get N<sup>2</sup> &gt;= N and this fact is used in the inequality something we will see in depth later.
+Here's the quick rundown:
+</p>
+<ul class="org-ul">
+<li>Open the <a href="https://essenceofsoftware.com/tutorials/">tutorials</a> (book site) for reference
+<ul class="org-ul">
+<li>Look at the case studies as you go</li>
+</ul></li>
+<li>Brainstorm ideas of things you want to make
+<ul class="org-ul">
+<li>Use Chat-GPTx to come up with features you didn't think of</li>
+</ul></li>
+<li>Converge these ideas into reusable concepts</li>
+<li>Split concepts like in his examples where an expiring resource is a familiar concept and can be reused</li>
+<li>Figure out what each concept needs to remember when it's used and what it consumes
+<ul class="org-ul">
+<li>List of Actions (state)</li>
+</ul></li>
+<li>Audit your concepts and see if there is an unwanted sync between them (loosen) or more needed sync (tighten).</li>
+<li>Write out a dependency diagram by going back to the slides and looking at what they did. Go by the criteria: A uses B only if A is simpler because it uses B and B is simpler because it doesn't need A. There is no useful subset containing A but not B. That means a legit dependency where A depends on B.</li>
+<li>Transform to a database schema as he did with concept-driven data models</li>
+<li>Implement the concept in software here is a <a href="https://61040-fa23.github.io/pages/concept-implementations.html">TypeScript</a> example</li>
+</ul>
+
+<p>
+You just learned professional software design and construction! Nobody else teaches this, anywhere, except on the job.   
+</p>
+
+
+<p>
+Imagine if you were a wandering software salesman who could meet clients and then right in front of them use the above methods on a piece of paper to sketch an early design of the MVP features for the software they want. Once I learned his modeling method I started bringing it to team meetings and they thought I was some kind of genius. 
+</p>
+</div>
+
+<div id="outline-container-org49826c7" class="outline-3">
+<h3 id="org49826c7">Version control</h3>
+<div class="outline-text-3" id="text-org49826c7">
+<p>
+The prof of the MIT design course with a grad student created <a href="https://gitless.com/#research">gitless.com</a> see <a href="http://sdg.csail.mit.edu/projects/conceptual/">this</a> research page. Read how they audited the conceptual design of Git and found things like staging were confusing. If you still want git resources then try MIT's <a href="https://missing.csail.mit.edu/2020/version-control/">version control</a> lecture from it's <a href="https://missing.csail.mit.edu/">course</a> <i>The Missing Semester of Your CS Education</i> or read 'Git for Hackers.
 </p>
 
 <p>
-The <a href="https://www.youtube.com/watch?v=zUUkiEllHG0">video</a> they suggest goes through how to find function f(x) by analyzing the source. @11:03 remember you multiply everything in the body of a loop by the amount of times you loop. Without doing any of the analysis I can immediately tell this is n * c * n<sup>3</sup> or n<sup>4</sup> 
+Many companies today use a customized Mercurial fork/clone instead of git like Meta's rust written EdenFS and <a href="https://github.com/facebook/sapling">Sapling SCM</a> because git was originally developed to take advantage of linux file system optimizations ergo is conceptually attached to only that file system. Here is the simple guide to using Mercurial as a <a href="https://www.mercurial-scm.org/guide#lone_developer">lone developer</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3e79ff5" class="outline-3">
-<h3 id="org3e79ff5">Asymptotics</h3>
-<div class="outline-text-3" id="text-org3e79ff5">
+<div id="outline-container-org081946a" class="outline-3">
+<h3 id="org081946a">OSS contributing</h3>
+<div class="outline-text-3" id="text-org081946a">
 <p>
-A good resource is <a href="https://www.youtube.com/watch?v=_gKb855_3bk&amp;list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX&amp;index=5">this video</a> from CMU's <i>CS Theory Toolkit</i> course which I will watch now. Now we know epsilon \(O(\epsilon)\) or delta \(O(\delta)\) means inputs are going to zero. @7:23 a multiplicative error is defined <a href="https://math.stackexchange.com/questions/2994057/whats-the-meaning-of-multiplicative-errors-and-additive-errors">here</a> notice if you log the multiplicative error then by log laws it becomes an additive error. Logarithms you should think as a way to linearize an exponent you have something complex like 10<sup>n</sup> and when you take it's log<sub>10</sub> it's just n and much easier to work with. It can also represent the amount of zeros in a number if you took the accelerated CS course noted in the intro to this workshop. If some function is logarithmic in costs on your web site and you get 1m new traffic hits then you are only paying 6x extra costs. This lecture notes the difference in notation between log (base 10) lg (base 2) and ln (base e) though often in algorithm and compsci texts they just use log with the implicit understanding it's supposed to be base 2. 
+If you want to make a <a href="https://dandkim.com/dandytoon-merge-conflicts-1/">Pull Request</a> or PR to an open source project hosted on Github <a href="https://github.com/asmeurer/git-workflow">this</a> workflow explains how it's properly done. 
 </p>
 
 <p>
-@13m poly means polynomial or anything that is g(x)<sup>c</sup> or \(g(x)^{O(1)}\) some kind of exponent that is a constant. @18m epsilon is tiny, so epsilon<sup>2</sup> is going to be even smaller that's why it's bounded \(\widetilde{O}(\epsilon)\) and of course 'O twiddle' hides logarithmic factors. 
+The unwritten rules for this are don't play code golf meaning messing with whitespaces or someone else's code for no other reason than to make it shorter or to change it to your preferred style. The existing code is likely written that way for a good reason. Code golfing is hated by project maintainers. 
 </p>
 
 <p>
-TODO we are doing graduate courses on cruise control and nobody can stop us. 
+The PR diff should be as small as possible or they won't review it so break something large into smaller PRs where each is self contained and adds benefit they can clearly see. PRs are just like sales nobody will accept them unless you are selling a major 'win' and good reason to change the codebase. If you fix a bug include a regression test with it by finding where all the tests are kept (read the contrib docs). Properly benchmark whatever you change too to make sure you haven't screwed over the project reducing performance they will probably have instructions how to do this.  
+</p>
+
+<p>
+The GNU/FOSS way uses <a href="https://savannah.gnu.org/">Savannah</a> as a github GUI replacement for example here is a <a href="https://savannah.gnu.org/patch/?10210">patch</a> but all the work is done in plain text using a traditional mailing list style of attaching files and people vote/review it.  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org240611d" class="outline-2">
+<h2 id="org240611d">Freelancing locally</h2>
+<div class="outline-text-2" id="text-org240611d">
+<p>
+You can become your own palantir if you take the advanced dbms CMU course below and become the local business intelligence and efficiency developer and going around to ETL data out of old company systems and set up analytics for them that is all centralized into a dashboard. There is huge demand for this. 
+</p>
+
+<p>
+You could also start out as the local Zapier style developer and stitch together software people are already using and prefer like Quickbooks for accounting, Zoho/Salesforce for CRM, or iCal/Google calendar for bookings. You now sew that all together into a custom product for them plus you are a local they can actually talk to and meet. If they like your work they will tell every other business owner they know. 
+</p>
+
+<p>
+An example is a centralized desktop that combines all 3rd party online ordering systems for a restaurant. If you walk into one today you will see multiple tablets/laptops all provided by different delivery companies and it looks ridiculous when the employees try and manage them. These gigwork outfits all have an API you can create a single dashboard and eliminate that row of tablets by the cash register they have to juggle. As the local Zapier/software glue freelancer you can also make sure all this order data gets sent to their CRM or accounting software too. 
+</p>
+</div>
+
+<div id="outline-container-org2723c81" class="outline-3">
+<h3 id="org2723c81">What to charge</h3>
+<div class="outline-text-3" id="text-org2723c81">
+<p>
+There's a <a href="https://www.contractrates.fyi/">contractrates.fyi</a> site to view project/hourly rates for freelancers though charge whatever you want at first then keep upping your daily rate, never charge hourly if it's possible. If you have too much work then your rate isn't high enough.
+</p>
+
+<p>
+A common method of billing is for deliverables on a set schedule. You never want to just take off and spend months building software. Always come up with some kind of regular scheme where you are billing in parts so take the entire project and slice it into weekly deliverables where you get paid. If you're a web developer then adding authentication is a deliverable, adding a working catalog is a deliverable, etc. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb62eead" class="outline-3">
+<h3 id="orgb62eead">Research</h3>
+<div class="outline-text-3" id="text-orgb62eead">
+<p>
+Here's what I found out by walking into places and just talking to people. Every one of them had a problem with existing software they wanted to modify and they had <i>never</i> met anyone locally who who wasn't some SaaS sales guy pushing an existing product. All of them wanted a software mercenary which unfortunately I'm not but thinking I probably should be after seeing how easy it was. 
+</p>
+</div>
+
+<div id="outline-container-org50f2d3d" class="outline-4">
+<h4 id="org50f2d3d">Salons</h4>
+<div class="outline-text-4" id="text-org50f2d3d">
+<p>
+An <a href="http://www.nailproject.com/">example</a> using a nail salon. At the time of this writing their website uses a 3rd party hosted form for appointments that means they will have to phone or text/email to correct any overbookings. This can all be automated easily to show blocks of time that are previously reserved and sync some iCal protocol. Every one of these modern salon businesses rents out chairs to independent freelancers so they needed a fast way to add/remove new names to the booking calendar as these freelancers move around cities. Deposits for appointment bookings they wanted too but nobody offers this unless paying a high monthly cost for SaaS. They wanted to offer a gift scheme where someone can pay for a service and give it away but needed a way to know if these credits were legit if they started selling dozens of them, another software problem. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf4eb9da" class="outline-4">
+<h4 id="orgf4eb9da">Restaurants/Bars</h4>
+<div class="outline-text-4" id="text-orgf4eb9da">
+<p>
+Restaurants I found use at least 3-4 different software vendors. They all prefer handwritten order tickets because any consumer electronic touch screen is too junky and slow. The wait staff manually use a restaurant management system after taking orders. These are not consumer grade they have high-volume grade hardware and are impressively optimized there is never any lag using the UI. This kind of software would be impossible to compete with as tax authorities have to certify them to avoid classic service industry sales tax fraud where the restaurant generates a smaller internal bill but presents the customer with the real bill containing much more sales tax and pocketing the difference. These systems all have open APIs that can be interfaced with. 
+</p>
+
+<p>
+The second software they used was 3rd party table reservations which we can compete with. They absolutely hated every option because of ripoff fees like 10-20% 'service charge' being added on which customers mistakenly thought was the tip but it was the scam fee for the online booking service. Prepaid reservations reduced no shows and only 1 online service they knew of offered it but charged way too much. Yet another easy Stripe integration or whatever payment gateway they wish to use.  
+</p>
+
+<p>
+The remaining software was online orders/main website which usually was just a instagram page with a link to Uber or a similar gig service for delivery or pickup. As noted before the #1 request was to centralize all these 3rd party order sites into a single dashboard. Another request was some kind of dashboard for reputation management and a way to capture and control reviews meaning if you had a bad review you get directed to management to correct and if it was a good review you are redirected to google reviews or elsewhere. There are schemes for capturing these reviews such as emailing them a yes/no question about the experience and if they click yes redirect to a public review site and if no then redirect to contact the restaurant manager. I'm sure there's better techniques.
+</p>
+
+<p>
+I was asked how to automate ticket sales for special events, adding merch sales, automate volumes on TVs showing sports games so the commercials were muted and a music playlist started automatically, lighting automation, asking me if customized POS is available (Stripe Terminal) to capture signatures so they don't have to dig them out for disputes months later and many other problems this was a gold mine of potential freelance work I didn't expect.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2aa2028" class="outline-4">
+<h4 id="org2aa2028">Tailors</h4>
+<div class="outline-text-4" id="text-org2aa2028">
+<p>
+If you look at Huntsman suit tailors on Savile Row they have an interesting website where you can click <i>Made to Order</i> and customize almost everything. This feature was easy to write and I used an AI image generator to make the drawings of the clothing styles. I approached some tailors locally and they said this is exactly what they wanted plus some kind of zoom/facetime scheme for remote consultations. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge5e362f" class="outline-3">
+<h3 id="orge5e362f">Design examples</h3>
+<div class="outline-text-3" id="text-orge5e362f">
+<p>
+Let's look at a web design award site. Here are some <a href="https://www.awwwards.com/websites/nominees/">nominees</a> we can mercilessly review using the conceptual design skills we just learned. They have examples of best design in shopping carts, booking pages, everything if you look around.  
+</p>
+
+<p>
+You can use DevTools in FireFox/Chrome to see responsive mode (a phone/tablet screen). All sites seem to have a properly working phone screen css and totally broken desktop/laptop css.
+</p>
+
+<ul class="org-ul">
+<li>First nominee is <a href="https://by-kin.com/">https://by-kin.com/</a> (reviewed Apr 2025)</li>
+</ul>
+
+<p>
+The purpose of this site is a portfolio showcase for interior/exterior designers and the website itself was created by an agency so I'm reviewing the (April 2025) website not the business. 
+</p>
+
+<p>
+Intros are cancer but this one is short at least. You can click to dynamically change the layout (desktop view only) so a concept with no purpose. The drawings of staff look like wojaks. The 'About' page doesn't use a scroll bar or scroll concept indicating there is more to see, we'll see other sites do. The reel is laggy/broken on desktop I got a white box that expanded to fill up my screen and only noticed it had content when I went back to it after. This reel should be on the landing page instead of the wojaks or simply their portfolio on the landing page. There is a useless FAQ for each designer with some answers not finished and it's not even a relevant FAQ as I'm sure nobody is asking them what essential podcast we should be listening to. These are world class designers, what essential design resources should we be reading/listening/watching alas.   
+</p>
+
+<p>
+Desktop view when you click on their portfolio of <a href="https://by-kin.com/work">work</a> you get an epilepsy triggering overly sensitive scroll that confusingly begins halfway through their portfolio and bombards you with changing images. Terrible concept. Responsive mode uses a totally different concept so 2 concepts, 1 purpose. Look at the description <a href="https://by-kin.com/work/flint-glass-works">here</a> at the time of this writing whoever wrote that doesn't speak English and there are no pictures of different types of glass so I guess nobody at the website agency could be bothered to do any quality standards. Google reviews have much better pics of the full space that include the glass talked about in the description and most people rave about the design of this space in the reviews but none of that is shown in the portfolio! 
+</p>
+
+<p>
+There's a journal with no recent updates which tells me they had a limited contract with this developer and now that it's over nobody knows how to update the journal. This is the curse of all bespoke software and why most businesses prefer to simply have an Instagram or Facebook page because then at least they can update it themselves. A good developer (that's you) would make this a permanent feature and easy for them to update. The LinkedIn link is broken and I don't think these guys even have a group LinkedIn they are a collaboration of different freelance designers, another mistake. The contact page should be some kind of form for directing the communication.
+</p>
+
+
+<ul class="org-ul">
+<li>Second nominee <a href="https://unium.jp/">https://unium.jp/</a></li>
+</ul>
+
+<p>
+The purpose of this site is a freelance web designer showcasing a portfolio.
+</p>
+
+<p>
+Another site where the desktop version is broken, here it is missing the color highlighting on the logo and text that the mobile version has. The scroll circle concept on mobile is broken it shows you've fully scrolled after the first page but there's multiple more scrolls left as you end up jumping to every other page. The menu is now a useless concept if you're just going to scroll through the whole site tree. Desktop view if you click on service the case study hijacks the pointer with this gigantic floating box preview which is awful. The contact page is amusing: 'Contact us for crime prevention service' wait, what? I can summon Batman? No mention of cyber security in the service section. There's terms and conditions you have to agree to before submitting the contact form which is strange but maybe law in Japan. Their website design work in the portfolio is pretty good I would have made that the focus of the site and eliminated all the eye searing infinity scrolling animations and pointer hijacking garbage.
+</p>
+
+<p>
+They are recruiting so if you're in Japan do a complete conceptual design analysis of this site and offer to fix it if they hire you. 
+</p>
+
+<ul class="org-ul">
+<li>Third nominee <a href="https://monolith.nyc/">https://monolith.nyc/</a></li>
+</ul>
+
+<p>
+The purpose of this site is a trade catalog for bulk orders by architects and designers and some agency built their website. 
+</p>
+
+<p>
+The desktop view is guilty of the worst internet crime which is a scroll that keeps repeating itself for infinity whereas the phone view is nicely done and we finally get a scroll bar, wow. I gave up reviewing the desktop version it's totally unusable and broken everywhere. The most critical part of the site 'About Monolith' is only accessible by scrolling the front page and is not in the menu despite the title 'Site links' so we have another menu concept at the top of the page with no purpose. 'Monolith Trade' oddly redirects to a 3rd party <a href="https://www.typeform.com/pricing/">form</a> that only asks for an email, not sure why it exists with the contact email beside it. If you want to capture emails for mailchimp style marketing you don't need this $50/month form.
+</p>
+
+<p>
+Almost every site reviewed so far their desktop versions have this awful trend of mirroring the pointer movements with a very slow animation making the site seem sluggish when it's not. Ditch that pointer shadow junk.  
+</p>
+</div>
+
+<div id="outline-container-orgfb3b09f" class="outline-4">
+<h4 id="orgfb3b09f">Review the Reviewers</h4>
+<div class="outline-text-4" id="text-orgfb3b09f">
+<p>
+Members of the award site can vote on and rate other sites. Let's review the reviewers to find someone who is actually honest as they seem to give every site too high a score in hopes when they post their own websites for nomination that they are returned the favor. The ratings for the Monolith site there is only one honest review with everyone else giving this a 8+/10 except for this <a href="https://vstefanova.com/">Bulgarian</a> developer. Looking at her site it's pretty good for one there's a real scroll bar and everything has a purpose as this is a mix of a personal and business site which I would never mix but whatever. She clearly lays out the development process in the <a href="https://vstefanova.com/faq">FAQ</a> which I would promote to the front page and is an actual FAQ unlike the other site we reviewed earlier. The desktop view is not broken, a first! 
+</p>
+
+<p>
+Another reviewer who isn't ass kissing every award entry is this <a href="https://arcr.ru/">Russian</a> guy. I am again shocked the desktop view actually works, and there's even a scroll bar! His site does only what it needs to do which is show off technical skill and present contacts to harvest leads. I looked at one of his clients some Russian medical supply <a href="https://medivide.io/">company</a> and there's a well designed concept for displaying those (annoying) chatbots that float at the bottom of every website these days. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb563426" class="outline-3">
+<h3 id="orgb563426">Design examples II</h3>
+<div class="outline-text-3" id="text-orgb563426">
+<p>
+Let's look at the <a href="https://www.cssdesignawards.com/">CSS Design Awards</a>.
+</p>
+
+<p>
+Warning! Some of these sites here like this bespoke <a href="https://www.christopherward.com/">watchmaker</a> are foolishly using <a href="https://medium.com/@ryanbadger/how-trustpilot-extorts-businesses-91ca4b6a6f62">TrustPilot</a> widgets when your policy should be to <i>ignore that site</i> completely. Let's imagine I run a review site. I add your service without you knowing then I can leave some bad reviews even though I've never used your service. I contact you and say 'hey there's some bad reviews here of your business'. You want to comment on these reviews to point out they are fake but to do so you have to agree to let me use all your logos and branding before you can comment. Now I have an official looking page with all your graphics on it licensed for free, forever. Thanks! 
+</p>
+
+<ul class="org-ul">
+<li>First nominee is <a href="https://www.bottega53.com/">https://www.bottega53.com/</a></li>
+</ul>
+
+<p>
+The purpose of this website is a portfolio for a photography biz and some agency created this website.
+</p>
+
+<p>
+The intro finally has a real purpose! It sets up the portfolio and displays that before anything else. The desktop view cookie and privacy box is non-intrusive and well designed instead of those awful ones that take up half the screen. The scroll concept on the mobile view is well done and the desktop view has a real scroll bar. When you click on a portfolio entry the concept they use to see more photos tells you the amount which was taught in the MIT course about adding information bits to the design. Everything here has a clear purpose. The contact form is actually useful. The animations are useful and not overused, you see one when activating the portfolio filter it rotates to open and then rotates back to closed. Finally a good website. The agency that designed this website is <a href="https://thefirstthelast.agency/">here</a>.
+</p>
+
+<p>
+These website award sites are filled with freelancers and agencies most of them front end designers. You know how to properly design software and can build it from scratch. They can make it come to life with css and animations. Why not contact some of these people and show them your software skill portfolio?
+</p>
+
+<p>
+If you need inexpensive or free hobby hosting then look at the deployments for <a href="https://neon.tech/docs/guides/integrations">Neon</a> which is a free tier serverless PostgreSQL dbms. If you need a domain then use <a href="https://porkbun.com/">Porkbun</a> it comes with a Let's Encrypt SSL cert. You can design desktop dashboards or phone apps too why restrict yourself to only web apps. Most commmand HQ style dashboards run in a browser locally and still need css design.
+</p>
+
+<p>
+Try fly.io and set traffic limits it will remain free to use as a hobby/resume/project site to advertise your skills. They are 'serverless' and the documentation is well done for Node, Elixir/Phoenix, Laravel and other web tech basically any docker image you give them they can host.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a3508d" class="outline-3">
+<h3 id="org2a3508d">Design examples III (Vape Store)</h3>
+<div class="outline-text-3" id="text-org2a3508d">
+<p>
+When I went to visit my parents over the holidays I found an interesting site that does <a href="https://vapemenow.ca/pages/local-delivery">vape delivery</a>. This is just a Shopify backend with a clever front end. Click on any of the <a href="https://vapemenow.ca/collections/allo-501">products</a> notice they have used some AI pic generator for the background but put their watermark on it so a competitor doesn't just wget the entire site assets. They created their own in-house rating <a href="https://vapemenow.ca/pages/star-system">scheme</a>, and clearly have delivery information on the first page. Notice there is a phone number too and they say they accept texts, always use a phone number! It means you can get hold of someone immediately and helps with the google reviews which if you look at them the top review says because the company kept in contact with the buyer nonstop until delivery with updates they were so happy they wrote a review. None of the replies to reviews are those fake templates companies always use someone is actually writing them. Whoever runs this knows what they are doing and has carefully audited every part of their business top to bottom.
+</p>
+
+<p>
+This is a service that anyone in any city can start or sell to a convenience store as they may have drivers that deliver vapes or offer pickup/shipping. It's out of control where I currently live there is shady guys loitering outside every bar selling punters vapes now in fact it's guaranteed if you go to a busy bar/concert/club there is a guy there with a backpack offering you disposable vapes and they even have mobile tap card processors. 
+</p>
+
+<p>
+For example on the street I currently live on there is probably 12 convenience stores all selling vapes and 3-4 vape exclusive stores. None of them have software, that's where you come in. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org12b3d2e" class="outline-3">
+<h3 id="org12b3d2e">Marketplace case study</h3>
+<div class="outline-text-3" id="text-org12b3d2e">
+<p>
+Let's see what's going on <a href="https://apps.shopify.com/">here</a> at the Shopify app marketplace. 
+</p>
+
+<p>
+Forms are a major problem as Shopify refuses to fix their own form offerings so you have to pay some 3rd party. There is a total shit show of inept offerings except for <a href="https://apps.shopify.com/form-builder-by-hulkapps">Hulk Form Builder</a> who is the most popular it seems. No surprise why they are popular they offer a premium onboarding and migration service to install the form by booking a phone call. Remember the ycombinator B2B advice of phoning your customers. 
+</p>
+
+<p>
+Looking at their website, they are owned by someone else. We found the final boss of the monopoly on shopify apps it's <a href="https://shopcircle.co/pages/sell-your-business">this company</a> which offers to buy your app. You could make a startup by finding an app/ability they don't have listed <a href="https://shopcircle.co/pages/apps">here</a> and monopolizing that niche to get them to buy it. They have some <a href="https://shopcircle.co/pages/affiliate-program">affiliate</a> program where developers can tout any app they own and make shill bux too.
+</p>
+
+<p>
+Let's review <a href="https://apps.shopify.com/progressify">this app</a> it's recent so we can judge how to start one of these. It's concept is to add a progress bar for free shipping/rewards a classic sales driving tactic. The description for this app uses way too much jargon like 'Get ready for BFCM' which isn't defined. Looking at the reviews of course the biggest problem once again is not offering to onboard/install. One review said this app causes a lot of debug spam and breaks some product pages and is a good reminder of effects your software can have that are unintended. A review from a store called <a href="https://fuffies.us/">Fuffies</a> is using it and laments the app is too slow to reflect changes though it seems the guy developing the app manually fixed the problem which again would have been solved by offering installation. Looking at the Fuffies shopping cart to see the progress bar in action I found an issue there should be some kind of threshold/rounding config available for example at the time of this writing if you buy 2 of her stuffed piggu you are $0.02 short from getting free shipping which is sure to induce rage for all customers.
+</p>
+
+<p>
+Maybe the progress bar concept for free shipping shouldn't be in currency but space available in the package instead. For her store she could have a picture of an empty box in the checkout then when a stuffed crab is added to the cart it's placed in the box showing extra room available. Buy more and the box is full with free shipping unlocked or something.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3795b75" class="outline-3">
+<h3 id="org3795b75">Marketplace strategy</h3>
+<div class="outline-text-3" id="text-org3795b75">
+<p>
+Let's say we want to sell an app using the shopify marketplace. 
+</p>
+
+<p>
+The easiest way to start would be to simply <a href="https://www.ycombinator.com/library/Iq-how-to-talk-to-users">talk</a> to every existing shopify store owner you can find and learn about their business to discover ways software can help them.  
+</p>
+
+<p>
+If whatever you decide to make has competitors look at their pricing schemes. You don't want to undercut their pricing you want to match their most expensive pricing but justify it through superior product and service. We are in the B2B software game it's not like selling shoes where you can just discount the price because these companies will pay premium if you offer a premium solution. 
+</p>
+
+<p>
+While you are looking at competitors write down their existing features and go through their reviews writing down what every wished for feature was. You don't implement all these features you do conceptual design which is to arrange all the similar features together and think of some concept that combines them into one. Write down everything they dislike too which is going to be 80% install glitches that require manual intervention and imprecise estimates for support replies. 
+</p>
+
+<p>
+Whatever you offer should be some kind of premium white glove service and the best solution is offer a booked phone call where you can fully integrate your app with their design because if you don't it will become a support problem anyway. If you are talking to the owner which you likely will then you have yet another opportunity to ask them about their business. You don't want to rush through the install panicking that's not how B2B works you build relationships which pay off over time. By talking to them directly while you onboard/install your app you are actually being paid to interview them and use the intel you gain to find new features and thus more paying customers.  
+</p>
+
+<p>
+If you grow then start hiring account managers but continue to talk to customers at regular intervals that's how you keep subscriptions and your product growing. Where I work there is a fleet of account executives and their sole job is to contact the buyers of our specialty software and maintain a relationship.
+</p>
+
+<p>
+For deciding what to make you can use the same conceptual design analysis we learned in the MIT course: take all the available apps and arrange them by concept seeing if any of them have overlapping purposes. There's one app you can combine together.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgc33822f" class="outline-3">
+<h3 id="orgc33822f">Startups</h3>
+<div class="outline-text-3" id="text-orgc33822f">
+<p>
+Here's Peter Thiel giving a very good <a href="https://www.youtube.com/watch?v=3Fx5Q8xGU8k">crash course</a> in startups to Stanford students. Start small and monopolize something small. Here's an old article of Sam Altman of Open AI (now a monopoly too) talking about how Y Combinator's success is due to it being (surprise) a <a href="https://www.inc.com/christine-lagorio/sam-altman-yc-monopoly.html">monopoly</a>. 
+</p>
+
+<p>
+As mentioned before as a founder all you do is <a href="https://www.ycombinator.com/library/Iq-how-to-talk-to-users">talk</a> to people in the market because you'll be able to spot opportunities where software is useful. You don't have an idea first, you have a network first of people you talk to and from there it grows into a startup once you decide what needs to be built and you go off to seek venture capital.     
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c42bd7" class="outline-3">
+<h3 id="org5c42bd7">Getting good at writing software</h3>
+<div class="outline-text-3" id="text-org5c42bd7">
+<p>
+Here is some recent <a href="https://news.ycombinator.com/item?id=42294889">advice</a> from <a href="http://invece.org/">antirez</a> a hacker from Sicily who created Redis (now an OSS disaster, see licenses below) on how you get good at building software: 
+</p>
+
+<ul class="org-ul">
+<li>1. Learn algorithms, buy some book and start reading.</li>
+<li>2. Learn theory of neural networks, use the Chollet book to develop some knowledge and intuition.</li>
+<li>3. Write many small "pet" programs implementing basic stuff: <b>implement a small database</b>, a small programming language interpreter, a small editor, a small neural network, &#x2026; Each time try to apply good design.</li>
+<li>4. Embrace simplicity in everything you write, don't make things more complex than needed.</li>
+<li>5. Read good quality code, especially read open source code which is at a degree of complexity that makes reading valuable. Don't read Kubernets&#x2026; or PostgreSQL perhaps. Learn more self-contained code bases.</li>
+<li>6. Participate to some OSS project.</li>
+<li>7. Start some side-project and put it on GitHub, where you are the main designer. Develop something that you need. A library, or a small utility, something that you really enojoy doing. Do it at a quality level that makes you happy. Never regret pushing code on GitHub if you feel that for the level you are right now it is appropriate.</li>
+<li>8. Don't give a fck about what other programmers think of your work, if you did it at the max level of what you can do. Anyway most programs on the Internet suck, including the ones of people feeling very competent.</li>
+</ul>
+
+<p>
+Here is from <a href="https://www.citadel.com/news-and-insights/ken-griffin-on-the-three-paths-for-software-engineers/">advice</a> from Citadel for developers on how to 'maximize their effectiveness': <i>Exceptional subject-matter expertise in a specific field like <b>database engineering</b> can give you a competitive edge in a crowded field.</i>
+</p>
+
+<p>
+If you want the so-called soft skills that developers should have simply read any of those meme books by Jocko Willink about extreme ownership. There is nothing worse than having a manager or coworker who blames everyone else. I had one that would never let you get a word in and talk over you coming up with a thousand excuses per second whenever some issue was raised. Everyone hated him.
+</p>
+
+<p>
+Another skill is the art of massaging your lead's stats by handing them a free commit now and then. In some big-tech outfits metrics are all important and passing them along a commit they can boost their metrics with will help at the end of year review. It won't be you put on the 'performance improvement plan'. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70e1d7b" class="outline-3">
+<h3 id="org70e1d7b">Licenses</h3>
+<div class="outline-text-3" id="text-org70e1d7b">
+<p>
+Antirez <a href="https://github.com/valkey-io/valkey/issues/544">sold</a> all rights to the Redis software years ago and that new company went private in 2024 taking control over all the libraries and clients to lease it to Microsoft or something. This pulled the rug out from all the contributors who went ballistic about it but the license permitted this to happen. 
+</p>
+
+<p>
+OpenBSD has a good breakdown of licenses <a href="https://www.openbsd.org/policy.html">here</a> where they promote the use of the ISC license which best suits <i>their project</i> for what they are trying to achieve.  
+</p>
+
+<p>
+Patent trolling is rife in software for example you will never see bid/ask displayed as a single column with the two converging in prices in the middle. These are always shown as seperate columns for a reason it's because some clown will sue you who owns a patent somehow for that design.
+</p>
+
+<p>
+Most open source projects have some kind of dual license like Rust with their MIT and Apache licenses that protects contributors to your project from you later turning around and suing them for patent infringement and also protects someone making a derived work and then trying to patent troll all your contributors/users.  
+</p>
+
+<p>
+The full list of licenses you can use for an open source project are <a href="https://opensource.org/licenses">here</a>. If you want to keep it open source forever and prevent any proprietary forks undermining your project then use the latest GNU license. An example of a proprietary fork is when Apple yoinked Packet Filter (PF) from OpenBSD and then wrapped their proprietary license around all future enhancements which locked out the original developers. 
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgd3472c3" class="outline-2">
+<h2 id="orgd3472c3">Modern Architecture</h2>
+<div class="outline-text-2" id="text-orgd3472c3">
+<p>
+You can take this at the same time as everything else here. There is a paradigm shift going on in all industry right now where everyone is building their own custom architecture.
+</p>
+
+<p>
+Today's hardware has serious problems outlined in this course <a href="https://www.youtube.com/playlist?list=PL5Q2soXY2Zi-LfDdGgWyLcTSqzm6a26wD">here</a>:
+</p>
+
+<p>
+<b>CPUs</b>
+</p>
+
+<ul class="org-ul">
+<li>Adding more CPU cores is useless as the primary bottleneck is memory/storage
+<ul class="org-ul">
+<li>The cores themselves are broken due to 'silent data corruption'</li>
+<li>Logic gates and interconnects are too small operating at too low voltages</li>
+<li>Nobody knows why this is happening (high temp? silicon defects??)</li>
+<li>Defensive programming against the hardware doing testing for data corruption is now a thing (FPGA you'll have to write)</li>
+</ul></li>
+</ul>
+
+<p>
+<b>DDRx memory</b>
+</p>
+
+<p>
+Rowhammer was originally a tactic to read/close DRAM memory repeatedly like you were pounding it with a hammer which triggered charge leakage to adjacent memory. Bits got flipped and you could break out of virtual memory pages. This problem has only become worse since it was discovered and now similar attacks can be done with WebGL, remote over a network, attacking a VM host and all it's guests, and the mitigations so far don't work.
+</p>
+
+<ul class="org-ul">
+<li>DRAM scaling can't continue due to rowhammer style attacks (memory read disturbances)</li>
+<li>The more recent a DRAM chip is made the less reliable against read disturbances
+<ul class="org-ul">
+<li>Periodic refresh has been lowered by mfgs to avoid performance overhead and enables these attacks even more</li>
+<li>First generation read disturbances could only affect adjacent n+1 or n-1 rows now can access many rows</li>
+</ul></li>
+<li>DDR5 mitigations enabled new DoS attacks, performance problems
+<ul class="org-ul">
+<li>The mitigations don't even work as they rely on observing high row activation count but now we have <i>low activation</i> attacks (rowpress)</li>
+</ul></li>
+<li>The latest read disturbance attacks are not even rowhammer in nature and affect different rows/cells with an unknown underlying error mechanism only physics can explain</li>
+<li>Memory controllers are not intelligent and need to be rewritten from scratch (that's you writing a FPGA)</li>
+<li>Network cards where DMA is exploited (as taught in 15-721) are open to remote rowhammer style attacks (another FPGA you may be writing)</li>
+</ul>
+
+<p>
+<b>Flash Memory</b>
+</p>
+
+<ul class="org-ul">
+<li>The charge leaks in flash memory too as they're also now so small everything interferes</li>
+<li>High retention errors even with &lt;1 year flash memory compared to SSDs/NAND flash years ago</li>
+<li>Flash memory controllers are intelligent and can remap data to prevent data degradation but very few controllers do this (yet another FPGA you'll have to write)</li>
+</ul>
+</div>
+
+<div id="outline-container-org3a57c24" class="outline-3">
+<h3 id="org3a57c24">Digital Design and Computer Architecture (DDCA)</h3>
+<div class="outline-text-3" id="text-org3a57c24">
+<p>
+There is an excellent ETH Zurich course <a href="https://safari.ethz.ch/digitaltechnik/spring2023/doku.php?id=start">here</a> that is fully open and doesn't require a physics background. It focuses on modern and future hardware, I guarantee you will like this course it's not like any other architecture courses I've seen. The lectures are live streamed with breaks included so aren't 2hrs long.  
+</p>
+
+<p>
+Casually watching the YouTube lectures you're interested in and reading some of papers is enough but there is also an opportunity to try some FPGA programming with the <a href="https://safari.ethz.ch/digitaltechnik/spring2023/doku.php?id=labs">labs</a>. Vivado software is used however you can also use <a href="https://github.com/janestreet/hardcaml">OCaml</a> to run the same simulations since Vivado is a ridiculously large download (60g!!). 
+</p>
+
+<p>
+I'm not going to go through this course since anyone can and you should take what you want. Everything you want to know about the cache or CPU execution pipeline is here in excellent detail. The <a href="https://www.youtube.com/playlist?list=PL5Q2soXY2Zi-LfDdGgWyLcTSqzm6a26wD">grad version</a> (called 'Computer Architecture') if you take it is amazing how he shows new designs/what is possible and builds memory controllers to help counter memory disturbance attacks.
+</p>
+
+<p>
+Check his YouTube playlists for the latest <a href="https://www.youtube.com/playlist?list=PL5Q2soXY2Zi9Eo29LMgKVcaydS7V1zZW3">version</a> of DDCA.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcdb7f6d" class="outline-2">
+<h2 id="orgcdb7f6d">Optimized Local Software (15-445 Relational DBMS)</h2>
+<div class="outline-text-2" id="text-orgcdb7f6d">
+<p>
+The point here is to learn how to build a server/desktop application from scratch thus whatever meme language you want to use is totally fine. <a href="https://github.com/Wukix/LambdaLite">Here</a> is a relational dbms in 250 lines of lisp.
+</p>
+
+<p>
+We will learn how to efficiently build recovery methods, logging, memory management, and the magic of lock free/no-conflict concurrency control. 
+</p>
+
+<p>
+Keep in mind a relational dbms is merely an impressively optimized system for handling state. It is very common in financial trading to store the entire state of some process for analysis later or even an entire day of trading so no matter what you're doing some kind of dbms or similar engineering to a dbms will be involved. 
+</p>
+</div>
+
+<div id="outline-container-org8ff761f" class="outline-3">
+<h3 id="org8ff761f">Lecture 00</h3>
+<div class="outline-text-3" id="text-org8ff761f">
+<p>
+Watching <a href="https://youtu.be/otE2WvX3XdQ?si=Jsl7LLJbQYNMWEy2">lecture</a> #00 from <a href="https://15445.courses.cs.cmu.edu/fall2024/schedule.html">15-445</a> @6:43 he says non-CMU students can complete all assignments using Gradescope and even hands out a code we can use if you're interested. There's a public discord channel too. The assignments are in <a href="https://15445.courses.cs.cmu.edu/fall2024/project0/">C++</a> and their C++23 bootcamp is pretty good. BusTub you have to read existing code and write features so it mimics what you'd do in open source development or a job. Majority of this lecture you can skip it's all logistics after the intro. 
+</p>
+
+<p>
+I won't be doing any assignments because I'm using this material to build my own customized dbms and I assume you are too or at least some major parts of it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org94c0d36" class="outline-3">
+<h3 id="org94c0d36">Lecture 1</h3>
+<div class="outline-text-3" id="text-org94c0d36">
+<p>
+TODO
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6541549" class="outline-2">
+<h2 id="org6541549">Optimized Distirbuted Software (15-721 Advanced DBMS)</h2>
+<div class="outline-text-2" id="text-org6541549">
+<p>
+You have undoubtedly heard of DOGE and maybe heard of Palantir which mainly survives off government contracts. For the software aspect what happens is a team shows up on-site and then has to write custom interfaces for all the archaic company or government systems to extract all the data needed for business intelligence. This is then transformed into an encoding format and loaded into some massive cloud storage in order to run various analytical queries and for machine learning. You will see this everywhere advertised as 'ETL pipelines' or extract-transform-load. 
+</p>
+
+<p>
+This course primary focus is query optimization an NP-Complete problem. For a given query, find a correct physical execution plan for that query with the lowest cost/resources. We will have to learn about limiting the complexity of the search space and using approximations to guess the real cost a very high demand skill.
+</p>
+
+<p>
+At the same time we learn distributed microarchitecture, SIMD, network protocol redesign, scheduling and even code generation or compiling queries. More very high demand skills.
+</p>
+</div>
+
+<div id="outline-container-org57ed8aa" class="outline-3">
+<h3 id="org57ed8aa">Lecture 0</h3>
+<div class="outline-text-3" id="text-org57ed8aa">
+<p>
+Watching <a href="https://youtu.be/NLycrsJ1jI8?si=6Pniuo6sSTgRpk8D">lecture</a> #00 from CMU's <a href="https://15721.courses.cs.cmu.edu/spring2024/schedule.html">15-721</a>.
+</p>
+
+<p>
+He lists the reasons why we should take this course and we are taking it for the second reason which is if we are good enough to write code for an online analytical system then we can write code for anything else that cares about performance. Most of the second half of the lecture is course specific logistics we don't care about. 
+</p>
+
+<p>
+If you look at the projects students had to build from scratch some part of a modern OLAP system like the scheduler, execution engine, I/O etc. 
+</p>
+</div>
+
+<div id="outline-container-orge91c2c9" class="outline-4">
+<h4 id="orge91c2c9">GlareDB</h4>
+<div class="outline-text-4" id="text-orge91c2c9">
+<p>
+Every year CMU does a database <a href="https://db.cs.cmu.edu/seminar2024/#db7">seminar</a> with the lectures uploaded to YouTube and there's a very good one by <a href="https://glaredb.com/">GlareDB</a> how they built a product using Datafusion as their execution engine then quickly found out after experiencing dependency management hell they needed to rewrite it all from scratch. The <a href="https://www.youtube.com/watch?v=Sor3KZpmbHg&amp;list=PLSE8ODhjZXjZc2AdXq_Lc1JS62R48UX2L&amp;index=9">video</a> is worth watching since this is what we're doing but of course on a much smaller scale. The work in progress code is <a href="https://github.com/GlareDB/glaredb">here</a> written in Rust, look at some of the crates for parsing sql for example as inspiration.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9dd3f70" class="outline-3">
+<h3 id="org9dd3f70">Lecture 1</h3>
+<div class="outline-text-3" id="text-org9dd3f70">
+<p>
+Watching <a href="https://youtu.be/5J-I8Mj8tss?si=5DLfnlswO6a98v2H">lecture</a> #01 from <a href="https://15721.courses.cs.cmu.edu/spring2024/schedule.html">15-721</a> explaining what a modern OLAP system is. 
+</p>
+
+<p>
+The first paper assigned is by Databricks where they shill for standardized, open data storage formats like Parquet which is taught in the next lecture I believe. All these terms like 'Lakehouse' are just marketing but means computation is done near the data. The second paper is written by Facebook developers and advocates that the architecture of OLAP systems should be open source modules working together instead of reinventing the wheel with every new database system as there's now dozens of startups causing fragmentation.  
+</p>
+
+<p>
+Materialized views are precomputed queries like sql aggregations (sum, max, avg) that have been cached so you don't have to run the query again. S3 is referring to <a href="https://aws.amazon.com/s3/">Amazon S3</a> or 'simple storage service' which is a giga cloud for storing immutable data in any format like CSV, JSON or Apache Parquet format. These are organized into different global regions or 'buckets' like the aws-cn bucket is the Chinese region s3 data pool. Salesforce has 100+ Petabytes on s3 that they do analytics on. 
+</p>
+
+<p>
+@30:58 the architecture overview breaks everything up into 6 parts and we will learn all 6 in this course with a focus on the query optimizer as he says it's the hardest to build. @53m POSIX API means your operating system API which are syscalls like reading/writing files to a virtual file system. <a href="https://pubs.opengroup.org/onlinepubs/9799919799/">POSIX</a> is supposed to be a standard to maintain compatibility between operating systems but I don't even think Linux is POSIX certified so you still have to do platform testing anyway. At the end he talks about how Yellowbrick did some fintech tricks to speed up fetching s3 data. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org646a955" class="outline-3">
+<h3 id="org646a955">Lecture 3</h3>
+<div class="outline-text-3" id="text-org646a955">
+<p>
+TODO
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org85dfe4f" class="outline-2">
+<h2 id="org85dfe4f">Algorithmic Problem Solving (USACO)</h2>
+<div class="outline-text-2" id="text-org85dfe4f">
+<p>
+This is an <a href="https://dandkim.com/tech-interview-vs-actual-job/">accurate</a> summary of what we'll be doing. 
+</p>
+
+<p>
+We are going to use <a href="https://www.codingame.com/training">CodinGame</a> (free, 25 languages). It's designed so you learn as you go and Coderpad is likely the interview software they'll ask you to use (Apple, Jane Street, Nasdaq, Shopify, Snowflake) and many interviewers at companies are lazy so they will reach into the bin of premade interview tasks which are designed by the same people who make CodinGame. 
+</p>
+
+<p>
+The <a href="https://usaco.guide/">USACO Guide</a> (free, any language) solution writeups to competition problems are a master class in algorithm analysis and the level of difficulty there is very similar to on-site interviews where they purposely give you something that seems impossible to solve just to see your logic process. A competitive programmer needs to know about strategies to solve problems so why not learn from the pros. 
+</p>
+</div>
+
+<div id="outline-container-orgb4ac12e" class="outline-3">
+<h3 id="orgb4ac12e">Languages</h3>
+<div class="outline-text-3" id="text-orgb4ac12e">
+<ul class="org-ul">
+<li>The plai.org workbook on <a href="https://www.plai.org/">languages</a></li>
+</ul>
+
+<p>
+Teaches the standard model of programming languages using a web-based <a href="https://github.com/LuKuangChen/stacker-2023">stacker</a> to see exactly how programs execute. If you look at the stack overflow yearly developer survey almost every language on that list is the same internally once you read this book. I will go through it <a href="./accelerated.html">here</a> but it's not a difficult read you should try it then you'll know how these language runtimes work.  
+</p>
+
+<p>
+CodinGame supports Haskell, OCaml, F#, Rust, Scala, JS/TypeScript, C#, Lua, Swift, Python, C/C++, Java, Clojure, Bash and some more. USACO problems you can use any language.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://tylerneylon.com/a/learn-lua/">Lua</a> is probably the simplest to get started since it's already used for game modding and everywhere else for wrangling configuration files.</li>
+<li>Python resources are everywhere like this CMU 15-112 <a href="https://www.kosbie.net/cmu/spring-20/15-112/schedule.html">schedule</a>. We also took Python in the accelerated intro to CS <a href="https://dcic-world.org/2024-09-03/booklet_programming-with-state.html">book</a> which explains it's <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/pmmwplck-python-full-monty/">weird scope</a>.</li>
+<li>OCaml you can learn <a href="https://cs3110.github.io/textbook/cover.html">here</a> or <a href="https://dev.realworldocaml.org/">here</a> with modified libraries.</li>
+<li>Haskell is introduced <a href="http://brendanfong.com/programmingcats.html">here</a> with category theory.</li>
+<li>To learn C there is <a href="https://inria.hal.science/hal-02383654">Modern C</a> and <a href="https://cs.uwaterloo.ca/~plragde/flaneries/IYMLC/">IYMLC</a>.</li>
+<li>To learn C++20/23 try the CMU <a href="https://github.com/cmu-db/15445-bootcamp">bootcamp</a> or NVIDIA <a href="https://github.com/federico-busato/Modern-CPP-Programming">slides</a>.</li>
+<li>To learn Rust try the Brown University <a href="https://rust-book.cs.brown.edu/">experimental Rust book</a>.</li>
+<li>TypeScript software engineering is taught by MIT <a href="https://web.mit.edu/6.102/www/sp24/">here</a>.     
+<ul class="org-ul">
+<li>Java versions <a href="https://web.mit.edu/6.031/www/sp20/">here</a>.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgb880387" class="outline-3">
+<h3 id="orgb880387">USACO problems</h3>
+<div class="outline-text-3" id="text-orgb880387">
+<p>
+Choose the <a href="https://www.cs.cmu.edu/afs/cs/Web/People/15451/index.html">latest</a> semester of CMU's 15-451 <i>Design and Analysis of Algorithms</i> and obtain their <a href="https://www.cs.cmu.edu/~15451-s25/notes.pdf">course notes</a> it's almost a complete book. We can use this along with the <a href="https://usaco.guide/">USACO Guide</a> to start solving problems which are IOI level. We can also try some of the ICPC problems as they do not contain anything you wouldn't find in undergrad such as CMU's course. For example a few of these problems are solved with binary heap structures and range queries.   
+</p>
+
+<p>
+TODO
 </p>
 
 <hr />

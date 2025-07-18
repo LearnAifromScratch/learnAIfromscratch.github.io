@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-16 Sun 13:26 -->
+<!-- 2025-07-17 Thu 22:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Try The Mathematical Tripos</title>
@@ -202,25 +202,27 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2cedc73">Self-studying the tripos</a>
+<li><a href="#orge897686">Self-studying the tripos</a>
 <ul>
-<li><a href="#org833924d">Isaac Newton at Cambridge</a></li>
+<li><a href="#org9506713">Isaac Newton at Cambridge</a></li>
+<li><a href="#org97804f2">Music is just math?</a></li>
+<li><a href="#orgf40169a">Aristotle</a></li>
 </ul>
 </li>
-<li><a href="#org90afb43">Basic Arithmetic</a></li>
-<li><a href="#org9889d6f">Basic Geometry</a></li>
-<li><a href="#org407d25d">Basic Algebra</a></li>
-<li><a href="#org4988e92">Mathematical Tripos</a>
+<li><a href="#orga012055">Basic Arithmetic</a></li>
+<li><a href="#org374d641">Basic Geometry</a></li>
+<li><a href="#org52bd3e9">Basic Algebra</a></li>
+<li><a href="#org4b2ab12">Mathematical Tripos</a>
 <ul>
-<li><a href="#orgbad285b">How it works</a></li>
-<li><a href="#org17fe0d3">Curriculum</a></li>
+<li><a href="#org0640866">How it works</a></li>
+<li><a href="#orgff2b251">Curriculum</a></li>
 </ul>
 </li>
-<li><a href="#org21c2407">Part 1A</a>
+<li><a href="#orgdece2aa">Part 1A</a>
 <ul>
-<li><a href="#org1269a26">Michaelmas</a></li>
-<li><a href="#org9812d9f">Lent</a></li>
-<li><a href="#orge65006d">Easter</a></li>
+<li><a href="#org72352ac">Michaelmas</a></li>
+<li><a href="#orgcb6ef17">Lent</a></li>
+<li><a href="#orgb685464">Easter</a></li>
 </ul>
 </li>
 </ul>
@@ -228,21 +230,25 @@
 </div>
 <hr />
 
-<div id="outline-container-org2cedc73" class="outline-2">
-<h2 id="org2cedc73">Self-studying the tripos</h2>
-<div class="outline-text-2" id="text-org2cedc73">
+<div id="outline-container-orge897686" class="outline-2">
+<h2 id="orge897686">Self-studying the tripos</h2>
+<div class="outline-text-2" id="text-orge897686">
 <p>
 The Cambridge <a href="https://www.maths.cam.ac.uk/undergrad/lecturelists">Math Tripos</a> has existed in some form since the 1700s and the students used to be publicly ranked by exam results so it's basically a 300+ year old competition. We have full access to detailed syllabi, archived notes, example sheets (assignments), computational assignments, and exams. Any books needed use archive.org, a local <a href="https://search.worldcat.org/">library</a>, <a href="https://annas-archive.org/">Anna's Archive</a> or <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a>. 
 </p>
 
 <p>
-I'm going to try and verify my attempts at the sample sheets and exam questions using the Lean 4 proof assistant which we learn in the first course <i>Numbers and Sets</i>. I also do a lot of AI related material such as physics-informed machine learning so really you could consider this a true AI mathematics from scratch curriculum covering statistics, probability w/measure, differential equations for accelerating learning, number theory to speed up libraries, quantum computing models and more. 
+I'm going to try and verify my attempts at the sample sheets and exam questions using the Lean 4 proof assistant which we learn in the first course <i>Numbers and Sets</i>. I also do a lot of AI related material such as physics-informed machine learning so really you could consider this a true AI mathematics from scratch curriculum covering statistics, probability w/measure, differential equations for accelerating learning, numerical linear algebra to speed up libraries, quantum computing models and more.
+</p>
+
+<p>
+Or you could just be some anon who wants to 'fix' physics because it's totally broken chasing nonsense theories that went nowhere since the 1970s either way you came to the right place. 
 </p>
 </div>
 
-<div id="outline-container-org833924d" class="outline-3">
-<h3 id="org833924d">Isaac Newton at Cambridge</h3>
-<div class="outline-text-3" id="text-org833924d">
+<div id="outline-container-org9506713" class="outline-3">
+<h3 id="org9506713">Isaac Newton at Cambridge</h3>
+<div class="outline-text-3" id="text-org9506713">
 <p>
 For geometry themed entertainment try <a href="http://libgen.is/book/index.php?md5=B290F008ACE9DE45827692ED7A4CB944">Isaac Newton on Mathematical Certainty and Method</a> by Niccolo Guicciardini.
 </p>
@@ -252,63 +258,70 @@ Isaac Newton entered Cambridge Trinity College in 1661 for it seems a medical de
 </p>
 
 <p>
-According to Newton's notebook and the writings of his close friend De Moivre here is how Newton learned mathematics. Wandering the town fair in 1663 he comes across a book on astrology and out of curiosity of the occult buys a copy. There's a figure he couldn't understand in the book because he didn't know trigonometry. He buys a book on trigonometry but couldn't understand the demonstrations because of a lack of geometry. At Cambridge he goes to the math department and everyone there is deeply immersed in the work of <i>La Geometrie</i> by Descartes. They tell him to buy Barrow's <a href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-isaac-barrows-euclidean-geometry">Euclid Elementorum</a> an 'easier' or explained version of Euclid's <i>Elements</i>. He skims it and after finding what he needs for the astrology/trig book abandons the book as 'too trivial demonstrations' (later has to go back and relearn classic geometry).  
+According to Newton's notebook and the writings of his close friend De Moivre here is how Newton learned mathematics. Wandering the town fair in 1663 he comes across a book on astrology and out of curiosity of the occult buys a copy. There's a figure he couldn't understand in the book because he didn't know trigonometry. He buys a book on trigonometry but couldn't understand the demonstrations because of a lack of geometry. At Cambridge he goes to the math department and everyone there is deeply immersed in the work of <i>La Geometrie</i> by Descartes. They tell him to read Barrow's <a href="https://old.maa.org/press/periodicals/convergence/mathematical-treasures-isaac-barrows-edition-of-euclids-elements">Euclide's Elements</a> which is a 'simplified' version of Euclid's 15 books. He skims it and after finding what he needs for the astrology/trig book abandons Euclid as 'too trivial demonstrations' only to later to go back and relearn classic geometry taking Barrow's lectures at Cambridge.   
 </p>
 
 <p>
-He returns to the math department and is given Oughtred's <a href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-oughtreds-clavis-mathematicae">Clavis mathematicae</a> or <i>the key to mathematics</i> writing he understands it except for the solutions of quadratic and cubic equations however his takeaway in his notes is that algebra can be used for exploration, which he starts doing by writing out hundreds of examples.
+He returns to the math department and is given Oughtred's <a href="https://www.maa.org/press/periodicals/convergence/mathematical-treasure-oughtreds-clavis-mathematicae">Clavis mathematicae</a> or <i>the key to mathematics</i> writing he understands it except for the solutions of quadratic and cubic equations however his takeaway in his notes is that algebra can be used for exploration which he starts doing by writing out hundreds of examples.
 </p>
 
 
-<div id="orgfe02522" class="figure">
+<div id="orgc625511" class="figure">
 <p><img src="./geometrie.jpg" alt="geometrie.jpg" />   
 </p>
 <p><span class="figure-number">Figure 1: </span>Cartesian Geometry by Van Schooten <a href="https://www.manhattanrarebooks.com/pages/books/2043/rene-descartes/geometria?soldItem=true">rarebooks</a></p>
 </div>
 
 <p>
-Again he returns to the math department to ask for a new book, and they are all still immersed in Cartesian geometry so Newton, despite being told it was a very difficult book, borrows a 1659 two volume Latin translation of Descartes <a href="https://en.wikipedia.org/wiki/La_G%C3%A9om%C3%A9trie">La Geometrie</a> by van Schooten called <i>Geometria, a Renato des Cartes</i> with appendices and commentary by his students. This book was considered the state of the art of 17th century analytical geometry, it would be like reading a graduate text today by a leading expert that had an appendix full of lecture notes and PhD student dissertations. 
+Again he returns to the math department and despite being told it was a very difficult book he borrows a 1659 two volume Latin translation of Descartes <a href="https://en.wikipedia.org/wiki/La_G%C3%A9om%C3%A9trie">La Geometrie</a> by van Schooten called <i>Geometria, a Renato des Cartes</i> with appendices and commentary by his students. This book was considered the state of the art of 17th century analytical geometry it would be like reading a graduate text today written by a leading expert that had an appendix full of their student PhD dissertations. 
 </p>
 
 <p>
-This is the algorithm Newton used to read van Schooten's two volume book. He read a few pages or so, couldn't understand the text, and went back to the beginning. Went a little further then stopped again going back to the beginning. He repeats this loop by himself until he finally 'makes himself whole of Descartes'. Looking at the <a href="https://babel.hathitrust.org/cgi/pt?id=ucm.5320271924&amp;view=1up&amp;seq=24">online copy</a> of this 1659 version the Descartes geometry is about 104 pages and 450 or so pages of additional research/commentary. It is broken up into 3 parts and assuming he didn't have to reread each part everytime he looped, only the relevant part (~34 pages), it probably took him 3 months to finish van Schooten which is what his notebook shows that after a few months he was already doing research in analytical geometry trying to generalize Descartes. His notebook indicates he learned from the grad student commentaries how to transform a hard problem into a different simpler one. Somewhere around this time he moves dorms complaining his peers were too busy partying so lives with more serious students.   
+This is the algorithm Newton used to read van Schooten's two volume book. He read a few pages or so, couldn't understand the text, and went back to the beginning. Went a little further then stopped again going back to the beginning. He repeats this loop by himself until he finally 'makes himself whole of Descartes'. Looking at the <a href="https://babel.hathitrust.org/cgi/pt?id=ucm.5320271924&amp;view=1up&amp;seq=24">online copy</a> of this 1659 version the Descartes geometry is about 104 pages and 450 or so pages of additional research/commentary. It is broken up into 3 parts and assuming he didn't have to reread each part everytime he looped, only the relevant part (~34 pages), it probably took him 3 months to finish van Schooten which is what his notebook shows that after a few months he was already doing hiw own research in analytical geometry trying to generalize Descartes. His notebook indicates he learned from the grad student commentaries how to transform a hard problem into a different simpler one. Somewhere around this time he moves dorms complaining his peers were too busy partying so lives with more serious students.   
 </p>
 
 <p>
-Newton's notes which you can read online show him trying to generalize any math he read which often would lead him into algebraic corners where he would get stuck as there didn't exist at the time methods to solve/simplify. He seemed to assume everything he read was a special case of something more general such as the insight that integration is the reverse operation of differentiation so there must only be a theory of derivatives somewhere waiting to be discovered.
+Newton's notes which you can read online show him trying to generalize any math he read which often would lead him into algebraic corners where he would get stuck as there didn't exist at the time methods to solve/simplify. To Newton all this math was just a means to an end of understanding the natural science topics he originally wrote down as 37 headings in his notes. 
 </p>
 
 <p>
-After Descartes he returned the borrowed copy and bought a different copy of Descartes for himself, and van Schooten's <i>Exercitationes mathematicae libri quinque</i> or Five Books of Mathematical Exercises to help him fill in the blanks of his algebra misunderstandings as he had a lot of mistakes in his notebooks regarding negative roots. Newton assumed the cubic parabola was the same shape in all quadrants but soon after corrected these mistakes. Descartes geometry wasn't like today's Cartesian plane it originally consisted of just one positive quadrant but van Schooten and his students had expanded it. 
+After Descartes he returned the borrowed copy and bought a different copy of Descartes for himself, and bought van Schooten's <i>Exercitationes mathematicae libri quinque</i> or Five Books of Mathematical Exercises to help him fill in the blanks of his algebra misunderstandings as he had a lot of mistakes in his notebooks regarding negative roots. Newton assumed the cubic parabola was the same shape in all quadrants but soon after corrected these mistakes. Descartes geometry wasn't like today's Cartesian plane it originally consisted of just one positive quadrant but van Schooten and his students had expanded it. 
 </p>
 
 <p>
-Descartes' <i>La Geometrie</i> is filled with little comments of encouragement as he was afraid nobody would read his work if it was too long so everywhere there is these reassurences like 'don't worry reader the following isn't too hard' or insisting the reader figure out a problem themselves to not deny them of the satisfaction he found figuring it out himself. The different copy Newton buys has all these comments left in tact and Newton misunderstands, or the translation is incorrect, one of these comments by Descartes about the equation of curves stating 'it is easy' to find everything you want to know about a curve from it's equation and the reader need not be bothered by a lengthy demonstration when in fact this is an unsolved problem. Newton can't figure out this supposedly simple exercise in Descartes' book so breaks down the equation of a curve into many headings in his notebook and tries to generalize which led to him creating his own advanced analysis well beyond any other mathematician at the time.
+Descartes' <i>La Geometrie</i> was originally an appendix of his larger book <i>Discourse on the Method</i>. That book is about how you would conduct yourself when seeking to make discoveries in the sciences and it seems many philosophers then had their own books on how to reason except that Descartes had filled the appendix with examples of discoveries he made using his own method. 
 </p>
 
 <p>
-Around the same time when he was trying to figure out that Descartes exercise he reads <i>Arithmetica Infinitorum</i> by Wallis which is the arithmetic of infintesimals. Newton recognizes many of the sums are similar to what he read in Oughtred's book, known today as Pascal's triangle and in typical fashion seeks to generalize and invents the binomial theorem. Newton then reads Viete's <i>Opera Mathematica</i> which was another textbook by van Schooten compiling all the work of Viete such as Diophantine equations. In less than a full year Newton managed to bring himself up to date with the entire achievement of mid 17th century mathematics by himself and begins self-directed research writing out 22 headlines of 'problems' in his notebook and classifying them into groups regarding integration, analytic geometry and mechanics. 
+The geometry appendix is filled with little comments of encouragement as he was afraid nobody would read his work if it was too long so everywhere there is these reassurences like 'don't worry reader the following isn't too hard' or insisting the reader figure out a problem themselves to not deny them of the satisfaction he found figuring it out himself. The different copy Newton buys has all these comments left in tact and Newton misunderstands, or the translation is incorrect, one of these comments by Descartes about the equation of curves stating 'it is easy' to find everything you want to know about a curve from it's equation and the reader need not be bothered by a lengthy demonstration when in fact this is an unsolved problem. Newton can't figure out this supposedly simple exercise in Descartes' book so breaks down the equation of a curve into many headings in his notebook and begins to generalize which led to him creating his own advanced analysis well beyond any other mathematician at the time. 
 </p>
 
 <p>
-In April 1664 Newton has been a subsizar for three years and has to apply for a new scholarship at Trinity College where he first meets the Lucasian Professor Isaac Barrow who examines him on Euclid and finds he knows nothing about geometry. However Barrow had also worked on infinitesimals and apparently had invented some of calculus himself but not noticed if you read the <a href="https://archive.org/details/geometricallectu00barr/page/n21/mode/2up">book</a> <i>The Geometrical Lectures of Isaac Barrow</i>. The author found in Barrow's notes he definitely had a kind of proto-calculus worked out but didn't seem to notice or care about it's analytical importance enough to write a treatise about it. Through these conversations no doubt Barrow recognized the potential of Newton and unlike modern day academia where he would have tried to squash Newton and sabotage his work he becomes Newton's mentor and starts giving him work to do like helping to publish Barrow's books and giving Newton all his research on infinitesimals. Barrow also helps Newton obtain his scholarship in exchange for the agreement Newton attend his lectures on geometry and learn the importance of Euclid.    
+After he reads <i>Arithmetica Infinitorum</i> by Wallis which is the arithmetic of infintesimals. Newton recognizes many of the sums are similar to what he read in Oughtred's book, known today as Pascal's triangle and in typical fashion seeks to generalize and invents the binomial theorem. Newton then reads Viete's <i>Opera Mathematica</i> which was another textbook by van Schooten compiling all the work of Viete such as Diophantine equations. In less than a full year Newton managed to bring himself up to date with the entire achievement of mid 17th century mathematics by himself and begins self-directed research writing out 22 headlines of 'problems' in his notebook and classifying them into groups regarding integration, analytic geometry and mechanics. 
 </p>
 
 <p>
-The plague shuts down the school from the summer of 1665 to spring of 1667 and Newton returns home, makes himself an office by building bookshelves for his now large library and spends all his time doing research with his new analytical tools building them into modern calculus. Describing his activities during the second plague year: "I am ashamed to tell to how many places I carried these computations, having no other business at the time, for then I took really too much delight in these inventions". There is notes he kept of calculating a logarithm to it's 52nd decimal point. This is basically the end of story for Newton's analysis research, sometime during the pandemic years he is satisfied with his calculus and abandons research in math to pursue his other questions in his notebook. There is a lot of notes about how tedious it was to do calculations before he came up with his analysis so we can assume he became satisfied that he had all he needed. 
+In April 1664 Newton has been a subsizar for three years and has to apply for a new scholarship at Trinity College where he first meets the Lucasian Professor Isaac Barrow who examines him on Euclid and finds he knows nothing about classical geometry. Barrow had also worked on infinitesimals and apparently had invented some of calculus himself but not noticed if you read the <a href="https://archive.org/details/geometricallectu00barr/page/n21/mode/2up">book</a> <i>The Geometrical Lectures of Isaac Barrow</i>. The author found in Barrow's notes he definitely had a kind of proto-calculus worked out. Newton attends his lectures on Euclid and then laments that he didn't learn geometry before analysis as geometry is a way of doing math where you can reason without needing to do calculations. An example of this is in his published Cambridge lectures <i>Universal Arithmetic</i> where he shows with geometry how imaginary roots must occur in pairs. 
 </p>
 
 <p>
-Newton believed the ancients had already figured everything out, and this information was lost over time after disasters had destroyed the information. He based this from his own experience living during the plague, the great fire of London and political upheaval. This led him to alchemy where he believed their knowledge was encoded in myths written in Roman and Greek literature where every myth was real but that their lives were embellished through story telling. A common alchemist practice for example was to interpret Ovid's <i>Metamorphoses</i> where the god of the forge/metalwork Vulcan catches his wife Venus and Mars locked in an embrace so traps them in a fine metallic net. The alchemists of the Royal Society that Newton belonged to frequently used the names of planets for metals so obtaining an alchemists manuscript by George Starkey he recreated this myth and ended up with an alloy with a strided net like surface. Newton also decoded Cadmus and the founding of Thebes from Ovid into practical lab instructions. 
-</p>
-
-
-<p>
-20 years later Newton has produced numerous manuscripts but refuses to release any of them until he is offered to write the <i>Principia</i>, and wanting to prove infintesimal calculus he tries uncovering the ancient analysis used in classical geometry. Pappus' book 7 contains a commentary about the tools and propositions that Euclid, Apollonius, Eratosthenes and other geometers of the day used that Pappus referred to as the 'treasury of analysis'. These were said to be contained in books by Euclid but those were never recovered. These lost Porisms (corollaries) are speculated by Newton to be <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03963/1">projective geometry</a>. 
+The plague shuts down the school from the summer of 1665 to spring of 1667 and Newton returns home, makes himself an office by building bookshelves for his now large library and spends all his time doing research with his new analytical tools building them into modern calculus. Describing his activities during the second plague year: "I am ashamed to tell to how many places I carried these computations, having no other business at the time, for then I took really too much delight in these inventions". There is notes he kept of calculating a logarithm to it's 52nd decimal point. This is basically the end of story for Newton's analysis research, sometime during the pandemic years he is satisfied with his binomial theorem and calculus thus abandons research in math to pursue lens making for optics research. There is a lot of notes about how tedious it was to do calculations before he came up with his analysis. 
 </p>
 
 <p>
-Newton in his Lucasian chair lectures said that the ancients would never bother to introduce the algebra of curves with geometry because you lose the simplicity of working within geometry as its whole point was to escape the tediousness of calculations by simply drawing lines and circles. He also claims books like Pappus's <i>Collectio</i> deliberately hid the analysis, as it was considered an inelegant tool and that ancient synthesis where they deduced a consequence from a given premise (a corollary) using geometric demonstrations was a superior method as the analysis could not be reversed in steps like geometric synthesis could. He went further and claimed if you wanted to discover seemingly unrelated corollaries you had to use synthesis, describing the analysis of his day as a 'tedious pile of probabilities used by bunglers'. In other words if he didn't rely on geometry he could not have found most of the critical results of the <i>Principia</i>. People today claim he did this to avoid priority disputes over his analysis he kept hidden except for privately circulated manuscripts, but he used geometry to invent limits and plane transformations that were not formally developed until 200 years later so he was probably right. His limits are very similar to what everyone <a href="https://www.sciencedirect.com/science/article/pii/S0315086000923012">today</a> is using in modern calculus courses. If you take a calculus course today they will tell you Newton's influence to promote geometry allowed continental mathematicians to freely develop analysis which kept back Britain decades in the field of analysis. 
+Newton refused to publish any work and circulated his analysis tools privately. Leibnitz wrote Newton in 1676 asking about his methods for infinite series and if he knew the solution of 'the inverse method of tangents' which we know today as solutions to ordinary differential equations. The response from Newton is lengthy giving a full account on how he had found some of his results then Leibniz replies explaining his differential calculus how he does integrations. Newton gives a description of his calculus in one of the appendices in his book <i>Optics</i>. When quantity A (volume, acceleration, time) is related to quantity B where changing one then changes the other this means A is a function of B. The ratio of their rate of change is today called a derivative, then called a 'differential coefficient' or 'fluxion' by Newton. If you know the derivative and corresponding values of the two quantities then you can use summation to determine the original functions which is often difficult but if we are able to reverse the process of differentiation (finding the derivative) we can obtain the same result directly. This undo method of derivatives is called integration today and called 'the method of quadrature' by Newton. 
+</p>
+
+<p>
+Newton wrote up papers for all this research and circulated them privately but refused to publish until 20 years later when he is offered to write the <i>Principia</i>. Wanting to prove infintesimal calculus he tries uncovering the ancient analysis used in classical geometry. Pappus' book 7 contains a commentary about the tools and propositions that Euclid, Apollonius, Eratosthenes and other geometers of the day used that Pappus referred to as the 'treasury of analysis'. These were said to be contained in books by Euclid but those were never recovered. These lost Porisms (corollaries) are speculated by Newton to be <a href="https://cudl.lib.cam.ac.uk/view/MS-ADD-03963/1">projective geometry</a> and he believed the ancients had already figured everything out and this information was lost over time based from his own experience living during the plague, the great fire of London and political upheaval. Of course Newton also solved the problem of Pappus using classical geometry when reading <i>Collection</i> book 7 which was the problem Descartes was working on which led him to invent cartesian analytical geometry in the first place. 
+</p>
+
+<p>
+This belief is also what led him to alchemy where he assumed their knowledge was encoded in myths written in Roman and Greek literature writing in his notes that every myth was real but that their lives were embellished through story telling. A common alchemist practice for example was to interpret Ovid's <i>Metamorphoses</i> where the god of the forge/metalwork Vulcan catches his wife Venus and Mars locked in an embrace so traps them in a fine metallic net. The alchemists of the Royal Society that Newton belonged to frequently used the names of planets for metals so obtaining an alchemists manuscript by George Starkey he recreated this myth using it as a recipe and ended up with an alloy with a strided net like surface. Newton also decoded Cadmus and the founding of Thebes from Ovid into practical lab instructions. 
+</p>
+
+<p>
+Newton in his Lucasian chair lectures said that the ancients would never bother to introduce the algebra of curves with geometry because you lose the simplicity of working within geometry. He also claims books like Pappus's <i>Collectio</i> deliberately hid the analysis as it was considered an inelegant tool and that ancient synthesis where they deduced a consequence from a given premise (a corollary) using geometric demonstrations was a superior method as the analysis could not be reversed in steps like geometric synthesis could. He went further and claimed if you wanted to discover seemingly unrelated corollaries you had to use synthesis, describing the analysis of his day as a 'tedious pile of probabilities used by bunglers'. In other words if he didn't rely on geometry he could not have found most of the critical results of the <i>Principia</i>. He didn't want his laws of the universe being undermined by criticism of his infintesimal analysis used for many of the results so cast the entire book into geometric form. His limits are very similar to what everyone <a href="https://www.sciencedirect.com/science/article/pii/S0315086000923012">today</a> is using in modern calculus courses. Newton even used an equivalent method to how we would solve differential equations today which he used to revise the <i>Principia</i> editions calculating moon orbit irregularities something that Euler could not solve 70 years later. 
 </p>
 
 <p>
@@ -322,7 +335,11 @@ He later wrote in a manuscript on geometry that mechanics of motion was what gen
 </blockquote>
 
 <p>
-Newton's completely different life then began at age 52 when he left Cambridge and went on to become both the warden and master of the London mint for 30 years a highly lucrative job with enormous bonuses. He cracked down on mint corruption and absenteeism by personally overseeing the wagies and making them perform tedious tests on batches while producing highly pure coinage due to his dabbling in alchemy. Newton had a Professor Moriarty tier <a href="https://en.wikipedia.org/wiki/William_Chaloner">nemesis</a>. Due to his new standing in London elite circles he's made president of the Royal Society and was hilariously ruthless ruling it with an iron fist vanquishing all his previous critics. His <a href="https://en.wikipedia.org/wiki/Catherine_Barton">niece</a> came to live with him in London and was some kind of famous socialite of the time holding many parties at his house where he'd entertain guests with his expensive cider that he had made buying apple trees from Ralph Austen of Oxford a renowned cider maker. Newton was famous for wit and performing dramatic demonstrations which Princess Caroline enjoyed so much he was a regular feature of her court. He was not the miserable loner that modern day biographers wish to portray him as. His letters show regular payments and gifts to all extended family members too so he wasn't a scrooge and he didn't die broke either from an <a href="https://royalsocietypublishing.org/doi/10.1098/rsnr.2018.0018">investment scam</a>. His estate was worth £30,000 when he died and to see how much that is worth today the average yearly salary of a Surveyor in London then was about <a href="https://www.pascalbonenfant.com/18c/wages.html">£131</a> so he could have employed 229 Surveyors for a single year. Today an average salary for a Surveyor is ~£60k per year and employing 229 for a year is almost £14 million. 
+Another example of geometry was the appendices in his book <i>Optics</i> where he shows the shadow of a circle cast by a luminous point on a plane generates all the conics, then gives an equation for the shadow of all curves that generate all cubics. He translates these into infinite series for which he has analytical tools and states the importance of determining if these series are convergent which wasn't formalized until the 1800s with Cauchy and Gauss. In the same appendix is the first known use of indices being given to variables. 
+</p>
+
+<p>
+Newton's completely different life then began at age 52 when he left Cambridge and went on to become both the warden and <a href="https://newtonandthemint.history.ox.ac.uk/">master</a> of the Royal Mint for 30 years a highly lucrative job with enormous bonuses. His warden position was expected to be a no-show patronage gig but he took it seriously. He used his alchemy experience to mint high purity coinage and modernized the mint by cracking down on corruption and absenteeism. He personally went after all counterfeiters sometimes dressing up mint employees in disguises to do stings inside of taverns. His <a href="https://en.wikipedia.org/wiki/Catherine_Barton">niece</a> came to live with him in London and was some kind of famous socialite of the time holding many parties at his house where he'd entertain guests with his expensive cider that he had made buying apple trees from Ralph Austen of Oxford a renowned cider maker. Newton was famous for wit and performing dramatic demonstrations which Princess Caroline of Ansbach enjoyed so much he was a regular feature of her court. He was not the miserable loner that modern day biographers wish to portray him as. His letters show regular payments and gifts to all extended family members too so he wasn't a scrooge and he didn't die broke either from an <a href="https://royalsocietypublishing.org/doi/10.1098/rsnr.2018.0018">investment scam</a>. His estate was worth £30,000 when he died and to see how much that is worth today the average yearly salary of a Surveyor in London then was about <a href="https://www.pascalbonenfant.com/18c/wages.html">£131</a> so he could have employed 229 Surveyors for a single year. Today an average salary for a Surveyor is lowest range ~£60k per year and employing 229 for a year is almost £14 million. 
 </p>
 
 <p>
@@ -335,20 +352,58 @@ A very curious relic of Sir Isaac survives in the garden at Cranbury Park, viz. 
 </p>
 </blockquote>
 
+<p>
+Of an example of how advanced Newton's reasoning was compared to every other analyst at the time was his response to John Bernoulli's <a href="https://en.wikipedia.org/wiki/Brachistochrone_curve">challenge</a>. Bernoulli took 2 weeks to solve it, Leibnitz took six months. Newton solved the problem in a single night after working at the mint and even generalized the second question:
+</p>
+
 <iframe class="video" src="https://www.youtube.com/embed/qFo7xZFdBdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="outline-container-org97804f2" class="outline-3">
+<h3 id="org97804f2">Music is just math?</h3>
+<div class="outline-text-3" id="text-org97804f2">
+<p>
+There is a 1400s composer named Guillaume Dufay. He was trained at the Catholic seminary back when that was where a continental European would go to learn science during the days of cavorting druids and other ancient <a href="https://youtu.be/EAFtiUoq6TE?si=XKl1iO_w2DMUAS13">shenanigans</a>. He is largely thought of the 'first composer' though there was a <a href="https://youtu.be/9ti59NdbG1c?si=AbWt-L5WC8ou8Npd">French</a> guy who also used the same technique in the 1300s and also probably other continental musicians but I'm not a historian. This was still mostly chanting there was only ever 1 or more singing the same notes though the music changed. 
+</p>
+
+<p>
+Then came along Dufay who dropped stuff like <a href="https://youtu.be/2QyRXsGWGRA?si=_CGxqyN8si95q8v-">this</a>. The end of that song is a long leading tone to build tension and sounds like a modern song. This is called Isorhythm and is a purely mathematical construct though today we would say (if you program) this is just a mapping function over a song. Take song 1 and then map song 2 over it. He unveiled his skills at the consecration of a Florence cathedral that still stands today and employed apparently over 100+ singers and musicians. <a href="https://youtu.be/4D0wqIpjC5c?si=jgdgZ68MN_glxuS6">Here is that song</a>. Note this is no longer chanting and probably absolutely shocked whoever attended this consecration as it was specifically written for the dimensions of the cathedral. Wait, what?
+</p>
+
+<p>
+The cathedral had a new dome built, which is another story how some local Florence tradesman/builder basically designed it not any kind of 'genius' architect just some regular guy, and Dufay took the dimensions of that dome and like a DJ he remixed it into the biblical accounts of the celestial temple of Jerusalem. The Duomo that was built has 144 braccia long nave and 144 braccia high Cupola which correspond to the walls of the city of Jerusalem in old biblical theology. 144 is the product of 6x4x3x2 or 6:4:3:2 <i>as used in the song!</i>. I know it's totally wild he wrote a song, where the architecture is frozen music, and the music is singing the architecture. Don't believe me read <a href="https://gab.wallawalla.edu/~larry.aamodt/honr310/dufay_motet_trachtenberg_critique_of.pdf">this</a>. The whole song is to me is simply traversing the architecture and applying a function to it or if you're a programmer it's mapping over it.        
+</p>
+
+<p>
+I will include a music notes reading course in the tripos because Cambridge offers one so if you've always wanted to read notation. I don't know when but if you're interested you can probably learn right now on YouTube if you wanted.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf40169a" class="outline-3">
+<h3 id="orgf40169a">Aristotle</h3>
+<div class="outline-text-3" id="text-orgf40169a">
+<p>
+I'm not Catholic but there is a very good course I found on YouTube where some guy goes through the entire categories and explains it and <a href="https://classicalliberalarts.com/about-the-classical-liberal-arts-academy/">he</a> has an honors degree from famous universities none of us have. I haven't watched all of them but many are excellent here is the <a href="https://www.youtube.com/watch?v=6XGo8zJCl7g">first</a> lecture but of course Aristotle is also revered in the Islamic world and they often cite him as an authority to validate their own philosophy. That single person was the most influential thinker for a thousand years and even Isaac Newton credited him. I was never, ever taught Aristotle then I discovered the literal organization of his books were also some kind of teaching tool. Yes the layout of the books themselves are trying to teach you how to inference from particulars (induction) and other amazing things which make you wonder wait why did noone ever teach me this.
+</p>
+
+<p>
+I don't defer to religions or whatever but if they all used it, it must be worth reading. 
+</p>
 
 <hr />
 </div>
 </div>
 </div>
 
-<div id="outline-container-org90afb43" class="outline-2">
-<h2 id="org90afb43">Basic Arithmetic</h2>
-<div class="outline-text-2" id="text-org90afb43">
+<div id="outline-container-orga012055" class="outline-2">
+<h2 id="orga012055">Basic Arithmetic</h2>
+<div class="outline-text-2" id="text-orga012055">
 </div>
-<div id="outline-container-org8de7fbc" class="outline-4">
-<h4 id="org8de7fbc">Arithmetic with natural numbers</h4>
-<div class="outline-text-4" id="text-org8de7fbc">
+<div id="outline-container-org1b98a11" class="outline-4">
+<h4 id="org1b98a11">Arithmetic with natural numbers</h4>
+<div class="outline-text-4" id="text-org1b98a11">
 <ul class="org-ul">
 <li><a href="https://youtu.be/-96tlu_sShM">YouTube</a> - Arithmetic and Geometry Math Foundations 2</li>
 </ul>
@@ -383,7 +438,7 @@ We will need this result for the other proofs.
 </p>
 
 <p>
-km is m + m repeated k times or m<sub>1</sub> + &#x2026; + m<sub>k</sub> and (k + n)m means m + m repeated (k + n) times. Distributing m in (k + n)m we get: ((m<sub>1</sub> + m +&#x2026;m<sub>k</sub>) + (m<sub>1</sub> + m +&#x2026;m<sub>n</sub>)) and now the left side matches the right side since km + nm is the same when expanded. 
+km is m + m repeated k times or m<sub>1</sub> + &#x2026; + m<sub>k</sub> and (k + n)m means m + m repeated (k + n) times. Distributing m in (k + n)m we get: ((m<sub>1</sub> + m +&#x2026;m<sub>k</sub>) + (m<sub>1</sub> + m +&#x2026;m<sub>n</sub>)) and now the left side matches the right side since km + nm is the same when expanded.
 </p>
 
 <p>
@@ -420,9 +475,9 @@ Factor out n: n(1<sub>1</sub> + .. + 1<sub>m</sub>) and a sum of 1's up to m is 
 </div>
 </div>
 
-<div id="outline-container-org99dd8ea" class="outline-4">
-<h4 id="org99dd8ea">Subtraction and division</h4>
-<div class="outline-text-4" id="text-org99dd8ea">
+<div id="outline-container-org0634095" class="outline-4">
+<h4 id="org0634095">Subtraction and division</h4>
+<div class="outline-text-4" id="text-org0634095">
 <ul class="org-ul">
 <li><a href="https://youtu.be/mVd202X-2uM">YouTube</a> - Arithmetic and Geometry Math Foundations 4</li>
 </ul>
@@ -445,12 +500,16 @@ Try the subtraction laws
 </ul></li>
 </ul></li>
 </ul>
+
+<p>
+In Wildberger's natural number lectures he doesn't define subtraction for integers (negative numbers) so my proof is wrong. Can you prove subtraction where n &gt; m or whatever similar because it can be done. 
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgdcd8d43" class="outline-4">
-<h4 id="orgdcd8d43">The Hindu-Arabic number system</h4>
-<div class="outline-text-4" id="text-orgdcd8d43">
+<div id="outline-container-orgccad6af" class="outline-4">
+<h4 id="orgccad6af">The Hindu-Arabic number system</h4>
+<div class="outline-text-4" id="text-orgccad6af">
 <ul class="org-ul">
 <li><a href="https://youtu.be/wbz4Af_TngM">YouTube</a> - Arithmetic and Geometry Math Foundations 6</li>
 </ul>
@@ -467,9 +526,9 @@ A simplified Roman numeral system is introduced
 </div>
 </div>
 
-<div id="outline-container-orge9384cf" class="outline-4">
-<h4 id="orge9384cf">Arithmetic with Hindu-Arabic notation</h4>
-<div class="outline-text-4" id="text-orge9384cf">
+<div id="outline-container-org141350a" class="outline-4">
+<h4 id="org141350a">Arithmetic with Hindu-Arabic notation</h4>
+<div class="outline-text-4" id="text-org141350a">
 <ul class="org-ul">
 <li><a href="https://youtu.be/JA2XBgg_iB8">YouTube</a> - Arithmetic and Geometry Math Foundations 7</li>
 </ul>
@@ -480,9 +539,9 @@ A new way of hand multiplication is shown, taking advantage of the fact the nota
 </div>
 </div>
 
-<div id="outline-container-org2c6fadd" class="outline-4">
-<h4 id="org2c6fadd">Laws of Division</h4>
-<div class="outline-text-4" id="text-org2c6fadd">
+<div id="outline-container-org1c89ad8" class="outline-4">
+<h4 id="org1c89ad8">Laws of Division</h4>
+<div class="outline-text-4" id="text-org1c89ad8">
 <ul class="org-ul">
 <li><a href="https://youtu.be/WiYKyjQNUm0">YouTube</a> - Arithmetic and Geometry Math Foundations 8</li>
 </ul>
@@ -491,7 +550,7 @@ A new way of hand multiplication is shown, taking advantage of the fact the nota
 Wildberger says he didn't find any long division in his kid's curriculum because schools removed it claiming it was too difficult.  Another way to do long division:
 </p>
 
-<pre class="example" id="org85aa67e">
+<pre class="example" id="org8f2c4c9">
 7)203
 </pre>
 
@@ -499,7 +558,7 @@ Wildberger says he didn't find any long division in his kid's curriculum because
 How many groups of 7 x 10<sup>2</sup> fit into 203? 0 so reduce to how many groups of 7 x 10<sup>1</sup> fit into 203? 20 
 </p>
 
-<pre class="example" id="org77f1523">
+<pre class="example" id="org65b13e9">
    20  
 7)203
  -140
@@ -510,7 +569,7 @@ How many groups of 7 x 10<sup>2</sup> fit into 203? 0 so reduce to how many grou
 How many groups of 7 x 10<sup>1</sup> fit into 63? 0 so reduce to how many groups of 7 x 10<sup>0</sup> fit into 63? 9 
 </p>
 
-<pre class="example" id="orgd1ff32b">
+<pre class="example" id="org1896274">
    29
 7)203 
  -140
@@ -520,9 +579,9 @@ How many groups of 7 x 10<sup>1</sup> fit into 63? 0 so reduce to how many group
 </div>
 </div>
 
-<div id="outline-container-orgb68970e" class="outline-4">
-<h4 id="orgb68970e">Fractions</h4>
-<div class="outline-text-4" id="text-orgb68970e">
+<div id="outline-container-org446a03c" class="outline-4">
+<h4 id="org446a03c">Fractions</h4>
+<div class="outline-text-4" id="text-org446a03c">
 <ul class="org-ul">
 <li><a href="https://youtu.be/50-GsMX7pjQ">YouTube</a> - Arithmetic and Geometry Math Foundations 9</li>
 </ul>
@@ -533,9 +592,9 @@ Interesting how he defines all these as types.
 </div>
 </div>
 
-<div id="outline-container-orgf1fb034" class="outline-4">
-<h4 id="orgf1fb034">Arithmetic with fractions</h4>
-<div class="outline-text-4" id="text-orgf1fb034">
+<div id="outline-container-org6b9ba72" class="outline-4">
+<h4 id="org6b9ba72">Arithmetic with fractions</h4>
+<div class="outline-text-4" id="text-org6b9ba72">
 <ul class="org-ul">
 <li><a href="https://youtu.be/5PxUNiHaOLA">YouTube</a> - Arithmetic and Geometry Math Foundations 10</li>
 </ul>
@@ -546,9 +605,9 @@ The prime <a href="https://en.wikipedia.org/wiki/Prime_(symbol)">notation</a> us
 </div>
 </div>
 
-<div id="outline-container-orgdf88f57" class="outline-4">
-<h4 id="orgdf88f57">Laws of arithmetic for fracions</h4>
-<div class="outline-text-4" id="text-orgdf88f57">
+<div id="outline-container-orgfefff59" class="outline-4">
+<h4 id="orgfefff59">Laws of arithmetic for fracions</h4>
+<div class="outline-text-4" id="text-orgfefff59">
 <ul class="org-ul">
 <li><a href="https://youtu.be/uADs1yepIIA?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 11</li>
 </ul>
@@ -559,9 +618,9 @@ More simple proofs.
 </div>
 </div>
 
-<div id="outline-container-org5c55701" class="outline-4">
-<h4 id="org5c55701">Integer construction</h4>
-<div class="outline-text-4" id="text-org5c55701">
+<div id="outline-container-org2ab42d3" class="outline-4">
+<h4 id="org2ab42d3">Integer construction</h4>
+<div class="outline-text-4" id="text-org2ab42d3">
 <ul class="org-ul">
 <li><a href="https://youtu.be/YDBLXCFrihc?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 12</li>
 </ul>
@@ -572,9 +631,9 @@ The point in watching these is to see how you can start with just the natural na
 </div>
 </div>
 
-<div id="outline-container-orgdfa5eff" class="outline-4">
-<h4 id="orgdfa5eff">Rational numbers</h4>
-<div class="outline-text-4" id="text-orgdfa5eff">
+<div id="outline-container-org6fc3bc7" class="outline-4">
+<h4 id="org6fc3bc7">Rational numbers</h4>
+<div class="outline-text-4" id="text-org6fc3bc7">
 <ul class="org-ul">
 <li><a href="https://youtu.be/MDMG9Ljb8l0?feature=shared">YouTube</a> - Arithmetic and Geometry Math Foundations 13</li>
 </ul>
@@ -591,9 +650,9 @@ If for whatever reasons you want even more arithmetic try <a href="https://www.m
 </div>
 
 
-<div id="outline-container-org9889d6f" class="outline-2">
-<h2 id="org9889d6f">Basic Geometry</h2>
-<div class="outline-text-2" id="text-org9889d6f">
+<div id="outline-container-org374d641" class="outline-2">
+<h2 id="org374d641">Basic Geometry</h2>
+<div class="outline-text-2" id="text-org374d641">
 <p>
 Euclid's Elements basic rundown:
 </p>
@@ -615,16 +674,16 @@ This used to be taught in middle schools and students had to demonstrate proofs 
 </blockquote>
 
 <p>
-I'll audit <a href="https://ocw.metu.edu.tr/course/view.php?id=311">MATH 373</a> and learn Greek geometry in part IB of the Tripos there's a playlist on <a href="https://www.youtube.com/playlist?list=PLuiPz6iU5SQ828B8vmWXrjMDGXHGH3ci6">YouTube</a>. 
+I'll audit <a href="https://ocw.metu.edu.tr/course/view.php?id=311">MATH 373</a> and learn Greek geometry in part IB of the Tripos there's a playlist on <a href="https://www.youtube.com/playlist?list=PLuiPz6iU5SQ828B8vmWXrjMDGXHGH3ci6">YouTube</a> it's one of the best courses you'll ever do. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org407d25d" class="outline-2">
-<h2 id="org407d25d">Basic Algebra</h2>
-<div class="outline-text-2" id="text-org407d25d">
+<div id="outline-container-org52bd3e9" class="outline-2">
+<h2 id="org52bd3e9">Basic Algebra</h2>
+<div class="outline-text-2" id="text-org52bd3e9">
 <p>
-Algebra as we know it today was invented 1200 years ago as a 'system of balancing' to figure out complex Islamic inheritance law and being able to eliminate negative numbers. Before that Diophantus wrote several treatises on a kind of algebra also invented to solve Athenian legal procedures about dividing of estates between family members. Diophantus' teaches the reader how to solve problems giving examples of potential mistakes and dead ends. If you're interested read <i>Brill's Companion to the Reception of Ancient Rhetoric</i> chapter 26 <i>The Rhetoric of Math</i> via library genesis or try a <a href="https://polymathclassical.com/curriculum-diophantine-algebra/">course</a> in Diophantine Algebra. 
+Algebra as we know it today was invented 1200 years ago as a 'system of balancing' to figure out complex Islamic inheritance law and being able to eliminate negative numbers because back then a negative number made no sense whatsoever. Before that Diophantus wrote several treatises on a kind of algebra that was also invented to solve Athenian legal procedures about dividing of estates between family members. Diophantus' teaches the reader how to solve problems giving examples of potential mistakes and dead ends which to me is very unusual (and helpful). If you're interested read <i>Brill's Companion to the Reception of Ancient Rhetoric</i> chapter 26 <i>The Rhetoric of Math</i> via library genesis or try a <a href="https://polymathclassical.com/curriculum-diophantine-algebra/">course</a> in Diophantine Algebra. 
 </p>
 
 <ul class="org-ul">
@@ -647,13 +706,13 @@ We do a Russian problem book in the first term <i>Numbers and Sets</i> that is d
 </div>
 </div>
 
-<div id="outline-container-org4988e92" class="outline-2">
-<h2 id="org4988e92">Mathematical Tripos</h2>
-<div class="outline-text-2" id="text-org4988e92">
+<div id="outline-container-org4b2ab12" class="outline-2">
+<h2 id="org4b2ab12">Mathematical Tripos</h2>
+<div class="outline-text-2" id="text-org4b2ab12">
 </div>
-<div id="outline-container-orgbad285b" class="outline-3">
-<h3 id="orgbad285b">How it works</h3>
-<div class="outline-text-3" id="text-orgbad285b">
+<div id="outline-container-org0640866" class="outline-3">
+<h3 id="org0640866">How it works</h3>
+<div class="outline-text-3" id="text-org0640866">
 <p>
 The Tripos consists of Part IA, IB and II and is supposed to take 3 years to achieve a BA honors degree. It is a fully immersive degree where all you do is math 6 days a week there is no other electives. Each year has 3 terms that are 80 days long: Michaelmas, Lent and Easter. Each term is 4 courses of 24 lectures each except Easter where <a href="https://www.maths.cam.ac.uk/undergrad/catam/part-ia-lectures">computational projects</a> are done and the exams. This is why it's considered a very hard degree because imagine taking 8 courses and having to know them so well that you can pass a series of 3 hour tests many months later. 
 </p>
@@ -664,17 +723,17 @@ During the term you work through 4 example sheets per course. These are usually 
 </div>
 </div>
 
-<div id="outline-container-org17fe0d3" class="outline-3">
-<h3 id="org17fe0d3">Curriculum</h3>
-<div class="outline-text-3" id="text-org17fe0d3">
+<div id="outline-container-orgff2b251" class="outline-3">
+<h3 id="orgff2b251">Curriculum</h3>
+<div class="outline-text-3" id="text-orgff2b251">
 <p>
 Here is the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.pdf">schedule</a> for 2023/2024s. Every year the tripos <a href="https://www.maths.cam.ac.uk/undergrad/lecturelists">publishes</a> their curriculum and sometimes professors post lecture notes on their personal sites or by students like <a href="https://thirdsgames.co.uk/maths.html">here</a> or <a href="https://www.neelnanda.io/about">Neel Nanda's</a> notes. Here is a sample recorded <a href="https://www.youtube.com/watch?v=71lsEVpKM88">lecture</a>. 
 </p>
 </div>
 
-<div id="outline-container-orga2bb080" class="outline-4">
-<h4 id="orga2bb080">Part IA (first year)</h4>
-<div class="outline-text-4" id="text-orga2bb080">
+<div id="outline-container-org78fea87" class="outline-4">
+<h4 id="org78fea87">Part IA (first year)</h4>
+<div class="outline-text-4" id="text-org78fea87">
 <p>
 Part IA is mandatory. Cambridge allows students to sit in on any lectures they want so often students attend 1B Groups/Rings lectures to fill in the theory. 
 </p>
@@ -709,9 +768,9 @@ Part IA is mandatory. Cambridge allows students to sit in on any lectures they w
 </div>
 </div>
 
-<div id="outline-container-org4de484d" class="outline-4">
-<h4 id="org4de484d">Part IB (second year)</h4>
-<div class="outline-text-4" id="text-org4de484d">
+<div id="outline-container-org8c27074" class="outline-4">
+<h4 id="org8c27074">Part IB (second year)</h4>
+<div class="outline-text-4" id="text-org8c27074">
 <p>
 We get a choice of courses so long as we don't break dependencies for Part II see the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.pdf">schedule</a>.
 </p>
@@ -744,9 +803,9 @@ We get a choice of courses so long as we don't break dependencies for Part II se
 </div>
 </div>
 
-<div id="outline-container-org0a836bb" class="outline-4">
-<h4 id="org0a836bb">Part II (third year)</h4>
-<div class="outline-text-4" id="text-org0a836bb">
+<div id="outline-container-org341cd53" class="outline-4">
+<h4 id="org341cd53">Part II (third year)</h4>
+<div class="outline-text-4" id="text-org341cd53">
 <p>
 Choose ~8 courses you're interested in.
 </p>
@@ -757,11 +816,11 @@ We can try Classical Mechanics and Differential Geometry to do Sussman's two boo
 </div>
 </div>
 
-<div id="outline-container-orgb61a2fa" class="outline-4">
-<h4 id="orgb61a2fa">Part III (Masters)</h4>
-<div class="outline-text-4" id="text-orgb61a2fa">
+<div id="outline-container-org0c27f08" class="outline-4">
+<h4 id="org0c27f08">Part III (Masters)</h4>
+<div class="outline-text-4" id="text-org0c27f08">
 <p>
-List of courses <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/part-iii-guide-courses">here</a> and we have access to the <a href="http://www.dpmms.cam.ac.uk/study/#PartIII">example sheets</a> for most topics. You get 9 months of instruction taking 5-7 graduate courses and are <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/current/tripos-examination-papers/2023">examined</a> in Easter term. Only 5 courses are examined and you only attempt 3 questions. They allow you to write an essay ~30 pages like a thesis to replace having to do a 3 hour exam on that course. This is similar to first year grad school for PhDs in North America except there is usually an <a href="https://web.math.princeton.edu/generals/conrad_brian">oral exam</a> with multiple examiners to see where you currently stand. 
+List of courses <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/part-iii-guide-courses">here</a> and we have access to the <a href="http://www.dpmms.cam.ac.uk/study/#PartIII">example sheets</a> for most topics. You get 9 months of instruction taking 5-7 graduate courses and are <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/current/tripos-examination-papers/2023">examined</a> in Easter term. Only 5 courses are examined and you only attempt 3 questions. They allow you to write an essay ~30 pages like a a summary basically of the subject to replace having to do a 3 hour exam on that course. This is similar to first year grad school for PhDs in North America except there is usually an <a href="https://web.math.princeton.edu/generals/conrad_brian">oral exam</a> with multiple examiners to see where you currently stand. 
 </p>
 
 <p>
@@ -772,17 +831,17 @@ If you wanted to try Part III the entire <a href="https://www.maths.cam.ac.uk/po
 </div>
 </div>
 
-<div id="outline-container-org21c2407" class="outline-2">
-<h2 id="org21c2407">Part 1A</h2>
-<div class="outline-text-2" id="text-org21c2407">
+<div id="outline-container-orgdece2aa" class="outline-2">
+<h2 id="orgdece2aa">Part 1A</h2>
+<div class="outline-text-2" id="text-orgdece2aa">
 <p>
 According to the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.pdf">schedule</a> for term 1 (Michaelmas) there is 4 mandatory courses of 24 lectures and if we don't have 'A-levels mechanics' we are supposed to take a crash course in classical mechanics.    
 </p>
 </div>
 
-<div id="outline-container-org1269a26" class="outline-3">
-<h3 id="org1269a26">Michaelmas</h3>
-<div class="outline-text-3" id="text-org1269a26">
+<div id="outline-container-org72352ac" class="outline-3">
+<h3 id="org72352ac">Michaelmas</h3>
+<div class="outline-text-3" id="text-org72352ac">
 <ul class="org-ul">
 <li><a href="./mechanics.html">Mechanics</a></li>
 <li><a href="./numbersandsets.html">Numbers and Sets</a></li>
@@ -792,9 +851,9 @@ According to the <a href="https://www.maths.cam.ac.uk/undergrad/files/schedules.
 </ul>
 </div>
 
-<div id="outline-container-org5126413" class="outline-4">
-<h4 id="org5126413">Study skills</h4>
-<div class="outline-text-4" id="text-org5126413">
+<div id="outline-container-org23c8657" class="outline-4">
+<h4 id="org23c8657">Study skills</h4>
+<div class="outline-text-4" id="text-org23c8657">
 <p>
 Students arriving in October are given <a href="https://www.maths.cam.ac.uk/undergrad/files/studyskills.pdf">this</a> leaflet on study skills in mathematics. In <a href="https://gowers.wordpress.com/2011/09/23/welcome-to-the-cambridge-mathematical-tripos/">this</a> post <i>Welcome to the Cambridge Mathematical Tripos</i> he recommmends we try and prove it all ourselves such as whenever we come across a Lemma in a book guess what it will be used for then try and prove it before reading further. Richard Borcherds in the beginning of <a href="https://www.youtube.com/watch?v=4WmIDodIgac&amp;list=PL8yHsr3EFj52XDLrmvrFDgwcf6XOm2TEE&amp;index=1">this</a> video shows how he writes down examples of what objects and functions a theory would need to include and abstracts out their common properties in order to find the axioms. We learn this in the course <i>Numbers and Sets</i>. 
 </p>
@@ -802,9 +861,9 @@ Students arriving in October are given <a href="https://www.maths.cam.ac.uk/unde
 </div>
 </div>
 
-<div id="outline-container-org9812d9f" class="outline-3">
-<h3 id="org9812d9f">Lent</h3>
-<div class="outline-text-3" id="text-org9812d9f">
+<div id="outline-container-orgcb6ef17" class="outline-3">
+<h3 id="orgcb6ef17">Lent</h3>
+<div class="outline-text-3" id="text-orgcb6ef17">
 <ul class="org-ul">
 <li>Dynamics and Relativity
 <ul class="org-ul">
@@ -818,9 +877,9 @@ TODO
 </div>
 </div>
 
-<div id="outline-container-orge65006d" class="outline-3">
-<h3 id="orge65006d">Easter</h3>
-<div class="outline-text-3" id="text-orge65006d">
+<div id="outline-container-orgb685464" class="outline-3">
+<h3 id="orgb685464">Easter</h3>
+<div class="outline-text-3" id="text-orgb685464">
 <ul class="org-ul">
 <li>Variational Principles (examined next year)</li>
 </ul>

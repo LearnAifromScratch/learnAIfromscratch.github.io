@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-17 Mon 09:51 -->
+<!-- 2025-07-18 Fri 22:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Differential Equations</title>
@@ -234,23 +234,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgdeeec42">Part 1A Michaelmas</a>
+<li><a href="#org94f98e1">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#orgdd11e07">Course</a></li>
+<li><a href="#orgb8adf71">Course</a></li>
+<li><a href="#orga5b90e9">Strategy</a></li>
 </ul>
 </li>
-<li><a href="#org8047ca2">Calculus crash course</a>
+<li><a href="#orgbfa1730">Cambridge Lecture 1</a></li>
+<li><a href="#org3e0c682">Calculus 101</a>
 <ul>
-<li><a href="#orgbc8b8ce">Exp and Log functions</a></li>
-<li><a href="#org1413bc7">Trig Functions</a></li>
-<li><a href="#org622df1e">Limits</a></li>
-<li><a href="#org2831dcc">Derivatives</a></li>
-<li><a href="#org88c02c5">Integrals</a></li>
-</ul>
-</li>
-<li><a href="#orgb0e6bc4">Cambridge Lecture 1</a>
-<ul>
-<li><a href="#org7e4a2aa">Notes</a></li>
+<li><a href="#orgacbba0d">Chapter 1</a></li>
 </ul>
 </li>
 </ul>
@@ -258,37 +251,30 @@
 </div>
 <hr />
 
-<div id="outline-container-orgdeeec42" class="outline-2">
-<h2 id="orgdeeec42">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-orgdeeec42">
+<div id="outline-container-org94f98e1" class="outline-2">
+<h2 id="org94f98e1">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-org94f98e1">
 <p>
 This is the first term of the <a href="./math.html">Mathematical Tripos</a> you should be taking this with the other first term courses at the same time as Cambridge designed it this way for a good reason.
 </p>
 </div>
 
-<div id="outline-container-orgdd11e07" class="outline-3">
-<h3 id="orgdd11e07">Course</h3>
-<div class="outline-text-3" id="text-orgdd11e07">
+<div id="outline-container-orgb8adf71" class="outline-3">
+<h3 id="orgb8adf71">Course</h3>
+<div class="outline-text-3" id="text-orgb8adf71">
 <ul class="org-ul">
-<li>Course notes are <a href="https://zb260.user.srcf.net/notes/">here</a> or <a href="http://dec41.user.srcf.net/notes/">here</a>
+<li>Course notes are <a href="https://zb260.user.srcf.net/notes/">here</a> or <a href="http://dec41.user.srcf.net/notes/">here</a> (both unofficial)
 <ul class="org-ul">
 <li>A guy on YouTube made <a href="https://www.youtube.com/playlist?list=PLC0PGB2LK3Rhtgl_2PgWMgajLtSCmNn57">lectures</a> for the course based on the notes</li>
 </ul></li>
-<li>This <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> that contains some of the Boyce book and also has boundary value problems and matches better with 1B content we'll be doing later
-<ul class="org-ul">
-<li>There is a problem <a href="https://stevenclontz.github.io/checkit-clontz-diff-eq/#/bank/">bank</a> with solutions</li>
-</ul></li>
 <li>The <a href="http://www.damtp.cam.ac.uk/user/examples/">sample sheets</a></li>
 </ul>
-
-<p>
-The above <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> covers basically everything in the recommended reading then we can use the <a href="https://book.sciml.ai/">SciML book</a> lectures to fill in the discrete content like recurrence relations/difference equations and learn Julia for the computational projects we'll have to do later. 
-</p>
 </div>
 
-<div id="outline-container-org64b1718" class="outline-4">
-<h4 id="org64b1718">Appropriate books</h4>
-<div class="outline-text-4" id="text-org64b1718">
+
+<div id="outline-container-orgcb824f7" class="outline-4">
+<h4 id="orgcb824f7">Schedule recommended books</h4>
+<div class="outline-text-4" id="text-orgcb824f7">
 <ul class="org-ul">
 <li>J. Robinson An introduction to Differential Equations. Cambridge University Press, 2004</li>
 <li>W.E. Boyce and R.C. DiPrima Elementary Differential Equations and Boundary-Value Problems. Wiley, 2004</li>
@@ -298,145 +284,33 @@ The above <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">f
 </div>
 </div>
 </div>
-</div>
 
-
-<div id="outline-container-org8047ca2" class="outline-2">
-<h2 id="org8047ca2">Calculus crash course</h2>
-<div class="outline-text-2" id="text-org8047ca2">
-<p>
-We completely skipped scalar calculus (single variable) in the prereqs so here is a crash course. Next term we learn Real Analysis anyway so everything here will be rigorously learned eventually. 
-</p>
-</div>
-
-<div id="outline-container-orgbc8b8ce" class="outline-3">
-<h3 id="orgbc8b8ce">Exp and Log functions</h3>
-<div class="outline-text-3" id="text-orgbc8b8ce">
-<p>
-Explained <a href="https://www.youtube.com/watch?v=vQydKnPxOJY">here</a> (Clemson Math 1060 sec 1.3). These Clemson U lectures average ~20m and are just the right difficulty if you forgot high school like most people so gaps will be filled in and there's lot's of constructions instead of descriptive/abstract definitions. 
-</p>
-
-<p>
-Logarithmic inverses, why does \(\large b^{log_b{(x)}} = x\)?
-</p>
-
+<div id="outline-container-orga5b90e9" class="outline-3">
+<h3 id="orga5b90e9">Strategy</h3>
+<div class="outline-text-3" id="text-orga5b90e9">
 <ul class="org-ul">
-<li>\(\large 2^{log_2{(1)}} = 2^0 = 1\)</li>
-<li>\(\large 2^{log_2{(2})} = 2^1 = 2\)</li>
-<li>\(\large 2^{log_2{(3})} \approx 2^{1.6} \approx 3\)</li>
-<li>\(\large 2^{log_2{(4})} = 2^2 = 4\)</li>
+<li>This <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> that contains some of the Boyce book and also has boundary value problems and matches better with 1B content we'll be doing later
+<ul class="org-ul">
+<li>There is a problem <a href="https://stevenclontz.github.io/checkit-clontz-diff-eq/#/bank/">bank</a> with solutions</li>
+</ul></li>
 </ul>
 
 <p>
-A base e log or ln(x) is often used instead of base 2 because \(\large log_{2}(x) = \frac{ln(x)}{ln(2)}\) meaning you are off only by a constant factor and now can enjoy all the nice properties e<sup>x</sup> and ln(x) have for doing quick approximations by hand. For small inputs where x<sup>2</sup> is evaluated smaller than x then e<sup>x</sup> can be approximated with 1 + x and ln(1 + x) can be approximated with x. To see how e<sup>time</sup> = growth and ln(growth) = time then <a href="https://betterexplained.com/articles/demystifying-the-natural-logarithm-ln/">read this</a>. 
-</p>
-
-<p>
-Notice how a log is a linearization of an exponent, if you log 2<sup>x</sup> then log(2<sup>x</sup>) = xlog(2) and you mapped a quadratic to a linear space. 
+We can use the <a href="https://book.sciml.ai/">SciML book</a> lectures to fill in the discrete content like recurrence relations/difference equations and learn Julia for the computational projects we'll have to do later. 
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org1413bc7" class="outline-3">
-<h3 id="org1413bc7">Trig Functions</h3>
-<div class="outline-text-3" id="text-org1413bc7">
+<div id="outline-container-orgbfa1730" class="outline-2">
+<h2 id="orgbfa1730">Cambridge Lecture 1</h2>
+<div class="outline-text-2" id="text-orgbfa1730">
 <p>
-If you don't remember trig at all try <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a> (Math 1060 sec 1.4) review of Trig functions and their inverses. Skip through and remind yourself that sin<sup>-1</sup> is not 1/sin. Where do those square root x/y coords come from on the unit circle? Explained in the <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a> (Brown University). Two right angle triangles (deg 30/60/90 and 45/45/90) need to be scaled down so the hypotenuse is 1 to fit on the unit circle.
+We have access to the first Cambridge lecture <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> where he covers a review of calculus we're supposed to know.
 </p>
 
 <p>
-We have just seen another linearization. Watch a few minutes of <a href="https://youtu.be/by0Gy1ZJ_hU?si=1TM8tv2c3TzE9xa_&amp;t=356">this</a> (Wildberger Rational Trig) starting @5:56 to see motion around a nonlinear curve being mapped to the linear motion of the two axis moving back and forth. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org622df1e" class="outline-3">
-<h3 id="org622df1e">Limits</h3>
-<div class="outline-text-3" id="text-org622df1e">
-<p>
-Skim through these, if you want to do exercises pause the video before he works out an example and do it yourself.  
-</p>
-
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=3U0JTtjPEMM">Limits</a> (Math 1060 sec 2.1) introduction and secants/tangents.</li>
-<li><a href="https://www.youtube.com/watch?v=iQTwviLhQwU">Informal definition</a> using approximations from the left and right.</li>
-<li><a href="https://www.youtube.com/watch?v=h7dfq5aD6E4">Techniques I</a> for computing limits.</li>
-<li><a href="https://www.youtube.com/watch?v=OBGalcQFwzI">Techniques II</a> we mainly need the squeeze theorem @16m.</li>
-<li><a href="https://www.youtube.com/watch?v=vrd9Fqxoue0">Infinite Limits</a> if the y-axis/output goes to infinity.</li>
-<li><a href="https://www.youtube.com/watch?v=rmlrZzB1NEY">Limits at Infinity</a> (Math 1060 2.5)</li>
-<li><a href="https://www.youtube.com/watch?v=gQlGn8OjVI8">Continuity</a> crash course on continuity on an interval.</li>
-</ul>
-</div>
-</div>
-
-
-<div id="outline-container-org2831dcc" class="outline-3">
-<h3 id="org2831dcc">Derivatives</h3>
-<div class="outline-text-3" id="text-org2831dcc">
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=Bjgu3i310pw">Derivative</a> (Math 1060 3.1) shows the geometry of a derivative at a point.</li>
-<li><a href="https://www.youtube.com/watch?v=sGQGsxNNO8k">Derivative as a Function</a> or x -&gt; x<sup>2</sup> derivative returns x -&gt; 2x for all 'points'/inputs</li>
-<li><a href="https://www.youtube.com/watch?v=rdGXPvMw_X8">Derivative Rules</a> the usual formulas, higher-order derivatives, e<sup>x</sup> is it's own derivative, and remark that differentiation is a linear operator.</li>
-<li><a href="https://www.youtube.com/watch?v=mnbuUndB8vk">L'Hopital's Rule I</a> and <a href="https://www.youtube.com/watch?v=-siZ4dMiCeI">II</a> is very similar to the definition of big-O.</li>
-</ul>
-</div>
-
-<div id="outline-container-orgfc08d77" class="outline-4">
-<h4 id="orgfc08d77">Watch when needed</h4>
-<div class="outline-text-4" id="text-orgfc08d77">
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=UF6koNYWE1s">Product Rule</a> (Math 1060 3.4) (fg)' = f'g + fg' and (f/g)' = (f'g - fg')/g<sup>2</sup></li>
-<li><a href="https://www.youtube.com/watch?v=o7yV_wUKy9M">Trig Derivatives</a> covers reciprocal limits too. Lightly skim this just so you know the derivative of sinx is cosx and that if you take the derivative of sinx 4x then it's a cycle that returns to sinx.</li>
-<li><a href="https://www.youtube.com/watch?v=xV2A2TO6A4I">Rates of Change</a> explains real life calculus meaning economic cost function derivatives and physics how the derivative of f(time) = position gives you f(time) = velocity. You can undo the velocity derivative to go back to the position function using indefinite integration.</li>
-<li><a href="https://www.youtube.com/watch?v=hCuyU0edOcE">Chain Rule</a> the derivative of function composition or f'(g)*g'</li>
-<li><a href="https://www.youtube.com/watch?v=RL0At1N-2FQ">Derivatives of Log/Exp</a> the derivative of e<sup>x</sup> or exp(x) is itself.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgdff3068" class="outline-4">
-<h4 id="orgdff3068">Optimization to watch when needed.</h4>
-<div class="outline-text-4" id="text-orgdff3068">
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=caKCSTGCl4M">Max/Min</a> (Math 1060 4.1) of a function.</li>
-<li><a href="https://www.youtube.com/watch?v=3LKdFF1mR8I">Mean Value Theorem</a> the point of the MVT is to establish a function with a positive derivative on an open interval would have to be increasing.</li>
-<li><a href="https://www.youtube.com/watch?v=kHWjjpBiMs0">What Derivatives Tell Us</a> about being +/- around a point then a local max/min</li>
-<li><a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor Series</a> (Essence of Calculus 11) now you know why polynomials exist and where factorial numbers can be generated.</li>
-<li><a href="https://www.youtube.com/watch?v=6kvCO2gHJZQ">Applied Optimization I</a> and <a href="https://www.youtube.com/watch?v=4qKG6XRVwe8">II</a> examples.</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org88c02c5" class="outline-3">
-<h3 id="org88c02c5">Integrals</h3>
-<div class="outline-text-3" id="text-org88c02c5">
-<p>
-In the first sample sheet we drill integrals you could wait until then to watch these while working through the practice problems. 
-</p>
-
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=CsutkSfozH8">Linear Approximation</a> and <a href="https://www.youtube.com/watch?v=hTjUvyBq8gA">Differentials</a> (Math 1060 4.6) dy = f'(c)dx or dy/dx = f'(point).</li>
-<li><a href="https://www.youtube.com/watch?v=HTa7jTU-72A">Indefinite integrals I</a> and <a href="https://www.youtube.com/watch?v=HTa7jTU-72A">II</a> the undo method for derivatives.</li>
-<li><a href="https://www.youtube.com/watch?v=lzCZLod2Z4I">Area Approximations</a> to set up the definite integral abstraction.</li>
-<li><a href="https://www.youtube.com/watch?v=pBXUUhb6YtU">Riemann Sums</a> and <a href="https://www.youtube.com/watch?v=o3sjROzOb3k">Definite Integral</a> constructions.</li>
-<li><a href="https://www.youtube.com/watch?v=FOgejRi7sNQ">Theorem of Calculus I</a> and <a href="https://www.youtube.com/watch?v=ntJmb8o9sOw">II</a> if you know 2x is the derivative of x<sup>2</sup> then b<sup>2</sup> - a<sup>2</sup> = the integral from a to b of 2x.</li>
-<li><a href="https://www.youtube.com/watch?v=he94PGxauVA">Mean Value Theorem</a> for integrals.</li>
-<li><a href="https://www.youtube.com/watch?v=JVC82ZDPGBY">Substitution Method Part I</a>, <a href="https://www.youtube.com/watch?v=2P3rBEUMutc">II</a> and <a href="https://www.youtube.com/watch?v=K90rWE8DBpU">III</a></li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgb0e6bc4" class="outline-2">
-<h2 id="orgb0e6bc4">Cambridge Lecture 1</h2>
-<div class="outline-text-2" id="text-orgb0e6bc4">
-<p>
-We have access to the first Cambridge lecture <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> where he covers a review of calculus we're supposed to know. We only need to know limits, the derivative and <a href="https://www.youtube.com/watch?v=hTjUvyBq8gA">differentials</a>. Later we go through all the notes as they define calculus from scratch in this course.  
-</p>
-
-<p>
-First definition we already know: the limit of the ratio f(a + h) - f(a) over h as h gets closer to 0 is the derivative. 'x naught' is x<sub>0</sub> notation meaning the same as f(a) where 'a' is supposed to be a specific point/input. Here are the <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">LH and RH limits</a>.
+First definition: the limit of the ratio f(a + h) - f(a) over h as h gets closer to 0 is the derivative. 'x naught' or x<sub>0</sub> notation means the same thing as f(a) they both represent a specific point/input but this is arbitrary so it's \(f(x_0)\) or \(f(a)\). Here are the <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">LH and RH limits</a>. 
 </p>
 
 <p>
@@ -444,7 +318,7 @@ Lets go through the f(x) = |x| example. Plug that into the derivative equation f
 </p>
 
 <p>
-Try an example for little-o where f(x) = x and g(x) = x<sup>2</sup> so f(x)/g(x) is x/x<sup>2</sup> = 1/x and if you crank inputs to x to infinity then the limit is 0.
+Try an example for little-o where f(x) = x and g(x) = x<sup>2</sup> so f(x)/g(x) is x/x<sup>2</sup> = 1/x and if you crank inputs x to infinity then the limit is 0.
 </p>
 
 <p>
@@ -467,16 +341,30 @@ Since h is tending towards 0, before we take the limit we know the remainder ter
 </p>
 
 <p>
-Some rules are introduced we already know like chain/product rules. He says to look over the notes and see how big-O is used in the proofs.
+Some rules are introduced like chain/product rules. He says to look over the notes and see how big-O is used in the proofs. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e0c682" class="outline-2">
+<h2 id="org3e0c682">Calculus 101</h2>
+<div class="outline-text-2" id="text-org3e0c682">
+<p>
+This course is about differentials so we should learn dx/dy notation. There's a free book for that called <a href="https://www.gutenberg.org/ebooks/33283">Calculus Made Easy</a> by Silvanus Thompson. We will rigorously learn differentiation and limits next term.
+</p>
+
+<p>
+There's a sheet we have to try after called <a href="https://www.damtp.cam.ac.uk/user/examples/A3La.pdf">Practice Integrals</a>. 
 </p>
 </div>
 
-<div id="outline-container-org7e4a2aa" class="outline-3">
-<h3 id="org7e4a2aa">Notes</h3>
-<div class="outline-text-3" id="text-org7e4a2aa">
+<div id="outline-container-orgacbba0d" class="outline-3">
+<h3 id="orgacbba0d">Chapter 1</h3>
+<div class="outline-text-3" id="text-orgacbba0d">
 <p>
-The notes are <a href="http://dec41.user.srcf.net/h/IA_M/differential_equations/">here</a> let's combine these with the first sample sheet on integrals to learn up to partial derivatives then we can start our <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">course</a>.
+Reading <a href="https://www.gutenberg.org/files/33283/33283-pdf.pdf">Calculus Made Easy</a>. 
 </p>
+
 
 <p>
 TODO

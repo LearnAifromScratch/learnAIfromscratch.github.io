@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-07-18 Fri 22:42 -->
+<!-- 2025-07-19 Sat 20:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Differential Equations</title>
@@ -234,16 +234,17 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org94f98e1">Part 1A Michaelmas</a>
+<li><a href="#org5abcb4c">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#orgb8adf71">Course</a></li>
-<li><a href="#orga5b90e9">Strategy</a></li>
+<li><a href="#org0e24831">Course</a></li>
+<li><a href="#orgca3edd1">Strategy</a></li>
 </ul>
 </li>
-<li><a href="#orgbfa1730">Cambridge Lecture 1</a></li>
-<li><a href="#org3e0c682">Calculus 101</a>
+<li><a href="#org89aa964">Cambridge Lecture 1</a></li>
+<li><a href="#orgcc53f6f">Calculus 101</a>
 <ul>
-<li><a href="#orgacbba0d">Chapter 1</a></li>
+<li><a href="#org576805d">Invent derivatives yourself</a></li>
+<li><a href="#orgd70b068">Integration</a></li>
 </ul>
 </li>
 </ul>
@@ -251,17 +252,17 @@
 </div>
 <hr />
 
-<div id="outline-container-org94f98e1" class="outline-2">
-<h2 id="org94f98e1">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-org94f98e1">
+<div id="outline-container-org5abcb4c" class="outline-2">
+<h2 id="org5abcb4c">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-org5abcb4c">
 <p>
 This is the first term of the <a href="./math.html">Mathematical Tripos</a> you should be taking this with the other first term courses at the same time as Cambridge designed it this way for a good reason.
 </p>
 </div>
 
-<div id="outline-container-orgb8adf71" class="outline-3">
-<h3 id="orgb8adf71">Course</h3>
-<div class="outline-text-3" id="text-orgb8adf71">
+<div id="outline-container-org0e24831" class="outline-3">
+<h3 id="org0e24831">Course</h3>
+<div class="outline-text-3" id="text-org0e24831">
 <ul class="org-ul">
 <li>Course notes are <a href="https://zb260.user.srcf.net/notes/">here</a> or <a href="http://dec41.user.srcf.net/notes/">here</a> (both unofficial)
 <ul class="org-ul">
@@ -272,9 +273,9 @@ This is the first term of the <a href="./math.html">Mathematical Tripos</a> you 
 </div>
 
 
-<div id="outline-container-orgcb824f7" class="outline-4">
-<h4 id="orgcb824f7">Schedule recommended books</h4>
-<div class="outline-text-4" id="text-orgcb824f7">
+<div id="outline-container-org37a4968" class="outline-4">
+<h4 id="org37a4968">Schedule recommended books</h4>
+<div class="outline-text-4" id="text-org37a4968">
 <ul class="org-ul">
 <li>J. Robinson An introduction to Differential Equations. Cambridge University Press, 2004</li>
 <li>W.E. Boyce and R.C. DiPrima Elementary Differential Equations and Boundary-Value Problems. Wiley, 2004</li>
@@ -285,10 +286,11 @@ This is the first term of the <a href="./math.html">Mathematical Tripos</a> you 
 </div>
 </div>
 
-<div id="outline-container-orga5b90e9" class="outline-3">
-<h3 id="orga5b90e9">Strategy</h3>
-<div class="outline-text-3" id="text-orga5b90e9">
+<div id="outline-container-orgca3edd1" class="outline-3">
+<h3 id="orgca3edd1">Strategy</h3>
+<div class="outline-text-3" id="text-orgca3edd1">
 <ul class="org-ul">
+<li>The free <a href="https://classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">book</a> <i>The Calculus Integral</i> since we have to learn integration anyway for differential equations and a few other courses in this same term (and next term) require skills from that book we may as well learn it all here</li>
 <li>This <a href="http://www.math.clemson.edu/~macaule/classes/m17_math2080/">full course</a> that contains some of the Boyce book and also has boundary value problems and matches better with 1B content we'll be doing later
 <ul class="org-ul">
 <li>There is a problem <a href="https://stevenclontz.github.io/checkit-clontz-diff-eq/#/bank/">bank</a> with solutions</li>
@@ -296,21 +298,21 @@ This is the first term of the <a href="./math.html">Mathematical Tripos</a> you 
 </ul>
 
 <p>
-We can use the <a href="https://book.sciml.ai/">SciML book</a> lectures to fill in the discrete content like recurrence relations/difference equations and learn Julia for the computational projects we'll have to do later. 
+We can use the <a href="https://book.sciml.ai/">SciML book</a> lectures to fill in the discrete content like recurrence relations/difference equations and learn Julia for the computational projects we'll have to do later.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgbfa1730" class="outline-2">
-<h2 id="orgbfa1730">Cambridge Lecture 1</h2>
-<div class="outline-text-2" id="text-orgbfa1730">
+<div id="outline-container-org89aa964" class="outline-2">
+<h2 id="org89aa964">Cambridge Lecture 1</h2>
+<div class="outline-text-2" id="text-org89aa964">
 <p>
-We have access to the first Cambridge lecture <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> where he covers a review of calculus we're supposed to know.
+We have access to the first Cambridge lecture <a href="https://www.youtube.com/watch?v=5W3PWVgaGgQ">here</a> where he covers a review of calculus we're supposed to know. You can watch this after Calculus 101 if you want it doesn't matter. 
 </p>
 
 <p>
-First definition: the limit of the ratio f(a + h) - f(a) over h as h gets closer to 0 is the derivative. 'x naught' or x<sub>0</sub> notation means the same thing as f(a) they both represent a specific point/input but this is arbitrary so it's \(f(x_0)\) or \(f(a)\). Here are the <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">LH and RH limits</a>. 
+First definition: the limit of the ratio f(a + h) - f(a) over h as h gets closer to 0 is the derivative. 'x naught' or x<sub>0</sub> notation means the same thing as f(a) they both represent a specific point/input but this is arbitrary (any point) so it's \(f(x_0)\) or \(f(a)\). The h represents a tiny decimal that is tending towards h. Here are the <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">LH and RH limits</a>. 
 </p>
 
 <p>
@@ -337,7 +339,7 @@ Example 3 if f(x) = x<sup>2</sup> then plugging it into the derivative equation:
 </ul>
 
 <p>
-Since h is tending towards 0, before we take the limit we know the remainder term h<sup>2</sup> is going to be so small it will approach 0 before we take the limit of h to zero so this is 2xh/h + o(h). Try examples if h = .0001 then check what .0001<sup>2</sup> is.
+Since h is tending towards 0, before we take the limit we know the remainder term h<sup>2</sup> is going to be so small it will approach 0 before we take the limit of h to zero so this is 2xh/h + o(h) though usually h<sup>2</sup> is just ignored/junked. Try examples if h = .0001 then check what (.0001)<sup>2</sup> is.
 </p>
 
 <p>
@@ -346,23 +348,77 @@ Some rules are introduced like chain/product rules. He says to look over the not
 </div>
 </div>
 
-<div id="outline-container-org3e0c682" class="outline-2">
-<h2 id="org3e0c682">Calculus 101</h2>
-<div class="outline-text-2" id="text-org3e0c682">
+<div id="outline-container-orgcc53f6f" class="outline-2">
+<h2 id="orgcc53f6f">Calculus 101</h2>
+<div class="outline-text-2" id="text-orgcc53f6f">
 <p>
-This course is about differentials so we should learn dx/dy notation. There's a free book for that called <a href="https://www.gutenberg.org/ebooks/33283">Calculus Made Easy</a> by Silvanus Thompson. We will rigorously learn differentiation and limits next term.
-</p>
-
-<p>
-There's a sheet we have to try after called <a href="https://www.damtp.cam.ac.uk/user/examples/A3La.pdf">Practice Integrals</a>. 
+There's a sheet we have to try after called <a href="https://www.damtp.cam.ac.uk/user/examples/A3La.pdf">Practice Integrals</a>.
 </p>
 </div>
 
-<div id="outline-container-orgacbba0d" class="outline-3">
-<h3 id="orgacbba0d">Chapter 1</h3>
-<div class="outline-text-3" id="text-orgacbba0d">
+<div id="outline-container-org576805d" class="outline-3">
+<h3 id="org576805d">Invent derivatives yourself</h3>
+<div class="outline-text-3" id="text-org576805d">
 <p>
-Reading <a href="https://www.gutenberg.org/files/33283/33283-pdf.pdf">Calculus Made Easy</a>. 
+Go to desmos.com and make a graph f(x) = x<sup>2</sup> and notice this is not linear because it does not have the <a href="https://en.wikipedia.org/wiki/Superposition_principle">superposition property</a>. A (line)ar line would be a straight line not a curved line meaning if you scaled it with multiplication such as 3(f(x)) and f(3x) the result would be the same. The input f(2) + f(2) and f(2+2) would also be the same if this were linear.
+</p>
+
+<p>
+How can we make a linear approximation? Let's try super zooming in on a point in that graph so all the surrounding points in it's neighborhood appear to be sitting on a straight line. This is like when you are at the beach and notice the distant ocean horizon is a straight line even though the earth is curved that's because you're standing on a super zoomed point. Add the point (2, 4) and the point (2.001, 4.004) then zoom that point as I have done <a href="https://www.desmos.com/calculator/sgnobnimpu">here</a>. 
+</p>
+
+<p>
+When you step off the graph to the horizontal right direction of the x-axis by 0.001 you have to move up towards the y-axis 0.004 in order to meet the graph again. Let's call these dx = 0.001 and dy = 0.004 and to go from dx to dy it is 4dx or f(2 + dx) = 2 + 4dx. If you try this for (3.001, 9.006) then f(3 + dx) = 3 + 6dx and f(4 + dx) = 4 + 8dx.
+</p>
+
+<p>
+Taking all the examples, and looking at the notation f(x + dx) = x<sup>2</sup> + dx this is really y + dy = y + (2x)dx once function application is done. This means y - y + dy = (2x)dx or dy = (2x)dx or dy/dx = 2x. What is 2x? It was the rise/run or tangent slope and is the derivative of that function. 
+</p>
+
+<p>
+We have discovered that f(x) = x<sup>2</sup> is f'(x) = 2x where that ' tick denotes derivative or using our differentials notation \(\frac{dy}{dx}x^2 = 2x\) 
+</p>
+
+
+<p>
+To guarantee you will always have a straight line approximation these dx quantities have to be so small they are infinitesimal or a tiny amount such as dx = 0.001 but instead of 2 zeros you add 'infinitesimally many zeros' meaning dx has the property that it's smaller than the nucleus of an atom but not actually zero. The product of two infinitesimals is zero since if you recall <a href="https://www.mathsisfun.com/multiplying-decimals.html">decimal multiplication</a> you would shift the decimal point left adding an infintesimal amount of more zeros to an existing infintesimal and now it's just zero since it is indistinguishable from nothing. Adding two infinitesimals gives another infinitesimal since you aren't moving the decimal point. The problem with this definition is there does not exist any numbers with the property that when you multiply a non-zero quantity with another non-zero quantity it becomes zero. Thus real numbers and limits were invented so now we can pretend these infinitesimals are approaching zero and take their limit as 0.
+</p>
+
+<p>
+In single variable aka scalar calculus a linear approximation is a 2D tangent or the straight line magnification. In vector or multi-variable calculus we now have 3D objects and their linear approximation is a magnification all around a (x, y, z) point who's neighbors are now on a flat surface or an entire 2D <a href="https://math.libretexts.org/Courses/University_of_California_Davis/UCD_Mat_21C%3A_Multivariate_Calculus/13%3A_Partial_Derivatives/13.6%3A_Tangent_Planes_and_Differentials">plane.</a> You use something called a gradient which converts vectors to a scalar and in this case the output tells you where the 2D plane is orthogonal (90 deg) and is the z-axis coordinate of where this plane surrounding the point is as depicted in <a href="https://www.geogebra.org/m/atemfwdv">GeoGebra</a>.  
+</p>
+
+<p>
+There's formulas for derivatives if you search for them like every power function \(x^n\) is \(nx^{n-1}\) example x<sup>2</sup> is 2x<sup>1</sup> meaning constants are wiped out such as f(x) = 3 because this is really f(x) = 3x<sup>0</sup> and of course when you lower the 0 exponent and multiply the expression by 0 it's gone.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd70b068" class="outline-3">
+<h3 id="orgd70b068">Integration</h3>
+<div class="outline-text-3" id="text-orgd70b068">
+<p>
+Honestly derivatives are now all computed with a compiler trick (if the derivative exists, often it doesn't) and the only calculus you will ever do by hand is likely integration for both this course (differential eqs) and probability and statistics. "By hand" means you will still use a program to do it like Mathematica or whatever but will have to know what it all means.
+</p>
+
+<p>
+The original purpose of integration was to undo a derivative so if the first derivative of x<sup>2</sup> is 2x and the second derivative of 2x is 2 then integrating twice from the second derivative will get you back to the original function x<sup>2</sup> and in a physics interpretation this has meaning like the first derivative of time/position is velocity and the second derivative is acceleration (then the jerk, the snap, etc) and you can move between them using integration. They call this the 'fundamental theorem of calculus' in undergrad but you will never see this term used in grad school. 
+</p>
+
+<p>
+This of course requires you to already know the derivative of a function in order to undo it using an integral. If you don't know the original function then you can try using Riemann sums to approximate the area underneath a curve which is a convoluted method taught in every undergrad and high school that was replaced over 100+ years ago by the Lebesgue integral which itself was generalized/replaced by the Henstock-Kurzweil integral in the 1960s.
+</p>
+</div>
+
+<div id="outline-container-org1a77007" class="outline-4">
+<h4 id="org1a77007">Calculus in 2025</h4>
+<div class="outline-text-4" id="text-org1a77007">
+<p>
+Since convergence and other analysis topics are required this term anyway we may as well just learn a modern calculus course instead of screwing around with half-measures like 'A-levels Calculus' and other time wasting material.
+</p>
+
+<p>
+This means we need to go through <i>The Calculus Integral</i> a <a href="https://classicalrealanalysis.info/com/FREE-PDF-DOWNLOADS.php">free</a> modernized calculus text from B.S. Thomson of ClassicalRealAnalysis.com
 </p>
 
 
@@ -373,6 +429,7 @@ TODO
 <p>
 <a href="./math.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

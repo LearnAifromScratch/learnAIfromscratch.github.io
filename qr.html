@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-07-21 Mon 20:01 -->
+<!-- 2025-07-21 Mon 20:15 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Quant Trading &amp; Research</title>
@@ -202,25 +202,24 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf857783">What does a QR do?</a></li>
-<li><a href="#orgf0b7bb8">What does an 'assistant' QR do?</a></li>
-<li><a href="#orgb5337e8">You can get directly into QR and skip the rest of university</a></li>
-</ul>
-</li>
-<li><a href="#org78b693f">What are the basics?</a>
+<li><a href="#org4fc4620">What does a QR do?</a>
 <ul>
-<li><a href="#org92d8c32">Game Theoretic Probability</a></li>
+<li><a href="#orgf26d5a2">What does an 'assistant' QR do?</a></li>
+<li><a href="#orgbe2154b">You can skip the rest of university</a></li>
+<li><a href="#org564f707">What are the basics?</a></li>
+<li><a href="#org3006688">Martingaling</a></li>
 </ul>
 </li>
-<li><a href="#org59f9a90">Martingaling</a></li>
-<li><a href="#org485284c">Probability</a></div>
+<li><a href="#org9fe250f">Probability</a></li>
+</ul>
+</div>
 </div>
 <style>details summary { color: green; }</style>
 
 
-<div id="outline-container-orgf857783" class="outline-3">
-<h3 id="orgf857783">What does a QR do?</h3>
-<div class="outline-text-3" id="text-orgf857783">
+<div id="outline-container-org4fc4620" class="outline-2">
+<h2 id="org4fc4620">What does a QR do?</h2>
+<div class="outline-text-2" id="text-org4fc4620">
 <p>
 A good breakdown of quantitative research/trading is <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">here</a> and the same author's <a href="http://isomorphisms.sdf.org/maxdama.pdf">PDF</a> floating around from 2011 on algorithmic trading that he was forced to abandon upon signing NDAs. Note that he doesn't agree anymore with his old notes they should just be a curious read and none of the recommendations for mental math or anything else followed.  
 </p>
@@ -233,11 +232,10 @@ I have witnessed a large chunk of their time is spent in meetings because if you
 During this time there's a ton of other work to do that's where you come in as the lackey assistant or trainee researcher. 
 </p>
 </div>
-</div>
 
-<div id="outline-container-orgf0b7bb8" class="outline-3">
-<h3 id="orgf0b7bb8">What does an 'assistant' QR do?</h3>
-<div class="outline-text-3" id="text-orgf0b7bb8">
+<div id="outline-container-orgf26d5a2" class="outline-3">
+<h3 id="orgf26d5a2">What does an 'assistant' QR do?</h3>
+<div class="outline-text-3" id="text-orgf26d5a2">
 <p>
 You can easily spot the shitwork from the above blog <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">post</a> that a professional researcher would love to dump on some eager trainee. Even if there is a small army of teams set up for the QR department there is always something tedious they would rather someone else to do for them like maintenance of the research infrastructure, writing documentation, analysis of the production system so the parameters can be tweaked, or reconciliation tasks or regulatory stuff end of day if you can be trusted with that work.
 </p>
@@ -256,26 +254,26 @@ This is possible only if you sell yourself as a reliable portal where increasing
 </div>
 </div>
 
-<div id="outline-container-orgb5337e8" class="outline-3">
-<h3 id="orgb5337e8">You can get directly into QR and skip the rest of university</h3>
-<div class="outline-text-3" id="text-orgb5337e8">
+<div id="outline-container-orgbe2154b" class="outline-3">
+<h3 id="orgbe2154b">You can skip the rest of university</h3>
+<div class="outline-text-3" id="text-orgbe2154b">
 <p>
-If you are at a fancy school and you can land an internship during the summer then if it goes well they will offer you a large amount of money to drop out and learn on the job. Where I am does this all the time now trying to entice kids to forget about the degree we will teach you everything you need like having your own personal professor except now you are getting paid. I am always surprised when the kids say no because they think the piece of paper means something. It's like being interested in Cosmology and the world's best Cosmologist offers to personally train you and pay you an enormous amount of money but you decide nah I'm going screw around another 2-3 years taking watered down courses that I will never need. 
+If you are at a fancy school and you can land an internship during the summer then if it goes well they likely will offer you a large amount of money to drop out and learn on the job. Where I am does this all the time now trying to entice kids to forget about the degree we will teach you everything you need like having your own personal professor except now you are getting paid. I am always surprised when the kids say no because they think the piece of paper means something. It's like being interested in Cosmology and the world's best Cosmologist offers to personally train you and pay you an enormous amount of money but you decide nah I'm going screw around another 2-3 years taking watered down courses that I will never need. 
 </p>
 
 <p>
-Everything you learn in undergrad has to be re-taught anyway I can list a dozen things that are promptly thrown out that they drill you with in undergrad such as Rolle's theorem (special case of the MVT and worthless), the useless Riemann integral, almost all the linear algebra you learned is 1970s junk because today matrices are so massive they have to be randomized (jack polynomials). All your work is now in high-dimensional black boxes and adaptive importance sampling is used to integrate to re-weigh everything.
+Everything you learn in undergrad has to be re-taught anyway I can list a dozen things that are promptly thrown out that they drill you with in undergrad such as Rolle's theorem (special case of the MVT and worthless), the Riemann integral (garbage), almost all the linear algebra you learned (junk) as today matrices are so massive they have to be randomized (jack polynomials). All your work is now in high-dimensional black boxes and adaptive importance sampling is used to integrate to re-weigh everything and other tricks not taught in undergrad.
 </p>
 
 <p>
-The only true qualifications are you have an enormous appetite for self-directed data analysis research and that you can communicate this to other people when needed. The bare minimums are stochastic model basics (this just means probability) and to add some icing to the cake you maybe did something interesting like you learned how to reduce the variance of a discrete event simulation. Any simulation where the process is characterized by a state, with changes only at discrete time points (DES) such as stock prices is an example of this. There is a DES technique called <i>future event simulation</i> which is a schedule that updates the system and clock and all of this is learned when you get there, no need to take it now except the basics of data analysis which we will now do.
+The only true qualifications are you have an enormous appetite for self-directed data analysis research and that you can communicate this to other people when needed. The bare minimums are stochastic modeling basics (this just means probability) and to add some icing to the cake you maybe did something interesting like you learned how to reduce the variance of a discrete event simulation. Any simulation where the process is characterized by a state, with changes only at discrete time points (DES) such as stock prices is an example of this. There is a DES technique called <i>future event simulation</i> which is a schedule that updates the system and clock and all of this is learned when you get there, no need to take it now except the basics of data analysis which we will now do.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org78b693f" class="outline-2">
-<h2 id="org78b693f">What are the basics?</h2>
-<div class="outline-text-2" id="text-org78b693f">
+<div id="outline-container-org564f707" class="outline-3">
+<h3 id="org564f707">What are the basics?</h3>
+<div class="outline-text-3" id="text-org564f707">
 <p>
 I assume you can program so all you need is the basics of data analysis on noisy but semi-structured data meaning S-expressions, JSON, Apache Parquet column-oriented files, etc. 
 </p>
@@ -297,9 +295,9 @@ This is truly all you need to start. No I'm not joking. You can learn more <a hr
 </p>
 </div>
 
-<div id="outline-container-org27063b5" class="outline-4">
-<h4 id="org27063b5">Optional</h4>
-<div class="outline-text-4" id="text-org27063b5">
+<div id="outline-container-org843db49" class="outline-4">
+<h4 id="org843db49">Optional</h4>
+<div class="outline-text-4" id="text-org843db49">
 <ul class="org-ul">
 <li><a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> 
 <ul class="org-ul">
@@ -319,9 +317,9 @@ Transformers (LLMs) are used for things you wouldn't expect like predicting <i>4
 </div>
 </div>
 
-<div id="outline-container-org92d8c32" class="outline-3">
-<h3 id="org92d8c32">Game Theoretic Probability</h3>
-<div class="outline-text-3" id="text-org92d8c32">
+<div id="outline-container-orgc253a79" class="outline-4">
+<h4 id="orgc253a79">Game Theoretic Probability</h4>
+<div class="outline-text-4" id="text-orgc253a79">
 <p>
 I'm personally interested in <a href="https://probabilityandfinance.com/">Game-Theoretic Probability</a> where essentially all concepts of randomness are thrown out. Probabilities are now forecasts and statistical models are tested with betting and non-stochastic. If you've ever been highly skeptical of stock markets being supposedly stochastic instead of a game played by multiple participants then you'll probably want to take this too. One of the authors Glenn Shafer designed a simple <a href="https://www.youtube.com/watch?v=qKWF737Av2o">betting</a> test for statistics tossing out p-values. 
 </p>
@@ -329,22 +327,27 @@ I'm personally interested in <a href="https://probabilityandfinance.com/">Game-T
 </div>
 </div>
 
-<div id="outline-container-org59f9a90" class="outline-2">
-<h2 id="org59f9a90">Martingaling</h2>
-<div class="outline-text-2" id="text-org59f9a90">
+<div id="outline-container-org3006688" class="outline-3">
+<h3 id="org3006688">Martingaling</h3>
+<div class="outline-text-3" id="text-org3006688">
 <p>
 The craziest example of casino martingaling can be seen in the <a href="https://www.youtube.com/watch?v=iSpRI8oXI9g">videos</a> floating around of Dana White filling up a blackjack table with markers going deep into debt and then paying them all off. Strategies where you bet more when you are losing and less (or quitting) when you are winning obscures the risk of large losses and are called martingales.
 </p>
 
 <p>
-This is not limited to sports betting or casinos. Corporate executives and professional financial traders deceive themselves with martingales all the time. A good paper to read is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4488359">The Martingale Index</a> by Shafer/Dimitrov to ensure that's never your strategy as it's an easy trap to fall into and also easy to spot when someone else in the market is martingaling and you can bet against them. 
+This is not limited to sports betting or casinos. Corporate executives and professional financial traders deceive themselves with martingales all the time. A good paper to read is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4488359">The Martingale Index</a> by Shafer/Dimitrov to ensure that's never your strategy as it's an easy trap to fall into and also easy to spot when someone else in the market is martingaling and you can bet against them.
+</p>
+
+<p>
+Never, ever, martingale. I will include everything I can about it to prevent you from doing it because I did it myself not even knowing at first. Thankfully I was lucky otherwise disaster could have happened.  
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org485284c" class="outline-2">
-<h2 id="org485284c">Probability</h2>
-<div class="outline-text-2" id="text-org485284c">
+<div id="outline-container-org9fe250f" class="outline-2">
+<h2 id="org9fe250f">Probability</h2>
+<div class="outline-text-2" id="text-org9fe250f">
 <p>
 Everything here will eventually be in the <a href="./math.html">Tripos</a> so you may want to just take that.
 </p>

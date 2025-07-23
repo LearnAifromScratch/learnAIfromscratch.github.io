@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-25 Tue 20:19 -->
+<!-- 2025-07-23 Wed 06:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2025</title>
@@ -194,6 +194,38 @@
   .org-svg { }
 </style>
 <style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -202,30 +234,29 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgcd2366a">Intro</a></li>
-<li><a href="#org6df95cb">Curriculum</a>
+<li><a href="#orgfbc3cad">Intro</a></li>
+<li><a href="#org0ab3463">Curriculum</a>
 <ul>
-<li><a href="#org325bd56">Linear Algebra options</a></li>
-<li><a href="#org56fdd44">Linear Algebra resources I'll do here</a></li>
-<li><a href="#org4a6ae08">Calculus resources I'll do here</a></li>
+<li><a href="#org56693ca">Linear Algebra</a></li>
+<li><a href="#org6a4b8fa">Basic calculus</a></li>
 </ul>
 </li>
-<li><a href="#org67df801">Day 1 Neuroscience Models</a></li>
-<li><a href="#org7eee965">Day 2 Applied Calculus</a>
+<li><a href="#orgb580e9b">Day 1 Neuroscience Models</a></li>
+<li><a href="#org7de17cf">Day 2 Calculus</a>
 <ul>
-<li><a href="#org8e32b0d">1.1 Functions</a></li>
-<li><a href="#org3ed9e81">1.2 Multivariable Functions</a></li>
-<li><a href="#org151f19e">1.3 Linear Functions</a></li>
+<li><a href="#orgbc36f72">Derivatives</a></li>
+<li><a href="#org242981e">Limits</a></li>
 </ul>
 </li>
+<li><a href="#orgc1169db">Day 3 Integrals</a></li>
 </ul>
 </div>
 </div>
-<style>details summary { color: green; }</style>
 
-<div id="outline-container-orgcd2366a" class="outline-2">
-<h2 id="orgcd2366a">Intro</h2>
-<div class="outline-text-2" id="text-orgcd2366a">
+
+<div id="outline-container-orgfbc3cad" class="outline-2">
+<h2 id="orgfbc3cad">Intro</h2>
+<div class="outline-text-2" id="text-orgfbc3cad">
 <p>
 We will learn the 'full stack' of modern deep learning systems by building our own library from scratch in your language of choice. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most popular currently is transformer architecture for large language models like ChatGPT. We'll learn how to reverse engineer these models. 
 </p>
@@ -233,28 +264,20 @@ We will learn the 'full stack' of modern deep learning systems by building our o
 <p>
 <a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a suggested <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for reverse engineering transformers. He even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program or you can claim bounties for GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a> as a freelancer.
 </p>
-
-<p>
-I broke this up into days to see how long it will take and they simply represent a block of time in a single day where I worked on something here. You don't have to do this consecutively everyday.
-</p>
 </div>
 
-<div id="outline-container-org50507c6" class="outline-4">
-<h4 id="org50507c6">Many iterations of this</h4>
-<div class="outline-text-4" id="text-org50507c6">
+<div id="outline-container-org9354e52" class="outline-4">
+<h4 id="org9354e52">Theory</h4>
+<div class="outline-text-4" id="text-org9354e52">
 <p>
-I nuked this curriculum and stalled it dozens of times for the simple reason it was too expensive to get into but now the GPU bubble finally popped letting us plebs access to hardware to train our own models.  
-</p>
-
-<p>
-I learned the theory from taking Waterloo's CS485 <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">here</a> it is the best course for machine learning you will ever take and goes through the entire mathematical model assuming you have zero background by the Israeli author of <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">Understanding Machine Learning</a>. The theory of learning will not change. CMU still uses this book in their PhD track ML <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">course</a>.
+Waterloo's CS485 <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">here</a> is the best course for machine learning theory you will ever take and goes through the entire mathematical model assuming you have zero background by the Israeli author of <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">Understanding Machine Learning</a>. The theory of learning will not change so this is timeless. CMU still uses this book in their PhD track ML <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">course</a>. I'll go through it in Part II <a href="./math.html">here</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgea2bc17" class="outline-4">
-<h4 id="orgea2bc17">Limits of AI</h4>
-<div class="outline-text-4" id="text-orgea2bc17">
+<div id="outline-container-org3565381" class="outline-4">
+<h4 id="org3565381">Limits of AI</h4>
+<div class="outline-text-4" id="text-org3565381">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -262,9 +285,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-org6df95cb" class="outline-2">
-<h2 id="org6df95cb">Curriculum</h2>
-<div class="outline-text-2" id="text-org6df95cb">
+<div id="outline-container-org0ab3463" class="outline-2">
+<h2 id="org0ab3463">Curriculum</h2>
+<div class="outline-text-2" id="text-org0ab3463">
 <ul class="org-ul">
 <li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> (CMU)
 <ul class="org-ul">
@@ -287,42 +310,23 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </ul>
 </div>
 
-<div id="outline-container-org325bd56" class="outline-3">
-<h3 id="org325bd56">Linear Algebra options</h3>
-<div class="outline-text-3" id="text-org325bd56">
+<div id="outline-container-org56693ca" class="outline-3">
+<h3 id="org56693ca">Linear Algebra</h3>
+<div class="outline-text-3" id="text-org56693ca">
 <p>
-There is no shortage of excellent linear algebra courses. These are only what I have reviewed there's tons more if you don't want to do them. 
+There is no shortage of excellent linear algebra courses. These are the one's I will do here:
 </p>
 
 <ul class="org-ul">
 <li><a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">Coding the Matrix</a> (Brown)
 <ul class="org-ul">
 <li>All the recorded lectures are open to anyone</li>
-<li>Programmed w/Python and has a (nonfree) <a href="https://codingthematrix.com/">book</a>
-<ul class="org-ul">
-<li>I did this book in OCaml and it worked out fine</li>
-</ul></li>
+<li>Programmed w/Python and has a (nonfree) <a href="https://codingthematrix.com/">book</a></li>
 </ul></li>
 </ul>
 
 <p>
-Created by Philip Klein a name you will recognize if you take any algorithms course. He uses the complex field mostly to illustrate how linear transformations (mappings) work. The SVD is covered which we'll need. The book is at least cheap ($35) and worth buying or you can use Anna's Archive or whatever the latest Library Genesis domain is to get a pdf but it will likely be missing a lot of graphical content. This is a very good course for anyone interested in game graphics or taking an algorithms design course and wants to manipulate graphs using linear algebra. If you hate everything else here then do this you'll be fine.  
-</p>
-
-<ul class="org-ul">
-<li><a href="https://github.com/mitmath/1806/blob/spring20/summaries.md">Modernized 18.06</a> (MIT)
-<ul class="org-ul">
-<li>Alan Edelman's course that teaches intuition</li>
-<li>No pivots, no echelon forms, no free variables, no hand computation</li>
-<li>Treats the SVD as it's own independent thing not some Eigenwhatever</li>
-<li>Almost entirely programmed</li>
-<li>Lectures got locked up by MIT logins but were once open</li>
-<li>All other materials like solutions to homework/recitations are open</li>
-</ul></li>
-</ul>
-
-<p>
-Strang had a stranglehold on MIT's linear algebra curriculum for decades and Edelman came along and shredded it. Now that Strang is retired maybe we'll see the new 18.06 lectures soon. I simply can't follow any book or lecture by Strang it's just disjointed rambling to me.  
+Created by Philip Klein a name you will recognize if you take any algorithms course. Probability and the SVD is covered which we'll need. The book is at least cheap ($35) and worth buying or you can use <a href="https://annas-archive.org/slow_download/13d7370d8f4ea2d2c3885be0a21bc01e/0/0">Anna's Archive</a> or whatever the <a href="https://open-slum.org/">latest</a> Library Genesis domain is to get a pdf but it will likely be missing a lot of graphical content. This is a very good course for anyone interested in game graphics or taking an algorithms design course and wants to manipulate graphs using linear algebra. If you hate everything else here then do this you'll be fine.  
 </p>
 
 <ul class="org-ul">
@@ -336,116 +340,28 @@ Strang had a stranglehold on MIT's linear algebra curriculum for decades and Ede
 </ul></li>
 </ul>
 
-
 <p>
-He banishes determinants to the end of the book for a good reason all laid out in a paper you can find on arxiv. It's great and the proofs are not difficult the way he writes them are clear and intuitive. He doesn't explain what is going on though at all however there is some short YouTube geometry examples he made for the book but then again this is a 'second course' so he doesn't need to. Every mathematician will tell you <i>that is how you learn</i> meaning figure it out yourself and piece it all together seeing that function composition is non-associative just like matrix multiplication ergo a matrix is some kind of encoding of a function (mapping). There's no solutions either but you don't need them you guys can just write any proof you want who cares you learn by going back to the material and digging through it trying to write some argument to yourself why something is true.
-</p>
-
-<ul class="org-ul">
-<li><a href="https://terrytao.wordpress.com/wp-content/uploads/2016/12/linear-algebra-notes.pdf">Terence Tao's Notes</a> for <a href="https://www.math.ucla.edu/~tao/resource/general/115a.3.02f/">Math 115A</a>
-<ul class="org-ul">
-<li>The best from scratch linear algebra notes</li>
-</ul></li>
-</ul>
-
-<p>
-These notes were his lectures to accompany the book by Friedberg, Insel and Spence. CMU uses the David Lay book. A lot of other universities like Stanford use <a href="https://web.stanford.edu/~boyd/vmls/">VMLS</a> (free). VMLS also has a Julia language companion. 
-</p>
-
-
-<ul class="org-ul">
-<li><a href="http://www.math.clemson.edu/~macaule/classes/s21_math8530/">Math 8530</a> Graduate Linear Algebra (Clemson)
-<ul class="org-ul">
-<li>Theory of vector spaces not abstract modules</li>
-<li>Loosely follows Peter Lax's book chapters 1-9 and Halmos' book on finite-dimensional vector spaces
-<ul class="org-ul">
-<li>Edelman took this in highschool</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<p>
-We could take this. It's highly abstract but not impossibly abstract like replacing scalars in a vector space with entire rings like module theory. Peter Lax when he wrote this book was the foremost expert on computational partial differential equations. PDEs are now being 'solved' by neural networks so there is a quiet scientific field going right now where physics informed machine learning injects physics knowledge to neural networks to supercharge semi-supervised learning. This is where all the early revolutionary AI will come from when we can accelerate training.   
-</p>
-
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=ndWqKOJ9DgQ">Geometric Linear Algebra</a> NJ Wildberger
-<ul class="org-ul">
-<li>Tells you what is actually going on</li>
-<li>Functionals are covered which we'll need for Matrix calculus</li>
-</ul></li>
-</ul>
-
-<p>
-We will do this but with one of the above resources.     
-</p>
-
-<ul class="org-ul">
-<li><a href="http://matrixeditions.com/5thUnifiedApproach.html">Hubbard &amp; Hubbard</a> book on unified algebra</li>
-</ul>
-
-<p>
-Have you ever wanted to redo everything from scratch using linear algebra? There's a book for that. 
+Neel Nanda says we should we do this and it can be completed in parallel with the Klein book.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org56fdd44" class="outline-3">
-<h3 id="org56fdd44">Linear Algebra resources I'll do here</h3>
-<div class="outline-text-3" id="text-org56fdd44">
-<ul class="org-ul">
-<li>Axler's latest <a href="https://linear.axler.net/">book</a>
-<ul class="org-ul">
-<li>We have no choice but to take this for higher-dimensional ML</li>
-</ul></li>
-</ul>
-
+<div id="outline-container-org6a4b8fa" class="outline-3">
+<h3 id="org6a4b8fa">Basic calculus</h3>
+<div class="outline-text-3" id="text-org6a4b8fa">
 <p>
-These are optional you can pick something else to gain intuition    
-</p>
-
-<ul class="org-ul">
-<li>Wildberger's intuitive <a href="https://www.youtube.com/watch?v=yAb12PWrhV0">lectures</a> to figure out Axler</li>
-<li>Poh-Shen Loh's <a href="https://www.youtube.com/watch?v=5__JFBncHAA">Matrices</a> Teacher Professional Development</li>
-<li>Poh-Shen Loh's <a href="https://www.youtube.com/watch?v=KfiCOUIvjE8">Determinant</a> Teacher Professional Development</li>
-<li>Poh-Shen Loh's <a href="https://www.youtube.com/watch?v=uWU0j98jBRo">Putnam Seminar</a> on Linear Algebra</li>
-</ul>
-
-<p>
-Watching Poh-Shen Loh explain why Matrix multiplication works is amazing. He's definitely my favorite mathematican because he was just a regular guy who failed linear algebra the first time he took it then went on to become to coach of the US olympiad team after thinking they were going to toss him his second year. He survived by going for broke and martingaling on cruise control (making heavy bets to get yourself out of a debt hole) where he decided to prove everything in the olympiad seminar himself in the most creative way possible a huge gamble that paid off.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org4a6ae08" class="outline-3">
-<h3 id="org4a6ae08">Calculus resources I'll do here</h3>
-<div class="outline-text-3" id="text-org4a6ae08">
-<p>
-We need to know basic applied math modeling. We could take MIT's calculus sequence on Open CourseWare but that will take at least 6 months and assumes you are an MIT student so already have the prerequisite highschool background. 
-</p>
-
-<ul class="org-ul">
-<li><a href="https://global.oup.com/academic/product/mathematical-modeling-and-applied-calculus-9780198824725">Mathematical Modeling and Applied Calculus</a> by Kilty &amp; McAllister
-<ul class="org-ul">
-<li>Use Anna's Archive or lastest Library Genesis domain to get a pdf or buy it and give it to someone after</li>
-<li>Partial derivatives, vectors, it's all here</li>
-<li>Uses RStudio with a GPL licensed package <a href="https://cran.r-project.org/web/packages/MMAC/index.html">here</a></li>
-</ul></li>
-</ul>
-
-<p>
-The Matrix calculus seminar we take will fill in the rest.   
+We can audit some of the slides from MIT <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/">OpenCourseWare</a> then the Matrix Calculus course we teach us the behavior of derivatives.
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org67df801" class="outline-2">
-<h2 id="org67df801">Day 1 Neuroscience Models</h2>
-<div class="outline-text-2" id="text-org67df801">
+<div id="outline-container-orgb580e9b" class="outline-2">
+<h2 id="orgb580e9b">Day 1 Neuroscience Models</h2>
+<div class="outline-text-2" id="text-orgb580e9b">
 <p>
-This is 'learn AI from scratch' so that's what we're going to do starting with brain models. I'm including this here in the beginning so we can see what kind of math models we need to teach ourselves. 
+Reminder this is 'learn AI from scratch' thus here is neural models from scratch. 
 </p>
 
 <ul class="org-ul">
@@ -456,7 +372,7 @@ This is 'learn AI from scratch' so that's what we're going to do starting with b
 </ul>
 
 <p>
-If we're going to model a brain with a neural network we should see how it works in the real world. @6:39 his example of an action potential using a water bucket being filled and dumped is exactly the same intuition of a potential function in a data structures analysis course used for amortized analysis. A dynamic array once filled up to a certain percentage needs to perform a costly action of doubling itself to enable more free space. You take the infrequent cost of doubling and average it over many read/writes to come up with an individual cost of all array operations. There's some differential equations here but he draws out what they mean, we don't have to know them we just need to know this is a non-linear model and everything to do with neurons is electrical. Hz (hertz) is spikes per second. 
+@6:39 his example of an action potential using a water bucket being filled and dumped is exactly the same intuition of a potential function in a data structures analysis course used for amortized analysis. A dynamic array once filled up to a certain percentage needs to perform a costly action of doubling itself to enable more free space. You take the infrequent cost of doubling and average it over many read/writes to come up with an individual cost of all array operations. There's some differential equations here but he draws out what they mean, we don't have to know them we just need to know this is a non-linear model and everything to do with neurons is electrical. Hz (hertz) is spikes per second. 
 </p>
 
 <p>
@@ -468,47 +384,134 @@ You can access all these notebooks he's using for the demo <a href="https://gith
 </ul>
 
 <p>
-I don't have a physics background either but he's explaining the dynamics of a membrane well enough we can get the gist of what's going on. The difference between this first model and the previous Hodgkin-Huxley model is we are no longer modeling the spikes only the action potential for a spike to occur and a reset. Reduces complexity. @18:44 even simpler models. These Sigmoidal models are covered in the calculus book we'll do shortly after this. @22:20 ReLU and SoftMax are introduced. 
+I don't have a physics background either but he's explaining the dynamics of a membrane well enough we can get the gist of what's going on. The difference between this first model and the previous Hodgkin-Huxley model is we are no longer modeling the spikes only the action potential for a spike to occur and a reset. Reduces complexity. @18:44 even simpler models. @22:20 ReLU and Softmax are introduced. We will later have to write our own Softmax.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7eee965" class="outline-2">
-<h2 id="org7eee965">Day 2 Applied Calculus</h2>
-<div class="outline-text-2" id="text-org7eee965">
+<div id="outline-container-org7de17cf" class="outline-2">
+<h2 id="org7de17cf">Day 2 Calculus</h2>
+<div class="outline-text-2" id="text-org7de17cf">
 <p>
-As mentioned above obtain the book <i>Mathematical Modeling and Applied Calculus</i> by Joel Kilty and Alex McAllister either buy it, borrow it, or download it from <a href="https://annas-archive.org/">Anna's Archive</a> or a working <a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> domain. All the simplified neuron models we just watched in the CS479 lectures are in this book and there's an RStudio <a href="https://cran.r-project.org/web/packages/MMAC/index.html">package</a> to do the exercises with. You can also directly interface with any R library using <a href="https://cran.r-project.org/web/packages/JuliaCall/readme/README.html">JuliaCall</a>. 
+Let's look over the <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/pages/lecture-notes/">lecture notes</a> of MIT's 18.01. Most of this course we are skipping because you will always use software to calculate a derivative/integral we just need the absolute basics to begin learning matrix calculus. 
 </p>
 </div>
 
-<div id="outline-container-org8e32b0d" class="outline-3">
-<h3 id="org8e32b0d">1.1 Functions</h3>
-<div class="outline-text-3" id="text-org8e32b0d">
+<div id="outline-container-orgbc36f72" class="outline-3">
+<h3 id="orgbc36f72">Derivatives</h3>
+<div class="outline-text-3" id="text-orgbc36f72">
 <p>
-It seems everyone already changed the name of a range to co-domain since this was written. If you look at page 770 <i>Appendix C</i> the instructions how to install RStudio and the book packages are there. Took me about 20 minutes using an Ubuntu VM as the 'mosaic' package does a bunch of c++ compilations. I had to manually install libudunits2-dev and libgdal-dev to get the R package 'mosaicCalc' to install. Project <a href="https://dtkaplan.github.io/SM2-bookdown/">mosaic</a> now has their own calculus book but the one we are doing is more advanced so we'll keep doing it.
+Reading <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lec1/">lecture 1</a>. There's full recorded lectures too but we'll only need the notes. If you want worked through examples then watch <a href="https://www.youtube.com/watch?v=Bjgu3i310pw">this</a> from Clemson's <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">MATH 1060</a>. 
 </p>
 
 <p>
-Once you get RStudio working and import/require the libraries all the plotFun commands work.
+The answer to 'what is a tangent line exactly' is at that point P on the curve, super zoom until it's neighboring points appear to lay on a straight line. The slope of a tiny straight line between P and P + 0.001 is the tangent. Then you imagine doing this for the entire function creating many tiny little straight lines for every point in the function which is a linear approximation of that curve/function.
+</p>
+
+<p>
+The geometric definition pretend 'delta-x' \(\Delta x\) is a tiny displacement dx = 0.001 then imagine P + dx distance shrinking as dx approaches zero. Here is a <a href="https://www.desmos.com/calculator/3u37grlwxn">graph</a> (desmos.com) showing what is going on. Notice on that graph in order to go from (2, 4) to (2.001, 4.004) move to the right along the x-axis 0.001 then up 0.004 to meet the graph again. This is what the derivative tells us that if a function is preturbed by some tiny extra input f(x + dx) how sensitive is this function when we analyze the change in output. 
+</p>
+
+<p>
+Example 1 of the MIT notes for f(x) = 1/x
+</p>
+
+<ul class="org-ul">
+<li>Plug into derivative equation</li>
+<li>Extract out 1/delta-x</li>
+<li>Perform a/b - c/d is (ad - bc)/bd</li>
+<li>Cancel the extracted delta-x leaving -1</li>
+<li>Take limit to zero of delta-x</li>
+<li>- 1/x<sup>2</sup></li>
+</ul>
+
+<p>
+Why is it negative? Look at the <a href="https://www.desmos.com/calculator/vhr2djymiq">graph</a> if 0.001 is added to the x input then the y output has to drop down -0.5 to meet the graph again of f(x) = 1/x 
+</p>
+
+<p>
+<i>Finding the tangent line</i> the equation for a line is y = mx + b and they have merely substituted in values but we will never use this feel free to skip it and the area computation after. 
+</p>
+
+<p>
+Try inputs to f(x) = x<sup>2</sup> to understand Big-O 
+</p>
+
+<ul class="org-ul">
+<li>(2 + 0.001) = 4.004001</li>
+<li>(3 + 0.001) = 9.006001</li>
+<li>(x + dx) = y + dy + 0.000001</li>
+<li>(x + dx) = y + dy + O(dx)<sup>2</sup></li>
+</ul>
+
+<p>
+If dx is 'approaching zero' then (dx)<sup>2</sup> will reach zero before dx and can discarded. These lecture notes end showing the derivative of time x-axis and distance y-axis can be interpreted as the velocity. If you take the derivative again that can be interpreted as the acceleration.
+</p>
+
+<p>
+Those inputs to f(x) = x<sup>2</sup> notice that dy = 2dx + (dx)<sup>2</sup> and if we ignore the (dx)<sup>2</sup> then dy/dx = 2 which is the derivative at that point. The derivative of the entire function is dy = (2x)dx or dy/dx = 2x.
+</p>
+
+<p>
+'dx' means 'a little bit of x' and dy means 'a little bit of y' it is infintesimal notation where an infintesimal is some extremely small positive quantity which is not zero. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3ed9e81" class="outline-3">
-<h3 id="org3ed9e81">1.2 Multivariable Functions</h3>
-<div class="outline-text-3" id="text-org3ed9e81">
+<div id="outline-container-org242981e" class="outline-3">
+<h3 id="org242981e">Limits</h3>
+<div class="outline-text-3" id="text-org242981e">
 <p>
-3blue1brown got his start making Khan Academy videos and here is his <a href="https://youtu.be/WsZj5Rb6do8?si=7LHO8h0V0DA6uNYJ">video</a> explaining a contour plot. 
+Reading <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lec2/">lecture 2</a>. Watch <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">left and right limits</a> and these <a href="https://www.youtube.com/watch?v=h7dfq5aD6E4">techniques</a> for computing limits such as multiplying by a conjugate which is how you elminate square roots from limit calculations.  
 </p>
+
+<p>
+A limit was already described perfectly by Isaac Newton as the ability to make the difference between a quantity and a fixed value less than any given positive number. He called these the ultimate ratio of 'vanishing quantities' where the ultimate ratio is not before they vanish or after but the ratio with which they vanish. 
+</p>
+
+<p>
+These MIT notes tell us if f is differentiable at a point then f is continuous at that point which of course makes sense if we go back to the definition of a derivative being a linear approximation where around any super zoomed point is a tiny displacement point on a straight line (tangent).
+</p>
+</div>
+
+<div id="outline-container-org059e661" class="outline-4">
+<h4 id="org059e661">Trig functions</h4>
+<div class="outline-text-4" id="text-org059e661">
+<p>
+There's some trig limits here. If you forgot trig 3blue1brown has many YouTube lectures about sine and cosine or watch <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a>. Brown university also has a <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a>.  
+</p>
+
+<p>
+We have just seen another linearization. Watch a few minutes of <a href="https://youtu.be/by0Gy1ZJ_hU?si=1TM8tv2c3TzE9xa_&amp;t=356">this</a> (Wildberger Rational Trig) starting @5:56 to see motion around a nonlinear curve being mapped to the linear motion on the two axis moving back and forth.
+</p>
+</div>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org151f19e" class="outline-3">
-<h3 id="org151f19e">1.3 Linear Functions</h3>
-<div class="outline-text-3" id="text-org151f19e">
+
+<div id="outline-container-orgc1169db" class="outline-2">
+<h2 id="orgc1169db">Day 3 Integrals</h2>
+<div class="outline-text-2" id="text-orgc1169db">
 <p>
-The book will now describe everything in terms of a model with parameters.
+Integration is the undo method for derivatives you recover the original function from it's derivative (indefinite integrals). This is the only concept we will practice before matrix calculus as it will come up all the time in probability and elsewhere.
 </p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=HTa7jTU-72A">Indefinite integral</a> and <a href="https://www.youtube.com/watch?v=HTa7jTU-72A">Antiderivatives</a></li>
+<li><a href="https://www.youtube.com/watch?v=lzCZLod2Z4I">Area approximations</a> (sets up Riemann sums)</li>
+<li><a href="https://www.youtube.com/watch?v=pBXUUhb6YtU">Riemann sums</a> and the <a href="https://www.youtube.com/watch?v=o3sjROzOb3k">Definite Integral</a></li>
+<li><a href="https://www.youtube.com/watch?v=FOgejRi7sNQ">Theorem of Calculus I</a> and <a href="https://www.youtube.com/watch?v=ntJmb8o9sOw">II</a></li>
+</ul>
+
+<p>
+Those videos explain everything. Let's practice:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://personal.math.ubc.ca/~CLP/CLP2/clp_2_ic_problems.pdf">Integral problem book</a> from <a href="https://personal.math.ubc.ca/~CLP/">CLP textbooks</a></li>
+<li><a href="https://integration.soc.srcf.net/UK_University_Integration_Bee_Techniques_Guide.pdf">Techniques</a> (Integration competition)</li>
+</ul>
 
 <p>
 TODO
@@ -518,7 +521,6 @@ TODO
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>

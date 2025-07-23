@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-07-23 Wed 06:56 -->
+<!-- 2025-07-23 Wed 08:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2025</title>
@@ -234,31 +234,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8fa8ff2">Intro</a></li>
-<li><a href="#orgb7b11a8">Curriculum</a>
+<li><a href="#orgef09b6d">Intro</a></li>
+<li><a href="#org246f801">Curriculum</a></li>
+<li><a href="#org48c5c11">Day 1 Neuroscience Models</a></li>
+<li><a href="#org579b93c">Day 2 Calculus</a>
 <ul>
-<li><a href="#org9796135">Linear Algebra</a></li>
-<li><a href="#org97e09f3">Basic calculus</a></li>
+<li><a href="#org479ca1c">Derivatives</a></li>
+<li><a href="#orgfc754be">Limits</a></li>
 </ul>
 </li>
-<li><a href="#org4f894d9">Day 1 Neuroscience Models</a></li>
-<li><a href="#orga23f84e">Day 2 Calculus</a>
-<ul>
-<li><a href="#orgc7b7f26">Derivatives</a></li>
-<li><a href="#org7205371">Limits</a></li>
-</ul>
-</li>
-<li><a href="#org02d768a">Day 3 Integrals</a></li>
+<li><a href="#org7acb14c">Day 3 Integrals</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org8fa8ff2" class="outline-2">
-<h2 id="org8fa8ff2">Intro</h2>
-<div class="outline-text-2" id="text-org8fa8ff2">
+<div id="outline-container-orgef09b6d" class="outline-2">
+<h2 id="orgef09b6d">Intro</h2>
+<div class="outline-text-2" id="text-orgef09b6d">
 <p>
-We will learn the 'full stack' of modern deep learning systems by building our own library from scratch in your language of choice. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most popular currently is transformer architecture for large language models like ChatGPT. We'll learn how to reverse engineer these models. 
+We will learn the 'full stack' of modern deep learning systems by building our own library from scratch. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most popular currently is transformer architecture for large language models (Grok4, GPT-4).   
 </p>
 
 <p>
@@ -266,18 +261,18 @@ We will learn the 'full stack' of modern deep learning systems by building our o
 </p>
 </div>
 
-<div id="outline-container-org5ac0304" class="outline-4">
-<h4 id="org5ac0304">Theory</h4>
-<div class="outline-text-4" id="text-org5ac0304">
+<div id="outline-container-org22dba1b" class="outline-4">
+<h4 id="org22dba1b">Theory</h4>
+<div class="outline-text-4" id="text-org22dba1b">
 <p>
 Waterloo's CS485 <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">here</a> is the best course for machine learning theory you will ever take and goes through the entire mathematical model assuming you have zero background by the Israeli author of <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">Understanding Machine Learning</a>. The theory of learning will not change so this is timeless. CMU still uses this book in their PhD track ML <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">course</a>. I'll go through it in Part II <a href="./math.html">here</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org36b7c73" class="outline-4">
-<h4 id="org36b7c73">Limits of AI</h4>
-<div class="outline-text-4" id="text-org36b7c73">
+<div id="outline-container-orgc2ccf11" class="outline-4">
+<h4 id="orgc2ccf11">Limits of AI</h4>
+<div class="outline-text-4" id="text-orgc2ccf11">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like Grok-n, GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors, can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
@@ -285,13 +280,13 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </div>
 </div>
 
-<div id="outline-container-orgb7b11a8" class="outline-2">
-<h2 id="orgb7b11a8">Curriculum</h2>
-<div class="outline-text-2" id="text-orgb7b11a8">
+<div id="outline-container-org246f801" class="outline-2">
+<h2 id="org246f801">Curriculum</h2>
+<div class="outline-text-2" id="text-org246f801">
 <ul class="org-ul">
-<li><a href="https://dlsyscourse.org/lectures/">10-414 Deep Learning Systems</a> (CMU)
+<li><a href="https://dlsyscourse.org">10-714 DL Algorithms &amp; Implementation</a> (CMU)
 <ul class="org-ul">
-<li>Use any language you want</li>
+<li>Build from scratch a library similar to PyTorch</li>
 </ul></li>
 <li><a href="https://jorchard.github.io/cs479.github.io/index.html">CS 479 Neural Networks</a> (Waterloo)
 <ul class="org-ul">
@@ -300,7 +295,7 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </ul></li>
 <li><a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">Mechanistic Interpretability</a> (Google DeepMind)
 <ul class="org-ul">
-<li>Neel's curriculum on reversing a trained neural network</li>
+<li>Reverse engineer a trained neural network</li>
 </ul></li>
 <li><a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> (MIT)
 <ul class="org-ul">
@@ -310,9 +305,9 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </ul>
 </div>
 
-<div id="outline-container-org9796135" class="outline-3">
-<h3 id="org9796135">Linear Algebra</h3>
-<div class="outline-text-3" id="text-org9796135">
+<div id="outline-container-org857279a" class="outline-4">
+<h4 id="org857279a">Linear Algebra</h4>
+<div class="outline-text-4" id="text-org857279a">
 <p>
 There is no shortage of excellent linear algebra courses. These are the one's I will do here:
 </p>
@@ -346,9 +341,9 @@ Neel Nanda says we should we do this and it can be completed in parallel with th
 </div>
 </div>
 
-<div id="outline-container-org97e09f3" class="outline-3">
-<h3 id="org97e09f3">Basic calculus</h3>
-<div class="outline-text-3" id="text-org97e09f3">
+<div id="outline-container-orgd45860e" class="outline-4">
+<h4 id="orgd45860e">Basic calculus</h4>
+<div class="outline-text-4" id="text-orgd45860e">
 <p>
 We can audit some of the slides from MIT <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/">OpenCourseWare</a> then the Matrix Calculus course will teach us the behavior of derivatives.
 </p>
@@ -357,9 +352,9 @@ We can audit some of the slides from MIT <a href="https://ocw.mit.edu/courses/18
 </div>
 
 
-<div id="outline-container-org4f894d9" class="outline-2">
-<h2 id="org4f894d9">Day 1 Neuroscience Models</h2>
-<div class="outline-text-2" id="text-org4f894d9">
+<div id="outline-container-org48c5c11" class="outline-2">
+<h2 id="org48c5c11">Day 1 Neuroscience Models</h2>
+<div class="outline-text-2" id="text-org48c5c11">
 <p>
 Reminder this is 'learn AI from scratch' thus here is neural models from scratch. 
 </p>
@@ -389,17 +384,17 @@ I don't have a physics background either but he's explaining the dynamics of a m
 </div>
 </div>
 
-<div id="outline-container-orga23f84e" class="outline-2">
-<h2 id="orga23f84e">Day 2 Calculus</h2>
-<div class="outline-text-2" id="text-orga23f84e">
+<div id="outline-container-org579b93c" class="outline-2">
+<h2 id="org579b93c">Day 2 Calculus</h2>
+<div class="outline-text-2" id="text-org579b93c">
 <p>
 Let's look over the <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/pages/lecture-notes/">lecture notes</a> of MIT's 18.01. Most of this course we are skipping because you will always use software to calculate a derivative/integral we just need the absolute basics to begin learning matrix calculus. 
 </p>
 </div>
 
-<div id="outline-container-orgc7b7f26" class="outline-3">
-<h3 id="orgc7b7f26">Derivatives</h3>
-<div class="outline-text-3" id="text-orgc7b7f26">
+<div id="outline-container-org479ca1c" class="outline-3">
+<h3 id="org479ca1c">Derivatives</h3>
+<div class="outline-text-3" id="text-org479ca1c">
 <p>
 Reading <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lec1/">lecture 1</a>. If you want worked through examples then watch <a href="https://www.youtube.com/watch?v=Bjgu3i310pw">this</a> from Clemson's <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">MATH 1060</a> but this will all be properly explained in higher dimensions when we do calculus in the realm of linear algebra. 
 </p>
@@ -458,9 +453,9 @@ Those above inputs to f(x) = x<sup>2</sup> notice that dy = 2dx + (dx)<sup>2</su
 </div>
 </div>
 
-<div id="outline-container-org7205371" class="outline-3">
-<h3 id="org7205371">Limits</h3>
-<div class="outline-text-3" id="text-org7205371">
+<div id="outline-container-orgfc754be" class="outline-3">
+<h3 id="orgfc754be">Limits</h3>
+<div class="outline-text-3" id="text-orgfc754be">
 <p>
 Reading <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lec2/">lecture 2</a>. Watch <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">left and right limits</a> and these <a href="https://www.youtube.com/watch?v=h7dfq5aD6E4">techniques</a> for computing limits such as multiplying by a conjugate which is how you eliminate square roots from limit calculations.  
 </p>
@@ -474,9 +469,9 @@ These MIT notes tell us if f is differentiable at a point then f is continuous a
 </p>
 </div>
 
-<div id="outline-container-org2ce682a" class="outline-4">
-<h4 id="org2ce682a">Trig functions</h4>
-<div class="outline-text-4" id="text-org2ce682a">
+<div id="outline-container-orge12ee7a" class="outline-4">
+<h4 id="orge12ee7a">Trig functions</h4>
+<div class="outline-text-4" id="text-orge12ee7a">
 <p>
 There's some trig limits here. If you forgot trig 3blue1brown has many YouTube lectures about sine and cosine or watch <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a>. Brown university also has a <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a>.  
 </p>
@@ -490,9 +485,9 @@ We have just seen another linearization. Watch a few minutes of <a href="https:/
 </div>
 
 
-<div id="outline-container-org02d768a" class="outline-2">
-<h2 id="org02d768a">Day 3 Integrals</h2>
-<div class="outline-text-2" id="text-org02d768a">
+<div id="outline-container-org7acb14c" class="outline-2">
+<h2 id="org7acb14c">Day 3 Integrals</h2>
+<div class="outline-text-2" id="text-org7acb14c">
 <p>
 This is the only concept we will practice before matrix calculus as it will come up all the time in probability and elsewhere.
 </p>

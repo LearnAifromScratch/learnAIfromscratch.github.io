@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-07-31 Thu 17:35 -->
+<!-- 2025-11-10 Mon 17:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Quant Trading &amp; Research</title>
@@ -202,24 +202,23 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1e0aadc">What does a QR do?</a>
+<li><a href="#org1e910dc">What does a QR do?</a>
 <ul>
-<li><a href="#org4895aa8">What does an 'assistant' QR do?</a></li>
-<li><a href="#org4aa4a72">You can skip the rest of university</a></li>
-<li><a href="#orga2669e9">What are the basics?</a></li>
-<li><a href="#org4918daa">Optional but things you actually use</a></li>
-<li><a href="#org35a6e6e">Game Theoretic Probability</a></li>
-<li><a href="#org6184a57">Martingaling</a></li>
+<li><a href="#org1f3792c">What does an 'assistant' QR do?</a></li>
+<li><a href="#orgdd6060a">You can skip the rest of university</a></li>
+<li><a href="#org58ded9b">What are the basics?</a></li>
+<li><a href="#orgd46bb50">Optional but things you actually use</a></li>
+<li><a href="#orgd4ad910">Game Theoretic Probability</a></li>
+<li><a href="#org777a294">Martingaling</a></li>
 </ul>
 </li>
-<li><a href="#org1dea04e">Probability</a></li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
-<div id="outline-container-org1e0aadc" class="outline-2">
-<h2 id="org1e0aadc">What does a QR do?</h2>
-<div class="outline-text-2" id="text-org1e0aadc">
+<div id="outline-container-org1e910dc" class="outline-2">
+<h2 id="org1e910dc">What does a QR do?</h2>
+<div class="outline-text-2" id="text-org1e910dc">
 <p>
 A good breakdown of quantitative research/trading is <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">here</a> and the same author's <a href="http://isomorphisms.sdf.org/maxdama.pdf">PDF</a> floating around from 2011 on algorithmic trading that he was forced to abandon upon signing NDAs. Note that he doesn't agree anymore with his old notes they should just be a curious read and none of the recommendations for mental math or anything else followed.  
 </p>
@@ -232,9 +231,9 @@ I have witnessed a large chunk of their time is spent in meetings because if you
 During this time there's a ton of other work to do that's where you come in as the lackey assistant or trainee researcher. 
 </p>
 </div>
-<div id="outline-container-org4895aa8" class="outline-3">
-<h3 id="org4895aa8">What does an 'assistant' QR do?</h3>
-<div class="outline-text-3" id="text-org4895aa8">
+<div id="outline-container-org1f3792c" class="outline-3">
+<h3 id="org1f3792c">What does an 'assistant' QR do?</h3>
+<div class="outline-text-3" id="text-org1f3792c">
 <p>
 You can easily spot the shitwork from the above blog <a href="https://blog.headlandstech.com/2017/08/03/quantitative-trading-summary/">post</a> that a professional researcher would love to dump on some eager trainee. Even if there is a small army of teams set up for the QR department there is always something tedious they would rather someone else to do for them like maintenance of the research infrastructure, writing documentation, analysis of the production system so the parameters can be tweaked, or reconciliation tasks or regulatory stuff end of day if you can be trusted with that work.
 </p>
@@ -252,9 +251,9 @@ This is possible only if you sell yourself as a reliable portal where increasing
 </p>
 </div>
 </div>
-<div id="outline-container-org4aa4a72" class="outline-3">
-<h3 id="org4aa4a72">You can skip the rest of university</h3>
-<div class="outline-text-3" id="text-org4aa4a72">
+<div id="outline-container-orgdd6060a" class="outline-3">
+<h3 id="orgdd6060a">You can skip the rest of university</h3>
+<div class="outline-text-3" id="text-orgdd6060a">
 <p>
 If you are at a fancy school and you can land an internship during the summer then if it goes well they likely will offer you a large amount of money to drop out and learn on the job. Where I am does this all the time now trying to entice kids to forget about the degree we will teach you everything you need like having your own personal professor except now you are getting paid. I am always surprised when the kids say no because they think the piece of paper means something. It's like being interested in Cosmology and the world's best Cosmologist offers to personally train you and pay you an enormous amount of money but you decide nah I'm going screw around another 2-3 years taking watered down courses that I will never need. I understand not wanting to quit something you started but in this case I would parachute out of there immediately or suspend somehow a year with a leave of absence if they allow it.  
 </p>
@@ -264,33 +263,39 @@ Everything you learn in undergrad has to be re-taught anyway I can list a dozen 
 </p>
 </div>
 </div>
-<div id="outline-container-orga2669e9" class="outline-3">
-<h3 id="orga2669e9">What are the basics?</h3>
-<div class="outline-text-3" id="text-orga2669e9">
+<div id="outline-container-org58ded9b" class="outline-3">
+<h3 id="org58ded9b">What are the basics?</h3>
+<div class="outline-text-3" id="text-org58ded9b">
 <p>
-I assume you can program so all you need is the basics of data analysis on noisy but semi-structured data meaning S-expressions, JSON, Apache Parquet column-oriented files, etc. 
+I assume you can program so all you need is the basics of data analysis on noisy but semi-structured data meaning S-expressions, JSON, Apache Parquet column-oriented files, etc.
 </p>
 
+
 <ul class="org-ul">
+<li><a href="https://web.stanford.edu/~boyd/vmls/">VLMS</a>
+<ul class="org-ul">
+<li>basic applied linear algebra</li>
+<li>mostly modeling</li>
+</ul></li>
 <li><a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">Probability</a>
 <ul class="org-ul">
 <li>this is a workbook really not a textbook</li>
 <li>look who sponsors the <a href="http://www.cs.cmu.edu/~harchol/PnC/class.html">course</a> for this book</li>
 </ul></li>
-<li><a href="https://www.stat.cmu.edu/~cshalizi/TALR/">Modern Regression</a> and <a href="https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Data Analysis</a>
+<li><a href="https://www.stat.cmu.edu/~cshalizi/TALR/">Modern Regression</a> and <a href="https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Data Analysis</a> (excellent)
 <ul class="org-ul">
 <li>uses R but Julia/Matlab/Python exists too use whatever you want</li>
 </ul></li>
 </ul>
 
 <p>
-This is truly all you need to start. No I'm not joking. You can learn <a href="https://blog.headlandstech.com/2022/02/16/elements-of-statistical-learning-8-10/">statistical learning</a> when you get there.  
+This is truly all you need to start. No I'm not joking. You can learn <a href="https://blog.headlandstech.com/2022/02/16/elements-of-statistical-learning-8-10/">statistical learning</a> when you get there. Many of the large trading firms try and poach you from school early now because they think this math is better learned by doing anyway instead of at a school.  
 </p>
 </div>
 </div>
-<div id="outline-container-org4918daa" class="outline-3">
-<h3 id="org4918daa">Optional but things you actually use</h3>
-<div class="outline-text-3" id="text-org4918daa">
+<div id="outline-container-orgd46bb50" class="outline-3">
+<h3 id="orgd46bb50">Optional but things you actually use</h3>
+<div class="outline-text-3" id="text-orgd46bb50">
 <ul class="org-ul">
 <li><a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> 
 <ul class="org-ul">
@@ -315,11 +320,11 @@ Transformers (LLMs) are used for things you wouldn't expect like predicting <i>4
 </p>
 </div>
 </div>
-<div id="outline-container-org35a6e6e" class="outline-3">
-<h3 id="org35a6e6e">Game Theoretic Probability</h3>
-<div class="outline-text-3" id="text-org35a6e6e">
+<div id="outline-container-orgd4ad910" class="outline-3">
+<h3 id="orgd4ad910">Game Theoretic Probability</h3>
+<div class="outline-text-3" id="text-orgd4ad910">
 <p>
-I'm personally interested in <a href="https://probabilityandfinance.com/">Game-Theoretic Probability</a> where essentially all concepts of randomness are thrown out. Probabilities are now forecasts and statistical models are tested with betting and non-stochastic. If you've ever been highly skeptical of stock markets being supposedly stochastic instead of a game played by multiple participants then you'll probably want to take this too. One of the authors Glenn Shafer designed a simple <a href="https://www.youtube.com/watch?v=qKWF737Av2o">betting</a> test for statistics tossing out p-values.
+I'm personally interested in <a href="https://probabilityandfinance.com/">Game-Theoretic Probability</a> where all concepts of randomness are gone. Probabilities are now forecasts and statistical models are tested with betting and non-stochastic. If you've ever been highly skeptical of stock markets being supposedly stochastic instead of a game played by multiple participants then you'll probably want to take this too. One of the authors Glenn Shafer designed a simple <a href="https://www.youtube.com/watch?v=qKWF737Av2o">betting</a> test for statistics tossing out p-values.
 </p>
 
 <ul class="org-ul">
@@ -337,41 +342,26 @@ I will go through game theoretic probability here if it's possible or in the <a 
 </p>
 </div>
 </div>
-<div id="outline-container-org6184a57" class="outline-3">
-<h3 id="org6184a57">Martingaling</h3>
-<div class="outline-text-3" id="text-org6184a57">
+<div id="outline-container-org777a294" class="outline-3">
+<h3 id="org777a294">Martingaling</h3>
+<div class="outline-text-3" id="text-org777a294">
 <p>
 The craziest example of casino martingaling can be seen in the <a href="https://www.youtube.com/watch?v=iSpRI8oXI9g">videos</a> floating around of Dana White and Adin Ross filling up a blackjack table with markers going deep into debt and then paying them all off. Strategies where you bet more when you are losing and less (or quitting) when you are winning obscures the risk of large losses and are called martingales.
 </p>
 
 <p>
-This is not limited to sports betting or casinos. Corporate executives and professional financial traders deceive themselves with martingales all the time. A good paper to read is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4488359">The Martingale Index</a> by Shafer/Dimitrov to ensure that's never your strategy as it's an easy trap to fall into and also easy to spot when someone else in the market is martingaling and you can bet against them.
+This is not limited to sports betting or casinos. Corporate executives and professional financial traders deceive themselves with martingales all the time. A good paper to read is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4488359">The Martingale Index</a> by Shafer/Dimitrov to ensure that's never your strategy as it's an easy trap to fall into and also easy to spot when someone else in the market is martingaling and you can bet against them. Never, ever, martingale.  
 </p>
 
 <p>
-Never, ever, martingale. I will include everything I can about it to prevent you from doing it because I did it myself not even knowing at first. Thankfully I was lucky otherwise disaster could have happened.  
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org1dea04e" class="outline-2">
-<h2 id="org1dea04e">Probability</h2>
-<div class="outline-text-2" id="text-org1dea04e">
-<p>
-Everything here will eventually be in the <a href="./math.html">Tripos</a> so you may want to just take that.
+TODO if they let me I'll finish this asap
 </p>
 
-<p>
-I will start going through the Mor Harchol-Balter <a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">book</a> until we can understand <a href="https://www.stat.cmu.edu/~cshalizi/mreg/15/">modern regression</a> which means we can understand <a href="https://www.stat.cmu.edu/~cshalizi/uADA/25/">advanced data analysis</a> and you're done everything else here is things best taught to you while you're getting paid and can ask questions as an intern or whatever 'assistant'. 
-</p>
-
-<p>
-TODO
-</p>
 <hr />
 <p>
 <a href="./software.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-07-27 Sun 16:32 -->
+<!-- 2025-11-11 Tue 17:05 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2025</title>
@@ -194,38 +194,6 @@
   .org-svg { }
 </style>
 <style> body {background-color: #fafad2; max-width: 62.5rem; padding: 1rem; margin: auto;} </style>
-<script>
-  window.MathJax = {
-    tex: {
-      ams: {
-        multlineWidth: '85%'
-      },
-      tags: 'ams',
-      tagSide: 'right',
-      tagIndent: '.8em'
-    },
-    chtml: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    svg: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    output: {
-      font: 'mathjax-modern',
-      displayOverflow: 'overflow'
-    }
-  };
-</script>
-
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -234,49 +202,41 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8719227">Intro</a></li>
-<li><a href="#org662e6fc">Curriculum</a>
+<li><a href="#org61f06e4">Intro</a></li>
+<li><a href="#org8ecfb26">Curriculum</a>
 <ul>
-<li><a href="#org611bfbd">What we want to achieve</a></li>
-<li><a href="#orge3a3a02">How to get there</a>
+<li><a href="#org9bb1748">What we want to achieve</a></li>
+<li><a href="#org6a423a4">How to get there</a>
 <ul>
-<li><a href="#org5796ffa">Intro to machine learning</a></li>
-<li><a href="#org04c10a6">Neural Networks</a></li>
+<li><a href="#org911dd0f">Intro to machine learning</a></li>
+<li><a href="#orgff9dae8">Neural Networks</a></li>
 </ul>
 </li>
-<li><a href="#org0799496">Math we need</a>
+<li><a href="#org192c557">Math we need</a></li>
+</ul>
+</li>
+<li><a href="#org55f6b51">Day 1 Scalar Calculus</a>
 <ul>
-<li><a href="#orga37ce33">Linear Algebra</a></li>
-<li><a href="#org07d340f">Calculus</a></li>
-<li><a href="#orgc3f31f3">Statistics</a></li>
+<li><a href="#org1f8006d">Day 1 task</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#org221bf2c">Day 1 Neuroscience Models</a></li>
-<li><a href="#org3467b33">Day 2 Calculus</a>
-<ul>
-<li><a href="#org7282c2c">Derivatives</a></li>
-<li><a href="#org241cddd">Limits</a>
-<ul>
-<li><a href="#org4c8bcea">Trig functions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org39ff43c">Day 3 Integrals</a></li>
+<li><a href="#orge78baa6">Day 2 Neuroscience Models</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8719227" class="outline-2">
-<h2 id="org8719227">Intro</h2>
-<div class="outline-text-2" id="text-org8719227">
+<div id="outline-container-org61f06e4" class="outline-2">
+<h2 id="org61f06e4">Intro</h2>
+<div class="outline-text-2" id="text-org61f06e4">
 <p>
 We will learn the 'full stack' of modern deep learning systems by building our own library from scratch. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most popular currently is transformer architecture for large language models (Grok-n, GPT-n).   
 </p>
 
 <p>
 <a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a suggested <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for reverse engineering transformers. He even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program or you can claim bounties for GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a> as a freelancer.
+</p>
+
+<p>
+There is no prereqs except ability to program I made everything into self-directed research so when math we don't know comes up then we look it up and learn it <i>in the context</i> of what we're currently doing. Otherwise you will spend forever drilling scalar and vector calculus which you may want to do after this but then you'll have motivation to finish it. 
 </p>
 
 
@@ -289,16 +249,16 @@ Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_mode
 </p>
 </div>
 </div>
-<div id="outline-container-org662e6fc" class="outline-2">
-<h2 id="org662e6fc">Curriculum</h2>
-<div class="outline-text-2" id="text-org662e6fc">
+<div id="outline-container-org8ecfb26" class="outline-2">
+<h2 id="org8ecfb26">Curriculum</h2>
+<div class="outline-text-2" id="text-org8ecfb26">
 <p>
 Most of the work is programming in (free) google colab notebooks in C++ and Python though since we are building everything from scratch you could use the language of your choice. Someone wrote Llama.cpp why not write your own too.
 </p>
 </div>
-<div id="outline-container-org611bfbd" class="outline-3">
-<h3 id="org611bfbd">What we want to achieve</h3>
-<div class="outline-text-3" id="text-org611bfbd">
+<div id="outline-container-org9bb1748" class="outline-3">
+<h3 id="org9bb1748">What we want to achieve</h3>
+<div class="outline-text-3" id="text-org9bb1748">
 <ul class="org-ul">
 <li><a href="https://dlsyscourse.org">10-714 DL Algorithms &amp; Implementation</a> (CMU)
 <ul class="org-ul">
@@ -334,20 +294,19 @@ This is a graduate course on trying to integrate everything into a shared reason
 </ul>
 </div>
 </div>
-<div id="outline-container-orge3a3a02" class="outline-3">
-<h3 id="orge3a3a02">How to get there</h3>
-<div class="outline-text-3" id="text-orge3a3a02">
+<div id="outline-container-org6a423a4" class="outline-3">
+<h3 id="org6a423a4">How to get there</h3>
+<div class="outline-text-3" id="text-org6a423a4">
 </div>
-<div id="outline-container-org5796ffa" class="outline-4">
-<h4 id="org5796ffa">Intro to machine learning</h4>
-<div class="outline-text-4" id="text-org5796ffa">
+<div id="outline-container-org911dd0f" class="outline-4">
+<h4 id="org911dd0f">Intro to machine learning</h4>
+<div class="outline-text-4" id="text-org911dd0f">
 <p>
-Every school has an undergrad introduction to machine learning and these courses don't really change from year to year as the underlying concepts to the theory remain the same.
+Every school has an undergrad introduction to machine learning and these courses don't really change from year to year as the underlying theory remains the same.
 </p>
 
-
 <p>
-See CMU's latest <a href="https://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> (2025) and compare that with the chapters from this 2014 <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">book</a> on the theory of ML. K-nearest neighbors, perceptron (linear predictors), gradient descent, feature engineering, optimization (convex and non-convex), decision trees, PAC learning (probably approximately correct), loss functions, boosting, random forests, dimensionality reduction, it's all in that 2014 book because that is the mathematical model of machine learning. If you want the CMU undergrad version you can go back in time using any university's <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22892c28d3-f548-4a7a-9de0-ae90011552fa%22">panopto</a> (Summer 2022) recordings. 
+See CMU's latest <a href="https://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> (2025) and compare that with the chapters from this 2014 <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">book</a> on the theory of ML. K-nearest neighbors, perceptron (linear predictors), gradient descent, feature engineering, optimization (convex and non-convex), decision trees, PAC learning (probably approximately correct), loss functions, boosting, random forests, neural networks, dimensionality reduction, it's all in that 2014 book because that is the mathematical model of machine learning. If you want the CMU undergrad version you can go back in time using any university's <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22892c28d3-f548-4a7a-9de0-ae90011552fa%22">panopto</a> (Summer 2022) recordings. 
 </p>
 
 <p>
@@ -365,9 +324,9 @@ The <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">grad
 </ul>
 </div>
 </div>
-<div id="outline-container-org04c10a6" class="outline-4">
-<h4 id="org04c10a6">Neural Networks</h4>
-<div class="outline-text-4" id="text-org04c10a6">
+<div id="outline-container-orgff9dae8" class="outline-4">
+<h4 id="orgff9dae8">Neural Networks</h4>
+<div class="outline-text-4" id="text-orgff9dae8">
 <p>
 This is to understand the neural networks in the interpretability courses we do and the CMU course on building our own libraries. 
 </p>
@@ -382,38 +341,11 @@ This is to understand the neural networks in the interpretability courses we do 
 </div>
 </div>
 </div>
-<div id="outline-container-org0799496" class="outline-3">
-<h3 id="org0799496">Math we need</h3>
-<div class="outline-text-3" id="text-org0799496">
+<div id="outline-container-org192c557" class="outline-3">
+<h3 id="org192c557">Math we need</h3>
+<div class="outline-text-3" id="text-org192c557">
 <p>
-These can all be done in parallel 
-</p>
-</div>
-<div id="outline-container-orga37ce33" class="outline-4">
-<h4 id="orga37ce33">Linear Algebra</h4>
-<div class="outline-text-4" id="text-orga37ce33">
-<ul class="org-ul">
-<li><a href="https://cs.brown.edu/courses/cs053/current/lectures.htm">Coding the Matrix</a> (Brown)
-<ul class="org-ul">
-<li>All the recorded lectures are open to anyone</li>
-<li>Programmed w/Python and has a (nonfree) <a href="https://codingthematrix.com/">book</a></li>
-</ul></li>
-</ul>
-
-<p>
-Created by Philip Klein a name you will recognize if you take any algorithms course. Probability and the SVD is covered which we'll need. The book is at least cheap ($35) and worth buying or you can use <a href="https://annas-archive.org/slow_download/13d7370d8f4ea2d2c3885be0a21bc01e/0/0">Anna's Archive</a> or whatever the <a href="https://open-slum.org/">latest</a> Library Genesis domain is to get a pdf.
-</p>
-
-<p>
-Neel Nanda who provided the reverse engineering course suggested we take Axler's <a href="https://linear.axler.net/">LADR</a> and the new 4th version is totally free (he even upgraded his cat in the about author pic). If you look at the table of contents for both Brown's <i>Coding the Matrix</i> and LADR they match up almost perfectly so we can take both at the same time and/or review LADR when needed.
-</p>
-</div>
-</div>
-<div id="outline-container-org07d340f" class="outline-4">
-<h4 id="org07d340f">Calculus</h4>
-<div class="outline-text-4" id="text-org07d340f">
-<p>
-We will take the world's shortest shortcut to learn basic calculus then fill in all the blanks with matrix calculus.  
+Anything we come across is self-directed research there's no need to take entire math courses except for this one course which is a short 6 week course: 
 </p>
 
 <ul class="org-ul">
@@ -424,19 +356,42 @@ We will take the world's shortest shortcut to learn basic calculus then fill in 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc3f31f3" class="outline-4">
-<h4 id="orgc3f31f3">Statistics</h4>
-<div class="outline-text-4" id="text-orgc3f31f3">
+</div>
+<div id="outline-container-org55f6b51" class="outline-2">
+<h2 id="org55f6b51">Day 1 Scalar Calculus</h2>
+<div class="outline-text-2" id="text-org55f6b51">
 <p>
-A free <a href="https://www.cs.cmu.edu/~harchol/Probability/book.html">workbook</a> on probability/statistics that we can take with the probability content in <i>Coding the Matrix</i> and the stats content in <i>Understanding Machine Learning</i>.
+I thought about including many calc I and II resources here but you won't do them because I won't either. So let's just look it up as we go. 
+</p>
+
+<p>
+If you super zoom a curve it looks like a straight line. The earth is round but when you're on a boat in the middle of the ocean everything looks flat. That's how super zoomed you are a tiny human on a planet. Take the slope of that seemingly straight line and that's the derivative at that point. We have linearized the curve. By 'super zoom' I mean a very tiny addition input to f(x + 0.0001) you step off the curve by that tiny displacement dx and then dy is the measurement of when you meet the curve/line again. How would you characterize this? In fact it's an <a href="https://classicalrealanalysis.info/documents/Bruckner1995.rae.1341343228.pdf">unsolved</a> problem except the function f(x + displacement) the tiny interval you have created has the characteristics that it's function image is also an interval (called the Darboux property). Beyond that we don't know and the matrix calculus course will show us how curious derivatives are in fact the most badly discontinous function you can imagine probably still has a derivative. The derivative is a higher-order function you turn f(x) = x<sup>2</sup> into f(x) = 2x meaning you get back another function when you 'derive' it from f(x) = x<sup>2</sup>
+</p>
+
+<p>
+The integral is the reverse operation of derivatives meaning you 'undo' the derivative back to the original function. This is often called the 'fundamental theorem of calculus'. In undergrad they drill every student with the Riemann integral which is honestly a useless integral, because it has a constructive definition (Riemann sums w/limits) but in graduate school on your first day the Riemann integral is thrown out usually for the Lebesgue integral (and Denjoy) which are measurement based. There is actually a <a href="https://www.researchgate.net/publication/261629948_The_natural_integral_on_the_real_line">"natural integral"</a> which is the most generalized integral and includes the Lebesgue and the Riemann integral as a special case. This integral is sometimes called the 'gauge integral' or the Henstock-Kurzweil integral who were two mathematicians who discovered it at the same time and then gave a presentation in the 1960s that the Lebesgue integral was 'dead' (not entirely the whole scaffolding of measure theory still persists for probability and many other critical uses).
+</p>
+
+<p>
+This integral is taught in <a href="https://www.researchgate.net/publication/261629948_The_natural_integral_on_the_real_line">The Calculus Integral</a> by Brain S. Thomson (intro/elementary version) or in the <a href="http://classicalrealanalysis.info/documents/toti-screen-June11-2013.pdf">Theory of the Integral</a> by the same author or in the 'DRIPPED' (drop the Reimann integral) versions of their real analysis text <a href="http://classicalrealanalysis.info/documents/toti-screen-June11-2013.pdf">here</a> and the non-dripped version is used in MIT's 18.001b <a href="https://ocw.mit.edu/courses/18-100b-real-analysis-spring-2025/pages/readings/">here</a> as all 3 authors are living experts on real analysis. Andrew Bruckner is in his 90s and still writing research papers in 2025.  
+</p>
+
+<p>
+If you want a good crash course besides the videos of 3Brown1Blue on YouTube look at <a href="https://www.youtube.com/watch?v=zfHEkt-1sqo">this video</a> by NJ Wildberger he's some radical Yale graduated mathematican who claims the real numbers are a silly abstraction that needs to go but his vids on calculus are excellent. This specific video was made for new students at an Australian university so the subtitles are in Mandarin as Aus is overrun with Chinese migrants being that they are very close to the most populous country on the planet but this is honestly the best explanation of what undergrad calculus actually is.
+</p>
+</div>
+<div id="outline-container-org1f8006d" class="outline-3">
+<h3 id="org1f8006d">Day 1 task</h3>
+<div class="outline-text-3" id="text-org1f8006d">
+<p>
+Watching <a href="https://www.youtube.com/watch?v=zfHEkt-1sqo">this</a> because when we take matrix calculus it will refer to this video. We will learn the construction of integrals when it's needed because remember this is a research curriculum we go back when needed and learn everything needed as we go. 
 </p>
 </div>
 </div>
 </div>
-</div>
-<div id="outline-container-org221bf2c" class="outline-2">
-<h2 id="org221bf2c">Day 1 Neuroscience Models</h2>
-<div class="outline-text-2" id="text-org221bf2c">
+<div id="outline-container-orge78baa6" class="outline-2">
+<h2 id="orge78baa6">Day 2 Neuroscience Models</h2>
+<div class="outline-text-2" id="text-orge78baa6">
 <p>
 Reminder this is 'learn AI from scratch' thus here is neural models from scratch. 
 </p>
@@ -463,130 +418,8 @@ You can access all these notebooks he's using for the demo <a href="https://gith
 <p>
 I don't have a physics background either but he's explaining the dynamics of a membrane well enough we can get the gist of what's going on. The difference between this first model and the previous Hodgkin-Huxley model is we are no longer modeling the spikes only the action potential for a spike to occur and a reset. Reduces complexity. @18:44 even simpler models. @22:20 ReLU and Softmax are introduced. We will later have to write our own Softmax.
 </p>
-</div>
-</div>
-<div id="outline-container-org3467b33" class="outline-2">
-<h2 id="org3467b33">Day 2 Calculus</h2>
-<div class="outline-text-2" id="text-org3467b33">
-<p>
-Let's look over the <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/pages/lecture-notes/">lecture notes</a> of MIT's 18.01. Most of this course we are skipping because you will always use software to calculate a derivative/integral we just need the absolute basics to begin learning matrix calculus. 
-</p>
-</div>
-<div id="outline-container-org7282c2c" class="outline-3">
-<h3 id="org7282c2c">Derivatives</h3>
-<div class="outline-text-3" id="text-org7282c2c">
-<p>
-Reading <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lec1/">lecture 1</a>. If you want worked through examples then watch <a href="https://www.youtube.com/watch?v=Bjgu3i310pw">this</a> from Clemson's <a href="https://mthsc.clemson.edu/ug_course_pages/view_course_page/6">MATH 1060</a> but this will all be properly explained in higher dimensions when we do calculus in the realm of linear algebra. 
-</p>
 
-<p>
-The answer to 'what is a tangent line exactly' is at that point P on the curve, super zoom until it's neighboring points appear to lay on a straight line. The slope of a tiny straight line between P and P + 0.001 is the tangent. Then you imagine doing this for the entire function creating many tiny little straight lines for every point in the function which is a linear approximation of that curve/function. 
-</p>
 
-<p>
-The geometric definition pretend 'delta-x' \(\Delta x\) is a tiny displacement dx = 0.001 then imagine P + dx distance shrinking as dx approaches zero. Here is a <a href="https://www.desmos.com/calculator/3u37grlwxn">graph</a> (desmos.com) showing what is going on. Notice on that graph in order to go from (2, 4) to (2.001, 4.004) move to the right along the x-axis 0.001 then up 0.004 to meet the graph again. This is what the derivative tells us that if a function is preturbed by some tiny extra input f(x + dx) how sensitive is this function when we analyze the change in output or the rate of change. 
-</p>
-
-<p>
-Example 1 of the MIT notes for f(x) = 1/x
-</p>
-
-<ul class="org-ul">
-<li>Plug into derivative equation</li>
-<li>Extract out 1/delta-x</li>
-<li>Perform a/b - c/d is (ad - bc)/bd</li>
-<li>Cancel the extracted delta-x leaving -1</li>
-<li>Take limit to zero of delta-x</li>
-<li>- 1/x<sup>2</sup></li>
-</ul>
-
-<p>
-Why is it negative? Look at the <a href="https://www.desmos.com/calculator/vhr2djymiq">graph</a> if 0.001 is added to the x input then the y output has to drop down -0.5 to meet the graph again of f(x) = 1/x 
-</p>
-
-<p>
-<i>Finding the tangent line</i> the equation for a line is y = mx + b and they have merely substituted in values but we will never use this feel free to skip it and the area computation after. 
-</p>
-
-<p>
-Try inputs to f(x) = x<sup>2</sup> to understand Big-O 
-</p>
-
-<ul class="org-ul">
-<li>(2 + 0.001) = 4.004001</li>
-<li>(3 + 0.001) = 9.006001</li>
-<li>(x + dx) = y + dy + 0.000001</li>
-<li>(x + dx) = y + dy + O(dx)<sup>2</sup></li>
-</ul>
-
-<p>
-If dx is approaching zero then (dx)<sup>2</sup> will reach zero before dx and can discarded. 
-</p>
-
-<p>
-Those above inputs to f(x) = x<sup>2</sup> notice that dy = 2dx + (dx)<sup>2</sup> and if we ignore the (dx)<sup>2</sup> then dy/dx = 2 which is the derivative at that point. The derivative of the entire function is dy = (2x)dx or dy/dx = 2x. This is the instantaneous rate of change like if you were to take a picture of a speeding car and ask what is it's speed right now which is technically zero at an instantaneous snapshot but through the magic of limits we pretend the denominator of the derivative equation is so close to zero that no other positive quantity could wedge itself between the limit and zero. 
-</p>
-
-<p>
-'dx' means 'a little bit of x' and dy means 'a little bit of y' it is infintesimal notation where an infintesimal is some extremely small positive quantity which is not zero. 
-</p>
-</div>
-</div>
-<div id="outline-container-org241cddd" class="outline-3">
-<h3 id="org241cddd">Limits</h3>
-<div class="outline-text-3" id="text-org241cddd">
-<p>
-Reading <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/resources/lec2/">lecture 2</a>. Watch <a href="https://www.youtube.com/watch?v=iQTwviLhQwU">left and right limits</a> and these <a href="https://www.youtube.com/watch?v=h7dfq5aD6E4">techniques</a> for computing limits such as multiplying by a conjugate which is how you eliminate square roots from limit calculations.  
-</p>
-
-<p>
-A limit was already described perfectly by Isaac Newton as the ability to make the difference between a quantity and a fixed value less than any given positive number. He called these the ultimate ratio of 'vanishing quantities' where the ultimate ratio is not before they vanish or after but the ratio with which they vanish. 
-</p>
-
-<p>
-These MIT notes tell us if f is differentiable at a point then f is continuous at that point which of course makes sense if we go back to the definition of a derivative being a linear approximation where around any super zoomed point is a tiny displacement point on a straight line (tangent).
-</p>
-</div>
-<div id="outline-container-org4c8bcea" class="outline-4">
-<h4 id="org4c8bcea">Trig functions</h4>
-<div class="outline-text-4" id="text-org4c8bcea">
-<p>
-There's some trig limits here. If you forgot trig 3blue1brown has many YouTube lectures about sine and cosine or watch <a href="https://www.youtube.com/watch?v=XFpi6arBzgY">this</a>. Brown university also has a <a href="http://www.math.brown.edu/dkatz/trigbootcamp/">Trig Boot Camp</a>.  
-</p>
-
-<p>
-We have just seen another linearization. Watch a few minutes of <a href="https://youtu.be/by0Gy1ZJ_hU?si=1TM8tv2c3TzE9xa_&amp;t=356">this</a> (Wildberger Rational Trig) starting @5:56 to see motion around a nonlinear curve being mapped to the linear motion on the two axis moving back and forth.
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-org39ff43c" class="outline-2">
-<h2 id="org39ff43c">Day 3 Integrals</h2>
-<div class="outline-text-2" id="text-org39ff43c">
-<p>
-This is the only concept we will practice before matrix calculus as it will come up all the time in probability and elsewhere.
-</p>
-
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=HTa7jTU-72A">Indefinite integral</a> and <a href="https://www.youtube.com/watch?v=HTa7jTU-72A">Antiderivatives</a></li>
-<li><a href="https://www.youtube.com/watch?v=lzCZLod2Z4I">Area approximations</a> (sets up Riemann sums)</li>
-<li><a href="https://www.youtube.com/watch?v=pBXUUhb6YtU">Riemann sums</a> and the <a href="https://www.youtube.com/watch?v=o3sjROzOb3k">Definite Integral</a></li>
-<li><a href="https://www.youtube.com/watch?v=FOgejRi7sNQ">Theorem of Calculus I</a> and <a href="https://www.youtube.com/watch?v=ntJmb8o9sOw">II</a></li>
-</ul>
-
-<p>
-Those videos explain everything. Let's practice:
-</p>
-
-<ul class="org-ul">
-<li><a href="https://personal.math.ubc.ca/~CLP/CLP2/clp_2_ic_problems.pdf">Integral problem book</a> from <a href="https://personal.math.ubc.ca/~CLP/">CLP textbooks</a></li>
-<li><a href="https://integration.soc.srcf.net/UK_University_Integration_Bee_Techniques_Guide.pdf">Techniques</a> (Integration competition)</li>
-</ul>
-
-<p>
-TODO
-</p>
 
 <hr />
 <p>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-11-11 Tue 17:47 -->
+<!-- 2025-11-17 Mon 01:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI in 2025</title>
@@ -202,73 +202,88 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2c32552">Intro</a></li>
-<li><a href="#org62d1402">Curriculum</a>
+<li><a href="#org69d486a">Intro</a></li>
+<li><a href="#org337f2df">Curriculum</a>
 <ul>
-<li><a href="#org01b0b52">What we want to achieve</a></li>
-<li><a href="#org326bece">How to get there</a>
+<li>
 <ul>
-<li><a href="#org81cb456">Intro to machine learning</a></li>
-<li><a href="#org114a723">Neural Networks</a></li>
+<li><a href="#org58dabaf">Research</a></li>
 </ul>
 </li>
-<li><a href="#orge0cf68a">Math we need</a></li>
-</ul>
-</li>
-<li><a href="#org1707a66">Day 1 Scalar Calculus</a>
+<li><a href="#orgdb93b09">Theory</a>
 <ul>
-<li><a href="#org75f016d">Day 1 task</a></li>
+<li><a href="#org7ca032f">Advanced Introduction to ML</a></li>
 </ul>
 </li>
-<li><a href="#org0f47043">Day 2 Neuroscience Models</a></li>
+</ul>
+</li>
+<li><a href="#org9f41216">Start Here: Scalar Calculus</a></li>
+<li><a href="#org470c043">Linear Algebra</a></li>
+<li><a href="#org76e186b"><span class="todo TODO">TODO</span> Gradient</a></li>
+<li><a href="#orgfd52d43"><span class="todo TODO">TODO</span> Matrix Calculus</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2c32552" class="outline-2">
-<h2 id="org2c32552">Intro</h2>
-<div class="outline-text-2" id="text-org2c32552">
+<div id="outline-container-org69d486a" class="outline-2">
+<h2 id="org69d486a">Intro</h2>
+<div class="outline-text-2" id="text-org69d486a">
 <p>
-We will learn the 'full stack' of modern deep learning systems by building our own library from scratch. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most popular currently is transformer architecture for large language models (Grok-n, GPT-n).   
+We will learn the 'full stack' of modern deep learning systems by building our own library from scratch and how to reverse engineer them. Neural networks have different architectures just like there is different computer hardware architectures (x86, RISC, ARM). The most popular currently is transformer architecture for large language models (Grok-n, GPT-n) but regular old neural networks learning some function continue to be useful in every field the game is not over with advanced LLMs.
 </p>
-
-<p>
-<a href="https://www.neelnanda.io/about">Neel Nanda</a> has helpfully produced a suggested <a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">curriculum</a> for reverse engineering transformers. He even offers <a href="https://www.matsprogram.org/interpretability">mentorship</a> through the ML Alignment &amp; Theory Scholars program or you can claim bounties for GeoHot's <a href="https://docs.google.com/spreadsheets/d/1WKHbT-7KOgjEawq5h5Ic1qUWzpfAzuD_J06N1JwOCGs/edit?gid=0#gid=0">TinyGrad</a> as a freelancer.
-</p>
-
-<p>
-There is no prereqs except ability to program I made everything into self-directed research so when math we don't know comes up then we look it up and learn it <i>in the context</i> of what we're currently doing. Otherwise you will spend forever drilling scalar and vector calculus which you may want to do after this but then you'll have motivation to finish it. 
-</p>
-
 
 <p>
 <b>Limits of AI</b>
 </p>
 
 <p>
-Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like Grok-n, GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors (aka ideal models), can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible. The multimodal content here is interesting. 
+Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like Grok-n, GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors (aka ideal models), can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.  
 </p>
 </div>
 </div>
-<div id="outline-container-org62d1402" class="outline-2">
-<h2 id="org62d1402">Curriculum</h2>
-<div class="outline-text-2" id="text-org62d1402">
+<div id="outline-container-org337f2df" class="outline-2">
+<h2 id="org337f2df">Curriculum</h2>
+<div class="outline-text-2" id="text-org337f2df">
 <p>
-Most of the work is programming in (free) google colab notebooks in C++ and Python though since we are building everything from scratch you could use the language of your choice. Someone wrote Llama.cpp why not write your own too.
+Build an AI framework:
 </p>
-</div>
-<div id="outline-container-org01b0b52" class="outline-3">
-<h3 id="org01b0b52">What we want to achieve</h3>
-<div class="outline-text-3" id="text-org01b0b52">
+
 <ul class="org-ul">
 <li><a href="https://dlsyscourse.org">10-714 DL Algorithms &amp; Implementation</a> (CMU)
 <ul class="org-ul">
-<li>Build from scratch transformers, RNNs, MLPs, everything</li>
-<li>Includes hardware acceleration</li>
+<li>Build from scratch an entire framework for deep learning</li>
+<li>References to use as we go:
+<ul class="org-ul">
+<li><a href="https://introml.mit.edu/notes/">notes</a> (MIT)</li>
+<li><a href="https://jorchard.github.io/cs479.github.io/index.html">short lectures</a> from the perspective of theoretical neuroscience</li>
+<li><a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i></li>
 </ul></li>
+</ul></li>
+</ul>
+
+<p>
+Fuse the framework with multimodal capabilities:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://mit-mi.github.io/how2ai-course/spring2025/">MAS.S60 How2AI</a> (MIT)
+<ul class="org-ul">
+<li>How to AI (Almost) Anything</li>
+<li>YouTube <a href="https://www.youtube.com/playlist?list=PLc0Yh0D0XR4Z3wityRaEuu4rfzTHRIIAO">lectures</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org58dabaf" class="outline-4">
+<h4 id="org58dabaf">Research</h4>
+<div class="outline-text-4" id="text-org58dabaf">
+<p>
+We learn some of the applied art of attempting to reverse engineer or at least understand what an AI model is actually doing like if it's lying to us or has some emergent abilities. 
+</p>
+
+<ul class="org-ul">
 <li><a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">Mechanistic Interpretability</a> (Neel Nanda@Google DeepMind)
 <ul class="org-ul">
-<li>Reverse engineering transformers</li>
-<li>Core material is <a href="https://github.com/callummcdougall/ARENA_3.0/tree/main">here</a> and 90% programming
+<li>Complete guide to doing research yourself in mech interp</li>
+<li>Example material is <a href="https://github.com/callummcdougall/ARENA_3.0/tree/main">here</a> and 90% programming
 <ul class="org-ul">
 <li>Chapter <a href="https://arena-chapter0-fundamentals.streamlit.app/">0</a></li>
 <li>Chapter <a href="https://arena-chapter1-transformer-interp.streamlit.app/">1</a></li>
@@ -277,153 +292,100 @@ Most of the work is programming in (free) google colab notebooks in C++ and Pyth
 </ul></li>
 </ul></li>
 </ul>
-
+</div>
+</div>
+<div id="outline-container-orgdb93b09" class="outline-3">
+<h3 id="orgdb93b09">Theory</h3>
+<div class="outline-text-3" id="text-orgdb93b09">
 <p>
-<b>Research</b>
+The PhD <a href="https://ml.cmu.edu/current-students/phd-curriculum">core requirements</a> of most schools consists of:
 </p>
-
-<p>
-This is a graduate course on trying to integrate everything into a shared reasoning and representation system (text, audio, video, actions) so it's the final boss of the AI game. Multimodal doesn't require enormous pretraining such as transformer-based models thus can overcome data scarcity. This means we as pleb researchers can modify open source models like this <a href="https://github.com/Open-Finance-Lab/Awesome-MFFMs/">finance</a> multimodal foundation model. 
-</p>
-
 <ul class="org-ul">
-<li><a href="https://cmu-mmml.github.io/">Multimodal Machine Learning</a> (CMU)
-<ul class="org-ul">
-<li>We have access to 2023 <a href="https://www.youtube.com/watch?v=DPkwjgaRvyI&amp;list=PL-Fhd_vrvisMYs8A5j7sj8YW1wHhoJSmW&amp;index=1">lectures</a> but recent lecture structure remains the same</li>
-</ul></li>
+<li>The mathematical theory of ML (supervised learning is statistical decision theory)</li>
+<li>Models that generate their own learning samples (diffusion/GANs)</li>
+<li>Optimizing some function under a set of constraints (non and convex, distributed)</li>
+<li>The mathematical model of RL and multi-armed bandits (decisions under uncertainty)</li>
+<li>A bunch of higher dimensional probability/stats we won't take here</li>
+<li>Causality</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-org326bece" class="outline-3">
-<h3 id="org326bece">How to get there</h3>
-<div class="outline-text-3" id="text-org326bece">
-</div>
-<div id="outline-container-org81cb456" class="outline-4">
-<h4 id="org81cb456">Intro to machine learning</h4>
-<div class="outline-text-4" id="text-org81cb456">
+
 <p>
-Every school has an undergrad introduction to machine learning and these courses don't really change from year to year as the underlying theory remains the same.
+The goal is then to figure out how to improve or come up with a better model/optimizer and there's an endless stream of daily papers from around the world doing just that being dumped on arxiv or published in various ML journals. 
 </p>
 
 <p>
-See CMU's latest <a href="https://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html">Intro to Machine Learning</a> (2025) and compare that with the chapters from this 2014 <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">book</a> on the theory of ML. K-nearest neighbors, perceptron (linear predictors), gradient descent, feature engineering, optimization (convex and non-convex), decision trees, PAC learning (probably approximately correct), loss functions, boosting, random forests, neural networks, dimensionality reduction, it's all in that 2014 book because that is the mathematical model of machine learning. If you want the CMU undergrad version you can go back in time using any university's <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22892c28d3-f548-4a7a-9de0-ae90011552fa%22">panopto</a> (Summer 2022) recordings. 
+Any AI doctor or robot space pilot is going to come from a causal learning model in fact every interesting problem you want predicted by AI is almost certainly a causal question like 'if I set this to X, will Y happen?' and 'what would've happened if I did Z instead of X'.
+</p>
+</div>
+<div id="outline-container-org7ca032f" class="outline-4">
+<h4 id="org7ca032f">Advanced Introduction to ML</h4>
+<div class="outline-text-4" id="text-org7ca032f">
+<p>
+Here is the same content as <a href="https://www.cs.cmu.edu/~nihars/teaching/10715Fa25.html">10-715</a> or the mathematical model of machine learning in 2025 (which is mostly just a bunch of graphs which themselves are mostly DAGs) 
 </p>
 
-<p>
-The <a href="https://www.cs.cmu.edu/~nihars/teaching/10715-Fa23/index.html">graduate</a> versions of introductory machine learning still use that 2014 book so we may as well. Lucky for us the author of that book made a series of lectures for his course at Waterloo and it's a very unusual course he walks through all the math assuming little background.     
-</p>
 
 <ul class="org-ul">
 <li><a href="https://student.cs.uwaterloo.ca/~cs485/">CS 485 Theory of ML</a> (Waterloo)   
 <ul class="org-ul">
-<li>All the <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">lectures</a> on YouTube</li>
-<li>Complete mathematical walkthrough of ML and algorithms</li>
-<li>Timeless material as core theory hasn't changed</li>
-<li>Matches with Kilian Weinberger's <a href="https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS">lectures</a> too</li>
-</ul></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org114a723" class="outline-4">
-<h4 id="org114a723">Neural Networks</h4>
-<div class="outline-text-4" id="text-org114a723">
-<p>
-This is to understand the neural networks in the interpretability courses we do and the CMU course on building our own libraries. 
-</p>
-
-<ul class="org-ul">
-<li><a href="https://jorchard.github.io/cs479.github.io/index.html">CS 479 Neural Networks</a> (Waterloo)
-<ul class="org-ul">
-<li>Survey of modern NN from the perspective of theoretical neuroscience</li>
-<li>We also take <a href="https://youtu.be/VMj-3S1tku0?si=1xkNo1BQ1Y_FcjbS">Building Micrograd</a> by Andrej Karpathy</li>
+<li>All the <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">lectures</a> taught by the author of the <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a></li>
+<li><a href="https://diffusion.csail.mit.edu/">MIS 6.S184 Diffusion Models</a> 6 lectures on the math of diffusion models</li>
+<li><a href="https://arxiv.org/pdf/1904.07272">Multi-Armed Bandits</a> or <a href="https://rltheorybook.github.io/">RL: Theory and Algorithms</a> though we won't take all of this</li>
+<li><a href="https://library.oapen.org/bitstream/id/056a11be-ce3a-44b9-8987-a6c68fce8d9b/11283.pdf">Elements of Causal Inference</a> Foundations and learning algorithms</li>
 </ul></li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-orge0cf68a" class="outline-3">
-<h3 id="orge0cf68a">Math we need</h3>
-<div class="outline-text-3" id="text-orge0cf68a">
+</div>
+<div id="outline-container-org9f41216" class="outline-2">
+<h2 id="org9f41216">Start Here: Scalar Calculus</h2>
+<div class="outline-text-2" id="text-org9f41216">
 <p>
-Anything we come across is self-directed research there's no need to take entire math courses except for this one course which is a short 6 week course: 
+The math we are doing is not symbolic it's all numerical/analytical so it can be run on a computer system. We're just going to learn the math needed as we go.
 </p>
 
+<ul class="org-ul">
+<li>Watch this <a href="https://youtu.be/9vKqVkMQHKk?si=-MetxfKULGKCQhqU">derivative</a> video by 3Blue1Brown which explains the dy/dx notation.</li>
+</ul>
+
+<p>
+Anything that accumulates (speed, volume, interest, distance, produced units) has a function of the rate of how fast it is accumulating. In that 3Blue1Brown video distance traveled is an accumulation and the velocity (speed in scalar calculus) is the rate of that distance accumulation. Speed also accumulates because it is measured in m/s or mp/h so it too has a rate of change function called acceleration. You can switch between both functions so recover the velocity function from acceleration by integrating which we'll learn when it comes up.
+</p>
+</div>
+</div>
+<div id="outline-container-org470c043" class="outline-2">
+<h2 id="org470c043">Linear Algebra</h2>
+<div class="outline-text-2" id="text-org470c043">
+<p>
+Watch from the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of linear algebra</a> playlist: 
+</p>
+<ul class="org-ul">
+<li>Vectors</li>
+<li>Linear combinations</li>
+<li>Linear transformations</li>
+<li>Matrix mulitplication as composition</li>
+<li>Nonsquare matrices as transformations between dimensions</li>
+</ul>
+
+<p>
+Look up on youtube what a transpose is or x<sup>T</sup> we will see all this in depth shortly. 
+</p>
+</div>
+</div>
+<div id="outline-container-org76e186b" class="outline-2">
+<h2 id="org76e186b"><span class="todo TODO">TODO</span> Gradient</h2>
+</div>
+
+<div id="outline-container-orgfd52d43" class="outline-2">
+<h2 id="orgfd52d43"><span class="todo TODO">TODO</span> Matrix Calculus</h2>
+<div class="outline-text-2" id="text-orgfd52d43">
 <ul class="org-ul">
 <li><a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> (MIT)
 <ul class="org-ul">
-<li>All the calculus we need generalized to higher dimensions</li>
+<li>8 lectures on calculus generalized to higher dimensions none of it will be symbolic</li>
 </ul></li>
 </ul>
-</div>
-</div>
-</div>
-<div id="outline-container-org1707a66" class="outline-2">
-<h2 id="org1707a66">Day 1 Scalar Calculus</h2>
-<div class="outline-text-2" id="text-org1707a66">
-<p>
-I thought about including many calc I and II resources here but you won't do them because I won't either. So let's just look it up as we go. 
-</p>
-
-<p>
-If you super zoom a curve it looks like a straight line. The earth is round but when you're on a boat in the middle of the ocean everything looks flat. That's how super zoomed you are a tiny human on a planet. Take the slope of that seemingly straight line and that's the derivative at that point. We have linearized the curve. By 'super zoom' I mean a very tiny addition input to f(x + 0.0001) you step off the curve by that tiny displacement dx and then dy is the measurement of when you meet the curve/line again. How would you characterize this? In fact it's an <a href="https://classicalrealanalysis.info/documents/Bruckner1995.rae.1341343228.pdf">unsolved</a> problem except the function f(x + displacement) the tiny interval you have created has the characteristics that it's function image is also an interval (called the Darboux property). Beyond that we don't know and the matrix calculus course will show us how curious derivatives are in fact the most badly discontinous function you can imagine probably still has a derivative. The derivative is a higher-order function you turn f(x) = x<sup>2</sup> into f(x) = 2x meaning you get back another function when you 'derive' it from f(x) = x<sup>2</sup>
-</p>
-
-<p>
-The integral is the reverse operation of derivatives meaning you 'undo' the derivative back to the original function. This is often called the 'fundamental theorem of calculus'. In undergrad they drill every student with the Riemann integral which is honestly a useless integral but because it has a constructive definition (Riemann sums w/limits) you can calculate the area under a curve so it persists as a teaching integral but in graduate school on your first day the Riemann integral is thrown out for the Lebesgue integral and they inform you that 'improper integral's don't actually exist and that your real analysis I and II course you took was actually a waste of time.
-</p>
-
-<p>
-There is a <a href="https://www.researchgate.net/publication/261629948_The_natural_integral_on_the_real_line">"natural integral"</a> which is the most generalized integral and includes the Lebesgue and the Riemann integral as a special case. This integral is sometimes called the 'gauge integral' or the Henstock-Kurzweil integral who were two mathematicians who discovered it at the same time and then gave a presentation in the 1960s that the Lebesgue integral was 'dead' (not entirely the whole scaffolding of measure theory still persists for probability and many other critical uses). 
-</p>
-
-<p>
-This integral is taught in <a href="https://www.researchgate.net/publication/261629948_The_natural_integral_on_the_real_line">The Calculus Integral</a> by Brain S. Thomson (intro/elementary version) or in the <a href="http://classicalrealanalysis.info/documents/toti-screen-June11-2013.pdf">Theory of the Integral</a> by the same author or in the <a href="https://classicalrealanalysis.info/documents/TBB-DRIPPED-AllChapters-Landscape.pdf">DRIPPED</a> (drop the Reimann integral) versions of their real analysis text and the non-dripped version is used in MIT's 18.001b <a href="https://ocw.mit.edu/courses/18-100b-real-analysis-spring-2025/pages/readings/">here</a> as all 3 authors are living experts on real analysis. Andrew Bruckner is in his 90s and still writing research papers in 2025. Their elementary real analysis book (esp the <a href="https://classicalrealanalysis.info/documents/TBB-DRIPPED-AllChapters-Landscape.pdf">dripped version</a>) is the single best real analysis text you'll ever find as it contains every test of continuity, every definition of the derivative, every limit definition ect.  
-</p>
-
-<p>
-If you want a good crash course besides the videos of 3Brown1Blue on YouTube look at <a href="https://www.youtube.com/watch?v=zfHEkt-1sqo">this video</a> by NJ Wildberger he's some radical Yale graduated mathematican who claims the real numbers are a silly abstraction that needs to go but his vids on calculus are excellent. 
-</p>
-</div>
-<div id="outline-container-org75f016d" class="outline-3">
-<h3 id="org75f016d">Day 1 task</h3>
-<div class="outline-text-3" id="text-org75f016d">
-<p>
-Watching <a href="https://www.youtube.com/watch?v=zfHEkt-1sqo">this</a> because when we take matrix calculus it will refer to this video. We will learn the construction of integrals when it's needed because remember this is a research curriculum we go back when needed and learn everything needed as we go. 
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org0f47043" class="outline-2">
-<h2 id="org0f47043">Day 2 Neuroscience Models</h2>
-<div class="outline-text-2" id="text-org0f47043">
-<p>
-Reminder this is 'learn AI from scratch' thus here is neural models from scratch. 
-</p>
-
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=uBHW5Rs7qsA&amp;feature=youtu.be">What is a Neuron</a> (26m) from <a href="https://jorchard.github.io/cs479.github.io/index.html">CS479</a>.
-<ul class="org-ul">
-<li>Hodgkin-Huxley Neuron Model</li>
-</ul></li>
-</ul>
-
-<p>
-@6:39 his example of an action potential using a water bucket being filled and dumped is exactly the same intuition of a potential function in a data structures analysis course used for amortized analysis. A dynamic array once filled up to a certain percentage needs to perform a costly action of doubling itself to enable more free space. You take the infrequent cost of doubling and average it over many read/writes to come up with an individual cost of all array operations. There's some differential equations here but he draws out what they mean, we don't have to know them we just need to know this is a non-linear model and everything to do with neurons is electrical. Hz (hertz) is spikes per second. 
-</p>
-
-<p>
-You can access all these notebooks he's using for the demo <a href="https://github.com/jorchard/cs479.github.io/tree/master/demos">here</a> if interested.
-</p>
-
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/watch?v=0FF1Y8triwE&amp;feature=youtu.be">Simpler Neuron Models</a> (28m) from <a href="https://jorchard.github.io/cs479.github.io/lectures.html">CS479</a>.</li>
-</ul>
-
-<p>
-I don't have a physics background either but he's explaining the dynamics of a membrane well enough we can get the gist of what's going on. The difference between this first model and the previous Hodgkin-Huxley model is we are no longer modeling the spikes only the action potential for a spike to occur and a reset. Reduces complexity. @18:44 even simpler models. @22:20 ReLU and Softmax are introduced. We will later have to write our own Softmax.
-</p>
-
-
 
 <hr />
 <p>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-07-25 Fri 21:32 -->
+<!-- 2026-01-13 Tue 22:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Numbers and Sets</title>
@@ -234,47 +234,50 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org40c94a8">Part 1A Michaelmas</a>
+<li><a href="#org320b0dd">Part 1A Michaelmas</a>
 <ul>
-<li><a href="#org22457f5">Course materials</a></li>
-<li><a href="#org8ca0f7e">Required knowledge</a></li>
-<li><a href="#org631aac4">Strategy</a></li>
+<li><a href="#org8f0a5ab">Course materials</a></li>
+<li><a href="#orgc273770">Schedule recommendations:</a></li>
+<li><a href="#org76b47c2">Strategy</a></li>
 </ul>
 </li>
-<li><a href="#org4ee48e1">Start here</a>
+<li><a href="#orgf519f34">Lean Proof Assistant</a>
 <ul>
-<li><a href="#org9c32301">Proving equalities</a></li>
-<li><a href="#orgfcba3e4">Tips and tricks</a></li>
-<li><a href="#org86578af">Proving inequalities</a></li>
+<li><a href="#org8b92660">Proving equalities</a></li>
+<li><a href="#org5a1c1a5">Tips and tricks</a></li>
+<li><a href="#org0ef8553">Proving inequalities</a></li>
 </ul>
 </li>
-<li><a href="#org67bb42f">Number Theory</a></li>
 </ul>
 </div>
 </div>
 <hr />
-<div id="outline-container-org40c94a8" class="outline-2">
-<h2 id="org40c94a8">Part 1A Michaelmas</h2>
-<div class="outline-text-2" id="text-org40c94a8">
+<div id="outline-container-org320b0dd" class="outline-2">
+<h2 id="org320b0dd">Part 1A Michaelmas</h2>
+<div class="outline-text-2" id="text-org320b0dd">
 <p>
-This is the first term of the <a href="./math.html">Mathematical Tripos</a> you should be taking this with the other first term courses at the same time as Cambridge designed it this way for a good reason. 
+This is the first term of the <a href="./math.html">Mathematical Tripos</a>.
+</p>
+
+<p>
+In the vast majority of Tripos content I will prefer to just use the books because we can always work through them way faster than any lectures or software but here we get a chance to try out a proof assistant so we can hopefully verify our own sheets in future courses. <a href="https://leanprover-community.github.io/index.html">Lean</a> works with groups/rings, modules (abstract linear algebra), infinite sums, logic, number theory, topology, categories, even measure theory.  
 </p>
 </div>
-<div id="outline-container-org22457f5" class="outline-3">
-<h3 id="org22457f5">Course materials</h3>
-<div class="outline-text-3" id="text-org22457f5">
+<div id="outline-container-org8f0a5ab" class="outline-3">
+<h3 id="org8f0a5ab">Course materials</h3>
+<div class="outline-text-3" id="text-org8f0a5ab">
 <ul class="org-ul">
 <li>Course <a href="https://zeramorphic.uk/maths.html">notes</a> (unofficial)
 <ul class="org-ul">
 <li>Someone made an entire <a href="https://www.youtube.com/watch?v=yW6jjM1NPIo">video series</a> based on the course notes</li>
 </ul></li>
 <li>Example <a href="http://www.dpmms.cam.ac.uk/study/IA/Numbers%2BSets/">sheets</a></li>
-<li>Final <a href="https://www.maths.cam.ac.uk/undergrad/pastpapers/past-ia-ib-and-ii-examination-papers">exams</a></li>
 </ul>
 </div>
-<div id="outline-container-orge04b307" class="outline-4">
-<h4 id="orge04b307">Schedule recommendations:</h4>
-<div class="outline-text-4" id="text-orge04b307">
+</div>
+<div id="outline-container-orgc273770" class="outline-3">
+<h3 id="orgc273770">Schedule recommendations:</h3>
+<div class="outline-text-3" id="text-orgc273770">
 <ul class="org-ul">
 <li>R.B.J.T. Allen <i>Numbers and Proofs</i> Butterworth-Heinemann 1997</li>
 <li>R.P. Burn <i>Numbers and Functions: steps into analysis</i> Cambridge University Press 2000</li>
@@ -288,14 +291,9 @@ This is the first term of the <a href="./math.html">Mathematical Tripos</a> you 
 </ul>
 </div>
 </div>
-</div>
-<div id="outline-container-org8ca0f7e" class="outline-3">
-<h3 id="org8ca0f7e">Required knowledge</h3>
-<div class="outline-text-3" id="text-org8ca0f7e">
-<p>
-Look at some of the old <a href="https://www.maths.cam.ac.uk/undergrad/pastpapers/past-ia-ib-and-ii-examination-papers">exams</a> without looking at the recent exams because you want to test yourself and have no advantage that way you'll know if your strategy is working to actually learn the tripos yourself. Every current Cambridge student would have access to these old exams anyway. 
-</p>
-
+<div id="outline-container-org76b47c2" class="outline-3">
+<h3 id="org76b47c2">Strategy</h3>
+<div class="outline-text-3" id="text-org76b47c2">
 <p>
 The <a href="https://www.dpmms.cam.ac.uk/study/IA/Numbers%2BSets/previous.html">sheets</a>: 
 </p>
@@ -303,19 +301,12 @@ The <a href="https://www.dpmms.cam.ac.uk/study/IA/Numbers%2BSets/previous.html">
 <ul class="org-ul">
 <li>First sheet is almost entirely number theory (primes).</li>
 <li>Second is divisibility, mod, RSA encryption, more number theory.</li>
-<li>Third is converging sequences, least upper bound axiom, proving something to be irrational. - Fourth is sets (countable) and functions.</li>
+<li>Third is converging sequences, least upper bound axiom, proving something to be irrational.</li>
+<li>Fourth is sets (countable) and functions.</li>
 </ul>
 
 <p>
-Many of these example sheet problems are almost identical to the <i>Algebra via Problems</i> content. 
-</p>
-</div>
-</div>
-<div id="outline-container-org631aac4" class="outline-3">
-<h3 id="org631aac4">Strategy</h3>
-<div class="outline-text-3" id="text-org631aac4">
-<p>
-Now that we've looked through the sheets and old exams we can create our own curriculum since we don't have access to Cambridge lectures
+In addition to the recommended books:
 </p>
 
 <ul class="org-ul">
@@ -323,29 +314,17 @@ Now that we've looked through the sheets and old exams we can create our own cur
 <ul class="org-ul">
 <li>First 26 lectures all showed up in old exams/sheets</li>
 </ul></li>
-<li><a href="https://hrmacbeth.github.io/math2001/">The Mechanics of Proof</a> written by a Cambridge Part III graduate using the Lean proof assistant.</li>
-</ul>
-
-<p>
-Some optional practice:
-</p>
-
-<ul class="org-ul">
-<li><a href="https://users.mccme.ru/skopenko/">Algebra Via Problems</a> free English (and Russian) copy on Arkadiy Skopenkov's website (and library genesis/anna's archive)</li>
+<li><a href="https://users.mccme.ru/skopenko/">Algebra Via Problems</a> free English (and Russian) copy on Arkadiy Skopenkov's website</li>
 <li><a href="https://www.dpmms.cam.ac.uk/~wtg10/naspage.html">Supplementary reading</a> and extra sheets about countability</li>
 </ul>
-
+</div>
+</div>
+</div>
+<div id="outline-container-orgf519f34" class="outline-2">
+<h2 id="orgf519f34">Lean Proof Assistant</h2>
+<div class="outline-text-2" id="text-orgf519f34">
 <p>
-There is content about convergence (limits/calculus) that I moved to the <a href="./differential.html">differential</a> equations page since we have to learn calculus there anyway. 
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org4ee48e1" class="outline-2">
-<h2 id="org4ee48e1">Start here</h2>
-<div class="outline-text-2" id="text-org4ee48e1">
-<p>
-Let's do <i>The Mechanics of Proof</i> because 15-150 will assume we know some of this as most CMU students will be taking <a href="https://www.math.cmu.edu/~jmackey/151_128/welcome.html">15-151</a> at the same time.   
+The content in <a href="https://hrmacbeth.github.io/math2001/">The Mechanics of Proof</a> is nearly identical to the Numbers &amp; Sets course probably because it was written by a Cambridge Part III graduate. It uses the Lean proof assistant and we may be able to verify our own sheets in some of the future subjects.  
 </p>
 
 <ul class="org-ul">
@@ -356,9 +335,9 @@ Let's do <i>The Mechanics of Proof</i> because 15-150 will assume we know some o
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-org50bf34a" class="outline-4">
-<h4 id="org50bf34a">Local install</h4>
-<div class="outline-text-4" id="text-org50bf34a">
+<div id="outline-container-org90be6a9" class="outline-4">
+<h4 id="org90be6a9">Local install</h4>
+<div class="outline-text-4" id="text-org90be6a9">
 <p>
 Gitpod free tier is easiest. To install Lean locally w/Visual Studio:
 </p>
@@ -382,17 +361,17 @@ Open any .lean extension file and you should get a right panel opening up in VS 
 </p>
 </div>
 </div>
-<div id="outline-container-org054955d" class="outline-4">
-<h4 id="org054955d">Emacs</h4>
-<div class="outline-text-4" id="text-org054955d">
+<div id="outline-container-org9207158" class="outline-4">
+<h4 id="org9207158">Emacs</h4>
+<div class="outline-text-4" id="text-org9207158">
 <p>
 Install <a href="https://github.com/leanprover/lean4-mode">lean4-mode</a> and Ctrl-c Ctrl-i opens the lean view in a new window showing goals. 
 </p>
 </div>
 </div>
-<div id="outline-container-org9c32301" class="outline-3">
-<h3 id="org9c32301">Proving equalities</h3>
-<div class="outline-text-3" id="text-org9c32301">
+<div id="outline-container-org8b92660" class="outline-3">
+<h3 id="org8b92660">Proving equalities</h3>
+<div class="outline-text-3" id="text-org8b92660">
 <p>
 Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-equalities">Mechanics of Proof</a>. The goal here is to make both sides equal, with the right side finessed using algebra so it can be rewritten by a hypothesis such as a - b = 4 in the first example. 
 </p>
@@ -401,7 +380,7 @@ Reading 1.1 <i>Proving equalities</i> from <a href="https://hrmacbeth.github.io/
 1.2.x <i>Proving equalities in Lean</i> the .lean files are all included in the Math2001 directory you cloned from github. I had to fight with Lean to get it to accept 1.2.4 so rewrote it exactly like she did with parens:
 </p>
 
-<pre class="example" id="orgd8f078f">
+<pre class="example" id="org520ecf8">
 -- Example 1.2.4.
 -- Exercise: type out the whole proof printed in the text as a Lean proof.
 example {a b c d e f : ℤ} (h1 : a * d = b * c) (h2 : c * f = d * e) :
@@ -420,7 +399,7 @@ example {a b c d e f : ℤ} (h1 : a * d = b * c) (h2 : c * f = d * e) :
 The underscore tells the matcher to ignore the left hand side of the equation when rewriting or other actions as we are presently working only with the right hand side. Look at the infoview/goals it will tell you when that stage is done by 'goals accomplished'. Try clicking around various parts of the proof to see how the infoview changes:
 </p>
 
-<pre class="example" id="org1c3101a">
+<pre class="example" id="org4a29a38">
 -- Example 1.3.2
 example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
   calc
@@ -433,7 +412,7 @@ example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
 You can rewrite a line using both hypotheses and eliminate some steps:
 </p>
 
-<pre class="example" id="org23b54b2">
+<pre class="example" id="orgff724ef">
 example {u v : ℚ} (h1 : 4 * u + v = 3) (h2 : v = 2) : u = 1 / 4 :=
   calc
   u = (4 * u + v)/4 - v/4 := by ring
@@ -442,14 +421,14 @@ example {u v : ℚ} (h1 : 4 * u + v = 3) (h2 : v = 2) : u = 1 / 4 :=
 </pre>
 </div>
 </div>
-<div id="outline-container-orgfcba3e4" class="outline-3">
-<h3 id="orgfcba3e4">Tips and tricks</h3>
-<div class="outline-text-3" id="text-orgfcba3e4">
+<div id="outline-container-org5a1c1a5" class="outline-3">
+<h3 id="org5a1c1a5">Tips and tricks</h3>
+<div class="outline-text-3" id="text-org5a1c1a5">
 <p>
 1.3.2 once again we first establish x = x then use the hypothesis to rewrite it
 </p>
 
-<pre class="example" id="orgcf70666">
+<pre class="example" id="orgb9b7ccc">
 -- Example 1.3.2
 example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
   calc
@@ -462,7 +441,7 @@ example {x : ℤ} (h1 : x + 4 = 2) : x = -2 :=
 For the rest of these examples try them yourself going through the 03TipsandTricks.lean file before looking at the solution it's the only way you learn.  
 </p>
 
-<pre class="example" id="orgc671f06">
+<pre class="example" id="org6ca90ec">
 -- Example 1.3.5
 example {x : ℤ} (h1 : 2 * x + 3 = x) : x = -3 :=
   calc
@@ -479,7 +458,7 @@ example {x : ℤ} (h1 : 2 * x + 3 = x) : x = -3 :=
 1.3.11 exercises all use the examples we just saw except the last 2: 
 </p>
 
-<pre class="example" id="org275415f">
+<pre class="example" id="org5ae0c9c">
 -- Exercises 1.3.11
 example {x y : ℝ} (h1 : x = 3) (h2 : y = 4 * x - 3) : y = 9 :=
   calc
@@ -580,17 +559,17 @@ example {t : ℚ} (ht : t ^ 2 - 4 = 0) :
 </pre>
 
 <p>
-Exercise 15 what I want to do is \(\frac{x(2 - y)}{x}\cdot(-1) + 2\) which = y but lean wouldn't let me because I still don't really understand how bracket scope works in lean it's not like normal scope in other languages unless I have no idea what I'm doing. Since one of those hypothesis rewrites to 0 you can freely multiply it by anything you want to produce a positive y as that will all get wiped out upon rewrite anyway. 
+Exercise 15 what I want to do is \(\frac{x(2 - y)}{x}\cdot(-1) + 2\) which = y then rewrite to 0 leaving only 2 as the solution but lean wouldn't let me because I still don't really understand how scope works in lean.  
 </p>
 
 <p>
-Exercise 16 is of course impossible (no rational number exists that when squared is negative) but lean will let you prove it anyway using rewrites. If you want more exercises there's <a href="https://github.com/hrmacbeth/math2001/tree/main/Math2001/Homework">homework</a> for this book/course in the git repository just don't post solutions anywhere or else prof's lock all their materials down to prevent cheating students.  
+Exercise 16 is of course impossible (no rational number exists that when squared is negative) but lean will let you prove it anyway using rewrites. If you want more exercises there's <a href="https://github.com/hrmacbeth/math2001/tree/main/Math2001/Homework">homework</a> for this book/course in the git repository.
 </p>
 </div>
 </div>
-<div id="outline-container-org86578af" class="outline-3">
-<h3 id="org86578af">Proving inequalities</h3>
-<div class="outline-text-3" id="text-org86578af">
+<div id="outline-container-org0ef8553" class="outline-3">
+<h3 id="org0ef8553">Proving inequalities</h3>
+<div class="outline-text-3" id="text-org0ef8553">
 <p>
 We're still doing the <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by_Calculation.html#proving-inequalities">proofs by calc</a> chapter.
 </p>
@@ -618,13 +597,13 @@ We're still doing the <a href="https://hrmacbeth.github.io/math2001/01_Proofs_by
 To get the full list of the unicode symbols every editor plugin comes with an <a href="https://github.com/leanprover-community/lean4-mode/blob/master/data/abbreviations.json">abbreviations.json</a> file. Place '\' (LaTeX style commands) before any of those symbols on the left of the abbreviations file to see them converted to the symbols on the right. For example \b is converted in the editor to \(\beta\)    
 </p>
 
-<pre class="example" id="org908966b">
+<pre class="example" id="orgce704f6">
 \ge greater or equal
 \le less than or equal
 &lt; and &gt; are just unicode keyboard chars
 </pre>
 
-<pre class="example" id="orgc3e1a5e">
+<pre class="example" id="org7be0af2">
 -- Example 1.4.2
 -- Exercise: replace the words "sorry" with the correct Lean justification.
 example {r s : ℚ} (h1 : s + 3 ≥ r) (h2 : s + r ≤ 3) : r ≤ 3 :=
@@ -639,7 +618,7 @@ example {r s : ℚ} (h1 : s + 3 ≥ r) (h2 : s + r ≤ 3) : r ≤ 3 :=
 Example 1.4.3 think why is x + y &lt;= x + (x + 5) it's because y &lt;= x + 5 and x is &lt;= to itself. 
 </p>
 
-<pre class="example" id="orgd86fd79">
+<pre class="example" id="org9ae96cc">
 -- Example 1.4.3
 -- Exercise: type out the whole proof printed in the text as a Lean proof.
 example {x y : ℝ} (h1 : y ≤ x + 5) (h2 : x ≤ -2) : x + y &lt; 2 :=
@@ -654,7 +633,7 @@ example {x y : ℝ} (h1 : y ≤ x + 5) (h2 : x ≤ -2) : x + y &lt; 2 :=
 Example 1.4.6 the final tactic is := by extra which is defined if you click on 'Index of Lean tactics' as "extra checks an inequality whose two sides differ by the addition of a positive quantity". 
 </p>
 
-<pre class="example" id="org74d0ef9">
+<pre class="example" id="org6df4d30">
 -- Example 1.4.9
 -- Exercise: replace the words "sorry" with the correct Lean justification.
 example {a b : ℚ} (h1 : a ≥ 0) (h2 : b ≥ 0) (h3 : a + b ≤ 8) :
@@ -677,7 +656,7 @@ example {a b : ℚ} (h1 : a ≥ 0) (h2 : b ≥ 0) (h3 : a + b ≤ 8) :
 Try some 14.11 exercises
 </p>
 
-<pre class="example" id="org616a720">
+<pre class="example" id="org5e03262">
 example {a b : ℚ} (h1 : 3 ≤ a) (h2 : a + 2 * b ≥ 4) : a + b ≥ 3 :=
   calc
   a + b = a/2 + (a + 2*b)/2 := by ring
@@ -706,32 +685,16 @@ example {n : ℤ} (hn : n ≥ 10) : n ^ 4 - 2 * n ^ 2 &gt; 3 * n ^ 3 :=
   _ ≥ 3 * n^3 + 68 * 10 * 10 := by rel [hn]
   _ &gt; 3 * n^3 := by extra
 </pre>
-</div>
-</div>
-</div>
-<div id="outline-container-org67bb42f" class="outline-2">
-<h2 id="org67bb42f">Number Theory</h2>
-<div class="outline-text-2" id="text-org67bb42f">
-<p>
-I'm going to do the first 26 lectures of:
-</p>
-
-<ul class="org-ul">
-<li><a href="https://www.youtube.com/playlist?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8">Intro to Number Theory</a> lectures by Richard Borcherds
-<ul class="org-ul">
-<li>Uses <i>An introduction to the theory of numbers</i> by Niven, Zuckerman, and Montgomery</li>
-</ul></li>
-</ul>
 
 <p>
 TODO
 </p>
 
-
 <hr />
 <p>
 <a href="./math.html">Home</a>
 </p>
+</div>
 </div>
 </div>
 </div>

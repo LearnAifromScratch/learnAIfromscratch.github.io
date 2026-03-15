@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-03-14 Sat 20:34 -->
+<!-- 2026-03-14 Sat 20:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI (ML and Robotics) in 2026</title>
@@ -202,35 +202,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd2245e6">Intro</a>
+<li><a href="#orgd1734b1">Intro</a>
 <ul>
-<li><a href="#org9fa3521">Politics of AI in 2026</a></li>
+<li><a href="#org7f85038">Limits of AI</a></li>
+<li><a href="#orgf665fc4">Politics of AI in 2026</a></li>
 </ul>
 </li>
-<li><a href="#orge679b86">Curriculum</a>
+<li><a href="#org6f65b03">Curriculum</a>
 <ul>
-<li>
-<ul>
-<li><a href="#orgf6749e4">Research</a></li>
+<li><a href="#org788d2ff">Theory</a></li>
+<li><a href="#org598cba1">Robotics</a></li>
 </ul>
 </li>
-<li><a href="#org7998f67">Theory</a>
-<ul>
-<li><a href="#orge1c9cc3">Advanced Introduction to ML</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org6b5306b">Start Here: Scalar Calculus</a></li>
-<li><a href="#org61227f8">Linear Algebra</a></li>
-<li><a href="#org9473953"><span class="todo TODO">TODO</span> Gradient</a></li>
-<li><a href="#org66be64d"><span class="todo TODO">TODO</span> Matrix Calculus</a></li>
+<li><a href="#org8eba71d">Start Here: Scalar Calculus</a></li>
+<li><a href="#org1ab3ac0">Linear Algebra</a></li>
+<li><a href="#orgac63411"><span class="todo TODO">TODO</span> Gradient</a></li>
+<li><a href="#org195085a"><span class="todo TODO">TODO</span> Matrix Calculus</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd2245e6" class="outline-2">
-<h2 id="orgd2245e6">Intro</h2>
-<div class="outline-text-2" id="text-orgd2245e6">
+<div id="outline-container-orgd1734b1" class="outline-2">
+<h2 id="orgd1734b1">Intro</h2>
+<div class="outline-text-2" id="text-orgd1734b1">
 <p>
 The purpose of this is to learn the math model because then you can figure out all the new models. Enormous resources are required to train AI even with 'mixture of experts' and multi-modal training could be much better than it is today maybe (you?) can figure out a better linear model. Robotics is also in need of new models so we'll learn some here. 
 </p>
@@ -242,18 +235,18 @@ Machine Learning is quietly taking off under the radar of the LLM garbage shilli
 <p>
 Where I work we learned <i>over a septillion</i> floating point calculations using regular old machine learning to maximize trading algorithms and used none of the LLM hype. There's tons of low hanging fruit to pick still we can harvest. 
 </p>
-
-<p>
-<b>Limits of AI</b>
-</p>
-
+</div>
+<div id="outline-container-org7f85038" class="outline-3">
+<h3 id="org7f85038">Limits of AI</h3>
+<div class="outline-text-3" id="text-org7f85038">
 <p>
 Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like Grok-n, GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors (aka ideal models), can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
 </p>
 </div>
-<div id="outline-container-org9fa3521" class="outline-3">
-<h3 id="org9fa3521">Politics of AI in 2026</h3>
-<div class="outline-text-3" id="text-org9fa3521">
+</div>
+<div id="outline-container-orgf665fc4" class="outline-3">
+<h3 id="orgf665fc4">Politics of AI in 2026</h3>
+<div class="outline-text-3" id="text-orgf665fc4">
 <p>
 You will hear the following in the news cycle
 </p>
@@ -295,7 +288,7 @@ That said we will still learn some 'effective altruistic' reverse engineering of
 </p>
 
 <p>
-Anthropic losing all their gov contracts and Sam Altman becoming the final AI boss is probably the best outcome we could have hoped for as fellow plebs that have no control over any of this shit. I at least recall old Sam Altman <a href="https://blog.samaltman.com/e-pur-si-muove">posts</a> on HN from back in the day he's definitely not nearly as insane as some of the Anthropic people who are openly political.
+Anthropic losing all their gov contracts and Sam Altman becoming the final AI boss is probably the best outcome we could have hoped for as fellow plebs that have no control over any of this shit. I at least recall old Sam Altman <a href="https://blog.samaltman.com/e-pur-si-muove">posts</a> on HN from back in the day he's definitely not nearly as insane as some of the Anthropic people who are openly political. He's young enough like the ZUCC to not just cash out and spend forever on a yacht like the rest of the tech startup billionaires did so hopefully he doesn't sell OpenAI to some maniac hell bent on imposing their ideology on the planet. 
 </p>
 
 <p>
@@ -304,9 +297,9 @@ Anyway, who says YOU won't come up with a better model after doing this curricul
 </div>
 </div>
 </div>
-<div id="outline-container-orge679b86" class="outline-2">
-<h2 id="orge679b86">Curriculum</h2>
-<div class="outline-text-2" id="text-orge679b86">
+<div id="outline-container-org6f65b03" class="outline-2">
+<h2 id="org6f65b03">Curriculum</h2>
+<div class="outline-text-2" id="text-org6f65b03">
 <p>
 Build an AI framework:
 </p>
@@ -336,9 +329,9 @@ Fuse the framework with multimodal capabilities:
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-orgf6749e4" class="outline-4">
-<h4 id="orgf6749e4">Research</h4>
-<div class="outline-text-4" id="text-orgf6749e4">
+<div id="outline-container-org9b76b54" class="outline-4">
+<h4 id="org9b76b54">Research</h4>
+<div class="outline-text-4" id="text-org9b76b54">
 <p>
 We learn some of the applied art of attempting to reverse engineer or at least understand what an AI model is actually doing like if it's lying to us or has some emergent abilities. 
 </p>
@@ -358,9 +351,9 @@ We learn some of the applied art of attempting to reverse engineer or at least u
 </ul>
 </div>
 </div>
-<div id="outline-container-org7998f67" class="outline-3">
-<h3 id="org7998f67">Theory</h3>
-<div class="outline-text-3" id="text-org7998f67">
+<div id="outline-container-org788d2ff" class="outline-3">
+<h3 id="org788d2ff">Theory</h3>
+<div class="outline-text-3" id="text-org788d2ff">
 <p>
 The PhD <a href="https://ml.cmu.edu/current-students/phd-curriculum">core requirements</a> of most schools consists of:
 </p>
@@ -378,12 +371,12 @@ The goal is then to figure out how to improve or come up with a better model/opt
 </p>
 
 <p>
-Any AI doctor or robot space pilot is going to come from a causal learning model in fact every interesting problem you want predicted by AI is almost certainly a causal question like 'if I set this to X, will Y happen?' and 'what would've happened if I did Z instead of X'. I wish to explore that here since nobody else is except small research teams. 
+Any AI doctor or robot space pilot is going to come from a causal learning model in fact every interesting problem you want predicted by AI is almost certainly a causal question like 'if I set this to X, will Y happen?' and 'what would've happened if I did Z instead of X'. I wish to explore that here since nobody else is except small research teams. Even rehearsal <a href="https://youtu.be/wA3wGCEHBmU?si=kGKNbDzlxudxTlWj">music</a> needs causal AI because of reacting to whatever the other musicians are doing. 
 </p>
 </div>
-<div id="outline-container-orge1c9cc3" class="outline-4">
-<h4 id="orge1c9cc3">Advanced Introduction to ML</h4>
-<div class="outline-text-4" id="text-orge1c9cc3">
+<div id="outline-container-org08dd021" class="outline-4">
+<h4 id="org08dd021">Advanced Introduction to ML</h4>
+<div class="outline-text-4" id="text-org08dd021">
 <p>
 Here is the same content as <a href="https://www.cs.cmu.edu/~nihars/teaching/10715Fa25.html">10-715</a> or the mathematical model of machine learning in 2025 (which is mostly just a bunch of graphs which themselves are mostly DAGs) 
 </p>
@@ -401,10 +394,22 @@ Here is the same content as <a href="https://www.cs.cmu.edu/~nihars/teaching/107
 </div>
 </div>
 </div>
+<div id="outline-container-org598cba1" class="outline-3">
+<h3 id="org598cba1">Robotics</h3>
+<div class="outline-text-3" id="text-org598cba1">
+<p>
+There is a full text and lecture videos for <a href="https://underactuated.csail.mit.edu/index.html">Underactuated Robotics</a> at MIT and <a href="https://manipulation.csail.mit.edu/">Robotic Manipulation</a> (<a href="https://www.youtube.com/watch?v=PGY-4LOPs7U">Youtube lectures</a>). This is the best content to learn the math model of 2026 robotics and once again maybe you study this and find a better model or optimize the current one.
+</p>
+
+<p>
+This is the #1 hyped and sought after skill in 2026. Don't be afraid of the dynamics or control theory just jump in and figure it out as you go. 
+</p>
 </div>
-<div id="outline-container-org6b5306b" class="outline-2">
-<h2 id="org6b5306b">Start Here: Scalar Calculus</h2>
-<div class="outline-text-2" id="text-org6b5306b">
+</div>
+</div>
+<div id="outline-container-org8eba71d" class="outline-2">
+<h2 id="org8eba71d">Start Here: Scalar Calculus</h2>
+<div class="outline-text-2" id="text-org8eba71d">
 <p>
 The math we are doing is not symbolic it's all numerical/analytical so it can be run on a computer system. We're just going to learn the math needed as we go.
 </p>
@@ -418,9 +423,9 @@ Anything that accumulates (speed, volume, interest, distance, produced units) ha
 </p>
 </div>
 </div>
-<div id="outline-container-org61227f8" class="outline-2">
-<h2 id="org61227f8">Linear Algebra</h2>
-<div class="outline-text-2" id="text-org61227f8">
+<div id="outline-container-org1ab3ac0" class="outline-2">
+<h2 id="org1ab3ac0">Linear Algebra</h2>
+<div class="outline-text-2" id="text-org1ab3ac0">
 <p>
 Watch from the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of linear algebra</a> playlist: 
 </p>
@@ -441,17 +446,17 @@ Now watch Zico Kolter's <a href="https://www.cs.cmu.edu/~zkolter/course/linalg/"
 </p>
 </div>
 </div>
-<div id="outline-container-org9473953" class="outline-2">
-<h2 id="org9473953"><span class="todo TODO">TODO</span> Gradient</h2>
-<div class="outline-text-2" id="text-org9473953">
+<div id="outline-container-orgac63411" class="outline-2">
+<h2 id="orgac63411"><span class="todo TODO">TODO</span> Gradient</h2>
+<div class="outline-text-2" id="text-orgac63411">
 <p>
 This is explained in the CMU course but TODO
 </p>
 </div>
 </div>
-<div id="outline-container-org66be64d" class="outline-2">
-<h2 id="org66be64d"><span class="todo TODO">TODO</span> Matrix Calculus</h2>
-<div class="outline-text-2" id="text-org66be64d">
+<div id="outline-container-org195085a" class="outline-2">
+<h2 id="org195085a"><span class="todo TODO">TODO</span> Matrix Calculus</h2>
+<div class="outline-text-2" id="text-org195085a">
 <ul class="org-ul">
 <li><a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> (MIT)
 <ul class="org-ul">

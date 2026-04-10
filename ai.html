@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-04-09 Thu 22:22 -->
+<!-- 2026-04-09 Thu 22:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI (ML and Robotics) in 2026</title>
@@ -202,28 +202,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1542c43">Intro</a>
+<li><a href="#org910f328">Intro</a>
 <ul>
-<li><a href="#org2865027">Machine Learning</a></li>
-<li><a href="#org5fa0007">Robotics</a></li>
-<li><a href="#org9850f39">Research (LLMs)</a></li>
-<li><a href="#org9c7b494">Optional Research (Causality Models)</a></li>
+<li><a href="#org9596e2e">Machine Learning</a></li>
+<li><a href="#orga9053e1">Robotics</a></li>
+<li><a href="#org4897aba">Research (LLMs)</a></li>
+<li><a href="#org3a32402">Optional Research (Causality Models)</a></li>
 </ul>
 </li>
-<li><a href="#orge99112a"><span class="todo TODO">TODO</span> </a></li>
+<li><a href="#orgf7c9196"><span class="todo TODO">TODO</span> </a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1542c43" class="outline-2">
-<h2 id="org1542c43">Intro</h2>
-<div class="outline-text-2" id="text-org1542c43">
+<div id="outline-container-org910f328" class="outline-2">
+<h2 id="org910f328">Intro</h2>
+<div class="outline-text-2" id="text-org910f328">
 <p>
-I took me forever to finally find a decent curriculum for this because access to the resources needed were obsoleted immediately or too expensive but now there's a window where we can get in. I also did have time to properly finish it because I was a junior climbing the ladder but now I climbed and I finally have time to do this everyday.
+I took me forever to finally find a decent curriculum for this because access to the resources needed were obsoleted immediately or too expensive but now there's a window where we can get in. I also finally have time to properly finish it because I was a junior climbing the ladder but now I climbed and can do this everyday. To take advantage of the window I will not be changing this. 
 </p>
 </div>
-<div id="outline-container-org2865027" class="outline-3">
-<h3 id="org2865027">Machine Learning</h3>
-<div class="outline-text-3" id="text-org2865027">
+<div id="outline-container-org9596e2e" class="outline-3">
+<h3 id="org9596e2e">Machine Learning</h3>
+<div class="outline-text-3" id="text-org9596e2e">
 <p>
 I am following two curriculums:
 </p>
@@ -245,7 +245,7 @@ We will learn:
 <ul class="org-ul">
 <li>All <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">lectures</a> are taught by the author of the <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a> and there's undergrad <a href="https://introml.mit.edu/notes/">notes</a> (MIT).</li>
 </ul></li>
-<li><a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">30 Lectures</a> (March 2026) by MIT's leading Neuroscience researcher on the foundations of Deep Learning and their conjectures why it works (sparsity) and what isn't working.
+<li><a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">30 Lectures</a> (March 2026) by MIT's leading Neuroscience researcher on the foundations of Deep Learning and his conjecture why it works (sparsity) and what isn't working.
 <ul class="org-ul">
 <li>Some optional <a href="https://jorchard.github.io/cs479.github.io/index.html">short lectures</a> from the perspective of theoretical neuroscience.</li>
 <li>A <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i> to help understand the lectures.</li>
@@ -277,21 +277,24 @@ Now we will fuse it with multimodal capabilities:
 </ul>
 
 <p>
-However it will require throwing out almost all math learned in undergrad because as per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning the Real Numbers don't exist. Everything must be done by numerical analysis which means no limits, no Riemann integral, no pivots or echelon forms, no inverting matrices, no eigenwhatever, and exclusively using matrix factorization for linear algebra. Congrats you no longer need to read <i>Mathematics for Machine Learning</i> we are dumping 4 years of school in the trash. 
+However it will require throwing out almost all math learned in undergrad because as per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning the Real Numbers don't exist. Everything must be done by numerical analysis which means no limits, no Riemann integral, no pivots or echelon forms, no inverting matrices, no eigenwhatever, and exclusively using matrix factorization for linear algebra. Congrats you no longer need to read <i>Mathematics for Machine Learning</i> we are dumping 4 years of undergrad in the trash. 
 </p>
 
 <ul class="org-ul">
 <li>MIT <a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> and <a href="https://github.com/mitmath/numerical_spoke_linalg">large scale</a> linear algebra.
 <ul class="org-ul">
-<li>Infinitesimal calculus</li>
-<li>Matrix calculus</li>
+<li>Infinttesimal <a href="https://www.gutenberg.org/files/33283/33283-pdf.pdf">calculus book</a>
+<ul class="org-ul">
+<li>We will only ever use dy/dx</li>
+</ul></li>
+<li>Matrix <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">calculus</a></li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5fa0007" class="outline-3">
-<h3 id="org5fa0007">Robotics</h3>
-<div class="outline-text-3" id="text-org5fa0007">
+<div id="outline-container-orga9053e1" class="outline-3">
+<h3 id="orga9053e1">Robotics</h3>
+<div class="outline-text-3" id="text-orga9053e1">
 <p>
 New papers on robotics are being dumped just as rapidly as AI papers but they all assume you know this:
 </p>
@@ -306,11 +309,15 @@ New papers on robotics are being dumped just as rapidly as AI papers but they al
 <li>Walking, Swimming, Flying</li>
 </ul></li>
 </ul>
+
+<p>
+We can utilize Evan Chen's <a href="https://web.evanchen.cc/napkin.html">Napkin Project</a> to figure out the math.     
+</p>
 </div>
 </div>
-<div id="outline-container-org9850f39" class="outline-3">
-<h3 id="org9850f39">Research (LLMs)</h3>
-<div class="outline-text-3" id="text-org9850f39">
+<div id="outline-container-org4897aba" class="outline-3">
+<h3 id="org4897aba">Research (LLMs)</h3>
+<div class="outline-text-3" id="text-org4897aba">
 <p>
 Reverse engineering LLMs: 
 </p>
@@ -330,13 +337,13 @@ Reverse engineering LLMs:
 </ul>
 
 <p>
-Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be many more after. They are interested because eventually they will develop agentic coding for a niche <a href="https://oxcaml.org/">compiler</a> they use in-house that can be more easily verified than imperative junk languages or for use as a developer personal assistant. They're not the only company interested in LLM safety for their own internal properietary models because AI models like Anthropic or OpenAI is a no-go in all of finance for anything except UI design or brainstorming. Now is the time to get into this and      
+Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be many more. They have a new <a href="https://oxcaml.org/">compiler</a> they use in-house that can be more easily verified than imperative junk languages or for use as a developer personal assistant. They're not the only company interested in LLM safety for their own internal properietary models because AI models like Anthropic or OpenAI is a no-go in all of finance for anything except UI design or brainstorming. Now is the time to get into this and cash out.      
 </p>
 </div>
 </div>
-<div id="outline-container-org9c7b494" class="outline-3">
-<h3 id="org9c7b494">Optional Research (Causality Models)</h3>
-<div class="outline-text-3" id="text-org9c7b494">
+<div id="outline-container-org3a32402" class="outline-3">
+<h3 id="org3a32402">Optional Research (Causality Models)</h3>
+<div class="outline-text-3" id="text-org3a32402">
 <p>
 Any future medical AI, any drone defense AI, any space exploring AI, anything cool and futuristic is going to need Causal AI models. If do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
 </p>
@@ -348,9 +355,9 @@ Any future medical AI, any drone defense AI, any space exploring AI, anything co
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-orgac47805" class="outline-4">
-<h4 id="orgac47805">Conformal Prediction</h4>
-<div class="outline-text-4" id="text-orgac47805">
+<div id="outline-container-org37e543c" class="outline-4">
+<h4 id="org37e543c">Conformal Prediction</h4>
+<div class="outline-text-4" id="text-org37e543c">
 <p>
 Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky AI like Athropic is going to charge you to generate some code. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
 </p>
@@ -360,11 +367,11 @@ Conformal Prediction or <i>confidence intervals</i> are also wide open to resear
 </ul>
 </div>
 </div>
-<div id="outline-container-orga0231a4" class="outline-4">
-<h4 id="orga0231a4">Game Theory AI</h4>
-<div class="outline-text-4" id="text-orga0231a4">
+<div id="outline-container-orga6128dd" class="outline-4">
+<h4 id="orga6128dd">Game Theory AI</h4>
+<div class="outline-text-4" id="text-orga6128dd">
 <p>
-It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it.
+It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This including Causal AI is my primary interest because I've always thought (most) probability was bullshit but I'm a heretic so we'll still learn a very good <a href="https://www.cs.cmu.edu/~harchol/Probability/chapters/HarcholBalterWholeBook.pdf">Probability for Computing</a> book.  
 </p>
 
 <ul class="org-ul">
@@ -374,9 +381,9 @@ It's possible to completely throw out stochastic math and do statistics and prob
 </div>
 </div>
 </div>
-<div id="outline-container-orge99112a" class="outline-2">
-<h2 id="orge99112a"><span class="todo TODO">TODO</span> </h2>
-<div class="outline-text-2" id="text-orge99112a">
+<div id="outline-container-orgf7c9196" class="outline-2">
+<h2 id="orgf7c9196"><span class="todo TODO">TODO</span> </h2>
+<div class="outline-text-2" id="text-orgf7c9196">
 <hr />
 <p>
 <a href="./index.html">Home</a>

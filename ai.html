@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-04-10 Fri 01:00 -->
+<!-- 2026-04-10 Fri 01:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI (ML and Robotics) in 2026</title>
@@ -202,23 +202,23 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3779015">Intro</a>
+<li><a href="#orgc248232">Intro</a>
 <ul>
-<li><a href="#orga2abf01">Machine Learning</a></li>
-<li><a href="#org52c86b1">Robotics</a></li>
-<li><a href="#org3038c89">Research (LLMs)</a></li>
-<li><a href="#org316c9ce">Optional Research (Causality Models)</a></li>
-<li><a href="#org88de2e3">Optional Research (Conformal Prediction)</a></li>
-<li><a href="#orgc3757ac">Optional Research (Game Theory AI)</a></li>
+<li><a href="#orgc1d31f9">Machine Learning</a></li>
+<li><a href="#org6f19d49">Robotics</a></li>
+<li><a href="#orgaf36979">Research (Reverse Engineering)</a></li>
+<li><a href="#org0fc7b56">Optional Research (Causality Models)</a></li>
+<li><a href="#org15efd84">Optional Research (Conformal Prediction)</a></li>
+<li><a href="#orgb955b3c">Optional Research (Game Theory AI)</a></li>
 </ul>
 </li>
-<li><a href="#org3ea7e4c"><span class="todo TODO">TODO</span> </a></li>
+<li><a href="#org99934f3"><span class="todo TODO">TODO</span> </a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3779015" class="outline-2">
-<h2 id="org3779015">Intro</h2>
-<div class="outline-text-2" id="text-org3779015">
+<div id="outline-container-orgc248232" class="outline-2">
+<h2 id="orgc248232">Intro</h2>
+<div class="outline-text-2" id="text-orgc248232">
 <p>
 I took me forever to finally find a decent curriculum for this because access to the resources needed were obsoleted immediately or too expensive but now there's a window where we can get in. I also now have the time to properly finish it because I was a junior climbing the ladder but now I climbed and can do this everyday. To take advantage of the window I will not be changing this.
 </p>
@@ -227,11 +227,11 @@ I took me forever to finally find a decent curriculum for this because access to
 Anyone can get in right now because there is an <i>emergency shortage</i> for people that know what we're about to learn because we hit the golden spot where university has not caught up to industry and it won't for at least 3-4 years. If you are in a university and you know this material Zuckerberg (and OpenAI) will vacuum you up immediately he's going all in and taking everyone so the rest of the industry is left with crumbs.   
 </p>
 </div>
-<div id="outline-container-orga2abf01" class="outline-3">
-<h3 id="orga2abf01">Machine Learning</h3>
-<div class="outline-text-3" id="text-orga2abf01">
+<div id="outline-container-orgc1d31f9" class="outline-3">
+<h3 id="orgc1d31f9">Machine Learning</h3>
+<div class="outline-text-3" id="text-orgc1d31f9">
 <p>
-I am following two curriculums:
+I am following these curriculums:
 </p>
 <ul class="org-ul">
 <li>CMU's new <a href="https://ml.cmu.edu/current-students/phd-new-curriculum">PhD curriculum</a></li>
@@ -240,7 +240,7 @@ I am following two curriculums:
 </ul>
 
 <p>
-The plan is to learn the models because then we as plebs can modify them with a pencil and do research because who has access to GPUs and memory anymore in 2026 unless we rent them. Nvidia doesn't even sell consumer GPUs <a href="https://www.pcworld.com/article/3054899/nvidia-is-reportedly-skipping-consumer-gpus-in-2026-thanks-ai.html">anymore</a> it's all going to data centers on the moon or something.    
+The plan is to learn the models and use free rented GPU access for the software because then we as plebs can modify them and do research because who has access to GPUs and memory anymore in 2026. Nvidia doesn't even sell consumer GPUs <a href="https://www.pcworld.com/article/3054899/nvidia-is-reportedly-skipping-consumer-gpus-in-2026-thanks-ai.html">anymore</a> it's all going to data centers on the moon or something.     
 </p>
 
 <p>
@@ -293,14 +293,15 @@ However it will require throwing out almost all math learned in undergrad becaus
 <ul class="org-ul">
 <li>We will only ever use dy/dx</li>
 </ul></li>
+<li><a href="https://book.sciml.ai/">SciML</a> recorded lectures to learn discretized differential eq</li>
 <li>Matrix <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">calculus</a></li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org52c86b1" class="outline-3">
-<h3 id="org52c86b1">Robotics</h3>
-<div class="outline-text-3" id="text-org52c86b1">
+<div id="outline-container-org6f19d49" class="outline-3">
+<h3 id="org6f19d49">Robotics</h3>
+<div class="outline-text-3" id="text-org6f19d49">
 <p>
 New papers on robotics are being dumped just as rapidly as AI papers but they all assume you know this:
 </p>
@@ -321,11 +322,11 @@ We can utilize Evan Chen's <a href="https://web.evanchen.cc/napkin.html">Napkin 
 </p>
 </div>
 </div>
-<div id="outline-container-org3038c89" class="outline-3">
-<h3 id="org3038c89">Research (LLMs)</h3>
-<div class="outline-text-3" id="text-org3038c89">
+<div id="outline-container-orgaf36979" class="outline-3">
+<h3 id="orgaf36979">Research (Reverse Engineering)</h3>
+<div class="outline-text-3" id="text-orgaf36979">
 <p>
-Reverse engineering LLMs: 
+Reverse engineering LLMs to make sure they are doing what they claim they are doing: 
 </p>
 
 <ul class="org-ul">
@@ -343,13 +344,13 @@ Reverse engineering LLMs:
 </ul>
 
 <p>
-Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be more. I didn't exaggerate when I said there's a window where noone (available to be hired) knows these topics. They have a new <a href="https://oxcaml.org/">compiler</a> they use in-house that can be more easily verified than imperative junk languages and are building developer personal assistants. They're not the only company interested in LLM safety for their own internal models because AI models like Anthropic or OpenAI is a no-go in all of finance for anything except UI design or brainstorming. Now is the time to get into this and cash out.      
+Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be more. I didn't exaggerate when I said there's a window where noone (available to be hired) knows these topics.
 </p>
 </div>
 </div>
-<div id="outline-container-org316c9ce" class="outline-3">
-<h3 id="org316c9ce">Optional Research (Causality Models)</h3>
-<div class="outline-text-3" id="text-org316c9ce">
+<div id="outline-container-org0fc7b56" class="outline-3">
+<h3 id="org0fc7b56">Optional Research (Causality Models)</h3>
+<div class="outline-text-3" id="text-org0fc7b56">
 <p>
 Any future medical AI, any drone defense AI, any space exploring AI, anything cool and futuristic is going to need Causal AI models. If do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
 </p>
@@ -362,9 +363,9 @@ Any future medical AI, any drone defense AI, any space exploring AI, anything co
 </ul>
 </div>
 </div>
-<div id="outline-container-org88de2e3" class="outline-3">
-<h3 id="org88de2e3">Optional Research (Conformal Prediction)</h3>
-<div class="outline-text-3" id="text-org88de2e3">
+<div id="outline-container-org15efd84" class="outline-3">
+<h3 id="org15efd84">Optional Research (Conformal Prediction)</h3>
+<div class="outline-text-3" id="text-org15efd84">
 <p>
 Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky AI that Anthropic peddles like Claude Code is going to charge you to generate some slop. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
 </p>
@@ -374,9 +375,9 @@ Conformal Prediction or <i>confidence intervals</i> are also wide open to resear
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc3757ac" class="outline-3">
-<h3 id="orgc3757ac">Optional Research (Game Theory AI)</h3>
-<div class="outline-text-3" id="text-orgc3757ac">
+<div id="outline-container-orgb955b3c" class="outline-3">
+<h3 id="orgb955b3c">Optional Research (Game Theory AI)</h3>
+<div class="outline-text-3" id="text-orgb955b3c">
 <p>
 It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This including Causal AI is my primary interest because I've always thought (most) probability was bullshit but I'm a heretic so we'll still learn a very good <a href="https://www.cs.cmu.edu/~harchol/Probability/chapters/HarcholBalterWholeBook.pdf">Probability for Computing</a> book.  
 </p>
@@ -387,9 +388,9 @@ It's possible to completely throw out stochastic math and do statistics and prob
 </div>
 </div>
 </div>
-<div id="outline-container-org3ea7e4c" class="outline-2">
-<h2 id="org3ea7e4c"><span class="todo TODO">TODO</span> </h2>
-<div class="outline-text-2" id="text-org3ea7e4c">
+<div id="outline-container-org99934f3" class="outline-2">
+<h2 id="org99934f3"><span class="todo TODO">TODO</span> </h2>
+<div class="outline-text-2" id="text-org99934f3">
 <hr />
 <p>
 <a href="./index.html">Home</a>

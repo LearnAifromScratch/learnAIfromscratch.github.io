@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-03-15 Sun 07:50 -->
+<!-- 2026-04-09 Thu 22:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI (ML and Robotics) in 2026</title>
@@ -202,111 +202,70 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9b70550">Intro</a>
+<li><a href="#org1542c43">Intro</a>
 <ul>
-<li><a href="#orge387952">Limits of AI</a></li>
-<li><a href="#org74702d1">Politics of AI in 2026</a></li>
+<li><a href="#org2865027">Machine Learning</a></li>
+<li><a href="#org5fa0007">Robotics</a></li>
+<li><a href="#org9850f39">Research (LLMs)</a></li>
+<li><a href="#org9c7b494">Optional Research (Causality Models)</a></li>
 </ul>
 </li>
-<li><a href="#org48b2523">Curriculum</a>
-<ul>
-<li><a href="#org5e489d3">Theory</a></li>
-<li><a href="#org7e746f9">Robotics</a></li>
-</ul>
-</li>
-<li><a href="#org59071ca">Start Here: Scalar Calculus</a></li>
-<li><a href="#org8f91d49">Linear Algebra</a></li>
-<li><a href="#orga287d98"><span class="todo TODO">TODO</span> Gradient</a></li>
-<li><a href="#org68f2ece"><span class="todo TODO">TODO</span> Matrix Calculus</a></li>
+<li><a href="#orge99112a"><span class="todo TODO">TODO</span> </a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9b70550" class="outline-2">
-<h2 id="org9b70550">Intro</h2>
-<div class="outline-text-2" id="text-org9b70550">
+<div id="outline-container-org1542c43" class="outline-2">
+<h2 id="org1542c43">Intro</h2>
+<div class="outline-text-2" id="text-org1542c43">
 <p>
-The purpose of this is to learn the math model because then you can figure out all the new models. Enormous resources are required to train AI even with 'mixture of experts' and multi-modal training could be much better than it is today maybe (you?) can figure out a better linear model. Robotics is also in need of new models so we'll learn some here. 
-</p>
-
-<p>
-Machine Learning is quietly taking off under the radar of the LLM garbage shilling in the media especially the world of scientific machine learning to approximate partial differential equations and build mind boggling huge models of galaxies and other extremely complex systems.
-</p>
-
-<p>
-Where I work we learned <i>over a septillion</i> floating point calculations using regular old machine learning to maximize trading algorithms and used none of the LLM hype. There's tons of low hanging fruit to pick still we can harvest. 
+I took me forever to finally find a decent curriculum for this because access to the resources needed were obsoleted immediately or too expensive but now there's a window where we can get in. I also did have time to properly finish it because I was a junior climbing the ladder but now I climbed and I finally have time to do this everyday.
 </p>
 </div>
-<div id="outline-container-orge387952" class="outline-3">
-<h3 id="orge387952">Limits of AI</h3>
-<div class="outline-text-3" id="text-orge387952">
+<div id="outline-container-org2865027" class="outline-3">
+<h3 id="org2865027">Machine Learning</h3>
+<div class="outline-text-3" id="text-org2865027">
 <p>
-Current popular AI is all <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a> like Grok-n, GPT-n, DALL-E etc. Have you wondered if we had infinite resources, infinite data, perfect training algorithms with no errors (aka ideal models), can we use this type of model for everything aka 'General AI'? Someone with help from the Beijing Academy of AI used <a href="https://proceedings.mlr.press/v202/yuan23b.html">category theory</a> to model this scenario to see what is possible.
+I am following two curriculums:
 </p>
-</div>
-</div>
-<div id="outline-container-org74702d1" class="outline-3">
-<h3 id="org74702d1">Politics of AI in 2026</h3>
-<div class="outline-text-3" id="text-org74702d1">
-<p>
-You will hear the following in the news cycle
-</p>
-
 <ul class="org-ul">
-<li>Mass AI job loss is inevitable</li>
+<li>CMU's new <a href="https://ml.cmu.edu/current-students/phd-new-curriculum">PhD curriculum</a></li>
+<li>MIT's new research <a href="https://poggioai.github.io/">Agentic Investigator</a></li>
+<li>MIT's current Robotics curriculum</li>
 </ul>
 
 <p>
-This is mostly CEOs touting their product and AI still remains a personal tool to make you better at whatever it is you're doing. The only job true losses will be managers at Google search engine departments because for decades they had a monopoly on search but now some LLM can perform a search that isn't garbage and filled with ads. Google the past (five?) years has been absolute garbage. 
+The plan is to learn the models because then we as plebs can modify them with a pencil and do research because who has access to GPUs and memory anymore in 2026 unless we rent them. Nvidia doesn't even sell consumer GPUs <a href="https://www.pcworld.com/article/3054899/nvidia-is-reportedly-skipping-consumer-gpus-in-2026-thanks-ai.html">anymore</a> it's all going to data centers on the moon or something.    
 </p>
 
 <p>
-Note this is going to change soon because Google once upon a time when it was first released was actually decent then of course adbux was too tempting so they ruined their entire product in exchange for that sweet money. You should expect most of the LLM cloud providers like OpenAI to start feeding you paid content because some marketing exec is going to be like hey we can sell premium subs and we can also shill adbux! It's like when you pay to see a movie in a theatre and there's 3-5 ads before it starts.
+We will learn:   
 </p>
-
-<p>
-AI-washing is the term for layoffs that are blamed on AI and not the failing company that would've laid everyone off even if LLMs didn't exist. 
-</p>
-
 <ul class="org-ul">
-<li>NEETbux</li>
-</ul>
-
-<p>
-Many political parties will now shill Andrew Yang style universal basic income. 'Your free money, sir'. If so then you can get paid to learn this and screw around with AI all day. 
-</p>
-
+<li>The <a href="https://student.cs.uwaterloo.ca/~cs485/">mathematical model</a> of Machine Learning which hasn't changed.  
 <ul class="org-ul">
-<li>AI regulation</li>
+<li>All <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">lectures</a> are taught by the author of the <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a> and there's undergrad <a href="https://introml.mit.edu/notes/">notes</a> (MIT).</li>
+</ul></li>
+<li><a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">30 Lectures</a> (March 2026) by MIT's leading Neuroscience researcher on the foundations of Deep Learning and their conjectures why it works (sparsity) and what isn't working.
+<ul class="org-ul">
+<li>Some optional <a href="https://jorchard.github.io/cs479.github.io/index.html">short lectures</a> from the perspective of theoretical neuroscience.</li>
+<li>A <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i> to help understand the lectures.</li>
+</ul></li>
 </ul>
 
 <p>
-The effective altruism movement is a leftist movement to maximize philanthropic and social impact on various causes using a sort-of logic which is questionable to me but maybe not for you. It is overly concerned with 'AI safety' but the true motivation is regulatory influence over AI. They want to have a panel of experts, which really means a panel of censors, judge what the AI tells you because it is not beholden like Google is to governments censoring all the results. That said we will still learn some 'effective altruistic' reverse engineering of LLM models because if you've used any of them you know they are lying to you about references or straight up hallucinating results. 
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org48b2523" class="outline-2">
-<h2 id="org48b2523">Curriculum</h2>
-<div class="outline-text-2" id="text-org48b2523">
-<p>
-Build an AI framework:
+Then we will build systems:
 </p>
 
 <ul class="org-ul">
 <li><a href="https://dlsyscourse.org">10-714 DL Algorithms &amp; Implementation</a> (CMU)
 <ul class="org-ul">
 <li>Build from scratch an entire framework for deep learning</li>
-<li>References to use as we go:
-<ul class="org-ul">
-<li><a href="https://introml.mit.edu/notes/">notes</a> (MIT)</li>
-<li><a href="https://jorchard.github.io/cs479.github.io/index.html">short lectures</a> from the perspective of theoretical neuroscience</li>
-<li><a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i></li>
-</ul></li>
+<li><a href="https://www.cs.cmu.edu/~mgormley/courses/10423/schedule.html">Generative AI</a> audit some slides for instruction fine-tuning</li>
 </ul></li>
 </ul>
 
 <p>
-Fuse the framework with multimodal capabilities:
+Now we will fuse it with multimodal capabilities:
 </p>
 
 <ul class="org-ul">
@@ -316,12 +275,44 @@ Fuse the framework with multimodal capabilities:
 <li>YouTube <a href="https://www.youtube.com/playlist?list=PLc0Yh0D0XR4Z3wityRaEuu4rfzTHRIIAO">lectures</a></li>
 </ul></li>
 </ul>
-</div>
-<div id="outline-container-orgad718e3" class="outline-4">
-<h4 id="orgad718e3">Research</h4>
-<div class="outline-text-4" id="text-orgad718e3">
+
 <p>
-We learn some of the applied art of attempting to reverse engineer or at least understand what an AI model is actually doing like if it's lying to us or has some emergent abilities. 
+However it will require throwing out almost all math learned in undergrad because as per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning the Real Numbers don't exist. Everything must be done by numerical analysis which means no limits, no Riemann integral, no pivots or echelon forms, no inverting matrices, no eigenwhatever, and exclusively using matrix factorization for linear algebra. Congrats you no longer need to read <i>Mathematics for Machine Learning</i> we are dumping 4 years of school in the trash. 
+</p>
+
+<ul class="org-ul">
+<li>MIT <a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> and <a href="https://github.com/mitmath/numerical_spoke_linalg">large scale</a> linear algebra.
+<ul class="org-ul">
+<li>Infinitesimal calculus</li>
+<li>Matrix calculus</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5fa0007" class="outline-3">
+<h3 id="org5fa0007">Robotics</h3>
+<div class="outline-text-3" id="text-org5fa0007">
+<p>
+New papers on robotics are being dumped just as rapidly as AI papers but they all assume you know this:
+</p>
+
+<ul class="org-ul">
+<li>The mathematical model of <a href="https://manipulation.mit.edu/">Robotic Manipulation</a> 
+<ul class="org-ul">
+<li>Robot hands/arms</li>
+</ul></li>
+<li>The mathematical model of <a href="https://underactuated.csail.mit.edu/">Underactuated Robotics</a> 
+<ul class="org-ul">
+<li>Walking, Swimming, Flying</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9850f39" class="outline-3">
+<h3 id="org9850f39">Research (LLMs)</h3>
+<div class="outline-text-3" id="text-org9850f39">
+<p>
+Reverse engineering LLMs: 
 </p>
 
 <ul class="org-ul">
@@ -337,125 +328,55 @@ We learn some of the applied art of attempting to reverse engineer or at least u
 </ul></li>
 </ul></li>
 </ul>
-</div>
-</div>
-<div id="outline-container-org5e489d3" class="outline-3">
-<h3 id="org5e489d3">Theory</h3>
-<div class="outline-text-3" id="text-org5e489d3">
-<p>
-The PhD <a href="https://ml.cmu.edu/current-students/phd-curriculum">core requirements</a> of most schools consists of:
-</p>
-<ul class="org-ul">
-<li>The mathematical theory of ML (supervised learning is statistical decision theory)</li>
-<li>Models that generate their own learning samples (diffusion/GANs)</li>
-<li>Optimizing some function under a set of constraints (non-convex and convex, distributed)</li>
-<li>The mathematical model of reinforcement learning and multi-armed bandits (decisions under uncertainty)</li>
-<li>Numerical optimizations because our computer architecture is ancient</li>
-<li>Causality which noone is covering anywhere you have to mine the internet</li>
-</ul>
 
 <p>
-The goal is then to figure out how to improve or come up with a better model/optimizer and there's an endless stream of daily papers from around the world doing just that being dumped on arxiv or published in various ML journals. 
-</p>
-
-<p>
-Any AI doctor or robot space pilot is going to come from a causal learning model in fact every interesting problem you want predicted by AI is almost certainly a causal question like 'if I set this to X, will Y happen?' and 'what would've happened if I did Z instead of X'. I wish to explore that here since nobody else is except small research teams. Even some kind of AI music would need causal AI to know reactions to their <a href="https://www.youtube.com/watch?v=5a9rBGsZkL8">meme performance</a>.  
+Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be many more after. They are interested because eventually they will develop agentic coding for a niche <a href="https://oxcaml.org/">compiler</a> they use in-house that can be more easily verified than imperative junk languages or for use as a developer personal assistant. They're not the only company interested in LLM safety for their own internal properietary models because AI models like Anthropic or OpenAI is a no-go in all of finance for anything except UI design or brainstorming. Now is the time to get into this and      
 </p>
 </div>
-<div id="outline-container-orgd8c0edb" class="outline-4">
-<h4 id="orgd8c0edb">Advanced Introduction to ML</h4>
-<div class="outline-text-4" id="text-orgd8c0edb">
+</div>
+<div id="outline-container-org9c7b494" class="outline-3">
+<h3 id="org9c7b494">Optional Research (Causality Models)</h3>
+<div class="outline-text-3" id="text-org9c7b494">
 <p>
-Here is the same content as <a href="https://www.cs.cmu.edu/~nihars/teaching/10715Fa25.html">10-715</a> or the mathematical model of machine learning in 2025 (which is mostly just a bunch of graphs which themselves are mostly DAGs) 
+Any future medical AI, any drone defense AI, any space exploring AI, anything cool and futuristic is going to need Causal AI models. If do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
 </p>
 
-
 <ul class="org-ul">
-<li><a href="https://student.cs.uwaterloo.ca/~cs485/">CS 485 Theory of ML</a> (Waterloo)   
+<li><a href="https://library.oapen.org/bitstream/id/056a11be-ce3a-44b9-8987-a6c68fce8d9b/11283.pdf">Elements of Causal Inference</a> Foundations and learning algorithms
 <ul class="org-ul">
-<li>All the <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">lectures</a> taught by the author of the <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a></li>
-<li><a href="https://diffusion.csail.mit.edu/">MIS 6.S184 Diffusion Models</a> 6 lectures on the math of diffusion models</li>
-<li><a href="https://arxiv.org/pdf/1904.07272">Multi-Armed Bandits</a> or <a href="https://rltheorybook.github.io/">RL: Theory and Algorithms</a> though we won't take all of this</li>
-<li><a href="https://library.oapen.org/bitstream/id/056a11be-ce3a-44b9-8987-a6c68fce8d9b/11283.pdf">Elements of Causal Inference</a> Foundations and learning algorithms</li>
+<li>Whatever else I can find when we get here because this is taking off right now.</li>
 </ul></li>
 </ul>
 </div>
-</div>
-</div>
-<div id="outline-container-org7e746f9" class="outline-3">
-<h3 id="org7e746f9">Robotics</h3>
-<div class="outline-text-3" id="text-org7e746f9">
+<div id="outline-container-orgac47805" class="outline-4">
+<h4 id="orgac47805">Conformal Prediction</h4>
+<div class="outline-text-4" id="text-orgac47805">
 <p>
-There is a full text and lecture videos for <a href="https://underactuated.csail.mit.edu/index.html">Underactuated Robotics</a> at MIT and <a href="https://manipulation.csail.mit.edu/">Robotic Manipulation</a> (<a href="https://www.youtube.com/watch?v=PGY-4LOPs7U">Youtube lectures</a>). This is the best content to learn the math model of 2026 robotics and once again maybe you study this and find a better model or optimize the current one.
-</p>
-
-<p>
-This is the #1 hyped and sought after skill in 2026. Don't be afraid of the dynamics or control theory just jump in and figure it out as you go. I will go through this completely at the end of this curriculum. 
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org59071ca" class="outline-2">
-<h2 id="org59071ca">Start Here: Scalar Calculus</h2>
-<div class="outline-text-2" id="text-org59071ca">
-<p>
-The math we are doing is not symbolic it's all numerical/analytical so it can be run on a computer system. We're just going to learn the math needed as we go.
+Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky AI like Athropic is going to charge you to generate some code. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
 </p>
 
 <ul class="org-ul">
-<li>Watch this <a href="https://youtu.be/9vKqVkMQHKk?si=-MetxfKULGKCQhqU">derivative</a> video by 3Blue1Brown which explains the dy/dx notation.</li>
+<li><a href="https://www.alrw.net/">Algorithmic Learning in a Random World</a> using classic techniques like support vector machines</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-orga0231a4" class="outline-4">
+<h4 id="orga0231a4">Game Theory AI</h4>
+<div class="outline-text-4" id="text-orga0231a4">
+<p>
+It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it.
+</p>
 
-<p>
-Anything that accumulates (speed, volume, interest, distance, produced units) has a function of the rate of how fast it is accumulating. In that 3Blue1Brown video distance traveled is an accumulation and the velocity (speed in scalar calculus) is the rate of that distance accumulation. Speed also accumulates so it too has a rate of change function called acceleration. You can switch between both functions so recover the velocity function from acceleration by integrating which we'll learn when it comes up.
-</p>
-</div>
-</div>
-<div id="outline-container-org8f91d49" class="outline-2">
-<h2 id="org8f91d49">Linear Algebra</h2>
-<div class="outline-text-2" id="text-org8f91d49">
-<p>
-Watch from the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of linear algebra</a> playlist: 
-</p>
 <ul class="org-ul">
-<li>Vectors</li>
-<li>Linear combinations</li>
-<li>Linear transformations</li>
-<li>Matrix mulitplication as composition</li>
-<li>Nonsquare matrices as transformations between dimensions</li>
+<li><a href="https://www.probabilityandfinance.com/2019_book/index.html">Game-Theoretic Foundations</a> for Probability and Finance</li>
 </ul>
-
-<p>
-If you watch that you'll get linear algebra is mapping from one space to the next or a matrix <i>encodes a function</i> and it's inputs and outputs are vectors. We haven't covered the SVD or singular value decomposition. One of the goals of a calculus course is to show that when you specify a function using a polynomial model you get all the statistics of that function like the max/min values, the ability to factor it so you can find the roots (p(x) = 0). The SVD is the same it is a 'factorization' of a matrix. You get all the column space, all the row space, all the nullspace like polynomial zeros. If you know what a function is you know what a polynomial is and you know what a matrix is it's all the same object just encoded differently.   
-</p>
-
-<p>
-Now watch Zico Kolter's <a href="https://www.cs.cmu.edu/~zkolter/course/linalg/">linear algebra review</a> this is the particulars or details or algorithms we need to work in that domain. The author of the famous <a href="https://www.deeplearningbook.org/">book</a> about deep learning cites this crash course. 
-</p>
 </div>
 </div>
-<div id="outline-container-orga287d98" class="outline-2">
-<h2 id="orga287d98"><span class="todo TODO">TODO</span> Gradient</h2>
-<div class="outline-text-2" id="text-orga287d98">
-<p>
-This is explained in the CMU course but TODO
-</p>
 </div>
 </div>
-<div id="outline-container-org68f2ece" class="outline-2">
-<h2 id="org68f2ece"><span class="todo TODO">TODO</span> Matrix Calculus</h2>
-<div class="outline-text-2" id="text-org68f2ece">
-<ul class="org-ul">
-<li><a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">Matrix Calculus</a> (MIT)
-<ul class="org-ul">
-<li>8 lectures on calculus generalized to higher dimensions none of it will be symbolic</li>
-</ul></li>
-</ul>
-
-<p>
-Much of this is also explained in the CMU 10-714 DL Algorithms &amp; Implementation course just take it.
-</p>
-
+<div id="outline-container-orge99112a" class="outline-2">
+<h2 id="orge99112a"><span class="todo TODO">TODO</span> </h2>
+<div class="outline-text-2" id="text-orge99112a">
 <hr />
 <p>
 <a href="./index.html">Home</a>

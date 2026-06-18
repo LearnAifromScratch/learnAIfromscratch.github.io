@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-03-12 Thu 19:54 -->
+<!-- 2026-06-17 Wed 22:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>A Security Curriculum</title>
+<title>A 2026 Security Curriculum</title>
 <meta name="author" content="jbh" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -197,217 +197,116 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">A Security Curriculum</h1>
+<h1 class="title">A 2026 Security Curriculum</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0924e5c">Curriculum</a>
+<li><a href="#org0097e45">Current state of the sec industry</a></li>
+<li><a href="#org0d14195">New curriculum</a>
 <ul>
-<li><a href="#org5e765d9">pwn.college</a></li>
-<li><a href="#orgc217429">Securing an entire company</a></li>
-<li><a href="#orgdcb5b04">Cryptography</a></li>
+<li><a href="#orgf1b4298">Cryptography</a></li>
+<li><a href="#org7c86952">Hardware h4xxing</a></li>
 </ul>
 </li>
-<li><a href="#org344453b">Typical industry options</a></li>
-<li><a href="#org8804776">How bad it all is</a>
+<li><a href="#orge168c3f">The state of security</a>
 <ul>
-<li><a href="#orgdf78cb4">It is even worse than you thought</a></li>
-<li><a href="#orgc29d060">Open-source sabotage</a></li>
-<li><a href="#org2bdc4c5">Security research is a thankless career</a></li>
-<li><a href="#org1db3e81">Massive surveillance</a></li>
-<li><a href="#org82d3ee1">Incomplete history of h4xxing</a></li>
-<li><a href="#org7695f0e">The last of the true hackers</a></li>
-<li><a href="#org7e6975f">The last of the true blackhats</a></li>
-<li><a href="#org755946f">Max Ray Vision</a></li>
-<li><a href="#orgfe75abe">ASTRA</a></li>
-<li><a href="#orgcd57b1b">Darknet OPSEC</a></li>
-<li><a href="#org8981ded">Darknet OPSEC II</a></li>
-<li><a href="#orge80eb36">Darksec OPSEC III</a></li>
+<li><a href="#orga1af902">Open-source sabotage</a></li>
+<li><a href="#org271dc0f">Security research is a thankless career</a></li>
+<li><a href="#org834458a">Massive surveillance</a></li>
+<li><a href="#org7c67a46">Incomplete history of h4xxing</a></li>
+<li><a href="#orge22c01d">The last of the true hackers</a></li>
+<li><a href="#org04f3e7a">The last of the true blackhats</a></li>
+<li><a href="#orgfdd7186">Max Ray Vision</a></li>
+<li><a href="#orgc383e02">ASTRA</a></li>
+<li><a href="#org43d04b5">Darknet OPSEC</a></li>
+<li><a href="#org126dc83">Darksec OPSEC III</a></li>
 </ul>
 </li>
-<li><a href="#orgf8c9ad6">Physical Security</a></li>
-<li><a href="#org955d4df">Intro to Cybersecurity</a>
+<li><a href="#orgb0b60a1">Physical Security</a>
 <ul>
-<li><a href="#orge1b51a9">CSE-365 Week 1</a></li>
-<li><a href="#org866a23e">15-213 Week 1</a></li>
-<li><a href="#orga40afb2">Lab &amp; HW Problems</a></li>
+<li><a href="#org6f08aab">Covert Hostile surveillance</a></li>
+<li><a href="#org5616a06">Surveillance detection</a></li>
+<li><a href="#orge3377c7">Surveillance detection route</a></li>
+<li><a href="#org0aa13f9">Travel security</a></li>
+<li><a href="#org4d3cb7f">Bodyguards</a></li>
+<li><a href="#orgceb614c">Home security</a></li>
+<li><a href="#orgeadb9c8">South Africa security</a></li>
+<li><a href="#orgabfa096">Jamming</a></li>
+<li><a href="#org66aa44f">Costs</a></li>
+<li><a href="#org6a910bd">Home security case study</a></li>
+<li><a href="#org46e5551">Opsec</a></li>
+<li><a href="#org5b822ae">Make a dump button</a></li>
+<li><a href="#org7e87c07">Athlete Airport stalkers</a></li>
+</ul>
+</li>
+<li><a href="#org26fae94">15-213 Computer Systems</a>
+<ul>
+<li><a href="#orgea607d7">Lab &amp; HW Problems</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <style>details summary { color: green; }</style>
-<div id="outline-container-org0924e5c" class="outline-2">
-<h2 id="org0924e5c">Curriculum</h2>
-<div class="outline-text-2" id="text-org0924e5c">
+<div id="outline-container-org0097e45" class="outline-2">
+<h2 id="org0097e45">Current state of the sec industry</h2>
+<div class="outline-text-2" id="text-org0097e45">
 <p>
-Here is everything I found that fits together to achieve the goal of being able to follow the <a href="https://www.robertxiao.ca/hacking/">people</a> who keep winning DEFCON and other CTFs so we can get good enough to eventually be paid to do this being a junior consultant and working our way up to freelancer in the 'security industry' which today can be even more sketchy than old school blackhat communities.
+Only special companies get access to the AI agents that are not public which can find bugs so we will change our approach. Development is now creating 'lightweight formal models', checking the models with the help of AI, and having AI implement the model without even needing to look at the code.
 </p>
 
 <p>
-We now live in early 2000s again because fools are generating code with LLMs who in this window of time are wide open to attack. It will probably change in about 9 months but right now it's like Phrack days.  We will also learn LLM attacks to bamboozle their outputs. 
-</p>
-</div>
-<div id="outline-container-org5e765d9" class="outline-3">
-<h3 id="org5e765d9">pwn.college</h3>
-<div class="outline-text-3" id="text-org5e765d9">
-<p>
-We want to take these <a href="https://pwn.college/">4 courses</a> from ASU. They even offer an <a href="https://ctf.asu.edu/education/apprenticeship-program/">apprenticeship</a>. 
+Coming soon:
 </p>
 
 <ul class="org-ul">
-<li>CSE 365 <a href="https://pwn.college/cse365-s2025/">Intro to Cybersecurity</a></li>
-<li>CSE 466 <a href="https://pwn.college/cse466-f2024/">System Security</a></li>
-<li>CSE 539 <a href="https://pwn.college/cse539-s2025/">Applied Crypto</a></li>
-<li>CSE 598 <a href="https://pwn.college/cse598-se-s2025/">Advanced Software Exploitation</a></li>
+<li>Websites are unlikely to even exist in 2027 as we can all trivially make native software now and just pass around some kind of database or a massive database cloud which will have a Mythos AI agent securing it.</li>
+<li>Reverse engineering is basically going to be entirely AI by 2027 if not already.</li>
+<li>Security audits are entirely AI as you simply pay some company with access to Mythos 5 (or whatever the current AI agent is). Securing an entire company will be AI as it can watch in realtime everything happening like the logs or a change to the policy where some terminal now wants access to the outside network. Phishing and conman artistry will always be a problem that won't change though.</li>
+<li>H4xxoring some abandoned open source dependency for NPM may still work but will require very clever obfuscation to avoid Mythos detection.</li>
 </ul>
 
 <p>
-These resources match with the pwn.college courses if you want depth:
+What won't change is cryptography and writing secure crypto code so we will learn it. Exploiting a box now requires fooling some AI agent but hardware attacks galore exist and can't be mitigated.
 </p>
 
-<ul class="org-ul">
-<li>CMU <a href="https://csapp.cs.cmu.edu/">CS:APP3e</a> book and <a href="https://www.youtube.com/playlist?list=PLQ5cMeVTtiJkUilq92Cw9D6RhAJhPJ_JX">lectures</a>
-<ul class="org-ul">
-<li><a href="https://inria.hal.science/hal-02383654">Modern C</a> (C23)</li>
-</ul></li>
-<li>CryptoJedi <a href="https://cryptojedi.org/peter/teaching/hacking-in-c-2019.shtml">Hacking in C</a></li>
-<li>CryptoJedi <a href="https://cryptojedi.org/peter/teaching/network-security-2019.shtml">Attacking Networks</a></li>
-<li>PortSwigger <a href="https://portswigger.net/web-security/all-labs">Web Security Labs</a></li>
-<li>Brown <a href="https://cs.brown.edu/courses/csci2951-u/index.html">Topics in Software Security</a> with open research problems</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgc217429" class="outline-3">
-<h3 id="orgc217429">Securing an entire company</h3>
-<div class="outline-text-3" id="text-orgc217429">
 <p>
-You can <a href="https://www.heinz.cmu.edu/programs/executive-education/chief-information-security-officer-certificate">buy</a> CISO certification after 5-7 years work experience in some kind of management role then your career becomes wearing a suit and rolex everyday while sitting on the executive board. The places I've worked at they typically are given no budget and have an almost ceremonial function so I have no idea what they do all day except draw a large salary. 
+Physical security isn't going to change yet either so I will cover some of that here too as I was recently taught by some fancy executive protection outfit as I had vacation time and chose to use it to learn from them how they do their job after I witnessed our director with these guys. 
 </p>
-
+</div>
+</div>
+<div id="outline-container-org0d14195" class="outline-2">
+<h2 id="org0d14195">New curriculum</h2>
+<div class="outline-text-2" id="text-org0d14195">
 <ul class="org-ul">
-<li>MIT's <a href="https://css.csail.mit.edu/6.5660/2024/">6.566</a> covers how to secure the entire organization
-<ul class="org-ul">
-<li>Make it not economically viable for an adversary to bother</li>
-<li>Supply chain security of software</li>
-<li>WebAuthn or Okta to defeat phishing</li>
-<li>OSquery-like agent to check everybody's software like browser extensions</li>
-<li>Centralized logging to detect intrusions like OSquery agent being killed</li>
-<li>Managing untrusted storage servers</li>
-</ul></li>
+<li>Brown <a href="https://cs.brown.edu/courses/csci2951-u/index.html">Topics in Software Security</a> with open research problems that are still a problem no matter what agent Anthropic/OpenAI releases. We will learn Forge the 'lightweight formal methods' tool used at Brown and some other formal methods because these are going to take off now that all code is generated. It will also help us jailbreak AI itself.</li>
 </ul>
 </div>
-</div>
-<div id="outline-container-orgdcb5b04" class="outline-3">
-<h3 id="orgdcb5b04">Cryptography</h3>
-<div class="outline-text-3" id="text-orgdcb5b04">
+<div id="outline-container-orgf1b4298" class="outline-3">
+<h3 id="orgf1b4298">Cryptography</h3>
+<div class="outline-text-3" id="text-orgf1b4298">
 <p>
-This is 'real' crypto and not the bozo world of web3 schemes but we will learn enough should you want to get into <a href="https://www.youtube.com/watch?v=8yRCQpb6yww">ridiculous</a> web3 <a href="https://cryptoctf.org/home-2/">CTFs</a> held on yachts in the Emirates to capture wallets instead of flags. That is if the other participants don't <a href="https://cryptoctf.org/2022/09/11/writeup-of-flag-submission-forgery-by-si/">forge</a> submission sigs.  
+This is 'real' crypto and not the bozo world of web3 schemes.  
 </p>
 
 <ul class="org-ul">
 <li>TU/e <a href="https://homepages.cwi.nl/~stevens/mastermath/2023/">Cryptanalysis</a> and <a href="http://hyperelliptic.org/tanja/teaching/pqcrypto23/">Post Quantum Crypto</a> 2023/22
 <ul class="org-ul">
-<li>Recorded lectures/notes/assignments all open</li>
-<li>Insight into crypto secure against quantum computers</li>
+<li>Recorded lectures/notes/assignments all open, we'll take whatever is the latest one</li>
 <li><a href="https://www.win.tue.nl/~berry/CryptographicProtocols/LectureNotes.pdf">Crypto Protocols</a> in-depth plus Tanja YouTube lectures</li>
 <li><a href="https://cryptojedi.org/peter/teaching/engineering-crypto-software-2023.shtml">Engineering Crypto Software</a> how to optimize ChaCha20, Poly1305 and ECDH/Curve25519</li>
 </ul></li>
 </ul>
 
 <p>
-If you've ever been interested in breaking crypto this is your chance to learn. To understand this we need basic knowledge of sets, groups, vector spaces, and number theory which Tanja covers in her new <a href="https://hyperelliptic.org/tanja/dmbook.pdf">book</a> I'll do. It's also the exact same material taught <a href="https://learnaifromscratch.github.io/groups.html">here</a> (groups/symmetry) and <a href="https://learnaifromscratch.github.io/numbersandsets.html">here</a> (number theory).
+If you've ever been interested in breaking crypto this is your chance to learn. To understand this we need basic knowledge of sets, groups, vector spaces, and number theory which Tanja covers in her new <a href="https://hyperelliptic.org/tanja/dmbook.pdf">book</a> I'll do. It's also the exact same material taught <a href="https://learnaifromscratch.github.io/groups.html">here</a> (groups/symmetry) and <a href="https://learnaifromscratch.github.io/numbersandsets.html">here</a> (number theory) or use AI to teach you. 
 </p>
 </div>
 </div>
-</div>
-<div id="outline-container-org344453b" class="outline-2">
-<h2 id="org344453b">Typical industry options</h2>
-<div class="outline-text-2" id="text-org344453b">
-<p>
-You can always <a href="https://krebsonsecurity.com/2012/06/how-to-break-into-security-ptacek-edition/">create your own</a> security role from inside a company you already work for. 
-</p>
-</div>
-<div id="outline-container-org543c6ad" class="outline-4">
-<h4 id="org543c6ad">Freelance researcher</h4>
-<div class="outline-text-4" id="text-org543c6ad">
-<p>
-Selling <a href="https://www.crowdfense.com/exploit-acquisition-program/">exploits</a> for a lot of money. Some of these bounties are hilarious like only 100k for code signing bypass, it must be easier than it looks if it pays lower than a WordPress exploit. Many of these seem to be located in the Emirates now like <a href="https://zerozenx.com/">ZeroZenX</a>. The way this works is they pay you over time not all at once that way there's an incentive for you to not turn around and resell to a competitor. 
-</p>
-
-<p>
-Instead of freelancing for bounties the researchers working for <a href="https://dfsec.com/">dfsec</a> receive a bonus for any major bug found on top of whatever large salary they're already  being paid. 
-</p>
-</div>
-</div>
-<div id="outline-container-orgbcf3950" class="outline-4">
-<h4 id="orgbcf3950">SOC threat analyst</h4>
-<div class="outline-text-4" id="text-orgbcf3950">
-<p>
-SOC means Security Operations Center. This is a wagie working shifts (usually remotely) for a 24/7 enterprise tier threat response contractor who is paid to analyze system logs (almost always Windows OS logs) and analyze network traffic to spot problems. You primarily extract and filter data with OSquery and do 'threat intelligence'. I imagine these security contractors exist to satisfy insurance compliance or lawsuit protection from any breaches/leaked data.
-</p>
-
-<p>
-If you're interested then LetsDefend has some <a href="https://app.letsdefend.io/challenge?filters%3Arole_filter=Security+Analyst">free challenges</a> analyzing logs to try and spot threats. 
-</p>
-</div>
-</div>
-<div id="outline-container-org050931d" class="outline-4">
-<h4 id="org050931d">Security consultant</h4>
-<div class="outline-text-4" id="text-org050931d">
-<p>
-Someone charging 7-20k+ per week for an application security assessment. This kind of person can do the 'full stack' of security review from source code review/dependencies to how developers handle the repository keys. The typical engagement is 1-3 consultants for 2 weeks where there is juniors competent in running audits and the principal consultant oversees them to present reports to the client justifying the money spent. Large contracts they will outsource reverse engineers and all kinds of other specialists charging insanely high hourly rates.
-</p>
-
-<p>
-The major outfits are Leviathan security, IOactive, Bishop Fox, NCC group, or search for security consultant jobs. Leviathan is probably the biggest in the US because I believe you have to contract either them and/or Bishop Fox in order to use any kind of Google auth in your software. They even sell a 'virtual CISO' <a href="https://www.leviathansecurity.com/services/risk-advisory-services/virtual-chief-information-security-officer">service</a>. 
-</p>
-
-<p>
-If you live in France then get in with <a href="https://www.synacktiv.com/en/join-us#recrutement">Synacktiv</a> they place first or second in every global competition or <a href="https://www.reversetactics.com/">REverse Tactics</a>. If you live in Saudi Arabia join <a href="https://haboob.sa/">Haboob SA</a> they also win global competition prizes. If you live in Korea join <a href="https://kaist-hacking.github.io/">KAIST</a> or <a href="https://theori.io/career/hiring">theori</a>. If you live in Vietnam join <a href="https://viettelcybersecurity.com/">Viettel</a>. If you live in Taiwan join <a href="https://devco.re/en/company/jobs/">DEVCORE</a>. If you're in Germany join the redrocket <a href="https://discord.com/invite/5YktcJZ">club</a>. See who is winning pwn2own or other security competitions in your country and weasel your way inside. 
-</p>
-</div>
-</div>
-<div id="outline-container-org891b424" class="outline-4">
-<h4 id="org891b424">The security business</h4>
-<div class="outline-text-4" id="text-org891b424">
-<p>
-If you live in the UK look at the <a href="https://portswigger.net/careers">openings</a> page for PortSwigger the company that sells Burpsuite the most popular web penetration toolkit. There's an offer for <a href="https://portswigger.net/careers/master-of-the-swigverse">Master of the Swigverse</a> where they teach you from the ground up the entire business of selling a security product. Full mentorship in competition analysis, customer engagement to improve the product, hiring code wagies, public relations, general management of teams and finance, this is a pretty great offer.  
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org8804776" class="outline-2">
-<h2 id="org8804776">How bad it all is</h2>
-<div class="outline-text-2" id="text-org8804776">
-<p>
-Watching the CS19 lecture on <a href="https://youtu.be/7orQOW6fp2A">security</a>.  
-</p>
-
-<p>
-Npm breaches are brought up, the JavaScript package manager. If you've ever installed some Node.js software to run it locally you will have noticed there are enormous amounts of dependencies being automatically installed. If you missed the attack description the stream dependency was attacked to specifically target some Bitcoin wallet software in hopes that the wallet developers themselves would include it in their builds and they did. All the attacker had to do was find some unmaintained but popular dependency and take over the project. Many browser plugins have had this happen too, either sold to ad-tech or malware writers. 
-</p>
-
-<p>
-@9:00 we're getting into nightmare tier where VSCode the IDE most developers use is now compromised. Once again some dependency nobody pays attention to got turned into malicious code and found its way into almost every critical program on earth. I don't remember but likely Visual Studio the C++ IDE (different from VSCode free tier) that a lot of people use was likely affected as well. Apple C++ devs use Xcode. 
-</p>
-
-<p>
-@19:50 seemingly benign software you find in the wild like adding colors to your terminal or javascript console is filled with malware of course but you probably knew that already. Famously this was almost all the flashlight/torch apps on app store before they cracked down.
-</p>
-
-<p>
-@35:27 every basic shell copy program in every OS will bring in fopen() and then you're screwed, it has access to the entire filesystem. 'The internet, operating systems, all programming languages, these things were built to be maximal insecure'.
-</p>
-
-<p>
-He talks about SELinux also known as MAC or mandatory access controls like AppArmor. MAC is something enterprise security people love because it's knob tweaking. Whenever you search for AppArmor or SELinux the number one recommendation or most searched for related query is <i>how to turn it off</i> because it's interfering in someone's work like their browser keeps freezing or other programs are crashing and in the real world that's what everyone does they disable annoying secjunk. 
-</p>
-</div>
-<div id="outline-container-orgdf78cb4" class="outline-3">
-<h3 id="orgdf78cb4">It is even worse than you thought</h3>
-<div class="outline-text-3" id="text-orgdf78cb4">
+<div id="outline-container-org7c86952" class="outline-3">
+<h3 id="org7c86952">Hardware h4xxing</h3>
+<div class="outline-text-3" id="text-org7c86952">
 <p>
 You will have to write your own memory controllers. 
 </p>
@@ -424,13 +323,22 @@ QRD:
 </ul>
 
 <p>
-See this <a href="https://www.youtube.com/watch?v=cUrQ8nMoecI">lecture</a> from ETH's grad seminar on the future of computer architecture we will be taking the same prof's course later in this workshop. Rowhammer is now Rowpress you don't even need to perform repeated reads anymore which invalidates all the security protections manufacturers claim fixed the problem. 
+See this <a href="https://www.youtube.com/watch?v=cUrQ8nMoecI">lecture</a> from ETH's grad seminar on the future of computer architecture we will be taking the same prof's course later in this workshop. Rowhammer is now Rowpress you don't even need to perform repeated reads anymore which invalidates all the security protections manufacturers claim fixed the problem.
+</p>
+
+<p>
+We can now mimic the entire CPU/Memory full stack in a few days generating some slop code and see how to break hardware.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc29d060" class="outline-3">
-<h3 id="orgc29d060">Open-source sabotage</h3>
-<div class="outline-text-3" id="text-orgc29d060">
+</div>
+<div id="outline-container-orge168c3f" class="outline-2">
+<h2 id="orge168c3f">The state of security</h2>
+<div class="outline-text-2" id="text-orge168c3f">
+</div>
+<div id="outline-container-orga1af902" class="outline-3">
+<h3 id="orga1af902">Open-source sabotage</h3>
+<div class="outline-text-3" id="text-orga1af902">
 <p>
 This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but nothing has changed in OSS development. Poul-Henning Kamp is involved in the FreeBSD project and here he imagines what would he do if he were tasked to 'control' or sabotage open source.  
 </p>
@@ -442,11 +350,15 @@ This <a href="https://youtu.be/fwcl17Q0bpk">talk</a> is from 2014 but nothing ha
 <p>
 @12:28 this is what we came for how modern open source projects can be derailed or infiltrated. @16:40 some mobile browser versions won't even let you use self-signed certs anymore even after clicking all the 'omg but are you aware of the risks!' buttons. The deceptive defaults he mentions I have been burned by many times.
 </p>
+
+<p>
+OpenBSD so far is one of the few open projects I know about that doesn't (yet) accept agentic code simply because there is no copyright law that exists to license generated code. My bet is they simply move to formal methods 
+</p>
 </div>
 </div>
-<div id="outline-container-org2bdc4c5" class="outline-3">
-<h3 id="org2bdc4c5">Security research is a thankless career</h3>
-<div class="outline-text-3" id="text-org2bdc4c5">
+<div id="outline-container-org271dc0f" class="outline-3">
+<h3 id="org271dc0f">Security research is a thankless career</h3>
+<div class="outline-text-3" id="text-org271dc0f">
 <p>
 Egor Homakov a security researcher once wrote <a href="https://web.archive.org/web/20170221230245/https://medium.com/@homakov/why-it-sucks-to-be-a-security-researcher-8a1d17fbffe8">this post</a> (now deleted) <i>Why it sucks to be a Security Researcher</i>. He is completely blackpilled and tells us how nobody cares or wants to fix the problems. If you raise the alarm you are threatened or dismissed because everyone just wants to keep the status quo and make it somebody else's problem later. He wrote multiple warnings to the Rails git repository and they hand-waved the problem away as 'impractical' and 'would never happen' so he started his security career by <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">hacking the repository</a>. They still denied the problem so he opened an issue <a href="https://web.archive.org/web/20130818070952/https://github.com/rails/rails/issues/5239">999 years</a> in the future.
 </p>
@@ -456,9 +368,9 @@ The professor of the ETH computer architecture course we'll do explains in one o
 </p>
 </div>
 </div>
-<div id="outline-container-org1db3e81" class="outline-3">
-<h3 id="org1db3e81">Massive surveillance</h3>
-<div class="outline-text-3" id="text-org1db3e81">
+<div id="outline-container-org834458a" class="outline-3">
+<h3 id="org834458a">Massive surveillance</h3>
+<div class="outline-text-3" id="text-org834458a">
 <p>
 Now canceled former Tor developer and 'Wikileaks associate' Jacob Appelbaum quietly got a PhD from two of the world's premiere crypto experts DJ Bernstein and Tanja Lange at TU/e in the Netherlands. I don't know or care about any of the details of his fall from grace but he did write a dissertation so we may as well read it. The pdf is <a href="https://research.tue.nl/en/publications/communication-in-a-world-of-pervasive-surveillance-sources-and-me">here</a> or direct link <a href="https://research.tue.nl/files/197416841/20220325_Appelbaum_hf.pdf">here</a>. 
 </p>
@@ -500,9 +412,9 @@ Chapter 8 REUNION is a PAKE for physical key encrypted key exchange, a kind of A
 </p>
 </div>
 </div>
-<div id="outline-container-org82d3ee1" class="outline-3">
-<h3 id="org82d3ee1">Incomplete history of h4xxing</h3>
-<div class="outline-text-3" id="text-org82d3ee1">
+<div id="outline-container-org7c67a46" class="outline-3">
+<h3 id="org7c67a46">Incomplete history of h4xxing</h3>
+<div class="outline-text-3" id="text-org7c67a46">
 <p>
 In the early days, you basically stumbled into hacking/phreaking by accident by either curious discovery pressing a combo of commands or blowing a Cap'n Crunch free cereal box whistle into the phone handset and gaining complete control over the system. Techniques were traded for free there was no real security industry for software or even much organized criminal activity until the <a href="https://en.wikipedia.org/wiki/The_Hacker_Crackdown">hacker crackdown</a>. Most crime was stealing technical manuals and petty juvenile pranks on <a href="https://en.wikipedia.org/wiki/EFnet">EFnet</a> rivals or getting the numbers to a group of payphones in NYC, exploiting some office's PBX to call them for free, and some other hacker would answer and give you advice where to find information. That was the scene, a bunch of 'keyboard cowboys' and around this time <a href="https://www.youtube.com/watch?v=33WuGp6fs3s">Hackers the movie</a> came out which besides the (fruit boots) inline skates was very realistic it should almost be a documentary like how you'd go to meets and they'd drill you what do you know. 
 </p>
@@ -520,11 +432,11 @@ Anonymous was the 'hive' a large group of kids willing to coordinate and use the
 </p>
 </div>
 </div>
-<div id="outline-container-org7695f0e" class="outline-3">
-<h3 id="org7695f0e">The last of the true hackers</h3>
-<div class="outline-text-3" id="text-org7695f0e">
+<div id="outline-container-orge22c01d" class="outline-3">
+<h3 id="orge22c01d">The last of the true hackers</h3>
+<div class="outline-text-3" id="text-orge22c01d">
 
-<div id="org7825681" class="figure">
+<div id="org1ab6db6" class="figure">
 <p><img src="./rms.jpg" alt="rms.jpg" width="300" />
 </p>
 </div>
@@ -538,11 +450,11 @@ He was routinely breaking into the lab servers and rewriting all the passwords t
 </p>
 </div>
 </div>
-<div id="outline-container-org7e6975f" class="outline-3">
-<h3 id="org7e6975f">The last of the true blackhats</h3>
-<div class="outline-text-3" id="text-org7e6975f">
+<div id="outline-container-org04f3e7a" class="outline-3">
+<h3 id="org04f3e7a">The last of the true blackhats</h3>
+<div class="outline-text-3" id="text-org04f3e7a">
 
-<div id="org50d39db" class="figure">
+<div id="org80e853f" class="figure">
 <p><img src="./theut.jpg" alt="theut.jpg" width="300" />
 </p>
 </div>
@@ -564,11 +476,11 @@ He was making a nice salary in NYC as a trading systems software developer (at n
 </p>
 </div>
 </div>
-<div id="outline-container-org755946f" class="outline-3">
-<h3 id="org755946f">Max Ray Vision</h3>
-<div class="outline-text-3" id="text-org755946f">
+<div id="outline-container-orgfdd7186" class="outline-3">
+<h3 id="orgfdd7186">Max Ray Vision</h3>
+<div class="outline-text-3" id="text-orgfdd7186">
 
-<div id="org59c37f9" class="figure">
+<div id="org469bbe9" class="figure">
 <p><img src="./maxrayvision.jpg" alt="maxrayvision.jpg" width="300" />
 </p>
 </div>
@@ -590,11 +502,11 @@ Max once broke into department of defense servers and patched a problem he found
 </p>
 </div>
 </div>
-<div id="outline-container-orgfe75abe" class="outline-3">
-<h3 id="orgfe75abe">ASTRA</h3>
-<div class="outline-text-3" id="text-orgfe75abe">
+<div id="outline-container-orgc383e02" class="outline-3">
+<h3 id="orgc383e02">ASTRA</h3>
+<div class="outline-text-3" id="text-orgc383e02">
 
-<div id="org460d082" class="figure">
+<div id="org375cc58" class="figure">
 <p><img src="./astra.jpg" alt="astra.jpg" width="300" />
 </p>
 </div>
@@ -608,47 +520,11 @@ The lesson here is if you're going to do this then go for the olympic medal of h
 </p>
 </div>
 </div>
-<div id="outline-container-orgcd57b1b" class="outline-3">
-<h3 id="orgcd57b1b">Darknet OPSEC</h3>
-<div class="outline-text-3" id="text-orgcd57b1b">
+<div id="outline-container-org43d04b5" class="outline-3">
+<h3 id="org43d04b5">Darknet OPSEC</h3>
+<div class="outline-text-3" id="text-org43d04b5">
 <p>
-Let's watch <a href="https://www.youtube.com/watch?v=01oeaBb85Xc">this</a> DEFCON 30 talk from last year about a guy involved in shady stuff. This talk is about 'keeping safe from the federal gov'.
-</p>
-
-<p>
-I don't recognize his aliases from back in the day but there are some I remember such as one mod on a popular market you probably know about that had a confused looking John C Reilly avatar who got away through pure incompetence living up to his avatar. They revealed in court docs when they went after all the admins and set them up for arrest he had escaped because he showed up to the wrong address twice during some kind of controlled delivery of money. By the time they tried a third attempt it was too late as the word was out everyone was getting nicked and he disappeared. Everytime I think of criminals with dumb luck I remember that guy defeating multiple federal agencies with his superior stupidity. 
-</p>
-
-<p>
-Bruce Schneier has a good article about crime how criminals never use probability to estimate the cost of their actions or if the crime they're about to do is worth betting on. In finance, you are always estimating the expected value of some game strategy and deciding if it's worth the risk. You never go all-in and risk everything like a criminal would do betting his entire future on a quick reward because that's what a fool would do. 
-</p>
-
-<p>
-Many of these criminals seem to have faith in crypto app marketing. For example <a href="https://en.wikipedia.org/wiki/The_Farmer%27s_Market">The Farmers Market</a> used Hushmail so an entire archive of decrypted messages was available to the feds. 
-</p>
-
-<p>
-@15:50 is the fallacy 'how they screwed up' because if you read anything here so far you realize that it's impossible not to screw up the global surveillance capabilities are just too advanced and corrupt now you would need to have a fail-safe plan of living in a country with non-extradition where you also enjoy local political status like you are the mayor's son or police chief's cousin. Often if national contacts between countries don't action any requests to shut down a crime network then foreign nations phone the local authorities about you and they arrive to shake you down for money which is probably a much worse experience than going to jail.  
-</p>
-
-<p>
-@19m some good advice here but again using whatever meme OS like Whonix is not your most critical attack vector it's people you know in real life or trying to cash out the money your crime empire generates.  
-</p>
-
-<p>
-@26:49 Sabu the guy in lulzsec was busted after he got wasted and accidentally signed in under a watched nym to some chat channel without using his normal protections. What was critical about that is they already knew who he was through means not disclosed and were watching his apartment building from a nearby parking lot when he handed the feds hanging around outside a warrant by logging in with his home ISP.  
-</p>
-
-<p>
-@29m the problem with this kind of activity is you can't convert it to pay yourself on the scale needed for trafficking. I'm sure you can think of ways you believe have never been tried before that will totally fool advanced analysis that looks for these patterns but there is no such thing as original ideas on how to launder money at this scale that's why elaborate global crime networks are used. Many countries have laws limiting how much of their currency you can remove like China so their rich overseas residents will buy up foreign currency from criminals and then settle within the Chinese banking system so the criminals get clean money or cargo ships filled with electronics to sell in their country and the diaspora residents get foreign exchange. 
-</p>
-</div>
-</div>
-<div id="outline-container-org8981ded" class="outline-3">
-<h3 id="org8981ded">Darknet OPSEC II</h3>
-<div class="outline-text-3" id="text-org8981ded">
-<p>
-One way of threat modeling is to simply write down a list of everything that can go wrong then think of ways to fail safely. 
+One way of threat modeling is to simply write down a list of everything that can go wrong then think of ways to fail safely. This is critical in the age of AI agents. 
 </p>
 
 <ul class="org-ul">
@@ -656,7 +532,7 @@ One way of threat modeling is to simply write down a list of everything that can
 </ul>
 
 <p>
-A disclaimer everyone ignores: <i>does not work against an adversary with a global overview of the entire network</i> aka the 5 Eyes Alliance. Tor is just one step in the anon h4xrz chain I would imagine you would want to move around often and not be a sitting target. We don't know how corrupt these agencies are there's nothing stopping them from noticing you then tipping off a family member in law enforcement about whatever you're doing.
+A disclaimer everyone ignores: <i>does not work against an adversary with a global overview of the entire network</i> aka the 5 Eyes Alliance. Tor is just one step in the anon h4xrz chain I would imagine you would want to move around often and not be a sitting target. We don't know how corrupt these agencies are there's nothing stopping them from noticing you then tipping off a family member in law enforcement about whatever you're doing. Reminder the glowies (feds) have full access to whatever AI agent without any 'alignment' and they can almost certainly do magical things none of us know about to find idiots doing crime in the new agentic era. 
 </p>
 
 <ul class="org-ul">
@@ -672,11 +548,11 @@ A crypto ledger keeps transaction IDs forever. A list of things that can go wron
 </ul>
 
 <p>
-Max Vision had some kind of dead man's switch tied to his wrist when he was arrested that powered down his crime empire and had deployed physical and memory mitigations to prevent crypto key recovery of his loot of stolen card data. However, he had no surveillance system in place to make use of that switch so no alarms or early warning detection like a camera or physical trip alarm of outside wherever he was staying. No way to react except to wake up and find himself surrounded with a gun pointed at his head and told not to move while they siphoned his memory for keys. He was caught by his co-conspirators snitching on him after they were arrested being greedy. Max used a long range antenna and moved around safe houses to avoid detection but doesn't matter if your own crew dimes you out. 
+Max Vision had some kind of dead man's switch tied to his wrist when he was arrested that powered down his crime empire and had deployed physical and memory mitigations to prevent crypto key recovery of his loot of stolen card data. However he had no surveillance system in place to make use of that switch so no alarms or early warning detection like a camera or physical trip alarm of outside wherever he was staying. No way to react except to wake up and find himself surrounded with a gun pointed at his head and told not to move while they siphoned his memory for keys. He was caught by his co-conspirators snitching on him after they were arrested being greedy. Max used a long range antenna and moved around safe houses to avoid detection but doesn't matter if your own crew dimes you out. 
 </p>
 
 <p>
-Sabu we learned could have also used some kind of physical security to keep himself from making bad decisions while wasted out of his mind such as a fail-safe router to always tunnel traffic automatically. Ross Ulbricht sat in a public library where feds could see him decrypting files and then snatch the laptop faster than he could react. A Ukranian hacker <a href="https://www.wired.com/2010/07/maksik-lured-to-arrest/">Maksik</a> was lured to a vacation in Dubai and agents helped themselves to his laptop in his hotel room while he was at the bar downstairs. He never noticed the intrusion because he did not have any kind of physical security in his room or surveillance. They failed and later lured him to Turkey where he received 'rubber hose cryptoanalysis'. Of all the hackers he's the most I feel sorry for maybe find where he is and write him if possible guy was a genius and is now serving the hardest possible time (well, at least he isn't drafted in the war). 
+Sabu the Lulzsec guy turned informant could have also used some kind of physical security to keep himself from making bad decisions while wasted out of his mind such as a fail-safe router to always tunnel traffic automatically. Ross Ulbricht sat in a public library where feds could see him decrypting files and then snatch the laptop faster than he could react. A Ukranian hacker <a href="https://www.wired.com/2010/07/maksik-lured-to-arrest/">Maksik</a> was lured to a vacation in Dubai and agents helped themselves to his laptop in his hotel room while he was at the bar downstairs. He never noticed the intrusion because he did not have any kind of physical security in his room or surveillance. The girl he was meeting at this bar/hotel was also an agent. That's how they always get you. Anyway that OP failed and later he was lured to Turkey where he received 'rubber hose cryptanalysis'. Of all the hackers he's the most I feel sorry for maybe find where he is and write him if possible guy was a genius and is now serving the hardest possible time (well, at least he isn't drafted in the war). 
 </p>
 
 <ul class="org-ul">
@@ -684,7 +560,7 @@ Sabu we learned could have also used some kind of physical security to keep hims
 </ul>
 
 <p>
-GnuPGP doesn't have forward secrecy which means a new key is continuously generated so if a key is compromised it can't be used to go back in time and open up everything else that was archived. Old keys will have to be revoked/deleted and new one's consistently made. Nobody will ever do this because of complacency and Moxie Marlinspike knew this that's why he made Signal by default use forward secrecy.
+GnuPGP doesn't have forward secrecy which means a new key is continuously generated so if a key is compromised it can't be used to go back in time and open up everything else that was archived. Old keys will have to be revoked/deleted and new one's consistently made. Nobody will ever do this because of complacency and Moxie Marlinspike knew this that's why he made Signal by default use forward secrecy. Of course Signal has it's own problems it requires using a phone number and feds round up conspiracies all the time but maybe that's a good thing I don't want wacky terrorists plotting dirt where I live. Moxie is very resistant to any kind of clandestine type crypto saying if you're in the game you can probably figure out what to do and instead he creates crypto for the masses as he knows 98% of normies just want their conversations to be private and not spied on 'easily'. 
 </p>
 
 <ul class="org-ul">
@@ -696,80 +572,293 @@ How are you going to pay for a lawyer when they take all your money? I assume yo
 </p>
 </div>
 </div>
-<div id="outline-container-orge80eb36" class="outline-3">
-<h3 id="orge80eb36">Darksec OPSEC III</h3>
-<div class="outline-text-3" id="text-orge80eb36">
+<div id="outline-container-org126dc83" class="outline-3">
+<h3 id="org126dc83">Darksec OPSEC III</h3>
+<div class="outline-text-3" id="text-org126dc83">
 <p>
-Every DNM market is getting busted now in 2026. The most advanced DNM (dark net market) I've ever seen was Archetype the admin was a German Max Vision type character who robbed other DNMs to start his own market (like Max Vision) and he got busted. If you don't know Archetype would spin up a new instance for every vendor and their top customers to avoid DDOS problems but it didn't work he's now arrested. He made many IRL mistakes like he was promoting himself as 'startup funding' in Spain just mysteriously giving away millions with no provenance but still that's not how they got the guy. The way these sites make their DNM to be 'responsive' without javascript was to hide CSS elements then when you click on something it reveals itself. Always look at the CSS inspector in your browser when you browse some DNM.
+Every DNM market is getting busted now in 2026. The most advanced dark net market (DNM) I've ever seen (at the surface level it could have all been security theatre) was Archetype the admin was a German Max Vision type character who robbed other DNMs to start his own market like Max Vision did and he got busted. If you don't know Archetype would spin up a new instance for every vendor and their top customers to avoid DDOS problems but it didn't work he's now arrested. He made many IRL mistakes like he was promoting himself as a 'startup funding VC' in Spain just mysteriously giving away millions with no provenance but still that's not how they got the guy. The way these sites make their DNM to be responsive without javascript was to hide CSS elements then when you click on something it reveals itself. Always look at the CSS inspector in your browser when you browse some DNM to learn how they engineer these things. 
 </p>
 
 <p>
-So how did it all go wrong for him. First they had the guy's IP somehow because remember Tor does not protect against the NSA or 5 Eyes Alliance who has a total overview of the entire network. A cynic would say but there's no way glowies would care about me but they do because money laundering was allowed on his DNM. Terrorists launder money. You should know this before doing dirt.
-The German cops launched DDOS attacks against him to reveal his other servers and he apparently used traceable payments to fund these I'm guessing but not much intel has been released. 
+So how did it all go wrong for him. First they had the guy's IP somehow because remember Tor does not protect against the NSA or 5 Eyes Alliance who has a total overview of the entire network. A cynic would say but there's no way glowies would care about me but they do because money laundering was allowed on his DNM. Terrorists and ransomware crime outfits launder money so now it's on the radar of every fed department. You should know this before doing dirt. The German cops launched DDOS attacks against him to reveal his other servers and he apparently used traceable payments to fund these I'm guessing but not much intel has been released. 
 </p>
 
 <p>
-There is 2 legendary DNM and the first was that Russian market Hydra who made over 3 billion dollars in transactions that did geo drops but all the staff got life sentences in Siberia. The second was this German guy. Both are looking at life in prison. 
+There is 2 legendary recent DNMs and the first was the Russian market Hydra who made over 3 billion dollars in transactions that did geo drops but all the staff got busted. The second was this German guy. Both are looking at life in prison so you should probably reconsider doing this if you thought it would easy money. 
 </p>
 
 <p>
-I will include some kind of rewrite of the Tor protocol here to understand their new DOS protections not that I would ever use anything else except the official protocol because of browser fingerprinting but .. something is wrong. I am curious to know what the cops know. At this time I would recommend nobody run a darkmarket they have obviously figured out something the Tor team doesn't know about. Or if you do run a darkmarket don't attract the attention of the 5 eyes alliance or German police. 
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-orgf8c9ad6" class="outline-2">
-<h2 id="orgf8c9ad6">Physical Security</h2>
-<div class="outline-text-2" id="text-orgf8c9ad6">
-<p>
-This is more or less overlapping with 'cyber security' so let's see what goes on in personal protection. 
+I think these style of DNMs are dead now and any future crime will be some small compressed/encrypted dbms passed around in clearnet that can be opened locally with simple agent generated software to show the entire menu and images with someone controlling the updates to said dbms that lives in a situation where they cannot be easily extradited. That does not mean you simply live in Russia because low level agency cooperation still happens between adversaries and the Secret Service or FBI will simply phone up their other Russian counterparts and say 'hey this guy has tons of money and is causing us problems go look him up'. You don't want to be the guy they look up to extract money out of. Someone doing this would have to be the cousin of the Mayor of Moscow or something with political cover.
 </p>
 
 <p>
-tl;dr now into this field will finish it soon
+Cryptography and making it easier to use will become the new hidden service running on platform native software with your own peers sharing the prompts to make this work.
 </p>
 </div>
 </div>
-<div id="outline-container-org955d4df" class="outline-2">
-<h2 id="org955d4df">Intro to Cybersecurity</h2>
-<div class="outline-text-2" id="text-org955d4df">
+</div>
+<div id="outline-container-orgb0b60a1" class="outline-2">
+<h2 id="orgb0b60a1">Physical Security</h2>
+<div class="outline-text-2" id="text-orgb0b60a1">
 <p>
-I'm starting with:
+With the rise of AI agents in the next 1-3 years everyone who has anything to do with OpenAI or Anthropic is going to be mercilessly spied on by foreign agents and criminals to get their hands on information. They will do any blackmail, extortion or simple bribe offers to recruit this intel. Already Agent 5 or Fable/Mythos is banned for export and it will only get more restricted as advances are made.
 </p>
 
-<ul class="org-ul">
-<li><a href="https://www.cs.cmu.edu/~213/">15-213 Intro to Computer Systems</a> (CS:APP3e)</li>
-<li><a href="https://pwn.college/cse365-s2025/">Intro to Cybersecurity</a> (CSE-365)</li>
-</ul>
-
 <p>
-The ASU course <a href="https://youtu.be/ldPfK_aUpog?si=-ixQ3GO80o1VNhmM">playlist</a> is here and these are recorded live on <a href="https://www.twitch.tv/pwncollege/videos?filter=all&amp;sort=time">twitch</a> too. If you look at the intro lecture he says this is probably the hardest course you will ever take because security means figuring out a complex system you don't understand by yourself and he will teach us these skills over the course. The syllabus lecture he explains we get roughly a week to complete each module. 
+Anyone involved in even minor roles will also have physical security problems because of all the black PR against AI and Luigi wannabe schizo nutjobs out there looking to score some political points by assassinating the guy who cleans the bathrooms at OpenAI HQ. 
 </p>
 </div>
-<div id="outline-container-orge1b51a9" class="outline-3">
-<h3 id="orge1b51a9">CSE-365 Week 1</h3>
-<div class="outline-text-3" id="text-orge1b51a9">
+<div id="outline-container-org6f08aab" class="outline-3">
+<h3 id="org6f08aab">Covert Hostile surveillance</h3>
+<div class="outline-text-3" id="text-org6f08aab">
 <p>
-Try some of the beginner <a href="https://pwn.college/welcome/welcome/">challenges</a> or watch <a href="https://www.youtube.com/watch?v=DJO1A2neZ6Y">this</a> about using the dojo. ASU gives us an entire virtual desktop to work with so no installation of software needed.
+Even the most completely unhinged maniac will do some kind of hostile surveillance long before they come at you to find out your routine and the weaknesses in your security. They will do so from a 'vantage point' which is a spot where the most amount of visual information can be gained about you without them being seen that they are watching you. 
 </p>
 
-<ul class="org-ul">
-<li><a href="https://pwn.college/cse365-s2025/module-1-lectures/">Lectures/slides</a></li>
-<li><a href="https://pwn.college/cse365-s2025/">Challenges</a></li>
-</ul>
+<p>
+Even if there is a full-time discord server dedicated to finding celebrities or executives by exploiting door cams with default passwords and other remote stalking whoever shows up that is planning something truly bad is going to do hostile surveillance in person themselves anyway and well before any kind of attack. 
+</p>
 
 <p>
-The challenges are all basically the <a href="https://pwn.college/linux-luminarium">linux luminarium</a> modules. Most I skipped because I'm already familiar from running Linux/BSD my entire life and if something comes up later we can always come back or read documentation for the shell.
+Identifying vantage points that can be used for hostile surveillance is called surveillance mapping and the art of detecting hostile surveillance in progress is called surveillance detection.
 </p>
 </div>
 </div>
-<div id="outline-container-org866a23e" class="outline-3">
-<h3 id="org866a23e">15-213 Week 1</h3>
-<div class="outline-text-3" id="text-org866a23e">
+<div id="outline-container-org5616a06" class="outline-3">
+<h3 id="org5616a06">Surveillance detection</h3>
+<div class="outline-text-3" id="text-org5616a06">
+<p>
+Surveillance detection is basically defined as detecting correlations. Everytime the person you protect (the principal) performs an action then you look to see if there is a correlation somewhere of someone else who is also performing any kind of action and it could be subtle like typing something into a phone or making a signal. You look to see who keeps reappearing in vantage points you have mapped out. You aim security cameras to record vantage points and review them to see who is showing up there. Surveillance detection is usually done covertly using people the hostile would never suspect like a couple sitting at a restaurant or old man on a bench. The bodyguards themselves also do surveillance detection at events watching the crowd for correlations like the principal is now moving to a new room and som guy picks up his phone, sends something and leaves to be replaced by the next guy who will follow the principal. 
+</p>
+
+<p>
+Professional security divides up everything into circles so there's the inner circle, such as the principal's house or the zone around the bodyguard while at an event, and the outer circles where you do surveillance detection. Normally in the outer circle they will break up everything into numbered zones then give names to everything static in that zone so you can remember when something changed like a new car has appeared. 
+</p>
+
+<p>
+The good news is your security team no matter how amateur will easily notice the vast majority of hostile surveillance because everyone is bad at this EXCEPT organized crime and private investigators. Why would organize crime target you? Because they think you have cryptobux or they want to extort you via threats for ransom which is the exact same reasons that executives at corporations hire personal security. Why would a PI be watching you because a stalker hired them or even a crime group using a woman they know to pretend it's about a personal relationship matter but it's really some crew trying to get details on the target to press them for money.  
+</p>
+
+<p>
+Professionals like PIs and nation state spies doing hostile surveillance is much more sophisticated because the first thing this person is going to do is study the environment around the principal and identify the best primary vantage points. They will never physically be in that spot until they have researched it completely from a secondary vantage point to study their primary vantage point. This means watching the people who come and go from the primary vantage point, the routines of traffic or deliveries, every bit of information about that preferred vantage point will be studied so they can slide on in there one day perfectly blending in with the rest of the environment. You would catch them because hopefully you already performed security mapping which identified all these areas so when someone new shows up you know to focus on them watching for correlations. 
+</p>
+
+<p>
+Once surveillance detection teams have identified someone hostile they need to let them know that they know. The hostile will have a valid excuse for being there they have rehearsed if confronted so instead all security needs to do is give a signal to them indicating they have been noticed which means they have been exposed. A simple head nod to signal 'I see you' or sometimes approaching them and asking a question like 'do you need any assistance' is all that is needed. A normal person would brush this off but someone nervous with surging adrenaline because they're doing a covert op is going to panic right then and there and abandon whatever plan they had because now they've been discovered and can be pointed to in a court room should they follow through with the attack.
+</p>
 </div>
-<div id="outline-container-org2c174cc" class="outline-4">
-<h4 id="org2c174cc">Obtain CS:APP3e</h4>
-<div class="outline-text-4" id="text-org2c174cc">
+</div>
+<div id="outline-container-orge3377c7" class="outline-3">
+<h3 id="orge3377c7">Surveillance detection route</h3>
+<div class="outline-text-3" id="text-orge3377c7">
+<p>
+When you leave an event or the airport you don't want someone following you home so select a route to expose them following you. It needs to be some kind of natural deviation from your normal route or routine but not so isolated they avoid following for fear of being exposed. You will do lot's of short and long stops during this detection route, some kind of action where correlation of anyone also stopping to follow you can be identified because any surveillance detection team will be able to notice the same cars that keep reappearing in new locations. The reason you don't want to simply lose them by going somewhere isolated is now they know what your vehicle looks like so they may reappear and start following you later. A professional executive security detail would have private investigator licenses to perform counter surveillance to find out who this person following is. 
+</p>
+
+<p>
+Of course we now have entire discord channels and telegrams dedicated to tracking celebrities and streamers where minutes after a selfie is posted to instagram with a tag #MrBeast or whatever the location is discovered and small armies of stalkers then try and hack surrounding insecure cameras with known flaws or default passwords to find more information such as the car the celebrity or streamer is using so it can be tracked by physical hostile surveillance. A way to counter this is fake information can be seeded so the principal should take selfies with friends and arrange for them to upload later when the principal is already at a different location. If someone on the street requests a photo you have roughly 4 minutes to get out of there before this information is uploaded and spread everywhere. 
+</p>
+</div>
+</div>
+<div id="outline-container-org0aa13f9" class="outline-3">
+<h3 id="org0aa13f9">Travel security</h3>
+<div class="outline-text-3" id="text-org0aa13f9">
+<p>
+Here is the scenario. You want to attend some event in another city. You book your hotel and a bodyguard for the event but you are worried about a stalker following you back to your hotel or a hostile guest or employee at that hotel. First off your security should be using a surveillance detection route and not proceeding directly to your hotel. Second you don't use an airbnb you use a hotel with security and any modern hotel that isn't a garbage dump is going to be safe. 
+</p>
+
+<p>
+Plan out scenarios yourself what you would do if you were the stalker. A very bad plan would be to follow you into the elevator, wait for you to swipe your hotel card and choose the floor first while they pretend to be on a phone and oops I lost my card and I'm looking for it which is just a big waste of time to follow you to that floor. This is defeated by almost all women who will hold the elevator door open making sure everyone has swiped their card first and chosen a floor before they do. The streamer may even have the conference bodyguard still with them walking them to their room so the odds of the stalker being able to pull this off with you in the elevator at the same time is very slim they won't even try it unless completely insane or intoxicated and hotel security will get them right away in the lobby. 
+</p>
+
+<p>
+Instead this is likely to be a much more sophisticated plan involving hostile surveillance. The stalker would follow you back to the hotel but they would perform lobby surveillance to see what floor you got off at watching you take the elevator. If it was numerous floors they'd note all those floors. They would then sit in the lounge or wherever there is a vantage point of seeing the elevators so they can notice anyone who comes and goes to the same floor you got off on on. Eventually a few of those people they marked as being on your floor will return to the lobby for something like picking up a delivery or getting a drink in the lounge and THEN they would try that 'I lost my card' trick in the elevator with someone who is male and won't be suspect of another male following them off the elevator. Now the stalker can pretend to use their phone and pace around the hallway seeing if they can hear your distinctive voice through the door then pretend to be staff and knock on your door. If you brought a single person with you to do surveillance detection of the lobby or the hotel bar after you've arrived they would notice this person right away.
+</p>
+</div>
+</div>
+<div id="outline-container-org4d3cb7f" class="outline-3">
+<h3 id="org4d3cb7f">Bodyguards</h3>
+<div class="outline-text-3" id="text-org4d3cb7f">
+<p>
+Goldnbearsecurity or highscomsecurityservices or the 'uber with guns' app for security (protect). 
+</p>
+
+<p>
+There is many services where you can rent event and personal bodyguards ranging from basic (uber with guns) or professional bodyguards to even embassy tier private security but if you can't afford the $500 (or more) per day they typically charge then you can make your own security team. 
+</p>
+
+<p>
+First off your bodyguard needs basic state licensing. In California they call this the 'guard card' and certification can be achieved remotely online for any state in the US. If you are a bodyguard that doesn't have this then make sure you tell anyone who asks you are a just a 'friend' or camera guy who got involved because if you defend your primary without a license you can go to jail or be sued. No convention will let you in either as security without some kind of license. 
+</p>
+
+<p>
+Whoever you hire to do this needs to be able to control themselves and hiring your brother to do this is a bad idea because they're going to thrash anyone causing problems and professional security can't do that in fact most security never needs to even touch someone hostile and deters shenanigans simply by being there or acting as a human shield.
+</p>
+
+<p>
+You may be like me and think well I'm a male and can handle myself easily but many of these stalkers and weirds of executives have a different goal which is to extract money out of you via a lawsuit. Someone stepping to you will have a friend with a camera somewhere collecting evidence. If you have at least one person there with you licensed then they can tool that guy in the street and legally be exempt from any problems.
+</p>
+</div>
+</div>
+<div id="outline-container-orgceb614c" class="outline-3">
+<h3 id="orgceb614c">Home security</h3>
+<div class="outline-text-3" id="text-orgceb614c">
+<p>
+Almost every major streamer, celebrity and even some random guy on the board of directors of a famous company has ended up with a 'tier 4 subscriber' getting inside their house or worse a robbery crew like the Amouranth <a href="https://youtube.com/watch?v=X6DR_bR_qIU">home invasion</a>. Amouranth has a gun but she didn't have time to get it they were already in her room by the time she woke up and realized what was going on. 
+</p>
+
+<p>
+Sometimes it's just random maniacs and not even anyone who knows you like what happened to Filian, a <a href="https://www.youtube.com/watch?v=BKuj-6e3XgU%20">ridiculous vtuber</a>, who was stalked by an uber eats driver after he saw her uber profile pic.
+</p>
+
+<p>
+Many executives now are like popular streamers as they have to attend all kinds of meetings from home and show their home on stream sometimes accidentally. If you can you want to live in a rented condo with 24/7 concierge in the lobby and at least some kind of access controls on who can use the elevator. This will be much cheaper to secure than a detatched house and you can keep moving every year to throw off the stalkers if you lease. You want to pretend that you never moved and the room you stream from should look identical with every move.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeadb9c8" class="outline-3">
+<h3 id="orgeadb9c8">South Africa security</h3>
+<div class="outline-text-3" id="text-orgeadb9c8">
+<p>
+This is how they do security for homes in South Africa and some of this advice we can use here for both an apartment and a detatched property. It costs way less than you think. Everything they do is to delay the attack and create an early warning for the home owner so they can call for backup and so they can get a weapon as the goal of all criminals is to get the jump on you. Once the element of surprise is gone they will usually give up and not risk getting shot at by you. 
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=ofAKHjurh5w%20">Electric fencing</a> every house in south africa has this. These are specialized security fencing not a wildlife style electric fence here we can see any kind of disruption signals a loud audible alarm and also zaps the intruder. These properly installed by a professional company are much cheaper than you think and will only consume the same energy of what a lightbulb would consume. They also use another climbing deterrent like <a href="https://www.youtube.com/watch?v=n_eYcxqa0Zg%20">stegastrips</a> these are hard plastic to avoid interference with the electric fence and it also deters wildlife from jumping your fence. You can have an outer normal fence then inside your property have the electric fence it's legal in most countries but obviously check first. 
+</p>
+
+<p>
+This guy 'Deysel Farm' will show us the rest of standard South African <a href="https://www.youtube.com/watch?v=zdVjZacvMIE%20">home security</a> @4:26 they use dogs inside the perimeter fencing but unfortunately criminals poison them and look at these statistics 40 dogs in a single day! @4:58 this is a backyard motion detector, they call these <a href="https://wirelessbeams.co.za">wireless beams</a> in south africa and they are very effective and cheap. When it's turned on it creates a net of sensors to alert you to someone running up on your property. To avoid having these being jammed you want one's sold that aren't using the cheapo unlicensed frequencies like 433 MHz but I'll talk about jamming more later. You can set these up inside too by windows to detect movement or cover your entire living room while you sleep. They are designed not to get triggered by dogs or birds. 
+</p>
+
+<p>
+@6:16 he's got a back patio gate, @7:16 a door gate so they can't push their way in, @7:24 sliding door even has a gate, there's also <a href="https://crimsafe.com">security mesh</a> you can get installed now that don't look like bars on the doors or windows but these old school steel security doors take longer to breach whereas the security mesh if they have a portable grinder they're cutting through that quickly. Remember the whole idea is just layers of security to alert you so you aren't surprised. 
+</p>
+
+<p>
+This is something you probably didn't expect @8:52 the internal hallway gates that seal off the bedrooms this is the last resort security also called 'the rape gate' so you can wake up in time to fetch a gun and start raining bullets at them down the hallway because they're not coming in there for any economic reasons.  
+</p>
+</div>
+</div>
+<div id="outline-container-orgabfa096" class="outline-3">
+<h3 id="orgabfa096">Jamming</h3>
+<div class="outline-text-3" id="text-orgabfa096">
+<p>
+Criminals today use jammers all the time especially the crews running around LA robbing celebrity houses. The way jamming works is they bombard the frequency with noise so cameras and motion detector beams can't tell which signal is which and it works best if they know the freq your security is on which in most consumer security products is a common wi-fi band or 433-Mhz for something like a wireless infared beam. A non-military jammer will not stop a cell signal fully. 
+</p>
+
+<p>
+Any security company who installs wireless beams or cameras should also have basic jamming countermeasures like if no periodic handshake is exchanged between the beams and the base station after a certain amount of time then the alarm is raised. Another countermeasure is simply detecting too much noise in the freq so hopping to another freq or activating the alarm. 
+</p>
+
+<p>
+A slick countermeasure would also be to obfuscate and fool the criminals by attaching fake stickers or identifiers to these security beams and cameras so when they perform hostile surveillance to learn about your property they research the wrong equipment. You could also put a wifi doorbell cam visible in the front connected by wifi and they will be distracted by that and try and jam it ignoring the other security on separate frequencies.  If you have google nest cams or a ring cam then make sure you've changed the password to something that can't easily be guessed that's how those stalker discord servers follow celebrities around via insecure doorbell cams.
+</p>
+
+<p>
+Most break in crews today will send in a girl to knock on the door and with sleight of hand place a spy cam somewhere there who's only purpose is to spy on your security equipment and time the people coming in and out.
+</p>
+</div>
+</div>
+<div id="outline-container-org66aa44f" class="outline-3">
+<h3 id="org66aa44f">Costs</h3>
+<div class="outline-text-3" id="text-org66aa44f">
+<p>
+Any steel security door you want it installed by a security company not some random contractor and will cost around $1000 or $2000 for a security screen/mesh <a href="https://dendefenders.com/southern-california/security-screen-doors/%20">door</a>. 
+</p>
+
+<p>
+Lorex or Reolink style cameras that are wired with dvr that can't be jammed can be bought for $200-$1k depending how many cameras you want or size of dvr. Wifi or 4G active deterrence cams are $90 to start out with if you can't afford the wired cameras. The term "active deterrence" just means the camera moves and shines a light on the intruder implying the alarm has been raised. Some of these have a recording that plays too telling them to get out of here.  
+</p>
+
+<p>
+Wireless outdoor infrared beams can be dirt cheap if you choose a common freq like 433mhz or around $300 for something with a freq selector or anti-jamming countermeasures. When triggered these can do anything like call a private security company, activate loud alarms, activate lights, anything to scare off someone running through your yard or up the driveway.
+</p>
+</div>
+</div>
+<div id="outline-container-org6a910bd" class="outline-3">
+<h3 id="org6a910bd">Home security case study</h3>
+<div class="outline-text-3" id="text-org6a910bd">
+<p>
+Let's look at some homes and try and secure them.
+</p>
+
+<p>
+Here is <a href="https://youtu.be/X6DR_bR_qIU">Amouranth</a>'s security breakdown who is a twitch streamer that is basically some kind of tittycow with an army of simps. She apparently showed on stream a crypto wallet with a bunch of money and that was all it took to set the robbery in motion.
+</p>
+
+<p>
+They pried open her wooden fence and came running into the yard. The google nest cam they had there didn't work. A wireless beam alarm would've helped here to blanket this yard in motion detection. As you can see the dogs were pretty much useless and they smashed their way inside finally they shot her bedroom door and kicked it in. She definitely could have installed an inside rape gate here like South Africans do in order to lock out the bedrooms giving her more time to fetch her gun. 
+</p>
+
+<p>
+You want to determine the vantage points around your property and point cameras there. Spend a day approaching your property and finding the spota where you can gain the most information yet not be seen directly by any visible home security or windows/doors. The person would not even want to drive past your house to risk being on a camera during intel gathering stages so will approach it like a limit but not ever come into the obvious field of view. Until of course they pick a vantage spot they think is perfect and then through hostile surveillance find out you have a camera pointing at them from an unusual location. Now it's all over they will choose an easier target.   
+</p>
+</div>
+</div>
+<div id="outline-container-org46e5551" class="outline-3">
+<h3 id="org46e5551">Opsec</h3>
+<div class="outline-text-3" id="text-org46e5551">
+<p>
+Operational security is preventing little crumbs of information that can be assembled from many sources to doxx you. What exactly this means is while you stream live no outside sounds should be be heard like planes flying overhead and no real windows in the background where you can see lightning during a storm because there is real-time websites set up to track these things which can pinpoint your general location.
+</p>
+
+<p>
+It also means avoid filming your back yard or starting your stream too early if driving around because of identifying landmarks in the background. It also means is there a reflection of your desktop the chat can see or is there something in your home very unique that can be found on a real estate website.  
+</p>
+
+<p>
+Here's <a href="https://youtu.be/X3ARdNAAnXI?si=C_Ssx8LqgzZpxPoM&amp;t=6209">pokimane</a> talking about how she has to hire people to remove every picture of a new property she moves into and other efforts to conceal any unique features. If you are an executive doing multiple teams meetings or anything assume these rooms are compromised and act like you're doing a live public stream.
+</p>
+</div>
+</div>
+<div id="outline-container-org5b822ae" class="outline-3">
+<h3 id="org5b822ae">Make a dump button</h3>
+<div class="outline-text-3" id="text-org5b822ae">
+<p>
+Most of us are now live broadcasting now in some form and traditional broadcast media for decades have used a delay so they can push a dump button and block any idiots harassing the cameras or to prevent personal identifying info from being leaked accidentally on live broadcasts. If you use OBS or Open Broadcasting Studio <a href="https://www.youtube.com/watch?v=v9zrnYITzTY">this</a> is how you make a primitive dump button you stack delays and either make a keyboard shortcut or use Bitfocus Companion to make actual buttons and now can blur the video or kill the audio of your stream with a button like Ethan Klein has.
+</p>
+
+<p>
+You can configure this for MS Teams/Zoom or whatever other software too.
+</p>
+</div>
+</div>
+<div id="outline-container-org7e87c07" class="outline-3">
+<h3 id="org7e87c07">Athlete Airport stalkers</h3>
+<div class="outline-text-3" id="text-org7e87c07">
+<p>
+Here's another <a href="https://www.foxnews.com/sports/former-lsu-gymnast-olivia-dunne-tears-stalking-fears-i-dont-know-what-do">case study</a>. 
+</p>
+
+<p>
+'Everytime I got to the airport a group of at least 10 men are waiting for me demanding autographs'. This is not a new scam it's been going years and primarily targets solo travelling female athletes. 
+</p>
+
+<p>
+These guys are all convicts and scumbags who buy dummy tickets, usually from Orbitz or Expedia anything that says '24 hours free cancellation'. All of them are working with someone who has access to reservations in order to leak them names of normally solo female college atheletes and gymnasts because those signatures are the most collectable autographs. They then mass produce items with their signature on it and sell the original on ebay. Paparazzi do this too buying names and using dummy tickets to follow celebrities around photographing them in the security clearance area. You'd be surprised how low security airline reservation software is anyone working in a 3rd party mall kiosk selling tickets likely can get a manifest with names on it and there's probably even services for this on the dark web. 
+</p>
+
+<p>
+The way you deal with them is immediately start filming them and say loudly these men are stalking me to get security on them. You also book with airport VIP services aka 'airline concierge' where this service meets you at the gate, escorts you all the way through the terminal directly to a waiting vehicle so no getting swarmed at the baggage claim by these fools or running into a crowd of stalkers outside the terminal.
+</p>
+
+<p>
+Most executives now use so-called airport concierge now to avoid some activist mob of paid idiots screeching (probably paid by their competitors). 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org26fae94" class="outline-2">
+<h2 id="org26fae94">15-213 Computer Systems</h2>
+<div class="outline-text-2" id="text-org26fae94">
+<p>
+We still need to know this even if in 2027 some super agent is doing 100% of programming because x86 architecture is not going away anytime soon as that costs money to replace. Any new or future Nvidia laptop architecture is going to have some similar models of a system that computes like virtual memory anyway. 
+</p>
+</div>
+<div id="outline-container-orgb77f2fb" class="outline-4">
+<h4 id="orgb77f2fb">Obtain CS:APP3e</h4>
+<div class="outline-text-4" id="text-orgb77f2fb">
 <p>
 I was originally going to go through ETH Zurich's hardware course but you probably don't want to write HardCaml simulations for FPGA's so instead we will take the tried and true CS:APP book and course which teaches everything you will need to know about x86 assembly, C, compilers, gdp, caches, etc.
 </p>
@@ -798,9 +887,9 @@ Anyway I will go through every single problem in the global edition here. I'm al
 </p>
 </div>
 </div>
-<div id="outline-container-org576f7a4" class="outline-4">
-<h4 id="org576f7a4">Bits, Bytes, and Integers 1</h4>
-<div class="outline-text-4" id="text-org576f7a4">
+<div id="outline-container-org74a556d" class="outline-4">
+<h4 id="org74a556d">Bits, Bytes, and Integers 1</h4>
+<div class="outline-text-4" id="text-org74a556d">
 <p>
 Normally I try and avoid long lectures but in this case they're critical because the book is so technically dense you will get lost immediately especially when we start learning floating point. This prof Randy Bryant is sometimes unintentionally hilarious too.
 </p>
@@ -816,9 +905,9 @@ Watch the second <a href="https://youtu.be/SIHjTvIM1EQ?si=PXReJAQF4Yyv8cQw">lect
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeb4d385" class="outline-4">
-<h4 id="orgeb4d385">Bits, Bytes, and Integers II</h4>
-<div class="outline-text-4" id="text-orgeb4d385">
+<div id="outline-container-org60b83d6" class="outline-4">
+<h4 id="org60b83d6">Bits, Bytes, and Integers II</h4>
+<div class="outline-text-4" id="text-org60b83d6">
 <p>
 Watch the third <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=526e6341-aa53-4107-8fa1-d13c0e92342e">lecture</a> as the book is technically dense and this covers most of what we need to know. Read through the book as you watch the lecture.
 </p>
@@ -844,10 +933,9 @@ Figure 2.14 in the book he will talk about numerous times as subtracting less th
 </p>
 </div>
 </div>
-</div>
-<div id="outline-container-orga40afb2" class="outline-3">
-<h3 id="orga40afb2">Lab &amp; HW Problems</h3>
-<div class="outline-text-3" id="text-orga40afb2">
+<div id="outline-container-orgea607d7" class="outline-3">
+<h3 id="orgea607d7">Lab &amp; HW Problems</h3>
+<div class="outline-text-3" id="text-orgea607d7">
 <p>
 The lab assignment is <a href="https://csapp.cs.cmu.edu/3e/labs.html">Data Lab</a> which we have access to and at the end of chapter 2 you will see <i>Homework Problems</i> which are probably similar to the assignments given to students in the course. The point of doing these is to get good at reading little endian hex notation for later when we are reverse engineering in the ASU security courses.
 </p>

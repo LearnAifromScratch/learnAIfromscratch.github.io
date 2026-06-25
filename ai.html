@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-04-22 Wed 22:15 -->
+<!-- 2026-06-24 Wed 21:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI (ML and Robotics) in 2026</title>
+<title>AI (and Robotics) From Scratch in 2026</title>
 <meta name="author" content="jbh" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -197,137 +197,132 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">AI (ML and Robotics) in 2026</h1>
+<h1 class="title">AI (and Robotics) From Scratch in 2026</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3b51028">Intro</a>
+<li><a href="#org97298bd">How quickly this moves</a></li>
+<li><a href="#org099724b">Curriculum</a>
 <ul>
-<li><a href="#orgd8dffaf">Machine Learning</a></li>
-<li><a href="#orgb6fe2fe">Robotics</a></li>
-<li><a href="#org39b5298">Research (Reverse Engineering)</a></li>
-<li><a href="#org3e0ad4d">Optional Research (Causality Models)</a></li>
-<li><a href="#orgd9a62dd">Optional Research (Conformal Prediction)</a></li>
-<li><a href="#org563c482">Optional Research (Game Theory AI)</a></li>
+<li><a href="#org75b8dc9">Applied AI:</a></li>
+<li><a href="#org4141237">Towards a Unified theory of AI:</a></li>
+<li><a href="#orgd48d86c">Math for ML/Robotics</a></li>
+<li><a href="#org97c0d58">Research you may want to do (Optional)</a>
+<ul>
+<li><a href="#orge36f81d">Reverse engineering LLMS</a></li>
+<li><a href="#org6ca8bfc">Causality</a></li>
+<li><a href="#orgc8a6d8a">Conformal Prediction</a></li>
+<li><a href="#org3e3854f">Game Theory AI</a></li>
 </ul>
 </li>
-<li><a href="#org31d8518">The truth about AI in 2026</a></li>
-<li><a href="#orgcfb653f"><span class="todo TODO">TODO</span> </a></li>
+</ul>
+</li>
+<li><a href="#orgabb4ce7">Calculus</a>
+<ul>
+<li><a href="#orge93453e">What should we do</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3b51028" class="outline-2">
-<h2 id="org3b51028">Intro</h2>
-<div class="outline-text-2" id="text-org3b51028">
+<div id="outline-container-org97298bd" class="outline-2">
+<h2 id="org97298bd">How quickly this moves</h2>
+<div class="outline-text-2" id="text-org97298bd">
 <p>
-I took me forever to finally find a decent curriculum for this because access to the resources needed were obsoleted immediately or too expensive but now there's a window where we can get in. I also now have the time to properly finish it because I was a junior climbing the ladder but now I climbed and can do this everyday. To take advantage of the window I will not be changing this.
-</p>
-
-<p>
-Anyone can get in right now because there is an <i>emergency shortage</i> for people that know what we're about to learn because we hit the golden spot where university has not caught up to industry and it won't for at least 3-4 years. If you are in a university and you know this material Zuckerberg (and OpenAI) will vacuum you up immediately he's going all in and taking everyone so the rest of the industry is left with crumbs.   
+Start by reading <a href="https://ai-2027.com">AI 2027</a> written by a former OpenAI researcher on the kinds of agents we should expect to see every few months. This has been accurate up to q2 2026 since it was written.
 </p>
 </div>
-<div id="outline-container-orgd8dffaf" class="outline-3">
-<h3 id="orgd8dffaf">Machine Learning</h3>
-<div class="outline-text-3" id="text-orgd8dffaf">
-<p>
-I am following these curriculums:
-</p>
+</div>
+<div id="outline-container-org099724b" class="outline-2">
+<h2 id="org099724b">Curriculum</h2>
+<div class="outline-text-2" id="text-org099724b">
+</div>
+<div id="outline-container-org75b8dc9" class="outline-3">
+<h3 id="org75b8dc9">Applied AI:</h3>
+<div class="outline-text-3" id="text-org75b8dc9">
 <ul class="org-ul">
-<li>CMU's new <a href="https://ml.cmu.edu/current-students/phd-new-curriculum">PhD curriculum</a></li>
-<li>MIT's new research <a href="https://poggioai.github.io/">Agentic Investigator</a></li>
-<li>MIT's current Robotics curriculum</li>
+<li><a href="https://modernaicourse.org">10-202 Intro to Modern AI</a> so you can modify any open source LLM as this will take off soon with new hardware. You can easily get paid insane amounts of money doing this right now.</li>
+<li><a href="https://dlsyscourse.org">10-714 DL Algorithms &amp; Implementation</a> teaches how to build your own PyTorch stack from scratch and trust me you want to use types and toss out Python into the dustbin of history because right now types are making agentic coding very simple to use and for AI-assisted formal methods to verify the code.</li>
 </ul>
 
 <p>
-The plan is to learn the models and use free rented GPU access for the software because then we as plebs can modify them and do research because who has access to GPUs and memory anymore in 2026. Nvidia doesn't even sell consumer GPUs <a href="https://www.pcworld.com/article/3054899/nvidia-is-reportedly-skipping-consumer-gpus-in-2026-thanks-ai.html">anymore</a> it's all going to data centers on the moon or something.     
+Almost everything in those courses is self-contained or you can ask Gemini/Grok/ChatGPTx to help you. The only math you really need is understanding the beginning of this single video <a href="https://youtube.com/watch?v=oGZK3yGF-6k">Matrix Calculus</a> from MIT's 2020 18.06 course on linear algebra which we will take here too as our first math lecture. 
+</p>
+</div>
+</div>
+<div id="outline-container-org4141237" class="outline-3">
+<h3 id="org4141237">Towards a Unified theory of AI:</h3>
+<div class="outline-text-3" id="text-org4141237">
+<p>
+Does there exist a unified theory of modern AI yet or something close to it?
+</p>
+
+<ul class="org-ul">
+<li>These <a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">30 Lectures</a> were recently put together by MIT's leading Neuroscience researcher by that I mean he's the world's most cited Neuroscience researcher. He used the assistance of a research paper <a href="https://poggioai.github.io/">Agentic Investigator</a>. Give it a research topic and it gives you back an entire paper on that topic.</li>
+</ul>
+
+<p>
+These lectures show current AI provides a generic mean or 'smoothing' effect on everything it generates. The human user has to provide the sparse logical jumps to escape the annoying politeness and homogenizing of scientific thought that it defaults to. They also show compositionality which means a complex thing is constructed of many small reusable basic things and these are (as described in the prologue) mathematically implied to be sparse for the simple reason that we can compute them efficiently. Genericity is another trait of modern AI and means a learning function being defined by any set of coordinates is invariant to transformations and defining it in different spaces where you 'shift' the function doesn't really matter. There will be many lectures about this in detail and we will take them.
 </p>
 
 <p>
-We will learn:   
+AI also can't be sentient (yet) no matter what AGI marketing these companies claim. This is another theme of these lectures. 
 </p>
+
+<p>
+<b>Things we have to take to understand these lectures:</b>
+</p>
+
 <ul class="org-ul">
 <li>The <a href="https://student.cs.uwaterloo.ca/~cs485/">mathematical model</a> of Machine Learning which hasn't changed.  
 <ul class="org-ul">
 <li>All <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">lectures</a> are taught by the author of the <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a> and there's undergrad <a href="https://introml.mit.edu/notes/">notes</a> (MIT).</li>
-</ul></li>
-<li><a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">30 Lectures</a> (March 2026) by MIT's leading Neuroscience researcher on the foundations of Deep Learning and his conjecture why it works (sparsity) and what isn't working.
-<ul class="org-ul">
 <li>Some optional <a href="https://jorchard.github.io/cs479.github.io/index.html">short lectures</a> from the perspective of theoretical neuroscience.</li>
-<li>A <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i> to help understand the lectures.</li>
+<li>A <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i> though we will mostly only use the MIT <a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">Lectures</a></li>
 </ul></li>
 </ul>
 
 <p>
-Then we will build systems:
+We will also have to incrementally take various courses from 15-251 CMU's <i>Great Ideas in Computer Science</i> such as boolean functions and some complexity theory because deep learning is a deep topic touching many theoretical fields. 
 </p>
-
-<ul class="org-ul">
-<li><a href="https://dlsyscourse.org">10-714 DL Algorithms &amp; Implementation</a> (CMU)
-<ul class="org-ul">
-<li>Build from scratch an entire framework for deep learning</li>
-<li><a href="https://www.cs.cmu.edu/~mgormley/courses/10423/schedule.html">Generative AI</a> audit some slides for instruction fine-tuning</li>
-</ul></li>
-</ul>
+</div>
+</div>
+<div id="outline-container-orgd48d86c" class="outline-3">
+<h3 id="orgd48d86c">Math for ML/Robotics</h3>
+<div class="outline-text-3" id="text-orgd48d86c">
+<p>
+Throw out almost all math learned in undergrad. As per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning the Real Numbers don't exist. Everything must be done by numerical analysis/approximations which means no limits, no Riemann integral, no pivots or echelon forms, no inverting matrices, limited use of eigenwhatever, and exclusively using SVD factorization for linear algebra. Even gradient descent isn't really used anymore as it 'zig-zags'. 
+</p>
 
 <p>
-Now we will fuse it with multimodal capabilities:
+The following is very similar to CMU's <i>Math Foundations for Robotics</i> course as well:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://mit-mi.github.io/how2ai-course/spring2025/">MAS.S60 How2AI</a> (MIT)
-<ul class="org-ul">
-<li>How to AI (Almost) Anything</li>
-<li>YouTube <a href="https://www.youtube.com/playlist?list=PLc0Yh0D0XR4Z3wityRaEuu4rfzTHRIIAO">lectures</a></li>
-</ul></li>
-</ul>
-
-<p>
-However it will require throwing out almost all math learned in undergrad because as per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning the Real Numbers don't exist. Everything must be done by numerical analysis which means no limits, no Riemann integral, no pivots or echelon forms, no inverting matrices, limited use of eigenwhatever, and exclusively using matrix factorization for linear algebra. Congrats you no longer need to read <i>Mathematics for Machine Learning</i> we are dumping 4 years of undergrad in the trash. 
-</p>
-
-<ul class="org-ul">
+<li>Matrix <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">calculus</a></li>
 <li>MIT <a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> and <a href="https://github.com/mitmath/numerical_spoke_linalg">large scale</a> linear algebra.
 <ul class="org-ul">
 <li>Infinitesimal <a href="https://www.gutenberg.org/files/33283/33283-pdf.pdf">calculus book</a>
 <ul class="org-ul">
 <li>We will only ever use dy/dx</li>
 </ul></li>
-<li><a href="https://book.sciml.ai/">SciML</a> recorded lectures to learn discretized differential eq</li>
-<li>Matrix <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">calculus</a></li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb6fe2fe" class="outline-3">
-<h3 id="orgb6fe2fe">Robotics</h3>
-<div class="outline-text-3" id="text-orgb6fe2fe">
+<div id="outline-container-org97c0d58" class="outline-3">
+<h3 id="org97c0d58">Research you may want to do (Optional)</h3>
+<div class="outline-text-3" id="text-org97c0d58">
 <p>
-New papers on robotics are being dumped just as rapidly as AI papers but they all assume you know this:
-</p>
-
-<ul class="org-ul">
-<li>The mathematical model of <a href="https://manipulation.mit.edu/">Robotic Manipulation</a> 
-<ul class="org-ul">
-<li>Robot hands/arms</li>
-</ul></li>
-<li>The mathematical model of <a href="https://underactuated.csail.mit.edu/">Underactuated Robotics</a> 
-<ul class="org-ul">
-<li>Walking, Swimming, Flying</li>
-</ul></li>
-</ul>
-
-<p>
-We can utilize Evan Chen's <a href="https://web.evanchen.cc/napkin.html">Napkin Project</a> to figure out the math. Your job is then to sit with ChatGPT and the <a href="https://poggioai.github.io/">Agentic Investigator</a> to come up with a better model.    
+You can use the <a href="https://poggioai.github.io/">Agentic Investigator</a> to help you research these fields by yourself. 
 </p>
 </div>
-</div>
-<div id="outline-container-org39b5298" class="outline-3">
-<h3 id="org39b5298">Research (Reverse Engineering)</h3>
-<div class="outline-text-3" id="text-org39b5298">
+<div id="outline-container-orge36f81d" class="outline-4">
+<h4 id="orge36f81d">Reverse engineering LLMS</h4>
+<div class="outline-text-4" id="text-orge36f81d">
 <p>
-Reverse engineering LLMs to make sure they are doing what they claim they are doing: 
+Make sure agents are doing what they claim they are doing: 
 </p>
 
 <ul class="org-ul">
@@ -345,42 +340,39 @@ Reverse engineering LLMs to make sure they are doing what they claim they are do
 </ul>
 
 <p>
-Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be more. I didn't exaggerate when I said there's a window where noone (available to be hired) knows these topics.
+Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be more. Not everyone wants to use the expensive Anthropic or OpenAI agents sometimes a simple open source agent learning your codebase is good enough. You will want to know if this 'simple agent' is doing what it's supposed to. Of course next year's agents will be so advanced we will have to use this year's agents to reverse engineer them but interpretability is still going as of June 2026. 
 </p>
 </div>
 </div>
-<div id="outline-container-org3e0ad4d" class="outline-3">
-<h3 id="org3e0ad4d">Optional Research (Causality Models)</h3>
-<div class="outline-text-3" id="text-org3e0ad4d">
+<div id="outline-container-org6ca8bfc" class="outline-4">
+<h4 id="org6ca8bfc">Causality</h4>
+<div class="outline-text-4" id="text-org6ca8bfc">
 <p>
-Any future medical AI, any drone defense AI, any space exploring AI, anything cool and futuristic is going to need Causal AI models. If do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
-</p>
-
-<ul class="org-ul">
-<li><a href="https://library.oapen.org/bitstream/id/056a11be-ce3a-44b9-8987-a6c68fce8d9b/11283.pdf">Elements of Causal Inference</a> Foundations and learning algorithms
-<ul class="org-ul">
-<li>Whatever else I can find when we get here because this is taking off right now.</li>
-</ul></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgd9a62dd" class="outline-3">
-<h3 id="orgd9a62dd">Optional Research (Conformal Prediction)</h3>
-<div class="outline-text-3" id="text-orgd9a62dd">
-<p>
-Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky AI that Anthropic peddles like Claude Code is going to charge you to generate some slop. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
+Any future medical AI is going to need Causal AI models. If I do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
 </p>
 
 <ul class="org-ul">
-<li><a href="https://www.alrw.net/">Algorithmic Learning in a Random World</a> using classic techniques like support vector machines</li>
+<li><a href="https://library.oapen.org/bitstream/id/056a11be-ce3a-44b9-8987-a6c68fce8d9b/11283.pdf">Elements of Causal Inference</a> Foundations and learning algorithms</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org563c482" class="outline-3">
-<h3 id="org563c482">Optional Research (Game Theory AI)</h3>
-<div class="outline-text-3" id="text-org563c482">
+<div id="outline-container-orgc8a6d8a" class="outline-4">
+<h4 id="orgc8a6d8a">Conformal Prediction</h4>
+<div class="outline-text-4" id="text-orgc8a6d8a">
 <p>
-It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This including Causal AI is my primary interest because I've always thought (most) probability was bullshit but I'm a heretic so we'll still learn a very good <a href="https://www.cs.cmu.edu/~harchol/Probability/chapters/HarcholBalterWholeBook.pdf">Probability for Computing</a> book.  
+Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky API that Anthropic peddles like Claude Code is going to charge you to generate some slop. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.alrw.net/">Algorithmic Learning in a Random World</a> using classic techniques like support vector machines.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3e3854f" class="outline-4">
+<h4 id="org3e3854f">Game Theory AI</h4>
+<div class="outline-text-4" id="text-org3e3854f">
+<p>
+It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. No measure theory needed. Most human activities involve someone else and none of it is really random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This is my primary research area so I'll be doing lots of this here and causality. 
 </p>
 
 <ul class="org-ul">
@@ -389,34 +381,70 @@ It's possible to completely throw out stochastic math and do statistics and prob
 </div>
 </div>
 </div>
-<div id="outline-container-org31d8518" class="outline-2">
-<h2 id="org31d8518">The truth about AI in 2026</h2>
-<div class="outline-text-2" id="text-org31d8518">
+</div>
+<div id="outline-container-orgabb4ce7" class="outline-2">
+<h2 id="orgabb4ce7">Calculus</h2>
+<div class="outline-text-2" id="text-orgabb4ce7">
 <p>
-There is a good <a href="https://www.lennysnewsletter.com/p/marc-andreessen-the-real-ai-boom">podcast</a> with Marc Andreessen explaining away all the AI doomers. Someone on SubStack made a <a href="https://jakobnielsenphd.substack.com/p/time-to-build">cartoon version</a>. AI will always be a personal tool in order to give you '100x ability' it is not ever going to be sentient or take all the jobs because those jobs weren't worth doing in the first place. Yes I'm fully aware Andreessen is a kooky crypto shill but he's not wrong about AI. 
+Why do they still make us learn calculus in university despite AI being able to do this for us easily? Or even applications like Sage/Wolfram for the last 10 years? 
 </p>
 
 <p>
-You now have a personal tutor, for free, that you can use in order to learn everything here and ask it questions or have it check your work. We will shortly learn how AI was used by a deep learning researcher in order to do scientific inquiry and prove why it works. Essentially the theory of deep learning is simply type theory (modularity/genericity) and computational complexity theory. 
+The symbolic calculus (scalar calculus of one variable) taught in first year colleges and universities is designed to bring up the students to a base level they think you need in order to pass the rest of your courses. They do this because the faculty can't trust your high school education and everyone arrives with poor algebra skills. Even if you take so-called 'Advanced Placement' Calculus in Grade 12 they have broken up the calculus sequence into multiple courses now so you will only place out of basic differentiation but are forced to take their integration and approximation courses or whatever they are called now.
 </p>
 
 <p>
-If you want to build something from scratch you now have the personal power where you can become an expert in design, engineering and deployment by yourself. You've 3x'd yourself. 
+Concretely what this means is the book <i>Calculus: Early Transcendentals</i> 9th ed by James Stewart though honestly all the editions are roughly the same. You can search for this on github and get numerous full copies and instructor versions too with all the solutions to problems. 
+</p>
+
+<ul class="org-ul">
+<li>Chapters 1-6</li>
+</ul>
+
+<p>
+This is every school's first year introductory Calc I of basic differentiation and basic integration that runs for a single semester or 4 months. As mentioned earlier you can take AP Calc in high school and place out of this. 
+</p>
+
+<ul class="org-ul">
+<li>Chapters 7 - 12.3</li>
+</ul>
+
+<p>
+This is Calc II often called <i>techniques of integration</i> or <i>integration and approximation</i> and is the second semester course. It always ends with a brief intro to linear algebra. There's some things that shouldn't exist here like partial fractions should be in another course and 'improper integrals' don't actually exist it's a failing of the Reimann integral which is a toy integral discarded when you get into grad school.
+</p>
+
+<ul class="org-ul">
+<li>Chapters 13 - end</li>
+</ul>
+
+<p>
+Calc III often called <i>vector calculus</i> or <i>multivariable calculus</i>. This simply means the same calculus you already know just generalized to higher dimensions. In scalar calculus the derivative is a zooming function on a curve and you look at the points around the point you zoomed which appears to be a straight line and it's the tangent. In vector calculus the tangent is now an entire plane or flat 2D surface. You also get an intro to differential equations probably the most amazing thing about calculus where you can time step back and forth some <i>entire complex system</i> like the state of the universe. SciML/AI is going crazy right now approximating solutions to these ODEs/PDEs which were just a nonsense bag of tricks when you took these courses only a decade ago. 
+</p>
+
+<p>
+The above is considered 12 months of work doing this 3x a week if at a university pace. However from personal experience you will find that mid way or less through the book you will have taught yourself excellent problem solving skills and now the rest of the book is 'too easy' and you start flying through chapters. You will finish it in 1/4 of the time.
 </p>
 </div>
+<div id="outline-container-orge93453e" class="outline-3">
+<h3 id="orge93453e">What should we do</h3>
+<div class="outline-text-3" id="text-orge93453e">
+<p>
+Real numbers are mostly undecidable and even worse the way they are taught is over 100+ years old and obsolete. There exists a 'Natural Integral' on the real (imaginary continuum) line invented in 1960s or so that is sometimes called the guage integral, or the Newton integral, or the Henstock-Kurzweil integral and it includes the Lebesgue integral as a special case. It is vastly more simple than Riemann limiting sum constructions. There are a few undergrad level books by analysis experts written for beginners about this such as Brian S Thomson and Andrew Bruckner I suggest you search for them if you want 21st century real number theory. They are called 'DRIPPED' or 'Drop the Riemann Integral'. Bruckner is still doing derivatives research in his 90s and uploading papers such as what actually characterizes the derivative? Turns out there is functions that are discontinous everywhere yet still have derivatives. They also blow out Rolle's theorem and other junk you have to take in a modern calculus course in undergrad. AI is killing this entire abstraction. 
+</p>
+
+<p>
+Real numbers have this (fake) idealized construction where compactness exists however we will learn in the deep learning lectures that basically almost every real number is undecidable so there's no actual compactness. You can approximate e, pi, phi, a very few others using an algorithm but the rest of them are not computable at all. Ergo the entire theory is just trash in 2026. Try and write a program that can compute a limit as they are currently defined. It's impossible because it's an infinite process that is not computable. Try and use an infinite set in a program. It's also undecidable because a stream structure doesn't work for the proofs. All of it is junk and needs to go. Newton never used real numbers either. 
+</p>
+
+<p>
+Instead we will learn the <i>infintesimal calculus</i> with modern definitions though I am now denying you the satisfaction of working through an elementary text and realizing it's too easy for you. I plan on using linear algebra for that. For example the David Poole book used by CMU where you will do enough applications that math undergrad problems become trivial. You need this win and I will provide it just not silly calculus that even Newton himself would object to. 
+</p>
+
+
+<p>
+TODO
+</p>
 </div>
-<div id="outline-container-orgcfb653f" class="outline-2">
-<h2 id="orgcfb653f"><span class="todo TODO">TODO</span> </h2>
-<div class="outline-text-2" id="text-orgcfb653f">
-<p>
-Diffusion models are junk too but we'll figure it out soon. 
-</p>
-
-
-<hr />
-<p>
-<a href="./index.html">Home</a>
-</p>
 </div>
 </div>
 </div>

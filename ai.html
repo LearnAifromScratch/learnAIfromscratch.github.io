@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-06-26 Fri 19:53 -->
+<!-- 2026-06-28 Sun 23:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI (and Robotics) From Scratch in 2026</title>
@@ -202,58 +202,63 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org52ecc6d">How quickly this moves</a></li>
-<li><a href="#orgcdc0199">Curriculum</a>
+<li><a href="#org57a7a71">How quickly this moves</a></li>
+<li><a href="#orgee394b1">Curriculum</a>
 <ul>
-<li><a href="#org19d5511">Applied AI:</a></li>
-<li><a href="#orgc5df3da">Towards a Unified theory of AI:</a></li>
-<li><a href="#org0ce990c">Math for ML/Robotics</a></li>
-<li><a href="#org86f2fe3">Research you may want to do (Optional)</a>
+<li><a href="#org0eb9248">Applied AI:</a></li>
+<li><a href="#org60e2c5f">Theory of modern AI</a></li>
+<li><a href="#org3f999f3">Math for ML/Robotics</a></li>
+<li><a href="#orgb5bb4e2">Research you may want to do (Optional)</a>
 <ul>
-<li><a href="#orgd6b2844">Reverse engineering LLMS</a></li>
-<li><a href="#org039187e">Causality</a></li>
-<li><a href="#orgcbc1bc3">Conformal Prediction</a></li>
-<li><a href="#org4001b0f">Game Theory AI</a></li>
+<li><a href="#org6538b4e">Reverse engineering LLMS</a></li>
+<li><a href="#orgd86d040">Causality</a></li>
+<li><a href="#org6022d06">Conformal Prediction</a></li>
+<li><a href="#orgb863dae">Game Theory AI</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org11212ce">Calculus</a>
+<li><a href="#org9626ed7">Calculus</a>
 <ul>
-<li><a href="#org289b198">What should we do</a></li>
+<li><a href="#org17e3c94">Banach spaces</a></li>
+</ul>
+</li>
+<li><a href="#org810b988">Linear Algebra</a>
+<ul>
+<li><a href="#org3c0f3a4"><span class="todo TODO">TODO</span> </a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org52ecc6d" class="outline-2">
-<h2 id="org52ecc6d">How quickly this moves</h2>
-<div class="outline-text-2" id="text-org52ecc6d">
+<div id="outline-container-org57a7a71" class="outline-2">
+<h2 id="org57a7a71">How quickly this moves</h2>
+<div class="outline-text-2" id="text-org57a7a71">
 <p>
 Start by reading <a href="https://ai-2027.com">AI 2027</a> written by a former OpenAI researcher on the kinds of agents we should expect to see every few months. This has been accurate up to q2 2026 since it was written.
 </p>
 </div>
 </div>
-<div id="outline-container-orgcdc0199" class="outline-2">
-<h2 id="orgcdc0199">Curriculum</h2>
-<div class="outline-text-2" id="text-orgcdc0199">
+<div id="outline-container-orgee394b1" class="outline-2">
+<h2 id="orgee394b1">Curriculum</h2>
+<div class="outline-text-2" id="text-orgee394b1">
 </div>
-<div id="outline-container-org19d5511" class="outline-3">
-<h3 id="org19d5511">Applied AI:</h3>
-<div class="outline-text-3" id="text-org19d5511">
+<div id="outline-container-org0eb9248" class="outline-3">
+<h3 id="org0eb9248">Applied AI:</h3>
+<div class="outline-text-3" id="text-org0eb9248">
 <ul class="org-ul">
 <li><a href="https://modernaicourse.org">10-202 Intro to Modern AI</a> so you can modify any open source LLM as this will take off soon with new hardware. You can easily get paid insane amounts of money doing this right now.</li>
 <li><a href="https://dlsyscourse.org">10-714 DL Algorithms &amp; Implementation</a> teaches how to build your own PyTorch stack from scratch and trust me you want to use types and toss out Python into the dustbin of history because right now types are making agentic coding very simple to use and for AI-assisted "lightweight formal methods" to verify the code.</li>
 </ul>
 
 <p>
-Almost everything in those courses is self-contained or you can ask Gemini/Grok/ChatGPTx to help you. The only math you really need is understanding the beginning of this single video <a href="https://youtube.com/watch?v=oGZK3yGF-6k">Matrix Calculus</a> from MIT's 2020 18.06 course on linear algebra which we will take here too as our first math lecture. 
+Almost everything in those courses is self-contained or you can ask Gemini/Grok/ChatGPTx to help you. The only math you really need is understanding the beginning of this single video <a href="https://youtube.com/watch?v=oGZK3yGF-6k">Matrix Calculus</a> from MIT's 2020 18.06 course on linear algebra which we will take here too as our first math lecture.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc5df3da" class="outline-3">
-<h3 id="orgc5df3da">Towards a Unified theory of AI:</h3>
-<div class="outline-text-3" id="text-orgc5df3da">
+<div id="outline-container-org60e2c5f" class="outline-3">
+<h3 id="org60e2c5f">Theory of modern AI</h3>
+<div class="outline-text-3" id="text-org60e2c5f">
 <p>
 Does there exist a unified theory of modern AI yet or something close to it?
 </p>
@@ -263,11 +268,7 @@ Does there exist a unified theory of modern AI yet or something close to it?
 </ul>
 
 <p>
-These lectures show current AI provides a generic mean or 'smoothing' effect on everything it generates. The human user has to provide the sparse logical jumps to escape the annoying politeness and homogenizing of scientific thought that AI defaults to. They also show compositionality which means a complex thing is constructed of many small reusable basic things and these are (as described in the prologue) mathematically implied to be sparse for the simple reason that we can compute them efficiently. Genericity is another trait of modern AI and means a learning function being defined by any set of coordinates is invariant to transformations and defining it in different spaces where you 'shift' the function doesn't really matter. There will be many lectures about this in detail and we will take them.
-</p>
-
-<p>
-AI also can't be sentient (yet) no matter what AGI marketing these companies claim. This is another theme of these lectures. 
+These lectures show current AI provides a generic mean or 'smoothing' effect on everything they generate. The human user has to provide the sparse logical jumps to escape the annoying politeness and homogenizing of scientific thought that AI defaults to. They also show compositionality which means a complex thing is constructed of many small reusable basic things and these are (as described in the prologue) mathematically implied to be sparse for the simple reason that we can compute them efficiently. Genericity is another trait of modern AI and means a learning function being defined by any set of coordinates is invariant to transformations and defining it in different spaces where you 'shift' the function doesn't really matter. There will be many lectures about this in detail and we will take them. AI also can't be sentient (yet) no matter what AGI marketing these companies claim. This is another theme of these lectures. 
 </p>
 
 <p>
@@ -279,20 +280,17 @@ AI also can't be sentient (yet) no matter what AGI marketing these companies cla
 <ul class="org-ul">
 <li>All <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">lectures</a> are taught by the author of the <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a> and there's undergrad <a href="https://introml.mit.edu/notes/">notes</a> (MIT).</li>
 <li>Some optional <a href="https://jorchard.github.io/cs479.github.io/index.html">short lectures</a> from the perspective of theoretical neuroscience.</li>
-<li>A <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i> though we will mostly only use the MIT <a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">Lectures</a></li>
+<li>An optional <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i></li>
+<li>All the Calculus/Algebra content below</li>
 </ul></li>
 </ul>
-
-<p>
-We will also have to incrementally take various lectures from 15-251 CMU's <i>Great Ideas in Computer Science</i> such as boolean functions and some complexity theory because deep learning is a deep topic touching many theoretical fields. 
-</p>
 </div>
 </div>
-<div id="outline-container-org0ce990c" class="outline-3">
-<h3 id="org0ce990c">Math for ML/Robotics</h3>
-<div class="outline-text-3" id="text-org0ce990c">
+<div id="outline-container-org3f999f3" class="outline-3">
+<h3 id="org3f999f3">Math for ML/Robotics</h3>
+<div class="outline-text-3" id="text-org3f999f3">
 <p>
-Throw out almost all math learned in undergrad. As per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning the Real Numbers don't exist. Everything must be done by numerical analysis/approximations which means no limits, no Riemann integral, no pivots or echelon forms, no inverting matrices, limited use of eigenwhatever, and exclusively using SVD factorization for linear algebra. Even gradient descent isn't really used anymore as it 'zig-zags'. 
+As per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning the vast majority of Real Numbers are uncomputatble so numerical approximations in the discrete world have to be done. The inputs are simply too gigantic, a tiny 3D model is 100 x 100 x 100 with 10<sup>6</sup> unknowns, so almost all linear algebra learned in undergrad is not used as now you live in the world of factoring (SVD), matrices have to be randomized (jack polynomials), eigenvalues are approximated, and preconditioning is needed as gradient descent is too slow because it 'zig-zags'.
 </p>
 
 <p>
@@ -301,26 +299,21 @@ The following is very similar to CMU's <i>Math Foundations for Robotics</i> cour
 
 <ul class="org-ul">
 <li>Matrix <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">calculus</a></li>
-<li>MIT <a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> and <a href="https://github.com/mitmath/numerical_spoke_linalg">large scale</a> linear algebra.
-<ul class="org-ul">
-<li>Infinitesimal <a href="https://www.gutenberg.org/files/33283/33283-pdf.pdf">calculus book</a>
-<ul class="org-ul">
-<li>We will only ever use dy/dx</li>
-</ul></li>
-</ul></li>
+<li>MIT <a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> and <a href="https://github.com/mitmath/numerical_spoke_linalg">large scale</a> linear algebra.</li>
+<li><a href="https://www.stat.cmu.edu/~cshalizi/TALR/">Modern Regression</a> and <a href="https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Data Analysis</a> because in applied ML you often find yourself trying to interpret data.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org86f2fe3" class="outline-3">
-<h3 id="org86f2fe3">Research you may want to do (Optional)</h3>
-<div class="outline-text-3" id="text-org86f2fe3">
+<div id="outline-container-orgb5bb4e2" class="outline-3">
+<h3 id="orgb5bb4e2">Research you may want to do (Optional)</h3>
+<div class="outline-text-3" id="text-orgb5bb4e2">
 <p>
 You can use the <a href="https://poggioai.github.io/">Agentic Investigator</a> to help you research these fields by yourself. 
 </p>
 </div>
-<div id="outline-container-orgd6b2844" class="outline-4">
-<h4 id="orgd6b2844">Reverse engineering LLMS</h4>
-<div class="outline-text-4" id="text-orgd6b2844">
+<div id="outline-container-org6538b4e" class="outline-4">
+<h4 id="org6538b4e">Reverse engineering LLMS</h4>
+<div class="outline-text-4" id="text-org6538b4e">
 <p>
 Make sure agents are doing what they claim they are doing: 
 </p>
@@ -340,13 +333,13 @@ Make sure agents are doing what they claim they are doing:
 </ul>
 
 <p>
-Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be more. Not everyone wants to use the expensive Anthropic or OpenAI agents sometimes a simple open source agent learning your codebase is good enough. Of course next year's agents will be so advanced we will have to use this year's agents to reverse engineer them but interpretability is still going as of June 2026. Anthropic is the least trustworthy AI company in my opinion for a dozen reasons. I would trust the Chinese pirates who stole DeepSeek over Anthropic anyday. Say what you want about Sam Altman but at least we know something about Sam Altman from Hacker News I do not trust Anthropic whatsoever they are like the dystopia in the game Half-Life but worse. I would trust Bill Epstein Gates over Anthropic.    
+Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be more. Not everyone wants to use the expensive Anthropic or OpenAI agents sometimes a simple open source agent learning your codebase is good enough. Of course next year's agents will be so advanced we will have to use this year's agents to reverse engineer them but interpretability is still going as of June 2026.
 </p>
 </div>
 </div>
-<div id="outline-container-org039187e" class="outline-4">
-<h4 id="org039187e">Causality</h4>
-<div class="outline-text-4" id="text-org039187e">
+<div id="outline-container-orgd86d040" class="outline-4">
+<h4 id="orgd86d040">Causality</h4>
+<div class="outline-text-4" id="text-orgd86d040">
 <p>
 Any future medical AI is going to need Causal AI models. If I do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
 </p>
@@ -356,9 +349,9 @@ Any future medical AI is going to need Causal AI models. If I do X what will hap
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcbc1bc3" class="outline-4">
-<h4 id="orgcbc1bc3">Conformal Prediction</h4>
-<div class="outline-text-4" id="text-orgcbc1bc3">
+<div id="outline-container-org6022d06" class="outline-4">
+<h4 id="org6022d06">Conformal Prediction</h4>
+<div class="outline-text-4" id="text-org6022d06">
 <p>
 Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky API that Anthropic peddles like Claude Code is going to charge you to generate some slop. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
 </p>
@@ -368,11 +361,11 @@ Conformal Prediction or <i>confidence intervals</i> are also wide open to resear
 </ul>
 </div>
 </div>
-<div id="outline-container-org4001b0f" class="outline-4">
-<h4 id="org4001b0f">Game Theory AI</h4>
-<div class="outline-text-4" id="text-org4001b0f">
+<div id="outline-container-orgb863dae" class="outline-4">
+<h4 id="orgb863dae">Game Theory AI</h4>
+<div class="outline-text-4" id="text-orgb863dae">
 <p>
-It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. No measure theory needed. Most human activities involve someone else and none of it is really random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This is my primary research area so I'll be doing lots of this here and causality. 
+It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is really random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This is my primary research area so I'll be doing lots of this here and causality. 
 </p>
 
 <ul class="org-ul">
@@ -382,11 +375,11 @@ It's possible to completely throw out stochastic math and do statistics and prob
 </div>
 </div>
 </div>
-<div id="outline-container-org11212ce" class="outline-2">
-<h2 id="org11212ce">Calculus</h2>
-<div class="outline-text-2" id="text-org11212ce">
+<div id="outline-container-org9626ed7" class="outline-2">
+<h2 id="org9626ed7">Calculus</h2>
+<div class="outline-text-2" id="text-org9626ed7">
 <p>
-Why do they still make us learn calculus in university despite AI being able to do this for us easily? Or even symbolic calculators or applications like Sage/Wolfram for the last 10+ years? 
+Look up the 3Blue1Brown calculus series on YouTube it's enough to get started on the applied LLM courses. 
 </p>
 
 <p>
@@ -394,7 +387,7 @@ The symbolic calculus (scalar calculus of one variable) taught in first year col
 </p>
 
 <p>
-Concretely what this means is the book <i>Calculus: Early Transcendentals</i> 9th ed by James Stewart though honestly all the editions are roughly the same. You can search for this on github and get numerous full copies and instructor versions too with all the solutions to problems.
+Concretely what this means is the book <i>Calculus: Early Transcendentals</i> 9th ed by James Stewart though all the editions look roughly the same. You can search for this on github and get numerous full copies and instructor versions too with all the solutions to problems.
 </p>
 
 <p>
@@ -414,7 +407,7 @@ This is every school's first year introductory Calc I of basic differentiation a
 </ul>
 
 <p>
-This is Calc II often called <i>techniques of integration</i> or <i>integration and approximation</i> and is the second semester course. It always ends with a brief intro to linear algebra. There's some things that shouldn't exist here like partial fractions should be in another course and are stupid to learn here. Also 'improper integrals' don't actually exist it's a failing of the Riemann integral which is a toy integral discarded when you get into grad school. Riemann literally wrote his integral on a napkin to solve some urgent problem and never expected it would become the standard curriculum for 100+ years. 
+This is Calc II often called <i>techniques of integration</i> or <i>integration and approximation</i> and is the second semester course. There's some things that shouldn't exist here like partial fractions should be in another course and are stupid to learn here. Also 'improper integrals' don't actually exist it's a failing of the Riemann integral which was replaced over 100+ years ago.
 </p>
 
 <ul class="org-ul">
@@ -422,33 +415,36 @@ This is Calc II often called <i>techniques of integration</i> or <i>integration 
 </ul>
 
 <p>
-Calc III often called <i>vector calculus</i> or <i>multivariable calculus</i>. This simply means the same calculus you already know just generalized to higher dimensions. In scalar calculus the derivative is a zooming function on a curve and you look at the points around the point you zoomed which appears to be a straight line and it's the tangent. In vector calculus the tangent is now an entire plane or flat 2D surface. You also get an intro to differential equations probably the most amazing thing about calculus where you can time step back and forth some <i>entire complex system</i> like the state of the universe. SciML/AI is going crazy right now approximating solutions to these ODEs/PDEs which were just a nonsense bag of tricks when you took these courses only a decade ago. 
+Calc III often called <i>vector calculus</i> or <i>multivariable calculus</i>. This is the same calculus you already know just generalized to higher dimensions. In scalar calculus the derivative is a zooming function on a curve and you look at the points around the point you zoomed which appear to be a straight line and it's the tangent. In vector calculus the tangent is now an entire plane or flat 2D surface.
 </p>
 
 <p>
-The above is considered 12 months of work doing this 3x a week if at a university pace. However from personal experience you will find that mid way or less through the book you will have taught yourself excellent problem solving skills and now the rest of the book is 'too easy' and you start flying through chapters. You will finish it in 1/4 of the time. Even analysis textbooks like Apostol which seem difficult you traverse the peak early if you stick with it and the rest is downhill skiing on cruise control. That and Apostol often drills trig identities in the exercises when he doesn't have anything new to show the reader. 
+We won't be doing this book.
 </p>
 </div>
-<div id="outline-container-org289b198" class="outline-3">
-<h3 id="org289b198">What should we do</h3>
-<div class="outline-text-3" id="text-org289b198">
+<div id="outline-container-org17e3c94" class="outline-3">
+<h3 id="org17e3c94">Banach spaces</h3>
+<div class="outline-text-3" id="text-org17e3c94">
 <p>
-Real numbers are mostly undecidable and even worse the way they are taught is over 100+ years old and obsolete. There exists a 'Natural Integral' on the real (imaginary continuum) line invented in 1960s or so that is sometimes called the gauge integral, or the Newton integral, or the Henstock-Kurzweil integral and it includes the Lebesgue integral as a special case. It is vastly more simple than Riemann limiting sum constructions. There are a few undergrad level books by analysis experts written for beginners about this such as Brian S Thomson and Andrew Bruckner written books I suggest you search for them if you want 21st century real number theory. They are called 'DRIPPED' or 'Drop the Riemann Integral'. Bruckner is still doing derivatives research in his 90s and uploading papers such as what actually characterizes the derivative? Turns out the Darboux property is still the only characteristic and there is functions that are discontinous everywhere yet still have derivatives. They also blow out Rolles' theorem and other junk you have to take in a modern calculus course in undergrad. The integral ends up being basically the mean value theorem. AI is killing this entire obsolete abstraction right now. 
+Modern machine learning is theoretically done with Banach spaces where you get a vector space with measurement. This is to promote sparsity (weights that are exact zeros) while classical machine learning relies on Hilbert spaces (inner product norms). Then you have to convert all this to the real world of computer hardware using numerical methods. 
 </p>
 
 <p>
-Real numbers have this (fake) idealized construction where compactness exists however we will learn in the deep learning lectures that basically almost every real number is undecidable so there's no actual compactness. You can approximate e, pi, phi, a very few other real numbers using a stream algorithm but the rest of them (the vast majority in fact) are not computable at all. Ergo the entire theory is just trash in 2026 and we shouldn't even bother entertaining it here. 
+We should just skip all of vector calculus and proceed in a direct path to Banach spaces. There's a free book for this "TBB-Dripped" or <i>Elementary Real Analysis</i> by Thomson-Bruckner the dripped version or 'Dump the Riemann Integral Project' version. Many concepts here will come up in the Tomaso Poggio Deep Learning lectures and for any probability material. It looks like a large book but half way through any undergrad math text you pick up speed as the problems become too easy to solve. 
 </p>
-
+</div>
+</div>
+</div>
+<div id="outline-container-org810b988" class="outline-2">
+<h2 id="org810b988">Linear Algebra</h2>
+<div class="outline-text-2" id="text-org810b988">
 <p>
-Instead we will learn the <i>infintesimal calculus</i> with modern definitions though I am now denying you the satisfaction of working through an elementary text and realizing it's too easy for you which provides motivation and encouragement. I plan on using linear algebra for that. For example the David Poole book used by CMU where you will do enough applications that math undergrad problems become trivial. You need this win and I will provide it just not silly calculus that even Newton himself would object to. 
+There's a concept of groups and inside those are an abelian group with the ability to perform 'actions' over a ring structure that has a special case of being a field. This is the space of vectors and linear maps. A book exists to teach all this from scratch by Paolo Aluffi called <i>Algebra: Chapter 0</i>. There are many other great undergrad linear algebra texts but what is the point in taking them if we are only using numerical analysis and matrix calculus thus throwing out most of their content. We may as well learn how it all works at the big picture level. At the same time Linear Algebra is highly abstract so we will watch some unique lectures by NJ Wildberger to illuminate some of the projections and transformations. 
 </p>
-
-
-<p>
-TODO
-</p>
-
+</div>
+<div id="outline-container-org3c0f3a4" class="outline-3">
+<h3 id="org3c0f3a4"><span class="todo TODO">TODO</span> </h3>
+<div class="outline-text-3" id="text-org3c0f3a4">
 <p>
 <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span>
 <a href="./index.html">Home</a>

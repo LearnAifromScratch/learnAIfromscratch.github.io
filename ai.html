@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-06-30 Tue 18:45 -->
+<!-- 2026-06-30 Tue 19:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI (and Robotics) From Scratch in 2026</title>
@@ -202,49 +202,60 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga12fdb6">How quickly this moves</a></li>
-<li><a href="#org4dd465a">Curriculum</a>
+<li><a href="#org93e5efd">How quickly this moves</a></li>
+<li><a href="#orgb8989a7">Curriculum</a>
 <ul>
-<li><a href="#org5d3b4f6">Applied AI:</a></li>
-<li><a href="#orgf87d906">Theory of modern AI</a></li>
-<li><a href="#orgc1fd596">Math for ML/Robotics</a></li>
-<li><a href="#orga0cd375">Research you may want to do (Optional)</a>
+<li><a href="#org870297c">Applied AI:</a></li>
+<li><a href="#org873e9a7">Theory of modern AI</a></li>
+<li><a href="#org8679f91">Math for ML/Robotics</a>
 <ul>
-<li><a href="#org22d8982">Reverse engineering LLMS</a></li>
-<li><a href="#org98f8b65">Causality</a></li>
-<li><a href="#orgbe00494">Conformal Prediction</a></li>
-<li><a href="#org3dc5023">Game Theory AI</a></li>
+<li><a href="#org1dc9997">Sensorimoto Learning</a></li>
+</ul>
+</li>
+<li><a href="#org39748cf">Research you may want to do (Optional)</a>
+<ul>
+<li><a href="#org7ed80a0">Reverse engineering LLMS</a></li>
+<li><a href="#orga086586">Causality</a></li>
+<li><a href="#org37a071e">Conformal Prediction</a></li>
+<li><a href="#orgb7598ca">Game Theory AI</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org8a39314">Calculus</a>
+<li><a href="#orgf5d2f08">Calculus</a>
 <ul>
-<li><a href="#org120f5f1">Banach spaces</a></li>
-<li><a href="#orga6904db">Linear Algebra</a></li>
-<li><a href="#orgd1d7951"><span class="todo TODO">TODO</span> </a></li>
+<li><a href="#orgd8d139b">Banach spaces</a></li>
+<li><a href="#orge5934a4">Linear Algebra</a></li>
+<li><a href="#orge123568"><span class="todo TODO">TODO</span> </a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga12fdb6" class="outline-2">
-<h2 id="orga12fdb6">How quickly this moves</h2>
-<div class="outline-text-2" id="text-orga12fdb6">
+<div id="outline-container-org93e5efd" class="outline-2">
+<h2 id="org93e5efd">How quickly this moves</h2>
+<div class="outline-text-2" id="text-org93e5efd">
 <p>
 Start by reading <a href="https://ai-2027.com">AI 2027</a> written by a former OpenAI researcher on the kinds of agents we should expect to see every few months. This has been accurate up to q2 2026 since it was written.
 </p>
 </div>
 </div>
-<div id="outline-container-org4dd465a" class="outline-2">
-<h2 id="org4dd465a">Curriculum</h2>
-<div class="outline-text-2" id="text-org4dd465a">
+<div id="outline-container-orgb8989a7" class="outline-2">
+<h2 id="orgb8989a7">Curriculum</h2>
+<div class="outline-text-2" id="text-orgb8989a7">
+<p>
+Machine Learning is the overall topic and inside it exists Neural Networks, Computer Vision, etc. 
+</p>
 </div>
-<div id="outline-container-org5d3b4f6" class="outline-3">
-<h3 id="org5d3b4f6">Applied AI:</h3>
-<div class="outline-text-3" id="text-org5d3b4f6">
+<div id="outline-container-org870297c" class="outline-3">
+<h3 id="org870297c">Applied AI:</h3>
+<div class="outline-text-3" id="text-org870297c">
 <ul class="org-ul">
 <li><a href="https://modernaicourse.org">10-202 Intro to Modern AI</a> so you can modify any open source LLM as this will take off soon with new hardware. You can easily get paid insane amounts of money doing this right now.</li>
+</ul>
+
+
+<ul class="org-ul">
 <li><a href="https://dlsyscourse.org">10-714 DL Algorithms &amp; Implementation</a> teaches how to build your own PyTorch stack from scratch and trust me you want to use types and toss out Python into the dustbin of history because right now types are making agentic coding very simple to use and for AI-assisted "lightweight formal methods" to verify the code.</li>
 </ul>
 
@@ -257,7 +268,7 @@ To understand these courses:
 <li>Combine these with 3Blue1Brown Linear Algebra lectures on YouTube or NJ Wildberger's excellent LinAlg course which walks through everything at the geometric level.</li>
 </ul></li>
 <li>This single video <a href="https://youtube.com/watch?v=oGZK3yGF-6k">Matrix Calculus</a> from MIT's 2020 18.06 course on linear algebra which we will take here too as our first math lecture. Derivatives are covered and explained simply. There is a full Matrix <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">calculus</a> course but it's not needed at this level.</li>
-<li>The <a href="https://introml.mit.edu/notes/">notes</a> from MIT's 6.329 <i>Intro to ML</i></li>
+<li>The <a href="https://introml.mit.edu/notes/">notes</a> from MIT's 6.390 <i>Intro to ML</i></li>
 </ul>
 
 <p>
@@ -269,9 +280,9 @@ The rest of this workshop is to understand the modern theory of AI because much 
 </p>
 </div>
 </div>
-<div id="outline-container-orgf87d906" class="outline-3">
-<h3 id="orgf87d906">Theory of modern AI</h3>
-<div class="outline-text-3" id="text-orgf87d906">
+<div id="outline-container-org873e9a7" class="outline-3">
+<h3 id="org873e9a7">Theory of modern AI</h3>
+<div class="outline-text-3" id="text-org873e9a7">
 <p>
 Does there exist a unified theory of modern AI yet or something close to it?
 </p>
@@ -298,14 +309,14 @@ These lectures show current AI provides a generic mean or 'smoothing' effect on 
 <ul class="org-ul">
 <li>An optional <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i></li>
 <li>All the Calculus/Algebra content below</li>
-<li>Maybe the Zhang book on statistical learning theory but depends what I can find, what I want is Poggio's 9.520 'draft book' that isn't available anywhere but we can always watch old lectures and take our own notes then go on a hunt for new papers.</li>
+<li>Maybe the Zhang book on statistical learning theory but depends what I can find, what I want is Poggio's 9.520 'draft book' that isn't available anywhere but we can always watch old lectures and take our own notes then go on a hunt for new papers. I may just skip all this and go on a tangent with the deep learning lectures because that's what matters right now in research.</li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc1fd596" class="outline-3">
-<h3 id="orgc1fd596">Math for ML/Robotics</h3>
-<div class="outline-text-3" id="text-orgc1fd596">
+<div id="outline-container-org8679f91" class="outline-3">
+<h3 id="org8679f91">Math for ML/Robotics</h3>
+<div class="outline-text-3" id="text-org8679f91">
 <p>
 As per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning the vast majority of Real Numbers are uncomputatble so numerical approximations in the discrete world have to be done. The inputs are simply too gigantic, a tiny 3D model is 100 x 100 x 100 with 10<sup>6</sup> unknowns, so almost all linear algebra learned in undergrad is not used as now you live in the world of factoring (SVD), matrices have to be randomized (jack polynomials), eigenvalues are approximated, and preconditioning is needed as gradient descent is too slow because it 'zig-zags'.
 </p>
@@ -320,17 +331,25 @@ The following is very similar to CMU's <i>Math Foundations for Robotics</i> cour
 <li><a href="https://www.stat.cmu.edu/~cshalizi/TALR/">Modern Regression</a> and <a href="https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Data Analysis</a> because in applied ML you often find yourself trying to interpret data.</li>
 </ul>
 </div>
+<div id="outline-container-org1dc9997" class="outline-4">
+<h4 id="org1dc9997">Sensorimoto Learning</h4>
+<div class="outline-text-4" id="text-org1dc9997">
+<ul class="org-ul">
+<li><a href="https://pulkitag.github.io/6.8200">6.8200 Computational Sensorimoto Learning</a> this guy is the leading researcher for "control learning" (robotics) so we will learn the math model. There is many other math models for robotics but an AI will eventually discard them for it's own interpretation hence I chose this course just to get a taste of robotic learning.</li>
+</ul>
 </div>
-<div id="outline-container-orga0cd375" class="outline-3">
-<h3 id="orga0cd375">Research you may want to do (Optional)</h3>
-<div class="outline-text-3" id="text-orga0cd375">
+</div>
+</div>
+<div id="outline-container-org39748cf" class="outline-3">
+<h3 id="org39748cf">Research you may want to do (Optional)</h3>
+<div class="outline-text-3" id="text-org39748cf">
 <p>
 You can use the <a href="https://poggioai.github.io/">Agentic Investigator</a> to help you research these fields by yourself. 
 </p>
 </div>
-<div id="outline-container-org22d8982" class="outline-4">
-<h4 id="org22d8982">Reverse engineering LLMS</h4>
-<div class="outline-text-4" id="text-org22d8982">
+<div id="outline-container-org7ed80a0" class="outline-4">
+<h4 id="org7ed80a0">Reverse engineering LLMS</h4>
+<div class="outline-text-4" id="text-org7ed80a0">
 <p>
 Make sure agents are doing what they claim they are doing: 
 </p>
@@ -354,9 +373,9 @@ Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-ne
 </p>
 </div>
 </div>
-<div id="outline-container-org98f8b65" class="outline-4">
-<h4 id="org98f8b65">Causality</h4>
-<div class="outline-text-4" id="text-org98f8b65">
+<div id="outline-container-orga086586" class="outline-4">
+<h4 id="orga086586">Causality</h4>
+<div class="outline-text-4" id="text-orga086586">
 <p>
 Any future medical AI is going to need Causal AI models. If I do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
 </p>
@@ -366,9 +385,9 @@ Any future medical AI is going to need Causal AI models. If I do X what will hap
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbe00494" class="outline-4">
-<h4 id="orgbe00494">Conformal Prediction</h4>
-<div class="outline-text-4" id="text-orgbe00494">
+<div id="outline-container-org37a071e" class="outline-4">
+<h4 id="org37a071e">Conformal Prediction</h4>
+<div class="outline-text-4" id="text-org37a071e">
 <p>
 Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky API that Anthropic peddles like Claude Code is going to charge you to generate some slop. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
 </p>
@@ -378,9 +397,9 @@ Conformal Prediction or <i>confidence intervals</i> are also wide open to resear
 </ul>
 </div>
 </div>
-<div id="outline-container-org3dc5023" class="outline-4">
-<h4 id="org3dc5023">Game Theory AI</h4>
-<div class="outline-text-4" id="text-org3dc5023">
+<div id="outline-container-orgb7598ca" class="outline-4">
+<h4 id="orgb7598ca">Game Theory AI</h4>
+<div class="outline-text-4" id="text-orgb7598ca">
 <p>
 It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is really random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This is my primary research area so I'll be doing lots of this here and causality. 
 </p>
@@ -392,9 +411,9 @@ It's possible to completely throw out stochastic math and do statistics and prob
 </div>
 </div>
 </div>
-<div id="outline-container-org8a39314" class="outline-2">
-<h2 id="org8a39314">Calculus</h2>
-<div class="outline-text-2" id="text-org8a39314">
+<div id="outline-container-orgf5d2f08" class="outline-2">
+<h2 id="orgf5d2f08">Calculus</h2>
+<div class="outline-text-2" id="text-orgf5d2f08">
 <p>
 Look up the 3Blue1Brown calculus series on YouTube it's enough to get started on the applied LLM courses. 
 </p>
@@ -439,9 +458,9 @@ Calc III often called <i>vector calculus</i> or <i>multivariable calculus</i>. T
 We won't be doing this book.
 </p>
 </div>
-<div id="outline-container-org120f5f1" class="outline-3">
-<h3 id="org120f5f1">Banach spaces</h3>
-<div class="outline-text-3" id="text-org120f5f1">
+<div id="outline-container-orgd8d139b" class="outline-3">
+<h3 id="orgd8d139b">Banach spaces</h3>
+<div class="outline-text-3" id="text-orgd8d139b">
 <p>
 Modern machine learning is theoretically done with Banach spaces where you get a vector space with measurement. This is to promote sparsity (weights that are exact zeros) while classical machine learning relies on Hilbert spaces (inner product norms). Then you have to convert all this to the real world of computer hardware using numerical methods. 
 </p>
@@ -451,9 +470,9 @@ We should just skip all of vector calculus and proceed in a direct path to Banac
 </p>
 </div>
 </div>
-<div id="outline-container-orga6904db" class="outline-3">
-<h3 id="orga6904db">Linear Algebra</h3>
-<div class="outline-text-3" id="text-orga6904db">
+<div id="outline-container-orge5934a4" class="outline-3">
+<h3 id="orge5934a4">Linear Algebra</h3>
+<div class="outline-text-3" id="text-orge5934a4">
 <p>
 There's a concept of groups and inside those are an abelian group with the ability to perform 'actions' over a ring structure that has a special case of being a field. This is the space of vectors and linear maps. A book exists to teach all this from scratch by Paolo Aluffi called <i>Algebra: Chapter 0</i>. There are many other great undergrad linear algebra texts but what is the point in taking them if we are only using numerical analysis (SVD) and matrix calculus thus throwing out most of their content. We may as well learn how it all works at the big picture level plus group theory structures and symmetry in ML is another emerging field right now.
 </p>
@@ -468,9 +487,9 @@ I will create my own Linear Algebra course
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd1d7951" class="outline-3">
-<h3 id="orgd1d7951"><span class="todo TODO">TODO</span> </h3>
-<div class="outline-text-3" id="text-orgd1d7951">
+<div id="outline-container-orge123568" class="outline-3">
+<h3 id="orge123568"><span class="todo TODO">TODO</span> </h3>
+<div class="outline-text-3" id="text-orge123568">
 <p>
 <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span>
 <a href="./index.html">Home</a>

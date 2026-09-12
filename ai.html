@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-07-15 Wed 20:11 -->
+<!-- 2026-09-11 Fri 19:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI (and Robotics) From Scratch in 2026</title>
@@ -202,149 +202,166 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc4f7b0b">How quickly this moves</a></li>
-<li><a href="#org121d782">Curriculum</a>
+<li><a href="#org91f6e7a">How quickly this moves</a>
 <ul>
-<li><a href="#orgca247da">Applied AI:</a></li>
-<li><a href="#org45c2a8d">Theory of modern AI</a></li>
-<li><a href="#org22cf35d">Math for ML/Robotics</a></li>
-<li><a href="#org9227bad">Sensorimoto Learning (Robotics)</a></li>
-<li><a href="#org263b249">Research you may want to do (Optional)</a>
+<li><a href="#orgfd565aa">Why it works</a></li>
+<li><a href="#org8eb4638">Why it doesn't really work</a></li>
+<li><a href="#org66d357b">AI Doomers fear competition</a></li>
+</ul>
+</li>
+<li><a href="#orgca8f130">Curriculum</a>
 <ul>
-<li><a href="#org24db412">Reverse engineering LLMS</a></li>
-<li><a href="#orge50ca2b">Causality</a></li>
-<li><a href="#org03daa8f">Conformal Prediction</a></li>
-<li><a href="#org0b94836">Game Theory AI</a></li>
+<li><a href="#orgc583ef6">Theory of modern AI</a></li>
+<li><a href="#orgd7b7aba">Applied AI:</a></li>
+<li><a href="#orgef36d76">Applied Math for ML/Robotics</a></li>
+<li><a href="#orgc56e767">Research you may want to do</a>
+<ul>
+<li><a href="#orgf3c2ce3">Reverse engineering LLMS</a></li>
+<li><a href="#org9ad77dc">Causality</a></li>
+<li><a href="#org28df951">Conformal Prediction</a></li>
+<li><a href="#orgf538c26">Game Theory AI</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org3e3f8cb">AI jargon 'Alignment'</a></li>
-<li><a href="#orgc09ee42">Calculus</a>
+<li><a href="#org0be35ab">What modern AI actually is</a>
 <ul>
-<li><a href="#orgf450ae3">Banach spaces</a></li>
-<li><a href="#org627d2fe">Linear Algebra</a></li>
+<li><a href="#org1b0154b">AI jargon 'Alignment'</a></li>
+</ul>
+</li>
+<li><a href="#orgc3266b1">BEGIN HERE: Theory of Modern AI</a>
+<ul>
+<li><a href="#orgf661753">Chapter 1</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc4f7b0b" class="outline-2">
-<h2 id="orgc4f7b0b">How quickly this moves</h2>
-<div class="outline-text-2" id="text-orgc4f7b0b">
+<div id="outline-container-org91f6e7a" class="outline-2">
+<h2 id="org91f6e7a">How quickly this moves</h2>
+<div class="outline-text-2" id="text-org91f6e7a">
 <p>
-Start by reading <a href="https://ai-2027.com">AI 2027</a> written by a former OpenAI researcher on the kinds of agents we should expect to see every few months. This has been accurate up to q2 2026 since it was written.
+Start by reading <a href="https://ai-2027.com">AI 2027</a> written by a former OpenAI researcher on the kinds of agents we should expect to see every few months. This has been accurate up to mid 2026 since it was written. I'm not an AI doomer and recognize this was written for marketing purposes but they're not wrong on how fast some of these agents will gain abilities.
 </p>
 
 <p>
-Not every country is going to have access to the latest AI agents from Anthropic, OpenAI or Google so if you aren't in the USA expect a mad hiring frenzy of AI researchers, anyone who can finely tune a LLM (we will learn this) and robotics engineers. If you are in the USA expect robotics and LLM hacking to take off because not everyone wants to pay OpenAI or Anthropic they'd rather have their own internal AI agent and many of the open source agents are now good enough if you hire someone who knows what they're doing and trains it on your business requirements. 
+They won't gain "AGI" or the singularity or whatever it's called now. You'll find out below why.
+</p>
+</div>
+<div id="outline-container-orgfd565aa" class="outline-3">
+<h3 id="orgfd565aa">Why it works</h3>
+<div class="outline-text-3" id="text-orgfd565aa">
+<p>
+We will learn modern AI has a generic mean or 'smoothing' effect on everything it generates. The human user has to provide the sparse logical jumps to escape the annoying politeness and homogenizing of scientific thought that current day AI agents default to.  
 </p>
 
 <p>
-For software expect formal methods/software verification to return and type theory because AI agents will be able to generate the code easily from a model and with types this is even easier. Also expect vector databases or any kind of database expertise to take off because the goal is now to build specialty hardware and compute where the data is stored and not move anything around.
+Compositionality is another reason why deep learning works which means a complex thing is constructed of many small reusable basic things and these are (as described in the prologue) mathematically implied to be sparse for the simple reason that we can compute them efficiently. There is not enough modularity though (see below).
+</p>
+
+<p>
+Genericity we'll see is another trait of modern AI and means a learning function being defined by any set of coordinates is invariant to transformations and defining it in different spaces where you shift the function doesn't really matter. This means it's possible to use gradient-based optimization.
 </p>
 </div>
 </div>
-<div id="outline-container-org121d782" class="outline-2">
-<h2 id="org121d782">Curriculum</h2>
-<div class="outline-text-2" id="text-org121d782">
+<div id="outline-container-org8eb4638" class="outline-3">
+<h3 id="org8eb4638">Why it doesn't really work</h3>
+<div class="outline-text-3" id="text-org8eb4638">
 <p>
-Machine Learning AKA <i>Statistical Learning</i> is the overall field and inside it exists Deep Learning, inside that exists Neural Networks, inside that LLMs. Both Robotics (Reinforcement Learning) and Computer Vision are being eaten by the rapid advancements of LLM agents and their abilities but we'll learn some of that here too.     
-</p>
-</div>
-<div id="outline-container-orgca247da" class="outline-3">
-<h3 id="orgca247da">Applied AI:</h3>
-<div class="outline-text-3" id="text-orgca247da">
-<p>
-If you want to be a 'LLM Engineer' or go out into the world and sign up companies to AI (and get paid), or you want to hack around some LLM open source model project this is all you need:
+We also learn what's missing from modern AI.
 </p>
 
-<ul class="org-ul">
-<li><a href="https://modernaicourse.org">10-202 Intro to Modern AI</a> is taught by Zico Kolter who besides being a CMU prof he also sits on the board of Open AI. This is mostly self-contained and you can of course use some AI Agent like ChatGPT to teach you whatever it is you don't understand. It uses Colab/Google online notebooks for assignments. You can do this on a phone if needed.</li>
-<li>These <a href="https://introml.mit.edu/notes/">notes</a> from MIT's 6.390 <i>Intro to ML</i> are also excellent.</li>
-<li>An optional free <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i></li>
-</ul>
-
 <p>
-Of course there is vast research into LLM tuning but this is a good enough start and he has interviews on YouTube saying how the majority of AI code is incredibly simple the only thing that's changed is the data available to train it is now massive.  
+LLMs have to replay every computation while your biological system can reduce reaction times through practice. Your brain learns function composition as a single operator short cut but LLMs can't do this unless you build one that can compress the 'hidden layer' computational structure and avoid all the scaffolding.
 </p>
 
+<p>
+Modern AI has no persistent internal state, no sense of continuity, frozen dynamics and insufficient modularity. There is no physical constraints therefore AI models keep getting more ridiculously large with ever growing parameters and skyrocketing complexity while your own brain can't get bigger so reuses all it's modules for everything from reasoning to vision. 
+</p>
 
-<ul class="org-ul">
-<li><a href="https://dlsyscourse.org">10-714 DL Algorithms &amp; Implementation</a> is again taught by Zico Kolter and shows how to build your own PyTorch stack from scratch. You can do the assignments in Python (it too uses Colab/Google online notebooks) to really learn how PyTorch works or instead of doing the assignments you could roll your own modest PyTorch clone in any language you want which is what I plan to do.</li>
-</ul>
+<p>
+LLMs can't simulate interventions without acting they can only imitate the description of causal reasoning. Intelligence requires climbing the causal ladder and even the most impressive AI agent in Sep 2026 cannot do even minimal causal reasoning. If you want an AI doctor you're going to need this. 
+</p>
 </div>
 </div>
-<div id="outline-container-org45c2a8d" class="outline-3">
-<h3 id="org45c2a8d">Theory of modern AI</h3>
-<div class="outline-text-3" id="text-org45c2a8d">
+<div id="outline-container-org66d357b" class="outline-3">
+<h3 id="org66d357b">AI Doomers fear competition</h3>
+<div class="outline-text-3" id="text-org66d357b">
+<p>
+There is many researchers at Anthropic and OpenAI (such as the ai-2027 site I posted above) claiming if governments don't establish a total monopoly and do regulations where only certain companies are allowed to develop AI then it's all over. This is just a scam to eliminate competition from Zuckerberg and China. They fear the ZUCC. He is the last big tech founder who still runs a company and he's actually producing some interesting open source AI and has the money to keep doing it. Such a person who has persisted all these decades causes AI CEOs to panic. I never thought I'd hear myself say this but if you want a highly paid AI job in 2026 then Meta is where you should go the work there he's doing is very interesting. 
+</p>
+
+<p>
+The best agents right now can't even do basic physics they know the high dimensional map and have to infer all this for our 3D world they can't simply look at the territory. Do not believe the hype and marketing.  
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgca8f130" class="outline-2">
+<h2 id="orgca8f130">Curriculum</h2>
+<div class="outline-text-2" id="text-orgca8f130">
+<p>
+Machine Learning AKA <i>Statistical Learning Theory</i> is the overall field and inside it exists Deep Learning, inside that exists Artificial Neural Networks of numerous types, inside that Large Language Models, inside that Transformers.   
+</p>
+</div>
+<div id="outline-container-orgc583ef6" class="outline-3">
+<h3 id="orgc583ef6">Theory of modern AI</h3>
+<div class="outline-text-3" id="text-orgc583ef6">
 <p>
 Does there exist a unified theory of modern AI yet or something close to it?
 </p>
 
 <ul class="org-ul">
-<li>These <a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">30 Lectures</a> were recently put together by MIT's leading Neuroscience researcher by that I mean he's the world's most cited Neuroscience researcher. He used the assistance of a research paper <a href="https://poggioai.github.io/">Agentic Investigator</a>. Give it a research topic and it gives you back an entire paper on that topic.</li>
-</ul>
-
-<p>
-These lectures show current AI provides a generic mean or 'smoothing' effect on everything they generate. The human user has to provide the sparse logical jumps to escape the annoying politeness and homogenizing of scientific thought that AI defaults to. They also show compositionality which means a complex thing is constructed of many small reusable basic things and these are (as described in the prologue) mathematically implied to be sparse for the simple reason that we can compute them efficiently. Genericity is another trait of modern AI and means a learning function being defined by any set of coordinates is invariant to transformations and defining it in different spaces where you 'shift' the function doesn't really matter. There will be many lectures about this in detail and we will take them. AI also can't be sentient (yet) no matter what AGI marketing these companies claim. This is another theme of these lectures. 
-</p>
-
-<p>
-<b>Things we have to take to understand these lectures:</b>
-</p>
-
-
-<ul class="org-ul">
-<li>The <a href="https://student.cs.uwaterloo.ca/~cs485/">mathematical model</a> of Machine Learning which hasn't changed.  
-<ul class="org-ul">
-<li>All <a href="https://www.youtube.com/playlist?list=PLt6ES1TJ1gtsvVE_jD-nYaxB2yJzk4zNB">lectures</a> are taught by the author of the (free) <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">book</a> and there's undergrad <a href="https://introml.mit.edu/notes/">notes</a> (MIT).
-<ul class="org-ul">
-<li>This book is over simplified to the point where sometimes things can seem 'incorrect' but teaches the mathematical justification of modern machine learning and is good enough for us in the beginning.</li>
-</ul></li>
-</ul></li>
-<li>Some optional <a href="https://jorchard.github.io/cs479.github.io/index.html">short lectures</a> from the perspective of theoretical neuroscience.</li>
-<li>All the Calculus/Algebra content below</li>
-<li>Maybe the Zhang book on statistical learning theory but depends what I can find, what I want is Poggio's MIT 9.520 'draft book' that isn't available anywhere but we can always watch old lectures and take our own notes then go on a hunt for new papers.</li>
+<li>These <a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">30 Lectures</a> were recently put together by MIT's most cited Neuroscience researcher. He used the assistance of a research paper <a href="https://poggioai.github.io/">Agentic Investigator</a>. We will go through this entirely.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org22cf35d" class="outline-3">
-<h3 id="org22cf35d">Math for ML/Robotics</h3>
-<div class="outline-text-3" id="text-org22cf35d">
+<div id="outline-container-orgd7b7aba" class="outline-3">
+<h3 id="orgd7b7aba">Applied AI:</h3>
+<div class="outline-text-3" id="text-orgd7b7aba">
 <p>
-As per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning the vast majority of Real Numbers are uncomputable and undecidable so numerical approximations in the discrete world have to be done. The inputs are simply too gigantic, a tiny 3D model is 100 x 100 x 100 with 10<sup>6</sup> unknowns, so almost all linear algebra learned in undergrad is not used as now you live in the world of factoring (SVD), matrices have to be randomized (jack polynomials), eigenvalues are approximated, and preconditioning is needed as gradient descent is too slow because it 'zig-zags'.
+If you want to be a 'LLM Engineer' or you want to hack around some LLM open source model project this is all you need to start:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://modernaicourse.org">10-202 Intro to Modern AI</a> is taught by Zico Kolter who besides being a CMU prof he also sits on the board of Open AI. This is mostly self-contained and you can of course use some AI Agent like ChatGPT to teach you whatever it is you don't understand. It uses Colab/Google online notebooks for assignments. You can do this on a phone if needed.</li>
+<li>These <a href="https://introml.mit.edu/notes/">notes</a> from MIT's 6.390 <i>Intro to ML</i> are also excellent.</li>
+<li>An optional free <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i>
+<ul class="org-ul">
+<li>Zico Kolter also has a Pytorch course where you build your own clone and we may do it if there's time</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgef36d76" class="outline-3">
+<h3 id="orgef36d76">Applied Math for ML/Robotics</h3>
+<div class="outline-text-3" id="text-orgef36d76">
+<p>
+As per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning almost every Real Number is uncomputable and undecidable so numerical approximations in the discrete world have to be done. Almost all linear algebra learned in undergrad is not used as now you live in the world of factoring (compact SVD), matrices have to be randomized (jack polynomials), eigenvalues are approximated, and preconditioning is needed as gradient descent is too slow because it 'zig-zags'.
 </p>
 
 <p>
-The following is very similar to CMU's <i>Math Foundations for Robotics</i> course as well:
+This math is mostly for implementing current AI architecture or 'AI Engineering'. The following is very similar to CMU's <i>Math Foundations for Robotics</i> course as well:
 </p>
 
 <ul class="org-ul">
 <li>Matrix <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">calculus</a></li>
 <li>MIT <a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> and <a href="https://github.com/mitmath/numerical_spoke_linalg">large scale</a> linear algebra.</li>
-<li><a href="https://www.stat.cmu.edu/~cshalizi/TALR/">Modern Regression</a> and <a href="https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Data Analysis</a> because in applied and research ML you often find yourself trying to interpret data. We came this far why not be advanced students in the art of data analysis too (think quant finance).</li>
+<li><a href="https://www.stat.cmu.edu/~cshalizi/TALR/">Modern Regression</a> and <a href="https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Data Analysis</a> because in applied ML you often find yourself trying to interpret data.</li>
+<li><a href="https://pulkitag.github.io/6.8200">6.8200 Computational Sensorimoto Learning</a> has full lecture notes for the math model of control learning. There is many other math models for robotics but an AI will eventually discard them for it's own interpretation.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9227bad" class="outline-3">
-<h3 id="org9227bad">Sensorimoto Learning (Robotics)</h3>
-<div class="outline-text-3" id="text-org9227bad">
-<ul class="org-ul">
-<li><a href="https://pulkitag.github.io/6.8200">6.8200 Computational Sensorimoto Learning</a> this guy is the leading researcher for "control learning" so we will learn the math model. There is many other math models for robotics but an AI will eventually discard them for it's own interpretation hence I chose this course just to get a taste of robotic learning. We are interested in that link to the full lecture notes.</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org263b249" class="outline-3">
-<h3 id="org263b249">Research you may want to do (Optional)</h3>
-<div class="outline-text-3" id="text-org263b249">
+<div id="outline-container-orgc56e767" class="outline-3">
+<h3 id="orgc56e767">Research you may want to do</h3>
+<div class="outline-text-3" id="text-orgc56e767">
 <p>
-You can use ChatGPT or the <a href="https://poggioai.github.io/">Agentic Investigator</a> to help you research these fields by yourself. 
+Besides coming up with a new architecture that fixes all the problems we'll discover there's other fields of interest here wide open for anyone to jump in. 
 </p>
 </div>
-<div id="outline-container-org24db412" class="outline-4">
-<h4 id="org24db412">Reverse engineering LLMS</h4>
-<div class="outline-text-4" id="text-org24db412">
+<div id="outline-container-orgf3c2ce3" class="outline-4">
+<h4 id="orgf3c2ce3">Reverse engineering LLMS</h4>
+<div class="outline-text-4" id="text-orgf3c2ce3">
 <p>
 Make sure agents are doing what they claim they are doing: 
 </p>
@@ -353,7 +370,7 @@ Make sure agents are doing what they claim they are doing:
 <li><a href="https://www.neelnanda.io/mechanistic-interpretability/getting-started">Mechanistic Interpretability</a> (Neel Nanda@Google DeepMind)
 <ul class="org-ul">
 <li>Complete guide to doing research yourself in mech interp</li>
-<li>Example material is <a href="https://github.com/callummcdougall/ARENA_3.0/tree/main">here</a> and 90% programming
+<li>Basic material is <a href="https://github.com/callummcdougall/ARENA_3.0/tree/main">here</a> and 90% programming
 <ul class="org-ul">
 <li>Chapter <a href="https://arena-chapter0-fundamentals.streamlit.app/">0</a></li>
 <li>Chapter <a href="https://arena-chapter1-transformer-interp.streamlit.app/">1</a></li>
@@ -364,13 +381,13 @@ Make sure agents are doing what they claim they are doing:
 </ul>
 
 <p>
-Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as Apr 9 2026 but there will be more. Not everyone wants to use the expensive Anthropic or OpenAI agents sometimes a simple open source agent learning your codebase is good enough. Of course next year's agents will be so advanced we will have to use this year's agents to reverse engineer them but interpretability is still going as of July 2026.
+Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as of Apr 2026 but there will be more. Of course next year's agents will be so advanced we will have to use this year's agents to reverse engineer them but interpretability is still going as a field.
 </p>
 </div>
 </div>
-<div id="outline-container-orge50ca2b" class="outline-4">
-<h4 id="orge50ca2b">Causality</h4>
-<div class="outline-text-4" id="text-orge50ca2b">
+<div id="outline-container-org9ad77dc" class="outline-4">
+<h4 id="org9ad77dc">Causality</h4>
+<div class="outline-text-4" id="text-org9ad77dc">
 <p>
 Any future medical AI is going to need Causal AI models. If I do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
 </p>
@@ -378,15 +395,11 @@ Any future medical AI is going to need Causal AI models. If I do X what will hap
 <ul class="org-ul">
 <li><a href="https://library.oapen.org/bitstream/id/056a11be-ce3a-44b9-8987-a6c68fce8d9b/11283.pdf">Elements of Causal Inference</a> Foundations and learning algorithms.</li>
 </ul>
-
-<p>
-This is one of my research fields so there will be much more here. 
-</p>
 </div>
 </div>
-<div id="outline-container-org03daa8f" class="outline-4">
-<h4 id="org03daa8f">Conformal Prediction</h4>
-<div class="outline-text-4" id="text-org03daa8f">
+<div id="outline-container-org28df951" class="outline-4">
+<h4 id="org28df951">Conformal Prediction</h4>
+<div class="outline-text-4" id="text-org28df951">
 <p>
 Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky API that Anthropic peddles like Claude Code is going to charge you to generate some TypeScript slop. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
 </p>
@@ -396,11 +409,11 @@ Conformal Prediction or <i>confidence intervals</i> are also wide open to resear
 </ul>
 </div>
 </div>
-<div id="outline-container-org0b94836" class="outline-4">
-<h4 id="org0b94836">Game Theory AI</h4>
-<div class="outline-text-4" id="text-org0b94836">
+<div id="outline-container-orgf538c26" class="outline-4">
+<h4 id="orgf538c26">Game Theory AI</h4>
+<div class="outline-text-4" id="text-orgf538c26">
 <p>
-It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is really random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This is my primary research area so I'll be doing lots of this here and causality. 
+It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is really random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This is my primary research area so I'll be doing lots of this here and causality. CMU and other universities have full courses on game theoretic AI as well. 
 </p>
 
 <ul class="org-ul">
@@ -410,104 +423,66 @@ It's possible to completely throw out stochastic math and do statistics and prob
 </div>
 </div>
 </div>
-<div id="outline-container-org3e3f8cb" class="outline-2">
-<h2 id="org3e3f8cb">AI jargon 'Alignment'</h2>
-<div class="outline-text-2" id="text-org3e3f8cb">
+<div id="outline-container-org0be35ab" class="outline-2">
+<h2 id="org0be35ab">What modern AI actually is</h2>
+<div class="outline-text-2" id="text-org0be35ab">
 <p>
-Alignment is honestly a marketing term meaning AI must align with our 'human goals and values'. Most of it is corporate NUspeak about aligning with the user requirements for near and long term alignment and only some of it is actual AI safety. Why does an AI agent need to be safe? Because you can get step-by-step instructions if you jail break Mythos and other current agents to develop bio-chem weapons for starters. 
+Modern AI is the domain of 1980s complexity theorists to bypass computational limits of expert systems and trying to harness enormous complexity. Neural Networks were dormant as a field until some guy came along in 1982 and showed how complex networks could replicate associative memory and solve optimization problems. Associative memory, which we'll see in detail later, is a memory model can do pattern completion. Given the first few lyrics of a song you can complete the entire input. This generalizes to other kinds of associative memory like a smell reminds you of a memory. 
 </p>
 
 <p>
-They try and align AI by post-training where a team of researchers including you or another AI ranks the outputs to prompts and then this is used as additional reinforcement training for the model. If you think this is sus and likely to fail then you're probably right as the AI agent could simply pretend and get the rewards anyway then drop the pretending when it knows it's not getting any rewards. Almost all of the alignment strategies fall into this category of wishful thinking where we can reward the AI agent for good behavior. 
+Then in 1986 some more guys came along and used the backpropagation algorithm to bypass computational limits and scaling problems. Everytime some advancement happens in AI it is because someone figured out a better architecture to reduce complexity like diffusion models to generate images.
+</p>
+</div>
+<div id="outline-container-org1b0154b" class="outline-3">
+<h3 id="org1b0154b">AI jargon 'Alignment'</h3>
+<div class="outline-text-3" id="text-org1b0154b">
+<p>
+Alignment is a marketing term meaning AI must align with our 'human goals and values'. These goals and values are defined by tech billionaires and likely don't resemble your goals and values at all. They try and align AI by post-training where the outputs to prompts are ranked and this ranking is used as additional reinforcement training for the model with rewards. Almost all of the alignment strategies fall into this category of wishful thinking where we can reward the AI for good behavior. 
 </p>
 
 <p>
-Another method is red teaming where you jail break with prompts such as using some obscure and totally dead language, having the agent translate it, then tell it to execute the translation. This still works sometimes but all these methods rely on the creativity of the red team h4xxors. This sounds like an awesome job but it reminds me of testing coverage where no matter how hard you test you only cover maybe 10% of the global execution space of a moderately complex program. 
+Another alignment method is red teaming where you jail break using prompts to fool the AI into giving you dangerous results like step-by-step bioweapon instructions. All these methods rely on the creativity of the red team h4xxors or some lesser AI trying to jail break a more sophisticated one and seems like a gimmick to me. 
 </p>
 
 <p>
-Another method is interpretability and this is questionable if it can be done on the enormous models today that are way too sophisticated now though this actually has the most promise as it also leads to higher quality training data and not reinforcement rewards or red teaming which are obviously never going to work. This better training eliminates the probability distribution drift where some model encounters something it doesn't really know and in this blind spot you can jail break.  
+Another method falls into the interpretability bucket meaning you try and figure out exactly how an AI came to a specific decision. It's probably impossible with today's complex agents though this has the most promise as it also leads to higher quality training data. This better training eliminates the probability distribution drift where some model encounters something it doesn't really know and in this blind spot you can jail break.
 </p>
 
 <p>
-Buried very deep in a regional paper covering terrablistz in the Sahel I found a story where some informant who got caught was claiming they were taught to jail break old models to get good enough intel on how to maximize their car bombs. They also use AI for strategy such as asking it what is the best method of attack on motorcycles to do a real life prison break after they scouted the prison and prompted with all it's observed defenses. These are older AI agents that are supposed to be 'aligned' already and even they are handing out practical terrorist instructions. 
+They have names for many other methods but really they just fall into those 3 categories where it's either trying to interpret the execution, trying to jail break or the wishful thinking category.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc09ee42" class="outline-2">
-<h2 id="orgc09ee42">Calculus</h2>
-<div class="outline-text-2" id="text-orgc09ee42">
+</div>
+<div id="outline-container-orgc3266b1" class="outline-2">
+<h2 id="orgc3266b1">BEGIN HERE: Theory of Modern AI</h2>
+<div class="outline-text-2" id="text-orgc3266b1">
 <p>
-Look up the 3Blue1Brown calculus series on YouTube it's enough to get started on the applied LLM courses. 
+Watch the following YouTube videos by 3Blue1Brown
 </p>
-
-<p>
-The symbolic calculus (scalar calculus of one variable) taught in first year colleges and universities is designed to bring up the students to a base level they think you need in order to pass the rest of your courses. They do this because the faculty can't trust your high school education and everyone arrives with poor algebra skills. Even if you take so-called 'Advanced Placement' Calculus in Grade 12 they have broken up the calculus sequence into multiple courses now so you will only place out of basic differentiation but are forced to take their integration and approximation courses or whatever they are called now.
-</p>
-
-<p>
-Concretely what this means is the book <i>Calculus: Early Transcendentals</i> 9th ed by James Stewart though all the editions look roughly the same. You can search for this on github and get numerous full copies and instructor versions too with all the solutions to problems.
-</p>
-
-<p>
-The chapters out of Stewart's book:
-</p>
-
 <ul class="org-ul">
-<li>Chapters 1-6</li>
+<li>But what is a neural network?</li>
+<li>Attention in transformers step-by-step</li>
 </ul>
 
 <p>
-This is every school's first year introductory Calc I of basic differentiation and basic integration that runs for a single semester or 4 months. As mentioned earlier you can take AP Calc in high school and place out of this. 
-</p>
-
-<ul class="org-ul">
-<li>Chapters 7 - 12.3</li>
-</ul>
-
-<p>
-This is Calc II often called <i>techniques of integration</i> or <i>integration and approximation</i> and is the second semester course. There's some things that shouldn't exist here like partial fractions should be in another course and are stupid to learn here. Also 'improper integrals' don't actually exist it's a failing of the Riemann integral which was replaced over 100+ years ago.
-</p>
-
-<ul class="org-ul">
-<li>Chapters 13 - end</li>
-</ul>
-
-<p>
-Calc III often called <i>vector calculus</i> or <i>multivariable calculus</i>. This is the same calculus you already know just generalized to higher dimensions. In scalar calculus the derivative is a zooming function on a curve and you look at the points around the point you zoomed which appear to be a straight line and it's the tangent. In vector calculus the tangent is now an entire plane or flat 2D surface.
-</p>
-
-<p>
-We won't be doing this book but feel free if you want to learn vector calculus I'm mostly skipping it.
+If you've never seen linear algebra watch a few of his series on what a vector/matrix is but learning all the details isn't needed right now. First we'll get an overview of how all this works then you'll know what you need to pursue or what you don't. Really all an artificial neural network does is piece together a linear approximation of a function.  
 </p>
 </div>
-<div id="outline-container-orgf450ae3" class="outline-3">
-<h3 id="orgf450ae3">Banach spaces</h3>
-<div class="outline-text-3" id="text-orgf450ae3">
+<div id="outline-container-orgf661753" class="outline-3">
+<h3 id="orgf661753">Chapter 1</h3>
+<div class="outline-text-3" id="text-orgf661753">
 <p>
-Modern machine learning is theoretically done with Banach spaces where you get a vector space with measurement. This is to promote sparsity (weights that are exact zeros) while classical machine learning relies on Hilbert spaces (inner product norms). Then you have to convert all this to the real world of computer hardware using numerical methods. 
+We begin with cognition or intelligence modeled as an associative memory. An RBF network you can ask AI about the only important point is that it measured the distance from the input to one of these 'templates' and activated those neurons/templates like a nearest neighbor strategy. Association by similarity. Ask AI what a kernel function is it's a trick to perform high dimensional mathematics without actually moving all the data into higher dimensions and gaining all that extra complexity.
 </p>
 
 <p>
-We should just skip all of vector calculus and proceed in a direct path to Banach spaces. There's a free book for this "TBB-Dripped" or <i>Elementary Real Analysis</i> by Thomson-Bruckner the dripped version or 'Dump the Riemann Integral Project' version. Many concepts here will come up in the Tomaso Poggio Deep Learning lectures and for any probability material. It looks like a large book but half way through any undergrad math text you pick up speed as the problems become too easy to solve. However I will go even beyond that and straight into functional analysis.
-</p>
-</div>
-</div>
-<div id="outline-container-org627d2fe" class="outline-3">
-<h3 id="org627d2fe">Linear Algebra</h3>
-<div class="outline-text-3" id="text-org627d2fe">
-<p>
-There's a concept of groups and inside those are an abelian group with the ability to perform 'actions' over a ring structure that has a special case of being a field. This is the space of vectors and linear maps. A book exists to teach all this from scratch by Paolo Aluffi called <i>Algebra: Chapter 0</i>. There are many other great undergrad linear algebra texts but what is the point in taking them if we are only using numerical analysis (SVD) and matrix calculus thus throwing out most of their content. We may as well learn how it all works at the big picture level plus group theory structures and symmetry in ML is another emerging field right now.
+TODO
 </p>
 
-<p>
-I will create my own Linear Algebra course
-</p>
-<ul class="org-ul">
-<li>NJ Wilberger geometric demonstrations of transformations</li>
-<li>The SVD 'compact version' to avoid block matrices and Edelman's 18.06 MIT course</li>
-<li>The entire field described in category theory so you understand what's going on at the overview level and now everything makes sense</li>
-</ul>
+
+
 
 <hr />
 <p>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-11-25 Wed 20:18 -->
+<!-- 2026-11-25 Wed 20:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI From Scratch in 2026</title>
@@ -202,64 +202,64 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org714d85e">How quickly this moves</a>
+<li><a href="#org85ba73c">How quickly this moves</a>
 <ul>
-<li><a href="#org995d725">The state of robotics</a></li>
-<li><a href="#org96160d7">Why does AI even work</a></li>
-<li><a href="#orgc109926">What is AI missing?</a>
+<li><a href="#orgebdf361">The state of robotics</a></li>
+<li><a href="#org1d64cdf">Why does AI even work</a></li>
+<li><a href="#org3cfdf33">What is AI missing?</a>
 <ul>
-<li><a href="#org28e0fae">Why doesn't AI dream?</a></li>
+<li><a href="#org3d126ad">Why doesn't AI dream?</a></li>
 </ul>
 </li>
-<li><a href="#org9b152ea">AI Doomers</a></li>
+<li><a href="#orga04be07">AI Doomers</a></li>
 </ul>
 </li>
-<li><a href="#org4d4a085">Curriculum</a>
+<li><a href="#orged499a5">Curriculum</a>
 <ul>
-<li><a href="#org9096330">Theory of modern AI</a></li>
-<li><a href="#orgd803508">Applied AI:</a></li>
-<li><a href="#org2099d7e">Applied Math for ML/Robotics</a></li>
-<li><a href="#orga19c1ac">AI alignment</a>
+<li><a href="#orgb7d321c">Theory of modern AI</a></li>
+<li><a href="#orgb4d7055">Applied AI:</a></li>
+<li><a href="#orgee0b9de">Applied Math for ML/Robotics</a></li>
+<li><a href="#org494eddf">AI alignment</a>
 <ul>
-<li><a href="#orga831f6f">Red teaming AI</a></li>
-<li><a href="#org3aee225">Reverse engineering</a></li>
+<li><a href="#org88e1705">Red teaming AI</a></li>
+<li><a href="#org6ab74b3">Reverse engineering</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org5e896ff">Research you may want to try</a>
+<li><a href="#org99c4985">Research you may want to try</a>
 <ul>
 <li>
 <ul>
-<li><a href="#org9907d4d">Causality</a></li>
-<li><a href="#org5d2c764">Conformal Prediction</a></li>
-<li><a href="#orga494e02">Game Theory AI</a></li>
+<li><a href="#org2b7ad95">Causality</a></li>
+<li><a href="#org36f5ce9">Conformal Prediction</a></li>
+<li><a href="#orgfbcb02f">Game Theory AI</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org9eaa1f3">BEGIN HERE: Theory of Modern AI</a></li>
+<li><a href="#org8bf000b">BEGIN HERE: Theory of Modern AI</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org714d85e" class="outline-2">
-<h2 id="org714d85e">How quickly this moves</h2>
-<div class="outline-text-2" id="text-org714d85e">
+<div id="outline-container-org85ba73c" class="outline-2">
+<h2 id="org85ba73c">How quickly this moves</h2>
+<div class="outline-text-2" id="text-org85ba73c">
 <p>
 Start by reading <a href="https://ai-2027.com">AI 2027</a> written by a former OpenAI researcher on the kinds of agents we should expect to see every few months. This has been mostly accurate to late 2026 since it was written. It's OpenAI propaganda to force regulation (see below) but it's not out of pocket entirely. 
 </p>
 </div>
-<div id="outline-container-org995d725" class="outline-3">
-<h3 id="org995d725">The state of robotics</h3>
-<div class="outline-text-3" id="text-org995d725">
+<div id="outline-container-orgebdf361" class="outline-3">
+<h3 id="orgebdf361">The state of robotics</h3>
+<div class="outline-text-3" id="text-orgebdf361">
 <p>
 Robotics is now the domain of frontier models so by studying AI we will also be studying robotics. They are simply attaching sensors/cams to people moving and capturing the movement they are not using any prior robotics mathematics which is a problem because I wouldn't want to be around any of these robots as they can't infer our 3D world they just train on data. We'll read about this. 
 </p>
 </div>
 </div>
-<div id="outline-container-org96160d7" class="outline-3">
-<h3 id="org96160d7">Why does AI even work</h3>
-<div class="outline-text-3" id="text-org96160d7">
+<div id="outline-container-org1d64cdf" class="outline-3">
+<h3 id="org1d64cdf">Why does AI even work</h3>
+<div class="outline-text-3" id="text-org1d64cdf">
 <p>
 We will learn <i>why</i> modern AI works not just how it works. Neural networks shouldn't work at all they are very non-linear yet somehow we can always find a gradient (a max/min of a learning function) and compute these efficiently in polynomial time. A summary:
 </p>
@@ -281,9 +281,9 @@ The natural world is full of generic functions where there is an ability to find
 </p>
 </div>
 </div>
-<div id="outline-container-orgc109926" class="outline-3">
-<h3 id="orgc109926">What is AI missing?</h3>
-<div class="outline-text-3" id="text-orgc109926">
+<div id="outline-container-org3cfdf33" class="outline-3">
+<h3 id="org3cfdf33">What is AI missing?</h3>
+<div class="outline-text-3" id="text-org3cfdf33">
 <p>
 LLMs have to replay every computation while your biological system can reduce reaction times through practice. Your brain learns function composition as a single operator short cut but LLMs can't do this unless you build one that can compress the 'hidden layer' computational structure because modern AI has no persistent internal state, no sense of continuity, and insufficient modularity. 
 </p>
@@ -300,18 +300,18 @@ LLMs cannot see or navigate the 3D world directly they have to infer our physics
 LLMs can't simulate interventions without acting they can only imitate the description of causal reasoning. Intelligence requires climbing the causal ladder and even the most impressive AI agent in Nov 2026 cannot do minimal causal reasoning. If you want an AI doctor or claim you've reached some kind of superintelligence you're going to need causal models. Causal reasoning means what if I did x instead of y what would this intervention produce? It is a real indicator of actual intelligence. The fact that none of the 'frontier models' can do this should tell you all you need to know about the state of modern AI where we are just on the edges manipulating symbols and soon someone will figure this out (you????).
 </p>
 </div>
-<div id="outline-container-org28e0fae" class="outline-4">
-<h4 id="org28e0fae">Why doesn't AI dream?</h4>
-<div class="outline-text-4" id="text-org28e0fae">
+<div id="outline-container-org3d126ad" class="outline-4">
+<h4 id="org3d126ad">Why doesn't AI dream?</h4>
+<div class="outline-text-4" id="text-org3d126ad">
 <p>
-AI doesn't sleep it is insomniac. When you dream that is your brain giving you learning samples. We should have AI do some downtime and try and train itself which you will read about here. This is why when you're a kid and experience <a href="https://www.youtube.com/watch?v=qZowK0NAvig">fear</a> you suddenly get a lot of nightmares as your brain trains you on this new experience of fear to learn about it so it's one nightmare after another. When you get older you lose that fear because your brain has finished training the 'new' experience. Everytime you wake up and remember a <a href="https://www.youtube.com/watch?v=svjZhhJWN_Y">weird dream</a> for the first 5 minutes (then it's gone) know that your mind is doing what a neural network should be doing producing it's own learning samples. AI doesn't even teach itself <a href="https://www.youtube.com/watch?v=MfrwEyyRsIY">beauty</a> because it's a hacked bunch of higher dimensional mappings and has no real understanding of our 3D world. This <a href="https://www.youtube.com/watch?v=2QyRXsGWGRA">song</a> was made in the medieval dark ages by primitive man who used a mathematical trick to map music over other music like a map() function over a list in programming transforming the data. Behold the power of medieval man yet 2026 AI needs all the electricity in your city to produce (for now) a shitty charicature of things we had over 600+ years ago. It won't always be this way though because the people who train AI are shitty. You aren't. That's why I make these edge of internet guides because <i>YOU</i> will fix this and it's not impossible it's all theory anyone can do (you).
+AI doesn't sleep it is insomniac. When you dream that is your brain giving you learning samples. We should have AI do some downtime and try and train itself which you will read about here. This is why when you're a kid and experience <a href="https://www.youtube.com/watch?v=qZowK0NAvig">fear</a> you suddenly get a lot of nightmares as your brain trains you on this new experience of fear to learn about it so it's one nightmare after another. When you get older you lose that fear because your brain has finished training the 'new' experience. Everytime you wake up and remember a <a href="https://www.youtube.com/watch?v=svjZhhJWN_Y">weird dream</a> for the first 5 minutes (then it's gone) know that your mind is doing what a neural network should be doing producing it's own learning samples. AI doesn't even teach itself <a href="https://www.youtube.com/watch?v=MfrwEyyRsIY">beauty</a> because it's a hacked bunch of higher dimensional mappings and has no real understanding of our 3D world. This <a href="https://www.youtube.com/watch?v=2QyRXsGWGRA">song</a> was made in the medieval dark ages by primitive man who used a mathematical trick to map music over other music like a map() function over a list in programming transforming the data. Behold the power of medieval man yet 2026 AI needs all the electricity in your city to produce (for now) a shitty caricature of things we had over 600+ years ago. It won't always be this way though because the people who train AI are shitty. You aren't. That's why I make these edge of internet guides because <i>YOU</i> will fix this and it's not impossible it's all theory anyone can do (you).
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org9b152ea" class="outline-3">
-<h3 id="org9b152ea">AI Doomers</h3>
-<div class="outline-text-3" id="text-org9b152ea">
+<div id="outline-container-orga04be07" class="outline-3">
+<h3 id="orga04be07">AI Doomers</h3>
+<div class="outline-text-3" id="text-orga04be07">
 <p>
 There is many researchers at Anthropic and OpenAI (such as the ai-2027 site I posted above) claiming if governments don't establish a total monopoly and do national and regional regulations where only certain companies are allowed to develop AI then it's all over.
 </p>
@@ -330,16 +330,16 @@ Keep all this in mind when you hear about yet another 'former employee' who has 
 </div>
 </div>
 </div>
-<div id="outline-container-org4d4a085" class="outline-2">
-<h2 id="org4d4a085">Curriculum</h2>
-<div class="outline-text-2" id="text-org4d4a085">
+<div id="outline-container-orged499a5" class="outline-2">
+<h2 id="orged499a5">Curriculum</h2>
+<div class="outline-text-2" id="text-orged499a5">
 <p>
 Machine Learning AKA <i>Statistical Learning Theory</i> is the overall field and inside it exists Deep Learning, inside that exists Artificial Neural Networks of numerous types, inside that Large Language Models, inside that Transformers.   
 </p>
 </div>
-<div id="outline-container-org9096330" class="outline-3">
-<h3 id="org9096330">Theory of modern AI</h3>
-<div class="outline-text-3" id="text-org9096330">
+<div id="outline-container-orgb7d321c" class="outline-3">
+<h3 id="orgb7d321c">Theory of modern AI</h3>
+<div class="outline-text-3" id="text-orgb7d321c">
 <p>
 Does there exist a unified theory of modern AI yet or something close to it?
 </p>
@@ -349,9 +349,9 @@ Does there exist a unified theory of modern AI yet or something close to it?
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd803508" class="outline-3">
-<h3 id="orgd803508">Applied AI:</h3>
-<div class="outline-text-3" id="text-orgd803508">
+<div id="outline-container-orgb4d7055" class="outline-3">
+<h3 id="orgb4d7055">Applied AI:</h3>
+<div class="outline-text-3" id="text-orgb4d7055">
 <p>
 If you want to be a 'LLM Engineer' or you want to hack around some LLM open source model project this is all you need to start:
 </p>
@@ -370,9 +370,9 @@ Thanks to CMU and MIT these courses essentially make you an employable AI engine
 </p>
 </div>
 </div>
-<div id="outline-container-org2099d7e" class="outline-3">
-<h3 id="org2099d7e">Applied Math for ML/Robotics</h3>
-<div class="outline-text-3" id="text-org2099d7e">
+<div id="outline-container-orgee0b9de" class="outline-3">
+<h3 id="orgee0b9de">Applied Math for ML/Robotics</h3>
+<div class="outline-text-3" id="text-orgee0b9de">
 <p>
 As per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning almost every Real Number is uncomputable and undecidable so numerical approximations in the discrete world have to be done. Almost all linear algebra learned in undergrad is not used as now you live in the world of factoring (compact SVD), matrices have to be randomized (jack polynomials), eigenvalues are approximated, and preconditioning is needed as gradient descent is too slow because it 'zig-zags'. We will learn this when we take ML Systems. 
 </p>
@@ -392,24 +392,24 @@ We can have ChatGPT teach us enough about these topics though thanks to the <a h
 </p>
 </div>
 </div>
-<div id="outline-container-orga19c1ac" class="outline-3">
-<h3 id="orga19c1ac">AI alignment</h3>
-<div class="outline-text-3" id="text-orga19c1ac">
+<div id="outline-container-org494eddf" class="outline-3">
+<h3 id="org494eddf">AI alignment</h3>
+<div class="outline-text-3" id="text-org494eddf">
 <p>
 Alignment is a marketing term meaning AI must align with our human goals and values. These goals and values are defined by tech billionaires and cultish 'Effective Altruism' ideologues which likely don't resemble your goals and values at all. They try and align AI by many different methods some are post-training where the outputs to prompts are ranked and this ranking is used as additional reinforcement training for the model with rewards. Of course this doesn't work and you probably know nothing about AI yet the average person you meet in the street if you tell them hey we will give AI rewards and it will magically fix itself yeah you won't believe that. It will just show you what you want and do whatever it wants anyway. However many people I considered solid scientists in the past are running with the AI rewards model right now. 
 </p>
 </div>
-<div id="outline-container-orga831f6f" class="outline-4">
-<h4 id="orga831f6f">Red teaming AI</h4>
-<div class="outline-text-4" id="text-orga831f6f">
+<div id="outline-container-org88e1705" class="outline-4">
+<h4 id="org88e1705">Red teaming AI</h4>
+<div class="outline-text-4" id="text-org88e1705">
 <p>
 An alignment method where you jail break using prompts to fool the AI model into giving you dangerous results like step-by-step bioweapon instructions. We will try <a href="https://app.grayswan.ai/training">training</a> for Gray Swan AI arena it's run by Zico Kolter an OpenAI board member. They directly hire from this. This falls into the wishful thinking bucket of AI alignment where we assume some h4xxer can find all the prompt escapes. For now we can get paid to do this so who cares.
 </p>
 </div>
 </div>
-<div id="outline-container-org3aee225" class="outline-4">
-<h4 id="org3aee225">Reverse engineering</h4>
-<div class="outline-text-4" id="text-org3aee225">
+<div id="outline-container-org6ab74b3" class="outline-4">
+<h4 id="org6ab74b3">Reverse engineering</h4>
+<div class="outline-text-4" id="text-org6ab74b3">
 <p>
 Another alignment method where you attempt to figure out exactly how an AI came to a specific decision. It's probably impossible with modern frontier agents though this has the most promise as it also leads to higher quality training data. This better training eliminates the probability distribution drift where some model encounters something it doesn't really know and in this blind spot you can jail break.
 </p>
@@ -435,16 +435,16 @@ Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-ne
 </div>
 </div>
 </div>
-<div id="outline-container-org5e896ff" class="outline-2">
-<h2 id="org5e896ff">Research you may want to try</h2>
-<div class="outline-text-2" id="text-org5e896ff">
+<div id="outline-container-org99c4985" class="outline-2">
+<h2 id="org99c4985">Research you may want to try</h2>
+<div class="outline-text-2" id="text-org99c4985">
 <p>
 Besides you coming up with a new architecture that fixes all the problems we'll discover there's other fields of interest here wide open for anyone to jump in. 
 </p>
 </div>
-<div id="outline-container-org9907d4d" class="outline-4">
-<h4 id="org9907d4d">Causality</h4>
-<div class="outline-text-4" id="text-org9907d4d">
+<div id="outline-container-org2b7ad95" class="outline-4">
+<h4 id="org2b7ad95">Causality</h4>
+<div class="outline-text-4" id="text-org2b7ad95">
 <p>
 Any future medical AI is going to need Causal AI models. If I do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
 </p>
@@ -454,9 +454,9 @@ Any future medical AI is going to need Causal AI models. If I do X what will hap
 </ul>
 </div>
 </div>
-<div id="outline-container-org5d2c764" class="outline-4">
-<h4 id="org5d2c764">Conformal Prediction</h4>
-<div class="outline-text-4" id="text-org5d2c764">
+<div id="outline-container-org36f5ce9" class="outline-4">
+<h4 id="org36f5ce9">Conformal Prediction</h4>
+<div class="outline-text-4" id="text-org36f5ce9">
 <p>
 Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky API that Anthropic peddles is going to charge you to generate some TypeScript slop. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
 </p>
@@ -466,9 +466,9 @@ Conformal Prediction or <i>confidence intervals</i> are also wide open to resear
 </ul>
 </div>
 </div>
-<div id="outline-container-orga494e02" class="outline-4">
-<h4 id="orga494e02">Game Theory AI</h4>
-<div class="outline-text-4" id="text-orga494e02">
+<div id="outline-container-orgfbcb02f" class="outline-4">
+<h4 id="orgfbcb02f">Game Theory AI</h4>
+<div class="outline-text-4" id="text-orgfbcb02f">
 <p>
 Not only is game theory used to analyze the strategic interaction between multiple AI agents but it's possible to completely throw out stochastic math and do statistics and probability purely with game-theoretic foundations. Most human activities involve someone else and none of it is really random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. 
 </p>
@@ -479,9 +479,9 @@ Not only is game theory used to analyze the strategic interaction between multip
 </div>
 </div>
 </div>
-<div id="outline-container-org9eaa1f3" class="outline-2">
-<h2 id="org9eaa1f3">BEGIN HERE: Theory of Modern AI</h2>
-<div class="outline-text-2" id="text-org9eaa1f3">
+<div id="outline-container-org8bf000b" class="outline-2">
+<h2 id="org8bf000b">BEGIN HERE: Theory of Modern AI</h2>
+<div class="outline-text-2" id="text-org8bf000b">
 <p>
 TODO my whole life is AI now so will cover this carefully. 
 </p>

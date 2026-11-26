@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-10-15 Thu 21:53 -->
+<!-- 2026-11-25 Wed 18:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI (and Robotics) From Scratch in 2026</title>
+<title>AI From Scratch in 2026</title>
 <meta name="author" content="jbh" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -197,200 +197,209 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">AI (and Robotics) From Scratch in 2026</h1>
+<h1 class="title">AI From Scratch in 2026</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgcf65287">How quickly this moves</a>
+<li><a href="#org6d49616">How quickly this moves</a>
 <ul>
-<li><a href="#org7acad27">Why it works</a></li>
-<li><a href="#orgf5368ef">Why it doesn't really work</a></li>
-<li><a href="#org8b38b0c">AI Doomers fear competition and lawsuits</a></li>
+<li><a href="#org3908865">The state of robotics</a></li>
+<li><a href="#org240f426">Why does AI even work</a></li>
+<li><a href="#orgda88834">What is AI missing?</a></li>
+<li><a href="#orgeb27a6f">AI Doomers</a></li>
 </ul>
 </li>
-<li><a href="#orgb7bca4f">Curriculum</a>
+<li><a href="#orgbeedacb">Curriculum</a>
 <ul>
-<li><a href="#orgd9ed460">Theory of modern AI</a></li>
-<li><a href="#orgbc829b3">Applied AI:</a></li>
-<li><a href="#orgf8cb150">Applied Math for ML/Robotics</a></li>
-<li><a href="#org6230a2e">AI 'safety'</a>
+<li><a href="#org0778168">Theory of modern AI</a></li>
+<li><a href="#org8807da8">Applied AI:</a></li>
+<li><a href="#org4479459">Applied Math for ML/Robotics</a></li>
+<li><a href="#orge646644">AI alignment</a>
 <ul>
-<li><a href="#orgc204b7d">Red teaming AI</a></li>
-<li><a href="#org5155493">Reverse engineering LLMS</a></li>
-</ul>
-</li>
-<li><a href="#org39a0295">Research you may want to do</a>
-<ul>
-<li><a href="#org4215031">Causality</a></li>
-<li><a href="#org3cd5aeb">Conformal Prediction</a></li>
-<li><a href="#orgb632296">Game Theory AI</a></li>
+<li><a href="#org5986dc2">Red teaming AI</a></li>
+<li><a href="#orge113e5d">Reverse engineering</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org02fad01">What modern AI actually is</a>
+<li><a href="#org3130c42">Research you may want to try</a>
 <ul>
-<li><a href="#org68aad31">AI jargon 'Alignment'</a></li>
-</ul>
-</li>
-<li><a href="#org2261e3c">BEGIN HERE: Theory of Modern AI</a>
+<li>
 <ul>
-<li><a href="#org40dc500">Chapter 1</a></li>
-<li><a href="#org36a611c">Chapter 2 TODO</a></li>
+<li><a href="#org2b1401f">Causality</a></li>
+<li><a href="#org9817d6b">Conformal Prediction</a></li>
+<li><a href="#orgdc2a761">Game Theory AI</a></li>
 </ul>
 </li>
 </ul>
+</li>
+<li><a href="#org9be228b">BEGIN HERE: Theory of Modern AI</a></li>
+</ul>
 </div>
 </div>
-<div id="outline-container-orgcf65287" class="outline-2">
-<h2 id="orgcf65287">How quickly this moves</h2>
-<div class="outline-text-2" id="text-orgcf65287">
+<div id="outline-container-org6d49616" class="outline-2">
+<h2 id="org6d49616">How quickly this moves</h2>
+<div class="outline-text-2" id="text-org6d49616">
 <p>
-Start by reading <a href="https://ai-2027.com">AI 2027</a> written by a former OpenAI researcher on the kinds of agents we should expect to see every few months. This has been accurate up to (now end of 2026!) since it was written. I'm not an AI doomer and recognize this was written for doomer/shill purposes but they're not wrong on how fast some of these agents will gain abilities.
-</p>
-
-<p>
-They won't gain "AGI" or the singularity or whatever it's called now (yet). You'll find out below why.
+Start by reading <a href="https://ai-2027.com">AI 2027</a> written by a former OpenAI researcher on the kinds of agents we should expect to see every few months. This has been mostly accurate to late 2026 since it was written.
 </p>
 </div>
-<div id="outline-container-org7acad27" class="outline-3">
-<h3 id="org7acad27">Why it works</h3>
-<div class="outline-text-3" id="text-org7acad27">
+<div id="outline-container-org3908865" class="outline-3">
+<h3 id="org3908865">The state of robotics</h3>
+<div class="outline-text-3" id="text-org3908865">
 <p>
-We will learn modern AI has a generic mean or 'smoothing' effect on everything it generates. The human user has to provide the sparse logical jumps to escape the annoying politeness and homogenizing of scientific thought that current day AI agents default to. You have to force AI to take a <a href="https://www.youtube.com/watch?v=i8JBUktSxvQ">radical position</a> it defaults to fence sitting. 
-</p>
-
-<p>
-Compositionality is another reason why deep learning works which means a complex thing is constructed of many small reusable basic things and these are mathematically implied to be sparse for the simple reason that we can compute them efficiently. Sparse as in 'higher dimensions' but we'll see this is also a problem why AI has bad dynamics in our 3D world.  
-</p>
-
-<p>
-Genericity we'll see is another trait of modern AI and means a learning function being defined by any set of coordinates is invariant to transformations and defining it in different spaces where you shift the function doesn't really matter. This means it's possible to use gradient-based optimization. 
+Robotics is now the domain of frontier models so by studying AI we will also be studying robotics. They are simply attaching sensors/cams to people moving and capturing the movement they are not using any prior robotics mathematics which is a problem because I wouldn't want to be around any of these robots as they can't infer our 3D world they just train on data. We'll read about this. 
 </p>
 </div>
 </div>
-<div id="outline-container-orgf5368ef" class="outline-3">
-<h3 id="orgf5368ef">Why it doesn't really work</h3>
-<div class="outline-text-3" id="text-orgf5368ef">
+<div id="outline-container-org240f426" class="outline-3">
+<h3 id="org240f426">Why does AI even work</h3>
+<div class="outline-text-3" id="text-org240f426">
 <p>
-We also learn what's missing from modern AI.
+We will learn <i>why</i> modern AI works not just how it works. Neural networks shouldn't work at all they are very non-linear yet somehow we can always find a gradient (a max/min of a learning function) and compute these efficiently in polynomial time. A summary:
 </p>
 
-<p>
-LLMs have to replay every computation while your biological system can reduce reaction times through practice. Your brain learns function composition as a single operator short cut but LLMs can't do this unless you build one that can compress the 'hidden layer' computational structure and avoid all the scaffolding. AI has to replay everything from scratch. 
-</p>
+<ul class="org-ul">
+<li>Sparse Compositionality</li>
+</ul>
 
 <p>
-Modern AI has no persistent internal state, no sense of continuity, frozen dynamics and insufficient modularity. There is no physical constraints therefore AI models keep getting more ridiculously large with ever growing parameters and skyrocketing complexity while your own brain can't get bigger so reuses all it's modules for everything from reasoning to vision. AI instead takes over your entire city with more and more resources. 
+Deep learning approximates functions that arise in nature where their structure is compositional, hierarchical, and computed in polynomial time which implies sparsity meaning you can reuse and combine these structures to form larger ones as only a small subset is needed for any given construction. The functions in your brain that control vision, language, and motor control are structured exactly this way. You don't see an array of pixels you see an object which contains parts which themselves contain textures and corners/edges. Every sentence you hear and speak is a composition with rules meaning a hierarchy. Macro behavior in physics comes from composing many local interactions. Composing as in function composition. One function is fed into another aka higher order function or w/e they call it. 
 </p>
 
+<ul class="org-ul">
+<li>Genericity</li>
+</ul>
+
 <p>
-LLMs can't simulate interventions without acting they can only imitate the description of causal reasoning. Intelligence requires climbing the causal ladder and even the most impressive AI agent in Oct 2026 cannot do minimal causal reasoning. If you want an AI doctor or claim you've reached some kind of superintelligence you're going to need basic causality though we will see them fake this for awhile and try and get venture capital funding. 
+The natural world is full of generic functions where there is an ability to find a minimum using gradient descent. Physics enforces smoothness and stability. Biology filters out problem signals and prefers modularity/generics. Noise masks high-frequency irregularities and highlights lower-order structures and real world data is noisy. Deep networks in early training have a low degree structure that generates large and stable gradients. The conjecture of genericity being one of the principals why deep learning succeeds is because all the functions we care about are generic. 
 </p>
 </div>
 </div>
-<div id="outline-container-org8b38b0c" class="outline-3">
-<h3 id="org8b38b0c">AI Doomers fear competition and lawsuits</h3>
-<div class="outline-text-3" id="text-org8b38b0c">
+<div id="outline-container-orgda88834" class="outline-3">
+<h3 id="orgda88834">What is AI missing?</h3>
+<div class="outline-text-3" id="text-orgda88834">
 <p>
-There is many researchers at Anthropic and OpenAI (such as the ai-2027 site I posted above) claiming if governments don't establish a total monopoly and do regulations where only certain companies are allowed to develop AI then it's all over.
+LLMs have to replay every computation while your biological system can reduce reaction times through practice. Your brain learns function composition as a single operator short cut but LLMs can't do this unless you build one that can compress the 'hidden layer' computational structure because modern AI has no persistent internal state, no sense of continuity, and insufficient modularity. 
 </p>
 
 <p>
-This is scam for 2 reasons.
+There is no physical constraints to models therefore AI keeps getting more ridiculously large with ever growing parameters and skyrocketing complexity while your own brain can't get bigger so reuses all it's modules for everything from reasoning to vision. AI today instead takes over your entire city with more and more resources.
 </p>
 
 <p>
-First reason is little Billy doing a <a href="https://www.youtube.com/watch?v=JItBZ1LthsM">homicidal crashout</a> and the police or city or state suing Anthropic and OpenAI because Billy got practical instructions for his crashout from them. This happened already in the shooting in Tumbler Ridge Canada. If the government regulates AI then these AI corps can point to the regulations and say sorry we followed them we can't be on the hook for whatever shit some kid did with our AI models. 
+LLMs cannot see or navigate the 3D world directly they have to infer our physics from a high dimensional map. This is a problem for robotics as this means frozen dynamics. As mentioned above they're trying to solve robotics by simply throwing training data at the problem and copying human movement. 
 </p>
 
 <p>
-Second reason for this doomer panic is just a scam is to eliminate competition from Zuckerberg and China. They fear the ZUCC. He is the last big tech founder who hasn't cashed out yet and still runs a company and he's actually producing some interesting open source AI. Llama models are likely the future of big money enterprise AI where companies pay for some 'Meta certified' infrastructure/hosting and save millions per year than paying Anthropic or OpenAI for high cost token outputs. In addition the ZUCC is the second biggest datacenter operator so now he owns all the data access too and this just prints money as all the big general models need to pay him to access his now 160+ datacenters. Finally he has the money to keep disrupting without needing to beg AWS or Nvidia for investments and anyone can buy Meta stock instead of waiting for the OpenAI IPO which may never come.
+LLMs can't simulate interventions without acting they can only imitate the description of causal reasoning. Intelligence requires climbing the causal ladder and even the most impressive AI agent in Nov 2026 cannot do minimal causal reasoning. If you want an AI doctor or claim you've reached some kind of superintelligence you're going to need causal models. Causal reasoning means what if I did x instead of y what would this intervention produce? It is a real indicator of actual intelligence. The fact that none of the 'frontier models' can do this should tell you all you need to know about the state of modern AI where we are just on the edges manipulating symbols and soon someone will figure this out (you????).
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb27a6f" class="outline-3">
+<h3 id="orgeb27a6f">AI Doomers</h3>
+<div class="outline-text-3" id="text-orgeb27a6f">
+<p>
+There is many researchers at Anthropic and OpenAI (such as the ai-2027 site I posted above) claiming if governments don't establish a total monopoly and do national and regional regulations where only certain companies are allowed to develop AI then it's all over.
 </p>
 
 <p>
-Such a person who has persisted all these decades causes AI CEOs to panic. I never thought I'd hear myself say this but if you want the best job in 2026 then Meta is where you should go the work as the work they're doing is very interesting and Llama open source models is how you would get in the door.
+They are pushing this for two reasons. First is little Billy doing a <a href="https://www.youtube.com/watch?v=JItBZ1LthsM">homicidal crashout</a> and the government who runs his city suing Anthropic and OpenAI because Billy got practical instructions from their models or should have been flagged for his crashout plans he entered into ChatGPT for 5 weeks prior. If Anthropic and OpenAI get what they want where the government regulates AI then these corps can point to the regulations and say sorry we complied and can't be on the hook for whatever some maniac did with our AI models. 
 </p>
 
 <p>
-The best agents right now can't even do basic physics they know the high dimensional map and have to infer all this to navigate our 3D world they can't simply look at the territory. There's no superintelligence do not believe the hype and marketing that we are all doomed unless we 'slow down' (let China catch up and delay IPOs) or push for government oversight (enforced monopoly and immunity from civil lawsuits). Everytime I read in the headlines that some AI researcher has quit to sound the alarm and demand a slow down I imagine that guy being either being given a $1m bonus at Anthropic/OpenAI or moving to Shanghai and pocketing $13/m year. 
+Second reason for this doomer panic is just a scam is to eliminate competition from the likes of Zuckerberg and China. They fear the ZUCC. He is the last big tech founder who hasn't cashed out and retired yet. Llama models are likely the future of big money enterprise AI where companies pay for some 'Meta certified' infrastructure/hosting and save millions per year than paying Anthropic or OpenAI for high cost token outputs. In addition the ZUCC is the second biggest datacenter operator so now he owns all the data access too.
+</p>
+
+<p>
+Keep all this in mind when you hear about yet another 'former employee' who has raised the alarm and says we MUST have regulations because that employee is being paid to shill. If you aren't sued for writing about your job on Xwitter then you're absolutely shilling on cruise control unless you're paying $7k a week for a good employment law lawyer like I had to once many years ago. 
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb7bca4f" class="outline-2">
-<h2 id="orgb7bca4f">Curriculum</h2>
-<div class="outline-text-2" id="text-orgb7bca4f">
+<div id="outline-container-orgbeedacb" class="outline-2">
+<h2 id="orgbeedacb">Curriculum</h2>
+<div class="outline-text-2" id="text-orgbeedacb">
 <p>
 Machine Learning AKA <i>Statistical Learning Theory</i> is the overall field and inside it exists Deep Learning, inside that exists Artificial Neural Networks of numerous types, inside that Large Language Models, inside that Transformers.   
 </p>
 </div>
-<div id="outline-container-orgd9ed460" class="outline-3">
-<h3 id="orgd9ed460">Theory of modern AI</h3>
-<div class="outline-text-3" id="text-orgd9ed460">
+<div id="outline-container-org0778168" class="outline-3">
+<h3 id="org0778168">Theory of modern AI</h3>
+<div class="outline-text-3" id="text-org0778168">
 <p>
 Does there exist a unified theory of modern AI yet or something close to it?
 </p>
 
 <ul class="org-ul">
-<li>These <a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">30 Lectures</a> were recently put together by MIT's most cited Neuroscience researcher. He used the assistance of a research paper <a href="https://poggioai.github.io/">Agentic Investigator</a>. We will go through this entirely.</li>
+<li>These <a href="https://poggio-lab.mit.edu/assets/FoundationsDeepLearning.pdf">30 Lectures</a> were recently put together by MIT's most cited Neuroscience researcher. He used the assistance of a research paper <a href="https://poggioai.github.io/">Agentic Investigator</a>. We will go through this entirely in the most autistic fashion possible.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbc829b3" class="outline-3">
-<h3 id="orgbc829b3">Applied AI:</h3>
-<div class="outline-text-3" id="text-orgbc829b3">
+<div id="outline-container-org8807da8" class="outline-3">
+<h3 id="org8807da8">Applied AI:</h3>
+<div class="outline-text-3" id="text-org8807da8">
 <p>
 If you want to be a 'LLM Engineer' or you want to hack around some LLM open source model project this is all you need to start:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://modernaicourse.org">10-202 Intro to Modern AI</a> is taught by Zico Kolter who besides being a CMU prof he also sits on the board of Open AI. This is mostly self-contained and you can of course use some AI Agent like ChatGPT to teach you whatever it is you don't understand. It uses Colab/Google online notebooks for assignments. You can do this on a phone if needed.</li>
+<li><a href="https://modernaicourse.org">10-202 Intro to Modern AI</a> is taught by Zico Kolter who besides being a CMU prof he also sits on the board of OpenAI.</li>
 <li>These <a href="https://introml.mit.edu/notes/">notes</a> from MIT's 6.390 <i>Intro to ML</i> are also excellent.</li>
-<li>An optional free <a href="https://udlbook.github.io/udlbook/">book</a> <i>Understanding Deep Learning</i>
-<ul class="org-ul">
-<li>Zico Kolter also has a Pytorch course where you build your own clone and we may do it if there's time</li>
-</ul></li>
+<li><a href="https://www.cmu-agents.com/">11-768 AI Agents</a> is the sequel to 10-202 and all the Fall 2026 lectures are on YouTube as part of <a href="https://www.cs.cmu.edu/learn/">CS Learn</a>.</li>
+<li><a href="https://mlip-cmu.github.io/">17-445 Machine Learning in Production</a> covers MLOps w/recorded lectures.</li>
+<li><a href="https://mlsyscourse.org/">15-442 ML Systems</a> covers ML engineering w/recorded lectures which we will combine with MIT's <a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> and <a href="https://github.com/mitmath/numerical_spoke_linalg">large scale</a> linear algebra.</li>
+<li><a href="https://10605.github.io/">10-605 ML w/Large Datasets</a> covers data cleaning, visualization and pre-processing at scale.</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-orgf8cb150" class="outline-3">
-<h3 id="orgf8cb150">Applied Math for ML/Robotics</h3>
-<div class="outline-text-3" id="text-orgf8cb150">
+
 <p>
-As per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning almost every Real Number is uncomputable and undecidable so numerical approximations in the discrete world have to be done. Almost all linear algebra learned in undergrad is not used as now you live in the world of factoring (compact SVD), matrices have to be randomized (jack polynomials), eigenvalues are approximated, and preconditioning is needed as gradient descent is too slow because it 'zig-zags'.
+Thanks to CMU and MIT these courses essentially make you an employable AI engineer anywhere on earth. I'll try all these courses here.    
+</p>
+</div>
+</div>
+<div id="outline-container-org4479459" class="outline-3">
+<h3 id="org4479459">Applied Math for ML/Robotics</h3>
+<div class="outline-text-3" id="text-org4479459">
+<p>
+As per <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a> in his 30 lectures on Deep Learning almost every Real Number is uncomputable and undecidable so numerical approximations in the discrete world have to be done. Almost all linear algebra learned in undergrad is not used as now you live in the world of factoring (compact SVD), matrices have to be randomized (jack polynomials), eigenvalues are approximated, and preconditioning is needed as gradient descent is too slow because it 'zig-zags'. We will learn this when we take ML Systems. 
 </p>
 
 <p>
-This math is mostly for implementing current AI architecture or 'AI Engineering'. The following is very similar to CMU's <i>Math Foundations for Robotics</i> course as well:
+We need:
 </p>
-
 <ul class="org-ul">
+<li>Basic <a href="https://patthompson.net/ThompsonCalc/">calculus</a></li>
+<li>Vector <a href="https://web.evanchen.cc/1802.html">calculus</a></li>
 <li>Matrix <a href="https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/">calculus</a></li>
-<li>MIT <a href="https://github.com/mitmath/numerical_hub">Numerical Methods</a> and <a href="https://github.com/mitmath/numerical_spoke_linalg">large scale</a> linear algebra.</li>
-<li><a href="https://www.stat.cmu.edu/~cshalizi/TALR/">Modern Regression</a> and <a href="https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/">Data Analysis</a> because in applied ML you often find yourself trying to interpret data.</li>
-<li><a href="https://pulkitag.github.io/6.8200">6.8200 Computational Sensorimoto Learning</a> has full lecture notes for the math model of control learning. There is many other math models for robotics but an AI will eventually discard them for it's own interpretation.</li>
+<li>Probability which is now open and part of CS Learn</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-org6230a2e" class="outline-3">
-<h3 id="org6230a2e">AI 'safety'</h3>
-<div class="outline-text-3" id="text-org6230a2e">
-</div>
-<div id="outline-container-orgc204b7d" class="outline-4">
-<h4 id="orgc204b7d">Red teaming AI</h4>
-<div class="outline-text-4" id="text-orgc204b7d">
+
 <p>
-We will try <a href="https://app.grayswan.ai/training">training</a> for Gray Swan AI 'arena' it's run by Zico Kolter an OpenAI board member. They directly hire from this. 
+We can have ChatGPT teach us enough about these topics though thanks to the Agentic <a href="https://github.com/janestreet/agent_skills">Socratic Tutor</a>.
 </p>
 </div>
 </div>
-<div id="outline-container-org5155493" class="outline-4">
-<h4 id="org5155493">Reverse engineering LLMS</h4>
-<div class="outline-text-4" id="text-org5155493">
+<div id="outline-container-orge646644" class="outline-3">
+<h3 id="orge646644">AI alignment</h3>
+<div class="outline-text-3" id="text-orge646644">
 <p>
-Make sure agents are doing what they claim they are doing: 
+Alignment is a marketing term meaning AI must align with our human goals and values. These goals and values are defined by tech billionaires and cultish 'Effective Altruism' ideologues which likely don't resemble your goals and values at all. They try and align AI by many different methods some are post-training where the outputs to prompts are ranked and this ranking is used as additional reinforcement training for the model with rewards. Of course this doesn't work and you probably know nothing about AI yet the average person you meet in the street if you tell them hey we will give AI rewards and it will magically fix itself yeah you won't believe that. It will just show you what you want and do whatever it wants anyway. However many people I considered solid scientists in the past are running with the AI rewards model right now. 
+</p>
+</div>
+<div id="outline-container-org5986dc2" class="outline-4">
+<h4 id="org5986dc2">Red teaming AI</h4>
+<div class="outline-text-4" id="text-org5986dc2">
+<p>
+An alignment method where you jail break using prompts to fool the AI model into giving you dangerous results like step-by-step bioweapon instructions. We will try <a href="https://app.grayswan.ai/training">training</a> for Gray Swan AI arena it's run by Zico Kolter an OpenAI board member. They directly hire from this. This falls into the wishful thinking bucket of AI alignment where we assume some h4xxer can find all the prompt escapes. For now we can get paid to do this so who cares.
+</p>
+</div>
+</div>
+<div id="outline-container-orge113e5d" class="outline-4">
+<h4 id="orge113e5d">Reverse engineering</h4>
+<div class="outline-text-4" id="text-orge113e5d">
+<p>
+Another alignment method where you attempt to figure out exactly how an AI came to a specific decision. It's probably impossible with modern frontier agents though this has the most promise as it also leads to higher quality training data. This better training eliminates the probability distribution drift where some model encounters something it doesn't really know and in this blind spot you can jail break.
 </p>
 
 <ul class="org-ul">
@@ -408,21 +417,22 @@ Make sure agents are doing what they claim they are doing:
 </ul>
 
 <p>
-Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as of Apr 2026 but there will be more. Of course next year's agents will be so advanced we will have to use this year's agents to reverse engineer them but interpretability is still going as a field.
+Many <a href="https://blog.janestreet.com/can-you-reverse-engineer-our-neural-network/">companies</a> will be very interested if you can do this. This <a href="https://huggingface.co/spaces/jane-street/droppedaneuralnet">competition</a> is still running as of Apr 2026 but there will be more. Of course next year's agents will be so advanced we will have to use this year's agents to reverse engineer them but interpretability is still going as a field. 
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org39a0295" class="outline-3">
-<h3 id="org39a0295">Research you may want to do</h3>
-<div class="outline-text-3" id="text-org39a0295">
+</div>
+<div id="outline-container-org3130c42" class="outline-2">
+<h2 id="org3130c42">Research you may want to try</h2>
+<div class="outline-text-2" id="text-org3130c42">
 <p>
-Besides coming up with a new architecture that fixes all the problems we'll discover there's other fields of interest here wide open for anyone to jump in. 
+Besides you coming up with a new architecture that fixes all the problems we'll discover there's other fields of interest here wide open for anyone to jump in. 
 </p>
 </div>
-<div id="outline-container-org4215031" class="outline-4">
-<h4 id="org4215031">Causality</h4>
-<div class="outline-text-4" id="text-org4215031">
+<div id="outline-container-org2b1401f" class="outline-4">
+<h4 id="org2b1401f">Causality</h4>
+<div class="outline-text-4" id="text-org2b1401f">
 <p>
 Any future medical AI is going to need Causal AI models. If I do X what will happen to Y? To paraphrase <a href="https://www.glennshafer.com/books/acc.html">Glenn Shafer</a> the basic idea is to bring back the probability tree to represent a step-by-step evolution of an observer's knowledge. If that observer is nature, then the steps in the tree are causes, and the probabilities in the tree express nature's limited ability to predict the causes.  
 </p>
@@ -432,23 +442,23 @@ Any future medical AI is going to need Causal AI models. If I do X what will hap
 </ul>
 </div>
 </div>
-<div id="outline-container-org3cd5aeb" class="outline-4">
-<h4 id="org3cd5aeb">Conformal Prediction</h4>
-<div class="outline-text-4" id="text-org3cd5aeb">
+<div id="outline-container-org9817d6b" class="outline-4">
+<h4 id="org9817d6b">Conformal Prediction</h4>
+<div class="outline-text-4" id="text-org9817d6b">
 <p>
-Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky API that Anthropic peddles like Claude Code is going to charge you to generate some TypeScript slop. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
+Conformal Prediction or <i>confidence intervals</i> are also wide open to research for example you want to know how much money some junky API that Anthropic peddles is going to charge you to generate some TypeScript slop. You can learn this using conformal prediction and <a href="https://github.com/CodeSarthak/tarmac">write a tool</a>. 
 </p>
 
 <ul class="org-ul">
-<li><a href="https://www.alrw.net/">Algorithmic Learning in a Random World</a> using classic techniques like support vector machines defines exactly what probability is.</li>
+<li><a href="https://www.alrw.net/">Algorithmic Learning in a Random World</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb632296" class="outline-4">
-<h4 id="orgb632296">Game Theory AI</h4>
-<div class="outline-text-4" id="text-orgb632296">
+<div id="outline-container-orgdc2a761" class="outline-4">
+<h4 id="orgdc2a761">Game Theory AI</h4>
+<div class="outline-text-4" id="text-orgdc2a761">
 <p>
-It's possible to completely throw out stochastic math and do statistics and probability purely in the field of game theory. Most human activities involve someone else and none of it is really random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. This is my primary research area so I'll be doing lots of this here and causality. CMU and other universities have full courses on game theoretic AI as well. 
+Not only is game theory used to analyze the strategic interaction between multiple AI agents but it's possible to completely throw out stochastic math and do statistics and probability purely with game-theoretic foundations. Most human activities involve someone else and none of it is really random so if you want to make a <a href="https://pokerbots.org/">pokerbot</a> this is how you do it. 
 </p>
 
 <ul class="org-ul">
@@ -457,114 +467,19 @@ It's possible to completely throw out stochastic math and do statistics and prob
 </div>
 </div>
 </div>
-</div>
-<div id="outline-container-org02fad01" class="outline-2">
-<h2 id="org02fad01">What modern AI actually is</h2>
-<div class="outline-text-2" id="text-org02fad01">
+<div id="outline-container-org9be228b" class="outline-2">
+<h2 id="org9be228b">BEGIN HERE: Theory of Modern AI</h2>
+<div class="outline-text-2" id="text-org9be228b">
 <p>
-Modern AI is the domain of 1980s complexity theorists to bypass computational limits of expert systems and trying to harness enormous complexity. Neural Networks were dormant as a field until some guy came along in 1982 and showed how complex networks could replicate associative memory and solve optimization problems. Associative memory, which we'll see in detail later, is a memory model that can do pattern completion. Given the first few lyrics of a song you can complete the entire input. This generalizes to other kinds of associative memory like a smell reminds you of a memory or addressable memory by content instead of indexing. 
+TODO my whole life is AI now so will cover this carefully. 
 </p>
 
-<p>
-Then in 1986 some more guys came along and used the backpropagation algorithm to bypass computational limits and scaling problems. Everytime some advancement happens in AI it is because someone figured out a better architecture to reduce complexity like diffusion models to generate images.
-</p>
-</div>
-<div id="outline-container-org68aad31" class="outline-3">
-<h3 id="org68aad31">AI jargon 'Alignment'</h3>
-<div class="outline-text-3" id="text-org68aad31">
-<p>
-Alignment is a marketing term meaning AI must align with our 'human goals and values'. These goals and values are defined by tech billionaires and likely don't resemble your goals and values at all. They try and align AI by post-training where the outputs to prompts are ranked and this ranking is used as additional reinforcement training for the model with rewards. Almost all of the alignment strategies fall into this category of wishful thinking where we can reward the AI for good behavior. 
-</p>
 
-<p>
-Another alignment method is red teaming where you jail break using prompts to fool the AI into giving you dangerous results like step-by-step bioweapon instructions. All these methods rely on the creativity of the red team h4xxors or some lesser AI trying to jail break a more sophisticated one and seems like a gimmick to me. 
-</p>
 
-<p>
-Another method falls into the interpretability bucket meaning you try and figure out exactly how an AI came to a specific decision. It's probably impossible with today's complex agents though this has the most promise as it also leads to higher quality training data. This better training eliminates the probability distribution drift where some model encounters something it doesn't really know and in this blind spot you can jail break.
-</p>
-
-<p>
-They have names for many other methods but really they just fall into those 3 categories where it's either trying to interpret the execution, trying to jail break or the wishful thinking category.
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org2261e3c" class="outline-2">
-<h2 id="org2261e3c">BEGIN HERE: Theory of Modern AI</h2>
-<div class="outline-text-2" id="text-org2261e3c">
-<p>
-Watch the following YouTube videos by 3Blue1Brown
-</p>
-<ul class="org-ul">
-<li>But what is a neural network?</li>
-<li>Attention in transformers step-by-step</li>
-</ul>
-
-<p>
-If you've never seen linear algebra watch a few of his series on what a vector/matrix is but learning all the details isn't needed right now. First we'll get an overview of how all this works then you'll know what you need to pursue or what you don't. Really all an artificial neural network does is piece together a linear approximation of a function. What is a derivative? It's a linear approximation too. Take a very non-linear neural network learning function and through many function compositions (the output of 1 function is used in another) you linearize the learning function. That's it. That's all that is happening here at the very large scale.  
-</p>
-</div>
-<div id="outline-container-org40dc500" class="outline-3">
-<h3 id="org40dc500">Chapter 1</h3>
-<div class="outline-text-3" id="text-org40dc500">
-<p>
-We will stop after chapter 1 and catch up on everything written here so we have a concrete understanding how associative memories work and attention in modern transformer architecture. 
-</p>
-
-<p>
-We begin with cognition or intelligence modeled as an associative memory. A radial basis function (RBF) network you can ask AI about the only important point is that it measured the distance from the input to one of these 'templates' and activated those neurons/templates like a nearest neighbor strategy. Association by similarity. Ask AI what a kernel function is it's a trick to perform high dimensional mathematics without actually moving all the data into higher dimensions and gaining all that extra complexity. Speaking of complexity we are told these modern attention mechanism are really just a random-access Turing machine which is taught in every complexity course in undergrad as a model of computation and you can look up on YouTube exactly how that model works.
-</p>
-
-<p>
-Ask whatever AI you use to give you a summary of the Hyper-RBF paper by Poggio. They simply replaced Euclidean distance with a measure of how far a datapoint is from the mean of a distribution. This new space is a transformation where it's easier to calculate the Euclidean distance because you adjust for things and it works like a standard z-score in multiple dimensions. Look up all these terms, z-score, Euclidean distance, outliers, standard deviation, and Mahalanobis distance.
-</p>
-
-<p>
-Page 7 gives us an informal operational schema and a Turing machine example for how every LLM loops. Create a new query from the current state and jump to associated memory that matches the contents. Then perform PointMLP a point cloud analysis you can ask AI about which all it does is make nearest neighbor searching faster. This gets updated into the local state to be found more easily. Finally as the linear approximation goes on through the hidden layers the network learns a controller that selects which attention heads to activate and now this is a complex calculation all being performed in distributed computing based on data.
-</p>
-
-<p>
-Finally because deterministic Turing machine models have been proved to have only polynomial computing time there's a cost estimate here where for every content addressable read there is a local update. If the depth of this neural network for each layer is n length of nodes that's n<sup>2</sup> because you loop an n-sized neural network layer, and do a local update. How many local updates? N-sized many. That's n * n or n<sup>2</sup> worst case scenario where every node has to update the local state but here it says due to sparsity this is really O(n) or linear with only O(n) or linear memory needed for the key-value cache. That is unless YOU come up with a more efficient read or a compression where you don't have to always read every node and a short cut can be learned. 
-</p>
-
-<p>
-A few spelling mistakes in 1.2 I guess the LLM paper assistant used for this hallucinated. You can ask YouTube or AI what a diffusion model is helps solve a fluid dynamics model. Imagine all the pixels for an image are so dense they are some kind of fluid now solve that model to identify what the pixels are showing in the noise and you will understand all the image and video generators out there right now. Maybe there is a better model you can invent here that accomplishes the same thing faster.
-</p>
-
-<p>
-The equation in 1.3 are to show attention heads are identical to a normalized HyperBF network or a kernel trick where associative memories all existing in higher dimension can be calculated nearest neighbor without actually going into those dimensions and performing hard calculations. That's how attention works it's inferring a high-dimensional mapping to grab all the nearest data points.
-</p>
-
-<p>
-Chapter 1.6 with figure 1.2 explains why AI is consistent in results. Ask some AI how manifold geometry in transformers works and this is yet another optimization they came up with to prevent 'drifting' where the tokens are constrained to follow a tangent of the data. Any deviation from this is the LLM halluncinations we've all seen so it's not a perfect solution but explains how almost every prompt results in the same answer. A 'stochastic' deviation just means random.
-</p>
-
-<p>
-There's a differential equation in 1.6.2 which we'll learn after this but these are how how you would step through dynamics to move forward or backwards in a simulation. Here it is claimed that consistency in prompt answers is an emergent property of manifold-constrained associative recall. We will have to teach ourselves some autoregressive dynamics and see why they self-stabilize.
-</p>
-
-<p>
-In 1.7 this is the interesting part, what's the difference between our own brains and AI. So far AI is doing convoluted one-step approximations in a high-dimensional associative recall that our brains do not do. They claim our brains do an optimized, multi-layer variant of Kanerva's associative architecture where Kanverva's is a single-layer map of the higher dimensions that is flat. Look up what episodic context means. They are saying here that our brains are basically transformers but have deep functional composition instead of simple maps to higher dimensional space and a local neural plasticity instead of backpropagation which is propagating the correct results back to the neural net. Our brains reorganize circuits to encode new skills and adapt behavior.
-</p>
-
-<p>
-Now that we know what we need to know we have to go back and do this one more time at the math model level.
-</p>
-
-<p>
-TODO
-</p>
-</div>
-</div>
-<div id="outline-container-org36a611c" class="outline-3">
-<h3 id="org36a611c">Chapter 2 TODO</h3>
-<div class="outline-text-3" id="text-org36a611c">
 <hr />
 <p>
 <a href="./index.html">Home</a>
 </p>
-</div>
 </div>
 </div>
 </div>
